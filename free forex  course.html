@@ -1,0 +1,1458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forex Trading Masterclass | SkillMynte Premium</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="sm_favicon_64 (1).png">
+    <link rel="stylesheet" href="free forex course.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-chart-line"></i>
+                SKILLMYNTE
+            </a>
+            <div class="nav-menu">
+                <a href="#" class="nav-link">Home</a>
+                <a href="#" class="nav-link">Courses</a>
+                <a href="#" class="nav-link">Practice</a>
+                <a href="#" class="nav-link">Live Trading</a>
+                
+                <div class="courses-dropdown">
+                    <button class="courses-btn">
+                        <i class="fas fa-book-open"></i> Jump to Module
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#module1" class="dropdown-item">
+                            <i class="fas fa-globe-americas forex-icon"></i> Introduction to Forex
+                        </a>
+                        <a href="#module2" class="dropdown-item">
+                            <i class="fas fa-money-bill-wave currency-icon"></i> Currency Pairs
+                        </a>
+                        <a href="#module3" class="dropdown-item">
+                            <i class="fas fa-clock session-icon"></i> Market Sessions
+                        </a>
+                        <a href="#module4" class="dropdown-item">
+                            <i class="fas fa-chart-line chart-icon"></i> Chart Reading
+                        </a>
+                        <a href="#module5" class="dropdown-item">
+                            <i class="fas fa-chart-area support-icon"></i> Support & Resistance
+                        </a>
+                        <a href="#module6" class="dropdown-item">
+                            <i class="fas fa-tachometer-alt indicator-icon"></i> Technical Indicators
+                        </a>
+                        <a href="#module7" class="dropdown-item">
+                            <i class="fas fa-balance-scale fundamental-icon"></i> Fundamental Analysis
+                        </a>
+                        <a href="#module8" class="dropdown-item">
+                            <i class="fas fa-brain psychology-icon"></i> Price Action Psychology
+                        </a>
+                        <a href="#module9" class="dropdown-item">
+                            <i class="fas fa-shield-alt risk-icon"></i> Risk Management
+                        </a>
+                        <a href="#module10" class="dropdown-item">
+                            <i class="fas fa-running scalping-icon"></i> Scalping Strategies
+                        </a>
+                        <a href="#module11" class="dropdown-item">
+                            <i class="fas fa-sync-alt swing-icon"></i> Swing Trading
+                        </a>
+                        <a href="#module12" class="dropdown-item">
+                            <i class="fas fa-bolt daytrade-icon"></i> Day Trading
+                        </a>
+                        <a href="#module13" class="dropdown-item">
+                            <i class="fas fa-medal discipline-icon"></i> Trading Psychology
+                        </a>
+                        <a href="#module14" class="dropdown-item">
+                            <i class="fas fa-clipboard-list plan-icon"></i> Trading Plan
+                        </a>
+                        <a href="#module15" class="dropdown-item">
+                            <i class="fas fa-exclamation-triangle mistakes-icon"></i> Common Mistakes
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Premium Course Navigation -->
+    <div class="course-navigation">
+        <div class="course-nav-container">
+            <div class="course-category">
+                <button class="category-btn">
+                    <i class="fas fa-layer-group"></i> Trading Styles
+                </button>
+                <div class="category-dropdown">
+                    <a href="#" class="category-item">
+                        <i class="fas fa-sync-alt swing-icon"></i> Swing Trading
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fas fa-bolt daytrade-icon"></i> Day Trading
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fas fa-running scalping-icon"></i> Scalping
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fas fa-wind trendfollow-icon"></i> Trend Following
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fas fa-chart-bar breakout-icon"></i> Breakout Trading
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fas fa-chess-knight position-icon"></i> Position Trading
+                    </a>
+                </div>
+            </div>
+            
+            <div class="course-levels">
+                <button class="level-btn active" data-level="all">All Levels</button>
+                <button class="level-btn" data-level="beginner">Beginner</button>
+                <button class="level-btn" data-level="intermediate">Intermediate</button>
+                <button class="level-btn" data-level="advanced">Advanced</button>
+            </div>
+            
+            <div class="course-search">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" class="search-input" id="search-input" placeholder="Search trading concepts...">
+            </div>
+        </div>
+    </div>
+    
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <a href="#module1" class="sidebar-item active completed">
+            <i class="fas fa-globe-americas forex-icon"></i>
+            <span>Module 1: Introduction to Forex</span>
+            <span class="progress-indicator"><i class="fas fa-check"></i></span>
+        </a>
+        <a href="#module2" class="sidebar-item completed">
+            <i class="fas fa-money-bill-wave currency-icon"></i>
+            <span>Module 2: Currency Pairs</span>
+            <span class="progress-indicator"><i class="fas fa-check"></i></span>
+        </a>
+        <a href="#module3" class="sidebar-item completed">
+            <i class="fas fa-clock session-icon"></i>
+            <span>Module 3: Market Sessions</span>
+            <span class="progress-indicator"><i class="fas fa-check"></i></span>
+        </a>
+        <a href="#module4" class="sidebar-item">
+            <i class="fas fa-chart-line chart-icon"></i>
+            <span>Module 4: Chart Reading</span>
+            <span class="progress-indicator">4</span>
+        </a>
+        <a href="#module5" class="sidebar-item">
+            <i class="fas fa-chart-area support-icon"></i>
+            <span>Module 5: Support & Resistance</span>
+            <span class="progress-indicator">5</span>
+        </a>
+        <a href="#module6" class="sidebar-item">
+            <i class="fas fa-tachometer-alt indicator-icon"></i>
+            <span>Module 6: Technical Indicators</span>
+            <span class="progress-indicator">6</span>
+        </a>
+        <a href="#module7" class="sidebar-item">
+            <i class="fas fa-balance-scale fundamental-icon"></i>
+            <span>Module 7: Fundamental Analysis</span>
+            <span class="progress-indicator">7</span>
+        </a>
+        <a href="#module8" class="sidebar-item">
+            <i class="fas fa-brain psychology-icon"></i>
+            <span>Module 8: Price Action Psychology</span>
+            <span class="progress-indicator">8</span>
+        </a>
+        <a href="#module9" class="sidebar-item">
+            <i class="fas fa-shield-alt risk-icon"></i>
+            <span>Module 9: Risk Management</span>
+            <span class="progress-indicator">9</span>
+        </a>
+        <a href="#module10" class="sidebar-item">
+            <i class="fas fa-running scalping-icon"></i>
+            <span>Module 10: Scalping Strategies</span>
+            <span class="progress-indicator">10</span>
+        </a>
+        <a href="#module11" class="sidebar-item">
+            <i class="fas fa-sync-alt swing-icon"></i>
+            <span>Module 11: Swing Trading</span>
+            <span class="progress-indicator">11</span>
+        </a>
+        <a href="#module12" class="sidebar-item">
+            <i class="fas fa-bolt daytrade-icon"></i>
+            <span>Module 12: Day Trading</span>
+            <span class="progress-indicator">12</span>
+        </a>
+        <a href="#module13" class="sidebar-item">
+            <i class="fas fa-medal discipline-icon"></i>
+            <span>Module 13: Trading Psychology</span>
+            <span class="progress-indicator">13</span>
+        </a>
+        <a href="#module14" class="sidebar-item">
+            <i class="fas fa-clipboard-list plan-icon"></i>
+            <span>Module 14: Trading Plan</span>
+            <span class="progress-indicator">14</span>
+        </a>
+        <a href="#module15" class="sidebar-item">
+            <i class="fas fa-exclamation-triangle mistakes-icon"></i>
+            <span>Module 15: Common Mistakes</span>
+            <span class="progress-indicator">15</span>
+        </a>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="content-wrapper">
+        <div class="container">
+            <!-- Module 1 -->
+            <div class="course-module" id="module1" data-aos="fade-up" data-difficulty="beginner">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>INTRODUCTION TO FOREX</h1>
+                    <h3>The world's largest financial market</h3>
+                    <span class="difficulty">Beginner</span>
+                    <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" class="module-icon" alt="Global Forex Trading">
+                </div>
+                <div class="course-one">
+                    <h1>Module 1: <span>Forex Trading Fundamentals</span></h1>
+                    <p>Welcome to the world's largest and most liquid financial market - the Foreign Exchange (Forex) market. With a daily trading volume exceeding $6 trillion, Forex dwarfs all other financial markets combined. In this comprehensive introduction, you'll learn the essential concepts that form the foundation of successful currency trading.</p>
+                    
+                    <div class="trading-card bullish">
+                        <h3><i class="fas fa-lightbulb"></i> Key Insight: The 24-Hour Market</h3>
+                        <p>Unlike stock markets that operate during specific hours, Forex is open 24 hours a day, five days a week. This continuous operation across global financial centers creates unique trading opportunities but also requires disciplined risk management and strategic planning.</p>
+                    </div>
+                    
+                    <h3>What Makes Forex Unique?</h3>
+                    <p>The Forex market has several distinctive characteristics that set it apart from other financial markets:</p>
+                    
+                    <div class="strategy-example">
+                        <h4><i class="fas fa-list-ol"></i> Key Forex Market Features</h4>
+                        <ul>
+                            <li><strong>High Liquidity:</strong> With $6+ trillion traded daily, you can enter and exit positions easily</li>
+                            <li><strong>24/5 Operation:</strong> Trade anytime from Sunday evening to Friday night</li>
+                            <li><strong>Leverage Availability:</strong> Access to significant trading capital with small deposits</li>
+                            <li><strong>Low Transaction Costs:</strong> Tight spreads and minimal commissions</li>
+                            <li><strong>Two-Way Profit Potential:</strong> Profit from both rising and falling markets</li>
+                            <li><strong>Global Accessibility:</strong> Trade from anywhere with an internet connection</li>
+                        </ul>
+                    </div>
+                    
+                    <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" class="chart-image" alt="Forex Trading Volume Chart">
+                    <p class="image-description"><strong>Chart: Global Forex trading volume by session</strong> - This chart shows trading activity across different time zones, with London session accounting for the highest volume at 35% of daily trades.</p>
+                    
+                    <h3>Real-World Trading Example</h3>
+                    <p>Let's examine a real trading scenario to understand how currency movements translate to profits and losses:</p>
+                    
+                    <div class="real-world-example">
+                        <h4><i class="fas fa-chart-line"></i> EUR/USD Trade Example</h4>
+                        <p><strong>Situation:</strong> The European Central Bank announces stronger than expected economic data, suggesting potential interest rate hikes.</p>
+                        <p><strong>Trader Action:</strong> You buy EUR/USD at 1.0850, anticipating Euro strength against the US Dollar.</p>
+                        <p><strong>Outcome:</strong> The pair rises to 1.0950 over two days - a 100 pip move.</p>
+                        <p><strong>Profit Calculation:</strong> With a standard lot (100,000 units), each pip = $10. 100 pips × $10 = $1,000 profit.</p>
+                        <p><em>This example shows how fundamental analysis combined with proper position sizing can lead to substantial returns.</em></p>
+                    </div>
+                    
+                    <div class="learning-tip">
+                        <h3>Learning Tip: Start with a Demo Account</h3>
+                        <ul>
+                            <li>Open a demo account with a reputable broker</li>
+                            <li>Practice placing trades without real money at risk</li>
+                            <li>Familiarize yourself with the trading platform interface</li>
+                            <li>Test different order types (market, limit, stop)</li>
+                            <li>Track your demo performance for at least one month before going live</li>
+                        </ul>
+                        <p>Professional traders always test strategies in demo environments before risking real capital. This builds confidence and helps identify potential issues without financial consequences.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 2 -->
+            <div class="course-module" id="module2" data-aos="fade-up" data-difficulty="beginner">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>CURRENCY PAIRS</h1>
+                    <h3>Understanding the building blocks</h3>
+                    <span class="difficulty">Beginner</span>
+                    <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" class="module-icon" alt="Currency Exchange">
+                </div>
+                <div class="course-one">
+                    <h1>Module 2: <span>Currency Pairs and Market Structure</span></h1>
+                    <p>Currency pairs are the fundamental instruments of Forex trading. Every trade involves simultaneously buying one currency while selling another. Understanding how these pairs work, their relationships, and market structure is essential for developing effective trading strategies.</p>
+                    
+                    <div class="trading-card example">
+                        <h3><i class="fas fa-exchange-alt"></i> How Currency Pairs Work</h3>
+                        <p>In a currency pair like EUR/USD, the first currency (EUR) is the base currency, and the second (USD) is the quote currency. The exchange rate tells you how much of the quote currency you need to buy one unit of the base currency. If EUR/USD is 1.0850, you need 1.0850 US Dollars to buy 1 Euro.</p>
+                    </div>
+                    
+                    <h3>Major Currency Pairs</h3>
+                    <p>The most traded pairs all include the US Dollar and account for the majority of Forex volume:</p>
+                    
+                    <div class="strategy-example">
+                        <h4><i class="fas fa-list-ol"></i> The Major Currency Pairs</h4>
+                        <ul>
+                            <li><strong>EUR/USD</strong> - Euro vs US Dollar (Most liquid, tightest spreads)</li>
+                            <li><strong>USD/JPY</strong> - US Dollar vs Japanese Yen (High liquidity, carry trade favorite)</li>
+                            <li><strong>GBP/USD</strong> - British Pound vs US Dollar (Volatile, news-driven)</li>
+                            <li><strong>USD/CHF</strong> - US Dollar vs Swiss Franc (Safe-haven characteristics)</li>
+                            <li><strong>AUD/USD</strong> - Australian Dollar vs US Dollar (Commodity-linked)</li>
+                            <li><strong>USD/CAD</strong> - US Dollar vs Canadian Dollar (Oil correlation)</li>
+                            <li><strong>NZD/USD</strong> - New Zealand Dollar vs US Dollar (Agricultural exports)</li>
+                        </ul>
+                    </div>
+                    
+                    <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" class="chart-image" alt="Currency Pair Correlation Chart">
+                    <p class="image-description"><strong>Chart: Currency pair correlation matrix</strong> - This visualization shows how different currency pairs move in relation to each other, helping traders avoid overexposure to correlated assets.</p>
+                    
+                    <h3>Real-World Trading Example: Cross Pairs</h3>
+                    <p>Cross pairs (pairs without USD) offer unique trading opportunities when major pairs are range-bound:</p>
+                    
+                    <div class="real-world-example">
+                        <h4><i class="fas fa-chart-line"></i> EUR/GBP Swing Trade Example</h4>
+                        <p><strong>Situation:</strong> EUR/GBP has been trading in a tight range between 0.8550 and 0.8650 for three weeks.</p>
+                        <p><strong>Setup:</strong> Price breaks above 0.8650 resistance with increased volume.</p>
+                        <p><strong>Trade Entry:</strong> Buy EUR/GBP at 0.8660 with stop loss at 0.8580 (80 pips risk).</p>
+                        <p><strong>Target:</strong> Previous resistance at 0.8750 becomes support (90 pips potential profit).</p>
+                        <p><strong>Risk-Reward:</strong> 1:1.125 ratio - acceptable for a high-probability breakout trade.</p>
+                        <p><em>This cross pair trade capitalized on relative strength between Euro and Pound without USD influence.</em></p>
+                    </div>
+                    
+                    <div class="learning-tip">
+                        <h3>Learning Tip: Focus on 2-3 Pairs Initially</h3>
+                        <ul>
+                            <li>Choose pairs that align with your trading schedule (session times)</li>
+                            <li>Research the economic drivers for your selected pairs</li>
+                            <li>Track correlation between your chosen pairs to avoid overexposure</li>
+                            <li>Study historical volatility patterns for each pair</li>
+                            <li>Master your selected pairs before expanding to others</li>
+                        </ul>
+                        <p>Professional traders often specialize in a few currency pairs rather than trading everything. Deep knowledge of specific pairs leads to better trading decisions and improved performance.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 3 -->
+            <div class="course-module" id="module3" data-aos="fade-up" data-difficulty="beginner">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>MARKET SESSIONS</h1>
+                    <h3>Trading the global clock</h3>
+                    <span class="difficulty">Beginner</span>
+                    <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" class="module-icon" alt="Trading Sessions">
+                </div>
+                <div class="course-one">
+                    <h1>Module 3: <span>Global Market Sessions and Volatility</span></h1>
+                    <p>The Forex market operates 24 hours a day as trading passes through major financial centers worldwide. Understanding these sessions - their characteristics, overlaps, and volatility patterns - is crucial for timing your trades effectively and maximizing profit potential while managing risk.</p>
+                    
+                    <div class="trading-card bullish">
+                        <h3><i class="fas fa-globe-americas"></i> The Three Major Trading Sessions</h3>
+                        <p>Forex trading follows the sun across three primary sessions: Asian (Tokyo), European (London), and North American (New York). Each session has distinct volatility characteristics, currency focus, and trading opportunities that professional traders learn to exploit.</p>
+                    </div>
+                    
+                    <h3>Session Characteristics and Strategies</h3>
+                    <p>Each trading session offers unique opportunities based on market participants and economic activity:</p>
+                    
+                    <div class="strategy-example">
+                        <h4><i class="fas fa-list-ol"></i> Trading Session Breakdown</h4>
+                        <ul>
+                            <li><strong>Asian Session (Tokyo):</strong> 11 PM - 8 AM GMT
+                                <ul>
+                                    <li>Lower volatility, range-bound trading</li>
+                                    <li>Focus on JPY pairs and Asian currencies</li>
+                                    <li>Ideal for position traders and range strategies</li>
+                                </ul>
+                            </li>
+                            <li><strong>European Session (London):</strong> 7 AM - 4 PM GMT
+                                <ul>
+                                    <li>Highest volatility, major trend movements</li>
+                                    <li>Focus on EUR, GBP, and CHF pairs</li>
+                                    <li>Best for breakout and momentum strategies</li>
+                                </ul>
+                            </li>
+                            <li><strong>US Session (New York):</strong> 12 PM - 8 PM GMT
+                                <ul>
+                                    <li>High volatility, especially during overlap</li>
+                                    <li>Focus on USD pairs and news reactions</li>
+                                    <li>Excellent for day trading and news strategies</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <img src="https://tradingwalk.com/wp-content/uploads/2021/07/Forex-Market-Hours-1.png" class="chart-image" alt="Forex Trading Sessions Volatility Chart">
+                    <p class="image-description"><strong>Chart: Daily volatility by trading session</strong> - This real trading chart shows EUR/USD volatility patterns across different sessions, with the London session showing the highest average pip movement and the Asian session the lowest.</p>
+                    
+                    <h3>Real-World Trading Example: London Breakout</h3>
+                    <p>Professional traders often focus on the London session for high-probability breakout opportunities:</p>
+                    
+                    <div class="real-world-example">
+                        <h4><i class="fas fa-chart-line"></i> GBP/USD London Session Breakout</h4>
+                        <p><strong>Session:</strong> London Open (7 AM GMT)</p>
+                        <p><strong>Situation:</strong> GBP/USD has consolidated overnight between 1.2650-1.2700 during Asian session.</p>
+                        <p><strong>Setup:</strong> London liquidity enters the market, creating increased volume.</p>
+                        <p><strong>Breakout:</strong> Price breaks above 1.2700 resistance in first hour of London session.</p>
+                        <p><strong>Trade Entry:</strong> Buy stop order triggered at 1.2705.</p>
+                        <p><strong>Stop Loss:</strong> Below consolidation at 1.2675 (30 pips risk).</p>
+                        <p><strong>Target:</strong> Previous daily high at 1.2775 (70 pips profit potential).</p>
+                        <p><strong>Result:</strong> Trade hits target by New York open for 2.33 risk-reward ratio.</p>
+                        <p><em>This strategy capitalizes on increased volatility at London open to capture early directional moves.</em></p>
+                    </div>
+                    
+                    <div class="learning-tip">
+                        <h3>Learning Tip: Trade During Session Overlaps</h3>
+                        <ul>
+                            <li>London-New York overlap (12 PM - 4 PM GMT) offers highest volatility</li>
+                            <li>Asian-London overlap (7 AM - 8 AM GMT) provides early European direction</li>
+                            <li>Adjust your strategy based on session characteristics</li>
+                            <li>Use lower timeframes during high volatility periods</li>
+                            <li>Avoid trading during session transitions when liquidity drops</li>
+                        </ul>
+                        <p>Session overlaps create the most trading opportunities due to increased participation from multiple financial centers. Focus your active trading during these windows for optimal results.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 4 -->
+            <div class="course-module" id="module4" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>CHART READING</h1>
+                    <h3>Mastering price action analysis</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" class="module-icon" alt="Chart Analysis">
+                </div>
+                <div class="course-one">
+                    <h1>Module 4: <span>Reading Charts and Candlestick Patterns</span></h1>
+                    <p>Charts are the trader's window into market psychology. Learning to read price action through candlestick patterns, chart formations, and market structure provides the foundation for all technical analysis. This module will transform how you see and interpret market movements.</p>
+                    
+                    <div class="trading-card example">
+                        <h3><i class="fas fa-cube"></i> The Building Blocks: Candlesticks</h3>
+                        <p>Each candlestick tells a story about the battle between bulls and bears during a specific time period. The body shows the opening and closing price, while the wicks (shadows) reveal the high and low. The color (typically green/red) indicates whether the close was higher or lower than the open.</p>
+                    </div>
+                    
+                    <h3>Essential Candlestick Patterns</h3>
+                    <p>Professional traders recognize specific candlestick formations that signal potential market reversals or continuations:</p>
+                    
+                    <div class="strategy-example">
+                        <h4><i class="fas fa-list-ol"></i> High-Probability Candlestick Patterns</h4>
+                        <ul>
+                            <li><strong>Bullish Engulfing:</strong> Large green candle completely engulfs previous red candle - signals potential reversal upward</li>
+                            <li><strong>Bearish Engulfing:</strong> Large red candle completely engulfs previous green candle - signals potential reversal downward</li>
+                            <li><strong>Hammer:</strong> Small body with long lower wick at bottom of downtrend - bullish reversal signal</li>
+                            <li><strong>Shooting Star:</strong> Small body with long upper wick at top of uptrend - bearish reversal signal</li>
+                            <li><strong>Doji:</strong> Opening and closing prices are virtually equal - indicates market indecision</li>
+                            <li><strong>Morning Star:</strong> Three-candle pattern signaling bullish reversal after downtrend</li>
+                            <li><strong>Evening Star:</strong> Three-candle pattern signaling bearish reversal after uptrend</li>
+                        </ul>
+                    </div>
+                    
+                    <img src="https://www.forextraders.com/wp-content/uploads/2011/06/candlestick-patterns.jpg" class="chart-image" alt="Candlestick Patterns Chart">
+                    <p class="image-description"><strong>Chart: Candlestick pattern recognition</strong> - This real trading chart shows various candlestick patterns including bullish engulfing, hammers, and dojis that signaled important market turning points on EUR/USD.</p>
+                    
+                    <h3>Real-World Trading Example: Hammer Reversal</h3>
+                    <p>Candlestick patterns combined with support/resistance levels create high-probability trading setups:</p>
+                    
+                    <div class="real-world-example">
+                        <h4><i class="fas fa-chart-line"></i> USD/JPY Hammer Reversal Trade</h4>
+                        <p><strong>Timeframe:</strong> Daily chart</p>
+                        <p><strong>Situation:</strong> USD/JPY has declined for seven consecutive days, approaching major support at 148.50.</p>
+                        <p><strong>Pattern:</strong> A hammer candlestick forms exactly at the 148.50 support level.</p>
+                        <p><strong>Confirmation:</strong> Next candle is a strong green candle closing above hammer high.</p>
+                        <p><strong>Trade Entry:</strong> Buy USD/JPY at 149.20 (above hammer confirmation).</p>
+                        <p><strong>Stop Loss:</strong> Below hammer low at 148.30 (90 pips risk).</p>
+                        <p><strong>Target:</strong> Previous resistance at 151.50 (230 pips profit potential).</p>
+                        <p><strong>Psychology:</strong> Hammer shows sellers exhausted at support, buyers stepping in aggressively.</p>
+                        <p><em>This trade combines candlestick analysis with key support for a high-probability reversal setup with 2.55 risk-reward ratio.</em></p>
+                    </div>
+                    
+                    <div class="learning-tip">
+                        <h3>Learning Tip: Practice Pattern Recognition</h3>
+                        <ul>
+                            <li>Study historical charts to identify common patterns</li>
+                            <li>Focus on patterns that form at key support/resistance levels</li>
+                            <li>Use higher timeframes (4H, Daily) for more reliable signals</li>
+                            <li>Wait for confirmation candle before entering trades</li>
+                            <li>Combine candlestick patterns with other technical tools</li>
+                        </ul>
+                        <p>Pattern recognition becomes intuitive with practice. Start by identifying just 2-3 high-probability patterns and master them before expanding your repertoire. Quality over quantity leads to better trading decisions.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 5 -->
+            <div class="course-module" id="module5" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>SUPPORT & RESISTANCE</h1>
+                    <h3>Identifying key market levels</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://images.unsplash.com/photo-1642790554902-86c121e4d67e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" class="module-icon" alt="Support and Resistance">
+                </div>
+                <div class="course-one">
+                    <h1>Module 5: <span>Support, Resistance, and Trendlines</span></h1>
+                    <p>Support and resistance form the foundation of technical analysis. These key price levels represent areas where buying and selling pressure have historically created market turning points. Mastering their identification and application will significantly improve your trading accuracy and timing.</p>
+                    
+                    <div class="trading-card bullish">
+                        <h3><i class="fas fa-draw-polygon"></i> The Psychology Behind Support & Resistance</h3>
+                        <p>Support forms when buyers outnumber sellers, preventing further price declines. Resistance occurs when sellers overwhelm buyers, halting upward moves. These levels represent collective market memory where traders previously took action, creating self-fulfilling prophecies as price approaches them again.</p>
+                    </div>
+                    
+                    <h3>Types of Support and Resistance</h3>
+                    <p>Professional traders identify multiple types of support/resistance for comprehensive market analysis:</p>
+                    
+                    <div class="strategy-example">
+                        <h4><i class="fas fa-list-ol"></i> Key Support/Resistance Categories</h4>
+                        <ul>
+                            <li><strong>Static Horizontal Levels:</strong> Previous swing highs/lows that price has reacted to multiple times</li>
+                            <li><strong>Dynamic Trendlines:</strong> Diagonal lines connecting successive highs (resistance) or lows (support)</li>
+                            <li><strong>Moving Averages:</strong> Dynamic support/resistance that changes with price</li>
+                            <li><strong>Fibonacci Levels:</strong> Mathematical ratios derived from significant price moves</li>
+                            <li><strong>Psychological Levels:</strong> Round numbers (1.1000, 1.5000) that attract trader attention</li>
+                            <li><strong>Volume Profile:</strong> Areas where significant trading volume occurred previously</li>
+                        </ul>
+                    </div>
+                    
+                    <img src="https://www.ifcm.com/upload/media/points/5b/32/57/technical-analysis-support-resistance-01.jpg" class="chart-image" alt="Support and Resistance Levels">
+                    <p class="image-description"><strong>Chart: Multiple support and resistance levels</strong> - This real GBP/USD chart shows how price respects key horizontal levels, with previous resistance becoming new support after breaks (role reversal).</p>
+                    
+                    <h3>Real-World Trading Example: Bounce Trade</h3>
+                    <p>Trading bounces at key support/resistance levels offers excellent risk-reward opportunities:</p>
+                    
+                    <div class="real-world-example">
+                        <h4><i class="fas fa-chart-line"></i> EUR/USD Support Bounce Trade</h4>
+                        <p><strong>Level Identification:</strong> EUR/USD has bounced three times from 1.0720-1.0750 area over past two months.</p>
+                        <p><strong>Current Situation:</strong> Price approaches this established support zone again.</p>
+                        <p><strong>Confirmation:</strong> Bullish engulfing pattern forms at 1.0735 within support zone.</p>
+                        <p><strong>Trade Entry:</strong> Buy EUR/USD at 1.0740 with stop loss below support at 1.0690 (50 pips risk).</p>
+                        <p><strong>Target:</strong> Previous resistance at 1.0850 (110 pips profit potential).</p>
+                        <p><strong>Risk-Reward:</strong> 1:2.2 ratio - favorable for support bounce trade.</p>
+                        <p><strong>Market Psychology:</strong> Buyers defending established level, creating potential for strong bounce.</p>
+                        <p><em>This trade capitalizes on historical price behavior at a proven support level with clearly defined risk parameters.</em></p>
+                    </div>
+                    
+                    <div class="learning-tip">
+                        <h3>Learning Tip: Map Key Levels on Multiple Timeframes</h3>
+                        <ul>
+                            <li>Identify support/resistance on weekly and daily charts first</li>
+                            <li>Mark these levels on your trading timeframe (1H, 4H)</li>
+                            <li>Note which levels have been tested multiple times</li>
+                            <li>Watch for role reversal (resistance becomes support and vice versa)</li>
+                            <li>Give more weight to levels that align across multiple timeframes</li>
+                        </ul>
+                        <p>The most powerful support/resistance levels are those that appear across multiple timeframes. These confluence areas offer the highest probability trading opportunities with favorable risk-reward ratios.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 6 -->
+            <div class="course-module" id="module6" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>TECHNICAL INDICATORS</h1>
+                    <h3>Using tools to confirm trading signals</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" class="module-icon" alt="Technical Indicators">
+                </div>
+                <div class="course-one">
+                    <h1>Module 6: <span>Technical Indicators and Oscillators</span></h1>
+                    <p>Technical indicators help traders confirm price action signals, identify trends, and spot potential reversals. This module covers the most effective indicators including RSI, MACD, Moving Averages, and Bollinger Bands, with real-world application examples.</p>
+                    
+                    <div class="trading-card example">
+                        <h3><i class="fas fa-tachometer-alt"></i> Indicator Categories and Applications</h3>
+                        <p>Technical indicators fall into three main categories: trend-following (identify direction), momentum (measure speed), and volatility (measure price fluctuations). Professional traders use complementary indicators from different categories to confirm signals.</p>
+                    </div>
+                    
+                    <h3>Essential Technical Indicators</h3>
+                    <p>Master these core indicators that form the foundation of technical analysis:</p>
+                    
+                    <div class="strategy-example">
+                        <h4><i class="fas fa-list-ol"></i> Key Technical Indicators</h4>
+                        <ul>
+                            <li><strong>RSI (Relative Strength Index):</strong> Momentum oscillator measuring speed and change of price movements (range: 0-100)</li>
+                            <li><strong>MACD (Moving Average Convergence Divergence):</strong> Trend-following momentum indicator showing relationship between two moving averages</li>
+                            <li><strong>Moving Averages:</strong> Smooth out price data to identify trend direction (Simple, Exponential, Weighted)</li>
+                            <li><strong>Bollinger Bands:</strong> Volatility bands placed above and below a moving average</li>
+                            <li><strong>Stochastic Oscillator:</strong> Momentum indicator comparing closing price to price range over time</li>
+                            <li><strong>Fibonacci Retracement:</strong> Identify potential reversal levels based on mathematical ratios</li>
+                        </ul>
+                    </div>
+                    
+                    <img src="https://www.forex.academy/wp-content/uploads/2020/06/technical-analysis-indicators.jpg" class="chart-image" alt="Technical Indicators on Chart">
+                    <p class="image-description"><strong>Chart: Multi-indicator trading setup</strong> - This EUR/USD chart shows RSI, MACD, and moving averages working together to confirm trend direction and identify potential entry points.</p>
+                    
+                    <h3>Real-World Trading Example: RSI Divergence</h3>
+                    <p>Indicator divergences often signal potential trend reversals before price action confirms them:</p>
+                    
+                    <div class="real-world-example">
+                        <h4><i class="fas fa-chart-line"></i> GBP/USD RSI Divergence Trade</h4>
+                        <p><strong>Setup:</strong> GBP/USD makes new high at 1.2800, but RSI shows lower high (bearish divergence).</p>
+                        <p><strong>Confirmation:</strong> Price breaks below recent swing low at 1.2750.</p>
+                        <p><strong>Trade Entry:</strong> Sell GBP/USD at 1.2745 with stop loss above divergence high at 1.2820 (75 pips risk).</p>
+                        <p><strong>Target:</strong> Previous support at 1.2650 (95 pips profit potential).</p>
+                        <p><strong>Indicator Logic:</strong> RSI divergence indicates weakening momentum despite higher prices.</p>
+                        <p><strong>Result:</strong> Price declines to target over three days for 1:1.27 risk-reward ratio.</p>
+                        <p><em>This trade demonstrates how indicator divergences can provide early warning of potential trend changes.</em></p>
+                    </div>
+                    
+                    <div class="learning-tip">
+                        <h3>Learning Tip: Less is More with Indicators</h3>
+                        <ul>
+                            <li>Avoid indicator overload - use 2-3 complementary indicators maximum</li>
+                            <li>Combine trend-following with momentum indicators for confirmation</li>
+                            <li>Use higher timeframe indicators for direction, lower for timing</li>
+                            <li>Understand what each indicator measures and its limitations</li>
+                            <li>Backtest indicator settings for your specific trading style</li>
+                        </ul>
+                        <p>Professional traders use indicators to confirm price action, not replace it. Too many indicators create conflicting signals and analysis paralysis. Focus on mastering a few reliable indicators rather than using many poorly understood ones.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 7 -->
+            <div class="course-module" id="module7" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>FUNDAMENTAL ANALYSIS</h1>
+                    <h3>Understanding what moves currency markets</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" class="module-icon" alt="Fundamental Analysis">
+                </div>
+                <div class="course-one">
+                    <h1>Module 7: <span>Fundamental Analysis and Economic Drivers</span></h1>
+                    <p>While technical analysis shows you WHEN to trade, fundamental analysis tells you WHY currencies move. Central bank policies, economic data releases, and geopolitical events create the trends that technical traders profit from. This module teaches you to interpret economic data and anticipate market-moving events.</p>
+                    
+                    <div class="trading-card bullish">
+                        <h3><i class="fas fa-balance-scale"></i> The Drivers Behind Currency Movements</h3>
+                        <p>Currencies reflect the economic health of their respective countries. Strong economies with rising interest rates typically see currency appreciation, while weak economies with falling rates experience depreciation. Understanding these relationships is crucial for long-term trading success.</p>
+                    </div>
+                    
+                    <h3>Key Fundamental Drivers</h3>
+                    <p>Professional traders monitor these economic indicators to anticipate currency movements:</p>
+                    
+                    <div class="strategy-example">
+                        <h4><i class="fas fa-list-ol"></i> Essential Economic Indicators</h4>
+                        <ul>
+                            <li><strong>Interest Rates:</strong> The single most important driver of currency valuations</li>
+                            <li><strong>Inflation (CPI):</strong> Determines central bank monetary policy decisions</li>
+                            <li><strong>Employment Data:</strong> Non-Farm Payrolls (US) and unemployment rates</li>
+                            <li><strong>GDP Growth:</strong> Measures overall economic health and expansion</li>
+                            <li><strong>Central Bank Communications:</strong> Speeches, minutes, and forward guidance</li>
+                            <li><strong>Trade Balance:</strong> Difference between exports and imports</li>
+                            <li><strong>Political Events:</strong> Elections, policy changes, and geopolitical tensions</li>
+                        </ul>
+                    </div>
+                    
+                    <img src="https://www.dailyfx.com/_/media/images/forex-education/beginner/fundamental-analysis/economic-calendar-1.png" class="chart-image" alt="Economic Calendar">
+                    <p class="image-description"><strong>Chart: Economic calendar with high-impact events</strong> - This professional trading calendar shows upcoming economic releases color-coded by potential market impact, helping traders prepare for volatility.</p>
+                    
+                    <h3>Real-World Trading Example: NFP Reaction</h3>
+                    <p>The Non-Farm Payrolls report is one of the most market-moving economic releases:</p>
+                    
+                    <div class="real-world-example">
+                        <h4><i class="fas fa-chart-line"></i> USD/JPY NFP Trade</h4>
+                        <p><strong>Event:</strong> US Non-Farm Payrolls report</p>
+                        <p><strong>Expectation:</strong> 180,000 jobs added</p>
+                        <p><strong>Actual:</strong> 350,000 jobs added (significantly higher)</p>
+                        <p><strong>Market Reaction:</strong> USD strengthens on Fed rate hike expectations</p>
+                        <p><strong>Trade Setup:</strong> Pre-set sell stop orders below pre-NFP range at 148.20</p>
+                        <p><strong>Entry:</strong> Order fills at 148.15 as USD/JPY breaks down</p>
+                        <p><strong>Stop Loss:</strong> Above pre-NFP range at 149.00 (85 pips risk)</p>
+                        <p><strong>Target:</strong> Previous support at 147.00 (115 pips profit)</p>
+                        <p><strong>Result:</strong> Trade hits target within hours for 1:1.35 risk-reward ratio</p>
+                        <p><em>This trade demonstrates how prepared traders can capitalize on economic news volatility with predefined risk parameters.</em></p>
+                    </div>
+                    
+                    <div class="learning-tip">
+                        <h3>Learning Tip: Trade the Reaction, Not the News</h3>
+                        <ul>
+                            <li>Never try to predict news outcomes - the market is unpredictable</li>
+                            <li>Prepare for multiple scenarios with predefined entry orders</li>
+                            <li>Use wider stops during high-volatility news events</li>
+                            <li>Scale out partial profits quickly on initial spikes</li>
+                            <li>Let remaining position run if trend continuation occurs</li>
+                            <li>Always know when major economic releases are scheduled</li>
+                        </ul>
+                        <p>The initial reaction to news often reverses, so professional traders focus on the sustained move that follows rather than the immediate spike. Having a plan for different outcomes removes emotion from news trading.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 8 -->
+            <div class="course-module" id="module8" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>PRICE ACTION</h1>
+                    <h3>Reading the pure language of markets</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://images.unsplash.com/photo-1642790554902-86c121e4d67e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" class="module-icon" alt="Price Action">
+                </div>
+                <div class="course-one">
+                    <h1>Module 8: <span>Price Action and Market Structure</span></h1>
+                    <p>Price action trading focuses on analyzing raw price movement without relying heavily on indicators. It's based on the premise that price reflects all available information and market sentiment. By understanding market structure - highs, lows, and swing points - you can anticipate future price movements with remarkable accuracy.</p>
+                    
+                    <div class="trading-card example">
+                        <h3><i class="fas fa-brain"></i> The Essence of Price Action Trading</h3>
+                        <p>Price action is the foundation of all technical analysis. While indicators are derived from price, price action analyzes the source itself. This pure approach eliminates lag and provides real-time insights into market sentiment and potential future direction.</p>
+                    </div>
+                    
+                    <h3>Key Price Action Concepts</h3>
+                    <p>Master these essential price action concepts to read market structure like a professional:</p>
+                    
+                    <div class="strategy-example">
+                        <h4><i class="fas fa-list-ol"></i> Core Price Action Principles</h4>
+                        <ul>
+                            <li><strong>Market Structure:</strong> The arrangement of swing highs and lows that define trend direction</li>
+                            <li><strong>Supply and Demand Zones:</strong> Areas where significant buying or selling previously occurred</li>
+                            <li><strong>Order Blocks:</strong> Candles that initiated strong moves, often becoming future support/resistance</li>
+                            <li><strong>Liquidity Pools:</strong> Areas where stops are likely clustered, often targeted by large players</li>
+                            <li><strong>Fair Value Gaps:</strong> Imbalances between buying and selling that often get filled</li>
+                            <li><strong>Break of Structure (BOS):</strong> When price conclusively breaks previous significant levels</li>
+                            <li><strong>Change of Character (CHOCH):</strong> Shifts in market behavior indicating potential trend changes</li>
+                        </ul>
+                    </div>
+                    
+                    <img src="https://www.forexfactory.com/attachment.php?attachmentid=1584764&d=1519323144" class="chart-image" alt="Price Action Market Structure">
+                    <p class="image-description"><strong>Chart: Market structure analysis</strong> - This advanced price action chart shows clear swing points, break of structure (BOS) signals, and liquidity pools that professional traders use to identify high-probability entries.</p>
+                    
+                    <h3>Real-World Trading Example: Break of Structure</h3>
+                    <p>Break of structure (BOS) signals provide high-probability trend continuation entries:</p>
+                    
+                    <div class="real-world-example">
+                        <h4><i class="fas fa-chart-line"></i> EUR/USD BOS Trade</h4>
+                        <p><strong>Market Structure:</strong> EUR/USD in clear uptrend with higher highs and higher lows</p>
+                        <p><strong>Pullback:</strong> Price retraces to previous resistance turned support at 1.0950</p>
+                        <p><strong>BOS Signal:</strong> Price breaks above most recent high at 1.1020</p>
+                        <p><strong>Trade Entry:</strong> Buy EUR/USD at 1.1025 on BOS confirmation</p>
+                        <p><strong>Stop Loss:</strong> Below swing low at 1.0980 (45 pips risk)</p>
+                        <p><strong>Target:</strong> Measured move to 1.1120 (95 pips profit potential)</p>
+                        <p><strong>Market Psychology:</strong> Break of structure confirms buyers still in control, trend likely to continue</p>
+                        <p><strong>Result:</strong> Price advances to target over three days for 1:2.1 risk-reward ratio</p>
+                        <p><em>This trade demonstrates how clean market structure analysis provides clear entry signals with defined risk parameters.</em></p>
+                    </div>
+                    
+                    <div class="learning-tip">
+                        <h3>Learning Tip: Trade with the Higher Timeframe Trend</h3>
+                        <ul>
+                            <li>Always identify the dominant trend on daily/weekly charts first</li>
+                            <li>Only take long setups in uptrends, short setups in downtrends</li>
+                            <li>Use lower timeframes for precise entry timing within the larger trend</li>
+                            <li>Align your trades with institutional flow (follow the smart money)</li>
+                            <li>Avoid counter-trend trading until you have significant experience</li>
+                        </ul>
+                        <p>The trend is your friend - this classic trading wisdom holds true for price action traders. Trading with the higher timeframe trend significantly increases your probability of success and helps you avoid dangerous counter-trend setups.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 9 -->
+            <div class="course-module" id="module9" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>RISK MANAGEMENT</h1>
+                    <h3>The foundation of trading success</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" class="module-icon" alt="Risk Management">
+                </div>
+                <div class="course-one">
+                    <h1>Module 9: <span>Risk and Money Management Principles</span></h1>
+                    <p>Risk management isn't just a component of trading - it's the foundation upon which all successful trading careers are built. Proper position sizing and risk control ensure you survive losing streaks and remain in the game long enough to achieve profitability. This module teaches the mathematical principles that separate professionals from gamblers.</p>
+                    
+                    <div class="risk-management">
+                        <h3><i class="fas fa-shield-alt"></i> The Golden Rule: Preserve Capital</h3>
+                        <p>"The first rule of trading is don't lose money. The second rule is don't forget the first rule." - Warren Buffett (adapted for trading). Your primary goal as a trader should be capital preservation, not aggressive growth. Consistent small gains compound into significant wealth over time.</p>
+                    </div>
+                    
+                    <h3>The Mathematics of Trading Survival</h3>
+                    <p>Understanding these mathematical concepts is crucial for long-term trading success:</p>
+                    
+                    <div class="strategy-example">
+                        <h4><i class="fas fa-list-ol"></i> Essential Risk Management Concepts</h4>
+                        <ul>
+                            <li><strong>The 1% Rule:</strong> Never risk more than 1% of your account on a single trade</li>
+                            <li><strong>Risk-Reward Ratio:</strong> Always maintain minimum 1:2 risk-reward ratio</li>
+                            <li><strong>Position Sizing:</strong> Calculate lot size based on stop loss distance and account risk</li>
+                            <li><strong>Correlation Analysis:</strong> Avoid overexposure to correlated currency pairs</li>
+                            <li><strong>Drawdown Limits:</strong> Pre-defined maximum loss thresholds (e.g., 10% monthly maximum)</li>
+                            <li><strong>Risk of Ruin:</strong> Mathematical probability of blowing your account</li>
+                            <li><strong>Compounding Plans:</strong> Systematic account growth strategies</li>
+                        </ul>
+                    </div>
+                    
+                    <img src="https://www.babypips.com/images/trading/position-size-example.png" class="chart-image" alt="Position Sizing Calculator">
+                    <p class="image-description"><strong>Chart: Position sizing calculation example</strong> - This visual calculator shows how to determine exact lot size based on account balance, risk percentage, stop loss distance, and currency pair specifications.</p>
+                    
+                    <h3>Real-World Example: The 1% Rule in Action</h3>
+                    <p>Proper position sizing protects your account during inevitable losing streaks:</p>
+                    
+                    <div class="real-world-example">
+                        <h4><i class="fas fa-calculator"></i> Risk Management Calculation</h4>
+                        <p><strong>Account Balance:</strong> $10,000</p>
+                        <p><strong>Risk per Trade:</strong> 1% ($100)</p>
+                        <p><strong>Trade Setup:</strong> EUR/USD with 50 pip stop loss</p>
+                        <p><strong>Position Size Calculation:</strong> $100 ÷ 50 pips = $2 per pip</p>
+                        <p><strong>Micro Lots:</strong> 20 micro lots (each = $0.10 per pip)</p>
+                        <p><strong>Scenario:</strong> 10 consecutive losses</p>
+                        <p><strong>Account Impact:</strong> -$1,000 (10% drawdown) - still $9,000 to recover</p>
+                        <p><strong>Without 1% Rule:</strong> Risking 5% per trade would result in -50% drawdown ($5,000 loss)</p>
+                        <p><em>This example demonstrates how proper risk management prevents catastrophic losses and preserves trading capital during difficult periods.</em></p>
+                    </div>
+                    
+                    <div class="learning-tip">
+                        <h3>Learning Tip: Risk Management Before Entry</h3>
+                        <ul>
+                            <li>Always calculate position size and set stop loss BEFORE entering any trade</li>
+                            <li>Use a position size calculator or create a spreadsheet template</li>
+                            <li>Never move stop losses further away from entry to avoid losses</li>
+                            <li>Reduce position size during losing streaks to protect capital</li>
+                            <li>Keep total account risk below 5% at all times (across all positions)</li>
+                            <li>Regularly review and adjust risk parameters as account grows</li>
+                        </ul>
+                        <p>Risk management should be automated and non-negotiable. By calculating your risk before every trade, you remove emotion from the process and ensure consistent application of your risk parameters regardless of market conditions.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 10 -->
+            <div class="course-module" id="module10" data-aos="fade-up" data-difficulty="advanced">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>SCALPING STRATEGIES</h1>
+                    <h3>Capturing small, frequent profits</h3>
+                    <span class="difficulty">Advanced</span>
+                    <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" class="module-icon" alt="Scalping Strategies">
+                </div>
+                <div class="course-one">
+                    <h1>Module 10: <span>Scalping Techniques for Fast Markets</span></h1>
+                    <p>Scalping involves taking numerous small profits throughout the trading day, typically holding positions for seconds to minutes. This strategy requires intense focus, quick decision-making, and disciplined execution. Scalpers capitalize on small price movements during high-volatility periods, often trading during London and New York session overlaps.</p>
+                    
+                    <div class="trading-card bullish">
+                        <h3><i class="fas fa-running"></i> The Art of High-Frequency Trading</h3>
+                        <p>Scalping is not for everyone. It requires lightning-fast execution, emotional control, and the ability to make split-second decisions. Successful scalpers often have backgrounds in competitive fields that require quick thinking and rapid pattern recognition.</p>
+                    </div>
+                    
+                    <h3>Essential Scalping Techniques</h3>
+                    <p>Master these core scalping methods used by professional day traders:</p>
+                    
+                    <div class="strategy-example">
+                        <h4><i class="fas fa-list-ol"></i> Professional Scalping Methods</h4>
+                        <ul>
+                            <li><strong>Timeframe Selection:</strong> Use 1-minute to 15-minute charts for entry timing</li>
+                            <li><strong>Session Focus:</strong> Trade only during high-volume sessions (London, New York)</li>
+                            <li><strong>Pair Selection:</strong> Focus on major pairs with tightest spreads (EUR/USD, USD/JPY)</li>
+                            <li><strong>Execution Speed:</strong> Use market orders for immediate entry and exit</li>
+                            <li><strong>Profit Targets:</strong> Aim for 5-15 pips per trade with tight stops</li>
+                            <li><strong>Volume Analysis:</strong> Only trade setups with confirmed volume increases</li>
+                            <li><strong>Multiple Positions:</strong> Scale in and out of positions for optimal risk management</li>
+                        </ul>
+                    </div>
+                    
+                    <img src="https://www.forexfactory.com/attachment.php?attachmentid=1059652&d=1442425134" class="chart-image" alt="Scalping Setup on 1-Minute Chart">
+                    <p class="image-description"><strong>Chart: Scalping setup on 1-minute EUR/USD</strong> - This fast-moving chart shows multiple scalping entries and exits within a 30-minute period during London session, with tight stops and quick profit targets.</p>
+                    
+                    <h3>Real-World Trading Example: London Session Scalping</h3>
+                    <p>Professional scalpers focus on the London session for optimal liquidity and volatility:</p>
+                    
+                    <div class="real-world-example">
+                        <h4><i class="fas fa-chart-line"></i> EUR/USD Scalping Session</h4>
+                        <p><strong>Session:</strong> London Open (7 AM GMT)</p>
+                        <p><strong>Instrument:</strong> EUR/USD on 1-minute chart</p>
+                        <p><strong>Strategy:</strong> Breakout scalping with 5 pip stops, 8 pip targets</p>
+                        <p><strong>Trade 1:</strong> Break above minor resistance at 1.0885, enter long at 1.0887</p>
+                        <p><strong>Result:</strong> Hit 8 pip target at 1.0895 within 3 minutes (1:1.6 risk-reward)</p>
+                        <p><strong>Trade 2:</strong> Pullback to 1.0880 support, enter long at 1.0882</p>
+                        <p><strong>Result:</strong> Hit 8 pip target at 1.0890 within 2 minutes (1:1.6 risk-reward)</p>
+                        <p><strong>Trade 3:</strong> Break below 1.0878 support, enter short at 1.0876</p>
+                        <p><strong>Result:</strong> Hit 8 pip target at 1.0868 within 4 minutes (1:1.6 risk-reward)</p>
+                        <p><strong>Session Total:</strong> 3 trades, 24 pips profit, controlled risk throughout</p>
+                        <p><em>This scalping session demonstrates how focused execution during high-volatility periods can generate consistent small profits with controlled risk.</em></p>
+                    </div>
+                    
+                    <div class="learning-tip">
+                        <h3>Learning Tip: Master One Session First</h3>
+                        <ul>
+                            <li>Don't try to scalp throughout the entire trading day</li>
+                            <li>Start by focusing on just one high-volatility session (London or New York open)</li>
+                            <li>Master the patterns and rhythm of that specific session</li>
+                            <li>Gradually expand to other time windows as you gain experience</li>
+                            <li>Take regular breaks to maintain mental clarity and focus</li>
+                            <li>Track your performance metrics for continuous improvement</li>
+                        </ul>
+                        <p>Scalping requires intense mental focus that diminishes over time. Professional scalpers typically trade in focused 2-3 hour sessions rather than throughout the entire day. This focused approach leads to better results than spreading yourself too thin across multiple sessions.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 11 -->
+            <div class="course-module" id="module11" data-aos="fade-up" data-difficulty="advanced">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>SWING TRADING</h1>
+                    <h3>Capturing multi-day market moves</h3>
+                    <span class="difficulty">Advanced</span>
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" class="module-icon" alt="Swing Trading">
+                </div>
+                <div class="course-one">
+                    <h1>Module 11: <span>Swing Trading Strategies and Techniques</span></h1>
+                    <p>Swing trading involves holding positions for several days to weeks, capturing the "meat" of price moves while avoiding the noise of intraday fluctuations. This approach requires patience, strong analytical skills, and the ability to withstand temporary drawdowns while waiting for targets to be reached. Swing traders typically use daily and 4-hour charts for analysis.</p>
+                    
+                    <div class="trading-card example">
+                        <h3><i class="fas fa-sync-alt"></i> The Patient Trader's Approach</h3>
+                        <p>Swing trading strikes an optimal balance between the rapid pace of day trading and the long timeframes of position trading. It allows traders to capture significant market moves without requiring constant screen monitoring. This approach is ideal for those with full-time jobs or other commitments.</p>
+                    </div>
+                    
+                    <h3>Swing Trading Methodology</h3>
+                    <p>Professional swing traders follow this systematic approach:</p>
+                    
+                    <div class="strategy-example">
+                        <h4><i class="fas fa-list-ol"></i> Swing Trading Framework</h4>
+                        <ul>
+                            <li><strong>Timeframe Alignment:</strong> Use daily charts for direction, 4-hour for setup, 1-hour for entry</li>
+                            <li><strong>Trend Identification:</strong> Trade in the direction of the dominant higher timeframe trend</li>
+                            <li><strong>Pullback Entries:</strong> Enter during counter-trend moves within the larger trend</li>
+                            <li><strong>Multiple Targets:</strong> Scale out profits at logical resistance levels</li>
+                            <li><strong>Trailing Stops:</strong> Protect profits while allowing room for trend continuation</li>
+                            <li><strong>Weekend Analysis:</strong> Use non-trading time for comprehensive market analysis</li>
+                            <li><strong>Position Sizing:</strong> Larger positions than day trading but with wider stops</li>
+                        </ul>
+                    </div>
+                    
+                    <img src="https://www.forexfactory.com/attachment.php?attachmentid=1059653&d=1442425134" class="chart-image" alt="Swing Trading Setup">
+                    <p class="image-description"><strong>Chart: Multi-timeframe swing trading analysis</strong> - This comprehensive chart shows a complete swing trading setup across daily, 4-hour, and 1-hour timeframes, with clear entry, multiple profit targets, and trailing stop methodology.</p>
+                    
+                    <h3>Real-World Trading Example: GBP/USD Swing Trade</h3>
+                    <p>Swing traders capture significant moves by entering during pullbacks within larger trends:</p>
+                    
+                    <div class="real-world-example">
+                        <h4><i class="fas fa-chart-line"></i> GBP/USD Multi-Day Swing Trade</h4>
+                        <p><strong>Trend Analysis:</strong> GBP/USD in clear uptrend on daily chart</p>
+                        <p><strong>Pullback Setup:</strong> Price retraces to key support at 1.2650 after strong advance</p>
+                        <p><strong>Entry Signal:</strong> Bullish engulfing pattern forms at support on daily chart</p>
+                        <p><strong>Trade Entry:</strong> Buy GBP/USD at 1.2660 on daily close above engulfing pattern</p>
+                        <p><strong>Stop Loss:</strong> Below swing low at 1.2580 (80 pips risk)</p>
+                        <p><strong>Target 1:</strong> Previous resistance at 1.2780 (120 pips profit)</p>
+                        <p><strong>Target 2:</strong> Measured move extension at 1.2880 (additional 100 pips)</p>
+                        <p><strong>Trade Management:</strong> Scale out 50% at Target 1, trail stop to breakeven</p>
+                        <p><strong>Result:</strong> First target hit in 3 days, second target hit 2 days later</p>
+                        <p><strong>Total Profit:</strong> 220 pips with 80 pip risk (1:2.75 ratio)</p>
+                        <p><em>This swing trade demonstrates how patient entries during pullbacks within larger trends can yield excellent risk-reward ratios with controlled risk.</em></p>
+                    </div>
+                    
+                    <div class="learning-tip">
+                        <h3>Learning Tip: Weekend Analysis for Weekly Planning</h3>
+                        <ul>
+                            <li>Use weekends to analyze weekly and daily charts without market pressure</li>
+                            <li>Identify key support/resistance levels for the coming week</li>
+                            <li>Determine overall trend direction on higher timeframes</li>
+                            <li>Mark potential setup zones where you'll look for entries</li>
+                            <li>Review economic calendar for upcoming market-moving events</li>
+                            <li>Update your watchlist and remove instruments that no longer meet criteria</li>
+                        </ul>
+                        <p>Weekend preparation is crucial for swing traders. This pre-planned approach reduces emotional decision-making during the trading week and improves trade quality. By knowing your levels and setups in advance, you can execute with confidence when opportunities arise.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 12 -->
+            <div class="course-module" id="module12" data-aos="fade-up" data-difficulty="advanced">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>BREAKOUT TRADING</h1>
+                    <h3>Riding strong directional moves</h3>
+                    <span class="difficulty">Advanced</span>
+                    <img src="https://images.unsplash.com/photo-1642790554902-86c121e4d67e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" class="module-icon" alt="Breakout Trading">
+                </div>
+                <div class="course-one">
+                    <h1>Module 12: <span>Breakout and Trend-Following Strategies</span></h1>
+                    <p>Breakout trading involves entering when price moves beyond defined support or resistance levels, anticipating continued momentum in the breakout direction. Trend-following strategies aim to capture the majority of established trends by entering pullbacks within the larger trend. Both approaches capitalize on strong directional moves for maximum profit potential.</p>
+                    
+                    <div class="trading-card bullish">
+                        <h3><i class="fas fa-bolt"></i> Capitalizing on Market Momentum</h3>
+                        <p>Breakout traders thrive on volatility and strong directional moves. While many traders fear breakouts due to potential false signals, professional breakout traders have specific techniques to filter out false breakouts and capitalize on genuine momentum shifts.</p>
+                    </div>
+                    
+                    <h3>Breakout Trading Techniques</h3>
+                    <p>Master these professional breakout trading methods:</p>
+                    
+                    <div class="strategy-example">
+                        <h4><i class="fas fa-list-ol"></i> Advanced Breakout Strategies</h4>
+                        <ul>
+                            <li><strong>Consolidation Breakouts:</strong> Trade breaks from prolonged ranging periods</li>
+                            <li><strong>Chart Pattern Breakouts:</strong> Triangle, rectangle, and flag pattern breakouts</li>
+                            <li><strong>False Breakout Entries:</strong> Enter in the original direction after failed breakouts</li>
+                            <li><strong>Volume Confirmation:</strong> Only trade breakouts supported by increased volume</li>
+                            <li><strong>Retest Entries:</strong> Wait for price to retest the breakout level for higher probability</li>
+                            <li><strong>Multiple Timeframe Confirmation:</strong> Ensure breakout aligns across timeframes</li>
+                            <li><strong>Volatility Expansion:</strong> Trade breakouts that occur with expanding volatility</li>
+                        </ul>
+                    </div>
+                    
+                    <img src="https://www.forexfactory.com/attachment.php?attachmentid=1059654&d=1442425134" class="chart-image" alt="Breakout Trading Setup">
+                    <p class="image-description"><strong>Chart: Breakout and retest pattern</strong> - This real trading chart shows a classic breakout and retest scenario where price breaks above resistance, pulls back to retest that level (now support), then continues higher in a strong trend.</p>
+                    
+                    <h3>Real-World Trading Example: EUR/USD Breakout</h3>
+                    <p>Breakout traders use pending orders to capture moves as they occur:</p>
+                    
+                    <div class="real-world-example">
+                        <h4><i class="fas fa-chart-line"></i> EUR/USD Range Breakout Trade</h4>
+                        <p><strong>Market Condition:</strong> EUR/USD consolidating between 1.0950-1.1050 for three weeks</p>
+                        <p><strong>Breakout Preparation:</strong> Set buy stop above resistance at 1.1055, sell stop below support at 1.0945</p>
+                        <p><strong>Breakout Trigger:</strong> Price breaks above 1.1050 with increased volume</p>
+                        <p><strong>Trade Entry:</strong> Buy stop order fills at 1.1055</p>
+                        <p><strong>Stop Loss:</strong> Below consolidation range at 1.1020 (35 pips risk)</p>
+                        <p><strong>Target:</strong> Measured move based on range height: 1.1150 (95 pips profit potential)</p>
+                        <p><strong>Trade Management:</strong> Trail stop to breakeven once +50 pips in profit</p>
+                        <p><strong>Result:</strong> Price rallies to target over two days for 1:2.71 risk-reward ratio</p>
+                        <p><strong>Alternative Scenario:</strong> If false breakout occurred, sell stop would capture move downward</p>
+                        <p><em>This breakout strategy demonstrates how prepared traders can capitalize on range breakouts in either direction with predefined risk parameters.</em></p>
+                    </div>
+                    
+                    <div class="learning-tip">
+                        <h3>Learning Tip: Trade with the Institutional Flow</h3>
+                        <ul>
+                            <li>Pay attention to where stops are likely clustered (beyond obvious levels)</li>
+                            <li>These liquidity pools are often targeted by large players</li>
+                            <li>Position your entries to benefit from these institutional moves</li>
+                            <li>Avoid placing stops at obvious levels where they can be hunted</li>
+                            <li>Use mental stops or place stops beyond liquidity concentrations</li>
+                            <li>Understand that false breakouts often precede genuine moves</li>
+                        </ul>
+                        <p>Professional traders understand that markets are driven by institutional order flow. By understanding where liquidity resides and how large players operate, you can position yourself to benefit from their moves rather than falling victim to stop hunts and false breakouts.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 13 -->
+            <div class="course-module" id="module13" data-aos="fade-up" data-difficulty="advanced">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>TRADING PSYCHOLOGY</h1>
+                    <h3>Mastering your mind for consistency</h3>
+                    <span class="difficulty">Advanced</span>
+                    <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" class="module-icon" alt="Trading Psychology">
+                </div>
+                <div class="course-one">
+                    <h1>Module 13: <span>Trading Psychology and Emotional Discipline</span></h1>
+                    <p>Trading psychology is often cited as the most important factor in determining long-term success. While strategies and analysis provide the roadmap, psychology determines whether you'll follow it consistently. Professional traders approach the market with discipline, patience, and emotional detachment. This module will transform your mindset and emotional resilience.</p>
+                    
+                    <div class="psychology-tip">
+                        <h3><i class="fas fa-brain"></i> The 80/20 Rule of Trading</h3>
+                        <p>Approximately 80% of trading success comes from psychology and risk management, while only 20% comes from your actual trading strategy. Focus on mastering your mind, and the profits will follow. The markets will always be here - your job is to ensure you're still here to trade them.</p>
+                    </div>
+                    
+                    <h3>The Mental Game of Trading</h3>
+                    <p>Professional traders cultivate these psychological attributes:</p>
+                    
+                    <div class="strategy-example">
+                        <h4><i class="fas fa-list-ol"></i> The 5 Pillars of Trading Psychology</h4>
+                        <ol>
+                            <li><strong>Discipline</strong> - Following your trading plan without exception</li>
+                            <li><strong>Patience</strong> - Waiting for high-probability setups instead of forcing trades</li>
+                            <li><strong>Objectivity</strong> - Removing emotion from trading decisions</li>
+                            <li><strong>Resilience</strong> - Bouncing back from losses without emotional damage</li>
+                            <li><strong>Consistency</strong> - Applying your edge repeatedly over time</li>
+                        </ol>
+                    </div>
+                    
+                    <img src="https://www.forexfactory.com/attachment.php?attachmentid=1059655&d=1442425134" class="chart-image" alt="Trading Psychology Cycle">
+                    <p class="image-description"><strong>Chart: Trader psychology cycle</strong> - This visual illustrates the emotional cycle traders experience - from optimism during winning streaks to despair during drawdowns - and how professional traders maintain equilibrium through all market conditions.</p>
+                    
+                    <h3>Real-World Example: Overcoming a Losing Streak</h3>
+                    <p>How professional traders handle inevitable losing periods:</p>
+                    
+                    <div class="real-world-example">
+                        <h4><i class="fas fa-chart-line"></i> Managing a Drawdown Period</h4>
+                        <p><strong>Situation:</strong> Trader experiences 5 consecutive losses, totaling -3% of account</p>
+                        <p><strong>Amateur Response:</strong> Revenge trading, increasing position size, abandoning plan</p>
+                        <p><strong>Professional Response:</strong> Stick to 1% risk rule, take day off to reset mentally</p>
+                        <p><strong>Mental Reset:</strong> Review trading journal, ensure following plan correctly</p>
+                        <p><strong>Return Strategy:</strong> Resume with reduced position size (0.5% risk)</p>
+                        <p><strong>Outcome:</strong> Next 7 trades are winners, recovering drawdown plus profit</p>
+                        <p><strong>Key Insight:</strong> Losing streaks are normal - survival is what matters</p>
+                        <p><strong>Psychological Win:</strong> Maintaining discipline during adversity builds confidence</p>
+                        <p><em>This scenario demonstrates how disciplined risk management and emotional control during difficult periods separate professionals from amateurs.</em></p>
+                    </div>
+                    
+                    <div class="learning-tip">
+                        <h3>Learning Tip: Develop a Pre-Trade Ritual</h3>
+                        <ul>
+                            <li>Create a consistent routine before each trading session</li>
+                            <li>Review your trading plan and risk parameters</li>
+                            <li>Check economic calendar for upcoming events</li>
+                            <li>Set up charts and mark key support/resistance levels</li>
+                            <li>Perform brief meditation or breathing exercises to center yourself</li>
+                            <li>Mentally rehearse executing your plan flawlessly</li>
+                            <li>Visualize handling both winning and losing trades with equanimity</li>
+                        </ul>
+                        <p>Your pre-trade ritual puts you in the optimal mindset for disciplined trading. The routine itself becomes a psychological trigger for focused, professional trading behavior. This consistency helps override emotional impulses and maintains trading discipline through all market conditions.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 14 -->
+            <div class="course-module" id="module14" data-aos="fade-up" data-difficulty="advanced">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>TRADING PLAN</h1>
+                    <h3>Your roadmap to consistency</h3>
+                    <span class="difficulty">Advanced</span>
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" class="module-icon" alt="Trading Plan">
+                </div>
+                <div class="course-one">
+                    <h1>Module 14: <span>Building a Consistent Trading Plan</span></h1>
+                    <p>A trading plan is your personal rulebook that guides every aspect of your trading. It removes emotion from decision-making and provides a framework for consistent execution. Without a plan, you're simply gambling. With a plan, you're running a business. This module will help you create a comprehensive trading plan tailored to your personality, goals, and risk tolerance.</p>
+                    
+                    <div class="trading-card example">
+                        <h3><i class="fas fa-clipboard-list"></i> Your Personal Trading Constitution</h3>
+                        <p>Your trading plan should be so specific that another trader could execute it exactly as you would. It must cover every possible scenario and leave no room for interpretation. When in doubt, your plan provides the answer - not your emotions in the heat of the moment.</p>
+                    </div>
+                    
+                    <h3>Essential Components of a Trading Plan</h3>
+                    <p>A professional trading plan includes these non-negotiable elements:</p>
+                    
+                    <div class="strategy-example">
+                        <h4><i class="fas fa-list-ol"></i> Trading Plan Framework</h4>
+                        <ul>
+                            <li><strong>Markets & Instruments:</strong> Which currency pairs you will trade</li>
+                            <li><strong>Trading Timeframes:</strong> Which charts you'll use for analysis and execution</li>
+                            <li><strong>Session Preferences:</strong> When you'll be actively trading</li>
+                            <li><strong>Entry Criteria:</strong> Specific conditions that must be met before entering</li>
+                            <li><strong>Exit Rules:</strong> Clear guidelines for stop losses and profit targets</li>
+                            <li><strong>Risk Management:</strong> Position sizing and maximum risk parameters</li>
+                            <li><strong>Trade Management:</strong> How you'll manage open positions</li>
+                            <li><strong>Performance Tracking:</strong> How you'll measure and review your results</li>
+                            <li><strong>Plan Review Schedule:</strong> When you'll evaluate and update your plan</li>
+                        </ul>
+                    </div>
+                    
+                    <img src="https://www.forexfactory.com/attachment.php?attachmentid=1059656&d=1442425134" class="chart-image" alt="Trading Plan Template">
+                    <p class="image-description"><strong>Chart: Complete trading plan template</strong> - This comprehensive template shows all essential components of a professional trading plan, with specific, actionable rules for every aspect of your trading business.</p>
+                    
+                    <h3>Real-World Example: Complete Trading Plan Framework</h3>
+                    <p>Here's what a professional trading plan looks like in practice:</p>
+                    
+                    <div class="real-world-example">
+                        <h4><i class="fas fa-file-alt"></i> Sample Trading Plan</h4>
+                        <p><strong>Markets:</strong> EUR/USD and GBP/USD only</p>
+                        <p><strong>Timeframes:</strong> Daily for direction, 4H for setups, 1H for entries</p>
+                        <p><strong>Sessions:</strong> London session only (7 AM - 4 PM GMT)</p>
+                        <p><strong>Risk Management:</strong> 1% risk per trade, maximum 3% daily risk</p>
+                        <p><strong>Entry Criteria:</strong> Must have minimum 1:2 risk-reward ratio, confluence of 2+ technical factors</p>
+                        <p><strong>Stop Loss:</strong> Always set immediately upon entry, never moved away from price</p>
+                        <p><strong>Profit Taking:</strong> Scale out 50% at 1R, trail stop on remainder</p>
+                        <p><strong>Maximum Trades:</strong> 3 trades per day maximum</p>
+                        <p><strong>Stop Trading:</strong> After 2 consecutive losses or 3% daily drawdown</p>
+                        <p><strong>Review Schedule:</strong> Weekly performance review every Sunday</p>
+                        <p><strong>Plan Updates:</strong> Quarterly review and adjustment based on performance data</p>
+                        <p><em>This specific, measurable plan creates consistency and eliminates ambiguity in trading decisions. Notice how every aspect is clearly defined with no room for interpretation.</em></p>
+                    </div>
+                    
+                    <div class="learning-tip">
+                        <h3>Learning Tip: Start Simple and Refine Over Time</h3>
+                        <ul>
+                            <li>Begin with a basic trading plan focusing on 1-2 currency pairs</li>
+                            <li>Test your plan in demo for at least 2-3 months</li>
+                            <li>Track every trade and review performance metrics weekly</li>
+                            <li>Identify what's working and what isn't through data analysis</li>
+                            <li>Refine your plan based on actual performance, not theory</li>
+                            <li>Gradually add complexity only when simpler version is mastered</li>
+                            <li>Remember: A simple plan executed consistently outperforms a complex plan executed poorly</li>
+                        </ul>
+                        <p>Your trading plan is a living document that should evolve as you gain experience. The goal isn't to create the perfect plan immediately, but to create a good enough plan that you can execute consistently while collecting data to make informed improvements over time.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 15 -->
+            <div class="course-module" id="module15" data-aos="fade-up" data-difficulty="advanced">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>COMMON MISTAKES</h1>
+                    <h3>Avoiding costly trading errors</h3>
+                    <span class="difficulty">Advanced</span>
+                    <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" class="module-icon" alt="Common Trading Mistakes">
+                </div>
+                <div class="course-one">
+                    <h1>Module 15: <span>Common Trading Mistakes and How to Avoid Them</span></h1>
+                    <p>Even experienced traders make mistakes, but professionals learn to recognize and avoid the most common pitfalls that destroy trading accounts. This final module identifies these critical errors and provides practical strategies to avoid them. By learning from others' mistakes, you can accelerate your journey to consistent profitability.</p>
+                    
+                    <div class="trading-card risk">
+                        <h3><i class="fas fa-exclamation-triangle"></i> The Path to Mastery</h3>
+                        <p>Trading mastery isn't about never making mistakes - it's about recognizing them quickly, learning from them, and avoiding repetition. The most successful traders are those who've made every mistake in the book but developed systems to prevent recurrence.</p>
+                    </div>
+                    
+                    <h3>Most Common Trading Mistakes</h3>
+                    <p>Be aware of these account-destroying errors and how to avoid them:</p>
+                    
+                    <div class="strategy-example">
+                        <h4><i class="fas fa-list-ol"></i> Top 10 Trading Mistakes</h4>
+                        <ol>
+                            <li><strong>No Trading Plan:</strong> Trading without a defined system or rules</li>
+                            <li><strong>Poor Risk Management:</strong> Risking too much per trade or overall</li>
+                            <li><strong>Revenge Trading:</strong> Trying to immediately recover losses emotionally</li>
+                            <li><strong>Overleveraging:</strong> Using excessive leverage that amplifies losses</li>
+                            <li><strong>Moving Stop Losses:</strong> Widening stops to avoid taking losses</li>
+                            <li><strong>FOMO Trading:</strong> Entering trades late due to fear of missing out</li>
+                            <li><strong>Overtrading:</strong> Taking low-quality setups out of boredom</li>
+                            <li><strong>Lack of Patience:</strong> Not waiting for high-probability setups</li>
+                            <li><strong>Ignoring Fundamentals:</strong> Trading against major economic trends</li>
+                            <li><strong>No Performance Review:</strong> Not tracking or analyzing trading results</li>
+                        </ol>
+                    </div>
+                    
+                    <img src="https://www.forexfactory.com/attachment.php?attachmentid=1059657&d=1442425134" class="chart-image" alt="Common Trading Mistakes">
+                    <p class="image-description"><strong>Chart: Trading mistake analysis</strong> - This visual breakdown shows the most common trading errors and their impact on account performance, with practical solutions for each problem area.</p>
+                    
+                    <h3>Real-World Example: Revenge Trading Recovery</h3>
+                    <p>How to recover when you've fallen into common trading traps:</p>
+                    
+                    <div class="real-world-example">
+                        <h4><i class="fas fa-redo"></i> Bouncing Back from Trading Errors</h4>
+                        <p><strong>Mistake Made:</strong> Revenge trading after 3 consecutive losses</p>
+                        <p><strong>Result:</strong> Additional 4 losses, total drawdown of -7%</p>
+                        <p><strong>Recognition:</strong> Realized emotional trading was destroying account</p>
+                        <p><strong>Immediate Action:</strong> Stopped trading completely for 48 hours</p>
+                        <p><strong>Mental Reset:</strong> Reviewed trading journal, identified emotional triggers</p>
+                        <p><strong>System Adjustment:</strong> Added "stop trading after 2 losses" rule to plan</p>
+                        <p><strong>Return Strategy:</strong> Resumed with 0.5% risk until confidence restored</p>
+                        <p><strong>Long-term Solution:</strong> Implemented mandatory trading breaks after losses</p>
+                        <p><strong>Outcome:</strong> Returned to profitability within 2 weeks, stronger mentally</p>
+                        <p><em>This recovery process demonstrates that mistakes themselves aren't fatal - it's how you respond that determines long-term success.</em></p>
+                    </div>
+                    
+                    <div class="learning-tip">
+                        <h3>Learning Tip: Create a Mistake Prevention Checklist</h3>
+                        <ul>
+                            <li>Review your most common trading mistakes regularly</li>
+                            <li>Create a pre-trade checklist that addresses these specific errors</li>
+                            <li>Include questions like "Am I following my plan?" and "Is this revenge trading?"</li>
+                            <li>Keep the checklist visible during trading sessions</li>
+                            <li>Review it before entering every single trade</li>
+                            <li>Update it as you identify new potential pitfalls</li>
+                            <li>Share it with a trading partner for accountability</li>
+                        </ul>
+                        <p>A mistake prevention checklist transforms abstract awareness into concrete action. By systematically reviewing potential errors before each trade, you dramatically reduce the likelihood of repeating them. This simple habit can save your account from costly mistakes and accelerate your progress toward consistency.</p>
+                    </div>
+                    
+                    <div class="psychology-tip">
+                        <h3>Your Journey to Consistent Profitability</h3>
+                        <p>Congratulations on completing the SkillMynte Forex Trading Masterclass! You now possess the knowledge, strategies, and mindset needed for long-term trading success. Remember that trading is a marathon, not a sprint. Consistent profitability comes from applying these principles day after day, month after month.</p>
+                        <p>Trust your plan, manage your risk, control your emotions, and focus on the process rather than individual trade outcomes. The markets will always be here - your job is to ensure you're still here to trade them. Continue learning, stay disciplined, and may your trading journey be profitable and fulfilling.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Premium Subscription CTA -->
+            <div class="premium-subscription" id="premium-subscription" data-aos="fade-up">
+                <h2>Unlock the Complete Forex Masterclass</h2>
+                <p>Upgrade to SkillMynte Pro for all 15 modules, live trading sessions, personalized mentorship, and advanced trading tools</p>
+                
+                <div class="premium-features">
+                    <div class="premium-feature">
+                        <i class="fas fa-gem"></i>
+                        <h3>15 Advanced Modules</h3>
+                        <p>Complete access to our entire Forex trading curriculum from basics to professional strategies</p>
+                    </div>
+                    <div class="premium-feature">
+                        <i class="fas fa-trophy"></i>
+                        <h3>Live Trading Sessions</h3>
+                        <p>Watch professional traders execute real trades with live commentary and Q&A</p>
+                    </div>
+                    <div class="premium-feature">
+                        <i class="fas fa-user-graduate"></i>
+                        <h3>Personalized Mentorship</h3>
+                        <p>Get one-on-one guidance from experienced Forex traders and market analysts</p>
+                    </div>
+                </div>
+                
+                <div class="pricing-options">
+                    <div class="pricing-option">
+                        <h3>Monthly</h3>
+                        <div class="price">₦3,500<span>/month</span></div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> All 15 Course Modules</li>
+                            <li><i class="fas fa-check"></i> Weekly Live Sessions</li>
+                            <li><i class="fas fa-check"></i> Trading Community Access</li>
+                            <li><i class="fas fa-check"></i> SkillMynte Certificate</li>
+                            <li><i class="fas fa-check"></i> Basic Trading Tools</li>
+                        </ul>
+                        <a href="premium courses.html"><button class="pricing-btn">Get Started</button></a>
+                    </div>
+                    
+                    <div class="pricing-option" style="border-color: var(--gold); transform: scale(1.05);">
+                        <h3>Annual <span style="background: var(--gold); color: #000; padding: 0.2rem 0.5rem; border-radius: 20px; font-size: 0.8rem; margin-left: 0.5rem;">Best Value</span></h3>
+                        <div class="price">₦37,000<span>/year</span></div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> All 15 Course Modules</li>
+                            <li><i class="fas fa-check"></i> Daily Live Sessions</li>
+                            <li><i class="fas fa-check"></i> Trading Community Access</li>
+                            <li><i class="fas fa-check"></i> SkillMynte Certificate</li>
+                            <li><i class="fas fa-check"></i> Advanced Trading Tools</li>
+                            <li><i class="fas fa-check"></i> 2 Personal Coaching Sessions</li>
+                        </ul>
+                        <a href="premium courses.html"><button class="pricing-btn">Get Started</button></a>
+                    </div>
+                    
+                    <div class="pricing-option">
+                        <h3>Lifetime</h3>
+                        <div class="price">₦200,000<span>/once</span></div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> All 15 Course Modules</li>
+                            <li><i class="fas fa-check"></i> Unlimited Live Sessions</li>
+                            <li><i class="fas fa-check"></i> VIP Community Access</li>
+                            <li><i class="fas fa-check"></i> Premium Certificate</li>
+                            <li><i class="fas fa-check"></i> All Trading Tools</li>
+                            <li><i class="fas fa-check"></i> 12 Personal Coaching Sessions</li>
+                            <li><i class="fas fa-check"></i> Lifetime Updates</li>
+                        </ul>
+                        <a href="premium courses.html"><button class="pricing-btn">Get Started</button></a>
+                    </div>
+                </div>
+                
+                <button class="premium-cta-btn">
+                    <i class="fas fa-rocket"></i> Upgrade to SkillMynte Pro
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Handle navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Handle mobile menu toggle
+        document.getElementById('menuToggle').addEventListener('click', function() {
+            const navMenu = document.querySelector('.nav-menu');
+            const sidebar = document.getElementById('sidebar');
+            navMenu.classList.toggle('active');
+            sidebar.classList.toggle('active');
+            
+            if (navMenu.classList.contains('active')) {
+                this.innerHTML = '<i class="fas fa-times"></i>';
+            } else {
+                this.innerHTML = '<i class="fas fa-bars"></i>';
+            }
+        });
+
+        // Level filtering functionality
+        const levelButtons = document.querySelectorAll('.level-btn');
+        const modules = document.querySelectorAll('.course-module');
+        
+        levelButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const level = this.getAttribute('data-level');
+                
+                // Remove active class from all buttons
+                levelButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                this.classList.add('active');
+                
+                if (level === 'all') {
+                    // Show all modules
+                    modules.forEach(module => {
+                        module.style.display = 'flex';
+                    });
+                } else {
+                    // Show modules with matching difficulty
+                    modules.forEach(module => {
+                        const difficulty = module.getAttribute('data-difficulty');
+                        if (difficulty === level) {
+                            module.style.display = 'flex';
+                        } else {
+                            module.style.display = 'none';
+                        }
+                    });
+                }
+            });
+        });
+
+        // Search functionality
+        const searchInput = document.getElementById('search-input');
+        
+        searchInput.addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+            
+            modules.forEach(module => {
+                const moduleTitle = module.querySelector('h1').textContent.toLowerCase();
+                const moduleContent = module.textContent.toLowerCase();
+                
+                if (moduleTitle.includes(searchTerm) || moduleContent.includes(searchTerm)) {
+                    module.style.display = 'flex';
+                } else {
+                    module.style.display = 'none';
+                }
+            });
+        });
+
+        // Smooth scrolling for sidebar links
+        document.querySelectorAll('.sidebar-item').forEach(item => {
+            item.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Remove active class from all items
+                document.querySelectorAll('.sidebar-item').forEach(i => {
+                    i.classList.remove('active');
+                });
+                
+                // Add active class to clicked item
+                this.classList.add('active');
+                
+                // Close mobile menu if open
+                if (window.innerWidth <= 1024) {
+                    document.querySelector('.nav-menu').classList.remove('active');
+                    document.querySelector('.sidebar').classList.remove('active');
+                    document.querySelector('.menu-toggle').innerHTML = '<i class="fas fa-bars"></i>';
+                }
+                
+                // Scroll to section
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

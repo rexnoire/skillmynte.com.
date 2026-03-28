@@ -1,0 +1,1429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruby Programming | SkillMynte</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="free ruby course.css">
+    <link rel="shortcut icon" type="image/x-icon" href="sm_favicon_64 (1).png">
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="spinner"></div>
+        <p>Loading Interactive Course...</p>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-code"></i>
+                SKILLMYNTE
+            </a>
+            <div class="nav-menu">
+                <a href="#" class="nav-link">Home</a>
+                <a href="#" class="nav-link">Courses</a>
+                <a href="#" class="nav-link">Practice</a>
+                <a href="#" class="nav-link">Projects</a>
+                
+                <div class="courses-dropdown">
+                    <button class="courses-btn">
+                        <i class="fas fa-book-open"></i> Jump to Module
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#module1" class="dropdown-item">
+                            <i class="fas fa-gem ruby-icon"></i> Ruby Basics
+                        </a>
+                        <a href="#module2" class="dropdown-item">
+                            <i class="fas fa-gem ruby-icon"></i> Variables & Data Types
+                        </a>
+                        <a href="#module3" class="dropdown-item">
+                            <i class="fas fa-gem ruby-icon"></i> Control Structures
+                        </a>
+                        <a href="#module4" class="dropdown-item">
+                            <i class="fas fa-gem ruby-icon"></i> Methods & Functions
+                        </a>
+                        <a href="#module5" class="dropdown-item">
+                            <i class="fas fa-gem ruby-icon"></i> Arrays & Hashes
+                        </a>
+                        <a href="#module6" class="dropdown-item">
+                            <i class="fas fa-gem ruby-icon"></i> Object-Oriented Ruby
+                        </a>
+                        <a href="#playground" class="dropdown-item">
+                            <i class="fas fa-laptop-code"></i> Practice Playground
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Premium Course Navigation -->
+    <div class="course-navigation">
+        <div class="course-nav-container">
+            <div class="course-category">
+                <button class="category-btn">
+                    <i class="fas fa-layer-group"></i> Categories
+                </button>
+                <div class="category-dropdown">
+                    <a href="#" class="category-item">
+                        <i class="fas fa-gem ruby-icon"></i> Ruby Programming
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fab fa-js-square js-icon"></i> JavaScript
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fab fa-python python-icon"></i> Python
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fab fa-java java-icon"></i> Java
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fas fa-database database-icon"></i> Databases
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fas fa-mobile-alt mobile-icon"></i> Mobile Development
+                    </a>
+                </div>
+            </div>
+            
+            <div class="course-levels">
+                <button class="level-btn active" data-level="all">All Levels</button>
+                <button class="level-btn" data-level="beginner">Beginner</button>
+                <button class="level-btn" data-level="intermediate">Intermediate</button>
+                <button class="level-btn" data-level="advanced" id="advanced-btn">Advanced</button>
+            </div>
+            
+            <div class="course-search">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" class="search-input" id="search-input" placeholder="Search courses...">
+            </div>
+        </div>
+    </div>
+    
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <a href="#module1" class="sidebar-item active completed">
+            <i class="fas fa-gem ruby-icon"></i>
+            <span>Module 1: Ruby Basics</span>
+            <span class="progress-indicator"><i class="fas fa-check"></i></span>
+        </a>
+        <a href="#module2" class="sidebar-item completed">
+            <i class="fas fa-gem ruby-icon"></i>
+            <span>Module 2: Variables & Data Types</span>
+            <span class="progress-indicator"><i class="fas fa-check"></i></span>
+        </a>
+        <a href="#module3" class="sidebar-item completed">
+            <i class="fas fa-gem ruby-icon"></i>
+            <span>Module 3: Control Structures</span>
+            <span class="progress-indicator"><i class="fas fa-check"></i></span>
+        </a>
+        <a href="#module4" class="sidebar-item">
+            <i class="fas fa-gem ruby-icon"></i>
+            <span>Module 4: Methods & Functions</span>
+            <span class="progress-indicator">4</span>
+        </a>
+        <a href="#module5" class="sidebar-item">
+            <i class="fas fa-gem ruby-icon"></i>
+            <span>Module 5: Arrays & Hashes</span>
+            <span class="progress-indicator">5</span>
+        </a>
+        <a href="#module6" class="sidebar-item">
+            <i class="fas fa-gem ruby-icon"></i>
+            <span>Module 6: Object-Oriented Ruby</span>
+            <span class="progress-indicator">6</span>
+        </a>
+        <a href="#playground" class="sidebar-item">
+            <i class="fas fa-laptop-code"></i>
+            <span>Practice Playground</span>
+        </a>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="content-wrapper">
+        <div class="container">
+            <!-- Module 1 -->
+            <div class="course-module" id="module1" data-aos="fade-up" data-difficulty="beginner">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>RUBY BASICS</h1>
+                    <h3>Learn the fundamental concepts of Ruby programming</h3>
+                    <span class="difficulty">Beginner</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/919/919842.png" class="module-icon" alt="Ruby Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 1: <span>Introduction to Ruby</span></h1>
+                    <p>Ruby is a dynamic, open-source programming language with a focus on simplicity and productivity. It has an elegant syntax that is natural to read and easy to write. In this module, you'll learn the basic structure of Ruby programs and how to write your first Ruby code.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Ruby</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-1" spellcheck="false"># Welcome to Ruby Programming!
+# This is a comment - it won't be executed
+
+puts "Hello, World!"
+puts "Welcome to SkillMynte Ruby Course!"
+
+# Basic arithmetic operations
+puts "2 + 3 = #{2 + 3}"
+puts "10 - 5 = #{10 - 5}"
+puts "4 * 6 = #{4 * 6}"
+puts "15 / 3 = #{15 / 3}"
+
+# String operations
+name = "SkillMynte"
+puts "Hello, #{name}!"
+puts "The length of '#{name}' is #{name.length} characters"
+
+# Boolean operations
+puts "Is 5 greater than 3? #{5 > 3}"
+puts "Is 10 equal to 10? #{10 == 10}"
+
+# Try changing the values and see what happens!</textarea>
+                        <button class="run-btn" onclick="runCode('editor-1', 'output-1')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Preview
+                        </div>
+                        <div class="preview-container" id="output-1"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li><code>puts</code> is used to output text to the console</li>
+                                <li>Comments start with <code>#</code> and are ignored by Ruby</li>
+                                <li>Ruby supports basic arithmetic operations: <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code></li>
+                                <li>Strings can be created with single or double quotes</li>
+                                <li>String interpolation <code>#{expression}</code> works only with double quotes</li>
+                                <li>Variables don't need type declarations (Ruby is dynamically typed)</li>
+                                <li>Ruby uses <code>==</code> for equality comparison</li>
+                                <li>Boolean values are <code>true</code> and <code>false</code> (all lowercase)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 2 -->
+            <div class="course-module" id="module2" data-aos="fade-up" data-difficulty="beginner">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>VARIABLES & DATA TYPES</h1>
+                    <h3>Learn about Ruby's data types and variable handling</h3>
+                    <span class="difficulty">Beginner</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/919/919842.png" class="module-icon" alt="Ruby Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 2: <span>Variables and Data Types</span></h1>
+                    <p>Ruby is a dynamically typed language, meaning you don't have to declare variable types. It has several built-in data types including numbers, strings, booleans, arrays, and hashes. Understanding these fundamental types is crucial for effective Ruby programming.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Ruby</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-2" spellcheck="false"># Variables and Data Types in Ruby
+
+# Integer numbers
+age = 25
+year = 2024
+puts "Age: #{age}, Year: #{year}"
+
+# Floating point numbers
+price = 19.99
+temperature = 36.6
+puts "Price: $#{price}, Temperature: #{temperature}Â°C"
+
+# Strings
+name = "Alice"
+greeting = 'Hello'
+puts "#{greeting}, #{name}!"
+
+# Booleans
+is_ruby_fun = true
+is_learning = false
+puts "Is Ruby fun? #{is_ruby_fun}"
+puts "Are we learning? #{is_learning}"
+
+# Arrays (ordered lists)
+fruits = ["apple", "banana", "orange", "grape"]
+puts "Fruits: #{fruits}"
+puts "First fruit: #{fruits[0]}"
+puts "Number of fruits: #{fruits.length}"
+
+# Hashes (key-value pairs)
+person = {
+  "name" => "Bob",
+  "age" => 30,
+  "city" => "Lagos"
+}
+puts "Person: #{person}"
+puts "Name: #{person['name']}"
+puts "Age: #{person['age']}"
+
+# Symbols (efficient identifiers)
+status = :active
+puts "Status: #{status}"
+
+# Type checking
+puts "Type of age: #{age.class}"
+puts "Type of name: #{name.class}"
+puts "Type of fruits: #{fruits.class}"
+puts "Type of person: #{person.class}"</textarea>
+                        <button class="run-btn" onclick="runCode('editor-2', 'output-2')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Preview
+                        </div>
+                        <div class="preview-container" id="output-2"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>Variables start with lowercase letters and use snake_case: <code>my_variable</code></li>
+                                <li>Integer and Float are numeric types: <code>42</code> (integer) vs <code>3.14</code> (float)</li>
+                                <li>Strings can use single or double quotes, but interpolation only works with double quotes</li>
+                                <li>Arrays are ordered, zero-indexed collections: <code>array[0]</code> gets first element</li>
+                                <li>Hashes store key-value pairs: <code>hash["key"] = "value"</code></li>
+                                <li>Symbols are immutable identifiers: <code>:symbol_name</code> (more memory efficient than strings)</li>
+                                <li>Use <code>.class</code> to check an object's type</li>
+                                <li>Ruby is dynamically typed - variables can hold different types during execution</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 3 -->
+            <div class="course-module" id="module3" data-aos="fade-up" data-difficulty="beginner">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>CONTROL STRUCTURES</h1>
+                    <h3>Learn to control program flow with conditionals and loops</h3>
+                    <span class="difficulty">Beginner</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/919/919842.png" class="module-icon" alt="Ruby Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 3: <span>Control Structures</span></h1>
+                    <p>Control structures allow your program to make decisions and repeat actions. Ruby provides conditional statements like <code>if</code>, <code>unless</code>, <code>case</code> and loops like <code>while</code>, <code>until</code>, and <code>for</code> to control the flow of your program.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Ruby</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-3" spellcheck="false"># Control Structures in Ruby
+
+# If-else statements
+age = 20
+if age >= 18
+  puts "You are an adult"
+else
+  puts "You are a minor"
+end
+
+# Unless statement (opposite of if)
+raining = false
+unless raining
+  puts "It's not raining. Let's go outside!"
+else
+  puts "It's raining. Stay inside."
+end
+
+# Case statement (like switch in other languages)
+grade = "B"
+case grade
+when "A"
+  puts "Excellent!"
+when "B"
+  puts "Good job!"
+when "C"
+  puts "You passed"
+else
+  puts "Try harder next time"
+end
+
+# While loop
+counter = 1
+while counter <= 5
+  puts "Count: #{counter}"
+  counter += 1
+end
+
+# Until loop (opposite of while)
+number = 10
+until number <= 0
+  puts "Countdown: #{number}"
+  number -= 2
+end
+
+# For loop with ranges
+puts "Counting from 1 to 3:"
+for i in 1..3
+  puts i
+end
+
+# Each iterator (preferred Ruby way)
+puts "Iterating with each:"
+(1..3).each do |num|
+  puts "Number: #{num}"
+end
+
+# Times iterator
+puts "Using times:"
+5.times do |i|
+  puts "Iteration #{i + 1}"
+end
+
+# Conditional modifiers (one-liners)
+puts "Hello" if true
+puts "This won't print" if false
+
+temperature = 25
+puts "It's hot!" if temperature > 30</textarea>
+                        <button class="run-btn" onclick="runCode('editor-3', 'output-3')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Preview
+                        </div>
+                        <div class="preview-container" id="output-3"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li><code>if</code> executes code when condition is true</li>
+                                <li><code>unless</code> executes code when condition is false (opposite of if)</li>
+                                <li><code>case</code> statements are cleaner than multiple if-elsif statements</li>
+                                <li><code>while</code> loops continue while condition is true</li>
+                                <li><code>until</code> loops continue until condition becomes true</li>
+                                <li>Ranges: <code>1..5</code> includes 5, <code>1...5</code> excludes 5</li>
+                                <li><code>each</code> is the preferred way to iterate in Ruby (more idiomatic than for)</li>
+                                <li><code>times</code> is useful for repeating a block a specific number of times</li>
+                                <li>Conditional modifiers allow one-line conditionals: <code>action if condition</code></li>
+                                <li>Ruby uses <code>end</code> to close blocks, not curly braces like other languages</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 4 -->
+            <div class="course-module" id="module4" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>METHODS & FUNCTIONS</h1>
+                    <h3>Learn to create reusable code with methods</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/919/919842.png" class="module-icon" alt="Ruby Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 4: <span>Methods and Functions</span></h1>
+                    <p>Methods in Ruby are reusable blocks of code that perform specific tasks. They help organize your code, make it more readable, and reduce repetition. Ruby methods can take parameters, return values, and even have default arguments.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Ruby</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-4" spellcheck="false"># Methods and Functions in Ruby
+
+# Basic method without parameters
+def greet
+  puts "Hello from SkillMynte!"
+end
+
+greet  # Calling the method
+
+# Method with parameters
+def greet_person(name)
+  puts "Hello, #{name}!"
+end
+
+greet_person("Alice")
+greet_person("Bob")
+
+# Method with default parameters
+def introduce(name, age = 25)
+  puts "My name is #{name} and I'm #{age} years old."
+end
+
+introduce("Charlie")
+introduce("Diana", 30)
+
+# Method with return value
+def add_numbers(a, b)
+  return a + b
+end
+
+result = add_numbers(5, 3)
+puts "5 + 3 = #{result}"
+
+# Implicit return (last expression is returned automatically)
+def multiply(a, b)
+  a * b  # This is automatically returned
+end
+
+puts "4 * 6 = #{multiply(4, 6)}"
+
+# Method with multiple return values
+def calculate(a, b)
+  sum = a + b
+  difference = a - b
+  product = a * b
+  quotient = a / b.to_f  # Using to_f for floating point division
+  
+  return sum, difference, product, quotient
+end
+
+sum, diff, prod, quot = calculate(10, 3)
+puts "Sum: #{sum}, Difference: #{diff}, Product: #{prod}, Quotient: #{quot}"
+
+# Predicate methods (return boolean)
+def is_adult?(age)
+  age >= 18
+end
+
+puts "Is 20 an adult? #{is_adult?(20)}"
+puts "Is 15 an adult? #{is_adult?(15)}"
+
+# Bang methods (modify the object)
+def make_uppercase!(text)
+  text.upcase!
+end
+
+name = "skillmynte"
+make_uppercase!(name)
+puts "Uppercase name: #{name}"
+
+# Variable number of arguments
+def sum_all(*numbers)
+  numbers.sum
+end
+
+puts "Sum: #{sum_all(1, 2, 3)}"
+puts "Sum: #{sum_all(5, 10, 15, 20)}"</textarea>
+                        <button class="run-btn" onclick="runCode('editor-4', 'output-4')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Preview
+                        </div>
+                        <div class="preview-container" id="output-4"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>Methods are defined with <code>def method_name</code> and end with <code>end</code></li>
+                                <li>Method names should be lowercase with underscores: <code>my_method_name</code></li>
+                                <li>Parameters are specified in parentheses after the method name</li>
+                                <li>Default parameters provide fallback values: <code>def greet(name="Guest")</code></li>
+                                <li>Ruby has implicit return - the last expression is automatically returned</li>
+                                <li>Explicit <code>return</code> statements can be used for early returns</li>
+                                <li>Methods can return multiple values as an array</li>
+                                <li>Predicate methods end with <code>?</code> and return boolean values</li>
+                                <li>Bang methods end with <code>!</code> and modify the object they're called on</li>
+                                <li>Variable arguments use <code>*args</code> to accept any number of parameters</li>
+                                <li>Method calls can omit parentheses: <code>greet "Alice"</code> vs <code>greet("Alice")</code></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 5 -->
+            <div class="course-module" id="module5" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>ARRAYS & HASHES</h1>
+                    <h3>Learn to work with collections in Ruby</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/919/919842.png" class="module-icon" alt="Ruby Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 5: <span>Arrays and Hashes</span></h1>
+                    <p>Arrays and hashes are fundamental data structures in Ruby. Arrays are ordered collections, while hashes are key-value pairs. Ruby provides powerful methods to manipulate these collections efficiently.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Ruby</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-5" spellcheck="false"># Arrays and Hashes in Ruby
+
+# Arrays - Ordered collections
+fruits = ["apple", "banana", "orange"]
+puts "Fruits: #{fruits}"
+
+# Array methods
+fruits << "grape"  # Add to end
+fruits.push("mango")  # Another way to add
+fruits.unshift("strawberry")  # Add to beginning
+
+puts "After adding: #{fruits}"
+puts "First fruit: #{fruits.first}"
+puts "Last fruit: #{fruits.last}"
+puts "Array length: #{fruits.length}"
+
+# Removing elements
+removed_fruit = fruits.pop  # Remove last element
+puts "Removed: #{removed_fruit}"
+puts "After pop: #{fruits}"
+
+fruits.shift  # Remove first element
+puts "After shift: #{fruits}"
+
+# Array iteration
+puts "Fruits list:"
+fruits.each_with_index do |fruit, index|
+  puts "#{index + 1}. #{fruit.capitalize}"
+end
+
+# Array transformation
+numbers = [1, 2, 3, 4, 5]
+squared = numbers.map { |n| n * n }
+puts "Numbers: #{numbers}"
+puts "Squared: #{squared}"
+
+# Array filtering
+even_numbers = numbers.select { |n| n.even? }
+puts "Even numbers: #{even_numbers}"
+
+# Hashes - Key-value pairs
+student = {
+  name: "Alice",
+  age: 20,
+  grade: "A",
+  subjects: ["Math", "Science", "English"]
+}
+
+puts "Student: #{student}"
+
+# Accessing hash values
+puts "Name: #{student[:name]}"
+puts "Age: #{student[:age]}"
+puts "Subjects: #{student[:subjects].join(', ')}"
+
+# Adding to hash
+student[:school] = "SkillMynte Academy"
+puts "After adding school: #{student}"
+
+# Hash iteration
+puts "Student details:"
+student.each do |key, value|
+  puts "#{key.capitalize}: #{value}"
+end
+
+# Nested collections
+classroom = {
+  teacher: "Mr. Smith",
+  students: [
+    {name: "Alice", grade: "A"},
+    {name: "Bob", grade: "B"},
+    {name: "Charlie", grade: "A"}
+  ]
+}
+
+puts "Classroom teacher: #{classroom[:teacher]}"
+puts "Students:"
+classroom[:students].each do |student|
+  puts "- #{student[:name]}: #{student[:grade]}"
+end
+
+# Useful array methods
+mixed_array = [1, "hello", 3.14, true, [1, 2, 3]]
+puts "Mixed array: #{mixed_array}"
+puts "Sorted fruits: #{fruits.sort}"
+puts "Reversed fruits: #{fruits.reverse}"
+puts "Is fruits empty? #{fruits.empty?}"
+puts "Does fruits include 'banana'? #{fruits.include?('banana')}"</textarea>
+                        <button class="run-btn" onclick="runCode('editor-5', 'output-5')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Preview
+                        </div>
+                        <div class="preview-container" id="output-5"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>Arrays are ordered, integer-indexed collections starting from 0</li>
+                                <li>Hashes store key-value pairs (similar to dictionaries in other languages)</li>
+                                <li>Symbol keys in hashes: <code>{name: "Alice"}</code> is shorthand for <code>{:name => "Alice"}</code></li>
+                                <li>Array methods: <code>push</code>/<code><<</code> to add, <code>pop</code> to remove last, <code>shift</code>/<code>unshift</code> for first element</li>
+                                <li>Use <code>each</code> for iteration, <code>map</code> for transformation, <code>select</code> for filtering</li>
+                                <li><code>each_with_index</code> provides both element and index during iteration</li>
+                                <li>Hashes can be accessed with symbol keys: <code>hash[:key]</code></li>
+                                <li>Collections can be nested (arrays within hashes, hashes within arrays, etc.)</li>
+                                <li>Useful array methods: <code>sort</code>, <code>reverse</code>, <code>empty?</code>, <code>include?</code></li>
+                                <li><code>join</code> converts array to string with specified separator</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+           <!-- Module 6 -->
+<div class="course-module" id="module6" data-aos="fade-up" data-difficulty="intermediate">
+    <div class="premium-badge">
+        <i class="fas fa-crown"></i> Premium Content
+    </div>
+    <div class="course-three">
+        <h1>OBJECT-ORIENTED RUBY</h1>
+        <h3>Learn Ruby's object-oriented programming features</h3>
+        <span class="difficulty">Intermediate</span>
+        <img src="https://cdn-icons-png.flaticon.com/512/919/919842.png" class="module-icon" alt="Ruby Icon">
+    </div>
+    <div class="course-one">
+        <h1>Module 6: <span>Object-Oriented Programming in Ruby</span></h1>
+        <p>Ruby is a pure object-oriented language where everything is an object. This module covers classes, objects, inheritance, and other OOP concepts that make Ruby powerful and flexible for building complex applications.</p>
+        
+        <h3>Try It Yourself:</h3>
+        <div class="code-editor-container">
+            <div class="editor-header">
+                <div class="editor-tabs">
+                    <div class="editor-tab active">Ruby</div>
+                </div>
+                <div class="editor-actions">
+                    <button title="Run Code" class="run-editor">
+                        <i class="fas fa-play"></i> Run
+                    </button>
+                    <button title="Reset Code" class="reset-editor">
+                        <i class="fas fa-redo"></i> Reset
+                    </button>
+                </div>
+            </div>
+            <textarea class="code-editor" id="editor-6" spellcheck="false"># Object-Oriented Programming in Ruby
+
+# Defining a class
+class Student
+  # Constructor method
+  def initialize(name, age, grade)
+    @name = name    # Instance variables start with @
+    @age = age
+    @grade = grade
+  end
+  
+  # Getter methods
+  def name
+    @name
+  end
+  
+  def age
+    @age
+  end
+  
+  def grade
+    @grade
+  end
+  
+  # Setter methods
+  def name=(new_name)
+    @name = new_name
+  end
+  
+  def grade=(new_grade)
+    @grade = new_grade
+  end
+  
+  # Instance method
+  def introduce
+    "Hello, I'm #{@name}, a #{@age}-year-old student with grade #{@grade}."
+  end
+  
+  # Class method
+  def self.description
+    "This is a Student class for managing student information."
+  end
+end
+
+# Using attr_accessor for automatic getters/setters
+class Course
+  attr_accessor :title, :instructor, :duration
+  attr_reader :students
+  
+  def initialize(title, instructor, duration)
+    @title = title
+    @instructor = instructor
+    @duration = duration
+    @students = []  # Initialize empty array
+  end
+  
+  def add_student(student)
+    @students << student
+    puts "#{student.name} has been added to #{@title}"
+  end
+  
+  def course_info
+    <<~INFO
+    Course: #{@title}
+    Instructor: #{@instructor}
+    Duration: #{@duration} weeks
+    Students enrolled: #{@students.count}
+    INFO
+  end
+end
+
+# Inheritance
+class ProgrammingCourse < Course
+  attr_accessor :language
+  
+  def initialize(title, instructor, duration, language)
+    super(title, instructor, duration)  # Call parent's initialize
+    @language = language
+  end
+  
+  def course_info
+    super + "Language: #{@language}\n"
+  end
+  
+  def practice
+    "Practicing #{@language} programming exercises..."
+  end
+end
+
+# Creating objects
+student1 = Student.new("Alice", 20, "A")
+student2 = Student.new("Bob", 22, "B")
+
+puts student1.introduce
+puts student2.introduce
+
+# Using getters and setters
+puts "Student1's name: #{student1.name}"
+student1.grade = "A+"
+puts "Updated grade: #{student1.grade}"
+
+# Class method
+puts Student.description
+
+# Working with Course class
+ruby_course = ProgrammingCourse.new("Ruby Fundamentals", "Mr. Ruby", 8, "Ruby")
+ruby_course.add_student(student1)
+ruby_course.add_student(student2)
+
+puts ruby_course.course_info
+puts ruby_course.practice
+
+# Demonstrating polymorphism
+courses = [
+  Course.new("Web Development", "Ms. Web", 10),
+  ProgrammingCourse.new("Python Basics", "Dr. Python", 6, "Python")
+]
+
+puts "\nAll courses:"
+courses.each do |course|
+  puts course.course_info
+  puts "-" * 30
+end
+
+# Modules and mixins
+module Printable
+  def print_info
+    puts "Printing information: #{self}"
+  end
+end
+
+class Book
+  include Printable
+  attr_accessor :title, :author
+  
+  def initialize(title, author)
+    @title = title
+    @author = author
+  end
+  
+  def to_s
+    "#{@title} by #{@author}"
+  end
+end
+
+book = Book.new("Learn Ruby", "SkillMynte")
+book.print_info</textarea>
+            <button class="run-btn" onclick="runCode('editor-6', 'output-6')">
+                <i class="fas fa-play"></i> Run Code
+            </button>
+            
+            <div class="output-title">
+                <i class="fas fa-desktop"></i> Live Preview
+            </div>
+            <div class="preview-container" id="output-6"></div>
+            
+            <div class="course-five">
+                <h3>Key Points:</h3>
+                <ul>
+                    <li>Classes are defined with <code>class ClassName</code> (capitalized, CamelCase)</li>
+                    <li>Instance variables start with <code>@</code> and are available throughout the object</li>
+                    <li>The <code>initialize</code> method is the constructor called when creating new objects</li>
+                    <li><code>attr_accessor</code> automatically creates getter and setter methods</li>
+                    <li><code>attr_reader</code> creates getters only, <code>attr_writer</code> creates setters only</li>
+                    <li>Inheritance uses <code>class Child < Parent</code> syntax</li>
+                    <li><code>super</code> calls the parent class's method of the same name</li>
+                    <li>Class methods are defined with <code>def self.method_name</code></li>
+                    <li>Modules are collections of methods that can be mixed into classes using <code>include</code></li>
+                    <li>Everything in Ruby is an object, including numbers and strings</li>
+                    <li>Polymorphism allows different objects to respond to the same method call</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Practice Playground -->
+<div class="course-module" id="playground" data-aos="fade-up">
+    <div class="course-three">
+        <h1>PRACTICE PLAYGROUND</h1>
+        <h3>Experiment with what you've learned</h3>
+        <i class="fas fa-laptop-code course-icon" style="color: var(--primary);"></i>
+    </div>
+    <div class="course-one">
+        <h1>Your Coding Playground: <span>Try Your Own Ruby Code</span></h1>
+        <p>Use this space to experiment with everything you've learned. Try writing your own Ruby programs and see the results in real-time! This is your sandbox to practice and explore Ruby programming.</p>
+        
+        <div class="code-editor-container">
+            <div class="editor-header">
+                <div class="editor-tabs">
+                    <div class="editor-tab active">Ruby</div>
+                </div>
+                <div class="editor-actions">
+                    <button title="Run Code" class="run-editor">
+                        <i class="fas fa-play"></i> Run
+                    </button>
+                    <button title="Reset Code" class="reset-editor">
+                        <i class="fas fa-redo"></i> Reset
+                    </button>
+                </div>
+            </div>
+            <textarea class="code-editor" id="playground-editor" spellcheck="false"># Your Ruby Playground
+# Try writing your own Ruby code here!
+
+puts "Welcome to the Ruby Playground!"
+puts "=" * 40
+
+# Example: Simple calculator
+def calculator(a, b, operation)
+  case operation
+  when "+"
+    a + b
+  when "-"
+    a - b
+  when "*"
+    a * b
+  when "/"
+    b != 0 ? a / b : "Error: Division by zero"
+  else
+    "Invalid operation"
+  end
+end
+
+# Test the calculator
+puts "Calculator Examples:"
+puts "5 + 3 = #{calculator(5, 3, '+')}"
+puts "10 - 4 = #{calculator(10, 4, '-')}"
+puts "6 * 7 = #{calculator(6, 7, '*')}"
+puts "15 / 3 = #{calculator(15, 3, '/')}"
+
+puts ""
+puts "=" * 40
+
+# Example: Student management
+class Student
+  attr_accessor :name, :grades
+  
+  def initialize(name)
+    @name = name
+    @grades = []
+  end
+  
+  def add_grade(grade)
+    @grades << grade
+  end
+  
+  def average_grade
+    return 0 if @grades.empty?
+    @grades.sum.to_f / @grades.length
+  end
+  
+  def display_info
+    <<~INFO
+    Student: #{@name}
+    Grades: #{@grades.join(', ')}
+    Average: #{average_grade.round(2)}
+    INFO
+  end
+end
+
+# Create and test student
+student = Student.new("SkillMynte Learner")
+student.add_grade(85)
+student.add_grade(92)
+student.add_grade(78)
+
+puts student.display_info
+
+puts ""
+puts "=" * 40
+puts "Now it's your turn! Modify the code above or write your own Ruby program."
+
+# Your code here - try creating something new!
+# Ideas:
+# - Create a BankAccount class with deposit/withdraw methods
+# - Write a method that reverses a string
+# - Create a program that generates Fibonacci sequence
+# - Build a simple game like rock-paper-scissors</textarea>
+            <button class="run-btn" onclick="runCode('playground-editor', 'playground-output')">
+                <i class="fas fa-play"></i> Run Code
+            </button>
+            
+            <div class="output-title">
+                <i class="fas fa-desktop"></i> Live Preview
+            </div>
+            <div class="preview-container" id="playground-output"></div>
+        </div>
+        
+        <div class="course-five">
+            <h3>Challenge Exercises:</h3>
+            <ol>
+                <li>Create a BankAccount class with:
+                    <ul>
+                        <li>Account number, holder name, and balance</li>
+                        <li>Methods for deposit, withdraw, and transfer</li>
+                        <li>Balance validation to prevent overdraft</li>
+                    </ul>
+                </li>
+                <li>Write a program that:
+                    <ul>
+                        <li>Takes a sentence as input</li>
+                        <li>Counts the number of words and characters</li>
+                        <li>Finds the longest word</li>
+                        <li>Reverses the sentence</li>
+                    </ul>
+                </li>
+                <li>Create a SimpleGame class:
+                    <ul>
+                        <li>Rock-paper-scissors or number guessing game</li>
+                        <li>Keep score across multiple rounds</li>
+                        <li>Add computer opponent with random choices</li>
+                    </ul>
+                </li>
+                <li>Build a TemperatureConverter module:
+                    <ul>
+                        <li>Convert between Celsius, Fahrenheit, and Kelvin</li>
+                        <li>Add validation for reasonable temperature ranges</li>
+                    </ul>
+                </li>
+                <li>Create a Library management system:
+                    <ul>
+                        <li>Book class with title, author, ISBN</li>
+                        <li>Library class to manage book collection</li>
+                        <li>Methods to add, remove, search, and list books</li>
+                    </ul>
+                </li>
+            </ol>
+            
+            <h3>Ruby Tips & Best Practices:</h3>
+            <ul>
+                <li>Use descriptive variable and method names (snake_case)</li>
+                <li>Keep methods small and focused on single responsibility</li>
+                <li>Use built-in Ruby methods instead of reinventing the wheel</li>
+                <li>Take advantage of Ruby's enumerable methods (each, map, select, etc.)</li>
+                <li>Use symbols for hash keys when possible for better performance</li>
+                <li>Follow Ruby style guide conventions</li>
+                <li>Write tests for your code (learn about RSpec or Minitest)</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Premium Subscription CTA -->
+<div class="premium-subscription" id="premium-subscription" data-aos="fade-up">
+    <h2>Unlock Premium SkillMynte Content</h2>
+    <p>Upgrade to SkillMynte Pro for exclusive courses, advanced projects, and personalized learning paths</p>
+    
+    <div class="premium-features">
+        <div class="premium-feature">
+            <i class="fas fa-gem"></i>
+            <h3>Premium Courses</h3>
+            <p>Access our entire library of advanced courses and exclusive content</p>
+        </div>
+        <div class="premium-feature">
+            <i class="fas fa-trophy"></i>
+            <h3>Certification</h3>
+            <p>Earn industry-recognized certificates to showcase your skills</p>
+        </div>
+        <div class="premium-feature">
+            <i class="fas fa-user-graduate"></i>
+            <h3>Mentorship</h3>
+            <p>Get personalized guidance from industry experts</p>
+        </div>
+    </div>
+    
+    <div class="pricing-options">
+        <div class="pricing-option">
+            <h3>Monthly</h3>
+            <div class="price">₦3,500<span>/month</span></div>
+            <ul class="pricing-features">
+                <li><i class="fas fa-check"></i> All Premium Courses</li>
+                <li><i class="fas fa-check"></i> Practice Projects</li>
+                <li><i class="fas fa-check"></i> Community Access</li>
+                <li><i class="fas fa-check"></i> Certificates</li>
+                <li><i class="fas fa-check"></i> Personal AI Assistant</li>
+            </ul>
+            <a href="premium courses.html"><button class="pricing-btn">Get Started</button></a>
+        </div>
+        
+        <div class="pricing-option" style="border-color: var(--gold); transform: scale(1.05);">
+            <h3>Annual <span style="background: var(--gold); color: #000; padding: 0.2rem 0.5rem; border-radius: 20px; font-size: 0.8rem; margin-left: 0.5rem;">Best Value</span></h3>
+            <div class="price">₦37,000<span>/year</span></div>
+            <ul class="pricing-features">
+                <li><i class="fas fa-check"></i> All Premium Courses</li>
+                <li><i class="fas fa-check"></i> Practice Projects</li>
+                <li><i class="fas fa-check"></i> Community Access</li>
+                <li><i class="fas fa-check"></i> Certificates</li>
+                <li><i class="fas fa-check"></i> Personal AI Assistant</li>
+            </ul>
+            <a href="premium courses.html"><button class="pricing-btn">Get Started</button></a>
+        </div>
+        
+        <div class="pricing-option">
+            <h3>Lifetime</h3>
+            <div class="price">₦200,000<span>/once</span></div>
+            <ul class="pricing-features">
+                <li><i class="fas fa-check"></i> All Premium Courses</li>
+                <li><i class="fas fa-check"></i> Practice Projects</li>
+                <li><i class="fas fa-check"></i> Community Access</li>
+                <li><i class="fas fa-check"></i> Certificates</li>
+                <li><i class="fas fa-check"></i> Personal AI Assistant</li>
+            </ul>
+            <a href="premium courses.html"><button class="pricing-btn">Get Started</button></a>
+        </div>
+    </div>
+    
+    <button class="premium-cta-btn">
+        <i class="fas fa-rocket"></i> Upgrade to SkillMynte Pro
+    </button>
+</div>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-column">
+            <h3>About SkillMynte</h3>
+            <p>SkillMynte is a premium learning platform dedicated to helping developers of all levels master programming technologies through interactive courses and hands-on practice.</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/profile.php?id=61581069862024"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://x.com/SkillMynte_AI?t=CcoQtjWZGGOXqfTfrsufjQ&s=09"><i class="fab fa-twitter"></i></a>
+                <a href="https://youtube.com/@skillmynte?si=LmX2MjSKU3N1Xa5S"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.instagram.com/skillmynte_ai?igsh=MTd1YWpjdXV1OHhrbA=="><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+                <li><a href="#"><i class="fas fa-chevron-right"></i> Home</a></li>
+                <li><a href="#"><i class="fas fa-chevron-right"></i> Courses</a></li>
+                <li><a href="#"><i class="fas fa-chevron-right"></i> Practice</a></li>
+                <li><a href="#"><i class="fas fa-chevron-right"></i> Projects</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Popular Courses</h3>
+            <ul class="footer-links">
+                <li><a href="#"><i class="fas fa-chevron-right"></i> Ruby Programming</a></li>
+                <li><a href="#"><i class="fas fa-chevron-right"></i> Ruby on Rails</a></li>
+                <li><a href="free JS Course.html"><i class="fas fa-chevron-right"></i> JavaScript Mastery</a></li>
+                <li><a href="free python course.html"><i class="fas fa-chevron-right"></i> Python for Beginners</a></li>
+                <li><a href="premium courses.html"><i class="fas fa-chevron-right"></i> Web Development</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Contact Us</h3>
+            <p><i class="fas fa-envelope"></i>Skillmynteofficial@gmail.com</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 SkillMynte. All rights reserved. | Designed with <i class="fas fa-heart" style="color: var(--primary);"></i> for the developer community</p>
+    </div>
+</footer>
+
+<script>
+    // Function to run code in preview
+    function runCode(editorId, outputId) {
+        const editor = document.getElementById(editorId);
+        const output = document.getElementById(outputId);
+        
+        try {
+            // For Ruby code, we'll simulate execution since we can't run Ruby in browser
+            const code = editor.value;
+            output.innerHTML = `<div style="padding: 1rem; background: #f5f5f5; border-radius: 4px; font-family: 'Fira Code', monospace;">
+                <div style="color: var(--primary-dark); margin-bottom: 1rem; font-weight: 600;">
+                    <i class="fas fa-play"></i> Ruby Code Output:
+                </div>
+                <div style="white-space: pre-wrap; color: var(--text-dark);">
+${simulateRubyOutput(code)}
+                </div>
+            </div>`;
+        } catch (error) {
+            output.innerHTML = `<div style="color: red; padding: 1rem;">Error: ${error.message}</div>`;
+        }
+    }
+    
+    // Simulate Ruby code execution (basic simulation)
+    function simulateRubyOutput(code) {
+        // This is a simple simulation - in a real environment, you'd need a Ruby interpreter
+        const lines = code.split('\n');
+        let output = '';
+        
+        lines.forEach(line => {
+            if (line.includes('puts')) {
+                const content = line.replace(/puts\s+["'](.+)["']/, '$1')
+                                   .replace(/puts\s+(.+)/, '$1')
+                                   .replace(/^#/, '')
+                                   .trim();
+                if (content && !line.trim().startsWith('#')) {
+                    output += content + '\n';
+                }
+            }
+        });
+        
+        return output || 'Code executed successfully. Add "puts" statements to see output.';
+    }
+    
+    // Initialize all editors with their default output
+    document.addEventListener('DOMContentLoaded', function() {
+        // Run all code editors on load
+        runCode('editor-1', 'output-1');
+        runCode('editor-2', 'output-2');
+        runCode('editor-3', 'output-3');
+        runCode('editor-4', 'output-4');
+        runCode('editor-5', 'output-5');
+        runCode('editor-6', 'output-6');
+        runCode('playground-editor', 'playground-output');
+        
+        // Add event listeners to all run buttons in editor headers
+        document.querySelectorAll('.run-editor').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const editorContainer = this.closest('.code-editor-container');
+                const editor = editorContainer.querySelector('.code-editor');
+                const output = editorContainer.querySelector('.preview-container');
+                runCode(editor.id, output.id);
+            });
+        });
+        
+        // Add reset functionality
+        document.querySelectorAll('.reset-editor').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const editorContainer = this.closest('.code-editor-container');
+                const editor = editorContainer.querySelector('.code-editor');
+                const originalContent = editor.dataset.original || editor.defaultValue;
+                editor.value = originalContent;
+                runCode(editor.id, editorContainer.querySelector('.preview-container').id);
+            });
+        });
+        
+        // Store original content for reset functionality
+        document.querySelectorAll('.code-editor').forEach(editor => {
+            editor.dataset.original = editor.value;
+        });
+
+        // Handle navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Handle mobile menu toggle
+        document.getElementById('menuToggle').addEventListener('click', function() {
+            const navMenu = document.querySelector('.nav-menu');
+            const sidebar = document.getElementById('sidebar');
+            navMenu.classList.toggle('active');
+            sidebar.classList.toggle('active');
+            
+            if (navMenu.classList.contains('active')) {
+                this.innerHTML = '<i class="fas fa-times"></i>';
+            } else {
+                this.innerHTML = '<i class="fas fa-bars"></i>';
+            }
+        });
+
+        // Handle preloader
+        window.addEventListener('load', function() {
+            const preloader = document.getElementById('preloader');
+            setTimeout(function() {
+                preloader.classList.add('fade-out');
+            }, 1500);
+        });
+
+        // Level filtering functionality
+        const levelButtons = document.querySelectorAll('.level-btn');
+        const modules = document.querySelectorAll('.course-module');
+        
+        levelButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const level = this.getAttribute('data-level');
+                
+                // Remove active class from all buttons
+                levelButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                this.classList.add('active');
+                
+                if (level === 'all') {
+                    // Show all modules
+                    modules.forEach(module => {
+                        module.style.display = 'flex';
+                    });
+                } else if (level === 'advanced') {
+                    // Scroll to premium section for advanced content
+                    document.getElementById('premium-subscription').scrollIntoView({ behavior: 'smooth' });
+                    
+                    // Hide all modules (since advanced content is in premium)
+                    modules.forEach(module => {
+                        module.style.display = 'none';
+                    });
+                } else {
+                    // Show modules with matching difficulty
+                    modules.forEach(module => {
+                        const difficulty = module.getAttribute('data-difficulty');
+                        if (difficulty === level) {
+                            module.style.display = 'flex';
+                        } else {
+                            module.style.display = 'none';
+                        }
+                    });
+                }
+            });
+        });
+
+        // Search functionality
+        const searchInput = document.getElementById('search-input');
+        
+        searchInput.addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+            
+            modules.forEach(module => {
+                const moduleTitle = module.querySelector('h1').textContent.toLowerCase();
+                const moduleContent = module.textContent.toLowerCase();
+                
+                if (moduleTitle.includes(searchTerm) || moduleContent.includes(searchTerm)) {
+                    module.style.display = 'flex';
+                } else {
+                    module.style.display = 'none';
+                }
+            });
+        });
+    });
+    
+    // Smooth scrolling for sidebar links
+    document.querySelectorAll('.sidebar-item').forEach(item => {
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Remove active class from all items
+            document.querySelectorAll('.sidebar-item').forEach(i => {
+                i.classList.remove('active');
+            });
+            
+            // Add active class to clicked item
+            this.classList.add('active');
+            
+            // Close mobile menu if open
+            if (window.innerWidth <= 1024) {
+                document.querySelector('.nav-menu').classList.remove('active');
+                document.querySelector('.sidebar').classList.remove('active');
+                document.querySelector('.menu-toggle').innerHTML = '<i class="fas fa-bars"></i>';
+            }
+            
+            // Scroll to section
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 100,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+</script>
+</body>
+</html>

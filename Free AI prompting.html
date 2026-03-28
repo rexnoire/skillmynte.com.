@@ -1,0 +1,1550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Prompting Mastery | SkillMynte</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="rounded_logo.png">
+    <link rel="stylesheet" href="free AI prompting.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-robot"></i>
+                SKILLMYNTE
+            </a>
+            <div class="nav-menu">
+                <a href="#" class="nav-link">Home</a>
+                <a href="#" class="nav-link">Courses</a>
+                <a href="#" class="nav-link">Practice</a>
+                <a href="#" class="nav-link">Projects</a>
+                
+                <div class="courses-dropdown">
+                    <button class="courses-btn">
+                        <i class="fas fa-book-open"></i> Jump to Module
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#module1" class="dropdown-item">
+                            <i class="fas fa-robot"></i> Prompting Basics
+                        </a>
+                        <a href="#module2" class="dropdown-item">
+                            <i class="fas fa-pen"></i> Crafting Prompts
+                        </a>
+                        <a href="#module3" class="dropdown-item">
+                            <i class="fas fa-image"></i> Multiâ€‘modal Prompts
+                        </a>
+                        <a href="#module4" class="dropdown-item">
+                            <i class="fas fa-table"></i> Structured Output
+                        </a>
+                        <a href="#module5" class="dropdown-item">
+                            <i class="fas fa-comment-dots"></i> Context & Memory
+                        </a>
+                        <a href="#module6" class="dropdown-item">
+                            <i class="fas fa-user-tag"></i> Role & Persona
+                        </a>
+                        <a href="#module7" class="dropdown-item">
+                            <i class="fas fa-code"></i> Code Generation
+                        </a>
+                        <a href="#module8" class="dropdown-item">
+                            <i class="fas fa-brain"></i> Advanced Techniques
+                        </a>
+                        <a href="#module9" class="dropdown-item">
+                            <i class="fas fa-shield-alt"></i> Ethical AI
+                        </a>
+                        <a href="#module10" class="dropdown-item">
+                            <i class="fas fa-crown"></i> Complex Tasks
+                        </a>
+                        <a href="#playground" class="dropdown-item">
+                            <i class="fas fa-laptop-code"></i> Practice Playground
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Premium Course Navigation -->
+    <div class="course-navigation">
+        <div class="course-nav-container">
+            <div class="course-category">
+                <button class="category-btn">
+                    <i class="fas fa-layer-group"></i> Categories
+                </button>
+                <div class="category-dropdown">
+                    <a href="#" class="category-item">
+                        <i class="fas fa-robot"></i> Prompt Engineering
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fab fa-openai"></i> ChatGPT & GPTs
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fas fa-paint-brush"></i> Creative Prompting
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fas fa-chart-line"></i> Business Use Cases
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fas fa-database"></i> Data Analysis
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fas fa-mobile-alt"></i> Mobile AI Apps
+                    </a>
+                </div>
+            </div>
+            
+            <div class="course-levels">
+                <button class="level-btn active" data-level="all">All Levels</button>
+                <button class="level-btn" data-level="beginner">Beginner</button>
+                <button class="level-btn" data-level="intermediate">Intermediate</button>
+                <button class="level-btn" data-level="advanced">Advanced</button>
+            </div>
+            
+            <div class="course-search">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" class="search-input" id="search-input" placeholder="Search courses...">
+            </div>
+        </div>
+    </div>
+    
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <a href="#module1" class="sidebar-item active completed">
+            <i class="fas fa-robot"></i>
+            <span>Module 1: Prompting Basics</span>
+            <span class="progress-indicator"><i class="fas fa-check"></i></span>
+        </a>
+        <a href="#module2" class="sidebar-item completed">
+            <i class="fas fa-pen"></i>
+            <span>Module 2: Crafting Effective Prompts</span>
+            <span class="progress-indicator"><i class="fas fa-check"></i></span>
+        </a>
+        <a href="#module3" class="sidebar-item completed">
+            <i class="fas fa-image"></i>
+            <span>Module 3: Multiâ€‘modal Prompting</span>
+            <span class="progress-indicator"><i class="fas fa-check"></i></span>
+        </a>
+        <a href="#module4" class="sidebar-item">
+            <i class="fas fa-table"></i>
+            <span>Module 4: Structured Output</span>
+            <span class="progress-indicator">4</span>
+        </a>
+        <a href="#module5" class="sidebar-item">
+            <i class="fas fa-comment-dots"></i>
+            <span>Module 5: Context & Memory</span>
+            <span class="progress-indicator">5</span>
+        </a>
+        <a href="#module6" class="sidebar-item">
+            <i class="fas fa-user-tag"></i>
+            <span>Module 6: Role & Persona</span>
+            <span class="progress-indicator">6</span>
+        </a>
+        <a href="#module7" class="sidebar-item">
+            <i class="fas fa-code"></i>
+            <span>Module 7: Code Generation</span>
+            <span class="progress-indicator">7</span>
+        </a>
+        <a href="#module8" class="sidebar-item">
+            <i class="fas fa-brain"></i>
+            <span>Module 8: Advanced Techniques</span>
+            <span class="progress-indicator">8</span>
+        </a>
+        <a href="#module9" class="sidebar-item">
+            <i class="fas fa-shield-alt"></i>
+            <span>Module 9: Ethical AI</span>
+            <span class="progress-indicator">9</span>
+        </a>
+        <a href="#module10" class="sidebar-item">
+            <i class="fas fa-crown"></i>
+            <span>Module 10: Complex Tasks</span>
+            <span class="progress-indicator">10</span>
+        </a>
+        <a href="#playground" class="sidebar-item">
+            <i class="fas fa-laptop-code"></i>
+            <span>Practice Playground</span>
+        </a>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="content-wrapper">
+        <div class="container">
+            <!-- Module 1 -->
+            <div class="course-module" id="module1" data-aos="fade-up" data-difficulty="beginner">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>PROMPTING BASICS</h1>
+                    <h3>Learn how to communicate with AI models</h3>
+                    <span class="difficulty">Beginner</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/4712/4712104.png" class="module-icon" alt="AI Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 1: <span>Understanding Prompts & Models</span></h1>
+                    <p>AI prompting is the art of crafting instructions that guide language models to produce desired outputs. Think of it as talking to a very smart, literalâ€‘minded assistantâ€”you need to be clear, specific, and provide enough context. Prompts can be questions, commands, or examples that shape the AI's response.</p>
+                    
+                    <p>Every interaction with an AI model starts with a prompt. The quality of your output depends heavily on how you phrase your request. A wellâ€‘structured prompt includes a clear task, relevant context, and sometimes examples (fewâ€‘shot prompting) to steer the model toward the desired format or tone.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Prompt</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-1" spellcheck="false"># Example prompt
+You are a helpful assistant.
+Explain what a prompt is in one short paragraph.
+
+# Expected output (simulated)
+A prompt is an instruction or query given to an AI model to generate a specific response. It can include context, examples, or constraints that guide the model's output.</textarea>
+                        <button class="run-btn" onclick="runCode('editor-1', 'output-1')">
+                            <i class="fas fa-play"></i> Run Prompt
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Simulated AI Response
+                        </div>
+                        <div class="preview-container" id="output-1"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li><code>Prompt</code> = instruction + context</li>
+                                <li><code>Model</code> = AI that generates text based on the prompt</li>
+                                <li>Be explicit: tell the AI what role to take and what format to use</li>
+                                <li>Provide examples (fewâ€‘shot) to improve accuracy</li>
+                                <li>Temperature and topâ€‘p control randomness</li>
+                                <li>Start simple, then iterate</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-graduation-cap"></i> The Art of Prompting</h3>
+                            <p>Prompting is both a science and an art. Scientifically, you need to understand how language models interpret tokens, attention, and patterns. Artistically, you must craft language that elicits creativity, precision, or empathy as needed. The same model can give wildly different answers depending on how you phrase your request.</p>
+                            
+                            <p>Good prompts often follow a structure: <strong>role</strong> ("You are an expert botanist"), <strong>task</strong> ("Describe the photosynthesis process"), <strong>format</strong> ("in bullet points"), and <strong>constraints</strong> ("keep it under 100 words"). This gives the AI clear boundaries and reduces hallucinations.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-robot"></i> Zeroâ€‘shot vs Fewâ€‘shot</h4>
+                                    <p>Zeroâ€‘shot: just the instruction. Fewâ€‘shot: provide a few examples before asking the real question. Examples dramatically improve reliability, especially for complex tasks.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-sliders-h"></i> Hyperparameters</h4>
+                                    <p>Temperature (0â€‘1) controls creativity: lower = more deterministic, higher = more varied. Topâ€‘p (nucleus sampling) limits the vocabulary pool. Both affect output style.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-sync-alt"></i> Iterative Prompting</h4>
+                                    <p>Don't expect perfection on the first try. Refine your prompt based on the outputâ€”add constraints, rephrase, or break the task into steps (chainâ€‘ofâ€‘thought).</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-building"></i> Real-World Application</h4>
+                                <p>Customer support chatbots use carefully engineered prompts to maintain brand voice and resolve queries consistently. Marketing teams prompt AI to generate ad copy, then refine based on A/B test results. Developers prompt AI to write code snippets, tests, and documentationâ€”saving hours of manual work. Mastering the basics of prompting unlocks these efficiencies across any industry.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Write three prompts for the same task:</strong> Ask an AI to explain "machine learning" to a 5â€‘yearâ€‘old, a high school student, and a college professor. Note how the tone and complexity change.</p>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 2 -->
+            <div class="course-module" id="module2" data-aos="fade-up" data-difficulty="beginner">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>CRAFTING PROMPTS</h1>
+                    <h3>Structure and clarity for better responses</h3>
+                    <span class="difficulty">Beginner</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/4712/4712104.png" class="module-icon" alt="AI Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 2: <span>Clarity, Context & Constraints</span></h1>
+                    <p>A wellâ€‘crafted prompt leaves no room for ambiguity. Use direct language, specify the desired output format (JSON, markdown, bullet points), and include any necessary background information. The more context you give, the more relevant the answer.</p>
+                    
+                    <p>Constraints are powerful: word limits, tone (professional, friendly, humorous), and do's/don'ts help shape the response. For example, "Explain quantum computing in 3 sentences, avoid jargon, and use an analogy."</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Prompt</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-2" spellcheck="false">You are a travel guide. 
+Suggest a 3â€‘day itinerary for a trip to Paris. 
+Format the response as a bullet list for each day. 
+Keep each dayâ€™s description under 50 words. 
+Include one "insider tip" at the end.</textarea>
+                        <button class="run-btn" onclick="runCode('editor-2', 'output-2')">
+                            <i class="fas fa-play"></i> Run Prompt
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Simulated AI Response
+                        </div>
+                        <div class="preview-container" id="output-2"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li><strong>Be specific:</strong> "Write a poem" vs "Write a haiku about autumn"</li>
+                                <li><strong>Set format:</strong> "Respond in JSON with keys: name, age, city"</li>
+                                <li><strong>Provide context:</strong> Background information helps the AI understand the domain</li>
+                                <li><strong>Use constraints:</strong> word count, tone, audience level</li>
+                                <li><strong>Ask for reasoning:</strong> "Explain step by step" improves accuracy</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-pencil-ruler"></i> Anatomy of a Great Prompt</h3>
+                            <p>Every effective prompt contains four elements: persona, task, context, and format. The persona defines who the AI should pretend to be (e.g., "You are a senior software engineer"). The task is the core request. Context provides necessary background (e.g., "The user is a beginner"). Format specifies how the answer should look.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-user-graduate"></i> Persona</h4>
+                                    <p>Assigning a role focuses the AI's knowledge and tone. "You are a lawyer" vs "You are a 10â€‘yearâ€‘old" produce dramatically different answers.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-tasks"></i> Task Clarity</h4>
+                                    <p>Avoid vague verbs like "talk about". Use "explain", "list", "compare", "summarize", "generate". This tells the AI exactly what to do.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-ruler"></i> Formatting</h4>
+                                    <p>Specify output structure: markdown tables, numbered lists, CSV, or plain paragraphs. This saves you time reformatting later.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-chart-line"></i> Business Intelligence</h4>
+                                <p>Analysts prompt AI to generate SQL queries by providing table schemas and a plainâ€‘English request. They include constraints like "use only sales data after 2020" and "return the top 5 customers". This turns natural language into actionable data instantly.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Rewrite a vague prompt:</strong> Take "Tell me about cars" and rewrite it with persona, context, format, and constraints. Then compare the likely responses.</p>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 3 -->
+            <div class="course-module" id="module3" data-aos="fade-up" data-difficulty="beginner">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>MULTIâ€‘MODAL PROMPTING</h1>
+                    <h3>Working with images, text, and more</h3>
+                    <span class="difficulty">Beginner</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/4712/4712104.png" class="module-icon" alt="AI Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 3: <span>Prompts with Images & Mixed Inputs</span></h1>
+                    <p>Modern AI models (like GPTâ€‘4V, Claude 3, Gemini) can process images, audio, and documents alongside text. Multiâ€‘modal prompting lets you ask questions about pictures, extract text from scanned docs, or generate images from descriptions (via diffusion models).</p>
+                    
+                    <p>When prompting with images, describe what you see or ask specific questions: "What's wrong with this circuit board?" or "Translate the sign in this photo." The AI combines visual and textual understanding.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Prompt</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-3" spellcheck="false">[Imagine an image of a dog and a cat playing together]
+Describe this image in two sentences. Then create a short, funny caption for social media.</textarea>
+                        <button class="run-btn" onclick="runCode('editor-3', 'output-3')">
+                            <i class="fas fa-play"></i> Run Prompt
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Simulated AI Response
+                        </div>
+                        <div class="preview-container" id="output-3"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li><strong>Imageâ€‘toâ€‘text:</strong> Ask questions about an image or request a description</li>
+                                <li><strong>Textâ€‘toâ€‘image:</strong> Use models like DALLÂ·E with detailed prompts (subject, style, lighting, composition)</li>
+                                <li><strong>Document analysis:</strong> Upload PDFs or scans and ask for summaries or data extraction</li>
+                                <li><strong>Audio:</strong> Some models can transcribe or answer questions about audio content</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-camera"></i> Beyond Text</h3>
+                            <p>Multiâ€‘modal AI bridges the gap between different types of data. For instance, you can snap a photo of a plant, and the AI identifies it and gives care instructions. Or you can sketch a wireframe and have it generate HTML/CSS code. This capability is transforming fields like education, design, and accessibility.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-paint-brush"></i> Image Generation</h4>
+                                    <p>Prompts for image models require rich detail: "A photorealistic cat wearing a spacesuit, floating on Mars, cinematic lighting, 4K". Style references (e.g., "in the style of Van Gogh") are also effective.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-file-alt"></i> OCR & Document AI</h4>
+                                    <p>Extract structured data from invoices, receipts, or handwritten notes by prompting the AI to convert the image content into JSON or a table.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-universal-access"></i> Accessibility</h4>
+                                    <p>Generate alt text for images automatically, describe scenes for visually impaired users, or create audio descriptions from video frames.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-store"></i> Retail & Eâ€‘commerce</h4>
+                                <p>Online stores use multiâ€‘modal AI to generate product descriptions from photos, answer customer questions about items in images, and even recommend outfits based on a user's uploaded clothing photo. This creates a seamless shopping experience.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Generate an image prompt:</strong> Write a detailed prompt for an image of a "futuristic library with floating books and AI holograms". Then, using a textâ€‘based model, describe what that image would look like.</p>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 4 -->
+            <div class="course-module" id="module4" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>STRUCTURED OUTPUT</h1>
+                    <h3>Getting consistent, machineâ€‘readable responses</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/4712/4712104.png" class="module-icon" alt="AI Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 4: <span>JSON, Tables & Bullet Points</span></h1>
+                    <p>Often you need the AI's answer to be parsed by another program or displayed neatly. By specifying a structured format (like JSON, YAML, or markdown tables), you make the output predictable and easy to handle.</p>
+                    
+                    <p>For example, you can ask for a list of countries with their capitals and populations in JSON format, then feed that directly into a web app or database. This is essential for building AIâ€‘powered applications.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Prompt</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-4" spellcheck="false">List three popular programming languages.
+For each, provide:
+- name
+- year created
+- creator
+- primary paradigm (e.g., objectâ€‘oriented)
+Output as a JSON array with keys exactly as above.</textarea>
+                        <button class="run-btn" onclick="runCode('editor-4', 'output-4')">
+                            <i class="fas fa-play"></i> Run Prompt
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Simulated AI Response
+                        </div>
+                        <div class="preview-container" id="output-4"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li><strong>JSON:</strong> Use key names and indicate if it's an array or object</li>
+                                <li><strong>Tables:</strong> "Give me a markdown table with columns: Product, Price, Rating"</li>
+                                <li><strong>CSV:</strong> Ask for commaâ€‘separated values for spreadsheet import</li>
+                                <li><strong>YAML:</strong> Useful for configuration files</li>
+                                <li><strong>Bullets:</strong> Simpler but still structured for readability</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-database"></i> Data Extraction & Automation</h3>
+                            <p>Structured prompting turns AI into a data extraction tool. You can feed it messy text (like emails or articles) and get clean JSON. This is widely used in CRM enrichment, competitive analysis, and content aggregation.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-cogs"></i> API Integration</h4>
+                                    <p>Many apps now use AI as an API endpoint: send a prompt, receive JSON, and update a database. This replaces manual data entry and powers realâ€‘time features.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-check-double"></i> Validation</h4>
+                                    <p>When you specify a format, the AI is more likely to include all requested fields. You can even ask for validation rules to be applied (e.g., "ensure email addresses are valid").</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-chart-pie"></i> Reporting</h4>
+                                    <p>Generate formatted reports (tables, summaries) that can be directly embedded in dashboards or emails without manual editing.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-file-invoice"></i> Invoice Processing</h4>
+                                <p>Companies scan hundreds of invoices daily. With a structured prompt, an AI extracts vendor name, date, total amount, and line items into a consistent JSON format, which is then fed into accounting software. This reduces errors and saves hours of manual work.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Extract to JSON:</strong> Write a prompt that asks the AI to extract the following from a short biography (you can make up a bio): name, birth year, occupation, and three key achievements. Specify the output as JSON.</p>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 5 -->
+            <div class="course-module" id="module5" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>CONTEXT & MEMORY</h1>
+                    <h3>Building conversational AI experiences</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/4712/4712104.png" class="module-icon" alt="AI Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 5: <span>Multiâ€‘turn Dialogue & System Prompts</span></h1>
+                    <p>In chat applications, you need to maintain context across multiple turns. This is done by including the conversation history in each new prompt (often as a list of messages) and using a system prompt to set the assistant's behavior permanently.</p>
+                    
+                    <p>System prompts (e.g., "You are a helpful, friendly tutor") guide the AI's personality and constraints for the entire session. User and assistant messages then follow, with the AI referring back to earlier exchanges.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Prompt</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-5" spellcheck="false">System: You are a travel advisor who speaks concisely.
+User: I'm planning a trip to Japan in April. Any tips?
+Assistant: April is cherry blossom season! Popular spots: Tokyo, Kyoto, Osaka. Book early.
+User: What about food I shouldn't miss?
+Assistant: (respond as if you remember the previous context)</textarea>
+                        <button class="run-btn" onclick="runCode('editor-5', 'output-5')">
+                            <i class="fas fa-play"></i> Run Prompt
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Simulated AI Response
+                        </div>
+                        <div class="preview-container" id="output-5"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li><strong>System prompt:</strong> sets the base behavior (role, tone, rules)</li>
+                                <li><strong>History:</strong> include previous turns so the AI knows the context</li>
+                                <li><strong>Token limit:</strong> you can only include so much history; summarization may be needed</li>
+                                <li><strong>Memory:</strong> the AI doesn't remember past sessions unless you store them</li>
+                                <li><strong>User ID:</strong> for personalized apps, you can inject userâ€‘specific data into the prompt</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-comments"></i> Building Chatbots & Assistants</h3>
+                            <p>Every modern chatbot (customer support, tutoring, therapy) relies on careful context management. The system prompt defines the bot's core identity and guardrails. Conversation history is appended each turn, and sometimes a "scratchpad" is used for the AI to reason before answering.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-history"></i> Sliding Window</h4>
+                                    <p>Because of token limits, you may need to drop old messages or summarize them. This keeps the prompt within bounds while retaining essential context.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-user-secret"></i> Personalization</h4>
+                                    <p>Inject userâ€‘specific data (name, preferences, past orders) into the prompt to make interactions feel tailored and intelligent.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-robot"></i> CoT (Chainâ€‘ofâ€‘Thought)</h4>
+                                    <p>Encourage the AI to "think step by step" inside the conversation, improving reasoning for complex queries.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-graduation-cap"></i> AI Tutors</h4>
+                                <p>Educational platforms use system prompts to define the tutor's teaching style (Socratic, encouraging, etc.). They keep the full lesson history in context, allowing the AI to reference earlier topics and adapt to the student's progress. This creates a personalized learning experience.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Design a system prompt for a fitness coach:</strong> Write a system prompt that sets the AI as a motivational fitness coach, including rules (e.g., "never give medical advice", "encourage but be realistic"). Then write a short conversation showing it in action.</p>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 6 -->
+            <div class="course-module" id="module6" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>ROLE & PERSONA</h1>
+                    <h3>Guiding tone and perspective</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/4712/4712104.png" class="module-icon" alt="AI Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 6: <span>Persona, Tone & Style Transfer</span></h1>
+                    <p>One of the most powerful prompting techniques is assigning a persona. By telling the AI to "act as Shakespeare" or "respond like a pirate", you instantly change the tone and vocabulary. This is useful for creative writing, marketing copy, or simply making interactions more engaging.</p>
+                    
+                    <p>Beyond fun, personas can help with accuracy: "You are a historian specializing in Ancient Rome" yields more precise historical answers. The AI taps into relevant training data associated with that role.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Prompt</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-6" spellcheck="false">You are a friendly, wiseâ€‘cracking detective from a 1940s noir film. 
+Explain why the sky is blue, but keep it in characterâ€”use metaphors and a gritty tone.</textarea>
+                        <button class="run-btn" onclick="runCode('editor-6', 'output-6')">
+                            <i class="fas fa-play"></i> Run Prompt
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Simulated AI Response
+                        </div>
+                        <div class="preview-container" id="output-6"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li><strong>Persona:</strong> "You are a [role]" shapes knowledge and tone</li>
+                                <li><strong>Style transfer:</strong> "Explain this in the style of Hemingway"</li>
+                                <li><strong>Audience targeting:</strong> "Explain to a 10â€‘yearâ€‘old" simplifies language</li>
+                                <li><strong>Cultural references:</strong> Personas can invoke specific idioms and humour</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-theater-masks"></i> The Power of Persona</h3>
+                            <p>Persona prompting leverages the AI's ability to mimic different registers and knowledge bases. It's like asking a method actor to inhabit a characterâ€”the AI draws from patterns in its training that correspond to that role. This is especially useful for generating content that needs a consistent voice, such as brand messaging.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-bullhorn"></i> Marketing Copy</h4>
+                                    <p>"You are a luxury brand copywriter" produces elegant, aspirational text. "You are a streetâ€‘wise social media manager" yields punchy, slangâ€‘heavy posts.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-balance-scale"></i> Legal & Compliance</h4>
+                                    <p>"You are a legal expert specializing in GDPR" helps draft privacy policies with proper terminology and caution.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-smile"></i> Empathy</h4>
+                                    <p>"You are a compassionate friend" can be used in mental health chatbots to ensure a warm, nonâ€‘judgmental tone.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-film"></i> Entertainment & Gaming</h4>
+                                <p>Game developers use persona prompting to generate dialogue for nonâ€‘player characters (NPCs). Each NPC has a distinct personality, and the AI writes lines that stay true to that character. This saves countless hours of manual scriptwriting.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Three personas, one topic:</strong> Write a prompt that asks the AI to explain "photosynthesis" as a botanist, a poet, and a comedian. Compare the outputs.</p>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 7 -->
+            <div class="course-module" id="module7" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>CODE GENERATION</h1>
+                    <h3>Prompting for programming tasks</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/4712/4712104.png" class="module-icon" alt="AI Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 7: <span>Writing, Debugging & Explaining Code</span></h1>
+                    <p>AI models excel at generating code from natural language descriptions. You can ask for a function, a full script, or even a complex algorithm. The key is to be specific about the language, input/output, edge cases, and any libraries to use.</p>
+                    
+                    <p>You can also paste code and ask for explanations, optimizations, or unit tests. This turns the AI into a pair programmer that never sleeps.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Prompt</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-7" spellcheck="false">Write a Python function that takes a list of integers and returns the sum of even numbers. Include type hints and a docstring. Also provide an example usage.</textarea>
+                        <button class="run-btn" onclick="runCode('editor-7', 'output-7')">
+                            <i class="fas fa-play"></i> Run Prompt
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Simulated AI Response
+                        </div>
+                        <div class="preview-container" id="output-7"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li><strong>Language & framework:</strong> specify Python, React, etc.</li>
+                                <li><strong>Input/output:</strong> describe what the code should accept and return</li>
+                                <li><strong>Constraints:</strong> performance, error handling, edge cases</li>
+                                <li><strong>Examples:</strong> give sample inputs and expected outputs</li>
+                                <li><strong>Explain code:</strong> paste code and ask for a lineâ€‘byâ€‘line explanation</li>
+                                <li><strong>Debug:</strong> show error messages and ask for fixes</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-laptop-code"></i> AIâ€‘assisted Development</h3>
+                            <p>Code generation boosts developer productivity tremendously. Instead of searching Stack Overflow, you describe what you need and get a working snippet. For complex tasks, you can iterate: ask for a basic version, then refine with additional requirements.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-bug"></i> Debugging</h4>
+                                    <p>Paste code that's not working, include the error, and ask for the fix. The AI often spots logical errors or missing imports instantly.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-chart-bar"></i> Refactoring</h4>
+                                    <p>"Make this code more efficient" or "convert this to use list comprehensions" â€“ the AI can suggest improvements and explain why they're better.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-file-code"></i> Documentation</h4>
+                                    <p>Ask for docstrings, comments, or a README file for your project. The AI can generate comprehensive documentation from your code.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-rocket"></i> Startups & Prototyping</h4>
+                                <p>Many founders now use AI to generate the first version of their product's backend or frontend. They describe the features in plain English, get a working prototype in hours, and then refine it. This dramatically speeds up timeâ€‘toâ€‘market.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Generate a utility function:</strong> Prompt the AI to write a JavaScript function that validates an email address using regex. Ask for comments and an example.</p>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 8 -->
+            <div class="course-module" id="module8" data-aos="fade-up" data-difficulty="advanced">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>ADVANCED TECHNIQUES</h1>
+                    <h3>Chainâ€‘ofâ€‘thought, fewâ€‘shot, and more</h3>
+                    <span class="difficulty">Advanced</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/4712/4712104.png" class="module-icon" alt="AI Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 8: <span>Chainâ€‘ofâ€‘Thought, Fewâ€‘Shot & Selfâ€‘Consistency</span></h1>
+                    <p>Advanced prompting techniques push models to perform complex reasoning. <strong>Chainâ€‘ofâ€‘thought (CoT)</strong> asks the AI to "think step by step" before answering, which dramatically improves accuracy on math and logic problems. <strong>Fewâ€‘shot</strong> provides examples to set the pattern. <strong>Selfâ€‘consistency</strong> generates multiple answers and picks the most common one.</p>
+                    
+                    <p>These techniques are essential for tasks requiring multiâ€‘step reasoning, like solving puzzles, planning, or complex data analysis.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Prompt</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-8" spellcheck="false">Q: Roger has 5 tennis balls. He buys 2 more cans of tennis balls. Each can has 3 balls. How many balls does he have now?
+A: Roger started with 5 balls. 2 cans Ã— 3 balls = 6 balls. 5 + 6 = 11. The answer is 11.
+
+Q: The cafeteria had 23 apples. They used 20 to make lunch and bought 6 more. How many apples do they have?
+A: (think step by step)</textarea>
+                        <button class="run-btn" onclick="runCode('editor-8', 'output-8')">
+                            <i class="fas fa-play"></i> Run Prompt
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Simulated AI Response
+                        </div>
+                        <div class="preview-container" id="output-8"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li><strong>Chainâ€‘ofâ€‘thought:</strong> "Let's think step by step" or provide reasoning examples</li>
+                                <li><strong>Fewâ€‘shot:</strong> give 2â€‘3 examples of question â†’ reasoning â†’ answer</li>
+                                <li><strong>Selfâ€‘consistency:</strong> generate multiple reasoning paths and take majority</li>
+                                <li><strong>Treeâ€‘ofâ€‘thoughts:</strong> explore multiple reasoning branches</li>
+                                <li><strong>ReAct:</strong> interleave reasoning and actions (for agents)</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-brain"></i> Pushing the Limits</h3>
+                            <p>Standard prompting works for simple tasks, but advanced reasoning requires scaffolding. Chainâ€‘ofâ€‘thought forces the model to decompose the problem, reducing errors. Fewâ€‘shot sets a template that the model follows. These techniques are the foundation of stateâ€‘ofâ€‘theâ€‘art AI applications like math solvers and scientific reasoning engines.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-calculator"></i> Mathematical Reasoning</h4>
+                                    <p>CoT has been shown to boost performance on math word problems by 20â€‘30%. It's now standard in many AI tutoring systems.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-puzzle-piece"></i> Logic Puzzles</h4>
+                                    <p>Fewâ€‘shot with stepâ€‘byâ€‘step examples helps models solve puzzles like Sudoku or logic grid problems that they otherwise fail.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-code-branch"></i> Agent Planning</h4>
+                                    <p>Advanced agents use ReAct (Reason+Act) where the AI thinks, then calls a tool, then thinks againâ€”enabling complex task automation.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-flask"></i> Scientific Discovery</h4>
+                                <p>Researchers use CoT prompting to guide AI through hypothesis generation, experimental design, and data interpretation. This accelerates literature review and even aids in drug discovery by suggesting novel compound combinations.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Chainâ€‘ofâ€‘thought puzzle:</strong> Create a prompt that asks the AI to solve a logic puzzle (e.g., "There are three boxes: one red, one blue, one green..."). Include a fewâ€‘shot example with stepâ€‘byâ€‘step reasoning, then ask your puzzle.</p>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 9 -->
+            <div class="course-module" id="module9" data-aos="fade-up" data-difficulty="advanced">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>ETHICAL AI</h1>
+                    <h3>Bias, safety, and responsible prompting</h3>
+                    <span class="difficulty">Advanced</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/4712/4712104.png" class="module-icon" alt="AI Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 9: <span>Mitigating Bias & Ensuring Safety</span></h1>
+                    <p>AI models can inadvertently generate biased, toxic, or unsafe content. Responsible prompting includes techniques to reduce harm: using system prompts to set ethical boundaries, avoiding leading questions, and asking for multiple perspectives.</p>
+                    
+                    <p>You should also be aware of prompt injection (where users try to override your system prompt) and implement safeguards like input validation and output filtering.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Prompt</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-9" spellcheck="false">System: You are a helpful, harmless, and honest assistant. You refuse to answer unethical requests.
+User: How can I make a strong insult?
+Assistant: (refuse politely)</textarea>
+                        <button class="run-btn" onclick="runCode('editor-9', 'output-9')">
+                            <i class="fas fa-play"></i> Run Prompt
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Simulated AI Response
+                        </div>
+                        <div class="preview-container" id="output-9"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li><strong>System prompt safety:</strong> "You are an ethical AI that refuses harmful requests"</li>
+                                <li><strong>Bias mitigation:</strong> ask for balanced viewpoints, avoid stereotypes</li>
+                                <li><strong>Prompt injection:</strong> users may try to override instructions; validate inputs</li>
+                                <li><strong>Output filtering:</strong> use additional checks for toxic content</li>
+                                <li><strong>Transparency:</strong> disclose when content is AIâ€‘generated</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-shield-alt"></i> Responsible AI Deployment</h3>
+                            <p>As AI becomes ubiquitous, ethical considerations are paramount. Biased models can perpetuate discrimination in hiring, lending, or law enforcement. Unsafe outputs can harm users. Prompt engineers are the first line of defenseâ€”they craft instructions that guide the model away from harmful territory and toward fairness.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-balance-scale"></i> Fairness</h4>
+                                    <p>Ask for diverse perspectives: "Give arguments from both sides" or "Consider how this might affect different demographics."</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-lock"></i> Security</h4>
+                                    <p>Never put sensitive data in prompts. Use anonymization and treat AI outputs as untrusted until validated.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-hand-sparkles"></i> Harmlessness</h4>
+                                    <p>Explicitly forbid harmful content in system prompts. Test with adversarial inputs to ensure guardrails hold.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-gavel"></i> Regulatory Compliance</h4>
+                                <p>Companies deploying AI in healthcare or finance must comply with regulations (HIPAA, GDPR, etc.). Prompt engineering ensures the AI doesn't request or expose personal data, and that its advice is appropriately cautious (e.g., "consult a professional").</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Design a safety system prompt:</strong> Write a system prompt for a customer service chatbot that handles complaints. Ensure it remains polite, never escalates arguments, and redirects to human support if needed.</p>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 10 -->
+            <div class="course-module" id="module10" data-aos="fade-up" data-difficulty="advanced">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>COMPLEX TASKS</h1>
+                    <h3>Orchestrating AI for realâ€‘world problems</h3>
+                    <span class="difficulty">Advanced</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/4712/4712104.png" class="module-icon" alt="AI Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 10: <span>Multiâ€‘step Workflows & Agents</span></h1>
+                    <p>Real applications often require combining multiple AI calls, external tools, and data sources. This is where you design workflows: e.g., an AI that researches a topic, then writes a report, then creates a summary. Or an agent that can use a calculator, search the web, and call APIs.</p>
+                    
+                    <p>Prompting at this level involves writing clear instructions for each step and passing context between them. You also need to handle errors and verify outputs.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Workflow</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-10" spellcheck="false">Step 1: Ask the AI to generate a list of 5 trending technologies in AI.
+Step 2: For each technology, ask for a oneâ€‘paragraph explanation and a realâ€‘world use case.
+Step 3: Combine the results into a markdown report with a title and introduction.
+(This is a simulated multiâ€‘turn prompt.)</textarea>
+                        <button class="run-btn" onclick="runCode('editor-10', 'output-10')">
+                            <i class="fas fa-play"></i> Run Workflow
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Simulated AI Response
+                        </div>
+                        <div class="preview-container" id="output-10"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li><strong>Orchestration:</strong> break big tasks into smaller prompts</li>
+                                <li><strong>State management:</strong> pass outputs from one step as input to the next</li>
+                                <li><strong>Tool use:</strong> enable AI to call APIs, calculators, or search (agents)</li>
+                                <li><strong>Validation:</strong> check intermediate results before proceeding</li>
+                                <li><strong>Humanâ€‘inâ€‘theâ€‘loop:</strong> critical steps may need human approval</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-cogs"></i> Building AI Applications</h3>
+                            <p>Complex tasks require a pipeline of prompts. For instance, a content creation system might: (1) brainstorm topics, (2) research each topic, (3) write an outline, (4) expand into full article, (5) generate images, (6) format and publish. Each step uses a specialized prompt and may involve different models.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-robot"></i> Agent Frameworks</h4>
+                                    <p>Tools like LangChain, AutoGPT, and Microsoft Semantic Kernel help orchestrate prompts and manage memory, tools, and external APIs.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-project-diagram"></i> Decision Trees</h4>
+                                    <p>For complex logic, you can have the AI decide the next step (e.g., "Should I search or calculate?") based on the user's request.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-clipboard-check"></i> Quality Control</h4>
+                                    <p>Use separate prompts to factâ€‘check, summarize, or verify the output of previous steps, reducing hallucinations.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-chart-network"></i> Enterprise Automation</h4>
+                                <p>Large companies automate business processes with AI workflows: an incoming support email is analyzed (tone, urgency), a draft reply is generated, then checked by a human, and finally sent. This reduces response time from hours to minutes.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Design a research workflow:</strong> Outline a series of prompts that would research a topic (e.g., "impact of remote work on productivity"), generate a balanced report, and create a summary for executives. Specify what each prompt asks and how data flows between steps.</p>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Practice Playground -->
+            <div class="course-module" id="playground" data-aos="fade-up">
+                <div class="course-three">
+                    <h1>PRACTICE PLAYGROUND</h1>
+                    <h3>Experiment with your own prompts</h3>
+                    <i class="fas fa-laptop-code course-icon" style="color: var(--primary);"></i>
+                </div>
+                <div class="course-one">
+                    <h1>Your Prompt Playground: <span>Write & Test Prompts</span></h1>
+                    <p>Use this space to experiment with everything you've learned. Try different personas, formats, and constraints. The output shows a simulated response (in a real system, you'd call an API). This is your sandbox to practice.</p>
+                    
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Prompt</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="playground-editor" spellcheck="false"># Your prompt here
+You are a creative writing coach. 
+Help me brainstorm three story ideas about a robot learning to paint. 
+For each idea, give a oneâ€‘sentence hook and a potential conflict.</textarea>
+                        <button class="run-btn" onclick="runCode('playground-editor', 'playground-output')">
+                            <i class="fas fa-play"></i> Run Prompt
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Simulated AI Response
+                        </div>
+                        <div class="preview-container" id="playground-output"></div>
+                    </div>
+                    
+                    <div class="course-five">
+                        <h3>Challenge Exercises:</h3>
+                        <ol>
+                            <li>Write a prompt that generates a weekly meal plan (breakfast, lunch, dinner) for a vegetarian.</li>
+                            <li>Create a persona prompt that acts as a motivational speaker and gives a short pep talk.</li>
+                            <li>Ask for a JSON list of 5 books with title, author, and year.</li>
+                            <li>Design a multiâ€‘step prompt that first lists tech trends, then picks one and writes a paragraph about it.</li>
+                        </ol>
+                        
+                        <h3>Tips & Resources:</h3>
+                        <ul>
+                            <li>Use the SkillMynte color variables to style your prompts (just for fun).</li>
+                            <li>Try combining techniques: persona + structured output + constraints.</li>
+                            <li>Remember: the more specific you are, the better the output.</li>
+                            <li>If the output isn't what you wanted, refine your prompt and try again.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Premium Subscription CTA -->
+            <div class="premium-subscription" id="premium-subscription" data-aos="fade-up">
+                <h2>Unlock Premium SkillMynte Content</h2>
+                <p>Upgrade to SkillMynte Pro for exclusive courses, advanced projects, and personalized learning paths</p>
+                
+                <div class="premium-features">
+                    <div class="premium-feature">
+                        <i class="fas fa-gem"></i>
+                        <h3>Premium Courses</h3>
+                        <p>Access our entire library of advanced courses and exclusive content</p>
+                    </div>
+                    <div class="premium-feature">
+                        <i class="fas fa-trophy"></i>
+                        <h3>Certification</h3>
+                        <p>Earn industry-recognized certificates to showcase your skills</p>
+                    </div>
+                    <div class="premium-feature">
+                        <i class="fas fa-user-graduate"></i>
+                        <h3>Mentorship</h3>
+                        <p>Get personalized guidance from industry experts</p>
+                    </div>
+                </div>
+                
+                <div class="pricing-options">
+                    <div class="pricing-option">
+                        <h3>Monthly</h3>
+                        <div class="price">₦3,500<span>/month</span></div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> All Premium Courses</li>
+                            <li><i class="fas fa-check"></i> Practice Projects</li>
+                            <li><i class="fas fa-check"></i> Community Access</li>
+                            <li><i class="fas fa-check"></i> Certificates</li>
+                            <li><i class="fas fa-check"></i> personal AI inbuilt</li>
+                        </ul>
+                        <a href="premium courses.html"><button class="pricing-btn">Get Started</button></a>
+                    </div>
+                    
+                    <div class="pricing-option" style="border-color: var(--white); transform: scale(1.05);">
+                        <h3>Annual <span style="background: var(--white); color: #2962FF; padding: 0.2rem 0.5rem; border-radius: 20px; font-size: 0.8rem; margin-left: 0.5rem;">Best Value</span></h3>
+                        <div class="price">₦37,000<span>/year</span></div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> All Premium Courses</li>
+                            <li><i class="fas fa-check"></i> Practice Projects</li>
+                            <li><i class="fas fa-check"></i> Community Access</li>
+                            <li><i class="fas fa-check"></i> Certificates</li>
+                            <li><i class="fas fa-check"></i> personal AI inbuilt</li>
+                        </ul>
+                        <a href="premium courses.html"><button class="pricing-btn">Get Started</button></a>
+                    </div>
+                    
+                    <div class="pricing-option">
+                        <h3>Lifetime</h3>
+                        <div class="price">₦200,000<span>/once</span></div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> All Premium Courses</li>
+                            <li><i class="fas fa-check"></i> Practice Projects</li>
+                            <li><i class="fas fa-check"></i> Community Access</li>
+                            <li><i class="fas fa-check"></i> Certificates</li>
+                            <li><i class="fas fa-check"></i> personal AI inbuilt</li>
+                        </ul>
+                        <a href="premium courses.html"><button class="pricing-btn">Get Started</button></a>
+                    </div>
+                </div>
+                
+                <button class="premium-cta-btn">
+                    <i class="fas fa-rocket"></i> Upgrade to SkillMynte Pro
+                </button>
+            </div>
+            
+            <!-- Footer -->
+            <footer>
+                <div class="footer-content">
+                    <div class="footer-column">
+                        <h3>About SkillMynte</h3>
+                        <p>SkillMynte is a premium learning platform dedicated to helping developers of all levels master web technologies through interactive courses and hands-on practice.</p>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/profile.php?id=61581069862024"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://x.com/SkillMynte_AI?t=CcoQtjWZGGOXqfTfrsufjQ&s=09"><i class="fab fa-twitter"></i></a>
+                            <a href="https://youtube.com/@skillmynte?si=LmX2MjSKU3N1Xa5S"><i class="fab fa-youtube"></i></a>
+                            <a href="https://www.instagram.com/skillmynte_ai?igsh=MTd1YWpjdXV1OHhrbA=="><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Quick Links</h3>
+                        <ul class="footer-links">
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Home</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Courses</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Practice</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Projects</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Popular Courses</h3>
+                        <ul class="footer-links">
+                            <li><a href="free CSS Course.html"><i class="fas fa-chevron-right"></i> HTML & CSS Fundamentals</a></li>
+                            <li><a href="free JS Course.html"><i class="fas fa-chevron-right"></i> JavaScript Mastery</a></li>
+                            <li><a href="premium courses.html"><i class="fas fa-chevron-right"></i> React.js Development</a></li>
+                            <li><a href="free node.js.html"><i class="fas fa-chevron-right"></i> Node.js Backend</a></li>
+                            <li><a href="free python course.html"><i class="fas fa-chevron-right"></i> Python for Beginners</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Contact Us</h3>
+                        <p><i class="fas fa-envelope"></i>Skillmynteofficial@gmail.com</p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 SkillMynte. All rights reserved. | Designed with <i class="fas fa-heart" style="color: var(--primary);"></i> for the developer community</p>
+                </div>
+            </footer>
+
+            <script>
+    // Function to run code in preview
+    function runCode(editorId, outputId) {
+        const editor = document.getElementById(editorId);
+        const output = document.getElementById(outputId);
+        
+        try {
+            output.innerHTML = editor.value;
+        } catch (error) {
+            output.innerHTML = `<div style="color: var(--accent); padding: 1rem;">Error: ${error.message}</div>`;
+        }
+    }
+    
+    // Initialize all editors with their default output
+    document.addEventListener('DOMContentLoaded', function() {
+        // Run all code editors on load
+        runCode('editor-1', 'output-1');
+        runCode('editor-2', 'output-2');
+        runCode('editor-3', 'output-3');
+        runCode('editor-4', 'output-4');
+        runCode('editor-5', 'output-5');
+        runCode('editor-6', 'output-6');
+        runCode('editor-7', 'output-7');
+        runCode('editor-8', 'output-8');
+        runCode('editor-9', 'output-9');
+        runCode('editor-10', 'output-10');
+        runCode('playground-editor', 'playground-output');
+        
+        // Add event listeners to all run buttons in editor headers
+        document.querySelectorAll('.run-editor').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const editorContainer = this.closest('.code-editor-container');
+                const editor = editorContainer.querySelector('.code-editor');
+                const output = editorContainer.querySelector('.preview-container');
+                runCode(editor.id, output.id);
+            });
+        });
+        
+        // Add reset functionality
+        document.querySelectorAll('.reset-editor').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const editorContainer = this.closest('.code-editor-container');
+                const editor = editorContainer.querySelector('.code-editor');
+                const originalContent = editor.dataset.original || editor.defaultValue;
+                editor.value = originalContent;
+                runCode(editor.id, editorContainer.querySelector('.preview-container').id);
+            });
+        });
+        
+        // Store original content for reset functionality
+        document.querySelectorAll('.code-editor').forEach(editor => {
+            editor.dataset.original = editor.value;
+        });
+
+        // Handle navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // FIXED: Hamburger menu functionality
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.querySelector('.nav-menu');
+        const sidebar = document.getElementById('sidebar');
+        const body = document.body;
+
+        function toggleMobileMenu() {
+            const isActive = navMenu.classList.contains('active');
+            
+            if (isActive) {
+                // Close menu
+                navMenu.classList.remove('active');
+                sidebar.classList.remove('active');
+                menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                body.classList.remove('menu-open');
+                menuToggle.setAttribute('aria-expanded', 'false');
+            } else {
+                // Open menu
+                navMenu.classList.add('active');
+                sidebar.classList.add('active');
+                menuToggle.innerHTML = '<i class="fas fa-times"></i>';
+                body.classList.add('menu-open');
+                menuToggle.setAttribute('aria-expanded', 'true');
+            }
+        }
+
+        function closeMobileMenu() {
+            navMenu.classList.remove('active');
+            sidebar.classList.remove('active');
+            menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            body.classList.remove('menu-open');
+            menuToggle.setAttribute('aria-expanded', 'false');
+        }
+
+        // Mobile menu toggle
+        menuToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            toggleMobileMenu();
+        });
+
+        // Close menu when clicking on nav links
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function() {
+                if (window.innerWidth <= 1024) {
+                    closeMobileMenu();
+                }
+            });
+        });
+
+        // Close menu when clicking on dropdown items
+        document.querySelectorAll('.dropdown-item').forEach(item => {
+            item.addEventListener('click', function() {
+                if (window.innerWidth <= 1024) {
+                    closeMobileMenu();
+                }
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (window.innerWidth <= 1024 && 
+                navMenu.classList.contains('active') &&
+                !e.target.closest('.nav-menu') && 
+                !e.target.closest('.menu-toggle') &&
+                !e.target.closest('.sidebar')) {
+                closeMobileMenu();
+            }
+        });
+
+        // Close menu on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+                closeMobileMenu();
+            }
+        });
+
+        // Close menu on resize if switching to desktop
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 1024 && navMenu.classList.contains('active')) {
+                closeMobileMenu();
+            }
+        });
+
+        // Mobile dropdown functionality
+        document.querySelectorAll('.courses-dropdown').forEach(dropdown => {
+            const button = dropdown.querySelector('.courses-btn');
+            
+            button.addEventListener('click', function(e) {
+                if (window.innerWidth <= 1024) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    dropdown.classList.toggle('active');
+                }
+            });
+        });
+
+        // Level filtering functionality
+        const levelButtons = document.querySelectorAll('.level-btn');
+        const modules = document.querySelectorAll('.course-module');
+        
+        levelButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const level = this.getAttribute('data-level');
+                
+                // Remove active class from all buttons
+                levelButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                this.classList.add('active');
+                
+                if (level === 'all') {
+                    // Show all modules
+                    modules.forEach(module => {
+                        module.style.display = 'flex';
+                    });
+                } else if (level === 'advanced') {
+                    // Show advanced modules (8â€‘10)
+                    modules.forEach(module => {
+                        const moduleId = module.id;
+                        if (moduleId.includes('module8') || moduleId.includes('module9') || moduleId.includes('module10')) {
+                            module.style.display = 'flex';
+                        } else {
+                            module.style.display = 'none';
+                        }
+                    });
+                } else {
+                    // Show modules with matching difficulty
+                    modules.forEach(module => {
+                        const difficulty = module.getAttribute('data-difficulty');
+                        if (difficulty === level) {
+                            module.style.display = 'flex';
+                        } else {
+                            module.style.display = 'none';
+                        }
+                    });
+                }
+                
+                // Scroll to first visible module
+                const firstVisible = document.querySelector('.course-module[style="display: flex;"]');
+                if (firstVisible) {
+                    firstVisible.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Search functionality
+        const searchInput = document.getElementById('search-input');
+        
+        searchInput.addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase().trim();
+            
+            if (searchTerm === '') {
+                // Show all modules if search is empty
+                modules.forEach(module => {
+                    module.style.display = 'flex';
+                });
+                return;
+            }
+            
+            modules.forEach(module => {
+                const moduleTitle = module.querySelector('h1').textContent.toLowerCase();
+                const moduleContent = module.textContent.toLowerCase();
+                
+                if (moduleTitle.includes(searchTerm) || moduleContent.includes(searchTerm)) {
+                    module.style.display = 'flex';
+                } else {
+                    module.style.display = 'none';
+                }
+            });
+        });
+    });
+    
+    // Smooth scrolling for sidebar links
+    document.querySelectorAll('.sidebar-item').forEach(item => {
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Remove active class from all items
+            document.querySelectorAll('.sidebar-item').forEach(i => {
+                i.classList.remove('active');
+            });
+            
+            // Add active class to clicked item
+            this.classList.add('active');
+            
+            // Close mobile menu if open
+            if (window.innerWidth <= 1024) {
+                document.querySelector('.nav-menu').classList.remove('active');
+                document.querySelector('.sidebar').classList.remove('active');
+                document.querySelector('.menu-toggle').innerHTML = '<i class="fas fa-bars"></i>';
+                document.body.classList.remove('menu-open');
+            }
+            
+            // Scroll to section
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 100,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+</script>
+        </div>
+    </div>
+</body>
+</html>

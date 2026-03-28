@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Courses | SkillMynte</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="rounded_logo.png">
+    <link rel="stylesheet" href="free courses.css">
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader-container">
+            <div class="loader-logo">SM</div>
+            <div class="loader-ring"></div>
+            <div class="loader-ring"></div>
+            <div class="loader-ring"></div>
+        </div>
+        <p style="color: var(--white); margin-top: 20px;">Loading Premium Courses...</p>
+    </div>
+
+    <!-- Advanced Navigation - UPDATED TO MATCH MAIN PAGE -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo">
+                <span class="logo-badge">SM</span> SKILLMYNTE
+            </a>
+            
+            <div class="nav-links">
+                <a href="#courses">Courses</a>
+                <a href="#premium-subscription">Premium</a>
+                <a href="#contact">Contact</a>
+                
+                <div class="nav-buttons">
+                    <a href="Login page.html" class="nav-button login" id="loginButton">
+                        <i class="fas fa-sign-in-alt"></i> Login
+                    </a>
+                    <a href="signup page.html" class="nav-button signup" id="signupButton">
+                        <i class="fas fa-user-plus"></i> Sign Up
+                    </a>
+                    <a href="support page.html" class="nav-button support">
+                        <i class="fas fa-heart"></i> Support
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Premium Search Bar -->
+            <div class="search-container">
+                <input type="text" class="search-input" id="searchInput" placeholder="Search courses...">
+                <button class="search-icon" id="searchIcon">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Search Button -->
+            <button class="mobile-search-btn" id="mobileSearchBtn">
+                <i class="fas fa-search"></i>
+            </button>
+            
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Search Overlay (updated with submit button) -->
+    <div class="mobile-search-overlay" id="mobileSearchOverlay">
+        <div class="mobile-search-container">
+            <input type="text" class="mobile-search-input" id="mobileSearchInput" placeholder="Search courses...">
+            <button class="mobile-search-btn-submit" id="mobileSearchSubmit">
+                <i class="fas fa-search"></i>
+            </button>
+            <button class="mobile-search-close" id="mobileSearchClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Premium Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-badge">Premium Learning Experience</span>
+                <h1 class="hero-title">Master In-Demand Tech Skills</h1>
+                <p class="hero-description">Browse our expertly crafted courses and start your learning journey today. Access premium content and elevate your skills with industry-leading education.</p>
+                <div class="hero-cta">
+                    <a href="#courses" class="btn btn-primary">Explore Courses</a>
+                    <a href="#premium-subscription" class="btn btn-outline">Premium Access</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Courses Section -->
+    <div class="container" id="courses">
+        <div class="courses-header">
+            <h2 class="section-title">Premium Course Catalog</h2>
+            <p class="section-subtitle">Start learning with our expertly designed courses and unlock premium content for advanced skills development</p>
+        </div>
+
+        <!-- Search Results Info -->
+        <div class="search-results-info" id="searchResultsInfo"></div>
+
+        <div class="courses-container" id="coursesContainer">
+            <!-- All your course cards remain here (same as before) -->
+            <!-- HTML -->
+            <div class="course-card" data-name="Web Foundations HTML5" data-category="HTML5 Web Development">
+                <div class="course-icon-container">
+                    <i class="fab fa-html5 course-icon html-icon"></i>
+                </div>
+                <div class="course-content">
+                    <div class="course-name">Web Foundations</div>
+                    <div class="course-category">HTML5</div>
+                    <a href="free HTML Course.html" class="course-link">
+                        Start Learning <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- CSS -->
+            <div class="course-card" data-name="Style Master CSS3" data-category="CSS3 Web Development">
+                <div class="course-icon-container">
+                    <i class="fab fa-css3-alt course-icon css-icon"></i>
+                </div>
+                <div class="course-content">
+                    <div class="course-name">Style Master</div>
+                    <div class="course-category">CSS3</div>
+                    <a href="free CSS Course.html" class="course-link">
+                        Start Learning <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- JavaScript -->
+            <div class="course-card" data-name="JS Wizardry JavaScript" data-category="JavaScript Web Development">
+                <div class="course-icon-container">
+                    <i class="fab fa-js-square course-icon js-icon"></i>
+                </div>
+                <div class="course-content">
+                    <div class="course-name">JS Wizardry</div>
+                    <div class="course-category">JavaScript</div>
+                    <a href="free JS Course.html" class="course-link">
+                        Start Learning <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- PHP -->
+            <div class="course-card" data-name="Backend Pro PHP" data-category="PHP Backend Development">
+                <div class="course-icon-container">
+                    <i class="fab fa-php course-icon php-icon"></i>
+                </div>
+                <div class="course-content">
+                    <div class="course-name">Backend Pro</div>
+                    <div class="course-category">PHP</div>
+                    <a href="free php course.html" class="course-link">
+                        Start Learning <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- C++ -->
+            <div class="course-card" data-name="System Craft C++" data-category="C++ Programming">
+                <div class="course-icon-container">
+                    <i class="fas fa-microchip course-icon cpp-icon"></i>
+                </div>
+                <div class="course-content">
+                    <div class="course-name">System Craft</div>
+                    <div class="course-category">C++</div>
+                    <a href="free c++ course.html" class="course-link">
+                        Start Learning <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Python -->
+            <div class="course-card" data-name="Python Pioneer Python" data-category="Python Programming">
+                <div class="course-icon-container">
+                    <i class="fab fa-python course-icon python-icon"></i>
+                </div>
+                <div class="course-content">
+                    <div class="course-name">Python Pioneer</div>
+                    <div class="course-category">Python</div>
+                    <a href="free python course.html" class="course-link">
+                        Start Learning <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Java -->
+            <div class="course-card" data-name="Java Architect Java" data-category="Java Programming">
+                <div class="course-icon-container">
+                    <i class="fab fa-java course-icon java-icon"></i>
+                </div>
+                <div class="course-content">
+                    <div class="course-name">Java Architect</div>
+                    <div class="course-category">Java</div>
+                    <a href="free JAVA course.html" class="course-link">
+                        Start Learning <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- TypeScript -->
+            <div class="course-card" data-name="TS Expert TypeScript" data-category="TypeScript Web Development">
+                <div class="course-icon-container">
+                    <i class="fas fa-code course-icon ts-icon"></i>
+                </div>
+                <div class="course-content">
+                    <div class="course-name">TS Expert</div>
+                    <div class="course-category">TypeScript</div>
+                    <a href="free TS course.html" class="course-link">
+                        Start Learning <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Csharp -->
+            <div class="course-card" data-name=".NET Master Csharp" data-category="Csharp Programming">
+                <div class="course-icon-container">
+                    <i class="fas fa-window-maximize course-icon csharp-icon"></i>
+                </div>
+                <div class="course-content">
+                    <div class="course-name">.NET Master</div>
+                    <div class="course-category">Csharp</div>
+                    <a href="free Csharp course .html" class="course-link">
+                        Start Learning <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Forex -->
+            <div class="course-card" data-name="Market Analyst Forex" data-category="Forex Trading">
+                <div class="course-icon-container">
+                    <i class="fas fa-chart-line course-icon forex-icon"></i>
+                </div>
+                <div class="course-content">
+                    <div class="course-name">Market Analyst</div>
+                    <div class="course-category">Forex</div>
+                    <a href="free forex  course.html" class="course-link">
+                        Start Learning <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Ruby -->
+            <div class="course-card" data-name="Ruby Developer Ruby" data-category="Ruby Programming">
+                <div class="course-icon-container">
+                    <i class="fas fa-gem course-icon ruby-icon"></i>
+                </div>
+                <div class="course-content">
+                    <div class="course-name">Ruby Developer</div>
+                    <div class="course-category">Ruby</div>
+                    <a href="free ruby course.html" class="course-link">
+                        Start Learning <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Kotlin -->
+            <div class="course-card" data-name="Mobile Master Kotlin" data-category="Kotlin Mobile Development">
+                <div class="course-icon-container">
+                    <i class="fas fa-mobile-alt course-icon kotlin-icon"></i>
+                </div>
+                <div class="course-content">
+                    <div class="course-name">Mobile Master</div>
+                    <div class="course-category">Kotlin</div>
+                    <a href="free kotlin course.html" class="course-link">
+                        Start Learning <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Bootstrap -->
+            <div class="course-card" data-name="UI Framework Bootstrap" data-category="Bootstrap CSS Framework">
+                <div class="course-icon-container">
+                    <i class="fab fa-bootstrap course-icon bootstrap-icon"></i>
+                </div>
+                <div class="course-content">
+                    <div class="course-name">UI Framework</div>
+                    <div class="course-category">Bootstrap</div>
+                    <a href="free bootstrap course.html" class="course-link">
+                        Start Learning <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- C -->
+            <div class="course-card" data-name="System Programming C Language" data-category="C Programming">
+                <div class="course-icon-container">
+                    <i class="fas fa-copyright course-icon c-icon"></i>
+                </div>
+                <div class="course-content">
+                    <div class="course-name">System Programming</div>
+                    <div class="course-category">C Language</div>
+                    <a href="free C course.html" class="course-link">
+                        Start Learning <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Node.js -->
+            <div class="course-card" data-name="Server Side JS Node.js" data-category="Node.js Backend Development">
+                <div class="course-icon-container">
+                    <i class="fab fa-node-js course-icon node-icon"></i>
+                </div>
+                <div class="course-content">
+                    <div class="course-name">Server Side JS</div>
+                    <div class="course-category">Node.js</div>
+                    <a href="free node.js.html" class="course-link">
+                        Start Learning <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Django -->
+            <div class="course-card" data-name="Python Backend Django" data-category="Django Python Framework">
+                <div class="course-icon-container">
+                    <i class="fas fa-server course-icon django-icon"></i>
+                </div>
+                <div class="course-content">
+                    <div class="course-name">Python Backend</div>
+                    <div class="course-category">Django</div>
+                    <a href="free django course.html" class="course-link">
+                        Start Learning <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Data Science -->
+            <div class="course-card" data-name="Data Analysis Data Science" data-category="Data Science Analytics">
+                <div class="course-icon-container">
+                    <i class="fas fa-chart-bar course-icon datascience-icon"></i>
+                </div>
+                <div class="course-content">
+                    <div class="course-name">Data Analysis</div>
+                    <div class="course-category">Data Science</div>
+                    <a href="free data scince course.html" class="course-link">
+                        Start Learning <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Statistics -->
+            <div class="course-card" data-name="Math for Data Statistics" data-category="Statistics Mathematics">
+                <div class="course-icon-container">
+                    <i class="fas fa-calculator course-icon stats-icon"></i>
+                </div>
+                <div class="course-content">
+                    <div class="course-name">Math for Data</div>
+                    <div class="course-category">Statistics</div>
+                    <a href="free math for data.html" class="course-link">
+                        Start Learning <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Excel -->
+            <div class="course-card" data-name="Spreadsheet Pro Excel" data-category="Excel Spreadsheets">
+                <div class="course-icon-container">
+                    <i class="fas fa-file-excel course-icon excel-icon"></i>
+                </div>
+                <div class="course-content">
+                    <div class="course-name">Spreadsheet Pro</div>
+                    <div class="course-category">Excel</div>
+                    <a href="free excel course.html" class="course-link">
+                        Start Learning <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Intro to Programming -->
+            <div class="course-card" data-name="Coding Basics Beginner" data-category="Programming Beginner">
+                <div class="course-icon-container">
+                    <i class="fas fa-laptop-code course-icon intro-icon"></i>
+                </div>
+                <div class="course-content">
+                    <div class="course-name">Coding Basics</div>
+                    <div class="course-category">Beginner</div>
+                    <a href="free coding basic.html" class="course-link">
+                        Start Learning <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- AI promting programming -->
+            <div class="course-card" data-name="AI Prompting AI" data-category="AI Programming">
+                <div class="course-icon-container">
+                    <i class="fas fa-robot course-icon ai-icon"></i>
+                </div>
+                <div class="course-content">
+                    <div class="course-name">AI Prompting</div>
+                    <div class="course-category">AI</div>
+                    <a href="Free AI prompting.html" class="course-link">
+                        Start Learning <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- React Course -->
+            <div class="course-card" data-name="React Mastery React" data-category="React Frontend Development">
+                <div class="course-icon-container">
+                    <i class="fab fa-react course-icon react-icon"></i>
+                </div>
+                <div class="course-content">
+                    <div class="course-name">React Mastery</div>
+                    <div class="course-category">React</div>
+                    <a href="free react course.html" class="course-link">
+                        Start Learning <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Angular Course -->
+            <div class="course-card" data-name="Angular Framework Angular" data-category="Angular Frontend Development">
+                <div class="course-icon-container">
+                    <i class="fab fa-angular course-icon angular-icon"></i>
+                </div>
+                <div class="course-content">
+                    <div class="course-name">Angular Framework</div>
+                    <div class="course-category">Angular</div>
+                    <a href="free angular course.html" class="course-link">
+                        Start Learning <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- WordPress Course -->
+            <div class="course-card" data-name="CMS Expert WordPress" data-category="WordPress CMS Development">
+                <div class="course-icon-container">
+                    <i class="fab fa-wordpress course-icon wordpress-icon"></i>
+                </div>
+                <div class="course-content">
+                    <div class="course-name">CMS Expert</div>
+                    <div class="course-category">WordPress</div>
+                    <a href="free word press.html" class="course-link">
+                        Start Learning <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Laravel Course -->
+            <div class="course-card" data-name="PHP Framework Laravel" data-category="Laravel PHP Framework">
+                <div class="course-icon-container">
+                    <i class="fab fa-laravel course-icon laravel-icon"></i>
+                </div>
+                <div class="course-content">
+                    <div class="course-name">PHP Framework</div>
+                    <div class="course-category">Laravel</div>
+                    <a href="free laravel course.html" class="course-link">
+                        Start Learning <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- MySQL Course -->
+            <div class="course-card" data-name="Database Design MySQL" data-category="MySQL Database Management">
+                <div class="course-icon-container">
+                    <i class="fas fa-database course-icon mysql-icon"></i>
+                </div>
+                <div class="course-content">
+                    <div class="course-name">Database Design</div>
+                    <div class="course-category">MySQL</div>
+                    <a href="free mysql.html" class="course-link">
+                        Start Learning <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Rust Course -->
+            <div class="course-card" data-name="Systems Programming Rust" data-category="Rust Systems Programming">
+                <div class="course-icon-container">
+                    <i class="fas fa-cog course-icon rust-icon"></i>
+                </div>
+                <div class="course-content">
+                    <div class="course-name">Systems Programming</div>
+                    <div class="course-category">Rust</div>
+                    <a href="free rust.html" class="course-link">
+                        Start Learning <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Premium Subscription CTA -->
+        <div class="premium-subscription" id="premium-subscription">
+            <h2>Unlock Premium SkillMynte AI Content</h2>
+            <p>Upgrade to SkillMynte Pro for exclusive AI courses, advanced prompting techniques, and personalized learning paths</p>
+            
+            <div class="premium-features">
+                <div class="premium-feature">
+                    <i class="fas fa-gem"></i>
+                    <h3>Advanced AI Courses</h3>
+                    <p>Access our entire library of advanced AI and prompt engineering content</p>
+                </div>
+                <div class="premium-feature">
+                    <i class="fas fa-trophy"></i>
+                    <h3>AI Certification</h3>
+                    <p>Earn industry-recognized certificates in AI prompting and engineering</p>
+                </div>
+                <div class="premium-feature">
+                    <i class="fas fa-user-graduate"></i>
+                    <h3>Expert Mentorship</h3>
+                    <p>Get personalized guidance from AI industry experts</p>
+                </div>
+            </div>
+            
+            <div class="pricing-options">
+                <div class="pricing-option">
+                    <h3>Monthly</h3>
+                    <div class="price">₦3,500<span>/month</span></div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> All Premium AI Courses</li>
+                        <li><i class="fas fa-check"></i> Advanced Prompting Techniques</li>
+                        <li><i class="fas fa-check"></i> AI Community Access</li>
+                        <li><i class="fas fa-check"></i> AI Certificates</li>
+                        <li><i class="fas fa-check"></i> Personal AI Assistant</li>
+                    </ul>
+                    <a href="premium courses.html"><button class="pricing-btn">Get Started</button></a>
+                </div>
+                
+                <div class="pricing-option featured">
+                    <h3>Annual <span style="background: var(--primary); color: var(--white); padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.8rem; margin-left: 0.5rem;">Best Value</span></h3>
+                    <div class="price">₦37,000<span>/year</span></div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> All Premium AI Courses</li>
+                        <li><i class="fas fa-check"></i> Advanced Prompting Techniques</li>
+                        <li><i class="fas fa-check"></i> AI Community Access</li>
+                        <li><i class="fas fa-check"></i> AI Certificates</li>
+                        <li><i class="fas fa-check"></i> Personal AI Assistant</li>
+                    </ul>
+                    <a href="premium courses.html"><button class="pricing-btn">Get Started</button></a>
+                </div>
+                
+                <div class="pricing-option">
+                    <h3>Lifetime</h3>
+                    <div class="price">₦200,000<span>/once</span></div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> All Premium AI Courses</li>
+                        <li><i class="fas fa-check"></i> Advanced Prompting Techniques</li>
+                        <li><i class="fas fa-check"></i> AI Community Access</li>
+                        <li><i class="fas fa-check"></i> AI Certificates</li>
+                        <li><i class="fas fa-check"></i> Personal AI Assistant</li>
+                    </ul>
+                    <a href="premium courses.html"><button class="pricing-btn">Get Started</button></a>
+                </div>
+            </div>
+            
+            <button class="premium-cta-btn">
+                <i class="fas fa-rocket"></i> Upgrade to SkillMynte AI Pro
+            </button>
+        </div>
+    </div>
+
+     <!-- Enhanced Footer with Many Links -->
+    <footer class="footer" id="contact">
+        <div class="footer-container">
+            <div class="footer-about">
+                <a href="#" class="footer-logo">
+                    <span class="logo-badge">SM</span> SKILLMYNTE
+                </a>
+                <p>Empowering the next generation of tech professionals with cutting-edge skills, AI-powered tools, and industry-relevant education.</p>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/profile.php?id=61581069862024"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://x.com/SkillMynte_AI?t=CcoQtjWZGGOXqfTfrsufjQ&s=09"><i class="fab fa-twitter"></i></a>
+                    <a href="https://youtube.com/@skillmynte?si=LmX2MjSKU3N1Xa5S"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/skillmynte_ai?igsh=MTd1YWpjdXV1OHhrbA=="><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h3>Web Development</h3>
+                <ul>
+                    <li><a href="free HTML Course.html"><i class="fab fa-html5"></i> HTML5</a></li>
+                    <li><a href="free CSS Course.html"><i class="fab fa-css3-alt"></i> CSS3</a></li>
+                    <li><a href="free JS Course.html"><i class="fab fa-js"></i> JavaScript</a></li>
+                    <li><a href="free angular course.html"><i class="fab fa-angular"></i> Angular</a></li>
+                    <li><a href="free node.js.html"><i class="fab fa-node-js"></i> Node.js</a></li>
+                    <li><a href="free django course.html"><i class="fab fa-python"></i> Django</a></li>
+                    <li><a href="free php course.html"><i class="fab fa-php"></i> PHP</a></li>
+                    <li><a href="free mysql.html"><i class="fas fa-database"></i> MySQL</a></li>
+                    <li><a href="free bootstrap course.html"><i class="fab fa-bootstrap"></i> Bootstrap</a></li>
+                    <li><a href="free word press.html"><i class="fab fa-wordpress"></i> WordPress</a></li>
+                    <li><a href="free TS course.html"><i class="fab fa-node-js"></i> Type Script</a></li>
+                    <li><a href="free laravel course.html"><i class="fab fa-laravel"></i> Laravel</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Programming</h3>
+                <ul>
+                    <li><a href="free python course.html"><i class="fab fa-python"></i> Python</a></li>
+                    <li><a href="free JAVA course.html"><i class="fab fa-java"></i> Java</a></li>
+                    <li><a href="free c++ course.html"><i class="fab fa-cuttlefish"></i> C++</a></li>
+                    <li><a href="free Csharp course .html"><i class="fab fa-cuttlefish"></i> C#</a></li>
+                    <li><a href="free rust.html"><i class="fab fa-rust"></i> Rust</a></li>
+                    <li><a href="free kotlin course.html"><i class="fab fa-kotlin"></i> Kotlin</a></li>
+                    <li><a href="free coding basic.html"><i class="fab fa-r-project"></i>Coding Basics</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Data & AI</h3>
+                <ul>
+                    <li><a href="Free AI prompting.html"><i class="fas fa-robot"></i> Artificial Intelligence</a></li>
+                    <li><a href="free math for data.html"><i class="fas fa-chart-line"></i> Statistics</a></li>
+                    <li><a href="free data scince course.html"><i class="fas fa-database"></i> Data Science</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h3>Stay Updated</h3>
+                <p>Subscribe to our newsletter for the latest course updates, tech insights, and exclusive offers.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" class="newsletter-input" required>
+                    <button type="submit" class="newsletter-button">Subscribe</button>
+                </form>
+                <div class="footer-links">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="FAQ page.html"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                        <li><a href="help center.html"><i class="fas fa-headset"></i> Help Center</a></li>
+                        <li><a href="Terms of Service.html"><i class="fas fa-file-contract"></i> Terms of Service</a></li>
+                        <li><a href="Privacy policy .html"><i class="fas fa-lock"></i> Privacy Policy</a></li>
+                        <li><a href="Cookies skillmynte.html"><i class="fas fa-cookie"></i> Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 SkillMynte. All Rights Reserved. Crafted with <i class="fas fa-heart" style="color: var(--accent);"></i> for the future of education</p>
+            <div class="footer-bottom-links">
+                <a href="Terms of Service.html">Terms</a>
+                <a href="Privacy policy .html">Privacy</a>
+                <a href="Cookies skillmynte.html">Cookies</a>
+                <a href="help center.html">Support</a>
+                <a href="free courses.html">Free Courses</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Floating AI Chat Button -->
+    <button class="ai-chat-button" id="aiChatButton" title="Chat with AI">
+        <a href="Skillmynte AI .html"><i class="fas fa-robot"></i></a>
+    </button>
+
+    <script>
+        // Preloader
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.getElementById('preloader').classList.add('fade-out');
+            }, 500);
+        });
+
+        // Sticky navbar on scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            const backToTop = document.querySelector('.back-to-top');
+            
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+            
+            if (window.scrollY > 500) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenuBtn.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', function() {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+
+        // Mobile search functionality
+        const mobileSearchBtn = document.getElementById('mobileSearchBtn');
+        const mobileSearchOverlay = document.getElementById('mobileSearchOverlay');
+        const mobileSearchClose = document.getElementById('mobileSearchClose');
+        const mobileSearchInput = document.getElementById('mobileSearchInput');
+        const mobileSearchSubmit = document.getElementById('mobileSearchSubmit');
+        
+        mobileSearchBtn.addEventListener('click', () => {
+            mobileSearchOverlay.classList.add('active');
+            mobileSearchInput.focus();
+        });
+        
+        mobileSearchClose.addEventListener('click', () => {
+            mobileSearchOverlay.classList.remove('active');
+            mobileSearchInput.value = '';
+            filterCourses('');
+        });
+        
+        // Submit button for mobile search
+        if (mobileSearchSubmit) {
+            mobileSearchSubmit.addEventListener('click', () => {
+                filterCourses(mobileSearchInput.value);
+                mobileSearchOverlay.classList.remove('active'); // close after search
+            });
+        }
+        
+        // Close mobile search when clicking outside
+        mobileSearchOverlay.addEventListener('click', (e) => {
+            if (e.target === mobileSearchOverlay) {
+                mobileSearchOverlay.classList.remove('active');
+                mobileSearchInput.value = '';
+                filterCourses('');
+            }
+        });
+        
+        // Close mobile search with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && mobileSearchOverlay.classList.contains('active')) {
+                mobileSearchOverlay.classList.remove('active');
+                mobileSearchInput.value = '';
+                filterCourses('');
+            }
+        });
+
+        // Back to top functionality
+        const backToTopButton = document.getElementById('backToTop');
+        backToTopButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Search functionality
+        const searchInput = document.getElementById('searchInput');
+        const searchIcon = document.getElementById('searchIcon');
+        const coursesContainer = document.getElementById('coursesContainer');
+        const courseCards = document.querySelectorAll('.course-card');
+        const searchResultsInfo = document.getElementById('searchResultsInfo');
+        
+        // Function to filter courses
+        function filterCourses(searchTerm) {
+            let resultsCount = 0;
+            searchTerm = searchTerm.toLowerCase().trim();
+            
+            courseCards.forEach(card => {
+                const courseName = card.getAttribute('data-name').toLowerCase();
+                const courseCategory = card.getAttribute('data-category').toLowerCase();
+                
+                if (courseName.includes(searchTerm) || courseCategory.includes(searchTerm)) {
+                    card.style.display = 'flex';
+                    resultsCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            
+            // Update search results info
+            if (searchTerm.length > 0) {
+                searchResultsInfo.textContent = resultsCount === 0 
+                    ? `No courses found for "${searchTerm}"` 
+                    : `Found ${resultsCount} course${resultsCount !== 1 ? 's' : ''} for "${searchTerm}"`;
+            } else {
+                searchResultsInfo.textContent = '';
+            }
+        }
+        
+        // Desktop search
+        searchInput.addEventListener('input', (e) => {
+            filterCourses(e.target.value);
+        });
+        
+        // Search icon click functionality
+        searchIcon.addEventListener('click', () => {
+            filterCourses(searchInput.value);
+        });
+        
+        // Trigger search on Enter key in desktop search
+        searchInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                filterCourses(searchInput.value);
+            }
+        });
+        
+        // Mobile search input (live filtering)
+        mobileSearchInput.addEventListener('input', (e) => {
+            filterCourses(e.target.value);
+        });
+        
+        // Also allow Enter key in mobile search
+        mobileSearchInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                filterCourses(mobileSearchInput.value);
+                mobileSearchOverlay.classList.remove('active'); // optional close after search
+            }
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    navLinks.classList.remove('active');
+                    mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                }
+            });
+        });
+        
+        // Close mobile menu when window is resized to desktop size
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 992) {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            }
+        });
+    </script>
+</body>
+</html>

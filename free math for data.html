@@ -1,0 +1,2344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistics Fundamentals | SkillMynte</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="rounded_logo.png">
+    <link rel="stylesheet" href="free math for data.css">
+
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-chart-line"></i>
+                SKILLMYNTE
+            </a>
+            <div class="nav-menu">
+                <a href="#" class="nav-link">Home</a>
+                <a href="#" class="nav-link">Courses</a>
+                <a href="#" class="nav-link">Practice</a>
+                <a href="#" class="nav-link">Projects</a>
+                
+                <div class="courses-dropdown">
+                    <button class="courses-btn">
+                        <i class="fas fa-book-open"></i> Jump to Module
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#module1" class="dropdown-item">
+                            <i class="fas fa-chart-bar stats-icon"></i> Statistics Basics
+                        </a>
+                        <a href="#module2" class="dropdown-item">
+                            <i class="fas fa-chart-bar stats-icon"></i> Descriptive Statistics
+                        </a>
+                        <a href="#module3" class="dropdown-item">
+                            <i class="fas fa-chart-bar stats-icon"></i> Probability Theory
+                        </a>
+                        <a href="#module4" class="dropdown-item">
+                            <i class="fas fa-chart-bar stats-icon"></i> Random Variables
+                        </a>
+                        <a href="#module5" class="dropdown-item">
+                            <i class="fas fa-chart-bar stats-icon"></i> Distributions
+                        </a>
+                        <a href="#module6" class="dropdown-item">
+                            <i class="fas fa-chart-bar stats-icon"></i> Hypothesis Testing
+                        </a>
+                        <a href="#module7" class="dropdown-item">
+                            <i class="fas fa-chart-bar stats-icon"></i> Regression Analysis
+                        </a>
+                        <a href="#module8" class="dropdown-item">
+                            <i class="fas fa-chart-bar stats-icon"></i> Bayesian Statistics
+                        </a>
+                        <a href="#module9" class="dropdown-item">
+                            <i class="fas fa-chart-bar stats-icon"></i> Time Series
+                        </a>
+                        <a href="#module10" class="dropdown-item">
+                            <i class="fas fa-chart-bar stats-icon"></i> Advanced Analytics
+                        </a>
+                        <a href="#playground" class="dropdown-item">
+                            <i class="fas fa-laptop-code"></i> Practice Playground
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Premium Course Navigation -->
+    <div class="course-navigation">
+        <div class="course-nav-container">
+            <div class="course-category">
+                <button class="category-btn">
+                    <i class="fas fa-layer-group"></i> Categories
+                </button>
+                <div class="category-dropdown">
+                    <a href="#" class="category-item">
+                        <i class="fas fa-chart-bar stats-icon"></i> Statistics
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fas fa-database data-icon"></i> Data Science
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fas fa-chart-line prob-icon"></i> Probability
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fas fa-calculator calc-icon"></i> Mathematics
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fas fa-chart-pie regression-icon"></i> Regression
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fas fa-brain ml-icon"></i> Machine Learning
+                    </a>
+                </div>
+            </div>
+            
+            <div class="course-levels">
+                <button class="level-btn active" data-level="all">All Levels</button>
+                <button class="level-btn" data-level="beginner">Beginner</button>
+                <button class="level-btn" data-level="intermediate">Intermediate</button>
+                <button class="level-btn" data-level="advanced">Advanced</button>
+            </div>
+            
+            <div class="course-search">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" class="search-input" id="search-input" placeholder="Search courses...">
+            </div>
+        </div>
+    </div>
+    
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <a href="#module1" class="sidebar-item active completed">
+            <i class="fas fa-chart-bar stats-icon"></i>
+            <span>Module 1: Statistics Basics</span>
+            <span class="progress-indicator"><i class="fas fa-check"></i></span>
+        </a>
+        <a href="#module2" class="sidebar-item completed">
+            <i class="fas fa-chart-bar stats-icon"></i>
+            <span>Module 2: Descriptive Statistics</span>
+            <span class="progress-indicator"><i class="fas fa-check"></i></span>
+        </a>
+        <a href="#module3" class="sidebar-item completed">
+            <i class="fas fa-chart-bar stats-icon"></i>
+            <span>Module 3: Probability Theory</span>
+            <span class="progress-indicator"><i class="fas fa-check"></i></span>
+        </a>
+        <a href="#module4" class="sidebar-item">
+            <i class="fas fa-chart-bar stats-icon"></i>
+            <span>Module 4: Random Variables</span>
+            <span class="progress-indicator">4</span>
+        </a>
+        <a href="#module5" class="sidebar-item">
+            <i class="fas fa-chart-bar stats-icon"></i>
+            <span>Module 5: Distributions</span>
+            <span class="progress-indicator">5</span>
+        </a>
+        <a href="#module6" class="sidebar-item">
+            <i class="fas fa-chart-bar stats-icon"></i>
+            <span>Module 6: Hypothesis Testing</span>
+            <span class="progress-indicator">6</span>
+        </a>
+        <a href="#module7" class="sidebar-item">
+            <i class="fas fa-chart-bar stats-icon"></i>
+            <span>Module 7: Regression Analysis</span>
+            <span class="progress-indicator">7</span>
+        </a>
+        <a href="#module8" class="sidebar-item">
+            <i class="fas fa-chart-bar stats-icon"></i>
+            <span>Module 8: Bayesian Statistics</span>
+            <span class="progress-indicator">8</span>
+        </a>
+        <a href="#module9" class="sidebar-item">
+            <i class="fas fa-chart-bar stats-icon"></i>
+            <span>Module 9: Time Series Analysis</span>
+            <span class="progress-indicator">9</span>
+        </a>
+        <a href="#module10" class="sidebar-item">
+            <i class="fas fa-chart-bar stats-icon"></i>
+            <span>Module 10: Advanced Analytics</span>
+            <span class="progress-indicator">10</span>
+        </a>
+        <a href="#playground" class="sidebar-item">
+            <i class="fas fa-laptop-code"></i>
+            <span>Practice Playground</span>
+        </a>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="content-wrapper">
+        <div class="container">
+            <!-- Module 1 -->
+            <div class="course-module" id="module1" data-aos="fade-up" data-difficulty="beginner">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>STATISTICS BASICS</h1>
+                    <h3>Learn the fundamental concepts of statistics</h3>
+                    <span class="difficulty">Beginner</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/2103/2103655.png" class="module-icon" alt="Statistics Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 1: <span>Introduction to Statistics</span></h1>
+                    <p>Statistics is the science of collecting, analyzing, interpreting, presenting, and organizing data. Think of statistics as the language of data that helps us make sense of the world around us. It uses mathematical techniques to transform raw data into meaningful insights.</p>
+                    
+                    <p>Every statistical analysis follows a systematic process. <code>Data Collection</code> gathers information, <code>Descriptive Statistics</code> summarizes data, while <code>Inferential Statistics</code> draws conclusions about populations based on samples. The <code>population</code> represents all items of interest, and a <code>sample</code> is a subset of the population.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Statistics Example</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-1" spellcheck="false"># Population vs Sample Example
+
+Population: All students in a university (10,000 students)
+Sample: Random selection of 200 students from the university
+
+# Data Collection Methods
+1. Surveys/Questionnaires
+2. Observations
+3. Experiments
+4. Existing Data (secondary sources)
+
+# Types of Data
+1. Quantitative (Numerical)
+   - Discrete: Number of children in a family (0, 1, 2, 3...)
+   - Continuous: Height, Weight, Temperature
+
+2. Qualitative (Categorical)
+   - Nominal: Gender, Color, Country
+   - Ordinal: Education level, Satisfaction rating
+
+# Measurement Scales
+1. Nominal: Categories without order (e.g., blood type)
+2. Ordinal: Categories with order (e.g., pain scale)
+3. Interval: Equal intervals, no true zero (e.g., temperature °C)
+4. Ratio: Equal intervals with true zero (e.g., height, weight)
+
+# Statistical Process
+1. Define the research question
+2. Collect data
+3. Organize and summarize data
+4. Analyze data
+5. Interpret results
+6. Make decisions/predictions</textarea>
+                        <button class="run-btn" onclick="runCode('editor-1', 'output-1')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Statistics Concepts
+                        </div>
+                        <div class="preview-container" id="output-1"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li><code>Population</code> is the entire group you want to study</li>
+                                <li><code>Sample</code> is a subset of the population used for analysis</li>
+                                <li><code>Descriptive Statistics</code> summarize and describe data</li>
+                                <li><code>Inferential Statistics</code> make predictions about populations</li>
+                                <li><code>Variables</code> are characteristics that can be measured</li>
+                                <li><code>Data Types</code> determine appropriate analysis methods</li>
+                                <li><code>Measurement Scales</code> affect statistical techniques used</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-graduation-cap"></i> Statistics Foundation Explained</h3>
+                            <p>Statistics is the fundamental technology that powers data-driven decision making in every field from medicine to business. Think of it as the mathematical framework for understanding uncertainty and variation in data. Without statistics, we wouldn't be able to distinguish meaningful patterns from random noise.</p>
+                            
+                            <p>The distinction between <code>descriptive</code> and <code>inferential</code> statistics is crucial. Descriptive statistics organize and summarize data through measures like mean, median, and standard deviation. Inferential statistics use probability theory to make predictions and test hypotheses about populations based on sample data. This statistical inference is what allows researchers to draw conclusions that extend beyond their immediate observations.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-sitemap"></i> Statistical Thinking</h4>
+                                    <p>Statistical thinking involves understanding variation, recognizing patterns, and making data-informed decisions. It's a mindset that questions assumptions and seeks evidence through systematic analysis.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-code"></i> Data Quality</h4>
+                                    <p>The quality of statistical conclusions depends entirely on data quality. Proper sampling methods, measurement accuracy, and data cleaning are essential for valid statistical analysis.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-globe"></i> Real-World Applications</h4>
+                                    <p>Statistics is used in clinical trials, quality control, market research, sports analytics, and policy making. Every data-driven decision in modern organizations relies on statistical principles.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-building"></i> Real-World Application</h4>
+                                <p>Every professional field - from pharmaceutical research to financial forecasting - relies on statistical principles. Pharmaceutical companies use statistics to test drug efficacy and safety. Financial analysts use statistics to predict market trends and manage risk. Sports teams use statistics to optimize player performance and strategy. Government agencies use statistics for census data, economic indicators, and public policy decisions. Mastering statistical thinking is the first step toward making evidence-based decisions in any field.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Design Your First Statistical Study:</strong> Create a plan for a simple statistical study about student study habits. Include:</p>
+                            <ul>
+                                <li>A clear research question</li>
+                                <li>Definition of population and sampling method</li>
+                                <li>Data collection plan with appropriate variables</li>
+                                <li>Identification of variable types (quantitative/qualitative)</li>
+                                <li>Measurement scales for each variable</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 2 -->
+            <div class="course-module" id="module2" data-aos="fade-up" data-difficulty="beginner">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>DESCRIPTIVE STATISTICS</h1>
+                    <h3>Learn to summarize and describe data</h3>
+                    <span class="difficulty">Beginner</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/2103/2103655.png" class="module-icon" alt="Statistics Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 2: <span>Measures of Center and Spread</span></h1>
+                    <p>Descriptive statistics provide simple summaries about the sample and the measures. Measures of central tendency (<code>mean</code>, <code>median</code>, <code>mode</code>) describe the center of the data, while measures of dispersion (<code>range</code>, <code>variance</code>, <code>standard deviation</code>) describe how spread out the data is.</p>
+                    
+                    <p>Think of central tendency as your data's typical value: <code>mean</code> is the arithmetic average, <code>median</code> is the middle value, and <code>mode</code> is the most frequent value. Spread measures tell you about variability: <code>range</code> shows total spread, while <code>standard deviation</code> tells you how far data points typically deviate from the mean.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Statistics Example</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-2" spellcheck="false"># Sample Data: Test scores of 10 students
+scores = [85, 92, 78, 90, 85, 88, 95, 83, 87, 91]
+
+# Measures of Central Tendency
+Mean = (85 + 92 + 78 + 90 + 85 + 88 + 95 + 83 + 87 + 91) / 10
+     = 874 / 10 = 87.4
+
+# To find Median:
+# 1. Sort data: [78, 83, 85, 85, 87, 88, 90, 91, 92, 95]
+# 2. Middle position = (10 + 1) / 2 = 5.5
+# 3. Average of 5th and 6th values: (87 + 88) / 2 = 87.5
+Median = 87.5
+
+# Mode (most frequent value)
+Mode = 85 (appears twice)
+
+# Measures of Dispersion
+Range = Maximum - Minimum = 95 - 78 = 17
+
+# Variance Calculation
+# Step 1: Find deviations from mean
+deviations = [85-87.4, 92-87.4, 78-87.4, 90-87.4, 85-87.4,
+              88-87.4, 95-87.4, 83-87.4, 87-87.4, 91-87.4]
+            = [-2.4, 4.6, -9.4, 2.6, -2.4, 0.6, 7.6, -4.4, -0.4, 3.6]
+
+# Step 2: Square deviations
+squared_deviations = [5.76, 21.16, 88.36, 6.76, 5.76,
+                      0.36, 57.76, 19.36, 0.16, 12.96]
+
+# Step 3: Sum of squared deviations = 218.4
+# Step 4: Divide by n-1 (sample variance)
+Variance = 218.4 / 9 = 24.27
+
+# Standard Deviation = sqrt(Variance)
+Standard Deviation = √24.27 ≈ 4.93
+
+# Interpretation
+# Mean test score: 87.4
+# Median test score: 87.5
+# Most common score: 85
+# Scores range from 78 to 95
+# Typical deviation from mean: ±4.93 points</textarea>
+                        <button class="run-btn" onclick="runCode('editor-2', 'output-2')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Descriptive Statistics
+                        </div>
+                        <div class="preview-container" id="output-2"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li><code>Mean</code> is sensitive to extreme values (outliers)</li>
+                                <li><code>Median</code> is robust to outliers and skewed data</li>
+                                <li><code>Mode</code> is most useful for categorical data</li>
+                                <li><code>Range</code> gives the total spread but ignores distribution</li>
+                                <li><code>Variance</code> measures average squared deviation from mean</li>
+                                <li><code>Standard Deviation</code> is in original units and more interpretable</li>
+                                <li>Use <code>mean ± standard deviation</code> to describe normally distributed data</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-align-left"></i> Data Summary & Distribution</h3>
+                            <p>Descriptive statistics transform raw data into meaningful summaries that reveal patterns and characteristics. Measures of central tendency provide reference points that represent "typical" values, while measures of dispersion quantify the variability around these central values. Together, they create a comprehensive picture of data distribution that informs decision-making and guides further analysis.</p>
+                            
+                            <p>The choice between mean and median depends on data distribution. For symmetric distributions without outliers, the mean provides the most efficient estimate of central tendency. For skewed distributions or data with outliers, the median offers a more robust measure. The standard deviation provides crucial context for interpreting the mean - a mean of 87.4 with a standard deviation of 4.93 suggests most scores fall between 82.5 and 92.3, while the same mean with a standard deviation of 15 would indicate much greater variability.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-search"></i> Data Exploration</h4>
+                                    <p>Descriptive statistics form the foundation of exploratory data analysis. Before conducting complex statistical tests, researchers use descriptive statistics to understand data patterns, identify outliers, and check assumptions.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-universal-access"></i> Communication Tool</h4>
+                                    <p>Well-chosen descriptive statistics communicate complex data patterns to non-technical audiences. The mean and standard deviation provide a compact summary that's easily understood across disciplines.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-chart-bar"></i> Distribution Analysis</h4>
+                                    <p>Descriptive statistics work with visualizations (histograms, box plots) to reveal data distribution shape, central tendency, spread, skewness, and potential outliers.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-newspaper"></i> Professional Data Analysis</h4>
+                                <p>Major organizations across industries rely on descriptive statistics for daily decision-making. Retailers analyze average sales and variability by store. Healthcare providers track average patient outcomes and treatment variability. Financial institutions monitor average returns and risk (standard deviation). Quality control engineers use mean and standard deviation to monitor production processes. Educational institutions analyze average test scores and score distributions. In each case, descriptive statistics provide the foundational understanding that guides strategic decisions and identifies areas for improvement.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Analyze a Dataset:</strong> Calculate descriptive statistics for the following monthly temperatures (°C):</p>
+                            <ul>
+                                <li>Data: [22, 24, 19, 25, 28, 30, 27, 23, 20, 26, 29, 21]</li>
+                                <li>Calculate mean, median, and mode</li>
+                                <li>Calculate range, variance, and standard deviation</li>
+                                <li>Interpret what these statistics tell you about temperature patterns</li>
+                                <li>Identify which measure of central tendency is most appropriate</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 3 -->
+            <div class="course-module" id="module3" data-aos="fade-up" data-difficulty="beginner">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>PROBABILITY THEORY</h1>
+                    <h3>Learn the mathematics of uncertainty</h3>
+                    <span class="difficulty">Beginner</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/2103/2103655.png" class="module-icon" alt="Statistics Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 3: <span>Probability Fundamentals</span></h1>
+                    <p>Probability is the mathematical framework for quantifying uncertainty. It provides tools to measure how likely events are to occur, from simple coin tosses to complex real-world scenarios. Probability theory forms the foundation for statistical inference and decision-making under uncertainty.</p>
+                    
+                    <p>Probability uses the <code>sample space</code> (all possible outcomes) and <code>events</code> (subsets of the sample space). The probability of an event ranges from 0 (impossible) to 1 (certain). Key concepts include <code>conditional probability</code>, <code>independence</code>, and <code>Bayes' Theorem</code> for updating probabilities with new evidence.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Probability Example</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-3" spellcheck="false"># Basic Probability Concepts
+
+# Sample Space: All possible outcomes
+# For a fair coin: S = {Heads, Tails}
+# For a die: S = {1, 2, 3, 4, 5, 6}
+
+# Probability Rules
+# 1. 0 ≤ P(A) ≤ 1
+# 2. P(S) = 1
+# 3. For mutually exclusive events: P(A ∪ B) = P(A) + P(B)
+
+# Example 1: Coin Toss
+P(Heads) = 1/2 = 0.5
+P(Tails) = 1/2 = 0.5
+P(Heads or Tails) = P(Heads) + P(Tails) = 1
+
+# Example 2: Dice Roll
+P(Rolling a 3) = 1/6 ≈ 0.1667
+P(Rolling an even number) = 3/6 = 1/2 = 0.5
+P(Rolling number > 4) = 2/6 = 1/3 ≈ 0.333
+
+# Example 3: Deck of Cards (52 cards)
+P(Drawing an Ace) = 4/52 = 1/13 ≈ 0.0769
+P(Drawing a Heart) = 13/52 = 1/4 = 0.25
+P(Drawing a Red Card) = 26/52 = 1/2 = 0.5
+
+# Conditional Probability: P(A|B) = P(A and B) / P(B)
+# Example: Probability of drawing an Ace given it's a Heart
+P(Ace | Heart) = P(Ace and Heart) / P(Heart)
+               = (1/52) / (13/52) = 1/13 ≈ 0.0769
+
+# Independent Events: P(A and B) = P(A) × P(B)
+# Example: Two coin tosses
+P(Heads on first AND Heads on second) = (1/2) × (1/2) = 1/4
+
+# Bayes' Theorem
+# P(A|B) = [P(B|A) × P(A)] / P(B)
+# Example: Medical test
+# Disease prevalence P(D) = 0.01
+# Test sensitivity P(+|D) = 0.95
+# Test specificity P(-|¬D) = 0.90
+# Probability of disease given positive test:
+# P(D|+) = [P(+|D) × P(D)] / P(+)
+# P(+) = P(+|D)P(D) + P(+|¬D)P(¬D)
+#      = 0.95×0.01 + 0.10×0.99 = 0.1085
+# P(D|+) = (0.95×0.01) / 0.1085 ≈ 0.0876 ≈ 8.76%</textarea>
+                        <button class="run-btn" onclick="runCode('editor-3', 'output-3')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Probability Calculations
+                        </div>
+                        <div class="preview-container" id="output-3"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li><code>Sample Space</code> contains all possible outcomes</li>
+                                <li><code>Events</code> are subsets of the sample space</li>
+                                <li><code>Probability</code> measures likelihood between 0 and 1</li>
+                                <li><code>Conditional Probability</code> P(A|B) is probability of A given B occurred</li>
+                                <li><code>Independent Events</code> don't affect each other's probabilities</li>
+                                <li><code>Mutually Exclusive Events</code> cannot occur together</li>
+                                <li><code>Bayes' Theorem</code> updates probabilities with new evidence</li>
+                                <li><code>Law of Total Probability</code> breaks complex events into simpler ones</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-dice"></i> Quantifying Uncertainty</h3>
+                            <p>Probability theory provides the mathematical language for uncertainty that permeates every aspect of life and science. From weather forecasting to stock market predictions, from medical diagnoses to quality control, probability gives us tools to make informed decisions despite incomplete information. It transforms vague notions of "chance" and "likelihood" into precise, quantifiable measures that can be analyzed and communicated.</p>
+                            
+                            <p>Conditional probability and Bayes' Theorem represent one of the most powerful ideas in statistics - the ability to update beliefs based on new evidence. This Bayesian approach contrasts with frequentist statistics but complements it in modern data analysis. Understanding when events are independent versus dependent is crucial for avoiding common probabilistic fallacies, such as the gambler's fallacy or confusion between P(A|B) and P(B|A).</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-shield-alt"></i> Risk Assessment</h4>
+                                    <p>Probability enables systematic risk assessment in finance, insurance, engineering, and healthcare. By quantifying likelihoods of adverse events, organizations can make cost-effective decisions about risk mitigation and resource allocation.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-rocket"></i> Decision Theory</h4>
+                                    <p>Combined with utility theory, probability forms the foundation of rational decision-making under uncertainty. Expected value calculations help choose optimal strategies in business, medicine, and public policy.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-network-wired"></i> Statistical Inference</h4>
+                                    <p>All statistical inference - hypothesis testing, confidence intervals, regression analysis - rests on probability theory. Understanding probability is essential for interpreting p-values, confidence levels, and statistical significance.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-medkit"></i> Medical & Scientific Applications</h4>
+                                <p>Medical diagnosis relies heavily on probability through sensitivity, specificity, and predictive values of tests. Drug development uses probability to assess efficacy and side effects. Weather forecasting employs complex probability models to predict precipitation chances. Financial institutions use probability to model market risks and price derivatives. Quality control engineers use probability distributions to set acceptable defect rates. Sports analytics use probability to predict game outcomes and player performance. In each field, probability transforms uncertainty from a barrier into a manageable factor that informs better decisions.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Solve Probability Problems:</strong> Calculate probabilities for these scenarios:</p>
+                            <ul>
+                                <li>Two dice are rolled. Find probability of sum being 7</li>
+                                <li>Deck of cards: Probability of drawing a face card OR a heart</li>
+                                <li>Conditional probability: In a class of 30 students (18 girls, 12 boys), if 10 students wear glasses (6 girls, 4 boys), find P(wears glasses | girl)</li>
+                                <li>Bayes' Theorem: Disease affects 2% of population. Test is 95% accurate. If someone tests positive, what's the probability they actually have the disease?</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 4 -->
+            <div class="course-module" id="module4" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>RANDOM VARIABLES</h1>
+                    <h3>Learn to model uncertainty mathematically</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/2103/2103655.png" class="module-icon" alt="Statistics Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 4: <span>Random Variables and Distributions</span></h1>
+                    <p>Random variables provide a mathematical framework for representing uncertain quantities. A random variable assigns numerical values to outcomes of random phenomena. Discrete random variables take countable values, while continuous random variables can take any value in an interval.</p>
+                    
+                    <p>Probability distributions describe how probabilities are distributed over the values of a random variable. The <code>probability mass function (PMF)</code> gives probabilities for discrete variables, while the <code>probability density function (PDF)</code> describes continuous variables. The <code>cumulative distribution function (CDF)</code> gives the probability that a random variable is less than or equal to a particular value.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Random Variables</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-4" spellcheck="false"># Discrete Random Variable Example
+# X = Number of heads in 3 coin tosses
+
+# Sample Space: {HHH, HHT, HTH, THH, HTT, THT, TTH, TTT}
+# X can take values: 0, 1, 2, 3
+
+# Probability Mass Function (PMF)
+P(X = 0) = P(TTT) = 1/8 = 0.125
+P(X = 1) = P(HTT, THT, TTH) = 3/8 = 0.375
+P(X = 2) = P(HHT, HTH, THH) = 3/8 = 0.375
+P(X = 3) = P(HHH) = 1/8 = 0.125
+
+# Expected Value (Mean)
+E[X] = Σ [x × P(X = x)]
+     = 0×0.125 + 1×0.375 + 2×0.375 + 3×0.125
+     = 0 + 0.375 + 0.75 + 0.375 = 1.5
+
+# Variance
+Var(X) = E[X²] - (E[X])²
+E[X²] = 0²×0.125 + 1²×0.375 + 2²×0.375 + 3²×0.125
+      = 0 + 0.375 + 1.5 + 1.125 = 3
+Var(X) = 3 - (1.5)² = 3 - 2.25 = 0.75
+Std Dev = √0.75 ≈ 0.866
+
+# Cumulative Distribution Function (CDF)
+F(0) = P(X ≤ 0) = 0.125
+F(1) = P(X ≤ 1) = 0.125 + 0.375 = 0.5
+F(2) = P(X ≤ 2) = 0.5 + 0.375 = 0.875
+F(3) = P(X ≤ 3) = 0.875 + 0.125 = 1
+
+# Continuous Random Variable Example
+# Y = Time until next customer arrives (exponential distribution)
+# PDF: f(y) = λe^(-λy) for y ≥ 0
+# Let λ = 0.5 (average 2 minutes between customers)
+
+# Probability customer arrives within 1 minute:
+P(Y ≤ 1) = 1 - e^(-λ×1) = 1 - e^(-0.5) ≈ 1 - 0.6065 = 0.3935
+
+# Probability customer takes more than 3 minutes:
+P(Y > 3) = e^(-λ×3) = e^(-1.5) ≈ 0.2231
+
+# Expected time: E[Y] = 1/λ = 2 minutes
+# Variance: Var(Y) = 1/λ² = 4 minutes²
+
+# Properties of Expected Value
+# 1. E[aX + b] = aE[X] + b
+# 2. E[X + Y] = E[X] + E[Y] (linearity)
+# 3. For independent X,Y: E[XY] = E[X]E[Y]
+
+# Properties of Variance
+# 1. Var(aX + b) = a²Var(X)
+# 2. For independent X,Y: Var(X + Y) = Var(X) + Var(Y)</textarea>
+                        <button class="run-btn" onclick="runCode('editor-4', 'output-4')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Random Variable Analysis
+                        </div>
+                        <div class="preview-container" id="output-4"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li><code>Discrete Random Variables</code> have countable outcomes</li>
+                                <li><code>Continuous Random Variables</code> have uncountable outcomes</li>
+                                <li><code>PMF</code> gives probabilities for discrete variables (sums to 1)</li>
+                                <li><code>PDF</code> describes density for continuous variables (area under curve = 1)</li>
+                                <li><code>CDF</code> gives cumulative probabilities F(x) = P(X ≤ x)</li>
+                                <li><code>Expected Value</code> is the long-run average outcome</li>
+                                <li><code>Variance</code> measures spread around the expected value</li>
+                                <li><code>Standard Deviation</code> is square root of variance</li>
+                                <li>Linearity of expectation holds even for dependent variables</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-random"></i> Mathematical Modeling of Uncertainty</h3>
+                            <p>Random variables bridge the gap between abstract probability theory and practical data analysis. They provide a systematic way to model real-world phenomena where outcomes are uncertain - from the number of customers arriving at a store to the time until a machine fails, from stock price movements to test scores. By assigning numerical values to uncertain outcomes, random variables enable mathematical analysis and prediction.</p>
+                            
+                            <p>The distinction between discrete and continuous random variables is fundamental to choosing appropriate statistical methods. Discrete variables (counts, categories with numeric codes) require different techniques than continuous variables (measurements like height, time, temperature). The expected value represents the theoretical average over infinite repetitions, while variance quantifies the uncertainty around this average. These concepts form the basis for more advanced topics like regression analysis, hypothesis testing, and statistical inference.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-calculator"></i> Moment Generating Functions</h4>
+                                    <p>Expected values, variance, skewness, and kurtosis are moments of distributions. Moment generating functions provide a unified approach to finding all moments and characterizing distributions.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-project-diagram"></i> Transformations</h4>
+                                    <p>Functions of random variables create new random variables with their own distributions. Understanding how distributions transform is crucial for statistical modeling and inference.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-chart-line"></i> Stochastic Processes</h4>
+                                    <p>Collections of random variables indexed by time or space form stochastic processes, which model phenomena like stock prices, queue lengths, and particle movements.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-shopping-bag"></i> Business & Engineering Applications</h4>
+                                <p>Random variables model everything from manufacturing defects (binomial distribution) to service times (exponential distribution) to financial returns (normal distribution). Insurance companies use random variables to model claim amounts and frequencies. Supply chain managers use them to model demand variability. Quality control engineers model defect rates. Financial analysts model asset returns and risks. Telecommunications companies model call arrivals and durations. In each application, understanding the properties of random variables - their expected values, variances, and distributions - enables better forecasting, risk management, and decision-making under uncertainty.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Analyze Random Variables:</strong> Work with these random variables:</p>
+                            <ul>
+                                <li>Discrete: X = number of successes in 4 trials with p=0.3. Find PMF, expected value, variance</li>
+                                <li>Continuous: Y ~ Uniform(0, 10). Find PDF, CDF, P(3 < Y < 7), expected value</li>
+                                <li>If Z = 2X + 5, find E[Z] and Var(Z) given E[X]=3, Var(X)=4</li>
+                                <li>For independent X~N(0,1) and Y~N(1,2), find E[X+Y] and Var(X+Y)</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 5 -->
+            <div class="course-module" id="module5" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>PROBABILITY DISTRIBUTIONS</h1>
+                    <h3>Learn common statistical distributions</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/2103/2103655.png" class="module-icon" alt="Statistics Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 5: <span>Common Probability Distributions</span></h1>
+                    <p>Probability distributions are mathematical functions that describe the likelihood of different outcomes. Different distributions model different types of phenomena. Understanding which distribution to use is crucial for statistical analysis, hypothesis testing, and data modeling.</p>
+                    
+                    <p>Common discrete distributions include <code>Bernoulli</code> for single trials, <code>Binomial</code> for counts of successes, and <code>Poisson</code> for counts of events over time/space. Continuous distributions include <code>Normal</code> for natural phenomena, <code>Exponential</code> for waiting times, and <code>Uniform</code> for equally likely outcomes over an interval.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Distributions</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-5" spellcheck="false"># Discrete Distributions
+
+# 1. Bernoulli Distribution
+# Models single trial with success probability p
+# X ~ Bernoulli(p)
+# P(X=1) = p, P(X=0) = 1-p
+# E[X] = p, Var(X) = p(1-p)
+
+# 2. Binomial Distribution
+# Models number of successes in n independent trials
+# X ~ Binomial(n, p)
+# PMF: P(X=k) = C(n,k) × p^k × (1-p)^(n-k)
+# E[X] = np, Var(X) = np(1-p)
+
+# Example: 10 coin tosses, probability of exactly 6 heads
+n = 10, p = 0.5, k = 6
+P(X=6) = C(10,6) × (0.5)^6 × (0.5)^4
+       = 210 × 0.015625 × 0.0625 = 0.2051
+
+# 3. Poisson Distribution
+# Models counts of events in fixed interval
+# X ~ Poisson(λ) where λ = average rate
+# PMF: P(X=k) = (λ^k × e^(-λ)) / k!
+# E[X] = λ, Var(X) = λ
+
+# Example: Average 3 calls per hour, probability of 5 calls
+λ = 3, k = 5
+P(X=5) = (3^5 × e^(-3)) / 5! = (243 × 0.0498) / 120 = 0.1008
+
+# Continuous Distributions
+
+# 1. Normal Distribution (Gaussian)
+# X ~ N(μ, σ²)
+# PDF: f(x) = (1/(σ√(2π))) × e^(-(x-μ)²/(2σ²))
+# Bell-shaped, symmetric
+# 68-95-99.7 rule: Within 1,2,3 standard deviations of mean
+
+# Standard Normal: Z ~ N(0, 1)
+# Any normal can be standardized: Z = (X - μ)/σ
+
+# Example: IQ scores ~ N(100, 15²)
+# Probability IQ > 115: P(Z > (115-100)/15) = P(Z > 1) = 0.1587
+
+# 2. Exponential Distribution
+# Models time between events in Poisson process
+# X ~ Exp(λ) where λ = rate parameter
+# PDF: f(x) = λe^(-λx) for x ≥ 0
+# E[X] = 1/λ, Var(X) = 1/λ²
+# Memoryless property: P(X > s+t | X > s) = P(X > t)
+
+# 3. Uniform Distribution
+# All outcomes equally likely in interval [a,b]
+# X ~ Uniform(a, b)
+# PDF: f(x) = 1/(b-a) for a ≤ x ≤ b
+# E[X] = (a+b)/2, Var(X) = (b-a)²/12
+
+# Distribution Relationships
+# 1. Binomial → Normal (Central Limit Theorem)
+# 2. Exponential → Gamma (sum of exponentials)
+# 3. Bernoulli → Binomial (multiple trials)
+# 4. Poisson → Normal (large λ)</textarea>
+                        <button class="run-btn" onclick="runCode('editor-5', 'output-5')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Distribution Analysis
+                        </div>
+                        <div class="preview-container" id="output-5"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li><code>Bernoulli</code>: Single trial with success/failure</li>
+                                <li><code>Binomial</code>: Count of successes in fixed trials</li>
+                                <li><code>Poisson</code>: Count of events in fixed interval</li>
+                                <li><code>Normal</code>: Natural phenomena, symmetric bell curve</li>
+                                <li><code>Exponential</code>: Time between events, memoryless</li>
+                                <li><code>Uniform</code>: All outcomes equally likely</li>
+                                <li><code>Central Limit Theorem</code>: Sums tend to normal distribution</li>
+                                <li><code>Distribution Selection</code> depends on data characteristics</li>
+                                <li><code>Parameter Estimation</code> fits distributions to data</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-chart-area"></i> Modeling Real-World Phenomena</h3>
+                            <p>Probability distributions provide the mathematical models that underlie all statistical analysis. Each distribution represents a different type of random process or data generation mechanism. Choosing the right distribution is both an art and a science - it requires understanding the data generation process, examining data characteristics, and sometimes testing multiple distributions to find the best fit.</p>
+                            
+                            <p>The normal distribution's central role in statistics stems from the Central Limit Theorem, which states that sums (or averages) of independent random variables tend toward a normal distribution regardless of the original distributions. This remarkable property makes the normal distribution fundamental to statistical inference, quality control, and many areas of applied statistics. The exponential distribution's memoryless property makes it ideal for modeling waiting times in queueing theory and reliability analysis, while the Poisson distribution's relationship to the exponential makes them a powerful pair for modeling event processes.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-project-diagram"></i> Distribution Families</h4>
+                                    <p>Many distributions belong to exponential families with convenient mathematical properties. Understanding these families simplifies parameter estimation, hypothesis testing, and model selection.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-cogs"></i> Parameter Interpretation</h4>
+                                    <p>Distribution parameters have meaningful interpretations: μ and σ in normal distribution represent center and spread, λ in Poisson represents event rate, p in binomial represents success probability.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-exchange-alt"></i> Transformations & Approximations</h4>
+                                    <p>Distributions relate to each other through limits and transformations. Binomial approximates Poisson for large n, small p. Poisson approximates normal for large λ. These relationships simplify calculations.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-industry"></i> Industrial & Scientific Applications</h4>
+                                <p>Manufacturing uses binomial distributions for defect counts and normal distributions for measurements. Call centers use Poisson distributions for call arrivals and exponential distributions for call durations. Finance uses lognormal distributions for stock prices and normal distributions for returns. Healthcare uses Poisson for disease counts and exponential for survival times. Telecommunications uses Poisson for packet arrivals. Retail uses Poisson for customer arrivals and normal for sales amounts. In each domain, selecting appropriate distributions enables accurate modeling, prediction, and decision-making. Quality control charts rely on normal distribution properties. Inventory management uses Poisson for demand modeling. Reliability engineering uses exponential and Weibull distributions for failure times.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Apply Probability Distributions:</strong> Solve these distribution problems:</p>
+                            <ul>
+                                <li>Binomial: 20% of products are defective. In sample of 15, find probability of exactly 3 defectives</li>
+                                <li>Poisson: Average 2.5 network failures per day. Find probability of no failures tomorrow</li>
+                                <li>Normal: Test scores ~ N(75, 10²). Find probability score between 70 and 85</li>
+                                <li>Exponential: Average time between arrivals is 4 minutes. Find probability next arrival within 2 minutes</li>
+                                <li>Identify which distribution fits: Number of cars passing checkpoint per hour</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 6 -->
+            <div class="course-module" id="module6" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>HYPOTHESIS TESTING</h1>
+                    <h3>Learn to make statistical decisions</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/2103/2103655.png" class="module-icon" alt="Statistics Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 6: <span>Statistical Hypothesis Testing</span></h1>
+                    <p>Hypothesis testing is a formal procedure for using sample data to evaluate claims about population parameters. It provides an objective framework for making decisions in the face of uncertainty. The process involves stating hypotheses, collecting data, calculating test statistics, and making decisions based on probability.</p>
+                    
+                    <p>In hypothesis testing, we start with two competing hypotheses: the <code>null hypothesis (H₀)</code> represents the status quo or no effect, while the <code>alternative hypothesis (H₁ or Hₐ)</code> represents what we're trying to prove. We assume H₀ is true and look for evidence against it. The <code>p-value</code> measures the strength of evidence against H₀.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Hypothesis Testing</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-6" spellcheck="false"># Hypothesis Testing Framework
+
+# Example: Testing if new teaching method improves test scores
+# Current average score: μ = 75, σ = 10 (known)
+# Sample of n=30 students using new method: x̄ = 78
+
+# Step 1: State Hypotheses
+H₀: μ = 75 (no improvement)
+H₁: μ > 75 (improvement)  # One-tailed test
+
+# Step 2: Choose Significance Level
+α = 0.05  # Probability of Type I error
+
+# Step 3: Calculate Test Statistic
+# z-test for population mean (σ known)
+z = (x̄ - μ) / (σ/√n)
+  = (78 - 75) / (10/√30)
+  = 3 / (10/5.477) = 3 / 1.826 = 1.643
+
+# Step 4: Find p-value
+# For z = 1.643, one-tailed p-value
+# From z-table: P(Z > 1.643) = 0.0502
+p-value = 0.0502
+
+# Step 5: Make Decision
+# Compare p-value to α
+# p-value (0.0502) > α (0.05)
+# Fail to reject H₀ at 5% significance level
+
+# Step 6: Interpret Results
+# Insufficient evidence to conclude new method improves scores
+
+# Type I and Type II Errors
+# Type I (α): Reject H₀ when it's true (false positive)
+# Type II (β): Fail to reject H₀ when it's false (false negative)
+# Power = 1 - β: Probability of correctly rejecting false H₀
+
+# Power depends on:
+# 1. Effect size (difference from H₀)
+# 2. Sample size (n)
+# 3. Significance level (α)
+# 4. Variability (σ)
+
+# Confidence Intervals
+# 95% CI for population mean: x̄ ± z*(σ/√n)
+# For our example: 78 ± 1.96×(10/√30)
+# Margin of error = 1.96×1.826 = 3.58
+# 95% CI = (74.42, 81.58)
+
+# Since 75 is in CI, consistent with failing to reject H₀
+
+# t-test (σ unknown)
+# Use sample standard deviation s instead of σ
+# t = (x̄ - μ) / (s/√n)
+# Follows t-distribution with n-1 degrees of freedom
+
+# Example: Same problem but σ unknown, s = 11
+t = (78 - 75) / (11/√30) = 3 / 2.008 = 1.494
+df = 30 - 1 = 29
+# From t-table: p-value > 0.05
+# Same conclusion: Fail to reject H₀
+
+# Common Tests
+# 1. One-sample t-test: Compare sample mean to known value
+# 2. Two-sample t-test: Compare means of two groups
+# 3. Paired t-test: Compare before/after measurements
+# 4. Chi-square test: Test independence or goodness of fit
+# 5. ANOVA: Compare means of three or more groups</textarea>
+                        <button class="run-btn" onclick="runCode('editor-6', 'output-6')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Hypothesis Testing Analysis
+                        </div>
+                        <div class="preview-container" id="output-6"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li><code>Null Hypothesis (H₀)</code>: Statement being tested, usually no effect</li>
+                                <li><code>Alternative Hypothesis (H₁)</code>: What you hope to prove</li>
+                                <li><code>Significance Level (α)</code>: Probability of Type I error (typically 0.05)</li>
+                                <li><code>p-value</code>: Probability of observing data if H₀ is true</li>
+                                <li><code>Test Statistic</code>: Calculated from sample data (z, t, F, χ²)</li>
+                                <li><code>Type I Error</code>: False positive (reject true H₀)</li>
+                                <li><code>Type II Error</code>: False negative (fail to reject false H₀)</li>
+                                <li><code>Power</code>: 1 - β, probability of detecting true effect</li>
+                                <li><code>Confidence Interval</code>: Range of plausible parameter values</li>
+                                <li>Statistical significance ≠ practical significance</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-balance-scale"></i> Statistical Decision Making</h3>
+                            <p>Hypothesis testing provides a rigorous framework for making decisions in the face of uncertainty. It transforms subjective judgments into objective, reproducible procedures based on probability theory. This methodology underlies scientific research, quality control, policy evaluation, and evidence-based practice across all disciplines. By requiring evidence to reach a predetermined standard of proof, hypothesis testing protects against drawing conclusions from random variation.</p>
+                            
+                            <p>The interpretation of p-values is often misunderstood. A p-value is not the probability that the null hypothesis is true, nor is it the probability that the results occurred by chance alone. Rather, it's the probability of observing data as extreme as what was actually observed, assuming the null hypothesis is true. This subtle distinction has important implications for how we interpret statistical results. The ongoing debate about p-values and significance testing has led to increased emphasis on effect sizes, confidence intervals, and Bayesian methods as complementary approaches to statistical inference.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-vial"></i> Scientific Method</h4>
+                                    <p>Hypothesis testing formalizes the scientific method's requirement for empirical evidence. It provides standards for when observations constitute sufficient evidence to support or refute theories.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-chart-line"></i> Multiple Testing</h4>
+                                    <p>When conducting many tests, the chance of false positives increases. Correction methods like Bonferroni, Holm, or False Discovery Rate control overall error rates in multiple comparisons.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-cogs"></i> Test Assumptions</h4>
+                                    <p>Each statistical test has assumptions (normality, independence, equal variance). Violating assumptions can invalidate results. Diagnostic checks and robust methods address assumption violations.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-flask"></i> Research & Development Applications</h4>
+                                <p>Pharmaceutical companies use hypothesis testing in clinical trials to determine drug efficacy and safety. Tech companies A/B test website designs and features. Manufacturing plants test whether process changes improve quality. Social scientists test theories about human behavior. Economists test policy impacts. Environmental scientists test pollution effects. In each field, hypothesis testing provides the statistical rigor needed to separate signal from noise, to distinguish real effects from random variation. The replication crisis in science has highlighted the importance of proper hypothesis testing, adequate power, and transparent reporting. Modern best practices emphasize pre-registration of studies, appropriate sample sizes, and consideration of both statistical and practical significance.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Conduct Hypothesis Tests:</strong> Perform these hypothesis tests:</p>
+                            <ul>
+                                <li>One-sample t-test: Test if sample mean (n=25, x̄=105, s=15) differs from population mean 100 (α=0.05)</li>
+                                <li>Two-sample t-test: Compare Group A (n=30, x̄=85, s=10) vs Group B (n=35, x̄=80, s=12) for difference in means</li>
+                                <li>Calculate power for test detecting effect size d=0.5 with n=50, α=0.05</li>
+                                <li>Interpret p-value of 0.03 in context of α=0.05</li>
+                                <li>Construct 95% confidence interval for proportion: sample p̂=0.4, n=100</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 7 -->
+            <div class="course-module" id="module7" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>REGRESSION ANALYSIS</h1>
+                    <h3>Learn to model relationships between variables</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/2103/2103655.png" class="module-icon" alt="Statistics Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 7: <span>Linear and Multiple Regression</span></h1>
+                    <p>Regression analysis models the relationship between a dependent variable and one or more independent variables. It helps us understand how changes in predictors affect the outcome, make predictions, and test hypotheses about relationships. Linear regression assumes a straight-line relationship, while multiple regression extends this to multiple predictors.</p>
+                    
+                    <p>The simple linear regression model is: <code>Y = β₀ + β₁X + ε</code>, where β₀ is the intercept, β₁ is the slope, and ε is the error term. We estimate parameters using the <code>least squares</code> method, which minimizes the sum of squared residuals. The <code>coefficient of determination (R²)</code> measures how well the regression line fits the data.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Regression Analysis</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-7" spellcheck="false"># Simple Linear Regression Example
+# Study hours (X) vs Exam score (Y)
+
+# Data
+X = [2, 3, 5, 7, 9]  # Study hours
+Y = [65, 70, 80, 85, 95]  # Exam scores
+
+# Step 1: Calculate means
+mean_X = sum(X)/5 = 26/5 = 5.2
+mean_Y = sum(Y)/5 = 395/5 = 79
+
+# Step 2: Calculate sums of squares
+SS_xx = Σ(X - mean_X)² = (2-5.2)² + (3-5.2)² + (5-5.2)² + (7-5.2)² + (9-5.2)²
+      = 10.24 + 4.84 + 0.04 + 3.24 + 14.44 = 32.8
+
+SS_xy = Σ[(X - mean_X)(Y - mean_Y)]
+      = (2-5.2)(65-79) + (3-5.2)(70-79) + (5-5.2)(80-79) + 
+        (7-5.2)(85-79) + (9-5.2)(95-79)
+      = (-3.2)(-14) + (-2.2)(-9) + (-0.2)(1) + (1.8)(6) + (3.8)(16)
+      = 44.8 + 19.8 - 0.2 + 10.8 + 60.8 = 136
+
+# Step 3: Calculate slope (β₁)
+β₁ = SS_xy / SS_xx = 136 / 32.8 ≈ 4.1463
+
+# Step 4: Calculate intercept (β₀)
+β₀ = mean_Y - β₁ × mean_X = 79 - 4.1463×5.2 ≈ 79 - 21.56 = 57.44
+
+# Regression equation: Ŷ = 57.44 + 4.1463X
+
+# Step 5: Make prediction
+# For X = 6 hours: Ŷ = 57.44 + 4.1463×6 ≈ 57.44 + 24.88 = 82.32
+
+# Step 6: Calculate R² (coefficient of determination)
+SS_yy = Σ(Y - mean_Y)² = (65-79)² + (70-79)² + (80-79)² + (85-79)² + (95-79)²
+      = 196 + 81 + 1 + 36 + 256 = 570
+
+SS_res = Σ(Y - Ŷ)²  # Sum of squared residuals
+# Calculate residuals: e = Y - Ŷ
+# For X=2: Ŷ=57.44+4.1463×2=65.73, e=65-65.73=-0.73
+# Similarly calculate for all points...
+# SS_res = 9.76 (calculated)
+
+R² = 1 - (SS_res / SS_yy) = 1 - (9.76/570) ≈ 1 - 0.0171 = 0.9829
+# Interpretation: 98.29% of variation in Y explained by X
+
+# Multiple Regression
+# Y = β₀ + β₁X₁ + β₂X₂ + ... + βₖXₖ + ε
+# Matrix form: Y = Xβ + ε
+# Solution: β = (X'X)⁻¹X'Y
+
+# Assumptions of Linear Regression
+# 1. Linearity: Relationship between X and Y is linear
+# 2. Independence: Errors are independent
+# 3. Homoscedasticity: Constant variance of errors
+# 4. Normality: Errors are normally distributed
+# 5. No multicollinearity (for multiple regression)
+
+# Diagnostic Checks
+# 1. Residual plots (check assumptions)
+# 2. Cook's distance (identify influential points)
+# 3. Variance Inflation Factor (check multicollinearity)
+# 4. Durbin-Watson test (check autocorrelation)
+
+# Extensions
+# 1. Polynomial regression: Add X², X³ terms
+# 2. Logistic regression: For binary outcomes
+# 3. Ridge/Lasso regression: For regularization
+# 4. Nonlinear regression: For nonlinear relationships</textarea>
+                        <button class="run-btn" onclick="runCode('editor-7', 'output-7')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Regression Analysis
+                        </div>
+                        <div class="preview-container" id="output-7"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li><code>Simple Linear Regression</code>: One predictor variable</li>
+                                <li><code>Multiple Regression</code>: Multiple predictors</li>
+                                <li><code>Least Squares</code>: Minimizes sum of squared residuals</li>
+                                <li><code>R²</code>: Proportion of variance explained (0 to 1)</li>
+                                <li><code>Adjusted R²</code>: Penalizes adding unnecessary predictors</li>
+                                <li><code>Residuals</code>: Differences between observed and predicted values</li>
+                                <li><code>Coefficient Interpretation</code>: Change in Y per unit change in X</li>
+                                <li><code>Assumptions</code>: Must be checked for valid inference</li>
+                                <li><code>Outliers</code>: Can disproportionately influence results</li>
+                                <li><code>Multicollinearity</code>: High correlation among predictors</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-project-diagram"></i> Modeling Relationships</h3>
+                            <p>Regression analysis is arguably the most widely used statistical technique in applied research. It provides a flexible framework for modeling relationships, making predictions, and understanding how different factors contribute to outcomes. From economics to engineering, from medicine to marketing, regression helps answer questions like: "How much will sales increase if we lower prices?" or "Which factors most influence patient recovery?"</p>
+                            
+                            <p>The beauty of regression lies in its ability to handle multiple factors simultaneously through multiple regression. This allows researchers to control for confounding variables - to isolate the effect of one variable while holding others constant. For example, in studying the relationship between education and income, multiple regression can control for age, experience, and location, giving a cleaner estimate of education's true effect. However, this power comes with responsibility: regression doesn't prove causation, and careful interpretation is needed to avoid misleading conclusions.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-chart-line"></i> Prediction vs Explanation</h4>
+                                    <p>Regression serves two main purposes: prediction (forecasting future outcomes) and explanation (understanding relationships). Different goals lead to different model selection strategies and evaluation criteria.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-exclamation-triangle"></i> Model Diagnostics</h4>
+                                    <p>Valid regression conclusions require checking assumptions through residual analysis, influence diagnostics, and collinearity assessment. Violations may require transformations, robust methods, or different modeling approaches.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-sitemap"></i> Model Selection</h4>
+                                    <p>Choosing which variables to include involves balancing fit and complexity. Methods like stepwise selection, LASSO, and information criteria (AIC, BIC) help find parsimonious models that generalize well.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-line-chart"></i> Business & Economic Applications</h4>
+                                <p>Marketing analysts use regression to understand how advertising spending affects sales. Economists use it to model relationships like inflation and unemployment (Phillips curve). Financial analysts use it for asset pricing models (CAPM). Healthcare researchers use it to identify risk factors for diseases. Psychologists use it to understand relationships between variables like stress and health outcomes. Quality engineers use it to optimize manufacturing processes. Real estate agents use it to price properties based on features. In each application, regression turns raw data into actionable insights, but requires careful attention to assumptions, model specification, and interpretation to avoid pitfalls like omitted variable bias, reverse causality, or overfitting.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Conduct Regression Analysis:</strong> Perform these regression tasks:</p>
+                            <ul>
+                                <li>Calculate regression line for data: X=[1,2,3,4,5], Y=[2,4,5,4,5]</li>
+                                <li>Interpret coefficients: For Ŷ=50+10X, interpret intercept and slope</li>
+                                <li>Multiple regression: If Ŷ=20+5X₁-3X₂, predict Y when X₁=10, X₂=4</li>
+                                <li>Calculate R² given SS_res=40, SS_total=200</li>
+                                <li>Check assumptions: What residual patterns indicate problems?</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 8 -->
+            <div class="course-module" id="module8" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>BAYESIAN STATISTICS</h1>
+                    <h3>Learn the probability-based approach to statistics</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/2103/2103655.png" class="module-icon" alt="Statistics Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 8: <span>Bayesian Inference and Methods</span></h1>
+                    <p>Bayesian statistics provides an alternative framework to classical (frequentist) statistics. Instead of treating parameters as fixed unknown values, Bayesian statistics treats them as random variables with probability distributions. This approach incorporates prior knowledge and updates beliefs as new data arrives using Bayes' Theorem.</p>
+                    
+                    <p>The Bayesian framework uses <code>prior distributions</code> to represent initial beliefs about parameters, <code>likelihood functions</code> to model data given parameters, and <code>posterior distributions</code> to represent updated beliefs after observing data. The key formula is: <code>Posterior ∝ Likelihood × Prior</code>.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Bayesian Statistics</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-8" spellcheck="false"># Bayesian Inference Framework
+
+# Bayes' Theorem for parameters:
+# P(θ|Data) = [P(Data|θ) × P(θ)] / P(Data)
+# Posterior ∝ Likelihood × Prior
+
+# Example: Estimating coin bias (probability of heads)
+
+# Step 1: Define prior distribution
+# Prior: We believe coin is fair-ish
+# Use Beta distribution: Beta(α, β)
+# α = number of prior "heads" + 1
+# β = number of prior "tails" + 1
+# For weak prior (little prior knowledge): Beta(1, 1) = Uniform(0, 1)
+
+prior_α = 2  # equivalent to 1 prior head
+prior_β = 2  # equivalent to 1 prior tail
+# Prior mean = α/(α+β) = 2/4 = 0.5
+
+# Step 2: Collect data
+# We flip coin 10 times, get 7 heads, 3 tails
+data_heads = 7
+data_tails = 3
+n = data_heads + data_tails = 10
+
+# Step 3: Likelihood function
+# Binomial likelihood: P(Data|θ) = θ^k × (1-θ)^(n-k)
+# where θ = probability of heads, k = number of heads
+
+# Step 4: Calculate posterior
+# For binomial likelihood with beta prior:
+# Posterior is Beta(α_post, β_post)
+α_post = prior_α + data_heads = 2 + 7 = 9
+β_post = prior_β + data_tails = 2 + 3 = 5
+posterior = Beta(9, 5)
+
+# Posterior properties
+posterior_mean = α_post / (α_post + β_post) = 9/14 ≈ 0.6429
+posterior_mode = (α_post - 1) / (α_post + β_post - 2) = 8/12 ≈ 0.6667
+posterior_variance = (α_post × β_post) / [(α_post+β_post)² × (α_post+β_post+1)]
+                   = (9×5) / [14² × 15] = 45 / (196×15) = 45/2940 ≈ 0.0153
+
+# Step 5: Make inference
+# 95% credible interval (Bayesian confidence interval)
+# For Beta(9,5), 2.5th percentile ≈ 0.385, 97.5th percentile ≈ 0.863
+# Interpretation: We're 95% confident true θ is between 0.385 and 0.863
+
+# Compare with frequentist approach
+# Maximum likelihood estimate: θ_hat = 7/10 = 0.7
+# 95% confidence interval: 0.7 ± 1.96×√(0.7×0.3/10) = (0.416, 0.984)
+
+# Bayesian hypothesis testing
+# Compare H₀: θ ≤ 0.5 vs H₁: θ > 0.5
+# Calculate posterior probability P(θ > 0.5|Data)
+# For Beta(9,5), P(θ > 0.5) ≈ 0.855
+# Interpretation: 85.5% probability coin is biased toward heads
+
+# Conjugate priors (mathematically convenient)
+# Binomial likelihood + Beta prior → Beta posterior
+# Normal likelihood + Normal prior → Normal posterior
+# Poisson likelihood + Gamma prior → Gamma posterior
+
+# Markov Chain Monte Carlo (MCMC)
+# For complex models without conjugate priors
+# Algorithms: Gibbs sampling, Metropolis-Hastings
+# Software: Stan, PyMC3, JAGS
+
+# Advantages of Bayesian approach
+# 1. Incorporates prior knowledge
+# 2. Provides intuitive probability statements about parameters
+# 3. Handles complex models naturally
+# 4. Updates sequentially as new data arrives
+# 5. Provides full posterior distribution, not just point estimates
+
+# Challenges
+# 1. Choice of prior can influence results
+# 2. Computationally intensive for complex models
+# 3. Requires more sophisticated software
+# 4. Interpretation requires understanding of probability</textarea>
+                        <button class="run-btn" onclick="runCode('editor-8', 'output-8')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Bayesian Analysis
+                        </div>
+                        <div class="preview-container" id="output-8"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li><code>Prior Distribution</code>: Initial beliefs about parameters</li>
+                                <li><code>Likelihood Function</code>: Probability of data given parameters</li>
+                                <li><code>Posterior Distribution</code>: Updated beliefs after seeing data</li>
+                                <li><code>Bayes' Theorem</code>: Posterior ∝ Likelihood × Prior</li>
+                                <li><code>Credible Intervals</code>: Bayesian confidence intervals</li>
+                                <li><code>Conjugate Priors</code>: Mathematical convenience (prior/posterior same family)</li>
+                                <li><code>MCMC</code>: Computational methods for complex posteriors</li>
+                                <li><code>Bayesian vs Frequentist</code>: Different interpretations of probability</li>
+                                <li><code>Prior Sensitivity</code>: How results depend on prior choice</li>
+                                <li><code>Hierarchical Models</code>: Bayesian models with multiple levels</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-brain"></i> Probabilistic Reasoning</h3>
+                            <p>Bayesian statistics represents a paradigm shift from the frequentist approach that dominates traditional statistics courses. Instead of asking "What is the probability of observing this data if my hypothesis is true?" (p-value), Bayesian statistics asks "What is the probability my hypothesis is true given this data?" This subtle reframing leads to more intuitive interpretations and naturally incorporates prior knowledge. Bayesian methods have gained tremendous popularity in recent decades due to computational advances (MCMC) and their flexibility in handling complex models.</p>
+                            
+                            <p>The Bayesian approach is particularly powerful for sequential updating, hierarchical modeling, and dealing with small sample sizes. In clinical trials, Bayesian methods allow for adaptive designs that can stop early if a treatment shows clear benefit or harm. In machine learning, Bayesian methods provide principled approaches to regularization and uncertainty quantification. In psychometrics and educational testing, Bayesian methods enable adaptive testing that tailors questions to individual ability levels. The full posterior distribution provides richer information than point estimates and confidence intervals, allowing for probability statements about parameters and predictions.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-cogs"></i> Computational Methods</h4>
+                                    <p>Modern Bayesian analysis relies on MCMC algorithms that sample from posterior distributions. Understanding convergence diagnostics, mixing, and autocorrelation is crucial for reliable inference.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-balance-scale"></i> Prior Specification</h4>
+                                    <p>Choosing appropriate priors involves balancing subjective knowledge with mathematical convenience. Non-informative priors, weakly informative priors, and hierarchical priors address different needs.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-chart-network"></i> Model Comparison</h4>
+                                    <p>Bayesian model comparison uses Bayes factors, posterior model probabilities, and information criteria (DIC, WAIC) to compare models while accounting for complexity.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-robot"></i> Modern Applications</h4>
+                                <p>Bayesian methods power recommendation systems (Netflix, Amazon), spam filters, medical diagnosis systems, and autonomous vehicles. Pharmaceutical companies use Bayesian adaptive trials to accelerate drug development. Tech companies use Bayesian optimization to tune machine learning models. Environmental scientists use Bayesian hierarchical models to analyze spatial data. Economists use Bayesian vector autoregressions for forecasting. Sports analysts use Bayesian methods to update player ratings. The rise of probabilistic programming languages (Stan, PyMC3, TensorFlow Probability) has made Bayesian methods accessible to a wider audience. In machine learning, Bayesian neural networks provide uncertainty estimates for deep learning predictions. The flexibility of the Bayesian framework makes it ideal for complex, high-dimensional problems where traditional methods struggle.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Apply Bayesian Methods:</strong> Solve these Bayesian problems:</p>
+                            <ul>
+                                <li>Coin flipping: Prior Beta(2,2), observe 8 heads in 10 flips. Find posterior distribution</li>
+                                <li>Calculate 90% credible interval for θ given posterior Beta(10,6)</li>
+                                <li>Compare prior Beta(1,1) vs Beta(10,10) with data 5 successes in 10 trials</li>
+                                <li>Normal-normal conjugate: Prior N(100,15²), data: n=25, x̄=110, σ=20. Find posterior</li>
+                                <li>Interpret: Posterior probability P(θ>0.5)=0.92</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 9 -->
+            <div class="course-module" id="module9" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>TIME SERIES ANALYSIS</h1>
+                    <h3>Learn to analyze data collected over time</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/2103/2103655.png" class="module-icon" alt="Statistics Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 9: <span>Time Series Models and Forecasting</span></h1>
+                    <p>Time series analysis deals with data points indexed in time order. Unlike cross-sectional data where observations are independent, time series data points are dependent - today's value often depends on yesterday's value. This temporal dependence requires special statistical techniques for analysis and forecasting.</p>
+                    
+                    <p>Key characteristics of time series include <code>trend</code> (long-term direction), <code>seasonality</code> (regular periodic fluctuations), <code>cyclical patterns</code> (longer-term cycles), and <code>random noise</code>. Common models include <code>ARIMA</code> for stationary series, <code>exponential smoothing</code> for trend and seasonality, and <code>GARCH</code> for volatility clustering in financial data.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Time Series</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-9" spellcheck="false"># Time Series Components
+
+# 1. Trend (T): Long-term movement
+# 2. Seasonality (S): Regular periodic fluctuations
+# 3. Cyclical (C): Longer-term economic cycles
+# 4. Irregular (I): Random noise
+
+# Decomposition: Y_t = T_t × S_t × C_t × I_t (multiplicative)
+# Or: Y_t = T_t + S_t + C_t + I_t (additive)
+
+# Example: Monthly sales data (in thousands)
+months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", 
+          "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+sales = [120, 115, 130, 145, 160, 175, 
+         180, 170, 155, 140, 130, 125]  # Next year
+sales2 = [125, 120, 135, 150, 165, 180,
+          185, 175, 160, 145, 135, 130]  # Following year
+
+# Moving Average (smoothing)
+# 3-month moving average for sales
+MA_3 = []
+for i in range(2, len(sales)):
+    ma = (sales[i-2] + sales[i-1] + sales[i]) / 3
+    MA_3.append(ma)
+# MA_3 ≈ [121.7, 130, 145, 160, 171.7, 175, 168.3, 155, 141.7]
+
+# Stationarity
+# A time series is stationary if:
+# 1. Constant mean
+# 2. Constant variance
+# 3. Autocovariance depends only on lag, not time
+
+# Augmented Dickey-Fuller test tests for stationarity
+# If p-value < 0.05, reject null of non-stationarity
+
+# Differencing to achieve stationarity
+# First difference: ΔY_t = Y_t - Y_{t-1}
+# Second difference: Δ²Y_t = ΔY_t - ΔY_{t-1}
+
+# Autocorrelation Function (ACF)
+# Correlation between Y_t and Y_{t-k} for different lags k
+# PACF: Partial autocorrelation (correlation controlling for intermediate lags)
+
+# ARIMA Models (AutoRegressive Integrated Moving Average)
+# ARIMA(p,d,q) where:
+# p = autoregressive order (AR)
+# d = differencing order (I)
+# q = moving average order (MA)
+
+# AR(p): Y_t = c + φ₁Y_{t-1} + φ₂Y_{t-2} + ... + φₚY_{t-p} + ε_t
+# MA(q): Y_t = c + ε_t + θ₁ε_{t-1} + θ₂ε_{t-2} + ... + θ_qε_{t-q}
+# ARMA(p,q): Combines AR and MA
+# ARIMA(p,d,q): ARMA after differencing d times
+
+# Example: AR(1) model
+# Y_t = 0.7Y_{t-1} + ε_t, ε_t ~ N(0,1)
+# If Y_{t-1} = 100, then E[Y_t] = 0.7×100 = 70
+
+# Exponential Smoothing
+# Simple: Ŷ_{t+1} = αY_t + (1-α)Ŷ_t
+# Holt's: Includes trend: Ŷ = level + trend
+# Holt-Winter's: Includes trend and seasonality
+
+# Forecasting steps:
+# 1. Visualize data (time plot)
+# 2. Check stationarity (ADF test)
+# 3. Transform if needed (differencing, logs)
+# 4. Identify model (ARIMA orders from ACF/PACF)
+# 5. Estimate parameters
+# 6. Diagnostic checks (residual analysis)
+# 7. Forecast
+# 8. Evaluate forecast accuracy (MAE, RMSE, MAPE)
+
+# Evaluation metrics:
+# MAE = mean absolute error
+# RMSE = root mean squared error
+# MAPE = mean absolute percentage error
+
+# Financial Time Series (GARCH)
+# Models volatility clustering
+# σ_t² = ω + αε_{t-1}² + βσ_{t-1}²
+# Where σ_t² is conditional variance at time t</textarea>
+                        <button class="run-btn" onclick="runCode('editor-9', 'output-9')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Time Series Analysis
+                        </div>
+                        <div class="preview-container" id="output-9"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li><code>Stationarity</code>: Statistical properties constant over time</li>
+                                <li><code>Differencing</code>: Creates stationary series from non-stationary</li>
+                                <li><code>Autocorrelation</code>: Correlation with past values</li>
+                                <li><code>ARIMA</code>: AutoRegressive Integrated Moving Average</li>
+                                <li><code>Exponential Smoothing</code>: Weighted average of past observations</li>
+                                <li><code>Seasonality</code>: Regular periodic patterns</li>
+                                <li><code>Forecasting</code>: Predicting future values</li>
+                                <li><code>Model Selection</code>: Choosing appropriate model complexity</li>
+                                <li><code>Volatility</code>: Time-varying variance (GARCH models)</li>
+                                <li><code>Decomposition</code>: Separating trend, seasonality, noise</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-clock"></i> Temporal Data Analysis</h3>
+                            <p>Time series analysis is essential in today's data-rich world where measurements are collected continuously over time. From stock prices to weather data, from website traffic to physiological measurements, time series data surrounds us. The fundamental challenge is that time series observations are not independent - they exhibit serial dependence that must be modeled appropriately. Ignoring this dependence leads to invalid statistical inferences and poor forecasts.</p>
+                            
+                            <p>The Box-Jenkins methodology for ARIMA modeling revolutionized time series analysis by providing a systematic approach to model identification, estimation, and diagnostic checking. Modern extensions handle complex seasonality, multiple seasonality (like hourly, daily, and weekly patterns), and structural breaks. Machine learning approaches like recurrent neural networks (RNNs) and Long Short-Term Memory (LSTM) networks have recently shown impressive results for certain time series problems, though traditional statistical models often remain more interpretable and require less data.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-chart-line"></i> Forecasting</h4>
+                                    <p>Time series forecasting involves extrapolating patterns into the future. Different horizons (short-term vs long-term) and different purposes (point forecasts vs interval forecasts) require different approaches and models.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-wave-square"></i> Seasonality & Cycles</h4>
+                                    <p>Separating seasonal patterns from trend and noise allows for better understanding and forecasting. Multiple seasonality (daily, weekly, yearly) requires sophisticated decomposition methods.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-bolt"></i> Volatility Modeling</h4>
+                                    <p>Financial time series exhibit volatility clustering (periods of high and low variability). GARCH models capture this feature, which is crucial for risk management and option pricing.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-chart-line"></i> Economic & Business Applications</h4>
+                                <p>Central banks use time series models to forecast inflation and guide monetary policy. Energy companies forecast electricity demand to optimize generation. Retailers forecast sales to manage inventory. Transportation companies forecast passenger demand to schedule vehicles. Healthcare organizations forecast patient admissions to allocate staff. Financial institutions forecast asset returns and volatility for trading and risk management. Tech companies forecast server loads to provision resources. The COVID-19 pandemic highlighted the importance of epidemiological forecasting models. In each domain, accurate time series forecasting enables better planning, resource allocation, and decision-making. However, all forecasts are uncertain, and understanding forecast uncertainty (through prediction intervals) is as important as the point forecast itself.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Analyze Time Series Data:</strong> Work with this time series:</p>
+                            <ul>
+                                <li>Data: [100, 110, 120, 115, 125, 130, 140, 135, 145, 150] (monthly sales)</li>
+                                <li>Calculate 3-period moving average</li>
+                                <li>Identify trend direction</li>
+                                <li>Calculate first differences</li>
+                                <li>Suggest appropriate ARIMA order based on description</li>
+                                <li>Calculate simple exponential smoothing with α=0.3</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 10 -->
+            <div class="course-module" id="module10" data-aos="fade-up" data-difficulty="advanced">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>ADVANCED ANALYTICS</h1>
+                    <h3>Master advanced statistical concepts and techniques</h3>
+                    <span class="difficulty">Advanced</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/2103/2103655.png" class="module-icon" alt="Statistics Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 10: <span>Advanced Statistical Methods</span></h1>
+                    <p>Advanced analytics involves sophisticated statistical techniques for complex data structures and challenging problems. This module covers methods for high-dimensional data, nonparametric approaches, causal inference, and machine learning integration. These techniques push beyond traditional statistics to handle modern data science challenges.</p>
+                    
+                    <p>You'll learn about methods that don't rely on distributional assumptions, techniques for establishing causality rather than just correlation, and approaches for data where traditional methods fail. These advanced methods enable analysis of complex, high-dimensional datasets common in today's data-rich environments.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Advanced Methods</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-10" spellcheck="false"># Nonparametric Statistics
+# Methods that don't assume specific distribution
+
+# 1. Bootstrap
+# Resample data with replacement to estimate sampling distribution
+# Steps:
+# 1. Take sample of size n from data (with replacement)
+# 2. Calculate statistic (mean, median, etc.)
+# 3. Repeat many times (e.g., 10,000)
+# 4. Use distribution for inference (confidence intervals)
+
+# Example: Bootstrap CI for median
+data = [23, 45, 67, 34, 89, 56, 78, 41]
+n_boot = 10000
+bootstrap_medians = []
+for i in range(n_boot):
+    sample = random.choice(data, size=len(data), replace=True)
+    bootstrap_medians.append(np.median(sample))
+# 95% CI = (2.5th percentile, 97.5th percentile)
+
+# 2. Permutation Tests
+# Test hypothesis by randomly permuting group labels
+# Example: Test if two groups have different means
+group1 = [23, 45, 67, 34]
+group2 = [89, 56, 78, 41]
+observed_diff = mean(group2) - mean(group1)
+# Pool data, randomly reassign to groups, calculate diff
+# Repeat many times, p-value = proportion ≥ observed_diff
+
+# 3. Kernel Density Estimation
+# Nonparametric density estimation
+# f_hat(x) = (1/(nh)) Σ K((x - X_i)/h)
+# where K is kernel function, h is bandwidth
+
+# High-Dimensional Statistics
+# When p (predictors) > n (observations)
+
+# 1. Regularization Methods
+# Ridge regression: min Σ(y_i - ŷ_i)² + λΣβ_j²
+# Lasso regression: min Σ(y_i - ŷ_i)² + λΣ|β_j|
+# Elastic Net: Combination of ridge and lasso
+
+# Lasso does variable selection (some coefficients = 0)
+# Ridge shrinks coefficients toward zero
+
+# 2. Principal Component Analysis (PCA)
+# Reduce dimensionality while preserving variance
+# Find linear combinations (principal components) that explain most variance
+# PC1 = direction of maximum variance
+# PC2 = orthogonal to PC1, next highest variance, etc.
+
+# Causal Inference
+# Moving from correlation to causation
+
+# 1. Randomized Controlled Trials (RCTs)
+# Gold standard for causal inference
+# Random assignment ensures groups comparable
+
+# 2. Observational Studies
+# When RCTs not possible
+# Methods: Propensity score matching, difference-in-differences,
+# instrumental variables, regression discontinuity
+
+# Propensity Score: P(Treatment|Covariates)
+# Match treated and control units with similar propensity scores
+
+# 3. Structural Equation Modeling (SEM)
+# Model causal relationships among variables
+# Path diagrams, latent variables
+
+# Machine Learning Integration
+
+# 1. Cross-Validation
+# k-fold: Split data into k folds, train on k-1, test on 1
+# Repeat k times, average performance
+# Avoids overfitting, estimates generalization error
+
+# 2. Ensemble Methods
+# Combine multiple models
+# Bagging: Bootstrap aggregating (random forests)
+# Boosting: Sequentially improve weak learners
+# Stacking: Combine predictions from multiple models
+
+# 3. Model Evaluation
+# Classification: ROC curves, AUC, precision, recall, F1
+# Regression: R², RMSE, MAE
+# Always use hold-out test set for final evaluation
+
+# Bayesian Nonparametrics
+# Models with infinite-dimensional parameter spaces
+# Dirichlet Process: Prior over distributions
+# Gaussian Process: Prior over functions
+
+# Functional Data Analysis
+# Analyze curves, surfaces, shapes
+# Example: Growth curves, brain images, economic trajectories
+
+# Spatial Statistics
+# Analyze data with spatial correlation
+# Kriging: Best linear unbiased prediction for spatial data</textarea>
+                        <button class="run-btn" onclick="runCode('editor-10', 'output-10')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Advanced Analytics
+                        </div>
+                        <div class="preview-container" id="output-10"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li><code>Nonparametric Methods</code>: Few distributional assumptions</li>
+                                <li><code>Bootstrap</code>: Resampling for inference</li>
+                                <li><code>Regularization</code>: Prevents overfitting in high dimensions</li>
+                                <li><code>PCA</code>: Dimensionality reduction</li>
+                                <li><code>Causal Inference</code>: Methods for establishing causality</li>
+                                <li><code>Cross-Validation</code>: Model evaluation and selection</li>
+                                <li><code>Ensemble Methods</code>: Combine multiple models</li>
+                                <li><code>Bayesian Nonparametrics</code>: Flexible models</li>
+                                <li><code>Spatial Statistics</code>: Account for spatial correlation</li>
+                                <li><code>Functional Data</code>: Analyze curves and shapes</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-rocket"></i> Cutting-Edge Statistical Methodology</h3>
+                            <p>Advanced statistical methods tackle problems where traditional approaches break down or provide unsatisfactory solutions. In the era of big data, high-dimensional statistics (where the number of variables exceeds the number of observations) has become crucial. Regularization methods like LASSO and elastic net enable variable selection and stable estimation in these challenging settings. Nonparametric methods provide flexibility when distributional assumptions are untenable, while Bayesian nonparametrics offer even greater flexibility through infinite-dimensional models.</p>
+                            
+                            <p>Causal inference represents one of the most important advancements in applied statistics. While traditional statistics often focuses on prediction and association, many real-world questions are fundamentally causal: "Will this policy reduce poverty?" "Does this drug cure the disease?" "Does this marketing campaign increase sales?" Methods like propensity score matching, difference-in-differences, and instrumental variables allow researchers to draw causal conclusions from observational data when randomized experiments are impossible or unethical. These methods have revolutionized fields from economics to epidemiology.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-tachometer-alt"></i> High-Dimensional Inference</h4>
+                                    <p>When p > n, traditional methods fail. Sparse methods, sure independence screening, and false discovery rate control enable valid inference in high dimensions.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-sitemap"></i> Causal Discovery</h4>
+                                    <p>Beyond estimating causal effects from known structures, causal discovery algorithms attempt to learn causal structures from data, though with important limitations.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-sync-alt"></i> Statistical Learning Theory</h4>
+                                    <p>Theoretical foundations explain why methods work, provide generalization bounds, and guide model complexity selection through concepts like VC dimension and Rademacher complexity.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-industry"></i> Modern Data Science Applications</h4>
+                                <p>Tech companies use high-dimensional statistics for recommendation systems and ad targeting. Pharmaceutical companies use causal inference to analyze real-world evidence alongside clinical trials. Financial institutions use spatial statistics for risk modeling. Genomics researchers use regularization methods to identify genetic markers from thousands of potential predictors. Social scientists use difference-in-differences to evaluate policy impacts. Environmental scientists use functional data analysis to study climate change patterns. Marketing analysts use ensemble methods for customer churn prediction. The integration of statistical methods with machine learning has created powerful hybrid approaches that combine the interpretability and uncertainty quantification of statistics with the predictive power of machine learning. As data grows in volume, velocity, and variety, these advanced methods become increasingly essential for extracting meaningful insights and making data-driven decisions.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Apply Advanced Methods:</strong> Work with these advanced concepts:</p>
+                            <ul>
+                                <li>Bootstrap: For sample [3,5,7,9,11], generate bootstrap samples and estimate 95% CI for mean</li>
+                                <li>LASSO: Explain why it's preferred over OLS when p > n</li>
+                                <li>Causal inference: Design difference-in-differences study for education policy</li>
+                                <li>Cross-validation: Explain k-fold CV and its advantages</li>
+                                <li>Nonparametric: When to use nonparametric tests vs parametric</li>
+                                <li>Dimensionality: Explain curse of dimensionality</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Practice Playground -->
+            <div class="course-module" id="playground" data-aos="fade-up">
+                <div class="course-three">
+                    <h1>PRACTICE PLAYGROUND</h1>
+                    <h3>Experiment with statistical concepts</h3>
+                    <i class="fas fa-laptop-code course-icon" style="color: var(--primary);"></i>
+                </div>
+                <div class="course-one">
+                    <h1>Your Statistics Playground: <span>Try Your Own Analysis</span></h1>
+                    <p>Use this space to experiment with everything you've learned. Try different statistical techniques and see how they work! This is your sandbox to practice and explore statistical concepts.</p>
+                    
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Statistics Practice</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="playground-editor" spellcheck="false"># Your Statistics Practice Area
+
+# Sample Data for Practice
+heights = [165, 170, 175, 160, 185, 172, 168, 178, 182, 169]  # in cm
+weights = [62, 65, 70, 58, 85, 68, 63, 75, 80, 66]  # in kg
+test_scores = [85, 92, 78, 90, 85, 88, 95, 83, 87, 91]
+study_hours = [10, 12, 8, 15, 9, 11, 14, 7, 13, 10]
+
+# Descriptive Statistics Practice
+print("=== DESCRIPTIVE STATISTICS ===")
+print(f"Heights: {heights}")
+print(f"Mean height: {sum(heights)/len(heights):.2f} cm")
+print(f"Max height: {max(heights)} cm")
+print(f"Min height: {min(heights)} cm")
+print(f"Range: {max(heights)-min(heights)} cm")
+
+# Probability Practice
+print("\n=== PROBABILITY ===")
+print("Coin toss probabilities:")
+print("P(Heads) = 0.5")
+print("P(2 heads in 3 tosses) = C(3,2) × (0.5)² × (0.5) = 3 × 0.25 × 0.5 = 0.375")
+
+# Hypothesis Testing Example
+print("\n=== HYPOTHESIS TESTING ===")
+print("Testing if mean height > 170 cm")
+sample_mean = sum(heights)/len(heights)
+print(f"Sample mean: {sample_mean:.2f}")
+print(f"Sample size: {len(heights)}")
+print("H₀: μ = 170 cm")
+print("H₁: μ > 170 cm")
+
+# Regression Practice
+print("\n=== REGRESSION ANALYSIS ===")
+print("Relationship between study hours and test scores:")
+print(f"Study hours: {study_hours}")
+print(f"Test scores: {test_scores}")
+print("Simple linear regression: Score = β₀ + β₁ × Hours")
+
+# Distribution Practice
+print("\n=== DISTRIBUTIONS ===")
+print("Normal distribution: 68-95-99.7 rule")
+print("Within 1σ: 68% of data")
+print("Within 2σ: 95% of data")
+print("Within 3σ: 99.7% of data")
+
+# Bayesian Example
+print("\n=== BAYESIAN STATISTICS ===")
+print("Prior: Beta(2,2) - slightly biased toward fair coin")
+print("Data: 7 heads in 10 flips")
+print("Posterior: Beta(2+7, 2+3) = Beta(9,5)")
+print("Posterior mean: 9/(9+5) = 9/14 ≈ 0.643")
+
+# Ideas to Try:
+# 1. Calculate correlation between heights and weights
+# 2. Perform t-test comparing two groups
+# 3. Calculate confidence intervals
+# 4. Simulate probability distributions
+# 5. Practice statistical formulas
+# 6. Create data visualizations mentally
+# 7. Design statistical studies
+# 8. Interpret statistical results</textarea>
+                        <button class="run-btn" onclick="runCode('playground-editor', 'playground-output')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Statistics Practice Output
+                        </div>
+                        <div class="preview-container" id="playground-output"></div>
+                    </div>
+                    
+                    <div class="course-five">
+                        <h3>Challenge Exercises:</h3>
+                        <ol>
+                            <li>Create a complete statistical analysis:
+                                <ul>
+                                    <li>Generate sample data</li>
+                                    <li>Calculate descriptive statistics</li>
+                                    <li>Perform hypothesis test</li>
+                                    <li>Calculate confidence interval</li>
+                                    <li>Interpret results</li>
+                                </ul>
+                            </li>
+                            <li>Design a Bayesian analysis for A/B testing</li>
+                            <li>Build regression models with diagnostics</li>
+                            <li>Simulate different probability distributions</li>
+                            <li>Practice statistical formula derivations</li>
+                            <li>Create power analysis for study design</li>
+                        </ol>
+                        
+                        <h3>Statistical Formulas to Practice:</h3>
+                        <ul>
+                            <li>Mean: μ = Σx/n</li>
+                            <li>Variance: σ² = Σ(x-μ)²/(n-1)</li>
+                            <li>Standard deviation: σ = √σ²</li>
+                            <li>Correlation: r = Σ[(x-x̄)(y-ȳ)] / √[Σ(x-x̄)²Σ(y-ȳ)²]</li>
+                            <li>Regression slope: β₁ = Σ[(x-x̄)(y-ȳ)] / Σ(x-x̄)²</li>
+                            <li>t-statistic: t = (x̄ - μ₀) / (s/√n)</li>
+                            <li>Z-score: z = (x - μ) / σ</li>
+                            <li>Binomial probability: P(X=k) = C(n,k) × p^k × (1-p)^(n-k)</li>
+                            <li>Bayes' Theorem: P(A|B) = [P(B|A) × P(A)] / P(B)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Premium Subscription CTA -->
+            <div class="premium-subscription" id="premium-subscription" data-aos="fade-up">
+                <h2>Unlock Premium SkillMynte Content</h2>
+                <p>Upgrade to SkillMynte Pro for exclusive courses, advanced projects, and personalized learning paths</p>
+                
+                <div class="premium-features">
+                    <div class="premium-feature">
+                        <i class="fas fa-gem"></i>
+                        <h3>Premium Courses</h3>
+                        <p>Access our entire library of advanced courses and exclusive content</p>
+                    </div>
+                    <div class="premium-feature">
+                        <i class="fas fa-trophy"></i>
+                        <h3>Certification</h3>
+                        <p>Earn industry-recognized certificates to showcase your skills</p>
+                    </div>
+                    <div class="premium-feature">
+                        <i class="fas fa-user-graduate"></i>
+                        <h3>Mentorship</h3>
+                        <p>Get personalized guidance from industry experts</p>
+                    </div>
+                </div>
+                
+                <div class="pricing-options">
+                    <div class="pricing-option">
+                        <h3>Monthly</h3>
+                        <div class="price">₦3,500<span>/month</span></div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> All Premium Courses</li>
+                            <li><i class="fas fa-check"></i> Practice Projects</li>
+                            <li><i class="fas fa-check"></i> Community Access</li>
+                            <li><i class="fas fa-check"></i> Certificates</li>
+                            <li><i class="fas fa-check"></i> personal AI inbuilt</li>
+                        </ul>
+                        <a href="premium courses.html"><button class="pricing-btn">Get Started</button></a>
+                    </div>
+                    
+                    <div class="pricing-option" style="border-color: var(--white); transform: scale(1.05);">
+                        <h3>Annual <span style="background: var(--white); color: #2962FF; padding: 0.2rem 0.5rem; border-radius: 20px; font-size: 0.8rem; margin-left: 0.5rem;">Best Value</span></h3>
+                        <div class="price">₦37,000<span>/year</span></div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> All Premium Courses</li>
+                            <li><i class="fas fa-check"></i> Practice Projects</li>
+                            <li><i class="fas fa-check"></i> Community Access</li>
+                            <li><i class="fas fa-check"></i> Certificates</li>
+                            <li><i class="fas fa-check"></i> personal AI inbuilt</li>
+                        </ul>
+                        <a href="premium courses.html"><button class="pricing-btn">Get Started</button></a>
+                    </div>
+                    
+                    <div class="pricing-option">
+                        <h3>Lifetime</h3>
+                        <div class="price">₦200,000<span>/once</span></div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> All Premium Courses</li>
+                            <li><i class="fas fa-check"></i> Practice Projects</li>
+                            <li><i class="fas fa-check"></i> Community Access</li>
+                            <li><i class="fas fa-check"></i> Certificates</li>
+                            <li><i class="fas fa-check"></i> personal AI inbuilt</li>
+                        </ul>
+                        <a href="premium courses.html"><button class="pricing-btn">Get Started</button></a>
+                    </div>
+                </div>
+                
+                <button class="premium-cta-btn">
+                    <i class="fas fa-rocket"></i> Upgrade to SkillMynte Pro
+                </button>
+            </div>
+            
+            <!-- Footer -->
+            <footer>
+                <div class="footer-content">
+                    <div class="footer-column">
+                        <h3>About SkillMynte</h3>
+                        <p>SkillMynte is a premium learning platform dedicated to helping analysts of all levels master statistical methods through interactive courses and hands-on practice.</p>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/profile.php?id=61581069862024"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://x.com/SkillMynte_AI?t=CcoQtjWZGGOXqfTfrsufjQ&s=09"><i class="fab fa-twitter"></i></a>
+                            <a href="https://youtube.com/@skillmynte?si=LmX2MjSKU3N1Xa5S"><i class="fab fa-youtube"></i></a>
+                            <a href="https://www.instagram.com/skillmynte_ai?igsh=MTd1YWpjdXV1OHhrbA=="><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Quick Links</h3>
+                        <ul class="footer-links">
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Home</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Courses</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Practice</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Projects</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Popular Courses</h3>
+                        <ul class="footer-links">
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Statistics Fundamentals</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Probability Theory</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Regression Analysis</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Bayesian Methods</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Time Series Analysis</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Contact Us</h3>
+                        <p><i class="fas fa-envelope"></i>Skillmynteofficial@gmail.com</p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 SkillMynte. All rights reserved. | Designed with <i class="fas fa-heart" style="color: var(--primary);"></i> for the data science community</p>
+                </div>
+            </footer>
+
+            <script>
+                // Function to run code in preview
+                function runCode(editorId, outputId) {
+                    const editor = document.getElementById(editorId);
+                    const output = document.getElementById(outputId);
+                    
+                    try {
+                        // For statistics code, we'll display it as formatted text
+                        output.innerHTML = `<pre style="color: var(--primary-light); font-family: 'Fira Code', monospace; white-space: pre-wrap;">${editor.value}</pre>`;
+                    } catch (error) {
+                        output.innerHTML = `<div style="color: var(--accent); padding: 1rem;">Error: ${error.message}</div>`;
+                    }
+                }
+                
+                // Initialize all editors with their default output
+                document.addEventListener('DOMContentLoaded', function() {
+                    // Run all code editors on load
+                    runCode('editor-1', 'output-1');
+                    runCode('editor-2', 'output-2');
+                    runCode('editor-3', 'output-3');
+                    runCode('editor-4', 'output-4');
+                    runCode('editor-5', 'output-5');
+                    runCode('editor-6', 'output-6');
+                    runCode('editor-7', 'output-7');
+                    runCode('editor-8', 'output-8');
+                    runCode('editor-9', 'output-9');
+                    runCode('editor-10', 'output-10');
+                    runCode('playground-editor', 'playground-output');
+                    
+                    // Add event listeners to all run buttons in editor headers
+                    document.querySelectorAll('.run-editor').forEach(btn => {
+                        btn.addEventListener('click', function() {
+                            const editorContainer = this.closest('.code-editor-container');
+                            const editor = editorContainer.querySelector('.code-editor');
+                            const output = editorContainer.querySelector('.preview-container');
+                            runCode(editor.id, output.id);
+                        });
+                    });
+                    
+                    // Add reset functionality
+                    document.querySelectorAll('.reset-editor').forEach(btn => {
+                        btn.addEventListener('click', function() {
+                            const editorContainer = this.closest('.code-editor-container');
+                            const editor = editorContainer.querySelector('.code-editor');
+                            const originalContent = editor.dataset.original || editor.defaultValue;
+                            editor.value = originalContent;
+                            runCode(editor.id, editorContainer.querySelector('.preview-container').id);
+                        });
+                    });
+                    
+                    // Store original content for reset functionality
+                    document.querySelectorAll('.code-editor').forEach(editor => {
+                        editor.dataset.original = editor.value;
+                    });
+
+                    // Handle navbar scroll effect
+                    window.addEventListener('scroll', function() {
+                        const navbar = document.getElementById('navbar');
+                        if (window.scrollY > 50) {
+                            navbar.classList.add('scrolled');
+                        } else {
+                            navbar.classList.remove('scrolled');
+                        }
+                    });
+
+                    // FIXED: Hamburger menu functionality
+                    const menuToggle = document.getElementById('menuToggle');
+                    const navMenu = document.querySelector('.nav-menu');
+                    const sidebar = document.getElementById('sidebar');
+                    const body = document.body;
+
+                    function toggleMobileMenu() {
+                        const isActive = navMenu.classList.contains('active');
+                        
+                        if (isActive) {
+                            // Close menu
+                            navMenu.classList.remove('active');
+                            sidebar.classList.remove('active');
+                            menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                            body.classList.remove('menu-open');
+                            menuToggle.setAttribute('aria-expanded', 'false');
+                        } else {
+                            // Open menu
+                            navMenu.classList.add('active');
+                            sidebar.classList.add('active');
+                            menuToggle.innerHTML = '<i class="fas fa-times"></i>';
+                            body.classList.add('menu-open');
+                            menuToggle.setAttribute('aria-expanded', 'true');
+                        }
+                    }
+
+                    function closeMobileMenu() {
+                        navMenu.classList.remove('active');
+                        sidebar.classList.remove('active');
+                        menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                        body.classList.remove('menu-open');
+                        menuToggle.setAttribute('aria-expanded', 'false');
+                    }
+
+                    // Mobile menu toggle
+                    menuToggle.addEventListener('click', function(e) {
+                        e.stopPropagation();
+                        toggleMobileMenu();
+                    });
+
+                    // Close menu when clicking on nav links
+                    document.querySelectorAll('.nav-link').forEach(link => {
+                        link.addEventListener('click', function() {
+                            if (window.innerWidth <= 1024) {
+                                closeMobileMenu();
+                            }
+                        });
+                    });
+
+                    // Close menu when clicking on dropdown items
+                    document.querySelectorAll('.dropdown-item').forEach(item => {
+                        item.addEventListener('click', function() {
+                            if (window.innerWidth <= 1024) {
+                                closeMobileMenu();
+                            }
+                        });
+                    });
+
+                    // Close menu when clicking outside
+                    document.addEventListener('click', function(e) {
+                        if (window.innerWidth <= 1024 && 
+                            navMenu.classList.contains('active') &&
+                            !e.target.closest('.nav-menu') && 
+                            !e.target.closest('.menu-toggle') &&
+                            !e.target.closest('.sidebar')) {
+                            closeMobileMenu();
+                        }
+                    });
+
+                    // Close menu on escape key
+                    document.addEventListener('keydown', function(e) {
+                        if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+                            closeMobileMenu();
+                        }
+                    });
+
+                    // Close menu on resize if switching to desktop
+                    window.addEventListener('resize', function() {
+                        if (window.innerWidth > 1024 && navMenu.classList.contains('active')) {
+                            closeMobileMenu();
+                        }
+                    });
+
+                    // Mobile dropdown functionality
+                    document.querySelectorAll('.courses-dropdown').forEach(dropdown => {
+                        const button = dropdown.querySelector('.courses-btn');
+                        
+                        button.addEventListener('click', function(e) {
+                            if (window.innerWidth <= 1024) {
+                                e.preventDefault();
+                                e.stopPropagation();
+                                dropdown.classList.toggle('active');
+                            }
+                        });
+                    });
+
+                    // Level filtering functionality
+                    const levelButtons = document.querySelectorAll('.level-btn');
+                    const modules = document.querySelectorAll('.course-module');
+                    
+                    levelButtons.forEach(button => {
+                        button.addEventListener('click', function() {
+                            const level = this.getAttribute('data-level');
+                            
+                            // Remove active class from all buttons
+                            levelButtons.forEach(btn => btn.classList.remove('active'));
+                            // Add active class to clicked button
+                            this.classList.add('active');
+                            
+                            if (level === 'all') {
+                                // Show all modules
+                                modules.forEach(module => {
+                                    module.style.display = 'flex';
+                                });
+                            } else if (level === 'advanced') {
+                                // Show advanced modules (7-10)
+                                modules.forEach(module => {
+                                    const moduleId = module.id;
+                                    if (moduleId.includes('module7') || moduleId.includes('module8') || 
+                                        moduleId.includes('module9') || moduleId.includes('module10')) {
+                                        module.style.display = 'flex';
+                                    } else {
+                                        module.style.display = 'none';
+                                    }
+                                });
+                            } else {
+                                // Show modules with matching difficulty
+                                modules.forEach(module => {
+                                    const difficulty = module.getAttribute('data-difficulty');
+                                    if (difficulty === level) {
+                                        module.style.display = 'flex';
+                                    } else {
+                                        module.style.display = 'none';
+                                    }
+                                });
+                            }
+                            
+                            // Scroll to first visible module
+                            const firstVisible = document.querySelector('.course-module[style="display: flex;"]');
+                            if (firstVisible) {
+                                firstVisible.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                            }
+                        });
+                    });
+
+                    // Search functionality
+                    const searchInput = document.getElementById('search-input');
+                    
+                    searchInput.addEventListener('input', function() {
+                        const searchTerm = this.value.toLowerCase().trim();
+                        
+                        if (searchTerm === '') {
+                            // Show all modules if search is empty
+                            modules.forEach(module => {
+                                module.style.display = 'flex';
+                            });
+                            return;
+                        }
+                        
+                        modules.forEach(module => {
+                            const moduleTitle = module.querySelector('h1').textContent.toLowerCase();
+                            const moduleContent = module.textContent.toLowerCase();
+                            
+                            if (moduleTitle.includes(searchTerm) || moduleContent.includes(searchTerm)) {
+                                module.style.display = 'flex';
+                            } else {
+                                module.style.display = 'none';
+                            }
+                        });
+                    });
+                });
+                
+                // Smooth scrolling for sidebar links
+                document.querySelectorAll('.sidebar-item').forEach(item => {
+                    item.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        
+                        // Remove active class from all items
+                        document.querySelectorAll('.sidebar-item').forEach(i => {
+                            i.classList.remove('active');
+                        });
+                        
+                        // Add active class to clicked item
+                        this.classList.add('active');
+                        
+                        // Close mobile menu if open
+                        if (window.innerWidth <= 1024) {
+                            document.querySelector('.nav-menu').classList.remove('active');
+                            document.querySelector('.sidebar').classList.remove('active');
+                            document.querySelector('.menu-toggle').innerHTML = '<i class="fas fa-bars"></i>';
+                            document.body.classList.remove('menu-open');
+                        }
+                        
+                        // Scroll to section
+                        const targetId = this.getAttribute('href');
+                        const targetElement = document.querySelector(targetId);
+                        if (targetElement) {
+                            window.scrollTo({
+                                top: targetElement.offsetTop - 100,
+                                behavior: 'smooth'
+                            });
+                        }
+                    });
+                });
+            </script>
+        </div>
+    </div>
+</body>
+</html>

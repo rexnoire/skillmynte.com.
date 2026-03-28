@@ -1,0 +1,1876 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excel Fundamentals | SkillMynte</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="rounded_logo.png">
+    <link rel="stylesheet" href="free excel course .css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-table"></i> <!-- Changed from fa-code to fa-table -->
+                SKILLMYNTE
+            </a>
+            <div class="nav-menu">
+                <a href="#" class="nav-link">Home</a>
+                <a href="#" class="nav-link">Courses</a>
+                <a href="#" class="nav-link">Practice</a>
+                <a href="#" class="nav-link">Projects</a>
+                
+                <div class="courses-dropdown">
+                    <button class="courses-btn">
+                        <i class="fas fa-book-open"></i> Jump to Module
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#module1" class="dropdown-item">
+                            <i class="fas fa-file-excel excel-icon"></i> Excel Basics
+                        </a>
+                        <a href="#module2" class="dropdown-item">
+                            <i class="fas fa-file-excel excel-icon"></i> Cells & Formatting
+                        </a>
+                        <a href="#module3" class="dropdown-item">
+                            <i class="fas fa-file-excel excel-icon"></i> Data Entry & Formulas
+                        </a>
+                        <a href="#module4" class="dropdown-item">
+                            <i class="fas fa-file-excel excel-icon"></i> Tables & Ranges
+                        </a>
+                        <a href="#module5" class="dropdown-item">
+                            <i class="fas fa-file-excel excel-icon"></i> Data Validation & Forms
+                        </a>
+                        <a href="#module6" class="dropdown-item">
+                            <i class="fas fa-file-excel excel-icon"></i> Excel Functions
+                        </a>
+                        <a href="#module7" class="dropdown-item">
+                            <i class="fas fa-file-excel excel-icon"></i> Charts & Visualizations
+                        </a>
+                        <a href="#module8" class="dropdown-item">
+                            <i class="fas fa-file-excel excel-icon"></i> PivotTables & Power Query
+                        </a>
+                        <a href="#module9" class="dropdown-item">
+                            <i class="fas fa-file-excel excel-icon"></i> Accessibility
+                        </a>
+                        <a href="#module10" class="dropdown-item">
+                            <i class="fas fa-file-excel excel-icon"></i> Advanced Excel (Macros & VBA)
+                        </a>
+                        <a href="#playground" class="dropdown-item">
+                            <i class="fas fa-laptop-code"></i> Practice Playground
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Premium Course Navigation -->
+    <div class="course-navigation">
+        <div class="course-nav-container">
+            <div class="course-category">
+                <button class="category-btn">
+                    <i class="fas fa-layer-group"></i> Categories
+                </button>
+                <div class="category-dropdown">
+                    <a href="#" class="category-item">
+                        <i class="fas fa-file-excel excel-icon"></i> Excel Essentials
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fas fa-chart-line"></i> Data Analysis
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fas fa-calculator"></i> Formulas & Functions
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fas fa-chart-pie"></i> Charts & Dashboards
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fas fa-table"></i> PivotTables
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fas fa-code"></i> VBA & Macros
+                    </a>
+                </div>
+            </div>
+            
+            <div class="course-levels">
+                <button class="level-btn active" data-level="all">All Levels</button>
+                <button class="level-btn" data-level="beginner">Beginner</button>
+                <button class="level-btn" data-level="intermediate">Intermediate</button>
+                <button class="level-btn" data-level="advanced">Advanced</button>
+            </div>
+            
+            <div class="course-search">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" class="search-input" id="search-input" placeholder="Search courses...">
+            </div>
+        </div>
+    </div>
+    
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <a href="#module1" class="sidebar-item active completed">
+            <i class="fas fa-file-excel excel-icon"></i>
+            <span>Module 1: Excel Basics</span>
+            <span class="progress-indicator"><i class="fas fa-check"></i></span>
+        </a>
+        <a href="#module2" class="sidebar-item completed">
+            <i class="fas fa-file-excel excel-icon"></i>
+            <span>Module 2: Cells & Formatting</span>
+            <span class="progress-indicator"><i class="fas fa-check"></i></span>
+        </a>
+        <a href="#module3" class="sidebar-item completed">
+            <i class="fas fa-file-excel excel-icon"></i>
+            <span>Module 3: Data Entry & Formulas</span>
+            <span class="progress-indicator"><i class="fas fa-check"></i></span>
+        </a>
+        <a href="#module4" class="sidebar-item">
+            <i class="fas fa-file-excel excel-icon"></i>
+            <span>Module 4: Tables & Ranges</span>
+            <span class="progress-indicator">4</span>
+        </a>
+        <a href="#module5" class="sidebar-item">
+            <i class="fas fa-file-excel excel-icon"></i>
+            <span>Module 5: Data Validation & Forms</span>
+            <span class="progress-indicator">5</span>
+        </a>
+        <a href="#module6" class="sidebar-item">
+            <i class="fas fa-file-excel excel-icon"></i>
+            <span>Module 6: Excel Functions</span>
+            <span class="progress-indicator">6</span>
+        </a>
+        <a href="#module7" class="sidebar-item">
+            <i class="fas fa-file-excel excel-icon"></i>
+            <span>Module 7: Charts & Visualizations</span>
+            <span class="progress-indicator">7</span>
+        </a>
+        <a href="#module8" class="sidebar-item">
+            <i class="fas fa-file-excel excel-icon"></i>
+            <span>Module 8: PivotTables & Power Query</span>
+            <span class="progress-indicator">8</span>
+        </a>
+        <a href="#module9" class="sidebar-item">
+            <i class="fas fa-file-excel excel-icon"></i>
+            <span>Module 9: Accessibility</span>
+            <span class="progress-indicator">9</span>
+        </a>
+        <a href="#module10" class="sidebar-item">
+            <i class="fas fa-file-excel excel-icon"></i>
+            <span>Module 10: Advanced Excel (Macros & VBA)</span>
+            <span class="progress-indicator">10</span>
+        </a>
+        <a href="#playground" class="sidebar-item">
+            <i class="fas fa-laptop-code"></i>
+            <span>Practice Playground</span>
+        </a>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="content-wrapper">
+        <div class="container">
+            <!-- Module 1 -->
+            <div class="course-module" id="module1" data-aos="fade-up" data-difficulty="beginner">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>EXCEL BASICS</h1>
+                    <h3>Learn the fundamental structure of Excel workbooks</h3>
+                    <span class="difficulty">Beginner</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/888/888850.png" class="module-icon" alt="Excel Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 1: <span>Workbook & Worksheet Basics</span></h1>
+                    <p>Excel is the world's leading spreadsheet application, used for data analysis, financial modeling, and reporting. Think of Excel as a giant grid of cells organized into rows and columns. Each file is a workbook that can contain multiple worksheets (like pages in a notebook).</p>
+                    
+                    <p>Every Excel workbook follows the same basic structure. The Ribbon at the top contains all the tools you need. The grid consists of columns (labeled A, B, C...) and rows (numbered 1, 2, 3...). The intersection of a column and row is a cell, identified by its address (e.g., A1).</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Excel Formula</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-1" spellcheck="false">A1: "Hello Excel"
+B1: "World"
+C1: =A1 & " " & B1   (This combines text)
+D1: =LEN(C1)         (Counts characters)</textarea>
+                        <button class="run-btn" onclick="runCode('editor-1', 'output-1')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Preview (simulated)
+                        </div>
+                        <div class="preview-container" id="output-1">
+                            <table border="1" style="border-collapse: collapse; width: 100%; color: white;">
+                                <tr><th>A</th><th>B</th><th>C</th><th>D</th></tr>
+                                <tr><td>Hello Excel</td><td>World</td><td>Hello Excel World</td><td>16</td></tr>
+                            </table>
+                        </div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>A workbook is the entire Excel file (.xlsx)</li>
+                                <li>Worksheets are tabs within a workbook</li>
+                                <li>Cells are identified by column letter and row number (e.g., A1)</li>
+                                <li>The formula bar shows the content of the active cell</li>
+                                <li>Formulas always start with an equals sign <code>=</code></li>
+                                <li>Use <code>&amp;</code> to join text (concatenation)</li>
+                                <li>Functions like <code>LEN()</code> perform calculations</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-graduation-cap"></i> Excel Foundation Explained</h3>
+                            <p>Excel is built on a grid system that dates back to the earliest spreadsheet programs. Understanding the relationship between workbooks, worksheets, rows, columns, and cells is essential before diving into formulas and analysis. Every cell can contain text, numbers, or formulas, and Excel recalculates formulas automatically when data changes.</p>
+                            
+                            <p>The Ribbon interface organizes hundreds of commands into tabs like Home, Insert, Page Layout, Formulas, Data, Review, and View. Learning to navigate these tabs efficiently will speed up your work. The Name Box (left of the formula bar) shows the active cell address and can be used to name ranges for easier reference.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-sitemap"></i> Workbook Structure</h4>
+                                    <p>A workbook can contain many worksheets. You can add, delete, rename, and color-code worksheet tabs. This helps organize related data (e.g., separate sheets for each month).</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-calculator"></i> Calculation Engine</h4>
+                                    <p>Excel's calculation engine updates results instantly when you change input values. This makes it perfect for what-if analysis and dynamic models.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-globe"></i> File Formats</h4>
+                                    <p>Modern Excel files use the .xlsx format (XML-based). Older versions used .xls. Excel can also open CSV, text files, and connect to external databases.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-building"></i> Real-World Application</h4>
+                                <p>Every finance professional, data analyst, and business owner uses Excel daily. Budgets are built in Excel, sales reports are generated, and complex financial models forecast company performance. Mastering Excel basics is the first step toward data literacy and analytical roles.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Create a Personal Budget:</strong> Build a simple budget workbook with:</p>
+                            <ul>
+                                <li>Three worksheets: Income, Expenses, Summary</li>
+                                <li>In Income sheet, list income sources and amounts</li>
+                                <li>In Expenses sheet, list expense categories and amounts</li>
+                                <li>In Summary sheet, use formulas to calculate total income, total expenses, and net savings</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 2 -->
+            <div class="course-module" id="module2" data-aos="fade-up" data-difficulty="beginner">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>CELLS & FORMATTING</h1>
+                    <h3>Learn to enter data and format cells</h3>
+                    <span class="difficulty">Beginner</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/888/888850.png" class="module-icon" alt="Excel Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 2: <span>Data Entry and Formatting</span></h1>
+                    <p>Entering data correctly and formatting cells makes your spreadsheets readable and professional. You can format numbers as currency, dates, percentages, and more. Cell formatting also includes fonts, colors, borders, and alignment.</p>
+                    
+                    <p>Excel automatically recognizes certain data types. For example, if you enter "Jan 2025", Excel treats it as a date. You can then apply different date formats. Number formatting changes how values appear without changing the underlying value.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Excel Data</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-2" spellcheck="false">A1: Product
+B1: Price
+C1: Quantity
+D1: Total
+
+A2: Laptop
+B2: 1200
+C2: 3
+D2: =B2*C2
+
+A3: Mouse
+B3: 25
+C3: 10
+D3: =B3*C3
+
+Apply formatting:
+- B2:B3 as Currency ($1,200.00)
+- C2:C3 as Number with 0 decimals
+- D2:D3 as Currency
+- Headers bold, centered, with background color</textarea>
+                        <button class="run-btn" onclick="runCode('editor-2', 'output-2')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Preview (simulated)
+                        </div>
+                        <div class="preview-container" id="output-2">
+                            <table border="1" style="border-collapse: collapse; width: 100%; color: white;">
+                                <tr style="background-color: #217346; font-weight: bold; text-align: center;">
+                                    <th>Product</th><th>Price</th><th>Quantity</th><th>Total</th>
+                                </tr>
+                                <tr><td>Laptop</td><td>$1,200.00</td><td>3</td><td>$3,600.00</td></tr>
+                                <tr><td>Mouse</td><td>$25.00</td><td>10</td><td>$250.00</td></tr>
+                            </table>
+                        </div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>Format cells using Home tab > Number group</li>
+                                <li>Common formats: General, Number, Currency, Accounting, Date, Percentage</li>
+                                <li>Use Merge & Center for titles spanning multiple columns</li>
+                                <li>Apply borders, fill colors, and text styles from Home tab</li>
+                                <li>Wrap text and merge cells for better layout</li>
+                                <li>Formatting doesn't change the actual cell value, only its appearance</li>
+                                <li>Use Format Painter to copy formatting quickly</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-paint-brush"></i> Visual Communication</h3>
+                            <p>Formatting transforms raw data into understandable information. Proper number formatting (currency, percentages) prevents misinterpretation. Conditional formatting can automatically highlight important values like top performers or budget overruns. Cell styles and themes ensure consistency across reports.</p>
+                            
+                            <p>Excel also supports custom number formats for specialized needs like phone numbers, ZIP codes, or tracking numbers. Understanding formatting is essential for creating professional reports that communicate effectively.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-dollar-sign"></i> Currency vs Accounting</h4>
+                                    <p>Currency format places the dollar sign right next to the number. Accounting format aligns currency symbols and decimals in a column, which is preferred for financial statements.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-calendar-alt"></i> Date Systems</h4>
+                                    <p>Excel stores dates as serial numbers (1 = Jan 1, 1900). This allows date arithmetic: you can subtract dates to find days between.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-highlighter"></i> Conditional Formatting</h4>
+                                    <p>Highlight cells based on rules: greater than a threshold, duplicate values, top 10%, etc. This makes trends and outliers instantly visible.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-chart-line"></i> Financial Reporting</h4>
+                                <p>Accountants use precise formatting in income statements and balance sheets. Currency formatting, underlines, double underlines for totals, and proper indentation are standard. Conditional formatting might highlight negative variances in red.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Create an Invoice:</strong> Design a simple invoice with:</p>
+                            <ul>
+                                <li>Company name and logo placeholder (formatted with merge & center)</li>
+                                <li>Table with columns: Item, Quantity, Unit Price, Total</li>
+                                <li>At least 5 items with formulas for totals</li>
+                                <li>Subtotal, tax (e.g., 10%), and grand total rows</li>
+                                <li>Apply currency formatting, borders, and shading</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 3 -->
+            <div class="course-module" id="module3" data-aos="fade-up" data-difficulty="beginner">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>DATA ENTRY & FORMULAS</h1>
+                    <h3>Learn to enter data efficiently and write basic formulas</h3>
+                    <span class="difficulty">Beginner</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/888/888850.png" class="module-icon" alt="Excel Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 3: <span>Data Entry and Basic Formulas</span></h1>
+                    <p>Efficient data entry saves time and reduces errors. Excel offers features like AutoFill, Flash Fill, and data validation. Formulas are what make Excel powerfulâ€”they perform calculations using cell references, operators, and functions.</p>
+                    
+                    <p>Formulas can include arithmetic operators (<code>+ - * / ^</code>), comparisons (<code>= > < >= <= <></code>), and functions like <code>SUM()</code>, <code>AVERAGE()</code>, <code>COUNT()</code>. Cell references can be relative (A1), absolute ($A$1), or mixed (A$1, $A1).</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Excel Formulas</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-3" spellcheck="false">A1: 10
+B1: 20
+C1: =A1+B1
+D1: =SUM(A1:B1)
+
+A2: 5
+B2: 15
+C2: =AVERAGE(A2,B2,10)
+
+A3: 100
+B3: 200
+C3: =IF(A3>B3, "A larger", "B larger")
+
+A4: "John"
+B4: "Doe"
+C4: =A4 & " " & B4   (Full name)
+
+Use AutoFill to copy C1 down to C4</textarea>
+                        <button class="run-btn" onclick="runCode('editor-3', 'output-3')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Preview (simulated)
+                        </div>
+                        <div class="preview-container" id="output-3">
+                            <table border="1" style="border-collapse: collapse; width: 100%; color: white;">
+                                <tr><th>A</th><th>B</th><th>C</th><th>D</th></tr>
+                                <tr><td>10</td><td>20</td><td>30</td><td>30</td></tr>
+                                <tr><td>5</td><td>15</td><td>10</td><td></td></tr>
+                                <tr><td>100</td><td>200</td><td>B larger</td><td></td></tr>
+                                <tr><td>John</td><td>Doe</td><td>John Doe</td><td></td></tr>
+                            </table>
+                        </div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>Formulas always start with <code>=</code></li>
+                                <li>Use cell references (like A1) so formulas update automatically</li>
+                                <li><code>$</code> locks a reference (absolute): <code>$A$1</code> always points to A1</li>
+                                <li>Common functions: SUM, AVERAGE, COUNT, MAX, MIN, IF</li>
+                                <li>AutoFill (drag the fill handle) copies formulas and fills series</li>
+                                <li>Flash Fill (Ctrl+E) intelligently fills data based on pattern</li>
+                                <li>Use parentheses to control order of operations</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-cogs"></i> The Power of Formulas</h3>
+                            <p>Formulas turn Excel from a simple grid into a dynamic calculation engine. By using cell references, you create models that update automatically when inputs change. This is the foundation of financial modeling, budgeting, and data analysis.</p>
+                            
+                            <p>The <code>IF</code> function introduces logic: "if this condition is true, do this; otherwise, do that." Combined with other functions, you can build sophisticated decision-making tools.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-arrows-alt"></i> Relative vs Absolute</h4>
+                                    <p>Relative references change when copied (A1 becomes A2). Absolute references (<code>$A$1</code>) stay fixed. Mixed references lock only row or column. Crucial for complex formulas.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-random"></i> Formula Auditing</h4>
+                                    <p>Trace Precedents/Dependents shows relationships between cells. Evaluate Formula steps through calculation. These tools help debug errors.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-bolt"></i> Array Formulas</h4>
+                                    <p>Advanced formulas that perform multiple calculations on one or more items. Enter with Ctrl+Shift+Enter in older Excel; dynamic arrays in modern Excel simplify this.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-balance-scale"></i> Loan Calculator</h4>
+                                <p>A loan amortization schedule uses formulas with mixed references. Payment amount (<code>PMT</code>), interest calculation, principal reduction. Changing the interest rate instantly updates the whole schedule.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Grade Calculator:</strong> Create a gradebook with:</p>
+                            <ul>
+                                <li>Columns: Student Name, Homework (0-100), Midterm (0-100), Final (0-100)</li>
+                                <li>Add a column for Total Points (weighted: homework 20%, midterm 30%, final 50%)</li>
+                                <li>Add a column for Letter Grade using nested IF or IFS function</li>
+                                <li>Calculate class average for each assignment and overall</li>
+                                <li>Use conditional formatting to highlight failing grades</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 4 -->
+            <div class="course-module" id="module4" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>TABLES & RANGES</h1>
+                    <h3>Learn to organize data with Excel tables and named ranges</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/888/888850.png" class="module-icon" alt="Excel Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 4: <span>Excel Tables and Named Ranges</span></h1>
+                    <p>Excel Tables (created with Ctrl+T) convert a range of data into a structured, dynamic table. Tables automatically expand as you add data, and formulas use structured references (like <code>=SUM(Table1[Sales])</code>) that are easier to read.</p>
+                    
+                    <p>Named ranges let you assign a meaningful name to a cell or range (e.g., <code>=Price</code> instead of <code>=B2:B10</code>). Names make formulas clearer and less error-prone, especially in large workbooks.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Excel Table</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-4" spellcheck="false">Create a table:
+- Select range A1:C5
+- Press Ctrl+T (check "My table has headers")
+
+Columns:
+Date, Product, Sales
+1/1/2025, Laptop, 1200
+1/2/2025, Mouse, 25
+1/3/2025, Keyboard, 80
+1/4/2025, Laptop, 1300
+
+Named range: Select B2:B5, name it "Products" (Name Box)
+
+Formulas using structured references:
+=SUM(Table1[Sales])
+=AVERAGE(Table1[Sales])
+=COUNTIF(Table1[Product], "Laptop")
+
+Total row: Table Design > Total Row</textarea>
+                        <button class="run-btn" onclick="runCode('editor-4', 'output-4')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Preview (simulated)
+                        </div>
+                        <div class="preview-container" id="output-4">
+                            <table border="1" style="border-collapse: collapse; width: 100%; color: white; background: #2a3042;">
+                                <thead style="background-color: #217346;">
+                                    <tr><th>Date</th><th>Product</th><th>Sales</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>1/1/2025</td><td>Laptop</td><td>$1,200</td></tr>
+                                    <tr><td>1/2/2025</td><td>Mouse</td><td>$25</td></tr>
+                                    <tr><td>1/3/2025</td><td>Keyboard</td><td>$80</td></tr>
+                                    <tr><td>1/4/2025</td><td>Laptop</td><td>$1,300</td></tr>
+                                    <tr style="font-weight: bold; border-top: 2px solid #00C853;">
+                                        <td colspan="2">Total</td><td>$2,605</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>Tables automatically expand with new rows/columns</li>
+                                <li>Structured references use table and column names</li>
+                                <li>Total Row offers quick summary functions (SUM, AVERAGE, COUNT)</li>
+                                <li>Named ranges can be used in formulas, data validation, and navigation</li>
+                                <li>Names are absolute references by default</li>
+                                <li>Manage names in Formulas tab > Name Manager</li>
+                                <li>Tables are essential for dashboards and dynamic reports</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-database"></i> Structured Data Management</h3>
+                            <p>Excel Tables transform raw data into a structured format that's ideal for analysis. Unlike ordinary ranges, tables know where their data endsâ€”formulas, charts, and PivotTables automatically include new data added to the table. This makes tables the foundation of dynamic, self-updating reports.</p>
+                            
+                            <p>Named ranges improve formula readability and maintainability. Instead of deciphering <code>=SUM($B$2:$B$100)</code>, you see <code>=SUM(Sales)</code>. Names also make navigation easierâ€”use the Name Box dropdown to jump to any named range instantly.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-sync-alt"></i> Dynamic Ranges</h4>
+                                    <p>Tables automatically resize. When you add a row, any formula referencing the table expands automatically. This is crucial for dashboards that need to stay up-to-date.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-chart-pie"></i> Chart Integration</h4>
+                                    <p>Charts based on table data automatically include new data points. No need to manually update chart ranges.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-filter"></i> Built-in Filtering</h4>
+                                    <p>Tables come with filter arrows in the header row. You can quickly sort and filter data without extra steps.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-chart-bar"></i> Sales Dashboard</h4>
+                                <p>A sales dashboard often uses a table as the source data. PivotTables and charts built on that table automatically include new sales records as they're entered. Named ranges like "TopProduct" can be used in formulas to highlight best-sellers.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Build a Sales Tracker:</strong> Create a workbook with:</p>
+                            <ul>
+                                <li>A table with columns: Date, Region, Product, Units Sold, Unit Price, Total Sale (calculated)</li>
+                                <li>Add at least 20 sample rows</li>
+                                <li>Name the table "SalesData"</li>
+                                <li>Create named ranges for each column (e.g., "Units", "Price")</li>
+                                <li>Add a Total Row showing sum of Units and Total Sale</li>
+                                <li>Write formulas outside the table using structured references to calculate average sale, max sale, etc.</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 5 -->
+            <div class="course-module" id="module5" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>DATA VALIDATION & FORMS</h1>
+                    <h3>Learn to control input and create forms</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/888/888850.png" class="module-icon" alt="Excel Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 5: <span>Data Validation and Form Controls</span></h1>
+                    <p>Data validation restricts what users can enter into a cell, reducing errors. You can create drop-down lists, set number ranges, restrict dates, or create custom rules with formulas.</p>
+                    
+                    <p>Form controls (like buttons, checkboxes, option buttons) from the Developer tab let you build interactive user interfaces. These can be linked to cells and used in formulas to create dynamic models.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Excel Validation</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-5" spellcheck="false">Data Validation examples:
+
+1. Drop-down list (List)
+   - Allow: List
+   - Source: Yes,No,Maybe
+   - Cell A1 becomes a dropdown
+
+2. Whole number between 1 and 100
+   - Allow: Whole number
+   - Data: between
+   - Minimum: 1, Maximum: 100
+   - Cell B1
+
+3. Date in current year
+   - Allow: Date
+   - Data: between
+   - Start: =DATE(YEAR(TODAY()),1,1)
+   - End: =DATE(YEAR(TODAY()),12,31)
+   - Cell C1
+
+4. Custom formula to prevent duplicates in A:A
+   - Allow: Custom
+   - Formula: =COUNTIF(A:A,A1)=1
+   - Applied to A:A</textarea>
+                        <button class="run-btn" onclick="runCode('editor-5', 'output-5')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Preview (simulated)
+                        </div>
+                        <div class="preview-container" id="output-5">
+                            <p>Data Validation rules are applied to cells. In a real workbook, you'd see dropdown arrows, error alerts, and input messages.</p>
+                            <ul style="color: var(--gray);">
+                                <li>A1: Dropdown (Yes/No/Maybe)</li>
+                                <li>B1: Only numbers 1-100 allowed</li>
+                                <li>C1: Only dates in 2025 allowed</li>
+                                <li>Column A: No duplicates allowed</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>Data Validation found in Data tab > Data Validation</li>
+                                <li>Create drop-down lists from ranges or comma-separated values</li>
+                                <li>Add input messages and error alerts to guide users</li>
+                                <li>Form controls (Developer tab) include buttons, checkboxes, scroll bars</li>
+                                <li>Link form controls to a cell to capture their state (e.g., checkbox linked to TRUE/FALSE)</li>
+                                <li>Use linked cells in formulas to create interactive models</li>
+                                <li>Protect sheets to prevent users from changing validation rules</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-check-circle"></i> Input Control and User Experience</h3>
+                            <p>Data validation ensures that the data entering your workbook meets quality standards. Drop-down lists eliminate typos, number limits prevent out-of-range values, and custom formulas can enforce complex business rules. This is essential when multiple people enter data into the same file.</p>
+                            
+                            <p>Form controls take interactivity further. A scroll bar can adjust a parameter, and a button can run a macro. Combined with worksheet formulas, you can build simple dashboards that let users explore scenarios without editing formulas directly.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-ban"></i> Preventing Errors</h4>
+                                    <p>Validation stops invalid entries before they happen. For critical data like IDs or dates, this is invaluable. You can also circle invalid data after the fact (Data > Data Validation > Circle Invalid Data).</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-sliders-h"></i> Interactive Controls</h4>
+                                    <p>Use scroll bars, spinners, and option buttons to let users adjust assumptions visually. Link them to cells and use those cells in formulas for dynamic what-if analysis.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-lock"></i> Worksheet Protection</h4>
+                                    <p>After setting up validation and controls, protect the sheet to prevent users from changing formulas or validation rules. Only unlocked cells can be edited.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-clipboard-list"></i> Expense Report Template</h4>
+                                <p>A company expense form might use drop-downs for categories (Meals, Travel, Supplies), date validation to ensure dates are within the current month, and a checkbox for "Receipt attached". A submit button could run a macro to save the data to a database.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Create an Interactive Order Form:</strong> Build a workbook with:</p>
+                            <ul>
+                                <li>Drop-down list for product selection (using a named range as source)</li>
+                                <li>Quantity input (whole number, min 1, max 100)</li>
+                                <li>Unit price automatically looked up based on product (use VLOOKUP or XLOOKUP)</li>
+                                <li>Total price calculated</li>
+                                <li>Checkbox to indicate "Gift wrap" (adds a fixed fee when checked)</li>
+                                <li>Scroll bar to adjust discount percentage (linked to a cell, used in final total)</li>
+                                <li>Input messages and error alerts for all validated cells</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 6 -->
+            <div class="course-module" id="module6" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>EXCEL FUNCTIONS</h1>
+                    <h3>Learn essential Excel functions for data analysis</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/888/888850.png" class="module-icon" alt="Excel Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 6: <span>Essential Functions: VLOOKUP, IF, SUMIFS, etc.</span></h1>
+                    <p>Excel has hundreds of functions, but mastering a core set unlocks most data tasks. Lookup functions (VLOOKUP, HLOOKUP, XLOOKUP) find values in tables. Logical functions (IF, AND, OR) make decisions. Math functions (SUMIFS, COUNTIFS, AVERAGEIFS) sum or count with multiple conditions.</p>
+                    
+                    <p>Text functions (LEFT, RIGHT, MID, CONCAT) manipulate strings. Date functions (DATEDIF, EOMONTH, NETWORKDAYS) handle dates. Learning these will let you clean, analyze, and summarize data efficiently.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Excel Functions</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-6" spellcheck="false">Sample data in A1:B10:
+ID   Name
+101  Alice
+102  Bob
+103  Charlie
+104  Diana
+
+=VLOOKUP(103, A1:B10, 2, FALSE)   returns "Charlie"
+
+=XLOOKUP(102, A1:A10, B1:B10)     returns "Bob" (XLOOKUP is newer, easier)
+
+=IF(D2>100, "High", "Low")         simple condition
+
+=SUMIFS(C2:C100, A2:A100, "North", B2:B100, ">1000")
+   sums values in C where region is North and amount >1000
+
+=CONCAT("Mr. ", B2)                joins text
+
+=LEFT(A2, 3)                       first 3 characters</textarea>
+                        <button class="run-btn" onclick="runCode('editor-6', 'output-6')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Preview (simulated)
+                        </div>
+                        <div class="preview-container" id="output-6">
+                            <p style="color: var(--gray);">VLOOKUP(103, ...) â†’ Charlie<br>
+                            XLOOKUP(102, ...) â†’ Bob<br>
+                            IF(150>100, ...) â†’ High<br>
+                            SUMIFS example would return a number based on your data.</p>
+                        </div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li><code>VLOOKUP</code> looks right; <code>INDEX/MATCH</code> or <code>XLOOKUP</code> are more flexible</li>
+                                <li><code>IF</code> can be nested for multiple conditions</li>
+                                <li><code>SUMIFS</code>, <code>COUNTIFS</code>, <code>AVERAGEIFS</code> handle multiple criteria</li>
+                                <li>Text functions clean and extract parts of strings</li>
+                                <li>Date functions are essential for time-based analysis</li>
+                                <li>Function arguments are separated by commas (or semicolons depending on locale)</li>
+                                <li>Use Formula Autocomplete (Ctrl+Shift+A) to see syntax</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-calculator"></i> Unlocking Data Insights</h3>
+                            <p>Functions are Excel's superpower. While basic arithmetic handles simple tasks, functions like VLOOKUP let you merge data from different tablesâ€”like looking up product prices from a price list. SUMIFS and COUNTIFS let you answer questions like "How many sales were above $1000 in the East region?" without sorting or filtering manually.</p>
+                            
+                            <p>Modern Excel includes dynamic array functions (FILTER, SORT, UNIQUE) that spill results into multiple cells automatically, making formulas even more powerful.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-search"></i> Lookup Functions</h4>
+                                    <p>VLOOKUP (vertical) and HLOOKUP (horizontal) are classic. XLOOKUP (Excel 365) is superior: it looks both directions, defaults to exact match, and handles arrays.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-filter"></i> Conditional Aggregation</h4>
+                                    <p>SUMIF, SUMIFS, etc., let you sum based on criteria. They're like lightweight PivotTables in formula form.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-font"></i> Text Manipulation</h4>
+                                    <p>Functions like TRIM, CLEAN, PROPER, SUBSTITUTE help standardize messy data imported from other systems.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-chart-line"></i> Sales Report</h4>
+                                <p>Combine VLOOKUP to bring in product categories, SUMIFS to total sales by region, and IF to flag underperforming products. Text functions can format product codes. This creates a dynamic report that updates as new data arrives.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Build a Sales Summary Report:</strong> Using a dataset with columns: Date, Region, Product, Units, Unit Price:</p>
+                            <ul>
+                                <li>Add a Total Sales column (Units * Unit Price)</li>
+                                <li>Use VLOOKUP (or XLOOKUP) to add a Product Category from a separate lookup table</li>
+                                <li>Calculate total sales for each region using SUMIFS</li>
+                                <li>Count the number of transactions above $500 using COUNTIFS</li>
+                                <li>Find the best-selling product by name using INDEX/MATCH or XLOOKUP</li>
+                                <li>Format all results neatly</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 7 -->
+            <div class="course-module" id="module7" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>CHARTS & VISUALIZATIONS</h1>
+                    <h3>Learn to create compelling charts</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/888/888850.png" class="module-icon" alt="Excel Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 7: <span>Charts and Data Visualization</span></h1>
+                    <p>Charts turn numbers into visual stories. Excel offers a wide variety: column, bar, line, pie, scatter, and more specialized charts like waterfall, funnel, and maps. Choosing the right chart type is crucial for clear communication.</p>
+                    
+                    <p>Formatting options let you customize every element: titles, axes, legends, data labels, colors. You can also create combination charts (e.g., columns with a line) and add trendlines or error bars.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Chart Data</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-7" spellcheck="false">Sample data:
+Month   Sales   Expenses
+Jan     5000    3000
+Feb     6000    3500
+Mar     5500    3200
+Apr     7000    4000
+May     8000    4500
+
+1. Select data and insert a column chart
+2. Add a line chart for Expenses on secondary axis (Combo chart)
+3. Add data labels, title, axis titles
+4. Format colors to match SkillMynte theme
+5. Add a trendline for Sales</textarea>
+                        <button class="run-btn" onclick="runCode('editor-7', 'output-7')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Preview (simulated)
+                        </div>
+                        <div class="preview-container" id="output-7">
+                            <div style="background: #2a3042; padding: 1rem;">
+                                <svg viewBox="0 0 400 200" style="width:100%; height:auto;">
+                                    <rect x="40" y="150" width="30" height="50" fill="#00C853" />
+                                    <rect x="90" y="130" width="30" height="70" fill="#00C853" />
+                                    <rect x="140" y="140" width="30" height="60" fill="#00C853" />
+                                    <rect x="190" y="110" width="30" height="90" fill="#00C853" />
+                                    <rect x="240" y="90" width="30" height="110" fill="#00C853" />
+                                    <polyline points="55,170 105,150 155,160 205,130 255,110" stroke="#2962FF" fill="none" stroke-width="3" />
+                                    <text x="20" y="20" fill="white">Sales & Expenses</text>
+                                </svg>
+                            </div>
+                        </div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>Select your data and press Alt+F1 for instant chart</li>
+                                <li>Use Recommended Charts to see suggestions</li>
+                                <li>Change chart type via Design tab > Change Chart Type</li>
+                                <li>Add elements (titles, labels, legend) using Chart Design > Add Chart Element</li>
+                                <li>Format with Chart Tools Format tab or right-click elements</li>
+                                <li>Create chart templates for consistent branding</li>
+                                <li>Use sparklines for in-cell mini charts</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-chart-pie"></i> Visual Storytelling</h3>
+                            <p>A well-designed chart communicates insights faster than tables. Excel's charting engine gives you control over every detail. But with great power comes responsibility: avoid 3D effects, don't overload with data, and always label clearly.</p>
+                            
+                            <p>Modern Excel includes new chart types like Treemap, Sunburst, and Histogram that reveal patterns in complex data. Power users combine multiple chart types in a single dashboard.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-chart-bar"></i> Chart Selection</h4>
+                                    <p>Bar charts compare categories. Line charts show trends over time. Pie charts show parts of a whole (use sparingly). Scatter plots reveal correlations.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-paint-bucket"></i> Color Psychology</h4>
+                                    <p>Use color purposefully: highlight key data, maintain accessibility (avoid red-green for colorblind). Excel themes let you apply consistent colors.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-chart-line"></i> Dynamic Charts</h4>
+                                    <p>Charts based on Tables or named ranges update automatically as data grows. Use form controls to let users switch between metrics.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-presentation"></i> Executive Dashboard</h4>
+                                <p>A KPI dashboard might show monthly sales as a column chart, year-to-date trend as a line, and regional breakdown as a map chart. Interactive slicers let executives filter by product line or region.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Create a Company Performance Dashboard:</strong> Using sample data of monthly sales, expenses, profit, and customer count for 12 months:</p>
+                            <ul>
+                                <li>Create a column chart for sales and expenses (grouped columns or stacked)</li>
+                                <li>Add a line chart for profit on secondary axis (combo chart)</li>
+                                <li>Create a pie chart showing sales by region (if you have regional data) or a bar chart for top products</li>
+                                <li>Add sparklines next to each metric to show trend</li>
+                                <li>Format all charts consistently, add titles and data labels</li>
+                                <li>Arrange them on one worksheet to create a dashboard</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 8 -->
+            <div class="course-module" id="module8" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>PIVOTTABLES & POWER QUERY</h1>
+                    <h3>Master data summarization and transformation</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/888/888850.png" class="module-icon" alt="Excel Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 8: <span>PivotTables and Power Query</span></h1>
+                    <p>PivotTables are Excel's most powerful feature for summarizing large datasets. With a few clicks, you can aggregate thousands of rows into meaningful totals, averages, percentages, and more. They're interactiveâ€”drag fields to rearrange the analysis.</p>
+                    
+                    <p>Power Query (Get & Transform) is a data connection and transformation tool. It lets you import data from various sources, clean it, merge tables, and load the result into Excel. The steps are repeatableâ€”refresh to update with new data.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">PivotTable</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-8" spellcheck="false">Source data (Sales table):
+Region, Product, Sales
+North, Laptop, 1200
+South, Laptop, 1300
+North, Mouse, 25
+South, Mouse, 30
+East, Laptop, 1100
+East, Mouse, 20
+
+Create PivotTable:
+- Rows: Region
+- Columns: Product
+- Values: Sum of Sales
+
+Result:
+         Laptop   Mouse
+North     1200     25
+South     1300     30
+East      1100     20
+Grand Total 3600   75
+
+Add slicer for Product to filter interactively.</textarea>
+                        <button class="run-btn" onclick="runCode('editor-8', 'output-8')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Preview (simulated)
+                        </div>
+                        <div class="preview-container" id="output-8">
+                            <table border="1" style="border-collapse: collapse; width: 100%; color: white;">
+                                <tr><th>Region</th><th>Laptop</th><th>Mouse</th><th>Grand Total</th></tr>
+                                <tr><td>North</td><td>1200</td><td>25</td><td>1225</td></tr>
+                                <tr><td>South</td><td>1300</td><td>30</td><td>1330</td></tr>
+                                <tr><td>East</td><td>1100</td><td>20</td><td>1120</td></tr>
+                                <tr><td>Grand Total</td><td>3600</td><td>75</td><td>3675</td></tr>
+                            </table>
+                        </div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>Insert PivotTable from the Insert tab</li>
+                                <li>Drag fields to Rows, Columns, Values, and Filters areas</li>
+                                <li>Change calculation (sum, count, average) by right-clicking value field</li>
+                                <li>Use Slicers and Timelines for interactive filtering</li>
+                                <li>Refresh PivotTable when source data changes</li>
+                                <li>Power Query: Data > Get Data to import and transform</li>
+                                <li>Power Query steps are recorded; just refresh to reapply</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-cubes"></i> Data Summarization & Automation</h3>
+                            <p>PivotTables revolutionized data analysis. Before PivotTables, creating a summary report meant writing complex formulas. Now, anyone can explore data interactively. They're essential for business intelligence tasks.</p>
+                            
+                            <p>Power Query automates data preparation. Instead of manually cleaning messy exports, you build a query once. When you get new data, just refreshâ€”all cleaning steps reapply. This saves hours of repetitive work.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-calculator"></i> Calculated Fields</h4>
+                                    <p>Add your own formulas within a PivotTable, like profit margin = (Sales - Cost)/Sales. These behave like regular fields.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-chart-bar"></i> PivotCharts</h4>
+                                    <p>Create charts directly from PivotTables. They're interactiveâ€”filtering the PivotTable updates the chart.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-sync-alt"></i> Data Refresh</h4>
+                                    <p>When source data changes, refresh the PivotTable. If source is a Power Query connection, refresh both.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-file-invoice"></i> Monthly Sales Report</h4>
+                                <p>Power Query imports sales data from a CSV folder. It combines all files, cleans column names, and adds a month column. Then a PivotTable summarizes sales by product and region. Slicers allow viewing by month. The whole process updates with one click when new monthly files arrive.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Build a Dynamic Sales Dashboard:</strong></p>
+                            <ul>
+                                <li>Find a sample sales dataset online or create one with at least 500 rows (Order Date, Region, Product, Quantity, Revenue)</li>
+                                <li>Use Power Query to import and clean: ensure dates are correct, remove duplicates, add a "Month" column</li>
+                                <li>Load to Excel and create a PivotTable summarizing Revenue by Region and Product</li>
+                                <li>Add a second PivotTable showing monthly revenue trend</li>
+                                <li>Add slicers for Region and Product connected to both PivotTables</li>
+                                <li>Format everything, add a title, and test interactivity</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 9 -->
+            <div class="course-module" id="module9" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>ACCESSIBILITY</h1>
+                    <h3>Learn to create accessible spreadsheets</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/888/888850.png" class="module-icon" alt="Excel Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 9: <span>Creating Accessible Excel Workbooks</span></h1>
+                    <p>Accessibility ensures that people with disabilities can use your spreadsheets. This includes users who rely on screen readers, keyboard navigation, or high-contrast settings. Excel provides tools to make workbooks accessible.</p>
+                    
+                    <p>Best practices: use clear headings, add alt text to images/charts, avoid blank rows/columns, use meaningful sheet names, and ensure sufficient color contrast. The Accessibility Checker (Review > Check Accessibility) helps identify issues.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Accessibility Tips</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-9" spellcheck="false">Accessibility Checklist:
+- Use table headers (Format as Table with headers)
+- Add alt text to charts/pictures (right-click > Edit Alt Text)
+- Avoid merged cells (they confuse screen readers)
+- Use clear, descriptive sheet names (not Sheet1, Sheet2)
+- Ensure color is not the only means of conveying info
+- Use the Accessibility Checker (Review > Check Accessibility)
+- Test keyboard navigation (Tab, arrow keys, Enter)
+- Provide sufficient contrast (use high contrast themes if needed)</textarea>
+                        <button class="run-btn" onclick="runCode('editor-9', 'output-9')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Preview
+                        </div>
+                        <div class="preview-container" id="output-9">
+                            <p style="color: var(--gray);">Checklist displayed. In a real workbook, you'd run the Accessibility Checker.</p>
+                        </div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>Use table formatting for data ranges (Ctrl+T)</li>
+                                <li>Always provide alt text for images, shapes, and charts</li>
+                                <li>Avoid blank rows/columns within data (they break navigation)</li>
+                                <li>Use descriptive hyperlink text, not "click here"</li>
+                                <li>Ensure font size is at least 11pt for readability</li>
+                                <li>Use the Accessibility Checker regularly</li>
+                                <li>Test with keyboard only (no mouse)</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-universal-access"></i> Inclusive Design</h3>
+                            <p>Accessibility benefits everyone, not just users with disabilities. Clear headings make navigation easier for all. Good color contrast helps in bright sunlight. Screen reader compatibility ensures your workbooks can be used by the visually impaired, who may be colleagues or clients.</p>
+                            
+                            <p>Many organizations require accessibility compliance (e.g., Section 508 in US government). Excel's built-in tools make it easier to meet these standards.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-eye"></i> Visual Impairments</h4>
+                                    <p>Screen readers announce cell content, table structure, and alt text. Proper structure (headers, no merged cells) is essential.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-hand-pointer"></i> Motor Impairments</h4>
+                                    <p>Some users cannot use a mouse. Ensure all functionality is available via keyboard: Tab to navigate, Enter to select, etc.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-low-vision"></i> Low Vision</h4>
+                                    <p>High contrast and scalable text (Zoom) help. Avoid relying on color alone (use icons or patterns as well).</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-universal-access"></i> Government Reporting</h4>
+                                <p>A government agency requires all submitted spreadsheets to be accessible. They run the Accessibility Checker and reject any with errors. Knowing how to create accessible workbooks is essential for compliance.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Audit and Fix a Spreadsheet:</strong></p>
+                            <ul>
+                                <li>Create a simple sales report (or use one from a previous assignment)</li>
+                                <li>Intentionally add accessibility issues: merge some header cells, omit alt text on a chart, use color alone to indicate status, add a blank column, name sheets Sheet1 etc.</li>
+                                <li>Run the Accessibility Checker and note the issues</li>
+                                <li>Fix all issues, document what you changed</li>
+                                <li>Submit both the "before" and "after" versions</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 10 -->
+            <div class="course-module" id="module10" data-aos="fade-up" data-difficulty="advanced">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>ADVANCED EXCEL</h1>
+                    <h3>Master macros, VBA, and advanced formulas</h3>
+                    <span class="difficulty">Advanced</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/888/888850.png" class="module-icon" alt="Excel Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 10: <span>Macros, VBA, and Advanced Techniques</span></h1>
+                    <p>Visual Basic for Applications (VBA) is Excel's programming language. With VBA, you can automate repetitive tasks, create custom functions, and build interactive tools. Macros are recorded actions that you can play back.</p>
+                    
+                    <p>Advanced formula techniques include array formulas, dynamic arrays (Excel 365), and complex nested functions. Power Pivot and Data Model let you work with millions of rows. This module takes you from user to developer.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">VBA Macro</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-10" spellcheck="false">' Simple VBA macro to format header row
+Sub FormatHeader()
+    With Range("1:1")
+        .Font.Bold = True
+        .Font.Color = RGB(255, 255, 255)
+        .Interior.Color = RGB(0, 200, 83)
+        .HorizontalAlignment = xlCenter
+    End With
+End Sub
+
+' Custom function to calculate sales tax
+Function SalesTax(amount As Double) As Double
+    SalesTax = amount * 0.1
+End Function
+
+' In Excel, you can now use =SalesTax(A1)</textarea>
+                        <button class="run-btn" onclick="runCode('editor-10', 'output-10')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Preview
+                        </div>
+                        <div class="preview-container" id="output-10">
+                            <p style="color: var(--gray);">VBA code shown. To run, press Alt+F11 to open VBA editor, insert a module, paste code, and run.</p>
+                        </div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>Enable Developer tab (File > Options > Customize Ribbon)</li>
+                                <li>Record macros for simple automation (View > Macros > Record Macro)</li>
+                                <li>Edit macros in the VBA editor (Alt+F11)</li>
+                                <li>VBA can automate almost any Excel action</li>
+                                <li>Use relative references when recording for flexible macros</li>
+                                <li>Assign macros to buttons or shapes for easy access</li>
+                                <li>Always save as .xlsm to keep macros</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-code"></i> Automation and Customization</h3>
+                            <p>VBA turns Excel into a development platform. You can build complete applications within Excelâ€”data entry forms, reporting tools, even games. Macros save time on repetitive tasks like formatting, data cleaning, or generating reports.</p>
+                            
+                            <p>Advanced formulas in modern Excel include dynamic arrays (functions that spill results). For example, <code>=SORT(FILTER(A2:B100, B2:B100>100))</code> returns a sorted, filtered list automatically. No more array formula keystrokes.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-play"></i> Macro Recording</h4>
+                                    <p>Record a macro while you perform actions. Excel writes the VBA code. You can then edit it to add logic or make it more general.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-cubes"></i> Power Pivot</h4>
+                                    <p>For massive datasets, Power Pivot (an Excel add-in) lets you create data models with relationships and DAX formulas, handling millions of rows.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-shield-alt"></i> Security</h4>
+                                    <p>Macros can contain viruses. Only enable macros from trusted sources. Digitally sign your own macros.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-chart-line"></i> Automated Reporting</h4>
+                                <p>A financial analyst runs a monthly report: import data, clean, format, create charts, and email to stakeholders. A VBA macro does all this in one click. The macro even saves the file with the current date and sends via Outlook.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Automate a Report with VBA:</strong></p>
+                            <ul>
+                                <li>Create a simple sales dataset (or reuse one)</li>
+                                <li>Record a macro that:
+                                    <ul>
+                                        <li>Formats the header row (bold, color, etc.)</li>
+                                        <li>Adds a total row at the bottom with SUM</li>
+                                        <li>Creates a PivotTable on a new sheet summarizing sales by product</li>
+                                    </ul>
+                                </li>
+                                <li>Assign the macro to a button on the sheet</li>
+                                <li>Write a custom VBA function that calculates commission (e.g., 5% of sales if over $1000, else 2%)</li>
+                                <li>Save as .xlsm and test</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Practice Playground -->
+            <div class="course-module" id="playground" data-aos="fade-up">
+                <div class="course-three">
+                    <h1>PRACTICE PLAYGROUND</h1>
+                    <h3>Experiment with what you've learned</h3>
+                    <i class="fas fa-laptop-code course-icon" style="color: var(--primary);"></i>
+                </div>
+                <div class="course-one">
+                    <h1>Your Excel Playground: <span>Try Your Own Formulas</span></h1>
+                    <p>Use this space to experiment with everything you've learned. Try combining different Excel features and see the results! This is your sandbox to practice and explore.</p>
+                    
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Excel Formula</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="playground-editor" spellcheck="false">=LET(
+   sales, 15000,
+   taxRate, 0.08,
+   shipping, 50,
+   total, sales * (1+taxRate) + shipping,
+   "Total cost: $" & TEXT(total, "#,##0.00")
+)</textarea>
+                        <button class="run-btn" onclick="runCode('playground-editor', 'playground-output')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Preview (simulated)
+                        </div>
+                        <div class="preview-container" id="playground-output">
+                            Total cost: $16,250.00
+                        </div>
+                    </div>
+                    
+                    <div class="course-five">
+                        <h3>Challenge Exercises:</h3>
+                        <ol>
+                            <li>Create a loan amortization schedule with:
+                                <ul>
+                                    <li>Loan amount, interest rate, term (years)</li>
+                                    <li>Monthly payment using PMT function</li>
+                                    <li>Table showing payment number, interest, principal, remaining balance</li>
+                                </ul>
+                            </li>
+                            <li>Build a dynamic chart that updates when you change a dropdown selection</li>
+                            <li>Use Power Query to combine multiple CSV files from a folder</li>
+                            <li>Create a data validation dropdown that shows only unique values from a dynamic range</li>
+                            <li>Write a VBA macro that highlights all cells containing a specific value</li>
+                        </ol>
+                        
+                        <h3>Tips & Resources:</h3>
+                        <ul>
+                            <li>Press F1 for help on any function</li>
+                            <li>Use Evaluate Formula (Formulas tab) to step through complex formulas</li>
+                            <li>Explore the SkillMynte color variables for consistent formatting:
+                                <ul>
+                                    <li><code>var(--primary)</code> - Main green color (#00C853)</li>
+                                    <li><code>var(--primary-dark)</code> - Darker green (#009624)</li>
+                                    <li><code>var(--primary-light)</code> - Light green (#5EFC82)</li>
+                                    <li><code>var(--secondary)</code> - Blue color (#2962FF)</li>
+                                </ul>
+                            </li>
+                            <li>For more practice, try solving real-world problems like budgeting, scheduling, or data analysis</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Premium Subscription CTA -->
+            <div class="premium-subscription" id="premium-subscription" data-aos="fade-up">
+                <h2>Unlock Premium SkillMynte Content</h2>
+                <p>Upgrade to SkillMynte Pro for exclusive courses, advanced projects, and personalized learning paths</p>
+                
+                <div class="premium-features">
+                    <div class="premium-feature">
+                        <i class="fas fa-gem"></i>
+                        <h3>Premium Courses</h3>
+                        <p>Access our entire library of advanced courses and exclusive content</p>
+                    </div>
+                    <div class="premium-feature">
+                        <i class="fas fa-trophy"></i>
+                        <h3>Certification</h3>
+                        <p>Earn industry-recognized certificates to showcase your skills</p>
+                    </div>
+                    <div class="premium-feature">
+                        <i class="fas fa-user-graduate"></i>
+                        <h3>Mentorship</h3>
+                        <p>Get personalized guidance from industry experts</p>
+                    </div>
+                </div>
+                
+                <div class="pricing-options">
+                    <div class="pricing-option">
+                        <h3>Monthly</h3>
+                        <div class="price">₦3,500<span>/month</span></div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> All Premium Courses</li>
+                            <li><i class="fas fa-check"></i> Practice Projects</li>
+                            <li><i class="fas fa-check"></i> Community Access</li>
+                            <li><i class="fas fa-check"></i> Certificates</li>
+                            <li><i class="fas fa-check"></i> personal AI inbuilt</li>
+                        </ul>
+                        <a href="premium courses.html"><button class="pricing-btn">Get Started</button></a>
+                    </div>
+                    
+                    <div class="pricing-option" style="border-color: var(--white); transform: scale(1.05);">
+                        <h3>Annual <span style="background: var(--white); color: #2962FF; padding: 0.2rem 0.5rem; border-radius: 20px; font-size: 0.8rem; margin-left: 0.5rem;">Best Value</span></h3>
+                        <div class="price">₦37,000<span>/year</span></div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> All Premium Courses</li>
+                            <li><i class="fas fa-check"></i> Practice Projects</li>
+                            <li><i class="fas fa-check"></i> Community Access</li>
+                            <li><i class="fas fa-check"></i> Certificates</li>
+                            <li><i class="fas fa-check"></i> personal AI inbuilt</li>
+                        </ul>
+                        <a href="premium courses.html"><button class="pricing-btn">Get Started</button></a>
+                    </div>
+                    
+                    <div class="pricing-option">
+                        <h3>Lifetime</h3>
+                        <div class="price">₦200,000<span>/once</span></div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> All Premium Courses</li>
+                            <li><i class="fas fa-check"></i> Practice Projects</li>
+                            <li><i class="fas fa-check"></i> Community Access</li>
+                            <li><i class="fas fa-check"></i> Certificates</li>
+                            <li><i class="fas fa-check"></i> personal AI inbuilt</li>
+                        </ul>
+                        <a href="premium courses.html"><button class="pricing-btn">Get Started</button></a>
+                    </div>
+                </div>
+                
+                <button class="premium-cta-btn">
+                    <i class="fas fa-rocket"></i> Upgrade to SkillMynte Pro
+                </button>
+            </div>
+            
+            <!-- Footer -->
+            <footer>
+                <div class="footer-content">
+                    <div class="footer-column">
+                        <h3>About SkillMynte</h3>
+                        <p>SkillMynte is a premium learning platform dedicated to helping developers of all levels master web technologies through interactive courses and hands-on practice.</p>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/profile.php?id=61581069862024"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://x.com/SkillMynte_AI?t=CcoQtjWZGGOXqfTfrsufjQ&s=09"><i class="fab fa-twitter"></i></a>
+                            <a href="https://youtube.com/@skillmynte?si=LmX2MjSKU3N1Xa5S"><i class="fab fa-youtube"></i></a>
+                            <a href="https://www.instagram.com/skillmynte_ai?igsh=MTd1YWpjdXV1OHhrbA=="><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Quick Links</h3>
+                        <ul class="footer-links">
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Home</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Courses</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Practice</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Projects</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Popular Courses</h3>
+                        <ul class="footer-links">
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Excel Fundamentals</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Advanced Excel & VBA</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Power BI for Excel Users</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Data Analysis with Excel</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Financial Modeling in Excel</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Contact Us</h3>
+                        <p><i class="fas fa-envelope"></i>Skillmynteofficial@gmail.com</p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 SkillMynte. All rights reserved. | Designed with <i class="fas fa-heart" style="color: var(--primary);"></i> for the developer community</p>
+                </div>
+            </footer>
+
+           <script>
+    // Function to run code in preview
+    function runCode(editorId, outputId) {
+        const editor = document.getElementById(editorId);
+        const output = document.getElementById(outputId);
+        
+        // For Excel, we'll just show the text as a simulation (could be improved)
+        // Here we simply set the text content as a code display
+        output.innerHTML = `<pre style="color: var(--primary-light);">${editor.value}</pre>`;
+        // For the simulated tables we already have static previews; this function is kept for consistency
+    }
+    
+    // Initialize all editors with their default output
+    document.addEventListener('DOMContentLoaded', function() {
+        // Run all code editors on load (for simulated previews, they already have static HTML; this just refreshes)
+        // We'll keep the static previews as they are, but runCode will update them to show the formula text.
+        // To keep the nice simulated tables, we'll not override them. We'll just attach runCode for the run buttons.
+        
+        // Add event listeners to all run buttons in editor headers
+        document.querySelectorAll('.run-editor').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const editorContainer = this.closest('.code-editor-container');
+                const editor = editorContainer.querySelector('.code-editor');
+                const output = editorContainer.querySelector('.preview-container');
+                runCode(editor.id, output.id);
+            });
+        });
+        
+        // Add reset functionality
+        document.querySelectorAll('.reset-editor').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const editorContainer = this.closest('.code-editor-container');
+                const editor = editorContainer.querySelector('.code-editor');
+                const originalContent = editor.dataset.original || editor.defaultValue;
+                editor.value = originalContent;
+                runCode(editor.id, editorContainer.querySelector('.preview-container').id);
+            });
+        });
+        
+        // Store original content for reset functionality
+        document.querySelectorAll('.code-editor').forEach(editor => {
+            editor.dataset.original = editor.value;
+        });
+
+        // Handle navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // FIXED: Hamburger menu functionality
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.querySelector('.nav-menu');
+        const sidebar = document.getElementById('sidebar');
+        const body = document.body;
+
+        function toggleMobileMenu() {
+            const isActive = navMenu.classList.contains('active');
+            
+            if (isActive) {
+                // Close menu
+                navMenu.classList.remove('active');
+                sidebar.classList.remove('active');
+                menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                body.classList.remove('menu-open');
+                menuToggle.setAttribute('aria-expanded', 'false');
+            } else {
+                // Open menu
+                navMenu.classList.add('active');
+                sidebar.classList.add('active');
+                menuToggle.innerHTML = '<i class="fas fa-times"></i>';
+                body.classList.add('menu-open');
+                menuToggle.setAttribute('aria-expanded', 'true');
+            }
+        }
+
+        function closeMobileMenu() {
+            navMenu.classList.remove('active');
+            sidebar.classList.remove('active');
+            menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            body.classList.remove('menu-open');
+            menuToggle.setAttribute('aria-expanded', 'false');
+        }
+
+        // Mobile menu toggle
+        menuToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            toggleMobileMenu();
+        });
+
+        // Close menu when clicking on nav links
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function() {
+                if (window.innerWidth <= 1024) {
+                    closeMobileMenu();
+                }
+            });
+        });
+
+        // Close menu when clicking on dropdown items
+        document.querySelectorAll('.dropdown-item').forEach(item => {
+            item.addEventListener('click', function() {
+                if (window.innerWidth <= 1024) {
+                    closeMobileMenu();
+                }
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (window.innerWidth <= 1024 && 
+                navMenu.classList.contains('active') &&
+                !e.target.closest('.nav-menu') && 
+                !e.target.closest('.menu-toggle') &&
+                !e.target.closest('.sidebar')) {
+                closeMobileMenu();
+            }
+        });
+
+        // Close menu on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+                closeMobileMenu();
+            }
+        });
+
+        // Close menu on resize if switching to desktop
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 1024 && navMenu.classList.contains('active')) {
+                closeMobileMenu();
+            }
+        });
+
+        // Mobile dropdown functionality
+        document.querySelectorAll('.courses-dropdown').forEach(dropdown => {
+            const button = dropdown.querySelector('.courses-btn');
+            
+            button.addEventListener('click', function(e) {
+                if (window.innerWidth <= 1024) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    dropdown.classList.toggle('active');
+                }
+            });
+        });
+
+        // Level filtering functionality
+        const levelButtons = document.querySelectorAll('.level-btn');
+        const modules = document.querySelectorAll('.course-module');
+        
+        levelButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const level = this.getAttribute('data-level');
+                
+                // Remove active class from all buttons
+                levelButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                this.classList.add('active');
+                
+                if (level === 'all') {
+                    // Show all modules
+                    modules.forEach(module => {
+                        module.style.display = 'flex';
+                    });
+                } else if (level === 'advanced') {
+                    // Show advanced modules (7-10)
+                    modules.forEach(module => {
+                        const moduleId = module.id;
+                        if (moduleId.includes('module7') || moduleId.includes('module8') || 
+                            moduleId.includes('module9') || moduleId.includes('module10')) {
+                            module.style.display = 'flex';
+                        } else {
+                            module.style.display = 'none';
+                        }
+                    });
+                } else {
+                    // Show modules with matching difficulty
+                    modules.forEach(module => {
+                        const difficulty = module.getAttribute('data-difficulty');
+                        if (difficulty === level) {
+                            module.style.display = 'flex';
+                        } else {
+                            module.style.display = 'none';
+                        }
+                    });
+                }
+                
+                // Scroll to first visible module
+                const firstVisible = document.querySelector('.course-module[style="display: flex;"]');
+                if (firstVisible) {
+                    firstVisible.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Search functionality
+        const searchInput = document.getElementById('search-input');
+        
+        searchInput.addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase().trim();
+            
+            if (searchTerm === '') {
+                // Show all modules if search is empty
+                modules.forEach(module => {
+                    module.style.display = 'flex';
+                });
+                return;
+            }
+            
+            modules.forEach(module => {
+                const moduleTitle = module.querySelector('h1').textContent.toLowerCase();
+                const moduleContent = module.textContent.toLowerCase();
+                
+                if (moduleTitle.includes(searchTerm) || moduleContent.includes(searchTerm)) {
+                    module.style.display = 'flex';
+                } else {
+                    module.style.display = 'none';
+                }
+            });
+        });
+    });
+    
+    // Smooth scrolling for sidebar links
+    document.querySelectorAll('.sidebar-item').forEach(item => {
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Remove active class from all items
+            document.querySelectorAll('.sidebar-item').forEach(i => {
+                i.classList.remove('active');
+            });
+            
+            // Add active class to clicked item
+            this.classList.add('active');
+            
+            // Close mobile menu if open
+            if (window.innerWidth <= 1024) {
+                document.querySelector('.nav-menu').classList.remove('active');
+                document.querySelector('.sidebar').classList.remove('active');
+                document.querySelector('.menu-toggle').innerHTML = '<i class="fas fa-bars"></i>';
+                document.body.classList.remove('menu-open');
+            }
+            
+            // Scroll to section
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 100,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+</script>
+        </div>
+    </div>
+</body>
+</html>

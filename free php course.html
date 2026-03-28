@@ -1,0 +1,2039 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP Fundamentals | SkillMynte</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="rounded_logo.png">
+    <link rel="stylesheet" href="free php course.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-code"></i>
+                SKILLMYNTE
+            </a>
+            <div class="nav-menu">
+                <a href="#" class="nav-link">Home</a>
+                <a href="#" class="nav-link">Courses</a>
+                <a href="#" class="nav-link">Practice</a>
+                <a href="#" class="nav-link">Projects</a>
+                
+                <div class="courses-dropdown">
+                    <button class="courses-btn">
+                        <i class="fas fa-book-open"></i> Jump to Module
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#module1" class="dropdown-item">
+                            <i class="fab fa-php php-icon"></i> PHP Basics
+                        </a>
+                        <a href="#module2" class="dropdown-item">
+                            <i class="fab fa-php php-icon"></i> Variables & Data Types
+                        </a>
+                        <a href="#module3" class="dropdown-item">
+                            <i class="fab fa-php php-icon"></i> Operators & Expressions
+                        </a>
+                        <a href="#module4" class="dropdown-item">
+                            <i class="fab fa-php php-icon"></i> Control Structures
+                        </a>
+                        <a href="#module5" class="dropdown-item">
+                            <i class="fab fa-php php-icon"></i> Loops
+                        </a>
+                        <a href="#module6" class="dropdown-item">
+                            <i class="fab fa-php php-icon"></i> Functions
+                        </a>
+                        <a href="#module7" class="dropdown-item">
+                            <i class="fab fa-php php-icon"></i> Arrays
+                        </a>
+                        <a href="#module8" class="dropdown-item">
+                            <i class="fab fa-php php-icon"></i> Superglobals & Forms
+                        </a>
+                        <a href="#module9" class="dropdown-item">
+                            <i class="fab fa-php php-icon"></i> File Handling
+                        </a>
+                        <a href="#module10" class="dropdown-item">
+                            <i class="fab fa-php php-icon"></i> Advanced PHP
+                        </a>
+                        <a href="#playground" class="dropdown-item">
+                            <i class="fas fa-laptop-code"></i> Practice Playground
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Premium Course Navigation -->
+    <div class="course-navigation">
+        <div class="course-nav-container">
+            <div class="course-category">
+                <button class="category-btn">
+                    <i class="fas fa-layer-group"></i> Categories
+                </button>
+                <div class="category-dropdown">
+                    <a href="#" class="category-item">
+                        <i class="fab fa-html5 html-icon"></i> HTML & CSS
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fab fa-js-square js-icon"></i> JavaScript
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fab fa-php php-icon"></i> PHP
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fab fa-python python-icon"></i> Python
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fab fa-java java-icon"></i> Java
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fas fa-database"></i> Databases
+                    </a>
+                </div>
+            </div>
+            
+            <div class="course-levels">
+                <button class="level-btn active" data-level="all">All Levels</button>
+                <button class="level-btn" data-level="beginner">Beginner</button>
+                <button class="level-btn" data-level="intermediate">Intermediate</button>
+                <button class="level-btn" data-level="advanced">Advanced</button>
+            </div>
+            
+            <div class="course-search">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" class="search-input" id="search-input" placeholder="Search courses...">
+            </div>
+        </div>
+    </div>
+    
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <a href="#module1" class="sidebar-item active completed">
+            <i class="fab fa-php php-icon"></i>
+            <span>Module 1: PHP Basics</span>
+            <span class="progress-indicator"><i class="fas fa-check"></i></span>
+        </a>
+        <a href="#module2" class="sidebar-item completed">
+            <i class="fab fa-php php-icon"></i>
+            <span>Module 2: Variables & Data Types</span>
+            <span class="progress-indicator"><i class="fas fa-check"></i></span>
+        </a>
+        <a href="#module3" class="sidebar-item completed">
+            <i class="fab fa-php php-icon"></i>
+            <span>Module 3: Operators & Expressions</span>
+            <span class="progress-indicator"><i class="fas fa-check"></i></span>
+        </a>
+        <a href="#module4" class="sidebar-item">
+            <i class="fab fa-php php-icon"></i>
+            <span>Module 4: Control Structures</span>
+            <span class="progress-indicator">4</span>
+        </a>
+        <a href="#module5" class="sidebar-item">
+            <i class="fab fa-php php-icon"></i>
+            <span>Module 5: Loops</span>
+            <span class="progress-indicator">5</span>
+        </a>
+        <a href="#module6" class="sidebar-item">
+            <i class="fab fa-php php-icon"></i>
+            <span>Module 6: Functions</span>
+            <span class="progress-indicator">6</span>
+        </a>
+        <a href="#module7" class="sidebar-item">
+            <i class="fab fa-php php-icon"></i>
+            <span>Module 7: Arrays</span>
+            <span class="progress-indicator">7</span>
+        </a>
+        <a href="#module8" class="sidebar-item">
+            <i class="fab fa-php php-icon"></i>
+            <span>Module 8: Superglobals & Forms</span>
+            <span class="progress-indicator">8</span>
+        </a>
+        <a href="#module9" class="sidebar-item">
+            <i class="fab fa-php php-icon"></i>
+            <span>Module 9: File Handling</span>
+            <span class="progress-indicator">9</span>
+        </a>
+        <a href="#module10" class="sidebar-item">
+            <i class="fab fa-php php-icon"></i>
+            <span>Module 10: Advanced PHP</span>
+            <span class="progress-indicator">10</span>
+        </a>
+        <a href="#playground" class="sidebar-item">
+            <i class="fas fa-laptop-code"></i>
+            <span>Practice Playground</span>
+        </a>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="content-wrapper">
+        <div class="container">
+            <!-- Module 1: PHP Basics -->
+            <div class="course-module" id="module1" data-aos="fade-up" data-difficulty="beginner">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>PHP BASICS</h1>
+                    <h3>Learn the fundamental syntax and structure of PHP</h3>
+                    <span class="difficulty">Beginner</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/919/919830.png" class="module-icon" alt="PHP Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 1: <span>PHP Syntax and Tags</span></h1>
+                    <p>PHP (Hypertext Preprocessor) is a widely-used open source server-side scripting language. Unlike HTML, which is static, PHP code is executed on the server, generating dynamic content that is then sent to the client's browser. PHP scripts are embedded into HTML using special tags.</p>
+                    
+                    <p>Every PHP statement ends with a semicolon. The basic syntax is <code>&lt;?php // code ?&gt;</code>. You can switch between PHP and HTML modes freely. The <code>echo</code> statement outputs text to the browser, and comments can be added with <code>//</code> or <code>/* */</code>.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">PHP</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-1" spellcheck="false">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;My First PHP Script&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;&lt;?php echo "Hello World!"; ?&gt;&lt;/h1&gt;
+    &lt;p&gt;&lt;?php
+        // This is a single-line comment
+        /* This is a
+           multi-line comment */
+        $name = "SkillMynte";
+        echo "Welcome to " . $name . "!";
+    ?&gt;&lt;/p&gt;
+    &lt;p&gt;Today is &lt;?php echo date('l, F jS Y'); ?&gt;&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+                        <button class="run-btn" onclick="runCode('editor-1', 'output-1')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Preview (simulated output)
+                        </div>
+                        <div class="preview-container" id="output-1"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>PHP code is enclosed in <code>&lt;?php ... ?&gt;</code> tags</li>
+                                <li>Every statement must end with a semicolon <code>;</code></li>
+                                <li>Use <code>echo</code> or <code>print</code> to output data</li>
+                                <li>Comments: <code>//</code> for single line, <code>/* */</code> for multi-line</li>
+                                <li>Variables start with <code>$</code> and are dynamically typed</li>
+                                <li>You can mix PHP and HTML freely</li>
+                                <li>PHP files are processed on the server; clients only see the output</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-graduation-cap"></i> PHP Foundation Explained</h3>
+                            <p>PHP is the backbone of countless dynamic websites and web applications, from WordPress to Facebook. Its ability to generate HTML on the fly, interact with databases, and handle user input makes it essential for server-side development. Understanding the basic syntax is the first step toward building interactive, data-driven websites.</p>
+                            
+                            <p>The opening and closing tags <code>&lt;?php ?&gt;</code> tell the server to interpret the enclosed code as PHP. Outside these tags, everything is treated as plain HTML. This flexibility allows you to create templates where PHP injects dynamic content into static markup.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-server"></i> Server-Side Processing</h4>
+                                    <p>PHP runs on the web server, not in the browser. The client receives only the output (usually HTML), so your source code remains hiddenâ€”unlike JavaScript.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-code"></i> Embedding in HTML</h4>
+                                    <p>You can switch between PHP and HTML as often as needed, making it easy to create dynamic web pages with loops and conditions controlling what HTML is sent.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-database"></i> Database Integration</h4>
+                                    <p>PHP excels at connecting to databases (MySQL, PostgreSQL, etc.) to retrieve, insert, and manipulate data, forming the core of content management systems and web applications.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-building"></i> Real-World Application</h4>
+                                <p>Every time you log into a website, post a comment, or view a personalized dashboard, PHP is likely at work behind the scenes. For example, when you visit an e-commerce site, PHP scripts fetch product details from a database, display them in HTML, and process your shopping cart. Mastering PHP basics opens the door to building such interactive experiences.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Create Your First PHP Page:</strong> Build a simple webpage that displays:</p>
+                            <ul>
+                                <li>A heading with your name using an <code>&lt;?php echo ?&gt;</code> statement</li>
+                                <li>A paragraph that outputs the current date and time using <code>date()</code></li>
+                                <li>A variable <code>$city</code> set to your city name, then displayed</li>
+                                <li>Add comments explaining each part</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 2: Variables & Data Types -->
+            <div class="course-module" id="module2" data-aos="fade-up" data-difficulty="beginner">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>VARIABLES & TYPES</h1>
+                    <h3>Learn how to store and manipulate data in PHP</h3>
+                    <span class="difficulty">Beginner</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/919/919830.png" class="module-icon" alt="PHP Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 2: <span>Variables and Data Types</span></h1>
+                    <p>Variables in PHP are containers for storing data. They always start with a dollar sign (<code>$</code>) followed by the variable name. PHP is loosely typed, meaning you don't have to declare the typeâ€”it is determined by the value assigned.</p>
+                    
+                    <p>PHP supports several data types: integers, floats (decimals), strings, booleans, arrays, objects, NULL, and resources. You can check the type of a variable using <code>var_dump()</code> or <code>gettype()</code>.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">PHP</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-2" spellcheck="false">&lt;?php
+    // String
+    $name = "SkillMynte";
+    echo "Name: $name &lt;br&gt;";
+    
+    // Integer
+    $age = 25;
+    echo "Age: $age &lt;br&gt;";
+    
+    // Float
+    $price = 19.99;
+    echo "Price: $$price &lt;br&gt;";
+    
+    // Boolean
+    $isActive = true;
+    echo "Active: " . ($isActive ? 'Yes' : 'No') . " &lt;br&gt;";
+    
+    // Array
+    $colors = array("Red", "Green", "Blue");
+    echo "First color: " . $colors[0] . " &lt;br&gt;";
+    
+    // NULL
+    $empty = NULL;
+    echo "Empty variable: " . var_dump($empty) . " &lt;br&gt;";
+    
+    // Using var_dump to see type and value
+    echo "&lt;pre&gt;";
+    var_dump($name);
+    var_dump($age);
+    var_dump($price);
+    var_dump($isActive);
+    var_dump($colors);
+    echo "&lt;/pre&gt;";
+?&gt;</textarea>
+                        <button class="run-btn" onclick="runCode('editor-2', 'output-2')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Preview (simulated output)
+                        </div>
+                        <div class="preview-container" id="output-2"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>All variables start with <code>$</code> and are case-sensitive</li>
+                                <li>No need to declare type; PHP determines it from the value</li>
+                                <li>Strings can be enclosed in single or double quotes (double quotes parse variables)</li>
+                                <li>Integers are whole numbers; floats are numbers with decimals</li>
+                                <li>Booleans represent true or false</li>
+                                <li>Arrays hold multiple values indexed numerically or associatively</li>
+                                <li><code>var_dump()</code> displays type and value for debugging</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-database"></i> Understanding Data Storage</h3>
+                            <p>Variables are fundamental to any programming languageâ€”they act as labeled boxes where you can store, modify, and retrieve data. In PHP, the loose typing system provides flexibility, but you must be aware of type juggling when performing operations between different types.</p>
+                            
+                            <p>PHP automatically converts types when necessary (e.g., adding a string and an integer). However, relying on this can lead to bugs; it's often better to cast types explicitly using <code>(int)</code>, <code>(string)</code>, etc.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-exchange-alt"></i> Type Juggling</h4>
+                                    <p>PHP automatically converts types based on context. For example, <code>"5" + 3</code> results in 8 (integer). This behavior is powerful but can cause unexpected results.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-check-circle"></i> Variable Scope</h4>
+                                    <p>Variables can have different scopes: global (outside functions), local (inside functions), static (persist across function calls), and superglobals (available everywhere).</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-eye"></i> Debugging with var_dump</h4>
+                                    <p><code>var_dump()</code> is an invaluable tool for inspecting variables during development, showing both the type and value in a readable format.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-user"></i> User Profiles</h4>
+                                <p>When building a user profile system, you'll use variables to store data like username (string), age (integer), account balance (float), and whether the user is logged in (boolean). Arrays hold lists of interests or order history. Understanding data types ensures you manipulate this data correctly.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Personal Information Card:</strong> Create a PHP script that defines variables for:</p>
+                            <ul>
+                                <li>Your full name (string)</li>
+                                <li>Your age (integer)</li>
+                                <li>Your height in meters (float)</li>
+                                <li>Whether you are a student (boolean)</li>
+                                <li>An array of three favorite hobbies</li>
+                                <li>Use <code>echo</code> to display them in a styled HTML card, and include <code>var_dump()</code> at the bottom for debugging.</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 3: Operators & Expressions -->
+            <div class="course-module" id="module3" data-aos="fade-up" data-difficulty="beginner">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>OPERATORS</h1>
+                    <h3>Learn to perform operations with variables</h3>
+                    <span class="difficulty">Beginner</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/919/919830.png" class="module-icon" alt="PHP Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 3: <span>Operators and Expressions</span></h1>
+                    <p>Operators are symbols that perform operations on variables and values. PHP includes arithmetic, assignment, comparison, logical, string, and array operators. Expressions are combinations of variables, values, and operators that produce a result.</p>
+                    
+                    <p>Understanding operator precedence is crucialâ€”it determines the order in which parts of an expression are evaluated. Parentheses can be used to override precedence.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">PHP</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-3" spellcheck="false">&lt;?php
+    $a = 10;
+    $b = 3;
+    
+    // Arithmetic
+    echo "a = $a, b = $b&lt;br&gt;";
+    echo "Addition: " . ($a + $b) . "&lt;br&gt;";
+    echo "Subtraction: " . ($a - $b) . "&lt;br&gt;";
+    echo "Multiplication: " . ($a * $b) . "&lt;br&gt;";
+    echo "Division: " . ($a / $b) . "&lt;br&gt;";
+    echo "Modulus: " . ($a % $b) . "&lt;br&gt;";
+    echo "Exponentiation: " . ($a ** $b) . "&lt;br&gt;";
+    
+    // Assignment combined with arithmetic
+    $c = 5;
+    $c += 2; // $c = $c + 2
+    echo "&lt;br&gt;c = 5; c += 2 => c = $c&lt;br&gt;";
+    
+    // Comparison (returns boolean)
+    echo "&lt;br&gt;Comparisons:&lt;br&gt;";
+    echo "a == b : " . (($a == $b) ? 'true' : 'false') . "&lt;br&gt;";
+    echo "a != b : " . (($a != $b) ? 'true' : 'false') . "&lt;br&gt;";
+    echo "a > b : " . (($a > $b) ? 'true' : 'false') . "&lt;br&gt;";
+    echo "a &lt; b : " . (($a &lt; $b) ? 'true' : 'false') . "&lt;br&gt;";
+    
+    // Logical
+    $x = true;
+    $y = false;
+    echo "&lt;br&gt;Logical:&lt;br&gt;";
+    echo "x && y : " . (($x && $y) ? 'true' : 'false') . "&lt;br&gt;";
+    echo "x || y : " . (($x || $y) ? 'true' : 'false') . "&lt;br&gt;";
+    echo "!x : " . ((!$x) ? 'true' : 'false') . "&lt;br&gt;";
+    
+    // String concatenation
+    $firstName = "John";
+    $lastName = "Doe";
+    echo "&lt;br&gt;Full name: " . $firstName . " " . $lastName . "&lt;br&gt;";
+?&gt;</textarea>
+                        <button class="run-btn" onclick="runCode('editor-3', 'output-3')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Preview (simulated output)
+                        </div>
+                        <div class="preview-container" id="output-3"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>Arithmetic: <code>+ - * / % **</code></li>
+                                <li>Assignment: <code>= += -= *= /= %= .=</code></li>
+                                <li>Comparison: <code>== === != !== &lt; &gt; &lt;= &gt;=</code></li>
+                                <li>Logical: <code>&& || !</code></li>
+                                <li>String: <code>.</code> for concatenation</li>
+                                <li>Increment/Decrement: <code>++ --</code></li>
+                                <li>Operator precedence can be controlled with parentheses</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-calculator"></i> Building Expressions</h3>
+                            <p>Operators are the tools that let you transform data. Arithmetic operators handle math, comparison operators let you make decisions, logical operators combine conditions, and string operators build text. Mastering operators is essential for writing expressive and efficient code.</p>
+                            
+                            <p>A common pitfall is using the assignment operator <code>=</code> instead of the comparison operator <code>==</code> in conditions. Also, note the difference between <code>==</code> (equal value) and <code>===</code> (identical value and type).</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-balance-scale"></i> Precedence Matters</h4>
+                                    <p>Just like in math, some operators are evaluated before others. For example, <code>2 + 3 * 4</code> equals 14, not 20. Use parentheses to ensure clarity and correct results.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-equals"></i> Identical vs Equal</h4>
+                                    <p><code>==</code> checks if values are equal after type juggling; <code>===</code> checks both value and type. For robust code, prefer <code>===</code> to avoid surprises.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-link"></i> Concatenation</h4>
+                                    <p>The dot operator <code>.</code> joins strings. Combined with the assignment operator <code>.=</code>, you can build strings incrementally.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-shopping-cart"></i> Shopping Cart Calculations</h4>
+                                <p>In an e-commerce site, you'll use arithmetic to calculate totals, taxes, and discounts. Comparison operators check if a user is eligible for free shipping. Logical operators validate that a coupon code is both active and not expired. String operators format product names and prices for display.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Simple Calculator:</strong> Create a PHP script that defines two variables with numeric values. Then:</p>
+                            <ul>
+                                <li>Display the results of all arithmetic operations</li>
+                                <li>Compare the two numbers using <code>&gt;, &lt;, ==, ===</code> and output the results</li>
+                                <li>Use logical operators to check if both numbers are positive</li>
+                                <li>Concatenate the numbers into a string like "The numbers are X and Y"</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 4: Control Structures -->
+            <div class="course-module" id="module4" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>CONTROL STRUCTURES</h1>
+                    <h3>Learn to make decisions in your code</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/919/919830.png" class="module-icon" alt="PHP Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 4: <span>Conditional Statements</span></h1>
+                    <p>Control structures allow your script to make decisions based on conditions. The main conditional statements in PHP are <code>if</code>, <code>else</code>, <code>elseif</code>, and <code>switch</code>. They execute different blocks of code depending on whether a condition evaluates to true or false.</p>
+                    
+                    <p>Conditions are typically formed using comparison and logical operators. You can also nest conditionals, but be careful to keep code readable.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">PHP</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-4" spellcheck="false">&lt;?php
+    $age = 18;
+    $hasID = true;
+    
+    // if-else
+    if ($age >= 18 && $hasID) {
+        echo "You are allowed to enter.&lt;br&gt;";
+    } else {
+        echo "You cannot enter.&lt;br&gt;";
+    }
+    
+    // elseif
+    $score = 85;
+    if ($score >= 90) {
+        echo "Grade: A&lt;br&gt;";
+    } elseif ($score >= 80) {
+        echo "Grade: B&lt;br&gt;";
+    } elseif ($score >= 70) {
+        echo "Grade: C&lt;br&gt;";
+    } else {
+        echo "Grade: F&lt;br&gt;";
+    }
+    
+    // switch
+    $day = "Monday";
+    switch ($day) {
+        case "Monday":
+            echo "Start of the work week!&lt;br&gt;";
+            break;
+        case "Friday":
+            echo "TGIF!&lt;br&gt;";
+            break;
+        case "Saturday":
+        case "Sunday":
+            echo "It's the weekend!&lt;br&gt;";
+            break;
+        default:
+            echo "Midweek day.&lt;br&gt;";
+    }
+    
+    // Ternary operator
+    $userLoggedIn = true;
+    $message = $userLoggedIn ? "Welcome back!" : "Please log in.";
+    echo $message;
+?&gt;</textarea>
+                        <button class="run-btn" onclick="runCode('editor-4', 'output-4')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Preview (simulated output)
+                        </div>
+                        <div class="preview-container" id="output-4"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li><code>if</code> executes code if condition is true; optional <code>else</code> for false</li>
+                                <li><code>elseif</code> checks additional conditions if previous were false</li>
+                                <li><code>switch</code> compares a value against many cases (use <code>break</code> to exit)</li>
+                                <li>The ternary operator <code>condition ? value_if_true : value_if_false</code> is a shorthand for simple if-else</li>
+                                <li>Conditions can be combined with <code>&&</code> (AND), <code>||</code> (OR), <code>!</code> (NOT)</li>
+                                <li>Indentation improves readability</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-code-branch"></i> Decision Making</h3>
+                            <p>Control structures give your programs intelligence. Without them, code would run the same way every time. By checking conditions, you can create different user experiences based on input, time, user roles, and more.</p>
+                            
+                            <p>The <code>switch</code> statement is particularly useful when you have many possible values for a single variable. It can be more readable than a long chain of <code>elseif</code>.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-traffic-light"></i> Boolean Context</h4>
+                                    <p>PHP treats certain values as false in conditions: <code>false</code>, <code>null</code>, <code>0</code>, <code>0.0</code>, empty string <code>""</code>, <code>"0"</code>, empty arrays. Everything else is true.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-bolt"></i> Early Returns</h4>
+                                    <p>In functions, you can return early to avoid deep nesting. This makes code easier to follow and reduces complexity.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-mobile-alt"></i> Form Validation</h4>
+                                    <p>Control structures are heavily used in form validation: checking if fields are empty, if email format is valid, if passwords match, etc.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-user-lock"></i> Access Control</h4>
+                                <p>In a membership site, you might have code like: if user is logged in, show premium content; elseif user has a trial, show limited content; else show a sign-up page. This logic is implemented with control structures.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Simple Role-Based Page:</strong> Create a PHP script that:</p>
+                            <ul>
+                                <li>Defines a variable <code>$role</code> with values "admin", "editor", or "subscriber"</li>
+                                <li>Uses <code>if/elseif/else</code> to display a different welcome message for each role</li>
+                                <li>Uses a <code>switch</code> statement to show available features based on role</li>
+                                <li>Add a ternary to show a "Dashboard" link if role is admin or editor</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 5: Loops -->
+            <div class="course-module" id="module5" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>LOOPS</h1>
+                    <h3>Learn to repeat code efficiently</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/919/919830.png" class="module-icon" alt="PHP Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 5: <span>Loops</span></h1>
+                    <p>Loops allow you to execute a block of code repeatedly. PHP supports <code>while</code>, <code>do-while</code>, <code>for</code>, and <code>foreach</code> loops. Each is suited for different situations: <code>while</code> when you don't know the number of iterations in advance, <code>for</code> when you do, and <code>foreach</code> for iterating over arrays.</p>
+                    
+                    <p>Be careful to avoid infinite loops by ensuring the loop condition eventually becomes false.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">PHP</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-5" spellcheck="false">&lt;?php
+    // while loop
+    $i = 1;
+    echo "while loop: ";
+    while ($i <= 5) {
+        echo $i . " ";
+        $i++;
+    }
+    echo "&lt;br&gt;";
+    
+    // do-while (executes at least once)
+    $j = 1;
+    echo "do-while: ";
+    do {
+        echo $j . " ";
+        $j++;
+    } while ($j <= 5);
+    echo "&lt;br&gt;";
+    
+    // for loop
+    echo "for loop: ";
+    for ($k = 1; $k <= 5; $k++) {
+        echo $k . " ";
+    }
+    echo "&lt;br&gt;";
+    
+    // foreach with indexed array
+    $colors = ["Red", "Green", "Blue"];
+    echo "foreach (indexed): ";
+    foreach ($colors as $color) {
+        echo $color . " ";
+    }
+    echo "&lt;br&gt;";
+    
+    // foreach with associative array
+    $person = ["name" => "John", "age" => 30, "city" => "New York"];
+    echo "foreach (assoc): &lt;br&gt;";
+    foreach ($person as $key => $value) {
+        echo "$key: $value&lt;br&gt;";
+    }
+    
+    // break and continue
+    echo "&lt;br&gt;Break and continue: ";
+    for ($n = 1; $n <= 10; $n++) {
+        if ($n == 5) {
+            continue; // skip 5
+        }
+        if ($n == 8) {
+            break;    // stop at 8
+        }
+        echo $n . " ";
+    }
+?&gt;</textarea>
+                        <button class="run-btn" onclick="runCode('editor-5', 'output-5')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Preview (simulated output)
+                        </div>
+                        <div class="preview-container" id="output-5"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li><code>while</code> checks condition before each iteration</li>
+                                <li><code>do-while</code> checks condition after, so it always runs at least once</li>
+                                <li><code>for</code> is ideal when you know the number of iterations</li>
+                                <li><code>foreach</code> is the easiest way to loop through arrays</li>
+                                <li><code>break</code> exits the loop entirely</li>
+                                <li><code>continue</code> skips to the next iteration</li>
+                                <li>Infinite loops happen when the condition never becomes false</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-redo-alt"></i> Automating Repetition</h3>
+                            <p>Loops are essential for handling repetitive tasks efficiently. Instead of writing the same code multiple times, you define the pattern once and let the loop handle the repetitions. This is especially powerful when dealing with dynamic data like database results or user input.</p>
+                            
+                            <p>The <code>foreach</code> loop is particularly elegant in PHPâ€”it automatically traverses arrays without needing a counter. When modifying array values inside a loop, remember to use the reference <code>&amp;</code> to affect the original array.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-sync-alt"></i> Loop Control</h4>
+                                    <p><code>break</code> and <code>continue</code> give you finer control. For example, you can skip invalid data with <code>continue</code> or stop processing after a certain point with <code>break</code>.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-database"></i> Data Processing</h4>
+                                    <p>Loops are used to iterate over database records, build HTML tables, process file lines, and more. Almost any bulk operation involves a loop.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-chart-line"></i> Performance</h4>
+                                    <p>Nested loops can become slow with large datasets. Always consider algorithmic efficiency and use PHP's builtâ€‘in array functions when appropriate.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-table"></i> Generating Tables</h4>
+                                <p>In a reporting dashboard, you might fetch an array of sales data from the database and use a <code>foreach</code> loop to output each row in an HTML table. Another loop could calculate totals and averages. Loops turn raw data into readable interfaces.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Multiplication Table:</strong> Create a PHP script that:</p>
+                            <ul>
+                                <li>Uses a <code>for</code> loop to generate an HTML table with rows 1 to 10 and columns 1 to 10, showing the product</li>
+                                <li>Uses a <code>while</code> loop to list the even numbers from 2 to 20</li>
+                                <li>Defines an associative array of 5 products (name, price) and uses <code>foreach</code> to display them in a list</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 6: Functions -->
+            <div class="course-module" id="module6" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>FUNCTIONS</h1>
+                    <h3>Learn to organize code with reusable blocks</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/919/919830.png" class="module-icon" alt="PHP Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 6: <span>Functions</span></h1>
+                    <p>Functions are reusable blocks of code that perform a specific task. They help you avoid repetition, organize your code, and make it more maintainable. You can define your own functions and also use hundreds of builtâ€‘in PHP functions.</p>
+                    
+                    <p>A function is declared with the <code>function</code> keyword, can accept parameters, and can return a value. Functions should do one thing well.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">PHP</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-6" spellcheck="false">&lt;?php
+    // Basic function
+    function greet($name) {
+        return "Hello, $name!";
+    }
+    
+    echo greet("Alice") . "&lt;br&gt;";
+    
+    // Function with default parameter
+    function power($base, $exponent = 2) {
+        return $base ** $exponent;
+    }
+    
+    echo "5^2 = " . power(5) . "&lt;br&gt;";
+    echo "2^3 = " . power(2, 3) . "&lt;br&gt;";
+    
+    // Function returning multiple values (array)
+    function getMinMax($arr) {
+        return ["min" => min($arr), "max" => max($arr)];
+    }
+    
+    $nums = [3, 7, 2, 9, 5];
+    $result = getMinMax($nums);
+    echo "Min: {$result['min']}, Max: {$result['max']}&lt;br&gt;";
+    
+    // Variable scope
+    $globalVar = "I am global";
+    
+    function testScope() {
+        $localVar = "I am local";
+        // To access global, use 'global' keyword
+        global $globalVar;
+        echo "Inside function: $globalVar&lt;br&gt;";
+        // echo $localVar; // would work inside
+    }
+    
+    testScope();
+    // echo $localVar; // error - out of scope
+    
+    // Built-in functions
+    $text = "  PHP is Fun!  ";
+    echo "Trimmed: '" . trim($text) . "'&lt;br&gt;";
+    echo "Uppercase: " . strtoupper($text) . "&lt;br&gt;";
+    echo "Length: " . strlen(trim($text)) . "&lt;br&gt;";
+?&gt;</textarea>
+                        <button class="run-btn" onclick="runCode('editor-6', 'output-6')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Preview (simulated output)
+                        </div>
+                        <div class="preview-container" id="output-6"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>Functions are defined with <code>function functionName(parameters) { ... }</code></li>
+                                <li>Parameters can have default values</li>
+                                <li>Use <code>return</code> to send a value back; otherwise function returns <code>null</code></li>
+                                <li>Variables inside functions are local; use <code>global</code> to access global variables</li>
+                                <li>PHP has thousands of built-in functions for strings, arrays, math, etc.</li>
+                                <li>Functions promote DRY (Don't Repeat Yourself) principle</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-cubes"></i> Building Blocks of Code</h3>
+                            <p>Functions are the primary mechanism for abstraction in PHP. By encapsulating logic into named units, you make your code easier to read, test, and reuse. Good function design follows the single responsibility principleâ€”each function should do one thing and do it well.</p>
+                            
+                            <p>PHP also supports anonymous functions (closures) and variable functions, which are useful for callbacks and functional programming patterns.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-globe"></i> Built-in Power</h4>
+                                    <p>PHP's standard library includes functions for almost every task: array manipulation, string handling, file operations, database access, and more. Learning them saves time and ensures optimized, tested code.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-box"></i> Reusability</h4>
+                                    <p>Once you write a function, you can call it from anywhere in your script. This reduces duplication and makes maintenance easierâ€”fix a bug in one place, and it's fixed everywhere.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-shield-alt"></i> Scope Isolation</h4>
+                                    <p>Variables inside a function don't interfere with variables outside, preventing accidental side effects. This isolation makes code more predictable.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-calculator"></i> Utility Libraries</h4>
+                                <p>In a typical web application, you'll have utility functions like <code>formatDate()</code>, <code>sanitizeInput()</code>, or <code>calculateDiscount()</code>. These functions are used throughout the app, ensuring consistency and centralizing logic.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Function Library:</strong> Create a PHP file with the following functions:</p>
+                            <ul>
+                                <li><code>isEven($number)</code> returns true if number is even</li>
+                                <li><code>getInitials($firstName, $lastName)</code> returns first letters with a dot (e.g., "J.D.")</li>
+                                <li><code>calculateArea($length, $width = null)</code> returns area of rectangle (if width given) or square (if only length)</li>
+                                <li>Demonstrate each function with sample calls and output</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 7: Arrays -->
+            <div class="course-module" id="module7" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>ARRAYS</h1>
+                    <h3>Master PHP arrays and their functions</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/919/919830.png" class="module-icon" alt="PHP Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 7: <span>Arrays</span></h1>
+                    <p>Arrays are variables that can hold multiple values at once. PHP arrays are actually ordered mapsâ€”they can be indexed numerically (indexed arrays) or by strings (associative arrays). They are incredibly flexible and are used everywhere in PHP.</p>
+                    
+                    <p>PHP provides a huge set of array functions for sorting, filtering, merging, searching, and more. Learning these functions will save you countless hours.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">PHP</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-7" spellcheck="false">&lt;?php
+    // Indexed array
+    $fruits = ["Apple", "Banana", "Cherry"];
+    echo "First fruit: " . $fruits[0] . "&lt;br&gt;";
+    
+    // Associative array
+    $person = [
+        "name" => "John",
+        "age" => 30,
+        "city" => "New York"
+    ];
+    echo "Name: " . $person["name"] . "&lt;br&gt;";
+    
+    // Multidimensional array
+    $matrix = [
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9]
+    ];
+    echo "Element at row 1, col 2: " . $matrix[1][2] . "&lt;br&gt;";
+    
+    // Adding elements
+    $fruits[] = "Orange"; // adds to end
+    $person["country"] = "USA";
+    
+    // Array functions
+    echo "&lt;br&gt;--- Array Functions ---&lt;br&gt;";
+    
+    $numbers = [5, 2, 8, 1, 9, 3];
+    
+    // count
+    echo "Count: " . count($numbers) . "&lt;br&gt;";
+    
+    // sort (ascending)
+    sort($numbers);
+    echo "Sorted: " . implode(", ", $numbers) . "&lt;br&gt;";
+    
+    // array_sum
+    echo "Sum: " . array_sum($numbers) . "&lt;br&gt;";
+    
+    // in_array
+    echo "Is 7 in array? " . (in_array(7, $numbers) ? "Yes" : "No") . "&lt;br&gt;";
+    
+    // array_merge
+    $more = [10, 11];
+    $merged = array_merge($numbers, $more);
+    echo "Merged: " . implode(", ", $merged) . "&lt;br&gt;";
+    
+    // array_keys (for associative)
+    $keys = array_keys($person);
+    echo "Person keys: " . implode(", ", $keys) . "&lt;br&gt;";
+?&gt;</textarea>
+                        <button class="run-btn" onclick="runCode('editor-7', 'output-7')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Preview (simulated output)
+                        </div>
+                        <div class="preview-container" id="output-7"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>Arrays can be indexed (numeric) or associative (string keys)</li>
+                                <li>Use <code>[]</code> or <code>array()</code> to create arrays</li>
+                                <li>Access elements with <code>$array[key]</code></li>
+                                <li>Add elements with <code>$array[] = value</code> or <code>$array[key] = value</code></li>
+                                <li>PHP offers over 70 array functions: <code>count()</code>, <code>sort()</code>, <code>array_merge()</code>, <code>in_array()</code>, etc.</li>
+                                <li><code>implode()</code> joins array elements into a string</li>
+                                <li><code>foreach</code> is the natural way to iterate arrays</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-th"></i> Managing Collections</h3>
+                            <p>Arrays are the workhorses of PHP. They're used to store lists, map relationships, hold database records, manage form data, and much more. Mastering array functions is key to writing concise and efficient PHP code.</p>
+                            
+                            <p>Unlike some languages, PHP arrays are ordered mapsâ€”they preserve insertion order and can have mixed keys. This flexibility makes them suitable for a wide range of data structures.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-filter"></i> Filtering and Mapping</h4>
+                                    <p>Functions like <code>array_filter()</code>, <code>array_map()</code>, and <code>array_reduce()</code> let you process arrays functionally, reducing the need for explicit loops.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-search"></i> Searching</h4>
+                                    <p><code>in_array()</code>, <code>array_search()</code>, and <code>array_key_exists()</code> help you find values or keys quickly.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-layer-group"></i> Multidimensional Arrays</h4>
+                                    <p>Arrays of arrays are commonâ€”for example, a table of database rows. You can access nested data with multiple indices (e.g., <code>$data[0]['name']</code>).</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-shopping-cart"></i> Shopping Cart</h4>
+                                <p>A shopping cart is often stored as an array of items, each item being an associative array with keys like "id", "name", "price", "quantity". Array functions calculate total price, apply discounts, and sort items.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Student Grades Manager:</strong> Create a PHP script that:</p>
+                            <ul>
+                                <li>Defines an associative array of students where each student is an array with keys: name, grades (array of 3 numbers)</li>
+                                <li>Calculates and displays each student's average grade</li>
+                                <li>Finds the student with the highest average</li>
+                                <li>Sorts the students by average (descending) and displays the list</li>
+                                <li>Use at least 5 different array functions</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 8: Superglobals & Forms -->
+            <div class="course-module" id="module8" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>FORMS & SUPERGLOBALS</h1>
+                    <h3>Handle user input with PHP</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/919/919830.png" class="module-icon" alt="PHP Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 8: <span>Superglobals and Form Handling</span></h1>
+                    <p>PHP provides several superglobal arrays that are accessible from anywhere in your script. They contain information about the server, request, session, etc. The most important for form handling are <code>$_GET</code> and <code>$_POST</code>, which hold data sent via HTTP GET or POST methods.</p>
+                    
+                    <p>When a user submits a form, PHP automatically populates these superglobals. You can then access the data, validate it, sanitize it, and use it (e.g., store in a database, send an email). Always validate and sanitize user input for security.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">PHP</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-8" spellcheck="false">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Form Example&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h2&gt;Contact Form&lt;/h2&gt;
+    &lt;form method="post" action=""&gt;
+        &lt;label for="name"&gt;Name:&lt;/label&gt;
+        &lt;input type="text" name="name" id="name" required&gt;
+        &lt;br&gt;&lt;br&gt;
+        
+        &lt;label for="email"&gt;Email:&lt;/label&gt;
+        &lt;input type="email" name="email" id="email" required&gt;
+        &lt;br&gt;&lt;br&gt;
+        
+        &lt;label for="message"&gt;Message:&lt;/label&gt;&lt;br&gt;
+        &lt;textarea name="message" id="message" rows="4" cols="40"&gt;&lt;/textarea&gt;
+        &lt;br&gt;&lt;br&gt;
+        
+        &lt;input type="submit" value="Send"&gt;
+    &lt;/form&gt;
+    
+    &lt;hr&gt;
+    
+    &lt;?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // Get and sanitize input
+        $name = htmlspecialchars($_POST['name'] ?? '');
+        $email = htmlspecialchars($_POST['email'] ?? '');
+        $message = htmlspecialchars($_POST['message'] ?? '');
+        
+        echo "&lt;h3&gt;Form Submitted:&lt;/h3&gt;";
+        echo "&lt;p&gt;&lt;strong&gt;Name:&lt;/strong&gt; $name&lt;/p&gt;";
+        echo "&lt;p&gt;&lt;strong&gt;Email:&lt;/strong&gt; $email&lt;/p&gt;";
+        echo "&lt;p&gt;&lt;strong&gt;Message:&lt;/strong&gt;&lt;br&gt;$message&lt;/p&gt;";
+        
+        // You could also send an email or save to database here
+    }
+    ?&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+                        <button class="run-btn" onclick="runCode('editor-8', 'output-8')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Preview (simulated output)
+                        </div>
+                        <div class="preview-container" id="output-8"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li><code>$_GET</code> contains data from URL query string (method="get")</li>
+                                <li><code>$_POST</code> contains data from HTTP POST (method="post")</li>
+                                <li><code>$_REQUEST</code> combines GET, POST, and COOKIE</li>
+                                <li><code>$_SERVER</code> holds server and request information</li>
+                                <li>Always validate and sanitize input: use <code>filter_var()</code>, <code>htmlspecialchars()</code>, etc.</li>
+                                <li>Check if form was submitted using <code>$_SERVER["REQUEST_METHOD"]</code></li>
+                                <li>Use null coalescing operator <code>??</code> to avoid undefined index notices</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-window-maximize"></i> Interacting with Users</h3>
+                            <p>Forms are the primary way users interact with web applicationsâ€”logging in, registering, submitting comments, making purchases. PHP's superglobals make it easy to retrieve this data, but security is paramount. Never trust user input; always validate and sanitize.</p>
+                            
+                            <p>Crossâ€‘Site Scripting (XSS) is a common vulnerability where attackers inject malicious code. Using <code>htmlspecialchars()</code> when outputting user data prevents this. For database interactions, use prepared statements to prevent SQL injection.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-shield-alt"></i> Validation vs Sanitization</h4>
+                                    <p>Validation checks if the data meets criteria (e.g., email format). Sanitization cleans the data (e.g., removing tags). Both are essential.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-database"></i> Other Superglobals</h4>
+                                    <p><code>$_SESSION</code> stores user-specific data across pages, <code>$_COOKIE</code> holds client-side data, <code>$_FILES</code> handles file uploads, and <code>$_ENV</code> contains environment variables.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-undo-alt"></i> Self-Submitting Forms</h4>
+                                    <p>Setting the form <code>action=""</code> submits to the same page, allowing you to process and display the form in one script. This is common in MVC patterns.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-envelope"></i> Contact Forms</h4>
+                                <p>Almost every website has a contact form. The user fills it out, PHP validates the input, and if valid, sends an email using <code>mail()</code> or a library like PHPMailer. Error messages are displayed if validation fails.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Simple Login Form:</strong> Create a PHP page with:</p>
+                            <ul>
+                                <li>An HTML form with username and password fields (method="post")</li>
+                                <li>On submission, check if username is "admin" and password is "secret" (hardcoded)</li>
+                                <li>If correct, display a welcome message; otherwise show an error</li>
+                                <li>Use <code>htmlspecialchars()</code> when displaying any user input</li>
+                                <li>Keep the form filled with the submitted username after error</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 9: File Handling -->
+            <div class="course-module" id="module9" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>FILE HANDLING</h1>
+                    <h3>Learn to read and write files with PHP</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/919/919830.png" class="module-icon" alt="PHP Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 9: <span>Working with Files</span></h1>
+                    <p>PHP can create, read, write, and delete files on the server. This is useful for storing data, creating logs, handling file uploads, and more. The main functions are <code>fopen()</code>, <code>fread()</code>, <code>fwrite()</code>, <code>fclose()</code>, and simpler alternatives like <code>file_get_contents()</code> and <code>file_put_contents()</code>.</p>
+                    
+                    <p>Always check that you have proper permissions and that the file operations succeed. Use error handling to avoid unexpected script termination.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">PHP</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-9" spellcheck="false">&lt;?php
+    // File path (in a real environment, use a writeable directory)
+    $filename = "test.txt";
+    
+    // Write content to file (creates if not exists)
+    $content = "Hello, this is a test file.\nCreated on: " . date('Y-m-d H:i:s');
+    file_put_contents($filename, $content);
+    echo "File written successfully.&lt;br&gt;";
+    
+    // Read the entire file
+    $read = file_get_contents($filename);
+    echo "File contents:&lt;br&gt;&lt;pre>$read&lt;/pre&gt;";
+    
+    // Append more content
+    file_put_contents($filename, "\nAnother line.", FILE_APPEND);
+    echo "Content appended.&lt;br&gt;";
+    
+    // Read again
+    $updated = file_get_contents($filename);
+    echo "Updated contents:&lt;br&gt;&lt;pre>$updated&lt;/pre&gt;";
+    
+    // Using fopen/fwrite/fclose for more control
+    $handle = fopen($filename, "a"); // 'a' for append
+    if ($handle) {
+        fwrite($handle, "\nAppended via fopen.");
+        fclose($handle);
+        echo "Appended using fopen.&lt;br&gt;";
+    } else {
+        echo "Could not open file.&lt;br&gt;";
+    }
+    
+    // Check if file exists
+    if (file_exists($filename)) {
+        echo "File size: " . filesize($filename) . " bytes&lt;br&gt;";
+        // Delete the file (cleanup)
+        // unlink($filename);
+        // echo "File deleted.&lt;br&gt;";
+    }
+?&gt;</textarea>
+                        <button class="run-btn" onclick="runCode('editor-9', 'output-9')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Preview (simulated output)
+                        </div>
+                        <div class="preview-container" id="output-9"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li><code>file_get_contents()</code> reads entire file into string</li>
+                                <li><code>file_put_contents()</code> writes string to file (overwrite by default, use <code>FILE_APPEND</code> to add)</li>
+                                <li><code>fopen()</code> opens a file with a mode: <code>r</code> (read), <code>w</code> (write), <code>a</code> (append), etc.</li>
+                                <li>Always <code>fclose()</code> after using <code>fopen()</code></li>
+                                <li>Check <code>file_exists()</code> before reading or writing</li>
+                                <li><code>filesize()</code> returns size in bytes</li>
+                                <li><code>unlink()</code> deletes a file</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-save"></i> Persistent Data</h3>
+                            <p>File handling allows your application to store data beyond a single request. While databases are often preferred for structured data, files are perfect for configuration, logs, caching, and simple data storage.</p>
+                            
+                            <p>Security is crucial when dealing with file operations. Never allow user input to determine file paths directly, as this can lead to directory traversal attacks. Validate and sanitize any userâ€‘supplied filenames.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-lock"></i> Permissions</h4>
+                                    <p>Your PHP script must have appropriate permissions to read/write files. On shared hosting, set correct file and directory permissions (e.g., 644 for files, 755 for directories).</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-chart-line"></i> Logging</h4>
+                                    <p>Applications often log errors, access, or custom events to files. Functions like <code>error_log()</code> can write to a log file for later analysis.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-upload"></i> File Uploads</h4>
+                                    <p>PHP can handle file uploads from forms via <code>$_FILES</code>. The uploaded file is temporarily stored, then you move it to a permanent location with <code>move_uploaded_file()</code>.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-file-alt"></i> Configuration Files</h4>
+                                <p>Many PHP applications store settings in <code>.ini</code> or <code>.php</code> files. For example, a CMS might have a <code>config.php</code> file with database credentials. Using <code>include</code> or <code>parse_ini_file()</code>, you load these settings into your script.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Guestbook with File Storage:</strong> Create a PHP page with a form that takes a name and message. On submission:</p>
+                            <ul>
+                                <li>Append the name, message, and timestamp to a text file (<code>guestbook.txt</code>)</li>
+                                <li>Then read the file and display all entries below the form</li>
+                                <li>Use <code>file_get_contents()</code> and <code>file_put_contents()</code> with <code>FILE_APPEND</code></li>
+                                <li>Add basic validation (fields not empty)</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 10: Advanced PHP -->
+            <div class="course-module" id="module10" data-aos="fade-up" data-difficulty="advanced">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>ADVANCED PHP</h1>
+                    <h3>Explore sessions, OOP, and more</h3>
+                    <span class="difficulty">Advanced</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/919/919830.png" class="module-icon" alt="PHP Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 10: <span>Advanced Topics</span></h1>
+                    <p>This module introduces advanced PHP concepts: sessions for maintaining user state across pages, objectâ€‘oriented programming (OOP) basics, error handling with exceptions, and working with dates and times.</p>
+                    
+                    <p>Sessions allow you to store userâ€‘specific data (like login status) between page loads. OOP helps organize code into reusable classes. Exceptions provide a structured way to handle errors.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">PHP</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-10" spellcheck="false">&lt;?php
+    // Start a session (must be before any output)
+    session_start();
+    
+    // Set a session variable
+    $_SESSION['username'] = 'guest';
+    echo "Session started. Username: " . $_SESSION['username'] . "&lt;br&gt;";
+    
+    // Simple OOP example
+    class Car {
+        private $brand;
+        private $color;
+        
+        public function __construct($brand, $color) {
+            $this->brand = $brand;
+            $this->color = $color;
+        }
+        
+        public function getInfo() {
+            return "This car is a {$this->color} {$this->brand}.";
+        }
+    }
+    
+    $myCar = new Car("Toyota", "red");
+    echo $myCar->getInfo() . "&lt;br&gt;";
+    
+    // Exception handling
+    function divide($a, $b) {
+        if ($b == 0) {
+            throw new Exception("Division by zero is not allowed.");
+        }
+        return $a / $b;
+    }
+    
+    try {
+        echo "10 / 2 = " . divide(10, 2) . "&lt;br&gt;";
+        echo "10 / 0 = " . divide(10, 0) . "&lt;br&gt;"; // will throw exception
+    } catch (Exception $e) {
+        echo "Caught exception: " . $e->getMessage() . "&lt;br&gt;";
+    } finally {
+        echo "This always runs.&lt;br&gt;";
+    }
+    
+    // Date and time
+    echo "Current date: " . date('Y-m-d H:i:s') . "&lt;br&gt;";
+    echo "Next week: " . date('Y-m-d', strtotime('+1 week')) . "&lt;br&gt;";
+?&gt;</textarea>
+                        <button class="run-btn" onclick="runCode('editor-10', 'output-10')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Preview (simulated output)
+                        </div>
+                        <div class="preview-container" id="output-10"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li><code>session_start()</code> must be called before any HTML output</li>
+                                <li>Session data is stored in <code>$_SESSION</code> array</li>
+                                <li>OOP: classes encapsulate properties and methods; <code>__construct()</code> is the constructor</li>
+                                <li>Exceptions: <code>throw</code> an exception, catch with <code>try...catch</code>, optional <code>finally</code></li>
+                                <li><code>date()</code> formats timestamps; <code>strtotime()</code> parses human-readable dates</li>
+                                <li>These concepts are the foundation of modern PHP frameworks (Laravel, Symfony)</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-rocket"></i> Taking PHP to the Next Level</h3>
+                            <p>Sessions enable you to create multiâ€‘page interactions, like shopping carts and login systems. OOP helps you write modular, maintainable code that models realâ€‘world entities. Exceptions provide robust error handling, and date functions are essential for timeâ€‘sensitive applications.</p>
+                            
+                            <p>These advanced topics are the building blocks of professional PHP development. They allow you to build complex, scalable web applications that are secure and easy to maintain.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-user-check"></i> Session Security</h4>
+                                    <p>Sessions can be vulnerable to hijacking. Use <code>session_regenerate_id()</code> after login, store sessions in secure locations, and set appropriate cookie parameters.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-cube"></i> OOP Benefits</h4>
+                                    <p>Objectâ€‘oriented code is easier to test, reuse, and extend. Features like inheritance, polymorphism, and encapsulation help you manage complexity as projects grow.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-clock"></i> Timezones</h4>
+                                    <p>Always set the default timezone with <code>date_default_timezone_set()</code> to ensure accurate date/time handling, especially in international applications.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-shopping-bag"></i> Eâ€‘commerce Platform</h4>
+                                <p>A typical eâ€‘commerce site uses sessions to maintain the cart, OOP to model products, users, and orders, exceptions to handle payment failures, and date functions to manage promotions and order history. This module ties together all previous concepts into a professionalâ€‘grade application.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Simple Counter with Session:</strong></p>
+                            <ul>
+                                <li>Create a page that starts a session and keeps a counter of how many times the user has visited the page</li>
+                                <li>Display the counter value</li>
+                                <li>Add a reset button that destroys the session or resets the counter</li>
+                                <li>Optionally, create a small <code>User</code> class with properties like name and email, and store a User object in the session</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Practice Playground -->
+            <div class="course-module" id="playground" data-aos="fade-up">
+                <div class="course-three">
+                    <h1>PRACTICE PLAYGROUND</h1>
+                    <h3>Experiment with what you've learned</h3>
+                    <i class="fas fa-laptop-code course-icon" style="color: var(--primary);"></i>
+                </div>
+                <div class="course-one">
+                    <h1>Your Coding Playground: <span>Try Your Own PHP</span></h1>
+                    <p>Use this space to experiment with everything you've learned. Write your own PHP code and see the output! This is your sandbox to practice and explore. (Note: PHP execution is simulated; output will show the raw PHP code. For real testing, use a local server.)</p>
+                    
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">PHP</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="playground-editor" spellcheck="false">&lt;?php
+    // Your PHP code here
+    $message = "Welcome to the PHP Playground!";
+    echo "&lt;h1&gt;$message&lt;/h1&gt;";
+    
+    $colors = ["Red", "Green", "Blue"];
+    echo "&lt;ul&gt;";
+    foreach ($colors as $color) {
+        echo "&lt;li&gt;$color&lt;/li&gt;";
+    }
+    echo "&lt;/ul&gt;";
+    
+    // Try combining HTML and PHP
+?&gt;
+&lt;p&gt;Current date and time: &lt;?php echo date('Y-m-d H:i:s'); ?&gt;&lt;/p&gt;</textarea>
+                        <button class="run-btn" onclick="runCode('playground-editor', 'playground-output')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Preview (simulated output)
+                        </div>
+                        <div class="preview-container" id="playground-output"></div>
+                    </div>
+                    
+                    <div class="course-five">
+                        <h3>Challenge Exercises:</h3>
+                        <ol>
+                            <li>Build a simple calculator that takes two numbers and an operator via form (use <code>$_POST</code>).</li>
+                            <li>Create a script that reads a text file and displays its content line by line.</li>
+                            <li>Write a function that checks if a string is a palindrome.</li>
+                            <li>Store a list of tasks in an array and display them; allow adding new tasks via a form (use sessions to persist).</li>
+                            <li>Combine all concepts into a small guestbook application.</li>
+                        </ol>
+                        
+                        <h3>Tips & Resources:</h3>
+                        <ul>
+                            <li>Use <code>var_dump()</code> for debugging</li>
+                            <li>PHP.net is the official documentationâ€”bookmark it!</li>
+                            <li>Try your code on a local server (XAMPP, MAMP, or Laravel Valet) for real execution.</li>
+                            <li>Experiment with the SkillMynte color scheme in generated HTML.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Premium Subscription CTA -->
+            <div class="premium-subscription" id="premium-subscription" data-aos="fade-up">
+                <h2>Unlock Premium SkillMynte Content</h2>
+                <p>Upgrade to SkillMynte Pro for exclusive courses, advanced projects, and personalized learning paths</p>
+                
+                <div class="premium-features">
+                    <div class="premium-feature">
+                        <i class="fas fa-gem"></i>
+                        <h3>Premium Courses</h3>
+                        <p>Access our entire library of advanced courses and exclusive content</p>
+                    </div>
+                    <div class="premium-feature">
+                        <i class="fas fa-trophy"></i>
+                        <h3>Certification</h3>
+                        <p>Earn industry-recognized certificates to showcase your skills</p>
+                    </div>
+                    <div class="premium-feature">
+                        <i class="fas fa-user-graduate"></i>
+                        <h3>Mentorship</h3>
+                        <p>Get personalized guidance from industry experts</p>
+                    </div>
+                </div>
+                
+                <div class="pricing-options">
+                    <div class="pricing-option">
+                        <h3>Monthly</h3>
+                        <div class="price">₦3,500<span>/month</span></div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> All Premium Courses</li>
+                            <li><i class="fas fa-check"></i> Practice Projects</li>
+                            <li><i class="fas fa-check"></i> Community Access</li>
+                            <li><i class="fas fa-check"></i> Certificates</li>
+                            <li><i class="fas fa-check"></i> personal AI inbuilt</li>
+                        </ul>
+                        <a href="premium courses.html"><button class="pricing-btn">Get Started</button></a>
+                    </div>
+                    
+                    <div class="pricing-option" style="border-color: var(--white); transform: scale(1.05);">
+                        <h3>Annual <span style="background: var(--white); color: #2962FF; padding: 0.2rem 0.5rem; border-radius: 20px; font-size: 0.8rem; margin-left: 0.5rem;">Best Value</span></h3>
+                        <div class="price">₦37,000<span>/year</span></div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> All Premium Courses</li>
+                            <li><i class="fas fa-check"></i> Practice Projects</li>
+                            <li><i class="fas fa-check"></i> Community Access</li>
+                            <li><i class="fas fa-check"></i> Certificates</li>
+                            <li><i class="fas fa-check"></i> personal AI inbuilt</li>
+                        </ul>
+                        <a href="premium courses.html"><button class="pricing-btn">Get Started</button></a>
+                    </div>
+                    
+                    <div class="pricing-option">
+                        <h3>Lifetime</h3>
+                        <div class="price">₦200,000<span>/once</span></div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> All Premium Courses</li>
+                            <li><i class="fas fa-check"></i> Practice Projects</li>
+                            <li><i class="fas fa-check"></i> Community Access</li>
+                            <li><i class="fas fa-check"></i> Certificates</li>
+                            <li><i class="fas fa-check"></i> personal AI inbuilt</li>
+                        </ul>
+                        <a href="premium courses.html"><button class="pricing-btn">Get Started</button></a>
+                    </div>
+                </div>
+                
+                <button class="premium-cta-btn">
+                    <i class="fas fa-rocket"></i> Upgrade to SkillMynte Pro
+                </button>
+            </div>
+            
+            <!-- Footer -->
+            <footer>
+                <div class="footer-content">
+                    <div class="footer-column">
+                        <h3>About SkillMynte</h3>
+                        <p>SkillMynte is a premium learning platform dedicated to helping developers of all levels master web technologies through interactive courses and hands-on practice.</p>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/profile.php?id=61581069862024"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://x.com/SkillMynte_AI?t=CcoQtjWZGGOXqfTfrsufjQ&s=09"><i class="fab fa-twitter"></i></a>
+                            <a href="https://youtube.com/@skillmynte?si=LmX2MjSKU3N1Xa5S"><i class="fab fa-youtube"></i></a>
+                            <a href="https://www.instagram.com/skillmynte_ai?igsh=MTd1YWpjdXV1OHhrbA=="><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Quick Links</h3>
+                        <ul class="footer-links">
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Home</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Courses</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Practice</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Projects</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Popular Courses</h3>
+                        <ul class="footer-links">
+                            <li><a href="free CSS Course.html"><i class="fas fa-chevron-right"></i> HTML & CSS Fundamentals</a></li>
+                            <li><a href="free JS Course.html"><i class="fas fa-chevron-right"></i> JavaScript Mastery</a></li>
+                            <li><a href="premium courses.html"><i class="fas fa-chevron-right"></i> React.js Development</a></li>
+                            <li><a href="free node.js.html"><i class="fas fa-chevron-right"></i> Node.js Backend</a></li>
+                            <li><a href="free python course.html"><i class="fas fa-chevron-right"></i> Python for Beginners</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> PHP for Beginners</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Contact Us</h3>
+                        <p><i class="fas fa-envelope"></i>Skillmynteofficial@gmail.com</p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 SkillMynte. All rights reserved. | Designed with <i class="fas fa-heart" style="color: var(--primary);"></i> for the developer community</p>
+                </div>
+            </footer>
+
+           <script>
+    // Function to run code in preview (simulated for PHP)
+    function runCode(editorId, outputId) {
+        const editor = document.getElementById(editorId);
+        const output = document.getElementById(outputId);
+        
+        try {
+            // For PHP, we simply display the code as text (since it can't be executed client-side)
+            // But to simulate a bit, we'll show it in a pre tag and mention it's raw PHP.
+            let code = editor.value;
+            // We'll escape HTML to display the code itself
+            code = code.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+            output.innerHTML = `<div style="background: #1e1e1e; color: #d4d4d4; padding: 1rem; border-radius: 4px; font-family: monospace; white-space: pre-wrap;">${code}</div><p style="color: #ffaa00; margin-top: 0.5rem;"><i class="fas fa-info-circle"></i> PHP output is simulated. Run this code on a real server to see dynamic results.</p>`;
+        } catch (error) {
+            output.innerHTML = `<div style="color: var(--accent); padding: 1rem;">Error: ${error.message}</div>`;
+        }
+    }
+    
+    // Initialize all editors with their default output
+    document.addEventListener('DOMContentLoaded', function() {
+        // Run all code editors on load
+        runCode('editor-1', 'output-1');
+        runCode('editor-2', 'output-2');
+        runCode('editor-3', 'output-3');
+        runCode('editor-4', 'output-4');
+        runCode('editor-5', 'output-5');
+        runCode('editor-6', 'output-6');
+        runCode('editor-7', 'output-7');
+        runCode('editor-8', 'output-8');
+        runCode('editor-9', 'output-9');
+        runCode('editor-10', 'output-10');
+        runCode('playground-editor', 'playground-output');
+        
+        // Add event listeners to all run buttons in editor headers
+        document.querySelectorAll('.run-editor').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const editorContainer = this.closest('.code-editor-container');
+                const editor = editorContainer.querySelector('.code-editor');
+                const output = editorContainer.querySelector('.preview-container');
+                runCode(editor.id, output.id);
+            });
+        });
+        
+        // Add reset functionality
+        document.querySelectorAll('.reset-editor').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const editorContainer = this.closest('.code-editor-container');
+                const editor = editorContainer.querySelector('.code-editor');
+                const originalContent = editor.dataset.original || editor.defaultValue;
+                editor.value = originalContent;
+                runCode(editor.id, editorContainer.querySelector('.preview-container').id);
+            });
+        });
+        
+        // Store original content for reset functionality
+        document.querySelectorAll('.code-editor').forEach(editor => {
+            editor.dataset.original = editor.value;
+        });
+
+        // Handle navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // FIXED: Hamburger menu functionality
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.querySelector('.nav-menu');
+        const sidebar = document.getElementById('sidebar');
+        const body = document.body;
+
+        function toggleMobileMenu() {
+            const isActive = navMenu.classList.contains('active');
+            
+            if (isActive) {
+                // Close menu
+                navMenu.classList.remove('active');
+                sidebar.classList.remove('active');
+                menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                body.classList.remove('menu-open');
+                menuToggle.setAttribute('aria-expanded', 'false');
+            } else {
+                // Open menu
+                navMenu.classList.add('active');
+                sidebar.classList.add('active');
+                menuToggle.innerHTML = '<i class="fas fa-times"></i>';
+                body.classList.add('menu-open');
+                menuToggle.setAttribute('aria-expanded', 'true');
+            }
+        }
+
+        function closeMobileMenu() {
+            navMenu.classList.remove('active');
+            sidebar.classList.remove('active');
+            menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            body.classList.remove('menu-open');
+            menuToggle.setAttribute('aria-expanded', 'false');
+        }
+
+        // Mobile menu toggle
+        menuToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            toggleMobileMenu();
+        });
+
+        // Close menu when clicking on nav links
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function() {
+                if (window.innerWidth <= 1024) {
+                    closeMobileMenu();
+                }
+            });
+        });
+
+        // Close menu when clicking on dropdown items
+        document.querySelectorAll('.dropdown-item').forEach(item => {
+            item.addEventListener('click', function() {
+                if (window.innerWidth <= 1024) {
+                    closeMobileMenu();
+                }
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (window.innerWidth <= 1024 && 
+                navMenu.classList.contains('active') &&
+                !e.target.closest('.nav-menu') && 
+                !e.target.closest('.menu-toggle') &&
+                !e.target.closest('.sidebar')) {
+                closeMobileMenu();
+            }
+        });
+
+        // Close menu on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+                closeMobileMenu();
+            }
+        });
+
+        // Close menu on resize if switching to desktop
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 1024 && navMenu.classList.contains('active')) {
+                closeMobileMenu();
+            }
+        });
+
+        // Mobile dropdown functionality
+        document.querySelectorAll('.courses-dropdown').forEach(dropdown => {
+            const button = dropdown.querySelector('.courses-btn');
+            
+            button.addEventListener('click', function(e) {
+                if (window.innerWidth <= 1024) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    dropdown.classList.toggle('active');
+                }
+            });
+        });
+
+        // Level filtering functionality
+        const levelButtons = document.querySelectorAll('.level-btn');
+        const modules = document.querySelectorAll('.course-module');
+        
+        levelButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const level = this.getAttribute('data-level');
+                
+                // Remove active class from all buttons
+                levelButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                this.classList.add('active');
+                
+                if (level === 'all') {
+                    // Show all modules
+                    modules.forEach(module => {
+                        module.style.display = 'flex';
+                    });
+                } else if (level === 'advanced') {
+                    // Show advanced modules (7-10)
+                    modules.forEach(module => {
+                        const moduleId = module.id;
+                        if (moduleId.includes('module7') || moduleId.includes('module8') || 
+                            moduleId.includes('module9') || moduleId.includes('module10')) {
+                            module.style.display = 'flex';
+                        } else {
+                            module.style.display = 'none';
+                        }
+                    });
+                } else {
+                    // Show modules with matching difficulty
+                    modules.forEach(module => {
+                        const difficulty = module.getAttribute('data-difficulty');
+                        if (difficulty === level) {
+                            module.style.display = 'flex';
+                        } else {
+                            module.style.display = 'none';
+                        }
+                    });
+                }
+                
+                // Scroll to first visible module
+                const firstVisible = document.querySelector('.course-module[style="display: flex;"]');
+                if (firstVisible) {
+                    firstVisible.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Search functionality
+        const searchInput = document.getElementById('search-input');
+        
+        searchInput.addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase().trim();
+            
+            if (searchTerm === '') {
+                // Show all modules if search is empty
+                modules.forEach(module => {
+                    module.style.display = 'flex';
+                });
+                return;
+            }
+            
+            modules.forEach(module => {
+                const moduleTitle = module.querySelector('h1').textContent.toLowerCase();
+                const moduleContent = module.textContent.toLowerCase();
+                
+                if (moduleTitle.includes(searchTerm) || moduleContent.includes(searchTerm)) {
+                    module.style.display = 'flex';
+                } else {
+                    module.style.display = 'none';
+                }
+            });
+        });
+    });
+    
+    // Smooth scrolling for sidebar links
+    document.querySelectorAll('.sidebar-item').forEach(item => {
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Remove active class from all items
+            document.querySelectorAll('.sidebar-item').forEach(i => {
+                i.classList.remove('active');
+            });
+            
+            // Add active class to clicked item
+            this.classList.add('active');
+            
+            // Close mobile menu if open
+            if (window.innerWidth <= 1024) {
+                document.querySelector('.nav-menu').classList.remove('active');
+                document.querySelector('.sidebar').classList.remove('active');
+                document.querySelector('.menu-toggle').innerHTML = '<i class="fas fa-bars"></i>';
+                document.body.classList.remove('menu-open');
+            }
+            
+            // Scroll to section
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 100,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+</script>
+        </div>
+    </div>
+</body>
+</html>

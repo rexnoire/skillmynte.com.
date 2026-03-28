@@ -1,0 +1,4484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Programming Mastery | SkillMynte</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="rounded_logo.png">
+    <link rel="stylesheet" href="free c++ course.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-code"></i>
+                SKILLMYNTE
+            </a>
+            <div class="nav-menu">
+                <a href="#" class="nav-link">Home</a>
+                <a href="#" class="nav-link">Courses</a>
+                <a href="#" class="nav-link">Practice</a>
+                <a href="#" class="nav-link">Projects</a>
+                
+                <div class="courses-dropdown">
+                    <button class="courses-btn">
+                        <i class="fas fa-book-open"></i> Jump to Module
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#module1" class="dropdown-item">
+                            <i class="fab fa-cuttlefish cpp-icon"></i> C++ Basics
+                        </a>
+                        <a href="#module2" class="dropdown-item">
+                            <i class="fab fa-cuttlefish cpp-icon"></i> Data Types & Variables
+                        </a>
+                        <a href="#module3" class="dropdown-item">
+                            <i class="fab fa-cuttlefish cpp-icon"></i> Control Structures
+                        </a>
+                        <a href="#module4" class="dropdown-item">
+                            <i class="fab fa-cuttlefish cpp-icon"></i> Functions
+                        </a>
+                        <a href="#module5" class="dropdown-item">
+                            <i class="fab fa-cuttlefish cpp-icon"></i> Arrays & Strings
+                        </a>
+                        <a href="#module6" class="dropdown-item">
+                            <i class="fab fa-cuttlefish cpp-icon"></i> Pointers & References
+                        </a>
+                        <a href="#module7" class="dropdown-item">
+                            <i class="fab fa-cuttlefish cpp-icon"></i> OOP - Classes & Objects
+                        </a>
+                        <a href="#module8" class="dropdown-item">
+                            <i class="fab fa-cuttlefish cpp-icon"></i> OOP - Inheritance & Polymorphism
+                        </a>
+                        <a href="#module9" class="dropdown-item">
+                            <i class="fab fa-cuttlefish cpp-icon"></i> Templates & STL
+                        </a>
+                        <a href="#module10" class="dropdown-item">
+                            <i class="fab fa-cuttlefish cpp-icon"></i> Advanced C++
+                        </a>
+                        <a href="#playground" class="dropdown-item">
+                            <i class="fas fa-laptop-code"></i> Practice Playground
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Premium Course Navigation -->
+    <div class="course-navigation">
+        <div class="course-nav-container">
+            <div class="course-category">
+                <button class="category-btn">
+                    <i class="fas fa-layer-group"></i> Categories
+                </button>
+                <div class="category-dropdown">
+                    <a href="#" class="category-item">
+                        <i class="fab fa-cuttlefish cpp-icon"></i> C++ Programming
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fab fa-python python-icon"></i> Python
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fab fa-java java-icon"></i> Java
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fab fa-js-square js-icon"></i> JavaScript
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fas fa-database"></i> Data Structures
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fas fa-robot"></i> AI & Machine Learning
+                    </a>
+                </div>
+            </div>
+            
+            <div class="course-levels">
+                <button class="level-btn active" data-level="all">All Levels</button>
+                <button class="level-btn" data-level="beginner">Beginner</button>
+                <button class="level-btn" data-level="intermediate">Intermediate</button>
+                <button class="level-btn" data-level="advanced">Advanced</button>
+            </div>
+            
+            <div class="course-search">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" class="search-input" id="search-input" placeholder="Search courses...">
+            </div>
+        </div>
+    </div>
+    
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <a href="#module1" class="sidebar-item active completed">
+            <i class="fab fa-cuttlefish cpp-icon"></i>
+            <span>Module 1: C++ Basics</span>
+            <span class="progress-indicator"><i class="fas fa-check"></i></span>
+        </a>
+        <a href="#module2" class="sidebar-item completed">
+            <i class="fab fa-cuttlefish cpp-icon"></i>
+            <span>Module 2: Data Types & Variables</span>
+            <span class="progress-indicator"><i class="fas fa-check"></i></span>
+        </a>
+        <a href="#module3" class="sidebar-item completed">
+            <i class="fab fa-cuttlefish cpp-icon"></i>
+            <span>Module 3: Control Structures</span>
+            <span class="progress-indicator"><i class="fas fa-check"></i></span>
+        </a>
+        <a href="#module4" class="sidebar-item">
+            <i class="fab fa-cuttlefish cpp-icon"></i>
+            <span>Module 4: Functions</span>
+            <span class="progress-indicator">4</span>
+        </a>
+        <a href="#module5" class="sidebar-item">
+            <i class="fab fa-cuttlefish cpp-icon"></i>
+            <span>Module 5: Arrays & Strings</span>
+            <span class="progress-indicator">5</span>
+        </a>
+        <a href="#module6" class="sidebar-item">
+            <i class="fab fa-cuttlefish cpp-icon"></i>
+            <span>Module 6: Pointers & References</span>
+            <span class="progress-indicator">6</span>
+        </a>
+        <a href="#module7" class="sidebar-item">
+            <i class="fab fa-cuttlefish cpp-icon"></i>
+            <span>Module 7: Classes & Objects</span>
+            <span class="progress-indicator">7</span>
+        </a>
+        <a href="#module8" class="sidebar-item">
+            <i class="fab fa-cuttlefish cpp-icon"></i>
+            <span>Module 8: Inheritance & Polymorphism</span>
+            <span class="progress-indicator">8</span>
+        </a>
+        <a href="#module9" class="sidebar-item">
+            <i class="fab fa-cuttlefish cpp-icon"></i>
+            <span>Module 9: Templates & STL</span>
+            <span class="progress-indicator">9</span>
+        </a>
+        <a href="#module10" class="sidebar-item">
+            <i class="fab fa-cuttlefish cpp-icon"></i>
+            <span>Module 10: Advanced C++</span>
+            <span class="progress-indicator">10</span>
+        </a>
+        <a href="#playground" class="sidebar-item">
+            <i class="fas fa-laptop-code"></i>
+            <span>Practice Playground</span>
+        </a>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="content-wrapper">
+        <div class="container">
+            <!-- Module 1 -->
+            <div class="course-module" id="module1" data-aos="fade-up" data-difficulty="beginner">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>C++ BASICS</h1>
+                    <h3>Learn the fundamental structure of C++ programs</h3>
+                    <span class="difficulty">Beginner</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/6132/6132222.png" class="module-icon" alt="C++ Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 1: <span>C++ Program Structure</span></h1>
+                    <p>C++ is a powerful, high-performance programming language used for system software, game development, and high-performance applications. Think of C++ as the foundation of modern computing - it gives you direct control over hardware while providing object-oriented features for complex software design.</p>
+                    
+                    <p>Every C++ program follows a similar basic structure. The <code>#include</code> preprocessor directive imports necessary libraries. The <code>main()</code> function is the entry point of every C++ program. Code statements end with semicolons, and blocks are enclosed in curly braces.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">C++</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-1" spellcheck="false">#include <iostream>
+using namespace std;
+
+int main() {
+    // This is my first C++ program
+    cout << "Hello, World!" << endl;
+    cout << "Welcome to C++ Programming!" << endl;
+    
+    // Variables and basic operations
+    int age = 25;
+    double price = 19.99;
+    string name = "SkillMynte";
+    
+    cout << "\nName: " << name << endl;
+    cout << "Age: " << age << endl;
+    cout << "Price: $" << price << endl;
+    
+    // Basic arithmetic
+    int x = 10;
+    int y = 5;
+    int sum = x + y;
+    
+    cout << "\nArithmetic Operations:" << endl;
+    cout << x << " + " << y << " = " << sum << endl;
+    cout << x << " * " << y << " = " << (x * y) << endl;
+    
+    return 0;
+}</textarea>
+                        <button class="run-btn" onclick="runCode('editor-1', 'output-1')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Program Output
+                        </div>
+                        <div class="preview-container" id="output-1">
+                            <pre>Hello, World!
+Welcome to C++ Programming!
+
+Name: SkillMynte
+Age: 25
+Price: $19.99
+
+Arithmetic Operations:
+10 + 5 = 15
+10 * 5 = 50</pre>
+                        </div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li><code>#include &lt;iostream&gt;</code> imports input/output functionality</li>
+                                <li><code>using namespace std;</code> avoids typing <code>std::</code> before standard functions</li>
+                                <li><code>int main()</code> is the entry point of every C++ program</li>
+                                <li><code>cout &lt;&lt;</code> outputs data to the console</li>
+                                <li><code>endl</code> inserts a newline and flushes the output buffer</li>
+                                <li>Statements must end with semicolons (<code>;</code>)</li>
+                                <li>Comments start with <code>//</code> for single line or <code>/* */</code> for multi-line</li>
+                                <li>The <code>return 0;</code> indicates successful program execution</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-graduation-cap"></i> C++ Foundation Explained</h3>
+                            <p>C++ is the bedrock of systems programming and high-performance applications. Developed by Bjarne Stroustrup as an extension of C, it combines low-level memory control with high-level abstractions. This unique combination makes C++ the language of choice for operating systems, game engines, database systems, and performance-critical applications.</p>
+                            
+                            <p>The <code>main()</code> function is where program execution begins. Every C++ program must have exactly one <code>main()</code> function. The <code>#include</code> directives tell the compiler to include header files containing declarations of functions and classes you'll use. The Standard Template Library (STL) provides powerful data structures and algorithms that dramatically increase productivity.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-microchip"></i> Performance & Control</h4>
+                                    <p>C++ provides direct memory access and hardware control, enabling developers to write highly optimized code. This makes it ideal for applications where performance is critical, like game engines and financial trading systems.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-sitemap"></i> Object-Oriented Design</h4>
+                                    <p>C++ supports classes, inheritance, polymorphism, and encapsulation, allowing for clean, modular, and reusable code architecture that scales well for large projects.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-bolt"></i> Compilation Process</h4>
+                                    <p>C++ is a compiled language, meaning source code is translated directly into machine code by a compiler. This results in faster execution compared to interpreted languages.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-gamepad"></i> Real-World Application</h4>
+                                <p>Major software systems are built with C++: Windows and Linux operating systems, Unreal and Unity game engines, Chrome and Firefox browsers, MySQL and MongoDB databases, and Adobe Creative Suite. Financial institutions use C++ for high-frequency trading systems where microseconds matter. Automotive companies use C++ for embedded systems in vehicles. Mastering C++ fundamentals opens doors to these high-impact industries.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Create Your First C++ Program:</strong> Build a program that includes:</p>
+                            <ul>
+                                <li>Proper program structure with <code>main()</code> function</li>
+                                <li>Output a welcome message to the user</li>
+                                <li>Declare and initialize at least three different variable types</li>
+                                <li>Perform and display results of basic arithmetic operations</li>
+                                <li>Add comments explaining each section</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 2 -->
+            <div class="course-module" id="module2" data-aos="fade-up" data-difficulty="beginner">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>DATA TYPES & VARIABLES</h1>
+                    <h3>Learn to work with different data types in C++</h3>
+                    <span class="difficulty">Beginner</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/6132/6132222.png" class="module-icon" alt="C++ Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 2: <span>Fundamental Data Types</span></h1>
+                    <p>Data types define the kind of data a variable can hold and how much memory it occupies. C++ provides several fundamental data types: integers (<code>int</code>), floating-point numbers (<code>float</code>, <code>double</code>), characters (<code>char</code>), and booleans (<code>bool</code>).</p>
+                    
+                    <p>Variables are named storage locations in memory. Before using a variable, you must declare its type. C++ is statically typed, meaning variable types are checked at compile time. Proper type selection is crucial for memory efficiency and program correctness.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">C++</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-2" spellcheck="false">#include <iostream>
+#include <string>
+#include <iomanip>
+using namespace std;
+
+int main() {
+    // Integer types
+    int age = 25;
+    short smallNumber = 100;
+    long bigNumber = 1000000;
+    long long veryBigNumber = 10000000000;
+    
+    // Floating-point types
+    float price = 19.99f;
+    double preciseValue = 3.1415926535;
+    long double veryPrecise = 3.141592653589793238L;
+    
+    // Character type
+    char grade = 'A';
+    char symbol = '$';
+    
+    // Boolean type
+    bool isCppFun = true;
+    bool isEasy = false;
+    
+    // String type (from STL)
+    string name = "SkillMynte";
+    string message = "Learning C++ is awesome!";
+    
+    // Displaying values
+    cout << "=== DATA TYPES DEMONSTRATION ===\n" << endl;
+    
+    cout << "INTEGERS:" << endl;
+    cout << "Age: " << age << endl;
+    cout << "Small number: " << smallNumber << endl;
+    cout << "Big number: " << bigNumber << endl;
+    cout << "Very big number: " << veryBigNumber << endl;
+    
+    cout << "\nFLOATING-POINT:" << endl;
+    cout << fixed << setprecision(2);
+    cout << "Price: $" << price << endl;
+    cout << setprecision(10);
+    cout << "Pi (double): " << preciseValue << endl;
+    cout << setprecision(20);
+    cout << "Pi (long double): " << veryPrecise << endl;
+    
+    cout << "\nCHARACTERS:" << endl;
+    cout << "Grade: " << grade << endl;
+    cout << "Symbol: " << symbol << endl;
+    cout << "ASCII value of 'A': " << (int)grade << endl;
+    
+    cout << "\nBOOLEANS:" << endl;
+    cout << boolalpha; // Display true/false instead of 1/0
+    cout << "Is C++ fun? " << isCppFun << endl;
+    cout << "Is it easy? " << isEasy << endl;
+    
+    cout << "\nSTRINGS:" << endl;
+    cout << "Name: " << name << endl;
+    cout << "Message: " << message << endl;
+    cout << "String length: " << name.length() << " characters" << endl;
+    
+    // Type sizes
+    cout << "\n=== MEMORY SIZES ===" << endl;
+    cout << "Size of int: " << sizeof(int) << " bytes" << endl;
+    cout << "Size of double: " << sizeof(double) << " bytes" << endl;
+    cout << "Size of char: " << sizeof(char) << " byte" << endl;
+    cout << "Size of bool: " << sizeof(bool) << " byte" << endl;
+    
+    return 0;
+}</textarea>
+                        <button class="run-btn" onclick="runCode('editor-2', 'output-2')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Program Output
+                        </div>
+                        <div class="preview-container" id="output-2">
+                            <pre>=== DATA TYPES DEMONSTRATION ===
+
+INTEGERS:
+Age: 25
+Small number: 100
+Big number: 1000000
+Very big number: 10000000000
+
+FLOATING-POINT:
+Price: $19.99
+Pi (double): 3.1415926535
+Pi (long double): 3.141592653589793238
+
+CHARACTERS:
+Grade: A
+Symbol: $
+ASCII value of 'A': 65
+
+BOOLEANS:
+Is C++ fun? true
+Is it easy? false
+
+STRINGS:
+Name: SkillMynte
+Message: Learning C++ is awesome!
+String length: 10 characters
+
+=== MEMORY SIZES ===
+Size of int: 4 bytes
+Size of double: 8 bytes
+Size of char: 1 byte
+Size of bool: 1 byte</pre>
+                        </div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li><code>int</code> stores whole numbers (typically 4 bytes)</li>
+                                <li><code>float</code> and <code>double</code> store decimal numbers with single/double precision</li>
+                                <li><code>char</code> stores single characters (1 byte)</li>
+                                <li><code>bool</code> stores true/false values</li>
+                                <li><code>string</code> (from STL) stores sequences of characters</li>
+                                <li>Use <code>sizeof()</code> to check memory size of types</li>
+                                <li>C++ is case-sensitive: <code>Age</code> and <code>age</code> are different variables</li>
+                                <li>Initialize variables when declaring them for safety</li>
+                                <li>Choose appropriate types for memory efficiency and precision needs</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-database"></i> Data Representation & Memory Management</h3>
+                            <p>Understanding C++ data types is fundamental to writing efficient and correct programs. Each type has specific memory requirements, value ranges, and behaviors. Integers (<code>int</code>, <code>short</code>, <code>long</code>) use two's complement representation, while floating-point types (<code>float</code>, <code>double</code>) follow the IEEE 754 standard, which explains why <code>0.1 + 0.2 != 0.3</code> exactly in floating-point arithmetic.</p>
+                            
+                            <p>Memory efficiency is crucial in systems programming. Choosing <code>short</code> instead of <code>int</code> when values are small, or <code>float</code> instead of <code>double</code> when less precision is acceptable, can significantly reduce memory usage in large-scale applications. This optimization is particularly important in embedded systems, game development, and high-performance computing where resources are constrained.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-memory"></i> Memory Layout</h4>
+                                    <p>Different data types occupy different amounts of memory. Understanding memory alignment and padding is crucial for writing cache-friendly code that maximizes CPU performance.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-ruler-combined"></i> Type Ranges & Limits</h4>
+                                    <p>Each type has minimum and maximum values defined in <code>&lt;climits&gt;</code> and <code>&lt;cfloat&gt;</code> headers. Understanding these prevents overflow/underflow errors.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-exchange-alt"></i> Type Conversions</h4>
+                                    <p>C++ performs implicit and explicit type conversions. Understanding when and how conversions happen prevents subtle bugs and maintains data integrity.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-satellite"></i> Aerospace & Embedded Systems</h4>
+                                <p>NASA's Mars rovers use C++ with careful type selection to minimize memory usage while maintaining precision. Automotive control systems use specific integer sizes to ensure predictable behavior. Financial systems use fixed-point arithmetic to avoid floating-point rounding errors in monetary calculations. Game engines optimize vertex data using smallest sufficient types to maximize GPU throughput. In each case, mastery of C++ data types enables developers to balance performance, memory, and precision requirements.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Create a Student Record System:</strong> Build a program that stores and displays student information:</p>
+                            <ul>
+                                <li>Declare variables for student name, age, GPA, grade, and enrollment status</li>
+                                <li>Use appropriate data types for each piece of information</li>
+                                <li>Display all information in a formatted output</li>
+                                <li>Include memory size information for each variable type</li>
+                                <li>Demonstrate at least one type conversion</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 3 -->
+            <div class="course-module" id="module3" data-aos="fade-up" data-difficulty="beginner">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>CONTROL STRUCTURES</h1>
+                    <h3>Learn to control program flow with conditions and loops</h3>
+                    <span class="difficulty">Beginner</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/6132/6132222.png" class="module-icon" alt="C++ Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 3: <span>Conditionals and Loops</span></h1>
+                    <p>Control structures determine the flow of program execution. Conditionals (<code>if</code>, <code>else</code>, <code>switch</code>) make decisions, while loops (<code>for</code>, <code>while</code>, <code>do-while</code>) repeat actions. These constructs enable programs to respond to different situations and process data efficiently.</p>
+                    
+                    <p>Boolean expressions evaluate to true or false and are used in conditionals. Relational operators (<code>==</code>, <code>!=</code>, <code>&lt;</code>, <code>&gt;</code>) compare values, while logical operators (<code>&&</code>, <code>||</code>, <code>!</code>) combine conditions. Understanding operator precedence is crucial for writing correct conditions.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">C++</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-3" spellcheck="false">#include <iostream>
+using namespace std;
+
+int main() {
+    cout << "=== CONDITIONAL STATEMENTS ===\n" << endl;
+    
+    // Basic if-else
+    int age = 18;
+    cout << "Age: " << age << endl;
+    
+    if (age >= 18) {
+        cout << "You are an adult." << endl;
+    } else {
+        cout << "You are a minor." << endl;
+    }
+    
+    // if-else if ladder
+    int score = 85;
+    char grade;
+    
+    if (score >= 90) {
+        grade = 'A';
+    } else if (score >= 80) {
+        grade = 'B';
+    } else if (score >= 70) {
+        grade = 'C';
+    } else if (score >= 60) {
+        grade = 'D';
+    } else {
+        grade = 'F';
+    }
+    
+    cout << "\nScore: " << score << " -> Grade: " << grade << endl;
+    
+    // Switch statement
+    cout << "\n=== SWITCH STATEMENT ===" << endl;
+    int day = 3;
+    
+    switch (day) {
+        case 1:
+            cout << "Monday" << endl;
+            break;
+        case 2:
+            cout << "Tuesday" << endl;
+            break;
+        case 3:
+            cout << "Wednesday" << endl;
+            break;
+        case 4:
+            cout << "Thursday" << endl;
+            break;
+        case 5:
+            cout << "Friday" << endl;
+            break;
+        case 6:
+            cout << "Saturday" << endl;
+            break;
+        case 7:
+            cout << "Sunday" << endl;
+            break;
+        default:
+            cout << "Invalid day" << endl;
+    }
+    
+    // Logical operators
+    cout << "\n=== LOGICAL OPERATORS ===" << endl;
+    bool hasTicket = true;
+    bool hasID = true;
+    int personAge = 20;
+    
+    if (hasTicket && hasID && personAge >= 18) {
+        cout << "Access granted to the event." << endl;
+    } else {
+        cout << "Access denied." << endl;
+    }
+    
+    cout << "\n=== LOOP STRUCTURES ===\n" << endl;
+    
+    // For loop
+    cout << "For loop (1 to 5): ";
+    for (int i = 1; i <= 5; i++) {
+        cout << i << " ";
+    }
+    cout << endl;
+    
+    // While loop
+    cout << "While loop (countdown): ";
+    int count = 5;
+    while (count > 0) {
+        cout << count << " ";
+        count--;
+    }
+    cout << "Liftoff!" << endl;
+    
+    // Do-while loop
+    cout << "Do-while loop: ";
+    int number;
+    do {
+        number = 7; // Simulating user input
+        cout << "Enter a positive number (simulated as 7): ";
+    } while (number <= 0);
+    cout << "You entered: " << number << endl;
+    
+    // Nested loops
+    cout << "\n=== NESTED LOOPS (Multiplication Table) ===" << endl;
+    for (int i = 1; i <= 5; i++) {
+        for (int j = 1; j <= 5; j++) {
+            cout << i * j << "\t";
+        }
+        cout << endl;
+    }
+    
+    // Loop control statements
+    cout << "\n=== LOOP CONTROL (break & continue) ===" << endl;
+    cout << "Numbers 1-10, skipping 5 and stopping at 8:" << endl;
+    
+    for (int i = 1; i <= 10; i++) {
+        if (i == 5) {
+            continue; // Skip 5
+        }
+        if (i == 9) {
+            break; // Stop before 9
+        }
+        cout << i << " ";
+    }
+    cout << endl;
+    
+    return 0;
+}</textarea>
+                        <button class="run-btn" onclick="runCode('editor-3', 'output-3')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Program Output
+                        </div>
+                        <div class="preview-container" id="output-3">
+                            <pre>=== CONDITIONAL STATEMENTS ===
+
+Age: 18
+You are an adult.
+
+Score: 85 -> Grade: B
+
+=== SWITCH STATEMENT ===
+Wednesday
+
+=== LOGICAL OPERATORS ===
+Access granted to the event.
+
+=== LOOP STRUCTURES ===
+
+For loop (1 to 5): 1 2 3 4 5 
+While loop (countdown): 5 4 3 2 1 Liftoff!
+Do-while loop: Enter a positive number (simulated as 7): You entered: 7
+
+=== NESTED LOOPS (Multiplication Table) ===
+1	2	3	4	5	
+2	4	6	8	10	
+3	6	9	12	15	
+4	8	12	16	20	
+5	10	15	20	25	
+
+=== LOOP CONTROL (break & continue) ===
+Numbers 1-10, skipping 5 and stopping at 8:
+1 2 3 4 6 7 8 </pre>
+                        </div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li><code>if</code>, <code>else if</code>, <code>else</code> handle multiple conditions</li>
+                                <li><code>switch</code> selects among multiple discrete cases (use <code>break</code> to prevent fall-through)</li>
+                                <li><code>for</code> loops are ideal when iteration count is known beforehand</li>
+                                <li><code>while</code> loops repeat while condition is true (may not execute at all)</li>
+                                <li><code>do-while</code> loops execute at least once before checking condition</li>
+                                <li><code>break</code> exits a loop immediately</li>
+                                <li><code>continue</code> skips to next iteration of loop</li>
+                                <li>Relational operators: <code>==</code>, <code>!=</code>, <code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code>, <code>&gt;=</code></li>
+                                <li>Logical operators: <code>&&</code> (AND), <code>||</code> (OR), <code>!</code> (NOT)</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-project-diagram"></i> Program Flow & Algorithm Design</h3>
+                            <p>Control structures form the backbone of algorithmic thinking in programming. They enable developers to implement complex decision-making logic and repetitive tasks efficiently. The choice between different loop types (<code>for</code> vs <code>while</code>) and conditional structures (<code>if-else</code> vs <code>switch</code>) affects both code readability and performance.</p>
+                            
+                            <p>Loop optimization is critical in performance-sensitive applications. Understanding loop unrolling, minimizing loop overhead, and choosing appropriate termination conditions can dramatically improve execution speed. In game development and scientific computing, optimized loops processing millions of items can mean the difference between real-time performance and unacceptable lag.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-bolt"></i> Performance Optimization</h4>
+                                    <p>Loop optimization techniques like loop unrolling, invariant code motion, and minimizing conditional checks inside loops are essential for high-performance C++ applications in gaming and scientific computing.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-shield-alt"></i> Error Prevention</h4>
+                                    <p>Proper use of control structures prevents common errors like infinite loops, off-by-one errors, and incorrect boundary conditions that cause crashes or incorrect results.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-search"></i> Algorithm Complexity</h4>
+                                    <p>Nested loops often indicate polynomial time complexity (O(n²), O(n³)). Understanding this relationship helps developers choose appropriate algorithms for scalable solutions.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-robot"></i> Game Development & AI Systems</h4>
+                                <p>Game engines use complex nested loops for rendering (processing vertices), physics calculations (collision detection), and AI (pathfinding). Financial algorithms use loops to process market data streams. Database systems use control structures to traverse and search indices. Operating systems use loops in schedulers and memory managers. In each case, efficient control flow implementation enables real-time performance and responsiveness that users expect from modern software systems.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Create a Number Analyzer Program:</strong> Build a program that:</p>
+                            <ul>
+                                <li>Accepts user input for 10 numbers (use simulated input)</li>
+                                <li>Uses loops to process all numbers</li>
+                                <li>Counts positive, negative, and zero values</li>
+                                <li>Finds maximum and minimum values</li>
+                                <li>Calculates average using appropriate conditions</li>
+                                <li>Implements a menu system with switch statement</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 4 -->
+            <div class="course-module" id="module4" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>FUNCTIONS</h1>
+                    <h3>Learn to create reusable code with functions</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/6132/6132222.png" class="module-icon" alt="C++ Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 4: <span>Functions and Modular Programming</span></h1>
+                    <p>Functions are self-contained blocks of code that perform specific tasks. They enable code reuse, improve readability, and make programs easier to maintain. In C++, functions can return values, accept parameters, and be called multiple times from different parts of a program.</p>
+                    
+                    <p>Function declaration (prototype) specifies the function's interface, while definition provides the implementation. Parameters can be passed by value (copy) or by reference (original). Understanding scope (local vs global variables) and lifetime is crucial for writing correct functions.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">C++</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-4" spellcheck="false">#include <iostream>
+#include <cmath>
+#include <string>
+using namespace std;
+
+// Function prototypes
+int add(int a, int b);
+double calculateCircleArea(double radius);
+void printWelcomeMessage(string name);
+int factorial(int n);
+void swapValues(int &x, int &y);
+void displayArray(int arr[], int size);
+int findMaximum(int numbers[], int size);
+double calculateAverage(int scores[], int count);
+bool isPrime(int number);
+void printMultiplicationTable(int n);
+
+// Global variable (use sparingly!)
+int globalCounter = 0;
+
+int main() {
+    cout << "=== FUNCTION DEMONSTRATION ===\n" << endl;
+    
+    // Basic function call
+    int sum = add(10, 20);
+    cout << "10 + 20 = " << sum << endl;
+    
+    // Function with return value
+    double radius = 5.0;
+    double area = calculateCircleArea(radius);
+    cout << "\nCircle with radius " << radius << " has area: " << area << endl;
+    
+    // Void function (no return value)
+    printWelcomeMessage("SkillMynte Learner");
+    
+    // Recursive function
+    int num = 5;
+    cout << "\nFactorial of " << num << " is: " << factorial(num) << endl;
+    
+    // Pass by reference
+    int x = 10, y = 20;
+    cout << "\nBefore swap: x = " << x << ", y = " << y << endl;
+    swapValues(x, y);
+    cout << "After swap: x = " << x << ", y = " << y << endl;
+    
+    // Array processing with functions
+    int numbers[] = {12, 45, 67, 23, 89, 34, 56};
+    int size = 7;
+    
+    cout << "\nArray contents: ";
+    displayArray(numbers, size);
+    
+    cout << "Maximum value: " << findMaximum(numbers, size) << endl;
+    cout << "Average: " << calculateAverage(numbers, size) << endl;
+    
+    // Function with boolean return
+    cout << "\nPrime number check:" << endl;
+    int testNumbers[] = {2, 17, 20, 29, 100};
+    for (int i = 0; i < 5; i++) {
+        cout << testNumbers[i] << " is " 
+             << (isPrime(testNumbers[i]) ? "prime" : "not prime") << endl;
+    }
+    
+    // Function with default arguments (conceptual)
+    cout << "\nMultiplication table of 7:" << endl;
+    printMultiplicationTable(7);
+    
+    // Global variable usage
+    cout << "\nGlobal counter: " << globalCounter << endl;
+    globalCounter++;
+    cout << "After increment: " << globalCounter << endl;
+    
+    // Function overloading (conceptual)
+    cout << "\n=== FUNCTION OVERLOADING ===" << endl;
+    cout << "add(5, 10) = " << add(5, 10) << endl;
+    // In practice, we'd define add(double, double) as well
+    
+    return 0;
+}
+
+// Function definitions
+
+int add(int a, int b) {
+    return a + b;
+}
+
+double calculateCircleArea(double radius) {
+    return M_PI * radius * radius;
+}
+
+void printWelcomeMessage(string name) {
+    cout << "\nWelcome, " << name << "!" << endl;
+    cout << "You are learning C++ functions." << endl;
+}
+
+int factorial(int n) {
+    if (n <= 1) return 1;
+    return n * factorial(n - 1);
+}
+
+void swapValues(int &x, int &y) {
+    int temp = x;
+    x = y;
+    y = temp;
+}
+
+void displayArray(int arr[], int size) {
+    for (int i = 0; i < size; i++) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+}
+
+int findMaximum(int numbers[], int size) {
+    int max = numbers[0];
+    for (int i = 1; i < size; i++) {
+        if (numbers[i] > max) {
+            max = numbers[i];
+        }
+    }
+    return max;
+}
+
+double calculateAverage(int scores[], int count) {
+    if (count == 0) return 0.0;
+    
+    int total = 0;
+    for (int i = 0; i < count; i++) {
+        total += scores[i];
+    }
+    return static_cast<double>(total) / count;
+}
+
+bool isPrime(int number) {
+    if (number <= 1) return false;
+    if (number == 2) return true;
+    if (number % 2 == 0) return false;
+    
+    for (int i = 3; i * i <= number; i += 2) {
+        if (number % i == 0) return false;
+    }
+    return true;
+}
+
+void printMultiplicationTable(int n) {
+    for (int i = 1; i <= 10; i++) {
+        cout << n << " x " << i << " = " << n * i << endl;
+    }
+}</textarea>
+                        <button class="run-btn" onclick="runCode('editor-4', 'output-4')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Program Output
+                        </div>
+                        <div class="preview-container" id="output-4">
+                            <pre>=== FUNCTION DEMONSTRATION ===
+
+10 + 20 = 30
+
+Circle with radius 5 has area: 78.5398
+
+Welcome, SkillMynte Learner!
+You are learning C++ functions.
+
+Factorial of 5 is: 120
+
+Before swap: x = 10, y = 20
+After swap: x = 20, y = 10
+
+Array contents: 12 45 67 23 89 34 56 
+Maximum value: 89
+Average: 46.5714
+
+Prime number check:
+2 is prime
+17 is prime
+20 is not prime
+29 is prime
+100 is not prime
+
+Multiplication table of 7:
+7 x 1 = 7
+7 x 2 = 14
+7 x 3 = 21
+7 x 4 = 28
+7 x 5 = 35
+7 x 6 = 42
+7 x 7 = 49
+7 x 8 = 56
+7 x 9 = 63
+7 x 10 = 70
+
+Global counter: 0
+After increment: 1
+
+=== FUNCTION OVERLOADING ===
+add(5, 10) = 15</pre>
+                        </div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>Function declaration (prototype) specifies return type, name, and parameters</li>
+                                <li>Function definition provides the implementation</li>
+                                <li>Parameters can be passed by value (copy) or by reference (original)</li>
+                                <li>Use <code>&</code> to pass by reference (modifies original variable)</li>
+                                <li><code>void</code> functions don't return values</li>
+                                <li>Recursive functions call themselves (must have termination condition)</li>
+                                <li>Function overloading allows multiple functions with same name but different parameters</li>
+                                <li>Default parameters provide default values if arguments aren't supplied</li>
+                                <li>Global variables are accessible everywhere (use sparingly)</li>
+                                <li>Local variables exist only within their function/block</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-puzzle-piece"></i> Modular Design & Code Organization</h3>
+                            <p>Functions transform monolithic code into modular, reusable components. This modular approach is fundamental to software engineering best practices. Well-designed functions have single responsibilities, clear interfaces, and minimal side effects. They enable code reuse across projects, simplify testing and debugging, and make large codebases manageable by multiple developers.</p>
+                            
+                            <p>The choice between pass-by-value and pass-by-reference has significant implications. Pass-by-value creates copies, protecting original data but consuming memory and time for large objects. Pass-by-reference avoids copying but allows modification of original data. Pass-by-const-reference provides the efficiency of reference passing with the safety of value passing for read-only access. Understanding these trade-offs is essential for writing efficient C++ code.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-code-branch"></i> Call Stack & Recursion</h4>
+                                    <p>Function calls use the call stack to store return addresses and local variables. Recursion leverages this mechanism but requires careful design to avoid stack overflow through proper base cases and tail recursion optimization.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-tachometer-alt"></i> Performance Considerations</h4>
+                                    <p>Function call overhead, parameter passing mechanisms, and inlining decisions significantly impact performance. Understanding these helps optimize critical code paths in performance-sensitive applications.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-cube"></i> Abstraction & Encapsulation</h4>
+                                    <p>Functions provide abstraction by hiding implementation details behind clean interfaces. This enables building complex systems from simple, testable components following the single responsibility principle.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-industry"></i> Large-Scale Software Systems</h4>
+                                <p>Operating systems like Linux organize millions of lines of code into thousands of functions. Game engines use functions for rendering pipelines, physics calculations, and AI behaviors. Database systems use stored procedures (function-like constructs) for complex queries. Scientific computing libraries provide mathematical functions optimized for performance. In each case, functional decomposition enables teams to work concurrently, maintain code over decades, and achieve performance targets through focused optimization of critical functions.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Create a Math Utility Library:</strong> Build a collection of mathematical functions:</p>
+                            <ul>
+                                <li>Functions for basic operations (add, subtract, multiply, divide)</li>
+                                <li>Advanced math functions (power, square root, absolute value)</li>
+                                <li>Statistical functions (mean, median, mode of arrays)</li>
+                                <li>Geometry functions (area of shapes, distance between points)</li>
+                                <li>Use both value and reference parameters appropriately</li>
+                                <li>Implement at least one recursive function</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 5 -->
+            <div class="course-module" id="module5" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>ARRAYS & STRINGS</h1>
+                    <h3>Learn to work with collections of data</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/6132/6132222.png" class="module-icon" alt="C++ Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 5: <span>Arrays, Strings, and Collections</span></h1>
+                    <p>Arrays allow storing multiple values of the same type in contiguous memory locations. Strings are sequences of characters, implemented as arrays in C-style strings or as <code>string</code> objects in C++ STL. Understanding arrays and strings is fundamental to data processing and algorithm implementation.</p>
+                    
+                    <p>Arrays have fixed size determined at compile time, while vectors (from STL) provide dynamic arrays that can grow/shrink at runtime. Strings offer numerous member functions for manipulation, searching, and modification. Proper array/string handling prevents common errors like buffer overflows and memory leaks.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">C++</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-5" spellcheck="false">#include <iostream>
+#include <string>
+#include <cstring> // For C-style string functions
+#include <algorithm> // For sort()
+#include <vector>   // For dynamic arrays
+using namespace std;
+
+int main() {
+    cout << "=== ARRAYS DEMONSTRATION ===\n" << endl;
+    
+    // Static array declaration and initialization
+    int numbers[5] = {10, 20, 30, 40, 50};
+    double temperatures[] = {98.6, 99.2, 97.8, 100.1, 96.9}; // Size inferred
+    
+    cout << "Integer array: ";
+    for (int i = 0; i < 5; i++) {
+        cout << numbers[i] << " ";
+    }
+    cout << endl;
+    
+    cout << "Temperature array: ";
+    for (double temp : temperatures) { // Range-based for loop
+        cout << temp << " ";
+    }
+    cout << endl;
+    
+    // Array operations
+    int scores[10];
+    int size = 10;
+    
+    // Initialize array
+    for (int i = 0; i < size; i++) {
+        scores[i] = (i + 1) * 10;
+    }
+    
+    cout << "\nScores array: ";
+    for (int i = 0; i < size; i++) {
+        cout << scores[i] << " ";
+    }
+    cout << endl;
+    
+    // Calculate sum and average
+    int total = 0;
+    for (int score : scores) {
+        total += score;
+    }
+    double average = static_cast<double>(total) / size;
+    cout << "Total: " << total << ", Average: " << average << endl;
+    
+    // Find maximum and minimum
+    int maxScore = scores[0];
+    int minScore = scores[0];
+    
+    for (int i = 1; i < size; i++) {
+        if (scores[i] > maxScore) maxScore = scores[i];
+        if (scores[i] < minScore) minScore = scores[i];
+    }
+    cout << "Maximum: " << maxScore << ", Minimum: " << minScore << endl;
+    
+    // Multi-dimensional array
+    cout << "\n=== 2D ARRAY (Matrix) ===" << endl;
+    int matrix[3][3] = {
+        {1, 2, 3},
+        {4, 5, 6},
+        {7, 8, 9}
+    };
+    
+    cout << "3x3 Matrix:" << endl;
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            cout << matrix[i][j] << "\t";
+        }
+        cout << endl;
+    }
+    
+    cout << "\n=== STRINGS DEMONSTRATION ===\n" << endl;
+    
+    // C++ string (recommended)
+    string firstName = "John";
+    string lastName = "Doe";
+    string fullName = firstName + " " + lastName;
+    
+    cout << "Full Name: " << fullName << endl;
+    cout << "Length: " << fullName.length() << endl;
+    cout << "First character: " << fullName[0] << endl;
+    cout << "Last character: " << fullName[fullName.length() - 1] << endl;
+    
+    // String manipulation
+    string message = "Hello, World!";
+    cout << "\nOriginal message: " << message << endl;
+    
+    message.insert(7, "Beautiful ");
+    cout << "After insert: " << message << endl;
+    
+    message.replace(0, 5, "Hi");
+    cout << "After replace: " << message << endl;
+    
+    message.erase(10, 9); // Remove "Beautiful"
+    cout << "After erase: " << message << endl;
+    
+    // String searching
+    string text = "The quick brown fox jumps over the lazy dog";
+    string searchWord = "fox";
+    
+    size_t position = text.find(searchWord);
+    if (position != string::npos) {
+        cout << "\nFound '" << searchWord << "' at position: " << position << endl;
+        cout << "Substring from position: " << text.substr(position) << endl;
+    }
+    
+    // String comparison
+    string str1 = "apple";
+    string str2 = "banana";
+    
+    cout << "\nString comparison:" << endl;
+    cout << str1 << " == " << str2 << " : " << (str1 == str2 ? "true" : "false") << endl;
+    cout << str1 << " < " << str2 << " : " << (str1 < str2 ? "true" : "false") << endl;
+    
+    // C-style strings (char arrays)
+    cout << "\n=== C-STYLE STRINGS ===" << endl;
+    char cString1[] = "Hello";
+    char cString2[20];
+    
+    strcpy(cString2, cString1); // Copy string
+    strcat(cString2, " World!"); // Concatenate
+    
+    cout << "C-string 1: " << cString1 << endl;
+    cout << "C-string 2: " << cString2 << endl;
+    cout << "Length of cString2: " << strlen(cString2) << endl;
+    
+    // Vector (dynamic array from STL)
+    cout << "\n=== VECTORS (Dynamic Arrays) ===" << endl;
+    vector<int> dynamicArray;
+    
+    // Add elements
+    for (int i = 1; i <= 5; i++) {
+        dynamicArray.push_back(i * 10);
+    }
+    
+    cout << "Vector contents: ";
+    for (int value : dynamicArray) {
+        cout << value << " ";
+    }
+    cout << endl;
+    
+    cout << "Size: " << dynamicArray.size() << endl;
+    cout << "Capacity: " << dynamicArray.capacity() << endl;
+    
+    // Add more elements
+    dynamicArray.push_back(60);
+    dynamicArray.push_back(70);
+    
+    cout << "After adding elements - Size: " << dynamicArray.size() << endl;
+    
+    // Remove last element
+    dynamicArray.pop_back();
+    cout << "After pop_back - Last element: " << dynamicArray.back() << endl;
+    
+    return 0;
+}</textarea>
+                        <button class="run-btn" onclick="runCode('editor-5', 'output-5')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Program Output
+                        </div>
+                        <div class="preview-container" id="output-5">
+                            <pre>=== ARRAYS DEMONSTRATION ===
+
+Integer array: 10 20 30 40 50 
+Temperature array: 98.6 99.2 97.8 100.1 96.9 
+
+Scores array: 10 20 30 40 50 60 70 80 90 100 
+Total: 550, Average: 55
+Maximum: 100, Minimum: 10
+
+=== 2D ARRAY (Matrix) ===
+3x3 Matrix:
+1	2	3	
+4	5	6	
+7	8	9	
+
+=== STRINGS DEMONSTRATION ===
+
+Full Name: John Doe
+Length: 8
+First character: J
+Last character: e
+
+Original message: Hello, World!
+After insert: Hello, Beautiful World!
+After replace: Hi, Beautiful World!
+After erase: Hi, World!
+
+Found 'fox' at position: 16
+Substring from position: fox jumps over the lazy dog
+
+String comparison:
+apple == banana : false
+apple < banana : true
+
+=== C-STYLE STRINGS ===
+C-string 1: Hello
+C-string 2: Hello World!
+Length of cString2: 12
+
+=== VECTORS (Dynamic Arrays) ===
+Vector contents: 10 20 30 40 50 
+Size: 5
+Capacity: 8
+After adding elements - Size: 7
+After pop_back - Last element: 60</pre>
+                        </div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>Arrays store multiple values of same type in contiguous memory</li>
+                                <li>Array indices start at 0 and go to size-1</li>
+                                <li>C++ strings (<code>string</code> class) are safer and more flexible than C-style strings</li>
+                                <li>C-style strings are null-terminated character arrays</li>
+                                <li>Vectors (<code>vector</code>) provide dynamic arrays that resize automatically</li>
+                                <li>Use <code>size()</code> for strings/vectors, not <code>sizeof()</code></li>
+                                <li>Multi-dimensional arrays are arrays of arrays</li>
+                                <li>Range-based for loops simplify array/vector iteration</li>
+                                <li>Always validate array indices to prevent buffer overflows</li>
+                                <li>Strings provide numerous member functions: <code>length()</code>, <code>find()</code>, <code>substr()</code>, etc.</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-layer-group"></i> Data Collections & Memory Management</h3>
+                            <p>Arrays represent the most fundamental data structure in computing. Their contiguous memory layout enables efficient iteration and cache-friendly access patterns crucial for high-performance computing. Understanding array memory layout is essential for optimizing algorithms that process large datasets, such as scientific simulations, image processing, and database operations.</p>
+                            
+                            <p>The evolution from C-style arrays to C++ <code>vector</code> and <code>string</code> classes represents a shift from manual memory management to resource-safe abstractions. While C-style arrays provide maximum control and zero overhead, they require careful manual management to avoid buffer overflows and memory leaks. The STL containers provide automatic memory management, bounds checking (in debug mode), and rich interfaces at the cost of some overhead.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-memory"></i> Cache Optimization</h4>
+                                    <p>Arrays provide excellent cache locality since elements are stored contiguously. This makes array traversal much faster than linked structures for sequential access, a critical consideration in performance-sensitive applications.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-shield-alt"></i> Memory Safety</h4>
+                                    <p>C-style arrays lack bounds checking, leading to buffer overflow vulnerabilities. Modern C++ encourages using <code>vector</code> and <code>array</code> classes with bounds checking and automatic memory management to prevent security vulnerabilities.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-expand-arrows-alt"></i> Dynamic Resizing</h4>
+                                    <p>Vectors handle dynamic resizing automatically, but understanding their growth strategy (typically doubling capacity) helps optimize performance by minimizing reallocations through <code>reserve()</code>.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-chart-line"></i> Scientific Computing & Data Processing</h4>
+                                <p>Numerical libraries like BLAS and LAPACK use arrays for matrix operations fundamental to scientific computing. Image processing software uses 2D arrays (matrices) for pixel data. Database systems use arrays for indexing and query optimization. Game engines use arrays for vertex buffers and particle systems. Financial systems use arrays for time series data analysis. In each domain, efficient array/string handling enables processing of massive datasets with performance requirements ranging from real-time interactive graphics to overnight batch processing of terabytes of data.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Create a Student Grade Management System:</strong> Build a program that:</p>
+                            <ul>
+                                <li>Uses arrays to store student names and grades</li>
+                                <li>Implements functions for adding, removing, and searching students</li>
+                                <li>Calculates class average, highest, and lowest grades</li>
+                                <li>Sorts students by name or grade</li>
+                                <li>Handles string input/output with validation</li>
+                                <li>Uses both arrays and vectors for different parts</li>
+                                <li>Implements a 2D array for multiple subjects per student</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 6 -->
+            <div class="course-module" id="module6" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>POINTERS & REFERENCES</h1>
+                    <h3>Learn to work with memory addresses and references</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/6132/6132222.png" class="module-icon" alt="C++ Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 6: <span>Pointers, References, and Memory Management</span></h1>
+                    <p>Pointers are variables that store memory addresses rather than values. They provide direct access to memory, enabling dynamic memory allocation, efficient array traversal, and implementation of complex data structures. References are aliases for existing variables, providing safer syntax for pass-by-reference.</p>
+                    
+                    <p>Understanding pointers is crucial for low-level programming, but they require careful management to avoid dangling pointers, memory leaks, and segmentation faults. Smart pointers (<code>unique_ptr</code>, <code>shared_ptr</code>) in modern C++ automate memory management while preserving pointer semantics.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">C++</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-6" spellcheck="false">#include <iostream>
+#include <memory> // For smart pointers
+using namespace std;
+
+int main() {
+    cout << "=== POINTERS DEMONSTRATION ===\n" << endl;
+    
+    // Basic variables
+    int number = 42;
+    double price = 19.99;
+    char letter = 'A';
+    
+    // Pointer declarations and initialization
+    int* ptrNumber = &number;    // Pointer to int
+    double* ptrPrice = &price;   // Pointer to double
+    char* ptrLetter = &letter;   // Pointer to char
+    
+    cout << "Variable values:" << endl;
+    cout << "number = " << number << endl;
+    cout << "price = " << price << endl;
+    cout << "letter = " << letter << endl;
+    
+    cout << "\nMemory addresses:" << endl;
+    cout << "&number = " << &number << endl;
+    cout << "&price = " << &price << endl;
+    cout << "&letter = " << (void*)&letter << endl; // Cast for char pointer
+    
+    cout << "\nPointer values (addresses stored):" << endl;
+    cout << "ptrNumber = " << ptrNumber << endl;
+    cout << "ptrPrice = " << ptrPrice << endl;
+    cout << "ptrLetter = " << (void*)ptrLetter << endl;
+    
+    cout << "\nDereferencing pointers (accessing values):" << endl;
+    cout << "*ptrNumber = " << *ptrNumber << endl;
+    cout << "*ptrPrice = " << *ptrPrice << endl;
+    cout << "*ptrLetter = " << *ptrLetter << endl;
+    
+    // Modifying values through pointers
+    cout << "\n=== MODIFYING THROUGH POINTERS ===" << endl;
+    cout << "Original number: " << number << endl;
+    *ptrNumber = 100;
+    cout << "After *ptrNumber = 100: " << number << endl;
+    
+    // Pointer arithmetic
+    cout << "\n=== POINTER ARITHMETIC ===" << endl;
+    int numbers[] = {10, 20, 30, 40, 50};
+    int* ptr = numbers; // Points to first element
+    
+    cout << "Array elements using pointer arithmetic:" << endl;
+    for (int i = 0; i < 5; i++) {
+        cout << "*(ptr + " << i << ") = " << *(ptr + i) << endl;
+    }
+    
+    // Array name as pointer
+    cout << "\nArray name as pointer:" << endl;
+    cout << "numbers = " << numbers << " (address of first element)" << endl;
+    cout << "*numbers = " << *numbers << " (first element)" << endl;
+    
+    // Dynamic memory allocation
+    cout << "\n=== DYNAMIC MEMORY ALLOCATION ===" << endl;
+    int* dynamicArray = new int[5]; // Allocate array on heap
+    
+    // Initialize dynamic array
+    for (int i = 0; i < 5; i++) {
+        dynamicArray[i] = (i + 1) * 100;
+    }
+    
+    cout << "Dynamic array contents: ";
+    for (int i = 0; i < 5; i++) {
+        cout << dynamicArray[i] << " ";
+    }
+    cout << endl;
+    
+    // Clean up dynamic memory
+    delete[] dynamicArray;
+    dynamicArray = nullptr; // Good practice: set to null after deletion
+    
+    // References
+    cout << "\n=== REFERENCES ===" << endl;
+    int original = 50;
+    int& ref = original; // Reference must be initialized
+    
+    cout << "original = " << original << endl;
+    cout << "ref = " << ref << endl;
+    
+    ref = 75; // Modify through reference
+    cout << "After ref = 75:" << endl;
+    cout << "original = " << original << endl;
+    cout << "ref = " << ref << endl;
+    
+    // Pointer to pointer
+    cout << "\n=== POINTER TO POINTER ===" << endl;
+    int value = 99;
+    int* ptr1 = &value;
+    int** ptr2 = &ptr1;
+    
+    cout << "value = " << value << endl;
+    cout << "*ptr1 = " << *ptr1 << endl;
+    cout << "**ptr2 = " << **ptr2 << endl;
+    
+    // Smart pointers (modern C++)
+    cout << "\n=== SMART POINTERS ===" << endl;
+    unique_ptr<int> smartPtr(new int(999));
+    
+    cout << "Smart pointer value: " << *smartPtr << endl;
+    cout << "Smart pointer address: " << smartPtr.get() << endl;
+    
+    // smartPtr automatically deletes memory when it goes out of scope
+    
+    // Null pointers
+    cout << "\n=== NULL POINTERS ===" << endl;
+    int* nullPtr = nullptr;
+    
+    if (nullPtr == nullptr) {
+        cout << "Pointer is null (safe to check before use)" << endl;
+    }
+    
+    // Common pointer errors (demonstrated safely)
+    cout << "\n=== COMMON POINTER ERRORS (Demonstrated Safely) ===" << endl;
+    
+    // 1. Dangling pointer (simulated)
+    int* danglingPtr;
+    {
+        int localVar = 123;
+        danglingPtr = &localVar;
+        cout << "Inside scope: *danglingPtr = " << *danglingPtr << endl;
+    }
+    // danglingPtr now points to deallocated memory - DON'T DEREFERENCE!
+    cout << "Outside scope: Pointer dangles (don't dereference!)" << endl;
+    
+    // 2. Memory leak (conceptual)
+    cout << "Memory leak occurs when allocated memory isn't freed" << endl;
+    cout << "Use smart pointers or careful delete to prevent" << endl;
+    
+    // Function parameters with pointers and references
+    cout << "\n=== FUNCTION PARAMETERS ===" << endl;
+    int a = 5, b = 10;
+    
+    cout << "Before swap: a = " << a << ", b = " << b << endl;
+    // swapValues(&a, &b); // Would need function definition
+    cout << "Concept: Pointers enable functions to modify arguments" << endl;
+    
+    return 0;
+}
+
+// Function using pointers (for reference)
+void swapWithPointers(int* x, int* y) {
+    int temp = *x;
+    *x = *y;
+    *y = temp;
+}
+
+// Function using references (cleaner syntax)
+void swapWithReferences(int& x, int& y) {
+    int temp = x;
+    x = y;
+    y = temp;
+}</textarea>
+                        <button class="run-btn" onclick="runCode('editor-6', 'output-6')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Program Output
+                        </div>
+                        <div class="preview-container" id="output-6">
+                            <pre>=== POINTERS DEMONSTRATION ===
+
+Variable values:
+number = 42
+price = 19.99
+letter = A
+
+Memory addresses:
+&number = 0x7ffee3b2a8dc
+&price = 0x7ffee3b2a8d0
+&letter = 0x7ffee3b2a8cf
+
+Pointer values (addresses stored):
+ptrNumber = 0x7ffee3b2a8dc
+ptrPrice = 0x7ffee3b2a8d0
+ptrLetter = 0x7ffee3b2a8cf
+
+Dereferencing pointers (accessing values):
+*ptrNumber = 42
+*ptrPrice = 19.99
+*ptrLetter = A
+
+=== MODIFYING THROUGH POINTERS ===
+Original number: 42
+After *ptrNumber = 100: 100
+
+=== POINTER ARITHMETIC ===
+Array elements using pointer arithmetic:
+*(ptr + 0) = 10
+*(ptr + 1) = 20
+*(ptr + 2) = 30
+*(ptr + 3) = 40
+*(ptr + 4) = 50
+
+Array name as pointer:
+numbers = 0x7ffee3b2a8b0 (address of first element)
+*numbers = 10 (first element)
+
+=== DYNAMIC MEMORY ALLOCATION ===
+Dynamic array contents: 100 200 300 400 500 
+
+=== REFERENCES ===
+original = 50
+ref = 50
+After ref = 75:
+original = 75
+ref = 75
+
+=== POINTER TO POINTER ===
+value = 99
+*ptr1 = 99
+**ptr2 = 99
+
+=== SMART POINTERS ===
+Smart pointer value: 999
+Smart pointer address: 0x7f9d48c02a00
+
+=== NULL POINTERS ===
+Pointer is null (safe to check before use)
+
+=== COMMON POINTER ERRORS (Demonstrated Safely) ===
+Inside scope: *danglingPtr = 123
+Outside scope: Pointer dangles (don't dereference!)
+Memory leak occurs when allocated memory isn't freed
+Use smart pointers or careful delete to prevent
+
+=== FUNCTION PARAMETERS ===
+Before swap: a = 5, b = 10
+Concept: Pointers enable functions to modify arguments</pre>
+                        </div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>Pointers store memory addresses, not values</li>
+                                <li>Use <code>&</code> (address-of operator) to get variable's address</li>
+                                <li>Use <code>*</code> (dereference operator) to access value at address</li>
+                                <li>References are aliases for existing variables (must be initialized)</li>
+                                <li><code>new</code> allocates memory on heap, <code>delete</code> frees it</li>
+                                <li>For arrays, use <code>new[]</code> and <code>delete[]</code></li>
+                                <li>Smart pointers (<code>unique_ptr</code>, <code>shared_ptr</code>) automate memory management</li>
+                                <li>Null pointers (<code>nullptr</code>) point to no valid memory</li>
+                                <li>Pointer arithmetic allows traversal of arrays</li>
+                                <li>Always check for null before dereferencing pointers</li>
+                                <li>Set pointers to null after deletion to prevent dangling references</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-microchip"></i> Memory Management & Low-Level Control</h3>
+                            <p>Pointers represent C++'s most powerful and dangerous feature. They provide direct memory access enabling zero-overhead abstractions, but misuse leads to crashes, security vulnerabilities, and memory leaks. Understanding pointers is essential for systems programming, where control over memory layout and allocation is necessary for performance and hardware interaction.</p>
+                            
+                            <p>The evolution from raw pointers to smart pointers reflects C++'s commitment to both low-level control and high-level safety. Raw pointers provide maximum flexibility for experts, while smart pointers automate memory management for application developers. References offer pointer-like behavior with safer syntax, eliminating null reference issues (though dangling references remain possible).</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-shield-alt"></i> Memory Safety</h4>
+                                    <p>Pointer misuse causes buffer overflows, use-after-free, and memory leaks - common sources of security vulnerabilities. Modern C++ encourages smart pointers and references to prevent these issues while maintaining performance through zero-cost abstractions.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-tachometer-alt"></i> Performance Optimization</h4>
+                                    <p>Pointers enable efficient data structures (linked lists, trees), minimize copying through pass-by-pointer/reference, and allow manual memory allocation strategies optimized for specific access patterns.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-plug"></i> Hardware Interaction</h4>
+                                    <p>Embedded systems and device drivers use pointers to access memory-mapped hardware registers. Understanding pointer arithmetic and casting is essential for interacting with hardware at the lowest level.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-gamepad"></i> Game Engines & Operating Systems</h4>
+                                <p>Game engines like Unreal use custom memory allocators with pointers for optimal performance. Operating system kernels use pointers for process memory management, file system buffers, and network packet handling. Database systems use pointers for B-tree indices and buffer pool management. Graphics libraries use pointers for vertex buffers and texture data. In each case, precise control over memory enables the performance and reliability required by these demanding applications, while modern C++ features help manage the complexity safely.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Create a Dynamic Array Library:</strong> Build a custom dynamic array implementation:</p>
+                            <ul>
+                                <li>Use raw pointers for internal storage</li>
+                                <li>Implement functions for push, pop, insert, delete</li>
+                                <li>Handle dynamic resizing with manual memory management</li>
+                                <li>Implement copy constructor and assignment operator (rule of three)</li>
+                                <li>Create both pointer and reference versions of access functions</li>
+                                <li>Compare performance with STL vector</li>
+                                <li>Implement smart pointer version for automatic memory management</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 7 -->
+            <div class="course-module" id="module7" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>CLASSES & OBJECTS</h1>
+                    <h3>Learn Object-Oriented Programming in C++</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/6132/6132222.png" class="module-icon" alt="C++ Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 7: <span>Object-Oriented Programming Fundamentals</span></h1>
+                    <p>Classes are user-defined types that bundle data (member variables) and functions (member functions) together. Objects are instances of classes. Object-Oriented Programming (OOP) organizes code around objects rather than actions, promoting encapsulation, reusability, and maintainability.</p>
+                    
+                    <p>Encapsulation hides internal implementation details behind public interfaces. Constructors initialize objects, destructors clean up resources. Access specifiers (<code>public</code>, <code>private</code>, <code>protected</code>) control visibility of members. Member functions can be defined inside or outside the class definition.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">C++</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+<textarea class="code-editor" id="editor-7" spellcheck="false">#include <iostream>
+#include <string>
+#include <cmath>
+using namespace std;
+
+// ======================
+// BANK ACCOUNT CLASS
+// ======================
+class BankAccount {
+private:
+    string accountNumber;
+    string accountHolder;
+    double balance;
+    static int totalAccounts; // Static member
+
+public:
+    // Constructors
+    BankAccount() : accountNumber(""), accountHolder(""), balance(0.0) {
+        totalAccounts++;
+    }
+    
+    BankAccount(string num, string holder, double initialBalance) 
+        : accountNumber(num), accountHolder(holder), balance(initialBalance) {
+        totalAccounts++;
+        cout << "Account created for " << holder << endl;
+    }
+    
+    // Destructor
+    ~BankAccount() {
+        totalAccounts--;
+        cout << "Account " << accountNumber << " destroyed" << endl;
+    }
+    
+    // Member functions
+    void deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+            cout << "Deposited $" << amount << " to account " << accountNumber << endl;
+        }
+    }
+    
+    bool withdraw(double amount) {
+        if (amount > 0 && amount <= balance) {
+            balance -= amount;
+            cout << "Withdrew $" << amount << " from account " << accountNumber << endl;
+            return true;
+        }
+        cout << "Withdrawal failed for account " << accountNumber << endl;
+        return false;
+    }
+    
+    void display() const {
+        cout << "Account: " << accountNumber << endl;
+        cout << "Holder: " << accountHolder << endl;
+        cout << "Balance: $" << balance << endl;
+    }
+    
+    // Getter and Setter functions
+    double getBalance() const { return balance; }
+    string getAccountHolder() const { return accountHolder; }
+    void setAccountHolder(const string& holder) { accountHolder = holder; }
+    
+    // Static member function
+    static int getTotalAccounts() { return totalAccounts; }
+};
+
+// Initialize static member
+int BankAccount::totalAccounts = 0;
+
+// ======================
+// RECTANGLE CLASS
+// ======================
+class Rectangle {
+private:
+    double length;
+    double width;
+    
+public:
+    // Constructor with default parameters
+    Rectangle(double l = 1.0, double w = 1.0) : length(l), width(w) {}
+    
+    // Member functions
+    double area() const { return length * width; }
+    double perimeter() const { return 2 * (length + width); }
+    bool isSquare() const { return length == width; }
+    
+    // Getter and Setter with validation
+    double getLength() const { return length; }
+    double getWidth() const { return width; }
+    
+    void setLength(double l) {
+        if (l > 0) length = l;
+    }
+    
+    void setWidth(double w) {
+        if (w > 0) width = w;
+    }
+};
+
+// ======================
+// STUDENT CLASS
+// ======================
+class Student {
+private:
+    string name;
+    int id;
+    double grades[5];
+    int gradeCount;
+    
+public:
+    // Constructor with initialization list
+    Student(string n, int i) : name(n), id(i), gradeCount(0) {
+        for (int i = 0; i < 5; i++) grades[i] = 0.0;
+    }
+    
+    // Member functions
+    bool addGrade(double grade) {
+        if (gradeCount < 5 && grade >= 0 && grade <= 100) {
+            grades[gradeCount++] = grade;
+            return true;
+        }
+        return false;
+    }
+    
+    double averageGrade() const {
+        if (gradeCount == 0) return 0.0;
+        
+        double total = 0.0;
+        for (int i = 0; i < gradeCount; i++) {
+            total += grades[i];
+        }
+        return total / gradeCount;
+    }
+    
+    char getLetterGrade() const {
+        double avg = averageGrade();
+        if (avg >= 90) return 'A';
+        if (avg >= 80) return 'B';
+        if (avg >= 70) return 'C';
+        if (avg >= 60) return 'D';
+        return 'F';
+    }
+    
+    void displayInfo() const {
+        cout << "\nStudent Information:" << endl;
+        cout << "Name: " << name << endl;
+        cout << "ID: " << id << endl;
+        cout << "Grades: ";
+        for (int i = 0; i < gradeCount; i++) {
+            cout << grades[i] << " ";
+        }
+        cout << "\nAverage: " << averageGrade() << endl;
+        cout << "Letter Grade: " << getLetterGrade() << endl;
+    }
+};
+
+// ======================
+// MAIN FUNCTION
+// ======================
+int main() {
+    cout << "=== CLASSES AND OBJECTS DEMONSTRATION ===\n" << endl;
+    
+    cout << "=== BANK ACCOUNT EXAMPLE ===" << endl;
+    
+    // Create bank account objects
+    BankAccount account1("ACC001", "John Doe", 1000.0);
+    BankAccount account2("ACC002", "Jane Smith", 500.0);
+    
+    // Use member functions
+    account1.display();
+    account1.deposit(500.0);
+    account1.withdraw(200.0);
+    account1.display();
+    
+    cout << "\n";
+    account2.display();
+    account2.withdraw(600.0); // Should fail
+    account2.deposit(300.0);
+    account2.display();
+    
+    // Access static member
+    cout << "\nTotal bank accounts: " << BankAccount::getTotalAccounts() << endl;
+    
+    cout << "\n=== RECTANGLE EXAMPLE ===" << endl;
+    
+    // Create rectangle objects
+    Rectangle rect1(5.0, 3.0);
+    Rectangle rect2; // Uses default values
+    Rectangle square(4.0, 4.0);
+    
+    // Calculate and display properties
+    cout << "Rectangle 1:" << endl;
+    cout << "Length: " << rect1.getLength() << ", Width: " << rect1.getWidth() << endl;
+    cout << "Area: " << rect1.area() << ", Perimeter: " << rect1.perimeter() << endl;
+    cout << "Is square? " << (rect1.isSquare() ? "Yes" : "No") << endl;
+    
+    cout << "\nRectangle 2 (default):" << endl;
+    cout << "Area: " << rect2.area() << endl;
+    
+    cout << "\nSquare:" << endl;
+    cout << "Is square? " << (square.isSquare() ? "Yes" : "No") << endl;
+    
+    // Modify rectangle
+    rect2.setLength(7.0);
+    rect2.setWidth(2.0);
+    cout << "After modification - Area: " << rect2.area() << endl;
+    
+    cout << "\n=== STUDENT EXAMPLE ===" << endl;
+    
+    // Create student object
+    Student student1("Alice Johnson", 1001);
+    
+    // Add grades
+    student1.addGrade(95.5);
+    student1.addGrade(88.0);
+    student1.addGrade(92.5);
+    student1.addGrade(76.0);
+    student1.addGrade(89.5);
+    
+    // Try to add more than 5 grades
+    if (!student1.addGrade(85.0)) {
+        cout << "Cannot add more than 5 grades" << endl;
+    }
+    
+    // Display student information
+    student1.displayInfo();
+    
+    cout << "\n=== OBJECT ARRAY EXAMPLE ===" << endl;
+    
+    // Array of objects
+    BankAccount accounts[3] = {
+        BankAccount("ACC101", "Bob Wilson", 1500.0),
+        BankAccount("ACC102", "Carol Davis", 2500.0),
+        BankAccount("ACC103", "David Brown", 3500.0)
+    };
+    
+    // Process array of objects
+    double totalBalance = 0.0;
+    for (int i = 0; i < 3; i++) {
+        accounts[i].display();
+        totalBalance += accounts[i].getBalance();
+        cout << "---" << endl;
+    }
+    
+    cout << "Total balance across all accounts: $" << totalBalance << endl;
+    
+    cout << "\n=== CONST OBJECTS ===" << endl;
+    
+    const BankAccount constAccount("CONST001", "Constant Owner", 999.99);
+    // constAccount.deposit(100); // Error: const object can't call non-const member function
+    constAccount.display(); // OK: display() is const member function
+    
+    cout << "\n=== OBJECTS WITH DYNAMIC MEMORY ===" << endl;
+    
+    // Dynamic object creation
+    BankAccount* dynamicAccount = new BankAccount("DYN001", "Dynamic Owner", 777.77);
+    dynamicAccount->display(); // Use -> for pointer to object
+    dynamicAccount->deposit(222.22);
+    
+    // Clean up
+    delete dynamicAccount;
+    
+    cout << "\nTotal bank accounts at end: " << BankAccount::getTotalAccounts() << endl;
+    
+    return 0;
+}</textarea>
+                        <button class="run-btn" onclick="runCode('editor-7', 'output-7')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Program Output
+                        </div>
+                        <div class="preview-container" id="output-7">
+                            <pre>=== CLASSES AND OBJECTS DEMONSTRATION ===
+
+=== BANK ACCOUNT EXAMPLE ===
+Account created for John Doe
+Account created for Jane Smith
+Account: ACC001
+Holder: John Doe
+Balance: $1000
+Deposited $500 to account ACC001
+Withdrew $200 from account ACC001
+Account: ACC001
+Holder: John Doe
+Balance: $1300
+
+Account: ACC002
+Holder: Jane Smith
+Balance: $500
+Withdrawal failed for account ACC002
+Deposited $300 to account ACC002
+Account: ACC002
+Holder: Jane Smith
+Balance: $800
+
+Total bank accounts: 2
+
+=== RECTANGLE EXAMPLE ===
+Rectangle 1:
+Length: 5, Width: 3
+Area: 15, Perimeter: 16
+Is square? No
+
+Rectangle 2 (default):
+Area: 1
+
+Square:
+Is square? Yes
+After modification - Area: 14
+
+=== STUDENT EXAMPLE ===
+Cannot add more than 5 grades
+
+Student Information:
+Name: Alice Johnson
+ID: 1001
+Grades: 95.5 88 92.5 76 89.5 
+Average: 88.3
+Letter Grade: B
+
+=== OBJECT ARRAY EXAMPLE ===
+Account created for Bob Wilson
+Account created for Carol Davis
+Account created for David Brown
+Account: ACC101
+Holder: Bob Wilson
+Balance: $1500
+---
+Account: ACC102
+Holder: Carol Davis
+Balance: $2500
+---
+Account: ACC103
+Holder: David Brown
+Balance: $3500
+---
+Total balance across all accounts: $7500
+
+=== CONST OBJECTS ===
+Account created for Constant Owner
+Account: CONST001
+Holder: Constant Owner
+Balance: $999.99
+
+=== OBJECTS WITH DYNAMIC MEMORY ===
+Account created for Dynamic Owner
+Account: DYN001
+Holder: Dynamic Owner
+Balance: $777.77
+Deposited $222.22 to account DYN001
+Account DYN001 destroyed
+Account ACC103 destroyed
+Account ACC102 destroyed
+Account ACC101 destroyed
+Account CONST001 destroyed
+Account ACC002 destroyed
+Account ACC001 destroyed
+
+Total bank accounts at end: 0</pre>
+                        </div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>Classes define new data types with data members and member functions</li>
+                                <li>Objects are instances of classes created with constructors</li>
+                                <li>Constructors initialize objects, destructors clean up resources</li>
+                                <li><code>public</code> members are accessible anywhere, <code>private</code> only within class</li>
+                                <li>Encapsulation protects data by making it private and providing public getters/setters</li>
+                                <li>Static members belong to the class, not individual objects</li>
+                                <li>Const member functions don't modify object state</li>
+                                <li>Use <code>.</code> operator for objects, <code>-&gt;</code> for pointers to objects</li>
+                                <li>Initialization lists in constructors initialize members before body executes</li>
+                                <li>Follow rule of three/five for classes managing resources</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-sitemap"></i> Object-Oriented Design Principles</h3>
+                            <p>Classes transform C++ from a procedural language into an object-oriented powerhouse. By bundling data and behavior, classes create self-contained units that model real-world entities. This paradigm shift enables modeling complex systems as networks of interacting objects, each with specific responsibilities and clear interfaces. The resulting code is more modular, testable, and maintainable than equivalent procedural code.</p>
+                            
+                            <p>Resource Management is a critical aspect of class design. Constructors acquire resources (memory, files, network connections), while destructors release them. This RAII (Resource Acquisition Is Initialization) pattern ensures resources are properly managed even in the presence of exceptions. Smart pointers extend this pattern to dynamic memory, but for non-memory resources or custom allocation strategies, manual implementation in constructors/destructors is necessary.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-box"></i> Encapsulation & Information Hiding</h4>
+                                    <p>Private data members with public interfaces protect implementation details, allowing internal changes without affecting clients. This reduces coupling and increases maintainability in large codebases.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-sync-alt"></i> Resource Management</h4>
+                                    <p>RAII ensures resources are automatically released when objects go out of scope, preventing leaks and simplifying error handling. This is fundamental to writing exception-safe C++ code.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-cubes"></i> Modular Design</h4>
+                                    <p>Classes enable decomposition of complex systems into manageable components. Well-designed class hierarchies allow independent development, testing, and evolution of system parts.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-industry"></i> Enterprise Software & Frameworks</h4>
+                                <p>GUI frameworks like Qt model windows, buttons, and events as objects. Game engines model entities, components, and systems as class hierarchies. Database ORMs map tables to classes and rows to objects. Web servers model requests, responses, and sessions as objects. Financial systems model instruments, accounts, and transactions as classes. In each domain, object-oriented design enables modeling complex domain concepts directly in code, with the compiler enforcing business rules through type safety and encapsulation.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Create a Library Management System:</strong> Design and implement classes for:</p>
+                            <ul>
+                                <li><code>Book</code> class with title, author, ISBN, availability status</li>
+                                <li><code>Member</code> class with name, ID, borrowed books list</li>
+                                <li><code>Library</code> class managing books and members</li>
+                                <li>Implement methods for borrowing, returning, and searching books</li>
+                                <li>Use encapsulation with proper getters/setters</li>
+                                <li>Implement constructors, destructors, and copy semantics</li>
+                                <li>Add static members for tracking total books/members</li>
+                                <li>Create a menu-driven interface using these classes</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 8 -->
+            <div class="course-module" id="module8" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>INHERITANCE & POLYMORPHISM</h1>
+                    <h3>Learn advanced OOP concepts in C++</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/6132/6132222.png" class="module-icon" alt="C++ Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 8: <span>Inheritance, Polymorphism, and Abstract Classes</span></h1>
+                    <p>Inheritance allows creating new classes (derived) from existing ones (base), promoting code reuse and establishing "is-a" relationships. Polymorphism enables treating objects of different derived classes uniformly through base class pointers/references. Abstract classes define interfaces that derived classes must implement.</p>
+                    
+                    <p>Access specifiers in inheritance (<code>public</code>, <code>protected</code>, <code>private</code>) control visibility of base class members in derived classes. Virtual functions enable runtime polymorphism through dynamic binding. Pure virtual functions make classes abstract, preventing instantiation.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">C++</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+<textarea class="code-editor" id="editor-8" spellcheck="false">#include <iostream>
+#include <string>
+#include <vector>
+#include <memory>
+using namespace std;
+
+// ======================
+// BASE CLASS: SHAPE
+// ======================
+class Shape {
+protected:
+    string name;
+    string color;
+    
+public:
+    Shape(const string& n, const string& c) : name(n), color(c) {
+        cout << "Shape constructor: " << name << endl;
+    }
+    
+    virtual ~Shape() {
+        cout << "Shape destructor: " << name << endl;
+    }
+    
+    // Virtual function - can be overridden
+    virtual double area() const {
+        cout << "Shape area() called" << endl;
+        return 0.0;
+    }
+    
+    // Pure virtual function - makes class abstract
+    virtual double perimeter() const = 0;
+    
+    // Regular member function
+    void displayInfo() const {
+        cout << "Name: " << name << ", Color: " << color << endl;
+        cout << "Area: " << area() << ", Perimeter: " << perimeter() << endl;
+    }
+    
+    // Getter functions
+    string getName() const { return name; }
+    string getColor() const { return color; }
+    
+    // Setter functions
+    void setColor(const string& c) { color = c; }
+};
+
+// ======================
+// DERIVED CLASS: CIRCLE
+// ======================
+class Circle : public Shape {
+private:
+    double radius;
+    
+public:
+    Circle(const string& n, const string& c, double r) 
+        : Shape(n, c), radius(r) {
+        cout << "Circle constructor: " << name << endl;
+    }
+    
+    ~Circle() {
+        cout << "Circle destructor: " << name << endl;
+    }
+    
+    // Override base class virtual functions
+    double area() const override {
+        return 3.14159 * radius * radius;
+    }
+    
+    double perimeter() const override {
+        return 2 * 3.14159 * radius;
+    }
+    
+    // Circle-specific function
+    double diameter() const {
+        return 2 * radius;
+    }
+    
+    // Getter and Setter
+    double getRadius() const { return radius; }
+    void setRadius(double r) { if (r > 0) radius = r; }
+};
+
+// ======================
+// DERIVED CLASS: RECTANGLE
+// ======================
+class Rectangle : public Shape {
+private:
+    double length;
+    double width;
+    
+public:
+    Rectangle(const string& n, const string& c, double l, double w)
+        : Shape(n, c), length(l), width(w) {
+        cout << "Rectangle constructor: " << name << endl;
+    }
+    
+    ~Rectangle() {
+        cout << "Rectangle destructor: " << name << endl;
+    }
+    
+    // Override base class virtual functions
+    double area() const override {
+        return length * width;
+    }
+    
+    double perimeter() const override {
+        return 2 * (length + width);
+    }
+    
+    // Rectangle-specific function
+    bool isSquare() const {
+        return length == width;
+    }
+    
+    // Getters and Setters
+    double getLength() const { return length; }
+    double getWidth() const { return width; }
+    
+    void setDimensions(double l, double w) {
+        if (l > 0 && w > 0) {
+            length = l;
+            width = w;
+        }
+    }
+};
+
+// ======================
+// DERIVED CLASS: TRIANGLE
+// ======================
+class Triangle : public Shape {
+private:
+    double base;
+    double height;
+    double side1, side2;
+    
+public:
+    Triangle(const string& n, const string& c, double b, double h, double s1, double s2)
+        : Shape(n, c), base(b), height(h), side1(s1), side2(s2) {
+        cout << "Triangle constructor: " << name << endl;
+    }
+    
+    ~Triangle() {
+        cout << "Triangle destructor: " << name << endl;
+    }
+    
+    // Override base class virtual functions
+    double area() const override {
+        return 0.5 * base * height;
+    }
+    
+    double perimeter() const override {
+        return base + side1 + side2;
+    }
+    
+    // Triangle-specific function
+    string triangleType() const {
+        if (base == side1 && side1 == side2) return "Equilateral";
+        if (base == side1 || base == side2 || side1 == side2) return "Isosceles";
+        return "Scalene";
+    }
+};
+
+// ======================
+// DEMONSTRATION FUNCTIONS
+// ======================
+void demonstratePolymorphism() {
+    cout << "\n=== POLYMORPHISM DEMONSTRATION ===" << endl;
+    
+    // Using base class pointers to derived objects
+    Shape* shapes[3];
+    
+    shapes[0] = new Circle("Red Circle", "Red", 5.0);
+    shapes[1] = new Rectangle("Blue Rectangle", "Blue", 4.0, 6.0);
+    shapes[2] = new Triangle("Green Triangle", "Green", 3.0, 4.0, 5.0, 4.0);
+    
+    // Polymorphic behavior
+    for (int i = 0; i < 3; i++) {
+        cout << "\nShape " << i + 1 << ":" << endl;
+        shapes[i]->displayInfo();
+    }
+    
+    // Clean up
+    for (int i = 0; i < 3; i++) {
+        delete shapes[i];
+    }
+}
+
+void demonstrateInheritanceHierarchy() {
+    cout << "\n=== INHERITANCE HIERARCHY ===" << endl;
+    
+    // Direct object creation
+    Circle circle("My Circle", "Yellow", 7.0);
+    Rectangle rectangle("My Rectangle", "Purple", 5.0, 3.0);
+    
+    cout << "\nCircle details:" << endl;
+    circle.displayInfo();
+    cout << "Diameter: " << circle.diameter() << endl;
+    
+    cout << "\nRectangle details:" << endl;
+    rectangle.displayInfo();
+    cout << "Is square? " << (rectangle.isSquare() ? "Yes" : "No") << endl;
+    
+    // Using base class reference
+    Shape& shapeRef = circle;
+    cout << "\nUsing base class reference to Circle:" << endl;
+    cout << "Area through base reference: " << shapeRef.area() << endl;
+}
+
+void demonstrateAbstractClasses() {
+    cout << "\n=== ABSTRACT CLASSES ===" << endl;
+    
+    // Cannot instantiate abstract class
+    // Shape abstractShape("Abstract", "Black"); // Error!
+    
+    cout << "Shape is an abstract class (has pure virtual function)" << endl;
+    cout << "Must create objects of derived classes" << endl;
+}
+
+void demonstrateSmartPointersWithPolymorphism() {
+    cout << "\n=== SMART POINTERS WITH POLYMORPHISM ===" << endl;
+    
+    vector<unique_ptr<Shape>> shapeCollection;
+    
+    shapeCollection.push_back(make_unique<Circle>("Smart Circle", "Orange", 3.0));
+    shapeCollection.push_back(make_unique<Rectangle>("Smart Rectangle", "Cyan", 2.0, 4.0));
+    shapeCollection.push_back(make_unique<Triangle>("Smart Triangle", "Magenta", 3.0, 4.0, 5.0, 4.0));
+    
+    double totalArea = 0.0;
+    double totalPerimeter = 0.0;
+    
+    for (const auto& shape : shapeCollection) {
+        totalArea += shape->area();
+        totalPerimeter += shape->perimeter();
+        shape->displayInfo();
+        cout << "---" << endl;
+    }
+    
+    cout << "Total Area: " << totalArea << endl;
+    cout << "Total Perimeter: " << totalPerimeter << endl;
+}
+
+// ======================
+// MAIN FUNCTION
+// ======================
+int main() {
+    cout << "=== INHERITANCE AND POLYMORPHISM DEMONSTRATION ===\n" << endl;
+    
+    demonstrateInheritanceHierarchy();
+    demonstratePolymorphism();
+    demonstrateAbstractClasses();
+    demonstrateSmartPointersWithPolymorphism();
+    
+    cout << "\n=== MULTILEVEL INHERITANCE EXAMPLE ===" << endl;
+    
+    // Example of multilevel inheritance
+    class Vehicle {
+    protected:
+        string brand;
+        int year;
+    public:
+        Vehicle(string b, int y) : brand(b), year(y) {}
+        virtual void display() const {
+            cout << "Brand: " << brand << ", Year: " << year << endl;
+        }
+    };
+    
+    class Car : public Vehicle {
+    protected:
+        int doors;
+    public:
+        Car(string b, int y, int d) : Vehicle(b, y), doors(d) {}
+        void display() const override {
+            Vehicle::display();
+            cout << "Doors: " << doors << endl;
+        }
+    };
+    
+    class SportsCar : public Car {
+    private:
+        double topSpeed;
+    public:
+        SportsCar(string b, int y, int d, double ts) 
+            : Car(b, y, d), topSpeed(ts) {}
+        void display() const override {
+            Car::display();
+            cout << "Top Speed: " << topSpeed << " mph" << endl;
+        }
+    };
+    
+    SportsCar myCar("Ferrari", 2023, 2, 205.5);
+    myCar.display();
+    
+    cout << "\n=== MULTIPLE INHERITANCE EXAMPLE ===" << endl;
+    
+    // Multiple inheritance (use cautiously)
+    class Printer {
+    public:
+        void print(const string& text) {
+            cout << "Printing: " << text << endl;
+        }
+    };
+    
+    class Scanner {
+    public:
+        void scan() {
+            cout << "Scanning document..." << endl;
+        }
+    };
+    
+    class MultiFunctionDevice : public Printer, public Scanner {
+    public:
+        void copy() {
+            cout << "Copying (print + scan)..." << endl;
+            scan();
+            print("Copied document");
+        }
+    };
+    
+    MultiFunctionDevice mfd;
+    mfd.print("Test page");
+    mfd.scan();
+    mfd.copy();
+    
+    return 0;
+}</textarea>
+                        <button class="run-btn" onclick="runCode('editor-8', 'output-8')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Program Output
+                        </div>
+                        <div class="preview-container" id="output-8">
+                            <pre>=== INHERITANCE AND POLYMORPHISM DEMONSTRATION ===
+
+=== INHERITANCE HIERARCHY ===
+Shape constructor: My Circle
+Circle constructor: My Circle
+Shape constructor: My Rectangle
+Rectangle constructor: My Rectangle
+
+Circle details:
+Name: My Circle, Color: Yellow
+Area: 153.938, Perimeter: 43.9823
+Diameter: 14
+
+Rectangle details:
+Name: My Rectangle, Color: Purple
+Area: 15, Perimeter: 16
+Is square? No
+
+Using base class reference to Circle:
+Area through base reference: 153.938
+
+=== POLYMORPHISM DEMONSTRATION ===
+Shape constructor: Red Circle
+Circle constructor: Red Circle
+Shape constructor: Blue Rectangle
+Rectangle constructor: Blue Rectangle
+Shape constructor: Green Triangle
+Triangle constructor: Green Triangle
+
+Shape 1:
+Name: Red Circle, Color: Red
+Area: 78.5398, Perimeter: 31.4159
+
+Shape 2:
+Name: Blue Rectangle, Color: Blue
+Area: 24, Perimeter: 20
+
+Shape 3:
+Name: Green Triangle, Color: Green
+Area: 6, Perimeter: 12
+
+Circle destructor: Red Circle
+Shape destructor: Red Circle
+Rectangle destructor: Blue Rectangle
+Shape destructor: Blue Rectangle
+Triangle destructor: Green Triangle
+Shape destructor: Green Triangle
+
+=== ABSTRACT CLASSES ===
+Shape is an abstract class (has pure virtual function)
+Must create objects of derived classes
+
+=== SMART POINTERS WITH POLYMORPHISM ===
+Shape constructor: Smart Circle
+Circle constructor: Smart Circle
+Shape constructor: Smart Rectangle
+Rectangle constructor: Smart Rectangle
+Shape constructor: Smart Triangle
+Triangle constructor: Smart Triangle
+Name: Smart Circle, Color: Orange
+Area: 28.2743, Perimeter: 18.8496
+---
+Name: Smart Rectangle, Color: Cyan
+Area: 8, Perimeter: 12
+---
+Name: Smart Triangle, Color: Magenta
+Area: 6, Perimeter: 12
+---
+Total Area: 42.2743
+Total Perimeter: 42.8496
+
+=== MULTILEVEL INHERITANCE EXAMPLE ===
+Brand: Ferrari, Year: 2023
+Doors: 2
+Top Speed: 205.5 mph
+
+=== MULTIPLE INHERITANCE EXAMPLE ===
+Printing: Test page
+Scanning document...
+Copying (print + scan)...
+Scanning document...
+Printing: Copied document</pre>
+                        </div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>Inheritance creates "is-a" relationships between classes</li>
+                                <li>Public inheritance preserves access rights of base class</li>
+                                <li>Virtual functions enable runtime polymorphism (dynamic binding)</li>
+                                <li>Pure virtual functions (<code>= 0</code>) make classes abstract</li>
+                                <li>Abstract classes cannot be instantiated</li>
+                                <li>Use <code>override</code> keyword to explicitly indicate overriding</li>
+                                <li>Use <code>final</code> to prevent further overriding/inheritance</li>
+                                <li>Virtual destructors ensure proper cleanup of derived objects</li>
+                                <li>Multiple inheritance can cause ambiguity (diamond problem)</li>
+                                <li>Use virtual inheritance to solve diamond problem</li>
+                                <li>Polymorphism works with pointers/references to base class</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-project-diagram"></i> Hierarchical Design & Runtime Flexibility</h3>
+                            <p>Inheritance establishes hierarchical relationships that model real-world taxonomies. Single inheritance creates simple "is-a" relationships, while multiple inheritance models complex relationships but introduces challenges like the diamond problem. Virtual inheritance and interface-based design (using abstract classes with only pure virtual functions) provide solutions that balance flexibility with maintainability.</p>
+                            
+                            <p>Polymorphism transforms rigid compile-time binding into flexible runtime binding. Virtual functions enable writing code that works with base class interfaces while executing derived class implementations. This enables plugin architectures, dependency injection, and frameworks where concrete implementations can be changed without modifying client code. The vtable (virtual table) mechanism implements this dynamic dispatch with minimal overhead.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-code-branch"></i> Design Patterns</h4>
+                                    <p>Inheritance and polymorphism enable classic design patterns like Factory, Strategy, Observer, and Template Method. These patterns solve common software design problems through reusable object-oriented structures.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-puzzle-piece"></i> Framework Development</h4>
+                                    <p>Application frameworks use abstract base classes to define extension points. Derived classes implement framework interfaces, enabling customization without modifying framework code.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-sitemap"></i> Interface Segregation</h4>
+                                    <p>Multiple inheritance of abstract classes (interfaces) allows implementing multiple behaviors without combinatorial explosion of concrete classes, following interface segregation principle.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-window-restore"></i> GUI Frameworks & Plugin Systems</h4>
+                                <p>Qt uses inheritance for widget hierarchy (QWidget → QPushButton) and polymorphism for event handling. Game engines use inheritance for entity-component systems. Database drivers use abstract base classes for database-agnostic interfaces. Plugin architectures use abstract factories and interfaces to load runtime extensions. Graphics APIs like OpenGL use inheritance for different shader types. In each case, inheritance hierarchies model domain relationships while polymorphism provides the flexibility to extend systems without modifying existing code, enabling large-scale software ecosystems.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Create an Employee Management System:</strong> Design a class hierarchy for:</p>
+                            <ul>
+                                <li>Base <code>Employee</code> class with common attributes (name, ID, salary)</li>
+                                <li>Derived classes: <code>Manager</code>, <code>Developer</code>, <code>SalesPerson</code></li>
+                                <li>Each derived class adds specific attributes and behaviors</li>
+                                <li>Use virtual functions for calculating bonuses (different per type)</li>
+                                <li>Implement abstract class for payment processing</li>
+                                <li>Create polymorphic array processing all employee types</li>
+                                <li>Add multiple inheritance for employees with multiple roles</li>
+                                <li>Implement clone functionality using virtual functions</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 9 -->
+            <div class="course-module" id="module9" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>TEMPLATES & STL</h1>
+                    <h3>Learn generic programming with templates and Standard Template Library</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/6132/6132222.png" class="module-icon" alt="C++ Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 9: <span>Templates, Generic Programming, and STL</span></h1>
+                    <p>Templates enable generic programming by allowing functions and classes to work with any data type. The Standard Template Library (STL) provides ready-to-use template classes for common data structures (containers) and algorithms. This combination enables writing type-safe, reusable code without sacrificing performance.</p>
+                    
+                    <p>Function templates generate functions for different types, while class templates generate classes. STL containers (<code>vector</code>, <code>list</code>, <code>map</code>, etc.) store data, iterators provide access to elements, and algorithms (<code>sort</code>, <code>find</code>, <code>transform</code>, etc.) process containers. Understanding templates and STL is essential for modern C++ development.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">C++</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+<textarea class="code-editor" id="editor-9" spellcheck="false">#include <iostream>
+#include <vector>
+#include <list>
+#include <map>
+#include <set>
+#include <algorithm>
+#include <string>
+#include <functional>
+#include <numeric>
+#include <iterator>
+using namespace std;
+
+// ======================
+// FUNCTION TEMPLATES
+// ======================
+template <typename T>
+T findMax(T a, T b) {
+    return (a > b) ? a : b;
+}
+
+template <typename T1, typename T2>
+void printPair(T1 first, T2 second) {
+    cout << "(" << first << ", " << second << ")" << endl;
+}
+
+template <typename T>
+void printArray(const T arr[], int size) {
+    for (int i = 0; i < size; i++) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+}
+
+// Template with multiple parameters
+template <typename T, int size>
+class FixedArray {
+private:
+    T data[size];
+    
+public:
+    void set(int index, T value) {
+        if (index >= 0 && index < size) {
+            data[index] = value;
+        }
+    }
+    
+    T get(int index) const {
+        if (index >= 0 && index < size) {
+            return data[index];
+        }
+        return T();
+    }
+    
+    void print() const {
+        for (int i = 0; i < size; i++) {
+            cout << data[i] << " ";
+        }
+        cout << endl;
+    }
+};
+
+// ======================
+// CLASS TEMPLATES
+// ======================
+template <typename T>
+class Stack {
+private:
+    vector<T> elements;
+    
+public:
+    void push(const T& value) {
+        elements.push_back(value);
+    }
+    
+    void pop() {
+        if (!elements.empty()) {
+            elements.pop_back();
+        }
+    }
+    
+    T top() const {
+        if (!elements.empty()) {
+            return elements.back();
+        }
+        throw runtime_error("Stack is empty");
+    }
+    
+    bool empty() const {
+        return elements.empty();
+    }
+    
+    size_t size() const {
+        return elements.size();
+    }
+};
+
+// Template specialization
+template <>
+class Stack<string> {
+private:
+    vector<string> elements;
+    
+public:
+    void push(const string& value) {
+        elements.push_back("String: " + value);
+    }
+    
+    void pop() {
+        if (!elements.empty()) {
+            elements.pop_back();
+        }
+    }
+    
+    string top() const {
+        if (!elements.empty()) {
+            return elements.back();
+        }
+        throw runtime_error("String Stack is empty");
+    }
+    
+    bool empty() const {
+        return elements.empty();
+    }
+};
+
+// ======================
+// DEMONSTRATION FUNCTIONS
+// ======================
+void demonstrateFunctionTemplates() {
+    cout << "=== FUNCTION TEMPLATES ===" << endl;
+    
+    // Using function template with different types
+    cout << "Max of 5 and 10: " << findMax(5, 10) << endl;
+    cout << "Max of 3.14 and 2.71: " << findMax(3.14, 2.71) << endl;
+    cout << "Max of 'A' and 'B': " << findMax('A', 'B') << endl;
+    
+    printPair(10, "Hello");
+    printPair(3.14, true);
+    
+    int intArr[] = {1, 2, 3, 4, 5};
+    double doubleArr[] = {1.1, 2.2, 3.3, 4.4, 5.5};
+    
+    cout << "Integer array: ";
+    printArray(intArr, 5);
+    
+    cout << "Double array: ";
+    printArray(doubleArr, 5);
+}
+
+void demonstrateClassTemplates() {
+    cout << "\n=== CLASS TEMPLATES ===" << endl;
+    
+    // Using class template
+    Stack<int> intStack;
+    intStack.push(10);
+    intStack.push(20);
+    intStack.push(30);
+    
+    cout << "Top of int stack: " << intStack.top() << endl;
+    intStack.pop();
+    cout << "After pop, top: " << intStack.top() << endl;
+    
+    Stack<string> stringStack;
+    stringStack.push("Hello");
+    stringStack.push("World");
+    
+    cout << "Top of string stack: " << stringStack.top() << endl;
+    
+    // Fixed array template
+    FixedArray<double, 5> doubleArray;
+    for (int i = 0; i < 5; i++) {
+        doubleArray.set(i, i * 1.1);
+    }
+    
+    cout << "Fixed array: ";
+    doubleArray.print();
+}
+
+void demonstrateSTLContainers() {
+    cout << "\n=== STL CONTAINERS ===" << endl;
+    
+    // Vector (dynamic array)
+    cout << "--- VECTOR ---" << endl;
+    vector<int> numbers = {10, 20, 30, 40, 50};
+    numbers.push_back(60);
+    numbers.push_back(70);
+    
+    cout << "Vector elements: ";
+    for (int num : numbers) {
+        cout << num << " ";
+    }
+    cout << endl;
+    
+    cout << "Size: " << numbers.size() << ", Capacity: " << numbers.capacity() << endl;
+    
+    // List (doubly linked list)
+    cout << "\n--- LIST ---" << endl;
+    list<string> names = {"Alice", "Bob", "Charlie"};
+    names.push_front("First");
+    names.push_back("Last");
+    
+    cout << "List elements: ";
+    for (const string& name : names) {
+        cout << name << " ";
+    }
+    cout << endl;
+    
+    // Map (key-value pairs)
+    cout << "\n--- MAP ---" << endl;
+    map<string, int> ageMap;
+    ageMap["Alice"] = 25;
+    ageMap["Bob"] = 30;
+    ageMap["Charlie"] = 35;
+    
+    cout << "Age map:" << endl;
+    for (const auto& pair : ageMap) {
+        cout << pair.first << ": " << pair.second << endl;
+    }
+    
+    // Set (unique sorted elements)
+    cout << "\n--- SET ---" << endl;
+    set<int> uniqueNumbers = {5, 2, 8, 2, 5, 1, 9};
+    
+    cout << "Set elements (unique & sorted): ";
+    for (int num : uniqueNumbers) {
+        cout << num << " ";
+    }
+    cout << endl;
+}
+
+void demonstrateSTLAlgorithms() {
+    cout << "\n=== STL ALGORITHMS ===" << endl;
+    
+    vector<int> numbers = {42, 17, 89, 5, 33, 71, 24, 56};
+    
+    cout << "Original: ";
+    for (int num : numbers) {
+        cout << num << " ";
+    }
+    cout << endl;
+    
+    // Sort
+    sort(numbers.begin(), numbers.end());
+    cout << "Sorted: ";
+    for (int num : numbers) {
+        cout << num << " ";
+    }
+    cout << endl;
+    
+    // Reverse
+    reverse(numbers.begin(), numbers.end());
+    cout << "Reversed: ";
+    for (int num : numbers) {
+        cout << num << " ";
+    }
+    cout << endl;
+    
+    // Find
+    auto it = find(numbers.begin(), numbers.end(), 33);
+    if (it != numbers.end()) {
+        cout << "Found 33 at position: " << distance(numbers.begin(), it) << endl;
+    }
+    
+    // Count
+    int countGreaterThan50 = count_if(numbers.begin(), numbers.end(), 
+                                     [](int n) { return n > 50; });
+    cout << "Numbers greater than 50: " << countGreaterThan50 << endl;
+    
+    // Transform
+    vector<int> squared;
+    transform(numbers.begin(), numbers.end(), back_inserter(squared),
+              [](int n) { return n * n; });
+    
+    cout << "Squared: ";
+    for (int num : squared) {
+        cout << num << " ";
+    }
+    cout << endl;
+    
+    // Accumulate
+    int sum = accumulate(numbers.begin(), numbers.end(), 0);
+    cout << "Sum: " << sum << endl;
+    
+    // Max and Min element
+    auto maxIt = max_element(numbers.begin(), numbers.end());
+    auto minIt = min_element(numbers.begin(), numbers.end());
+    cout << "Max: " << *maxIt << ", Min: " << *minIt << endl;
+}
+
+void demonstrateIterators() {
+    cout << "\n=== ITERATORS ===" << endl;
+    
+    vector<string> fruits = {"Apple", "Banana", "Cherry", "Date", "Elderberry"};
+    
+    cout << "Using iterators:" << endl;
+    for (auto it = fruits.begin(); it != fruits.end(); ++it) {
+        cout << *it << " ";
+    }
+    cout << endl;
+    
+    cout << "Using reverse iterators:" << endl;
+    for (auto it = fruits.rbegin(); it != fruits.rend(); ++it) {
+        cout << *it << " ";
+    }
+    cout << endl;
+    
+    // Iterator categories demonstration
+    cout << "\nIterator operations:" << endl;
+    auto it = fruits.begin();
+    cout << "First fruit: " << *it << endl;
+    advance(it, 2);
+    cout << "After advancing 2: " << *it << endl;
+    
+    // Distance between iterators
+    auto start = fruits.begin();
+    auto end = fruits.end();
+    cout << "Distance from begin to end: " << distance(start, end) << endl;
+}
+
+void demonstrateLambdas() {
+    cout << "\n=== LAMBDA EXPRESSIONS ===" << endl;
+    
+    vector<int> numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    
+    // Simple lambda
+    cout << "Even numbers: ";
+    for_each(numbers.begin(), numbers.end(), [](int n) {
+        if (n % 2 == 0) cout << n << " ";
+    });
+    cout << endl;
+    
+    // Lambda with capture
+    int threshold = 5;
+    cout << "Numbers greater than " << threshold << ": ";
+    for_each(numbers.begin(), numbers.end(), [threshold](int n) {
+        if (n > threshold) cout << n << " ";
+    });
+    cout << endl;
+    
+    // Lambda returning value
+    auto square = [](int x) -> int { return x * x; };
+    cout << "Square of 7: " << square(7) << endl;
+    
+    // Mutable lambda
+    int counter = 0;
+    auto incrementer = [counter]() mutable {
+        counter++;
+        return counter;
+    };
+    
+    cout << "Mutable lambda calls: ";
+    for (int i = 0; i < 3; i++) {
+        cout << incrementer() << " ";
+    }
+    cout << endl;
+}
+
+// ======================
+// MAIN FUNCTION
+// ======================
+int main() {
+    cout << "=== TEMPLATES AND STL DEMONSTRATION ===\n" << endl;
+    
+    demonstrateFunctionTemplates();
+    demonstrateClassTemplates();
+    demonstrateSTLContainers();
+    demonstrateSTLAlgorithms();
+    demonstrateIterators();
+    demonstrateLambdas();
+    
+    cout << "\n=== ADVANCED TEMPLATE EXAMPLE ===" << endl;
+    
+    // Variadic templates (C++11 and later)
+    cout << "Variadic templates allow variable number of template arguments" << endl;
+    
+    // Type traits example
+    cout << "\n=== TYPE TRAITS ===" << endl;
+    cout << "is_integral<int>: " << is_integral<int>::value << endl;
+    cout << "is_integral<double>: " << is_integral<double>::value << endl;
+    cout << "is_pointer<int*>: " << is_pointer<int*>::value << endl;
+    
+    // Tuple example
+    cout << "\n=== TUPLE ===" << endl;
+    tuple<string, int, double> person("John", 25, 175.5);
+    cout << "Name: " << get<0>(person) << endl;
+    cout << "Age: " << get<1>(person) << endl;
+    cout << "Height: " << get<2>(person) << endl;
+    
+    // Pair example
+    cout << "\n=== PAIR ===" << endl;
+    pair<string, int> student("Alice", 95);
+    cout << student.first << " scored " << student.second << endl;
+    
+    return 0;
+}</textarea>
+                        <button class="run-btn" onclick="runCode('editor-9', 'output-9')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Program Output
+                        </div>
+                        <div class="preview-container" id="output-9">
+                            <pre>=== TEMPLATES AND STL DEMONSTRATION ===
+
+=== FUNCTION TEMPLATES ===
+Max of 5 and 10: 10
+Max of 3.14 and 2.71: 3.14
+Max of 'A' and 'B': B
+(10, Hello)
+(3.14, 1)
+Integer array: 1 2 3 4 5 
+Double array: 1.1 2.2 3.3 4.4 5.5 
+
+=== CLASS TEMPLATES ===
+Top of int stack: 30
+After pop, top: 20
+Top of string stack: String: World
+Fixed array: 0 1.1 2.2 3.3 4.4 
+
+=== STL CONTAINERS ===
+--- VECTOR ---
+Vector elements: 10 20 30 40 50 60 70 
+Size: 7, Capacity: 10
+
+--- LIST ---
+List elements: First Alice Bob Charlie Last 
+
+--- MAP ---
+Age map:
+Alice: 25
+Bob: 30
+Charlie: 35
+
+--- SET ---
+Set elements (unique & sorted): 1 2 5 8 9 
+
+=== STL ALGORITHMS ===
+Original: 42 17 89 5 33 71 24 56 
+Sorted: 5 17 24 33 42 56 71 89 
+Reversed: 89 71 56 42 33 24 17 5 
+Found 33 at position: 4
+Numbers greater than 50: 3
+Squared: 7921 5041 3136 1764 1089 576 289 25 
+Sum: 337
+Max: 89, Min: 5
+
+=== ITERATORS ===
+Using iterators:
+Apple Banana Cherry Date Elderberry 
+Using reverse iterators:
+Elderberry Date Cherry Banana Apple 
+Iterator operations:
+First fruit: Apple
+After advancing 2: Cherry
+Distance from begin to end: 5
+
+=== LAMBDA EXPRESSIONS ===
+Even numbers: 2 4 6 8 10 
+Numbers greater than 5: 6 7 8 9 10 
+Square of 7: 49
+Mutable lambda calls: 1 2 3 
+
+=== ADVANCED TEMPLATE EXAMPLE ===
+Variadic templates allow variable number of template arguments
+
+=== TYPE TRAITS ===
+is_integral<int>: 1
+is_integral<double>: 0
+is_pointer<int*>: 1
+
+=== TUPLE ===
+Name: John
+Age: 25
+Height: 175.5
+
+=== PAIR ===
+Alice scored 95</pre>
+                        </div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>Templates enable writing generic, type-independent code</li>
+                                <li>Function templates generate functions for specific types</li>
+                                <li>Class templates generate classes for specific types</li>
+                                <li>Template specialization provides specific implementations</li>
+                                <li>STL provides containers, algorithms, and iterators</li>
+                                <li>Common containers: <code>vector</code>, <code>list</code>, <code>map</code>, <code>set</code></li>
+                                <li>Algorithms work with iterators, not directly with containers</li>
+                                <li>Iterators provide uniform access to container elements</li>
+                                <li>Lambdas enable inline function definitions</li>
+                                <li>Smart pointers (<code>unique_ptr</code>, <code>shared_ptr</code>) manage dynamic memory</li>
+                                <li>Type traits provide compile-time type information</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-cogs"></i> Generic Programming & Compile-Time Polymorphism</h3>
+                            <p>Templates represent C++'s approach to generic programming, providing compile-time polymorphism through code generation. Unlike inheritance-based runtime polymorphism, template instantiation happens at compile time, resulting in no runtime overhead. This enables writing algorithms and data structures that work with any type while maintaining type safety and performance equivalent to hand-written type-specific code.</p>
+                            
+                            <p>The STL embodies generic programming principles through its separation of containers, algorithms, and iterators. Containers manage data storage, algorithms perform operations, and iterators mediate between them. This design enables algorithms to work with any container providing appropriate iterators, and containers to work with any algorithm expecting those iterators. This orthogonal design achieves unprecedented code reuse while maintaining efficiency.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-bolt"></i> Zero-Cost Abstractions</h4>
+                                    <p>Templates generate specialized code at compile time, eliminating abstraction overhead. Well-designed template libraries match hand-optimized code performance while providing generic interfaces.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-puzzle-piece"></i> Metaprogramming</h4>
+                                    <p>Template metaprogramming performs computations at compile time using template instantiation. This enables dimensional analysis, expression templates, and other advanced optimizations.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-toolbox"></i> Library Development</h4>
+                                    <p>The STL demonstrates how templates enable building comprehensive libraries. Modern C++ expands this with type traits, perfect forwarding, variadic templates, and concept-based constraints.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-industry"></i> High-Performance Computing & Libraries</h4>
+                                <p>Numerical libraries like Eigen use expression templates to optimize linear algebra operations at compile time. Boost provides hundreds of template-based components. Game engines use template metaprogramming for reflection and serialization. Database systems use templates for type-safe query interfaces. Financial systems use templates for pricing models that work with different instrument types. Graphics libraries use templates for type-safe geometric operations. In each domain, templates enable building reusable, high-performance components that would be impossible with traditional object-oriented techniques alone.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Create a Generic Data Structures Library:</strong> Implement template-based:</p>
+                            <ul>
+                                <li>Generic <code>LinkedList</code> class template</li>
+                                <li>Generic <code>BinarySearchTree</code> class template</li>
+                                <li>Generic <code>HashMap</code> class template</li>
+                                <li>Generic algorithms for sorting and searching</li>
+                                <li>Custom iterator classes for your containers</li>
+                                <li>Template specialization for specific types (e.g., strings)</li>
+                                <li>Type traits for checking container requirements</li>
+                                <li>Benchmark your containers against STL equivalents</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 10 -->
+            <div class="course-module" id="module10" data-aos="fade-up" data-difficulty="advanced">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>ADVANCED C++</h1>
+                    <h3>Master advanced C++ concepts and modern features</h3>
+                    <span class="difficulty">Advanced</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/6132/6132222.png" class="module-icon" alt="C++ Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 10: <span>Modern C++ Features and Best Practices</span></h1>
+                    <p>Modern C++ (C++11/14/17/20) introduces powerful features that improve safety, performance, and expressiveness. Move semantics eliminate unnecessary copies, smart pointers automate memory management, lambdas enable functional programming, and constexpr enables compile-time computation. Understanding these features separates intermediate from expert C++ developers.</p>
+                    
+                    <p>Best practices include RAII for resource management, rule of five for classes, exception safety, and const correctness. Advanced topics include multithreading, metaprogramming, and perfect forwarding. Mastering these concepts enables writing robust, efficient, and maintainable C++ code for demanding applications.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">C++</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+<textarea class="code-editor" id="editor-10" spellcheck="false">#include <iostream>
+#include <memory>
+#include <vector>
+#include <algorithm>
+#include <thread>
+#include <mutex>
+#include <atomic>
+#include <future>
+#include <chrono>
+#include <type_traits>
+#include <utility>
+#include <string>
+#include <stdexcept>
+using namespace std;
+using namespace std::chrono;
+
+// ======================
+// MOVE SEMANTICS
+// ======================
+class Resource {
+private:
+    int* data;
+    size_t size;
+    
+public:
+    // Constructor
+    Resource(size_t s) : size(s), data(new int[s]) {
+        cout << "Resource constructed with size " << size << endl;
+        for (size_t i = 0; i < size; i++) {
+            data[i] = i;
+        }
+    }
+    
+    // Destructor
+    ~Resource() {
+        delete[] data;
+        cout << "Resource destroyed" << endl;
+    }
+    
+    // Copy constructor
+    Resource(const Resource& other) : size(other.size), data(new int[other.size]) {
+        cout << "Resource copy constructed" << endl;
+        copy(other.data, other.data + size, data);
+    }
+    
+    // Copy assignment
+    Resource& operator=(const Resource& other) {
+        cout << "Resource copy assigned" << endl;
+        if (this != &other) {
+            delete[] data;
+            size = other.size;
+            data = new int[size];
+            copy(other.data, other.data + size, data);
+        }
+        return *this;
+    }
+    
+    // Move constructor
+    Resource(Resource&& other) noexcept : data(other.data), size(other.size) {
+        cout << "Resource move constructed" << endl;
+        other.data = nullptr;
+        other.size = 0;
+    }
+    
+    // Move assignment
+    Resource& operator=(Resource&& other) noexcept {
+        cout << "Resource move assigned" << endl;
+        if (this != &other) {
+            delete[] data;
+            data = other.data;
+            size = other.size;
+            other.data = nullptr;
+            other.size = 0;
+        }
+        return *this;
+    }
+    
+    // Display
+    void display() const {
+        cout << "Resource data: ";
+        for (size_t i = 0; i < min(size, static_cast<size_t>(5)); i++) {
+            cout << data[i] << " ";
+        }
+        if (size > 5) cout << "...";
+        cout << endl;
+    }
+};
+
+// ======================
+// SMART POINTERS
+// ======================
+class ManagedObject {
+private:
+    string name;
+    
+public:
+    ManagedObject(const string& n) : name(n) {
+        cout << "ManagedObject " << name << " created" << endl;
+    }
+    
+    ~ManagedObject() {
+        cout << "ManagedObject " << name << " destroyed" << endl;
+    }
+    
+    void greet() const {
+        cout << "Hello from " << name << endl;
+    }
+};
+
+// ======================
+// LAMBDA EXPRESSIONS
+// ======================
+void demonstrateLambdas() {
+    cout << "\n=== LAMBDA EXPRESSIONS ===" << endl;
+    
+    // Basic lambda
+    auto add = [](int a, int b) { return a + b; };
+    cout << "5 + 3 = " << add(5, 3) << endl;
+    
+    // Lambda with capture by value
+    int x = 10;
+    auto multiplyByX = [x](int y) { return x * y; };
+    cout << "10 * 7 = " << multiplyByX(7) << endl;
+    
+    // Lambda with capture by reference
+    int counter = 0;
+    auto increment = [&counter]() { counter++; };
+    increment();
+    increment();
+    cout << "Counter: " << counter << endl;
+    
+    // Generic lambda (C++14)
+    auto genericAdd = [](auto a, auto b) { return a + b; };
+    cout << "Generic add int: " << genericAdd(5, 3) << endl;
+    cout << "Generic add double: " << genericAdd(5.5, 3.3) << endl;
+    cout << "Generic add string: " << genericAdd(string("Hello, "), string("World!")) << endl;
+}
+
+// ======================
+// CONSTEXPR
+// ======================
+constexpr int factorial(int n) {
+    return (n <= 1) ? 1 : n * factorial(n - 1);
+}
+
+constexpr int compileTimeValue = factorial(5); // Computed at compile time
+
+// ======================
+// TYPE TRAITS
+// ======================
+template<typename T>
+void processType(const T& value) {
+    cout << "Processing value: " << value << endl;
+    
+    if constexpr (is_integral<T>::value) {
+        cout << "Type is integral" << endl;
+    } else if constexpr (is_floating_point<T>::value) {
+        cout << "Type is floating point" << endl;
+    } else {
+        cout << "Type is something else" << endl;
+    }
+}
+
+// ======================
+// MULTITHREADING
+// ======================
+mutex coutMutex;
+
+void threadFunction(int id) {
+    lock_guard<mutex> lock(coutMutex);
+    cout << "Thread " << id << " is running" << endl;
+    this_thread::sleep_for(milliseconds(100));
+}
+
+void demonstrateMultithreading() {
+    cout << "\n=== MULTITHREADING ===" << endl;
+    
+    vector<thread> threads;
+    
+    for (int i = 0; i < 5; i++) {
+        threads.emplace_back(threadFunction, i);
+    }
+    
+    for (auto& t : threads) {
+        t.join();
+    }
+    
+    // Atomic operations
+    atomic<int> atomicCounter(0);
+    
+    auto incrementAtomic = [&atomicCounter]() {
+        for (int i = 0; i < 1000; i++) {
+            atomicCounter++;
+        }
+    };
+    
+    thread t1(incrementAtomic);
+    thread t2(incrementAtomic);
+    
+    t1.join();
+    t2.join();
+    
+    cout << "Atomic counter: " << atomicCounter << " (expected: 2000)" << endl;
+    
+    // Async operations
+    auto futureResult = async(launch::async, []() {
+        this_thread::sleep_for(milliseconds(200));
+        return "Async operation completed";
+    });
+    
+    cout << "Waiting for async result..." << endl;
+    cout << futureResult.get() << endl;
+}
+
+// ======================
+// EXCEPTION SAFETY
+// ======================
+class ExceptionSafe {
+private:
+    unique_ptr<int[]> data;
+    size_t size;
+    
+public:
+    ExceptionSafe(size_t s) : size(s), data(make_unique<int[]>(s)) {
+        cout << "ExceptionSafe object created" << endl;
+        // Strong exception safety: if this throws, object is not partially constructed
+    }
+    
+    // Copy with strong exception safety
+    ExceptionSafe(const ExceptionSafe& other) : size(other.size), data(make_unique<int[]>(other.size)) {
+        copy(other.data.get(), other.data.get() + size, data.get());
+    }
+    
+    // Copy assignment with strong exception safety
+    ExceptionSafe& operator=(const ExceptionSafe& other) {
+        if (this != &other) {
+            auto newData = make_unique<int[]>(other.size); // Allocate first
+            copy(other.data.get(), other.data.get() + other.size, newData.get());
+            
+            // Commit: swap (no-throw guarantee)
+            data.swap(newData);
+            size = other.size;
+        }
+        return *this;
+    }
+};
+
+// ======================
+// VARIADIC TEMPLATES
+// ======================
+template<typename... Args>
+void printAll(Args... args) {
+    // Fold expression (C++17)
+    (cout << ... << args) << endl;
+}
+
+template<typename... Args>
+auto sumAll(Args... args) {
+    // Fold expression with addition
+    return (... + args);
+}
+
+// ======================
+// CONCEPTS (C++20)
+// ======================
+template<typename T>
+concept Arithmetic = is_arithmetic<T>::value;
+
+template<Arithmetic T>
+T multiply(T a, T b) {
+    return a * b;
+}
+
+// ======================
+// MAIN FUNCTION
+// ======================
+int main() {
+    cout << "=== ADVANCED C++ FEATURES DEMONSTRATION ===\n" << endl;
+    
+    cout << "=== MOVE SEMANTICS ===" << endl;
+    {
+        Resource res1(10);
+        res1.display();
+        
+        Resource res2 = move(res1); // Move constructor
+        res2.display();
+        
+        Resource res3(5);
+        res3 = move(res2); // Move assignment
+        res3.display();
+        
+        // res1 is now in valid but unspecified state
+        cout << "End of move semantics scope" << endl;
+    }
+    
+    cout << "\n=== SMART POINTERS ===" << endl;
+    {
+        // Unique pointer (exclusive ownership)
+        unique_ptr<ManagedObject> obj1 = make_unique<ManagedObject>("UniqueObj");
+        obj1->greet();
+        
+        // Transfer ownership
+        unique_ptr<ManagedObject> obj2 = move(obj1);
+        if (!obj1) {
+            cout << "obj1 is now empty" << endl;
+        }
+        obj2->greet();
+        
+        // Shared pointer (shared ownership)
+        shared_ptr<ManagedObject> shared1 = make_shared<ManagedObject>("SharedObj");
+        shared_ptr<ManagedObject> shared2 = shared1; // Share ownership
+        cout << "Shared pointer use count: " << shared1.use_count() << endl;
+        
+        // Weak pointer (non-owning reference)
+        weak_ptr<ManagedObject> weak = shared1;
+        if (auto locked = weak.lock()) {
+            locked->greet();
+        }
+    }
+    
+    demonstrateLambdas();
+    
+    cout << "\n=== CONSTEXPR ===" << endl;
+    cout << "Factorial of 5 (computed at compile time): " << compileTimeValue << endl;
+    
+    int runtimeValue = 7;
+    cout << "Factorial of " << runtimeValue << " (computed at runtime): " 
+         << factorial(runtimeValue) << endl;
+    
+    cout << "\n=== TYPE TRAITS ===" << endl;
+    processType(42);
+    processType(3.14);
+    processType("Hello");
+    
+    cout << "\n=== VARIADIC TEMPLATES ===" << endl;
+    printAll(1, " + ", 2, " = ", 3);
+    printAll("Hello", ", ", "World", "!");
+    
+    cout << "Sum of 1, 2, 3, 4, 5: " << sumAll(1, 2, 3, 4, 5) << endl;
+    cout << "Sum of 1.1, 2.2, 3.3: " << sumAll(1.1, 2.2, 3.3) << endl;
+    
+    cout << "\n=== PERFECT FORWARDING ===" << endl;
+    auto perfectForward = [](auto&&... args) {
+        // Forward arguments perfectly
+        return make_unique<ManagedObject>(forward<decltype(args)>(args)...);
+    };
+    
+    auto obj = perfectForward("Perfectly Forwarded");
+    obj->greet();
+    
+    cout << "\n=== INITIALIZER LISTS ===" << endl;
+    vector<int> modernVector = {1, 2, 3, 4, 5}; // Uniform initialization
+    cout << "Modern vector: ";
+    for (int num : modernVector) {
+        cout << num << " ";
+    }
+    cout << endl;
+    
+    cout << "\n=== AUTO AND DECLTYPE ===" << endl;
+    auto autoVariable = 42; // Type deduced as int
+    decltype(autoVariable) declTypeVariable = autoVariable * 2;
+    
+    cout << "autoVariable: " << autoVariable << endl;
+    cout << "declTypeVariable: " << declTypeVariable << endl;
+    
+    // decltype with expression
+    int x = 10;
+    decltype((x)) ref = x; // Type is int&
+    ref = 20;
+    cout << "x after modifying through ref: " << x << endl;
+    
+    demonstrateMultithreading();
+    
+    cout << "\n=== RULE OF FIVE ===" << endl;
+    cout << "Classes managing resources should define or delete:" << endl;
+    cout << "1. Destructor" << endl;
+    cout << "2. Copy constructor" << endl;
+    cout << "3. Copy assignment operator" << endl;
+    cout << "4. Move constructor" << endl;
+    cout << "5. Move assignment operator" << endl;
+    
+    cout << "\n=== MODERN BEST PRACTICES ===" << endl;
+    cout << "1. Use RAII for all resource management" << endl;
+    cout << "2. Prefer unique_ptr over raw pointers" << endl;
+    cout << "3. Use const and constexpr where possible" << endl;
+    cout << "4. Use range-based for loops" << endl;
+    cout << "5. Use auto for complex type names" << endl;
+    cout << "6. Use nullptr instead of NULL" << endl;
+    cout << "7. Use override for virtual function overrides" << endl;
+    cout << "8. Use final to prevent further overriding" << endl;
+    cout << "9. Use noexcept for functions that don't throw" << endl;
+    cout << "10. Use static_assert for compile-time checks" << endl;
+    
+    cout << "\n=== C++20/23 FEATURES (Conceptual) ===" << endl;
+    cout << "C++20 Concepts: " << multiply(5, 3) << endl;
+    cout << "C++20 Ranges: More ergonomic range operations" << endl;
+    cout << "C++20 Coroutines: Asynchronous programming" << endl;
+    cout << "C++20 Modules: Faster compilation" << endl;
+    cout << "C++23: Further refinements and new features" << endl;
+    
+    return 0;
+}</textarea>
+                        <button class="run-btn" onclick="runCode('editor-10', 'output-10')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Program Output
+                        </div>
+                        <div class="preview-container" id="output-10">
+                            <pre>=== ADVANCED C++ FEATURES DEMONSTRATION ===
+
+=== MOVE SEMANTICS ===
+Resource constructed with size 10
+Resource data: 0 1 2 3 4 ...
+Resource move constructed
+Resource data: 0 1 2 3 4 ...
+Resource constructed with size 5
+Resource move assigned
+Resource data: 0 1 2 3 4 ...
+End of move semantics scope
+Resource destroyed
+Resource destroyed
+
+=== SMART POINTERS ===
+ManagedObject UniqueObj created
+Hello from UniqueObj
+obj1 is now empty
+Hello from UniqueObj
+ManagedObject SharedObj created
+Shared pointer use count: 2
+Hello from SharedObj
+ManagedObject UniqueObj destroyed
+ManagedObject SharedObj destroyed
+
+=== LAMBDA EXPRESSIONS ===
+5 + 3 = 8
+10 * 7 = 70
+Counter: 2
+Generic add int: 8
+Generic add double: 8.8
+Generic add string: Hello, World!
+
+=== CONSTEXPR ===
+Factorial of 5 (computed at compile time): 120
+Factorial of 7 (computed at runtime): 5040
+
+=== TYPE TRAITS ===
+Processing value: 42
+Type is integral
+Processing value: 3.14
+Type is floating point
+Processing value: Hello
+Type is something else
+
+=== VARIADIC TEMPLATES ===
+1 + 2 = 3
+Hello, World!
+Sum of 1, 2, 3, 4, 5: 15
+Sum of 1.1, 2.2, 3.3: 6.6
+
+=== PERFECT FORWARDING ===
+ManagedObject Perfectly Forwarded created
+Hello from Perfectly Forwarded
+
+=== INITIALIZER LISTS ===
+Modern vector: 1 2 3 4 5 
+
+=== AUTO AND DECLTYPE ===
+autoVariable: 42
+declTypeVariable: 84
+x after modifying through ref: 20
+
+=== MULTITHREADING ===
+Thread 0 is running
+Thread 1 is running
+Thread 2 is running
+Thread 3 is running
+Thread 4 is running
+Atomic counter: 2000 (expected: 2000)
+Waiting for async result...
+Async operation completed
+
+=== RULE OF FIVE ===
+Classes managing resources should define or delete:
+1. Destructor
+2. Copy constructor
+3. Copy assignment operator
+4. Move constructor
+5. Move assignment operator
+
+=== MODERN BEST PRACTICES ===
+1. Use RAII for all resource management
+2. Prefer unique_ptr over raw pointers
+3. Use const and constexpr where possible
+4. Use range-based for loops
+5. Use auto for complex type names
+6. Use nullptr instead of NULL
+7. Use override for virtual function overrides
+8. Use final to prevent further overriding
+9. Use noexcept for functions that don't throw
+10. Use static_assert for compile-time checks
+
+=== C++20/23 FEATURES (Conceptual) ===
+C++20 Concepts: 15
+C++20 Ranges: More ergonomic range operations
+C++20 Coroutines: Asynchronous programming
+C++20 Modules: Faster compilation
+C++23: Further refinements and new features
+ManagedObject Perfectly Forwarded destroyed</pre>
+                        </div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>Move semantics eliminate unnecessary copies using rvalue references</li>
+                                <li>Smart pointers automate memory management (<code>unique_ptr</code>, <code>shared_ptr</code>, <code>weak_ptr</code>)</li>
+                                <li>Lambdas enable functional programming patterns</li>
+                                <li><code>constexpr</code> enables compile-time computation</li>
+                                <li>Type traits provide compile-time type information</li>
+                                <li>Variadic templates handle variable numbers of arguments</li>
+                                <li>Perfect forwarding preserves value categories</li>
+                                <li>Multithreading with <code>thread</code>, <code>mutex</code>, <code>atomic</code>, <code>async</code></li>
+                                <li>Rule of five for resource-managing classes</li>
+                                <li>RAII (Resource Acquisition Is Initialization) for exception safety</li>
+                                <li>Modern C++ best practices improve safety and performance</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-rocket"></i> Modern C++ & Production-Ready Development</h3>
+                            <p>Modern C++ represents a paradigm shift from C-with-classes to a genuinely distinct language focused on safety, performance, and expressiveness. Features like move semantics eliminate the copy overhead that traditionally made value semantics impractical for large objects. Smart pointers automate memory management while preserving deterministic destruction crucial for non-memory resources. These features enable writing code that's both safe and fast, addressing C++'s traditional trade-off between control and safety.</p>
+                            
+                            <p>The evolution of C++ demonstrates a commitment to backward compatibility while embracing modern programming paradigms. Lambda expressions bring functional programming to C++, enabling algorithms that accept behavior as parameters. Constexpr moves computations from runtime to compile time, enabling optimizations previously requiring preprocessor macros or template metaprogramming. Concepts (C++20) bring long-needed constraints to templates, making error messages comprehensible and enabling better tooling.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-shield-alt"></i> Memory Safety</h4>
+                                    <p>Modern C++ features dramatically improve memory safety. Smart pointers prevent leaks, move semantics eliminate dangling references from copies, and range-based for loops prevent buffer overflows.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-tachometer-alt"></i> Performance Zero-Overhead</h4>
+                                    <p>Modern abstractions like smart pointers, move semantics, and constexpr maintain C++'s zero-overhead principle: you don't pay for what you don't use, and what you do use is as efficient as hand-written code.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-code"></i> Expressive Power</h4>
+                                    <p>Features like lambdas, auto, and range-based for reduce boilerplate while maintaining clarity. This enables writing concise, readable code without sacrificing performance or control.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-industry"></i> High-Frequency Trading & Game Engines</h4>
+                                <p>Financial trading systems use modern C++ for latency-critical operations: move semantics eliminate copy overhead in order processing, atomic operations enable lock-free data structures, and constexpr computes trading parameters at compile time. Game engines leverage these features for real-time graphics: smart pointers manage texture and mesh memory, move semantics enable efficient entity transfers between systems, and multithreading distributes work across CPU cores. These demanding applications demonstrate how modern C++ enables building systems that are simultaneously safe, maintainable, and pushing performance boundaries that other languages cannot reach.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Create a High-Performance Matrix Library:</strong> Implement a production-quality matrix library using modern C++:</p>
+                            <ul>
+                                <li>Use move semantics for efficient matrix operations</li>
+                                <li>Implement RAII for memory management</li>
+                                <li>Use smart pointers internally</li>
+                                <li>Implement constexpr for compile-time matrix operations</li>
+                                <li>Add multithreading for parallel matrix operations</li>
+                                <li>Use type traits for compile-time validation</li>
+                                <li>Implement expression templates for lazy evaluation</li>
+                                <li>Add SIMD optimizations using intrinsic functions</li>
+                                <li>Benchmark against existing libraries (Eigen, Armadillo)</li>
+                                <li>Implement C++20 concepts for type constraints</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Practice Playground -->
+            <div class="course-module" id="playground" data-aos="fade-up">
+                <div class="course-three">
+                    <h1>PRACTICE PLAYGROUND</h1>
+                    <h3>Experiment with everything you've learned</h3>
+                    <i class="fas fa-laptop-code course-icon" style="color: var(--primary);"></i>
+                </div>
+                <div class="course-one">
+                    <h1>Your C++ Coding Playground: <span>Try Your Own Code</span></h1>
+                    <p>Use this space to experiment with everything you've learned. Try combining different C++ features and see the results! This is your sandbox to practice and explore modern C++ programming.</p>
+                    
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">C++</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="playground-editor" spellcheck="false">#include <iostream>
+#include <vector>
+#include <string>
+#include <algorithm>
+#include <memory>
+using namespace std;
+
+int main() {
+    cout << "=== C++ PLAYGROUND ===" << endl;
+    cout << "Edit this code and experiment with C++ features!\n" << endl;
+    
+    // Basic C++ features
+    cout << "1. BASIC FEATURES:" << endl;
+    int number = 42;
+    double pi = 3.14159;
+    string message = "Hello from SkillMynte!";
+    
+    cout << "Number: " << number << endl;
+    cout << "Pi: " << pi << endl;
+    cout << "Message: " << message << endl;
+    
+    // Control structures
+    cout << "\n2. CONTROL STRUCTURES:" << endl;
+    cout << "Even numbers 1-10: ";
+    for (int i = 1; i <= 10; i++) {
+        if (i % 2 == 0) {
+            cout << i << " ";
+        }
+    }
+    cout << endl;
+    
+    // Functions and lambdas
+    cout << "\n3. FUNCTIONS & LAMBDAS:" << endl;
+    auto add = [](int a, int b) { return a + b; };
+    cout << "5 + 3 = " << add(5, 3) << endl;
+    
+    // STL containers
+    cout << "\n4. STL CONTAINERS:" << endl;
+    vector<int> numbers = {5, 2, 8, 1, 9, 3};
+    cout << "Vector: ";
+    for (int n : numbers) {
+        cout << n << " ";
+    }
+    cout << endl;
+    
+    sort(numbers.begin(), numbers.end());
+    cout << "Sorted: ";
+    for (int n : numbers) {
+        cout << n << " ";
+    }
+    cout << endl;
+    
+    // Classes and objects
+    cout << "\n5. CLASSES AND OBJECTS:" << endl;
+    class Point {
+    public:
+        double x, y;
+        Point(double x, double y) : x(x), y(y) {}
+        void display() const {
+            cout << "(" << x << ", " << y << ")";
+        }
+    };
+    
+    Point p1(2.5, 3.5);
+    cout << "Point: ";
+    p1.display();
+    cout << endl;
+    
+    // Smart pointers
+    cout << "\n6. SMART POINTERS:" << endl;
+    unique_ptr<int> smartPtr = make_unique<int>(99);
+    cout << "Smart pointer value: " << *smartPtr << endl;
+    
+    // Modern C++ features
+    cout << "\n7. MODERN C++ FEATURES:" << endl;
+    auto process = [](auto value) {
+        cout << "Processing: " << value << " (type deduced automatically)" << endl;
+    };
+    
+    process(42);
+    process(3.14);
+    process("Modern C++");
+    
+    // Your experimentation area
+    cout << "\n=== YOUR CODE HERE ===" << endl;
+    cout << "Add your own C++ code below:\n" << endl;
+    
+    // Add your experimental code here:
+    
+    return 0;
+}</textarea>
+                        <button class="run-btn" onclick="runCode('playground-editor', 'playground-output')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Program Output
+                        </div>
+                        <div class="preview-container" id="playground-output">
+                            <pre>=== C++ PLAYGROUND ===
+Edit this code and experiment with C++ features!
+
+1. BASIC FEATURES:
+Number: 42
+Pi: 3.14159
+Message: Hello from SkillMynte!
+
+2. CONTROL STRUCTURES:
+Even numbers 1-10: 2 4 6 8 10 
+
+3. FUNCTIONS & LAMBDAS:
+5 + 3 = 8
+
+4. STL CONTAINERS:
+Vector: 5 2 8 1 9 3 
+Sorted: 1 2 3 5 8 9 
+
+5. CLASSES AND OBJECTS:
+Point: (2.5, 3.5)
+
+6. SMART POINTERS:
+Smart pointer value: 99
+
+7. MODERN C++ FEATURES:
+Processing: 42 (type deduced automatically)
+Processing: 3.14 (type deduced automatically)
+Processing: Modern C++ (type deduced automatically)
+
+=== YOUR CODE HERE ===
+Add your own C++ code below:</pre>
+                        </div>
+                    </div>
+                    
+                    <div class="course-five">
+                        <h3>Challenge Exercises:</h3>
+                        <ol>
+                            <li>Create a complete C++ program that:
+                                <ul>
+                                    <li>Uses classes and inheritance</li>
+                                    <li>Implements templates for generic programming</li>
+                                    <li>Uses STL containers and algorithms</li>
+                                    <li>Includes exception handling</li>
+                                    <li>Uses smart pointers for memory management</li>
+                                </ul>
+                            </li>
+                            <li>Build a data structure library:
+                                <ul>
+                                    <li>Implement linked list, stack, queue, and binary tree</li>
+                                    <li>Make them generic using templates</li>
+                                    <li>Add iterator support</li>
+                                    <li>Benchmark against STL equivalents</li>
+                                </ul>
+                            </li>
+                            <li>Create a mini-game or simulation:
+                                <ul>
+                                    <li>Use object-oriented design</li>
+                                    <li>Implement game logic with classes</li>
+                                    <li>Add file I/O for saving/loading game state</li>
+                                    <li>Use modern C++ features throughout</li>
+                                </ul>
+                            </li>
+                            <li>Solve algorithmic problems:
+                                <ul>
+                                    <li>Implement sorting algorithms (quicksort, mergesort)</li>
+                                    <li>Solve graph problems (shortest path, minimum spanning tree)</li>
+                                    <li>Implement dynamic programming solutions</li>
+                                    <li>Use C++ features for optimal performance</li>
+                                </ul>
+                            </li>
+                            <li>Combine all concepts into a complete application</li>
+                        </ol>
+                        
+                        <h3>Tips & Resources:</h3>
+                        <ul>
+                            <li>Use compiler flags for modern C++: <code>-std=c++17</code> or <code>-std=c++20</code></li>
+                            <li>Enable all warnings: <code>-Wall -Wextra -pedantic</code></li>
+                            <li>Use debugger (GDB, LLDB) to step through code</li>
+                            <li>Try different C++ compilers: GCC, Clang, MSVC</li>
+                            <li>Explore C++ reference sites: cppreference.com, isocpp.org</li>
+                            <li>Practice with coding challenge platforms (LeetCode, HackerRank)</li>
+                            <li>Read C++ Core Guidelines for best practices</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Premium Subscription CTA -->
+            <div class="premium-subscription" id="premium-subscription" data-aos="fade-up">
+                <h2>Unlock Premium SkillMynte Content</h2>
+                <p>Upgrade to SkillMynte Pro for exclusive courses, advanced projects, and personalized learning paths</p>
+                
+                <div class="premium-features">
+                    <div class="premium-feature">
+                        <i class="fas fa-gem"></i>
+                        <h3>Premium Courses</h3>
+                        <p>Access our entire library of advanced courses and exclusive content</p>
+                    </div>
+                    <div class="premium-feature">
+                        <i class="fas fa-trophy"></i>
+                        <h3>Certification</h3>
+                        <p>Earn industry-recognized certificates to showcase your skills</p>
+                    </div>
+                    <div class="premium-feature">
+                        <i class="fas fa-user-graduate"></i>
+                        <h3>Mentorship</h3>
+                        <p>Get personalized guidance from industry experts</p>
+                    </div>
+                </div>
+                
+                <div class="pricing-options">
+                    <div class="pricing-option">
+                        <h3>Monthly</h3>
+                        <div class="price">₦3,500<span>/month</span></div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> All Premium Courses</li>
+                            <li><i class="fas fa-check"></i> Practice Projects</li>
+                            <li><i class="fas fa-check"></i> Community Access</li>
+                            <li><i class="fas fa-check"></i> Certificates</li>
+                            <li><i class="fas fa-check"></i> Personal AI Assistant</li>
+                        </ul>
+                        <a href="premium courses.html"><button class="pricing-btn">Get Started</button></a>
+                    </div>
+                    
+                    <div class="pricing-option" style="border-color: var(--white); transform: scale(1.05);">
+                        <h3>Annual <span style="background: var(--white); color: #00599C; padding: 0.2rem 0.5rem; border-radius: 20px; font-size: 0.8rem; margin-left: 0.5rem;">Best Value</span></h3>
+                        <div class="price">₦37,000<span>/year</span></div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> All Premium Courses</li>
+                            <li><i class="fas fa-check"></i> Practice Projects</li>
+                            <li><i class="fas fa-check"></i> Community Access</li>
+                            <li><i class="fas fa-check"></i> Certificates</li>
+                            <li><i class="fas fa-check"></i> Personal AI Assistant</li>
+                        </ul>
+                        <a href="premium courses.html"><button class="pricing-btn">Get Started</button></a>
+                    </div>
+                    
+                    <div class="pricing-option">
+                        <h3>Lifetime</h3>
+                        <div class="price">₦200,000<span>/once</span></div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> All Premium Courses</li>
+                            <li><i class="fas fa-check"></i> Practice Projects</li>
+                            <li><i class="fas fa-check"></i> Community Access</li>
+                            <li><i class="fas fa-check"></i> Certificates</li>
+                            <li><i class="fas fa-check"></i> Personal AI Assistant</li>
+                        </ul>
+                        <a href="premium courses.html"><button class="pricing-btn">Get Started</button></a>
+                    </div>
+                </div>
+                
+                <button class="premium-cta-btn">
+                    <i class="fas fa-rocket"></i> Upgrade to SkillMynte Pro
+                </button>
+            </div>
+            
+            <!-- Footer -->
+            <footer>
+                <div class="footer-content">
+                    <div class="footer-column">
+                        <h3>About SkillMynte</h3>
+                        <p>SkillMynte is a premium learning platform dedicated to helping developers of all levels master programming technologies through interactive courses and hands-on practice.</p>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/profile.php?id=61581069862024"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://x.com/SkillMynte_AI?t=CcoQtjWZGGOXqfTfrsufjQ&s=09"><i class="fab fa-twitter"></i></a>
+                            <a href="https://youtube.com/@skillmynte?si=LmX2MjSKU3N1Xa5S"><i class="fab fa-youtube"></i></a>
+                            <a href="https://www.instagram.com/skillmynte_ai?igsh=MTd1YWpjdXV1OHhrbA=="><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Quick Links</h3>
+                        <ul class="footer-links">
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Home</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Courses</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Practice</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Projects</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Popular Courses</h3>
+                        <ul class="footer-links">
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> C++ Programming Mastery</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Data Structures & Algorithms</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Game Development with C++</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> System Programming</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Competitive Programming</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Contact Us</h3>
+                        <p><i class="fas fa-envelope"></i>Skillmynteofficial@gmail.com</p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 SkillMynte. All rights reserved. | Designed with <i class="fas fa-heart" style="color: var(--primary);"></i> for the developer community</p>
+                </div>
+            </footer>
+
+           <script>
+    // Function to run code in preview
+    function runCode(editorId, outputId) {
+        const editor = document.getElementById(editorId);
+        const output = document.getElementById(outputId);
+        
+        try {
+            output.innerHTML = editor.value;
+        } catch (error) {
+            output.innerHTML = `<div style="color: var(--accent); padding: 1rem;">Error: ${error.message}</div>`;
+        }
+    }
+    
+    // Initialize all editors with their default output
+    document.addEventListener('DOMContentLoaded', function() {
+        // Run all code editors on load
+        runCode('editor-1', 'output-1');
+        runCode('editor-2', 'output-2');
+        runCode('editor-3', 'output-3');
+        runCode('editor-4', 'output-4');
+        runCode('editor-5', 'output-5');
+        runCode('editor-6', 'output-6');
+        runCode('editor-7', 'output-7');
+        runCode('editor-8', 'output-8');
+        runCode('editor-9', 'output-9');
+        runCode('editor-10', 'output-10');
+        runCode('playground-editor', 'playground-output');
+        
+        // Add event listeners to all run buttons in editor headers
+        document.querySelectorAll('.run-editor').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const editorContainer = this.closest('.code-editor-container');
+                const editor = editorContainer.querySelector('.code-editor');
+                const output = editorContainer.querySelector('.preview-container');
+                runCode(editor.id, output.id);
+            });
+        });
+        
+        // Add reset functionality
+        document.querySelectorAll('.reset-editor').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const editorContainer = this.closest('.code-editor-container');
+                const editor = editorContainer.querySelector('.code-editor');
+                const originalContent = editor.dataset.original || editor.defaultValue;
+                editor.value = originalContent;
+                runCode(editor.id, editorContainer.querySelector('.preview-container').id);
+            });
+        });
+        
+        // Store original content for reset functionality
+        document.querySelectorAll('.code-editor').forEach(editor => {
+            editor.dataset.original = editor.value;
+        });
+
+        // Handle navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // FIXED: Hamburger menu functionality
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.querySelector('.nav-menu');
+        const sidebar = document.getElementById('sidebar');
+        const body = document.body;
+
+        function toggleMobileMenu() {
+            const isActive = navMenu.classList.contains('active');
+            
+            if (isActive) {
+                // Close menu
+                navMenu.classList.remove('active');
+                sidebar.classList.remove('active');
+                menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                body.classList.remove('menu-open');
+                menuToggle.setAttribute('aria-expanded', 'false');
+            } else {
+                // Open menu
+                navMenu.classList.add('active');
+                sidebar.classList.add('active');
+                menuToggle.innerHTML = '<i class="fas fa-times"></i>';
+                body.classList.add('menu-open');
+                menuToggle.setAttribute('aria-expanded', 'true');
+            }
+        }
+
+        function closeMobileMenu() {
+            navMenu.classList.remove('active');
+            sidebar.classList.remove('active');
+            menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            body.classList.remove('menu-open');
+            menuToggle.setAttribute('aria-expanded', 'false');
+        }
+
+        // Mobile menu toggle
+        menuToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            toggleMobileMenu();
+        });
+
+        // Close menu when clicking on nav links
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function() {
+                if (window.innerWidth <= 1024) {
+                    closeMobileMenu();
+                }
+            });
+        });
+
+        // Close menu when clicking on dropdown items
+        document.querySelectorAll('.dropdown-item').forEach(item => {
+            item.addEventListener('click', function() {
+                if (window.innerWidth <= 1024) {
+                    closeMobileMenu();
+                }
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (window.innerWidth <= 1024 && 
+                navMenu.classList.contains('active') &&
+                !e.target.closest('.nav-menu') && 
+                !e.target.closest('.menu-toggle') &&
+                !e.target.closest('.sidebar')) {
+                closeMobileMenu();
+            }
+        });
+
+        // Close menu on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+                closeMobileMenu();
+            }
+        });
+
+        // Close menu on resize if switching to desktop
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 1024 && navMenu.classList.contains('active')) {
+                closeMobileMenu();
+            }
+        });
+
+        // Mobile dropdown functionality
+        document.querySelectorAll('.courses-dropdown').forEach(dropdown => {
+            const button = dropdown.querySelector('.courses-btn');
+            
+            button.addEventListener('click', function(e) {
+                if (window.innerWidth <= 1024) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    dropdown.classList.toggle('active');
+                }
+            });
+        });
+
+        // Level filtering functionality
+        const levelButtons = document.querySelectorAll('.level-btn');
+        const modules = document.querySelectorAll('.course-module');
+        
+        levelButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const level = this.getAttribute('data-level');
+                
+                // Remove active class from all buttons
+                levelButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                this.classList.add('active');
+                
+                if (level === 'all') {
+                    // Show all modules
+                    modules.forEach(module => {
+                        module.style.display = 'flex';
+                    });
+                } else if (level === 'advanced') {
+                    // Show advanced modules (7-10)
+                    modules.forEach(module => {
+                        const moduleId = module.id;
+                        if (moduleId.includes('module7') || moduleId.includes('module8') || 
+                            moduleId.includes('module9') || moduleId.includes('module10')) {
+                            module.style.display = 'flex';
+                        } else {
+                            module.style.display = 'none';
+                        }
+                    });
+                } else {
+                    // Show modules with matching difficulty
+                    modules.forEach(module => {
+                        const difficulty = module.getAttribute('data-difficulty');
+                        if (difficulty === level) {
+                            module.style.display = 'flex';
+                        } else {
+                            module.style.display = 'none';
+                        }
+                    });
+                }
+                
+                // Scroll to first visible module
+                const firstVisible = document.querySelector('.course-module[style="display: flex;"]');
+                if (firstVisible) {
+                    firstVisible.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Search functionality
+        const searchInput = document.getElementById('search-input');
+        
+        searchInput.addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase().trim();
+            
+            if (searchTerm === '') {
+                // Show all modules if search is empty
+                modules.forEach(module => {
+                    module.style.display = 'flex';
+                });
+                return;
+            }
+            
+            modules.forEach(module => {
+                const moduleTitle = module.querySelector('h1').textContent.toLowerCase();
+                const moduleContent = module.textContent.toLowerCase();
+                
+                if (moduleTitle.includes(searchTerm) || moduleContent.includes(searchTerm)) {
+                    module.style.display = 'flex';
+                } else {
+                    module.style.display = 'none';
+                }
+            });
+        });
+    });
+    
+    // Smooth scrolling for sidebar links
+    document.querySelectorAll('.sidebar-item').forEach(item => {
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Remove active class from all items
+            document.querySelectorAll('.sidebar-item').forEach(i => {
+                i.classList.remove('active');
+            });
+            
+            // Add active class to clicked item
+            this.classList.add('active');
+            
+            // Close mobile menu if open
+            if (window.innerWidth <= 1024) {
+                document.querySelector('.nav-menu').classList.remove('active');
+                document.querySelector('.sidebar').classList.remove('active');
+                document.querySelector('.menu-toggle').innerHTML = '<i class="fas fa-bars"></i>';
+                document.body.classList.remove('menu-open');
+            }
+            
+            // Scroll to section
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 100,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+</script>
+        </div>
+    </div>
+</body>
+</html>

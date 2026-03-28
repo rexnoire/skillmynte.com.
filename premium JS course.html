@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skillmynte · JavaScript mastery</title>
+    <!-- Font Awesome 6 & highlight.js (VS2015 dark theme) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/vs2015.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <link rel="stylesheet" href="premium js course.css">
+     <link rel="shortcut icon" type="image/x-icon" href="rounded_logo.png">
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+    <!-- SIDEBAR (levels + modules) -->
+    <aside class="sidebar" id="sidebar">
+        <div class="logo-area">
+            <div class="logo-icon">S</div>
+            <div class="logo-text">Skillmynte</div>
+        </div>
+        <div class="course-badge">
+            <i class="fas fa-bolt" style="color: var(--primary);"></i> JavaScript · complete
+        </div>
+
+        <div class="levels" id="levelList"></div>
+
+        <div class="progress-section">
+            <div class="progress-label">
+                <span>Course progress</span>
+                <span id="progressPercent">0%</span>
+            </div>
+            <div class="progress-track">
+                <div class="progress-fill" id="progressFill" style="width: 0%;"></div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- MAIN CONTENT (lesson containers) -->
+    <main class="main" id="main">
+        <!-- Breadcrumb / current location -->
+        <div class="lesson-header">
+            <div class="lesson-breadcrumb" id="breadcrumb">
+                <span id="currentLevelName">Level 1</span> / <span id="currentModuleName">Introduction</span>
+            </div>
+        </div>
+
+        <!-- ALL LESSON CONTAINERS (will be injected via JS) -->
+        <div id="lessonContainers"></div>
+
+        <!-- Navigation Buttons -->
+        <div class="nav-buttons">
+            <button class="nav-btn" id="prevBtn" disabled><i class="fas fa-arrow-left"></i> Previous</button>
+            <button class="nav-btn next-btn" id="nextBtn">Next <i class="fas fa-arrow-right"></i></button>
+        </div>
+    </main>
+
+    <!-- Floating UI buttons (no functionality) -->
+    <div class="floating-actions">
+        <button class="float-btn float-ai" id="askAi"><i class="fas fa-robot"></i></button>
+        <button class="float-btn float-editor" id="codeEditor"><i class="fas fa-code"></i></button>
+    </div>
+
+    <script>
+        // ==================== COURSE DATA ====================
+        // 4 levels, 17 lessons total – now fully populated
+        const course = [
+            { 
+                level: 1, name: 'JavaScript Basics', icon: 'fa-seedling',
+                lessons: [
+                    { title: 'Introduction to JavaScript', 
+                      desc: 'What is JavaScript and why it rules the web.',
+                      content: `
+                        <div class="content-card">
+                            <h2 class="card-title"><i class="fas fa-globe"></i> What is JavaScript?</h2>
+                            <div class="explanation">
+                                <p>JavaScript is a high-level, interpreted programming language that makes web pages interactive. Together with HTML and CSS, it forms the foundation of the web.</p>
+                                <div class="analogy">
+                                    <i class="fas fa-lightbulb" style="color: var(--primary);"></i> 
+                                    <strong>Analogy:</strong> HTML is the skeleton, CSS is the skin and clothes, JavaScript is the muscles and brain — it makes things move and react.
+                                </div>
+                            </div>
+                            <div class="code-block">
+                                <div class="code-header"><span><i class="fab fa-js"></i> first.js</span><button class="copy-btn"><i class="far fa-copy"></i> Copy</button></div>
+                                <div class="code-body"><pre><code class="language-javascript">// Your first JavaScript code
+console.log("Hello, Skillmynte!");
+let answer = 42;
+console.log("The answer is", answer);</code></pre></div>
+                            </div>
+                            <div class="quiz-box">
+                                <div class="quiz-question"><div class="q-text">1. What is the primary role of JavaScript?</div><div class="options"><div class="option-item">A) Styling web pages</div><div class="option-item">B) Adding interactivity</div><div class="option-item">C) Structuring content</div><div class="option-item">D) Database queries</div></div></div>
+                                <div class="quiz-question"><div class="q-text">2. Which tag is used to write JavaScript in HTML?</div><div class="options"><div class="option-item">A) &lt;js&gt;</div><div class="option-item">B) &lt;javascript&gt;</div><div class="option-item">C) &lt;script&gt;</div><div class="option-item">D) &lt;code&gt;</div></div></div>
+                                <div class="quiz-question"><div class="q-text">3. What will console.log(5 + 3) output?</div><div class="options"><div class="option-item">A) 53</div><div class="option-item">B) 8</div><div class="option-item">C) undefined</div><div class="option-item">D) error</div></div></div>
+                                <div class="answer-reveal"><strong>✓ Answers:</strong> 1-B, 2-C, 3-B. JavaScript adds behavior; &lt;script&gt; tag embeds it; 5+3 = 8.</div>
+                            </div>
+                        </div>
+                    ` },
+                    { title: 'Variables', 
+                      desc: 'Storing data with let, const, and var.',
+                      content: `
+                        <div class="content-card">
+                            <h2 class="card-title"><i class="fas fa-box"></i> Variables = labeled boxes</h2>
+                            <div class="explanation">
+                                <p><code>let</code> – value can change. <code>const</code> – cannot be reassigned. <code>var</code> – old way, avoid.</p>
+                                <div class="analogy">🎁 Like gift boxes: <code>let</code> you can swap the gift, <code>const</code> the box is sealed.</div>
+                            </div>
+                            <div class="code-block">
+                                <div class="code-header"><span><i class="fab fa-js"></i> variables.js</span><button class="copy-btn"><i class="far fa-copy"></i> Copy</button></div>
+                                <div class="code-body"><pre><code class="language-javascript">let score = 10;
+score = 20;        // allowed
+
+const PI = 3.14;
+// PI = 3.2;       // error
+
+var old = "don't use"; // function-scoped, hoisted</code></pre></div>
+                            </div>
+                            <div class="quiz-box">
+                                <div class="quiz-question"><div class="q-text">1. Which keyword declares a constant?</div><div class="options"><div class="option-item">A) let</div><div class="option-item">B) const</div><div class="option-item">C) var</div><div class="option-item">D) constant</div></div></div>
+                                <div class="quiz-question"><div class="q-text">2. Can you reassign a variable declared with <code>let</code>?</div><div class="options"><div class="option-item">A) Yes</div><div class="option-item">B) No</div></div></div>
+                                <div class="answer-reveal"><strong>✓ Answers:</strong> 1-B, 2-A. const = constant; let allows reassignment.</div>
+                            </div>
+                        </div>
+                    ` },
+                    { title: 'Data Types', 
+                      desc: 'Primitives, objects, and type coercion.',
+                      content: `<div class="content-card"><h2 class="card-title"><i class="fas fa-database"></i> Data types</h2><div class="explanation"><p>Primitives: string, number, boolean, null, undefined, symbol, bigint. Everything else is object.</p><div class="analogy">🍎🍊 types: like different fruit — each behaves a bit differently.</div></div><div class="code-block"><div class="code-header"><span>types.js</span><button class="copy-btn"><i class="far fa-copy"></i> Copy</button></div><div class="code-body"><pre><code class="language-javascript">let name = "Sam";        // string
+let age = 25;            // number
+let isActive = true;     // boolean
+let nothing = null;      // object (typeof bug)
+let undef;               // undefined</code></pre></div></div><div class="quiz-box"><div class="quiz-question"><div class="q-text">1. typeof null returns?</div><div class="options"><div class="option-item">A) null</div><div class="option-item">B) undefined</div><div class="option-item">C) object</div><div class="option-item">D) number</div></div></div><div class="quiz-question"><div class="q-text">2. Which is NOT a primitive?</div><div class="options"><div class="option-item">A) boolean</div><div class="option-item">B) array</div><div class="option-item">C) number</div><div class="option-item">D) string</div></div></div><div class="answer-reveal"><strong>✓ Answers:</strong> 1-C (historical bug), 2-B (array is object).</div></div></div>` },
+                    { title: 'Operators', 
+                      desc: 'Arithmetic, comparison, logical.',
+                      content: `<div class="content-card"><h2 class="card-title"><i class="fas fa-calculator"></i> Operators</h2><div class="explanation"><p>+, -, *, /, %, ===, &&, ||, etc.</p></div><div class="code-block"><div class="code-header"><span>ops.js</span><button class="copy-btn"><i class="far fa-copy"></i> Copy</button></div><div class="code-body"><pre><code class="language-javascript">console.log(10 % 3);      // 1 (remainder)
+console.log(5 === '5');    // false (strict)
+console.log(true && false);// false</code></pre></div></div><div class="quiz-box"><div class="quiz-question"><div class="q-text">1. 7 % 2 = ?</div><div class="options"><div class="option-item">A) 3.5</div><div class="option-item">B) 1</div><div class="option-item">C) 0</div></div></div><div class="answer-reveal"><strong>✓ 1-B</strong> (remainder 1).</div></div></div>` },
+                    { title: 'Input and Output', 
+                      desc: 'console.log, alert, prompt.',
+                      content: `<div class="content-card"><h2 class="card-title"><i class="fas fa-keyboard"></i> I/O</h2><div class="explanation"><p>console.log for devs; alert/prompt for user interaction (old school).</p></div><div class="code-block"><div class="code-header"><span>io.js</span><button class="copy-btn"><i class="far fa-copy"></i> Copy</button></div><div class="code-body"><pre><code class="language-javascript">alert("Welcome!");
+let name = prompt("Your name?");
+console.log("Hello", name);</code></pre></div></div><div class="quiz-box"><div class="quiz-question"><div class="q-text">1. What does prompt() return if user clicks Cancel?</div><div class="options"><div class="option-item">A) ""</div><div class="option-item">B) null</div><div class="option-item">C) false</div></div></div><div class="answer-reveal"><strong>✓ 1-B</strong> (null).</div></div></div>` }
+                ]
+            },
+            { 
+                level: 2, name: 'JavaScript Control Flow', icon: 'fa-code-branch',
+                lessons: [
+                    { title: 'Conditional Statements', 
+                      desc: 'if, else if, switch, ternary.',
+                      content: `
+                        <div class="content-card">
+                            <h2 class="card-title"><i class="fas fa-code-branch"></i> Making decisions</h2>
+                            <div class="explanation">
+                                <p>Conditionals let your code choose different paths. Use <code>if</code>, <code>else if</code>, <code>else</code>, <code>switch</code>, or the ternary operator <code>? :</code>.</p>
+                                <div class="analogy">🚦 Like traffic lights: if green, go; else if yellow, slow; else stop.</div>
+                            </div>
+                            <div class="code-block">
+                                <div class="code-header"><span>condition.js</span><button class="copy-btn"><i class="far fa-copy"></i> Copy</button></div>
+                                <div class="code-body"><pre><code class="language-javascript">let age = 18;
+if (age >= 18) {
+    console.log("Adult");
+} else {
+    console.log("Minor");
+}
+
+// Ternary
+let status = age >= 18 ? "Adult" : "Minor";
+
+// Switch
+let day = 3;
+switch(day) {
+    case 1: console.log("Monday"); break;
+    case 2: console.log("Tuesday"); break;
+    default: console.log("Other day");
+}</code></pre></div>
+                            </div>
+                            <div class="quiz-box">
+                                <div class="quiz-question"><div class="q-text">1. What will <code>if (0) { console.log("truthy"); }</code> print?</div><div class="options"><div class="option-item">A) "truthy"</div><div class="option-item">B) nothing</div><div class="option-item">C) error</div></div></div>
+                                <div class="quiz-question"><div class="q-text">2. Ternary operator syntax is:</div><div class="options"><div class="option-item">A) condition ? ifTrue : ifFalse</div><div class="option-item">B) if condition then true else false</div><div class="option-item">C) condition ? then : else</div></div></div>
+                                <div class="answer-reveal"><strong>✓ Answers:</strong> 1-B (0 is falsy), 2-A.</div>
+                            </div>
+                        </div>
+                    ` },
+                    { title: 'Loops', 
+                      desc: 'for, while, do-while.',
+                      content: `
+                        <div class="content-card">
+                            <h2 class="card-title"><i class="fas fa-redo-alt"></i> Repeating actions</h2>
+                            <div class="explanation">
+                                <p><code>for</code> – when you know how many times. <code>while</code> – repeat while condition true. <code>do...while</code> – always runs at least once.</p>
+                                <div class="analogy">🔄 Like a playlist: for each song, play it; while you're dancing, continue.</div>
+                            </div>
+                            <div class="code-block">
+                                <div class="code-header"><span>loops.js</span><button class="copy-btn"><i class="far fa-copy"></i> Copy</button></div>
+                                <div class="code-body"><pre><code class="language-javascript">// for loop
+for (let i = 0; i < 5; i++) {
+    console.log("Count:", i);
+}
+
+// while loop
+let j = 0;
+while (j < 5) {
+    console.log(j);
+    j++;
+}
+
+// do...while
+let k = 0;
+do {
+    console.log("Runs at least once");
+    k++;
+} while (k < 3);</code></pre></div>
+                            </div>
+                            <div class="quiz-box">
+                                <div class="quiz-question"><div class="q-text">1. How many times does <code>for (let i=0; i<=3; i++)</code> run?</div><div class="options"><div class="option-item">A) 3</div><div class="option-item">B) 4</div><div class="option-item">C) 2</div></div></div>
+                                <div class="quiz-question"><div class="q-text">2. Which loop guarantees at least one execution?</div><div class="options"><div class="option-item">A) for</div><div class="option-item">B) while</div><div class="option-item">C) do...while</div></div></div>
+                                <div class="answer-reveal"><strong>✓ Answers:</strong> 1-B (0,1,2,3 → 4 times), 2-C.</div>
+                            </div>
+                        </div>
+                    ` },
+                    { title: 'Functions', 
+                      desc: 'Declaration, expression, arrow.',
+                      content: `
+                        <div class="content-card">
+                            <h2 class="card-title"><i class="fas fa-cube"></i> Reusable blocks</h2>
+                            <div class="explanation">
+                                <p>Functions encapsulate logic. Three common forms: function declaration, function expression, and arrow functions.</p>
+                                <div class="analogy">🍕 Like a recipe: you write it once, use it many times with different ingredients (parameters).</div>
+                            </div>
+                            <div class="code-block">
+                                <div class="code-header"><span>functions.js</span><button class="copy-btn"><i class="far fa-copy"></i> Copy</button></div>
+                                <div class="code-body"><pre><code class="language-javascript">// declaration (hoisted)
+function add(a, b) {
+    return a + b;
+}
+
+// expression (not hoisted)
+const multiply = function(a, b) {
+    return a * b;
+};
+
+// arrow (compact)
+const square = x => x * x;
+
+console.log(add(2,3), multiply(4,5), square(6));</code></pre></div>
+                            </div>
+                            <div class="quiz-box">
+                                <div class="quiz-question"><div class="q-text">1. Which function form is NOT hoisted?</div><div class="options"><div class="option-item">A) function declaration</div><div class="option-item">B) function expression</div><div class="option-item">C) both are hoisted</div></div></div>
+                                <div class="quiz-question"><div class="q-text">2. Arrow functions always return the expression if written without <code>{}</code>?</div><div class="options"><div class="option-item">A) Yes</div><div class="option-item">B) No</div></div></div>
+                                <div class="answer-reveal"><strong>✓ Answers:</strong> 1-B, 2-A (implicit return).</div>
+                            </div>
+                        </div>
+                    ` },
+                    { title: 'Scope', 
+                      desc: 'Global, function, block.',
+                      content: `
+                        <div class="content-card">
+                            <h2 class="card-title"><i class="fas fa-eye"></i> Where variables live</h2>
+                            <div class="explanation">
+                                <p><strong>Global</strong> – accessible everywhere. <strong>Function</strong> – inside a function (var). <strong>Block</strong> – inside {} with let/const.</p>
+                                <div class="analogy">🏠 Rooms in a house: global is the living room, function is a bedroom, block is a closet inside the bedroom.</div>
+                            </div>
+                            <div class="code-block">
+                                <div class="code-header"><span>scope.js</span><button class="copy-btn"><i class="far fa-copy"></i> Copy</button></div>
+                                <div class="code-body"><pre><code class="language-javascript">let globalVar = "I'm everywhere";
+
+function test() {
+    var functionScoped = "only in function";
+    if (true) {
+        let blockScoped = "only in this block";
+        console.log(globalVar); // works
+    }
+    // console.log(blockScoped); // error
+}
+test();
+// console.log(functionScoped); // error</code></pre></div>
+                            </div>
+                            <div class="quiz-box">
+                                <div class="quiz-question"><div class="q-text">1. A variable declared with <code>let</code> inside an <code>if</code> block is accessible outside?</div><div class="options"><div class="option-item">A) Yes</div><div class="option-item">B) No</div></div></div>
+                                <div class="quiz-question"><div class="q-text">2. var is function-scoped or block-scoped?</div><div class="options"><div class="option-item">A) function-scoped</div><div class="option-item">B) block-scoped</div></div></div>
+                                <div class="answer-reveal"><strong>✓ Answers:</strong> 1-B (block scope), 2-A (var ignores blocks inside functions).</div>
+                            </div>
+                        </div>
+                    ` }
+                ]
+            },
+            { 
+                level: 3, name: 'JavaScript Data Structures', icon: 'fa-layer-group',
+                lessons: [
+                    { title: 'Arrays', 
+                      desc: 'Store ordered lists.',
+                      content: `
+                        <div class="content-card">
+                            <h2 class="card-title"><i class="fas fa-list"></i> Arrays: ordered collections</h2>
+                            <div class="explanation">
+                                <p>Arrays hold multiple values in a single variable. Index starts at 0. Useful methods: <code>push</code>, <code>pop</code>, <code>shift</code>, <code>unshift</code>, <code>length</code>, <code>indexOf</code>.</p>
+                                <div class="analogy">📋 A numbered to-do list: item 0, item 1, ...</div>
+                            </div>
+                            <div class="code-block">
+                                <div class="code-header"><span>arrays.js</span><button class="copy-btn"><i class="far fa-copy"></i> Copy</button></div>
+                                <div class="code-body"><pre><code class="language-javascript">let fruits = ["apple", "banana", "cherry"];
+console.log(fruits[1]); // banana
+fruits.push("date");    // add to end
+fruits.pop();           // remove last
+fruits.unshift("apricot"); // add to start
+console.log(fruits.length); // 4
+console.log(fruits.indexOf("banana")); // 2 (after unshift)</code></pre></div>
+                            </div>
+                            <div class="quiz-box">
+                                <div class="quiz-question"><div class="q-text">1. What is the index of the first element in an array?</div><div class="options"><div class="option-item">A) 1</div><div class="option-item">B) 0</div><div class="option-item">C) -1</div></div></div>
+                                <div class="quiz-question"><div class="q-text">2. Which method adds an element to the end?</div><div class="options"><div class="option-item">A) push()</div><div class="option-item">B) pop()</div><div class="option-item">C) shift()</div></div></div>
+                                <div class="answer-reveal"><strong>✓ Answers:</strong> 1-B, 2-A.</div>
+                            </div>
+                        </div>
+                    ` },
+                    { title: 'Objects', 
+                      desc: 'Key-value pairs.',
+                      content: `
+                        <div class="content-card">
+                            <h2 class="card-title"><i class="fas fa-cube"></i> Objects: properties and methods</h2>
+                            <div class="explanation">
+                                <p>Objects store keyed collections. Keys are strings (or Symbols), values can be anything. Access with dot or bracket notation.</p>
+                                <div class="analogy">📇 A contact card: name, phone, email as properties.</div>
+                            </div>
+                            <div class="code-block">
+                                <div class="code-header"><span>objects.js</span><button class="copy-btn"><i class="far fa-copy"></i> Copy</button></div>
+                                <div class="code-body"><pre><code class="language-javascript">let person = {
+    name: "Alice",
+    age: 30,
+    greet() {
+        console.log("Hello, I'm " + this.name);
+    }
+};
+console.log(person.name);      // Alice
+person["age"] = 31;            // bracket notation
+person.greet();                // Hello, I'm Alice</code></pre></div>
+                            </div>
+                            <div class="quiz-box">
+                                <div class="quiz-question"><div class="q-text">1. How do you access property <code>color</code> of object <code>car</code>?</div><div class="options"><div class="option-item">A) car.color</div><div class="option-item">B) car[color]</div><div class="option-item">C) car->color</div></div></div>
+                                <div class="quiz-question"><div class="q-text">2. In a method, what does <code>this</code> refer to?</div><div class="options"><div class="option-item">A) the function itself</div><div class="option-item">B) the object that owns the method</div><div class="option-item">C) the global window</div></div></div>
+                                <div class="answer-reveal"><strong>✓ Answers:</strong> 1-A (dot notation), 2-B (unless arrow function).</div>
+                            </div>
+                        </div>
+                    ` },
+                    { title: 'Array Methods', 
+                      desc: 'map, filter, reduce.',
+                      content: `
+                        <div class="content-card">
+                            <h2 class="card-title"><i class="fas fa-filter"></i> Transforming arrays</h2>
+                            <div class="explanation">
+                                <p><code>map</code> – create a new array by applying a function to each element.<br>
+                                <code>filter</code> – keep elements that pass a test.<br>
+                                <code>reduce</code> – accumulate values into a single result.</p>
+                                <div class="analogy">🏭 map = assembly line, filter = quality check, reduce = combine into summary.</div>
+                            </div>
+                            <div class="code-block">
+                                <div class="code-header"><span>array-methods.js</span><button class="copy-btn"><i class="far fa-copy"></i> Copy</button></div>
+                                <div class="code-body"><pre><code class="language-javascript">let nums = [1, 2, 3, 4];
+
+let doubled = nums.map(n => n * 2);      // [2,4,6,8]
+let evens = nums.filter(n => n % 2 === 0); // [2,4]
+let sum = nums.reduce((acc, n) => acc + n, 0); // 10
+
+console.log(doubled, evens, sum);</code></pre></div>
+                            </div>
+                            <div class="quiz-box">
+                                <div class="quiz-question"><div class="q-text">1. What does <code>[1,2,3].map(x => x*3)</code> return?</div><div class="options"><div class="option-item">A) [3,6,9]</div><div class="option-item">B) [1,2,3]</div><div class="option-item">C) [3,3,3]</div></div></div>
+                                <div class="quiz-question"><div class="q-text">2. Which method returns a new array with only elements that satisfy a condition?</div><div class="options"><div class="option-item">A) map</div><div class="option-item">B) filter</div><div class="option-item">C) reduce</div></div></div>
+                                <div class="answer-reveal"><strong>✓ Answers:</strong> 1-A, 2-B.</div>
+                            </div>
+                        </div>
+                    ` },
+                    { title: 'Object Methods', 
+                      desc: 'keys, values, entries.',
+                      content: `
+                        <div class="content-card">
+                            <h2 class="card-title"><i class="fas fa-key"></i> Working with object keys/values</h2>
+                            <div class="explanation">
+                                <p><code>Object.keys(obj)</code> – array of keys.<br>
+                                <code>Object.values(obj)</code> – array of values.<br>
+                                <code>Object.entries(obj)</code> – array of [key, value] pairs.</p>
+                                <div class="analogy">🔍 Like taking inventory: list all labels (keys), all items (values), or both together.</div>
+                            </div>
+                            <div class="code-block">
+                                <div class="code-header"><span>object-methods.js</span><button class="copy-btn"><i class="far fa-copy"></i> Copy</button></div>
+                                <div class="code-body"><pre><code class="language-javascript">let user = { name: "Bob", age: 25, city: "NYC" };
+console.log(Object.keys(user));   // ["name","age","city"]
+console.log(Object.values(user)); // ["Bob",25,"NYC"]
+console.log(Object.entries(user)); // [["name","Bob"],["age",25],["city","NYC"]]
+
+// Loop through entries
+for (let [key, val] of Object.entries(user)) {
+    console.log(key + ": " + val);
+}</code></pre></div>
+                            </div>
+                            <div class="quiz-box">
+                                <div class="quiz-question"><div class="q-text">1. What does <code>Object.keys({a:1, b:2})</code> return?</div><div class="options"><div class="option-item">A) [1,2]</div><div class="option-item">B) ["a","b"]</div><div class="option-item">C) [["a",1],["b",2]]</div></div></div>
+                                <div class="quiz-question"><div class="q-text">2. Which method returns an array of arrays with key-value pairs?</div><div class="options"><div class="option-item">A) Object.values</div><div class="option-item">B) Object.keys</div><div class="option-item">C) Object.entries</div></div></div>
+                                <div class="answer-reveal"><strong>✓ Answers:</strong> 1-B, 2-C.</div>
+                            </div>
+                        </div>
+                    ` }
+                ]
+            },
+            { 
+                level: 4, name: 'Advanced JavaScript', icon: 'fa-rocket',
+                lessons: [
+                    { title: 'DOM Manipulation', 
+                      desc: 'Select & modify elements.',
+                      content: `
+                        <div class="content-card">
+                            <h2 class="card-title"><i class="fas fa-paint-brush"></i> Changing the page</h2>
+                            <div class="explanation">
+                                <p>The Document Object Model (DOM) represents HTML as a tree. Use JavaScript to select elements and change their content, attributes, or styles.</p>
+                                <div class="analogy">🌲 The DOM is a living tree – you can prune, graft, or decorate branches.</div>
+                            </div>
+                            <div class="code-block">
+                                <div class="code-header"><span>dom.js</span><button class="copy-btn"><i class="far fa-copy"></i> Copy</button></div>
+                                <div class="code-body"><pre><code class="language-javascript">// Select an element
+let heading = document.querySelector('h1');
+heading.textContent = "New Title";
+heading.style.color = "var(--primary)";
+
+// Create and append
+let newP = document.createElement('p');
+newP.innerText = "I was added by JS!";
+document.body.appendChild(newP);
+
+// Change attribute
+let img = document.querySelector('img');
+img.setAttribute('src', 'new-image.jpg');</code></pre></div>
+                            </div>
+                            <div class="quiz-box">
+                                <div class="quiz-question"><div class="q-text">1. Which method selects the first element matching a CSS selector?</div><div class="options"><div class="option-item">A) getElementById</div><div class="option-item">B) querySelector</div><div class="option-item">C) querySelectorAll</div></div></div>
+                                <div class="quiz-question"><div class="q-text">2. How do you change the text inside an element?</div><div class="options"><div class="option-item">A) element.innerHTML = ...</div><div class="option-item">B) element.textContent = ...</div><div class="option-item">C) both can work</div></div></div>
+                                <div class="answer-reveal"><strong>✓ Answers:</strong> 1-B, 2-C (textContent is safer for text).</div>
+                            </div>
+                        </div>
+                    ` },
+                    { title: 'Events', 
+                      desc: 'Click, input, submit.',
+                      content: `
+                        <div class="content-card">
+                            <h2 class="card-title"><i class="fas fa-bolt"></i> Reacting to users</h2>
+                            <div class="explanation">
+                                <p>Events let you run code when something happens: click, keypress, form submit, etc. Use <code>addEventListener</code> to listen.</p>
+                                <div class="analogy">🎤 Like a concert: when the singer raises a hand (event), the crowd cheers (callback).</div>
+                            </div>
+                            <div class="code-block">
+                                <div class="code-header"><span>events.js</span><button class="copy-btn"><i class="far fa-copy"></i> Copy</button></div>
+                                <div class="code-body"><pre><code class="language-javascript">let btn = document.querySelector('#myButton');
+btn.addEventListener('click', function(event) {
+    console.log('Button clicked!', event);
+});
+
+let input = document.querySelector('input');
+input.addEventListener('input', (e) => {
+    console.log('Current value:', e.target.value);
+});
+
+// Prevent form submission
+document.querySelector('form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    console.log('Form submitted (but blocked)');
+});</code></pre></div>
+                            </div>
+                            <div class="quiz-box">
+                                <div class="quiz-question"><div class="q-text">1. Which method attaches an event handler?</div><div class="options"><div class="option-item">A) onEvent</div><div class="option-item">B) addEventListener</div><div class="option-item">C) attachEvent</div></div></div>
+                                <div class="quiz-question"><div class="q-text">2. To stop a form from actually submitting, you call:</div><div class="options"><div class="option-item">A) e.stopPropagation()</div><div class="option-item">B) e.preventDefault()</div><div class="option-item">C) return false</div></div></div>
+                                <div class="answer-reveal"><strong>✓ Answers:</strong> 1-B, 2-B (preventDefault).</div>
+                            </div>
+                        </div>
+                    ` },
+                    { title: 'Async JavaScript', 
+                      desc: 'Callbacks, promises, async/await.',
+                      content: `
+                        <div class="content-card">
+                            <h2 class="card-title"><i class="fas fa-clock"></i> Handling time & requests</h2>
+                            <div class="explanation">
+                                <p>JavaScript is single‑threaded but can handle async operations via the event loop. Patterns: callbacks, Promises, and async/await (syntactic sugar).</p>
+                                <div class="analogy">☕ Ordering coffee: you give your order (callback) and continue reading, then the barista calls you when ready.</div>
+                            </div>
+                            <div class="code-block">
+                                <div class="code-header"><span>async.js</span><button class="copy-btn"><i class="far fa-copy"></i> Copy</button></div>
+                                <div class="code-body"><pre><code class="language-javascript">// Callback
+setTimeout(() => {
+    console.log("2 seconds later");
+}, 2000);
+
+// Promise
+fetch('https://api.example.com/data')
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(err => console.error(err));
+
+// Async/await
+async function loadData() {
+    try {
+        let response = await fetch('url');
+        let data = await response.json();
+        console.log(data);
+    } catch (err) {
+        console.log(err);
+    }
+}</code></pre></div>
+                            </div>
+                            <div class="quiz-box">
+                                <div class="quiz-question"><div class="q-text">1. What does <code>await</code> do?</div><div class="options"><div class="option-item">A) pauses the function until a Promise settles</div><div class="option-item">B) makes the code run faster</div><div class="option-item">C) converts sync to async</div></div></div>
+                                <div class="quiz-question"><div class="q-text">2. Which is NOT a way to handle asynchronous code?</div><div class="options"><div class="option-item">A) callbacks</div><div class="option-item">B) promises</div><div class="option-item">C) loops</div></div></div>
+                                <div class="answer-reveal"><strong>✓ Answers:</strong> 1-A, 2-C (loops are synchronous).</div>
+                            </div>
+                        </div>
+                    ` },
+                    { title: 'Final JavaScript Project', 
+                      desc: 'Build a mini app.',
+                      content: `
+                        <div class="content-card">
+                            <h2 class="card-title"><i class="fas fa-rocket"></i> Todo list – bring it together</h2>
+                            <div class="explanation">
+                                <p>Combine everything: variables, functions, arrays, objects, DOM, events, and maybe async (save to localStorage).</p>
+                                <div class="analogy">🏗️ Building with all the bricks you've collected.</div>
+                            </div>
+                            <div class="code-block">
+                                <div class="code-header"><span>todo.js</span><button class="copy-btn"><i class="far fa-copy"></i> Copy</button></div>
+                                <div class="code-body"><pre><code class="language-javascript">// Simple todo list (conceptual)
+let todos = [];
+
+function addTodo(task) {
+    todos.push({ text: task, done: false });
+    render();
+}
+
+function render() {
+    let list = document.getElementById('todo-list');
+    list.innerHTML = '';
+    todos.forEach((todo, index) => {
+        let li = document.createElement('li');
+        li.textContent = todo.text;
+        if (todo.done) li.style.textDecoration = 'line-through';
+        li.addEventListener('click', () => toggleDone(index));
+        list.appendChild(li);
+    });
+}
+
+function toggleDone(index) {
+    todos[index].done = !todos[index].done;
+    render();
+}
+
+// Example: addTodo("Learn JavaScript");</code></pre></div>
+                            </div>
+                            <div class="quiz-box">
+                                <div class="quiz-question"><div class="q-text">1. In the todo example, what does <code>render()</code> do?</div><div class="options"><div class="option-item">A) adds a new todo</div><div class="option-item">B) updates the UI based on the todos array</div><div class="option-item">C) saves to localStorage</div></div></div>
+                                <div class="quiz-question"><div class="q-text">2. Which concept is NOT used in this mini app?</div><div class="options"><div class="option-item">A) arrays</div><div class="option-item">B) arrow functions</div><div class="option-item">C) async/await</div></div></div>
+                                <div class="answer-reveal"><strong>✓ Answers:</strong> 1-B, 2-C (the example is synchronous). But you could extend it with async storage.</div>
+                            </div>
+                        </div>
+                    ` }
+                ]
+            }
+        ];
+
+        // ========== GLOBAL STATE ==========
+        let currentLevel = 0;
+        let currentLesson = 0;   // index inside level
+
+        // flatten lessons for easy prev/next
+        function getFlatIndex() {
+            let flat = 0;
+            for (let l = 0; l < currentLevel; l++) flat += course[l].lessons.length;
+            return flat + currentLesson;
+        }
+        function totalLessons() {
+            return course.reduce((acc, lvl) => acc + lvl.lessons.length, 0);
+        }
+
+        // ========== RENDER SIDEBAR ==========
+        function renderSidebar() {
+            const container = document.getElementById('levelList');
+            container.innerHTML = '';
+            course.forEach((lvl, lIdx) => {
+                const levelDiv = document.createElement('div');
+                levelDiv.className = `level-card ${lIdx === currentLevel ? 'active-level' : ''}`;
+                levelDiv.innerHTML = `
+                    <div class="level-header">
+                        <i class="fas ${lvl.icon}"></i>
+                        <span class="level-title">Level ${lIdx+1}: ${lvl.name}</span>
+                    </div>
+                    <ul class="module-list" id="level-${lIdx}">
+                        ${lvl.lessons.map((les, mIdx) => `
+                            <li class="module-item ${lIdx === currentLevel && mIdx === currentLesson ? 'active-module' : ''}" data-level="${lIdx}" data-lesson="${mIdx}">
+                                <span class="module-badge">${mIdx+1}</span> ${les.title}
+                            </li>
+                        `).join('')}
+                    </ul>
+                `;
+                container.appendChild(levelDiv);
+            });
+
+            // attach listeners to module items
+            document.querySelectorAll('.module-item').forEach(item => {
+                item.addEventListener('click', (e) => {
+                    const l = parseInt(item.dataset.level);
+                    const les = parseInt(item.dataset.lesson);
+                    goToLesson(l, les);
+                });
+            });
+        }
+
+        // ========== RENDER LESSON CONTAINERS ==========
+        function renderLessons() {
+            const holder = document.getElementById('lessonContainers');
+            holder.innerHTML = '';
+            course.forEach((lvl, lIdx) => {
+                lvl.lessons.forEach((les, mIdx) => {
+                    const div = document.createElement('div');
+                    div.className = `lesson-container ${lIdx === currentLevel && mIdx === currentLesson ? 'active-lesson' : ''}`;
+                    div.id = `lesson-${lIdx}-${mIdx}`;
+                    div.innerHTML = `
+                        <h1 class="lesson-title">${les.title}</h1>
+                        <p style="color: var(--gray); margin-bottom: 20px;">${les.desc}</p>
+                        ${les.content}
+                    `;
+                    holder.appendChild(div);
+                });
+            });
+        }
+
+        // ========== UPDATE UI (active classes, breadcrumb, buttons, progress) ==========
+        function updateUI() {
+            // sidebar active classes
+            document.querySelectorAll('.level-card').forEach((el, idx) => {
+                if (idx === currentLevel) el.classList.add('active-level');
+                else el.classList.remove('active-level');
+            });
+            document.querySelectorAll('.module-item').forEach(el => {
+                el.classList.remove('active-module');
+            });
+            const activeModule = document.querySelector(`.module-item[data-level="${currentLevel}"][data-lesson="${currentLesson}"]`);
+            if (activeModule) activeModule.classList.add('active-module');
+
+            // lesson containers visibility
+            document.querySelectorAll('.lesson-container').forEach((el, idx) => {
+                const [l, les] = el.id.replace('lesson-','').split('-').map(Number);
+                if (l === currentLevel && les === currentLesson) {
+                    el.classList.add('active-lesson');
+                } else {
+                    el.classList.remove('active-lesson');
+                }
+            });
+
+            // breadcrumb
+            document.getElementById('currentLevelName').innerText = `Level ${currentLevel+1}: ${course[currentLevel].name}`;
+            document.getElementById('currentModuleName').innerText = course[currentLevel].lessons[currentLesson].title;
+
+            // prev/next buttons
+            const flat = getFlatIndex();
+            const total = totalLessons();
+            document.getElementById('prevBtn').disabled = (flat === 0);
+            document.getElementById('nextBtn').disabled = (flat === total-1);
+
+            // progress
+            const percent = Math.round(((flat+1)/total)*100);
+            document.getElementById('progressPercent').innerText = percent+'%';
+            document.getElementById('progressFill').style.width = percent+'%';
+        }
+
+        function goToLesson(levelIdx, lessonIdx) {
+            if (levelIdx < 0 || levelIdx >= course.length) return;
+            if (lessonIdx < 0 || lessonIdx >= course[levelIdx].lessons.length) return;
+            currentLevel = levelIdx;
+            currentLesson = lessonIdx;
+            updateUI();
+            window.scrollTo(0,0);
+        }
+
+        function nextLesson() {
+            const flat = getFlatIndex();
+            const total = totalLessons();
+            if (flat < total-1) {
+                // find next
+                if (currentLesson + 1 < course[currentLevel].lessons.length) {
+                    goToLesson(currentLevel, currentLesson + 1);
+                } else {
+                    goToLesson(currentLevel + 1, 0);
+                }
+            }
+        }
+
+        function prevLesson() {
+            if (getFlatIndex() > 0) {
+                if (currentLesson > 0) {
+                    goToLesson(currentLevel, currentLesson - 1);
+                } else {
+                    goToLesson(currentLevel - 1, course[currentLevel-1].lessons.length - 1);
+                }
+            }
+        }
+
+        // ========== COPY BUTTON FUNCTIONALITY ==========
+        function setupCopyButtons() {
+            document.querySelectorAll('.copy-btn').forEach(btn => {
+                btn.removeEventListener('click', copyHandler);
+                btn.addEventListener('click', copyHandler);
+            });
+        }
+
+        function copyHandler(e) {
+            const btn = e.currentTarget;
+            const block = btn.closest('.code-block');
+            const codeElement = block.querySelector('code');
+            const text = codeElement.innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                const original = btn.innerHTML;
+                btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                setTimeout(() => { btn.innerHTML = original; }, 1500);
+            }).catch(() => {
+                alert('Failed to copy');
+            });
+        }
+
+        // ========== INIT ==========
+        window.addEventListener('DOMContentLoaded', () => {
+            renderSidebar();
+            renderLessons();
+            updateUI();
+            setupCopyButtons();
+
+            // listeners for nav buttons
+            document.getElementById('prevBtn').addEventListener('click', prevLesson);
+            document.getElementById('nextBtn').addEventListener('click', nextLesson);
+
+            // floating buttons (no functionality)
+            document.getElementById('askAi').addEventListener('click', () => alert('Ask Skillmynte AI — demo'));
+            document.getElementById('codeEditor').addEventListener('click', () => alert('Code Editor — demo'));
+
+            // re-attach copy after any navigation (since new containers might be added)
+            const observer = new MutationObserver(() => setupCopyButtons());
+            observer.observe(document.getElementById('lessonContainers'), { childList: true, subtree: true });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1895 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WordPress Fundamentals | SkillMynte</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="rounded_logo.png">
+    <link rel="stylesheet" href="free wordpress.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-code"></i>
+                SKILLMYNTE
+            </a>
+            <div class="nav-menu">
+                <a href="#" class="nav-link">Home</a>
+                <a href="#" class="nav-link">Courses</a>
+                <a href="#" class="nav-link">Practice</a>
+                <a href="#" class="nav-link">Projects</a>
+                
+                <div class="courses-dropdown">
+                    <button class="courses-btn">
+                        <i class="fas fa-book-open"></i> Jump to Module
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#module1" class="dropdown-item">
+                            <i class="fab fa-wordpress wordpress-icon"></i> WordPress Basics
+                        </a>
+                        <a href="#module2" class="dropdown-item">
+                            <i class="fab fa-wordpress wordpress-icon"></i> Creating Content
+                        </a>
+                        <a href="#module3" class="dropdown-item">
+                            <i class="fab fa-wordpress wordpress-icon"></i> Media Management
+                        </a>
+                        <a href="#module4" class="dropdown-item">
+                            <i class="fab fa-wordpress wordpress-icon"></i> Using Blocks
+                        </a>
+                        <a href="#module5" class="dropdown-item">
+                            <i class="fab fa-wordpress wordpress-icon"></i> Forms in WordPress
+                        </a>
+                        <a href="#module6" class="dropdown-item">
+                            <i class="fab fa-wordpress wordpress-icon"></i> WordPress Themes
+                        </a>
+                        <a href="#module7" class="dropdown-item">
+                            <i class="fab fa-wordpress wordpress-icon"></i> Media Handling
+                        </a>
+                        <a href="#module8" class="dropdown-item">
+                            <i class="fab fa-wordpress wordpress-icon"></i> WordPress Plugins
+                        </a>
+                        <a href="#module9" class="dropdown-item">
+                            <i class="fab fa-wordpress wordpress-icon"></i> Accessibility
+                        </a>
+                        <a href="#module10" class="dropdown-item">
+                            <i class="fab fa-wordpress wordpress-icon"></i> Advanced WordPress
+                        </a>
+                        <a href="#playground" class="dropdown-item">
+                            <i class="fas fa-laptop-code"></i> Practice Playground
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Premium Course Navigation -->
+    <div class="course-navigation">
+        <div class="course-nav-container">
+            <div class="course-category">
+                <button class="category-btn">
+                    <i class="fas fa-layer-group"></i> Categories
+                </button>
+                <div class="category-dropdown">
+                    <a href="#" class="category-item">
+                        <i class="fab fa-wordpress wordpress-icon"></i> WordPress Basics
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fas fa-paint-brush"></i> Themes
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fas fa-plug"></i> Plugins
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fas fa-database"></i> Custom Post Types
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fas fa-code"></i> PHP for WordPress
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fas fa-mobile-alt"></i> Responsive Design
+                    </a>
+                </div>
+            </div>
+            
+            <div class="course-levels">
+                <button class="level-btn active" data-level="all">All Levels</button>
+                <button class="level-btn" data-level="beginner">Beginner</button>
+                <button class="level-btn" data-level="intermediate">Intermediate</button>
+                <button class="level-btn" data-level="advanced">Advanced</button>
+            </div>
+            
+            <div class="course-search">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" class="search-input" id="search-input" placeholder="Search courses...">
+            </div>
+        </div>
+    </div>
+    
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <a href="#module1" class="sidebar-item active completed">
+            <i class="fab fa-wordpress wordpress-icon"></i>
+            <span>Module 1: WordPress Basics</span>
+            <span class="progress-indicator"><i class="fas fa-check"></i></span>
+        </a>
+        <a href="#module2" class="sidebar-item completed">
+            <i class="fab fa-wordpress wordpress-icon"></i>
+            <span>Module 2: Creating Content</span>
+            <span class="progress-indicator"><i class="fas fa-check"></i></span>
+        </a>
+        <a href="#module3" class="sidebar-item completed">
+            <i class="fab fa-wordpress wordpress-icon"></i>
+            <span>Module 3: Media Management</span>
+            <span class="progress-indicator"><i class="fas fa-check"></i></span>
+        </a>
+        <a href="#module4" class="sidebar-item">
+            <i class="fab fa-wordpress wordpress-icon"></i>
+            <span>Module 4: Using Blocks</span>
+            <span class="progress-indicator">4</span>
+        </a>
+        <a href="#module5" class="sidebar-item">
+            <i class="fab fa-wordpress wordpress-icon"></i>
+            <span>Module 5: Forms in WordPress</span>
+            <span class="progress-indicator">5</span>
+        </a>
+        <a href="#module6" class="sidebar-item">
+            <i class="fab fa-wordpress wordpress-icon"></i>
+            <span>Module 6: WordPress Themes</span>
+            <span class="progress-indicator">6</span>
+        </a>
+        <a href="#module7" class="sidebar-item">
+            <i class="fab fa-wordpress wordpress-icon"></i>
+            <span>Module 7: Media Handling</span>
+            <span class="progress-indicator">7</span>
+        </a>
+        <a href="#module8" class="sidebar-item">
+            <i class="fab fa-wordpress wordpress-icon"></i>
+            <span>Module 8: WordPress Plugins</span>
+            <span class="progress-indicator">8</span>
+        </a>
+        <a href="#module9" class="sidebar-item">
+            <i class="fab fa-wordpress wordpress-icon"></i>
+            <span>Module 9: Accessibility</span>
+            <span class="progress-indicator">9</span>
+        </a>
+        <a href="#module10" class="sidebar-item">
+            <i class="fab fa-wordpress wordpress-icon"></i>
+            <span>Module 10: Advanced WordPress</span>
+            <span class="progress-indicator">10</span>
+        </a>
+        <a href="#playground" class="sidebar-item">
+            <i class="fas fa-laptop-code"></i>
+            <span>Practice Playground</span>
+        </a>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="content-wrapper">
+        <div class="container">
+            <!-- Module 1: WordPress Basics -->
+            <div class="course-module" id="module1" data-aos="fade-up" data-difficulty="beginner">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>WORDPRESS BASICS</h1>
+                    <h3>Learn the fundamental concepts of WordPress</h3>
+                    <span class="difficulty">Beginner</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174881.png" class="module-icon" alt="WordPress Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 1: <span>Getting Started with WordPress</span></h1>
+                    <p>WordPress is the world's most popular content management system (CMS), powering over 40% of all websites. Unlike static HTML, WordPress allows you to create, manage, and update content dynamically through an intuitive dashboard. Think of WordPress as the engine that runs your website, separating content from design and making it easy for anyone to publish online.</p>
+                    
+                    <p>WordPress comes in two flavors: <strong>WordPress.com</strong> (hosted) and <strong>WordPress.org</strong> (self-hosted). This course focuses on the self-hosted version, which gives you complete control. A WordPress site consists of a database, core files, themes, and plugins. The dashboard is your control center where you create posts, pages, and manage every aspect of your site.</p>
+                    
+                    <h3>Try It Yourself (simulate WordPress content):</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">HTML/CSS</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-1" spellcheck="false">&lt;!-- Simulating a WordPress post display --&gt;
+&lt;div style="font-family: Arial; max-width: 800px; margin: 0 auto;"&gt;
+    &lt;h1&gt;Hello WordPress!&lt;/h1&gt;
+    &lt;p&gt;This is how a typical WordPress post might look. WordPress stores your content in a database and uses themes to display it.&lt;/p&gt;
+    &lt;div style="background: #f0f0f0; padding: 1rem; border-left: 4px solid #21759B;"&gt;
+        &lt;strong&gt;Did you know?&lt;/strong&gt; WordPress was released in 2003 and now powers millions of sites.
+    &lt;/div&gt;
+    &lt;hr&gt;
+    &lt;p&gt;&lt;em&gt;Edit this HTML to see how changes would appear in a WordPress theme.&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;</textarea>
+                        <button class="run-btn" onclick="runCode('editor-1', 'output-1')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Preview
+                        </div>
+                        <div class="preview-container" id="output-1"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>WordPress is a dynamic CMS, not static HTML</li>
+                                <li>Dashboard allows you to manage content without coding</li>
+                                <li>Two main types: WordPress.com (hosted) vs WordPress.org (self-hosted)</li>
+                                <li>Core components: database, themes, plugins, media library</li>
+                                <li>Posts vs Pages: posts are blog entries, pages are static</li>
+                                <li>Themes control appearance; plugins add functionality</li>
+                                <li>WordPress uses PHP to fetch content from the database</li>
+                                <li>Gutenberg block editor lets you build layouts visually</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-cog"></i> WordPress Foundation Explained</h3>
+                            <p>WordPress revolutionized web publishing by making it accessible to non-developers. At its core, WordPress is a PHP-based system that stores content in a MySQL database. When a visitor requests a page, WordPress runs PHP code to fetch the appropriate content from the database, applies the active theme's template files, and sends the generated HTML to the browser. This separation of content from presentation is what makes WordPress so flexible and powerful.</p>
+                            
+                            <p>The WordPress dashboard is your administrative interface, accessible by adding <code>/wp-admin</code> to your site's URL. From here, you can create posts, pages, upload media, install themes and plugins, manage users, and configure settings. Understanding the dashboard is the first step to mastering WordPress.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-database"></i> Database Structure</h4>
+                                    <p>WordPress uses a MySQL database to store posts, pages, comments, user data, and settings. Tables like wp_posts, wp_options, and wp_users organize information efficiently.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-paint-brush"></i> Theme Hierarchy</h4>
+                                    <p>Themes consist of template files (index.php, single.php, page.php) that control layout. WordPress follows a template hierarchy to decide which file to use for each type of content.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-plug"></i> Plugin Architecture</h4>
+                                    <p>Plugins extend WordPress functionality using hooks (actions and filters). This modular design lets you add features without modifying core files.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-globe"></i> Real-World Application</h4>
+                                <p>From personal blogs to enterprise sites like The New Yorker, Sony, and Microsoft News, WordPress powers a vast array of websites. E-commerce stores use WooCommerce (a WordPress plugin) to sell products. Membership sites, online courses, and even mobile apps leverage WordPress as a backend. Understanding WordPress basics opens doors to building virtually any type of website without starting from scratch.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Set Up a Local WordPress Site:</strong> Install WordPress locally using XAMPP/WAMP or Local by Flywheel. Once installed, explore the dashboard:</p>
+                            <ul>
+                                <li>Log in to wp-admin</li>
+                                <li>Create a new post and a new page</li>
+                                <li>Browse the default theme (Twenty Twenty-Four)</li>
+                                <li>Explore the settings and media library</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 2: Creating Content -->
+            <div class="course-module" id="module2" data-aos="fade-up" data-difficulty="beginner">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>CREATING CONTENT</h1>
+                    <h3>Learn to write posts and pages</h3>
+                    <span class="difficulty">Beginner</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174881.png" class="module-icon" alt="WordPress Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 2: <span>Posts, Pages, and the Block Editor</span></h1>
+                    <p>In WordPress, content is primarily divided into <strong>posts</strong> and <strong>pages</strong>. Posts are time-based entries (like blog articles) that appear in reverse chronological order and can be categorized and tagged. Pages are static (like an About page) and exist outside the blog stream. Both are created using the Gutenberg block editor.</p>
+                    
+                    <p>The block editor allows you to build layouts by adding blocks for paragraphs, headings, images, lists, tables, and more. Each block is a self-contained unit you can move, style, and configure without touching code. This visual approach makes content creation intuitive and flexible.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">HTML/CSS</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-2" spellcheck="false">&lt;!-- Simulating a WordPress post with blocks --&gt;
+&lt;article style="max-width: 800px; margin: 0 auto; font-family: 'Poppins', sans-serif;"&gt;
+    &lt;h1&gt;My First Blog Post&lt;/h1&gt;
+    &lt;p&gt;Published on &lt;time&gt;February 20, 2026&lt;/time&gt; by SkillMynte&lt;/p&gt;
+    
+    &lt;!-- Paragraph block --&gt;
+    &lt;p&gt;This is a paragraph block. In WordPress, you can easily style text as &lt;strong&gt;bold&lt;/strong&gt; or &lt;em&gt;italic&lt;/em&gt;.&lt;/p&gt;
+    
+    &lt;!-- Image block simulation --&gt;
+    &lt;figure&gt;
+        &lt;img src="https://via.placeholder.com/800x400" alt="Sample image" style="width:100%; border-radius:8px;"&gt;
+        &lt;figcaption&gt;An image with caption â€“ just like the Image block in WordPress.&lt;/figcaption&gt;
+    &lt;/figure&gt;
+    
+    &lt;!-- Quote block --&gt;
+    &lt;blockquote style="background: #f4f4f4; padding: 1rem; border-left: 4px solid #21759B;"&gt;
+        &lt;p&gt;"WordPress makes content creation accessible to everyone."&lt;/p&gt;
+    &lt;/blockquote&gt;
+    
+    &lt;!-- Button block --&gt;
+    &lt;a href="#" style="display: inline-block; background: #21759B; color: white; padding: 0.8rem 1.5rem; text-decoration: none; border-radius: 5px;"&gt;Click Me&lt;/a&gt;
+&lt;/article&gt;</textarea>
+                        <button class="run-btn" onclick="runCode('editor-2', 'output-2')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Preview
+                        </div>
+                        <div class="preview-container" id="output-2"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>Posts: time-sensitive, appear in blog feed, use categories & tags</li>
+                                <li>Pages: static, hierarchical, don't use categories/tags</li>
+                                <li>Gutenberg editor uses blocks to build content visually</li>
+                                <li>Common blocks: paragraph, heading, image, gallery, list, quote, button</li>
+                                <li>Each block has its own settings panel for customization</li>
+                                <li>You can switch between visual editor and code editor</li>
+                                <li>Reusable blocks allow you to save and reuse content across your site</li>
+                                <li>Categories and tags help organize posts</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-edit"></i> Content Creation Workflow</h3>
+                            <p>Understanding the distinction between posts and pages is fundamental to organizing your WordPress site. Posts are for timely content that you want to archive and make discoverable through categories and tags. Pages are for timeless information that doesn't change often and fits into a hierarchy (e.g., parent/child pages).</p>
+                            
+                            <p>The Gutenberg block editor introduced in WordPress 5.0 transformed content creation by moving away from a single text editor to a modular block system. This approach mirrors modern page builders but is built into core, ensuring long-term stability and performance.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-tags"></i> Categories vs Tags</h4>
+                                    <p>Categories are hierarchical and used for broad topics. Tags are non-hierarchical keywords that describe specific details. Both help users and search engines navigate your content.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-copy"></i> Reusable Blocks</h4>
+                                    <p>Save any block or group of blocks as a reusable block to insert the same content (like a call-to-action) across multiple posts/pages. Updating one updates all instances.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-eye"></i> Preview & Publishing</h4>
+                                    <p>WordPress offers draft, preview, scheduled, and password-protected visibility options. You can also revise posts with the built-in revision history.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-newspaper"></i> Content-Rich Sites</h4>
+                                <p>News websites like TechCrunch use posts for articles with categories (Technology, Startups) and tags (Apple, AI). Company websites use pages for About, Services, and Contact. Online magazines combine both: posts for articles, pages for static sections like "Write for Us." Mastering content creation is the first practical step to building a professional WordPress site.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Create Your First Content:</strong> In your local WordPress site:</p>
+                            <ul>
+                                <li>Write a blog post about a topic you enjoy, using at least 5 different blocks</li>
+                                <li>Create an "About" page with a brief bio and an image</li>
+                                <li>Assign categories and tags to your post</li>
+                                <li>Preview and publish both</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 3: Media Management -->
+            <div class="course-module" id="module3" data-aos="fade-up" data-difficulty="beginner">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>MEDIA MANAGEMENT</h1>
+                    <h3>Learn to add images, videos, and files</h3>
+                    <span class="difficulty">Beginner</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174881.png" class="module-icon" alt="WordPress Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 3: <span>Media Library & Embedding</span></h1>
+                    <p>The Media Library is your central repository for images, videos, audio files, and documents. You can upload files directly, organize them with folders (using plugins), and insert them into your content. WordPress automatically creates multiple image sizes for responsive design.</p>
+                    
+                    <p>Beyond simple uploads, WordPress makes it easy to embed media from popular platforms like YouTube, Twitter, and Spotify. Just paste the URL on its own line, and WordPress automatically converts it into an embedâ€”no code required.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">HTML/CSS</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-3" spellcheck="false">&lt;!-- Simulating WordPress media handling --&gt;
+&lt;div style="max-width: 800px; margin: 0 auto;"&gt;
+    &lt;h2&gt;Image with Caption&lt;/h2&gt;
+    &lt;figure&gt;
+        &lt;img src="https://via.placeholder.com/800x400/21759B/ffffff?text=WordPress+Media" alt="WordPress media" style="width:100%; border-radius:8px;"&gt;
+        &lt;figcaption&gt;This image is styled like a WordPress media file with caption.&lt;/figcaption&gt;
+    &lt;/figure&gt;
+    
+    &lt;h2&gt;Video Embed Simulation&lt;/h2&gt;
+    &lt;div style="background:#000; padding:1rem; text-align:center; color:#fff; border-radius:8px;"&gt;
+        [YouTube Video Player Simulation]
+    &lt;/div&gt;
+    &lt;p&gt;In WordPress, pasting a YouTube URL automatically embeds the video.&lt;/p&gt;
+    
+    &lt;h2&gt;Audio Player&lt;/h2&gt;
+    &lt;audio controls style="width:100%;"&gt;
+        &lt;source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg"&gt;
+    &lt;/audio&gt;
+    &lt;p&gt;The Audio block adds a simple player for your audio files.&lt;/p&gt;
+&lt;/div&gt;</textarea>
+                        <button class="run-btn" onclick="runCode('editor-3', 'output-3')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Preview
+                        </div>
+                        <div class="preview-container" id="output-3"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>Media Library stores all uploaded files</li>
+                                <li>WordPress generates multiple image sizes (thumbnail, medium, large)</li>
+                                <li>Add alt text for accessibility and SEO</li>
+                                <li>Embed videos, tweets, etc., by pasting URLs (oEmbed)</li>
+                                <li>Use the Cover block for background images with text overlay</li>
+                                <li>Gallery block displays multiple images in a grid</li>
+                                <li>File block lets visitors download documents</li>
+                                <li>Optimize images before upload for better performance</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-images"></i> Media Optimization & Delivery</h3>
+                            <p>Modern websites rely heavily on media. WordPress provides tools to manage media efficiently, but understanding best practices ensures your site remains fast and accessible. The Media Library not only stores files but also allows you to edit images (crop, rotate, scale) directly within WordPress.</p>
+                            
+                            <p>oEmbed is a powerful feature that automatically converts supported URLs into embedded content. WordPress supports hundreds of providers, including YouTube, Vimeo, Twitter, Instagram, and Spotify, eliminating the need for embed codes.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-compress-alt"></i> Image Optimization</h4>
+                                    <p>Large images slow down your site. Use plugins like Smush or ShortPixel to compress images automatically. Serve next-gen formats like WebP for faster loading.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-link"></i> oEmbed Providers</h4>
+                                    <p>WordPress supports over 50 oEmbed providers. Simply paste a supported URL on its own line, and it becomes an embedded preview.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-folder-open"></i> Media Organization</h4>
+                                    <p>Use plugins like "Media Library Folders" to organize uploads into folders. This is essential for large sites with thousands of files.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-video"></i> Media-Rich Websites</h4>
+                                <p>Photography portfolios, news sites with video reports, and podcast websites all rely heavily on WordPress media features. For example, a photographer can create galleries, sell prints with WooCommerce, and blog about shootsâ€”all managed through the Media Library. Understanding media management is key to building engaging, professional websites.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Build a Media Gallery:</strong> In your WordPress site:</p>
+                            <ul>
+                                <li>Upload at least 5 images to the Media Library</li>
+                                <li>Create a new post and add a gallery block with these images</li>
+                                <li>Add a video by pasting a YouTube URL</li>
+                                <li>Include an audio file (if available) or a file download link</li>
+                                <li>Ensure all images have descriptive alt text</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 4: Using Blocks -->
+            <div class="course-module" id="module4" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>USING BLOCKS</h1>
+                    <h3>Master the Gutenberg block editor</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174881.png" class="module-icon" alt="WordPress Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 4: <span>Advanced Block Techniques</span></h1>
+                    <p>Gutenberg blocks are the building blocks of modern WordPress content. Beyond basic text and images, there are blocks for tables, columns, buttons, separators, and more. You can even create custom blocks with code or plugins. Understanding blocks fully unlocks the editor's potential.</p>
+                    
+                    <p>Blocks have individual settings for alignment, colors, typography, and spacing. You can group blocks together, save them as reusable blocks, and use patterns to quickly insert pre-designed layouts. The editor also includes a "List View" to navigate complex content structures.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">HTML/CSS</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-4" spellcheck="false">&lt;!-- Simulating a complex block layout --&gt;
+&lt;div style="max-width: 800px; margin: 0 auto; font-family: 'Poppins', sans-serif;"&gt;
+    &lt;!-- Columns block simulation --&gt;
+    &lt;div style="display: flex; gap: 20px;"&gt;
+        &lt;div style="flex:1; background: #2a3042; padding: 1rem; border-radius: 8px;"&gt;
+            &lt;h3&gt;Column 1&lt;/h3&gt;
+            &lt;p&gt;This column uses a paragraph block inside.&lt;/p&gt;
+            &lt;button style="background: #00C853; border:none; padding:0.5rem 1rem; color:white; border-radius:5px;"&gt;Button&lt;/button&gt;
+        &lt;/div&gt;
+        &lt;div style="flex:1; background: #2a3042; padding: 1rem; border-radius: 8px;"&gt;
+            &lt;h3&gt;Column 2&lt;/h3&gt;
+            &lt;ul&gt;
+                &lt;li&gt;List item 1&lt;/li&gt;
+                &lt;li&gt;List item 2&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    
+    &lt;!-- Separator --&gt;
+    &lt;hr style="margin: 2rem 0; border-color: #21759B;"&gt;
+    
+    &lt;!-- Table block simulation --&gt;
+    &lt;table style="width:100%; border-collapse:collapse;"&gt;
+        &lt;thead&gt;
+            &lt;tr style="background:#21759B; color:white;"&gt;
+                &lt;th style="padding:0.5rem;"&gt;Feature&lt;/th&gt;
+                &lt;th style="padding:0.5rem;"&gt;Description&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+            &lt;tr&gt;&lt;td style="padding:0.5rem; border:1px solid #444;"&gt;Blocks&lt;/td&gt;&lt;td style="padding:0.5rem; border:1px solid #444;"&gt;Modular content units&lt;/td&gt;&lt;/tr&gt;
+            &lt;tr&gt;&lt;td style="padding:0.5rem; border:1px solid #444;"&gt;Patterns&lt;/td&gt;&lt;td style="padding:0.5rem; border:1px solid #444;"&gt;Pre-designed block layouts&lt;/td&gt;&lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+    
+    &lt;!-- Group block (wrapper) --&gt;
+    &lt;div style="background: #1a1f2e; padding: 2rem; border-radius: 8px; margin-top:2rem;"&gt;
+        &lt;h3&gt;Grouped Content&lt;/h3&gt;
+        &lt;p&gt;This entire section is a group block, styled as one unit.&lt;/p&gt;
+        &lt;div class="wp-block-buttons"&gt;
+            &lt;a href="#" style="display:inline-block; background:#00C853; color:white; padding:0.5rem 1rem; text-decoration:none; border-radius:5px;"&gt;Button 1&lt;/a&gt;
+            &lt;a href="#" style="display:inline-block; background:#2962FF; color:white; padding:0.5rem 1rem; text-decoration:none; border-radius:5px;"&gt;Button 2&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</textarea>
+                        <button class="run-btn" onclick="runCode('editor-4', 'output-4')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Preview
+                        </div>
+                        <div class="preview-container" id="output-4"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>Columns block creates multi-column layouts</li>
+                                <li>Group block wraps multiple blocks into a single container</li>
+                                <li>Buttons block creates stylish call-to-action buttons</li>
+                                <li>Table block displays tabular data</li>
+                                <li>Separator block adds horizontal lines</li>
+                                <li>Patterns are pre-built block combinations you can insert</li>
+                                <li>List view helps navigate complex block structures</li>
+                                <li>Reusable blocks save time and maintain consistency</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-cubes"></i> Building with Blocks</h3>
+                            <p>The block editor is more than just a text editorâ€”it's a page-building tool. By mastering blocks, you can create sophisticated layouts without needing a separate page builder plugin. Each block is designed to be accessible, responsive, and extendable by developers.</p>
+                            
+                            <p>Block patterns (introduced in WordPress 5.5) are collections of blocks that you can insert with a single click. Patterns cover common layouts like hero sections, testimonials, pricing tables, and contact forms. The block directory also allows you to install new blocks directly from the editor.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-paint-brush"></i> Design Tools</h4>
+                                    <p>Many blocks now include design controls for colors, typography, padding, and margins. You can create unique designs without CSS, directly in the editor.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-code"></i> Custom Blocks</h4>
+                                    <p>Developers can create custom blocks using JavaScript (React) and register them with WordPress. Plugins like Advanced Custom Fields (ACF) also allow block creation from PHP.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-copy"></i> Block Patterns</h4>
+                                    <p>Patterns are like templates for sections of content. WordPress includes many default patterns, and you can create your own to streamline your workflow.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-store"></i> E-Commerce Layouts</h4>
+                                <p>Online stores use a combination of columns, buttons, and image blocks to showcase products. For example, a product page might use a two-column layout with product images in one column and a title, price, and add-to-cart button in the other. The block editor makes building such pages intuitive and fast.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Build a Landing Page:</strong> Create a landing page using blocks:</p>
+                            <ul>
+                                <li>Use a Cover block with a background image and heading</li>
+                                <li>Add a Columns block with three columns containing icons and text</li>
+                                <li>Insert a Table block showing pricing plans</li>
+                                <li>Add a Buttons block for calls-to-action</li>
+                                <li>Group the footer area with a Group block</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 5: Forms in WordPress -->
+            <div class="course-module" id="module5" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>FORMS IN WORDPRESS</h1>
+                    <h3>Learn to add contact forms and surveys</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174881.png" class="module-icon" alt="WordPress Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 5: <span>Contact Forms, Surveys, and User Input</span></h1>
+                    <p>WordPress doesn't include a built-in form builder, but with plugins you can add any type of form. The most popular solution is <strong>Contact Form 7</strong> (free) or <strong>Gravity Forms</strong>/<strong>WPForms</strong> (premium). These plugins provide a drag-and-drop form builder, spam protection, email notifications, and entry storage.</p>
+                    
+                    <p>Forms are essential for contact pages, user registration, surveys, order forms, and more. Modern form plugins integrate with email marketing services (Mailchimp), payment gateways (Stripe), and CRM systems. Understanding how to create and manage forms is a crucial skill for any WordPress developer.</p>
+                    
+                    <h3>Try It Yourself (simulate a form):</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">HTML/CSS</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-5" spellcheck="false">&lt;!-- Simulating a WPForms or Contact Form 7 style form --&gt;
+&lt;div style="max-width: 600px; margin: 0 auto; background: #2a3042; padding: 2rem; border-radius: 8px;"&gt;
+    &lt;h2&gt;Contact Us&lt;/h2&gt;
+    &lt;form&gt;
+        &lt;div style="margin-bottom:1rem;"&gt;
+            &lt;label for="name" style="display:block; margin-bottom:0.3rem;"&gt;Name:&lt;/label&gt;
+            &lt;input type="text" id="name" name="name" style="width:100%; padding:0.5rem; background: #1a1f2e; border:1px solid #444; color:white; border-radius:4px;"&gt;
+        &lt;/div&gt;
+        &lt;div style="margin-bottom:1rem;"&gt;
+            &lt;label for="email" style="display:block; margin-bottom:0.3rem;"&gt;Email:&lt;/label&gt;
+            &lt;input type="email" id="email" name="email" style="width:100%; padding:0.5rem; background: #1a1f2e; border:1px solid #444; color:white; border-radius:4px;"&gt;
+        &lt;/div&gt;
+        &lt;div style="margin-bottom:1rem;"&gt;
+            &lt;label for="message" style="display:block; margin-bottom:0.3rem;"&gt;Message:&lt;/label&gt;
+            &lt;textarea id="message" name="message" rows="5" style="width:100%; padding:0.5rem; background: #1a1f2e; border:1px solid #444; color:white; border-radius:4px;"&gt;&lt;/textarea&gt;
+        &lt;/div&gt;
+        &lt;button type="submit" style="background: #00C853; color:white; border:none; padding:0.8rem 1.5rem; border-radius:4px; cursor:pointer;"&gt;Send Message&lt;/button&gt;
+    &lt;/form&gt;
+    &lt;p style="font-size:0.9rem; margin-top:1rem;"&gt;In WordPress, this form would be created with a plugin and include spam protection.&lt;/p&gt;
+&lt;/div&gt;</textarea>
+                        <button class="run-btn" onclick="runCode('editor-5', 'output-5')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Preview
+                        </div>
+                        <div class="preview-container" id="output-5"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>WordPress needs plugins for forms (Contact Form 7, WPForms, Gravity Forms)</li>
+                                <li>Form plugins provide drag-and-drop builders and pre-built templates</li>
+                                <li>Essential features: spam protection (CAPTCHA, honeypot), email notifications, conditional logic</li>
+                                <li>Forms can store entries in the database for later review</li>
+                                <li>Integrate with email marketing, payment gateways, and CRMs</li>
+                                <li>Use the Form block or shortcode to embed forms in posts/pages</li>
+                                <li>Always test forms thoroughly to ensure they work</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-envelope"></i> Form Fundamentals</h3>
+                            <p>Forms are the primary way visitors interact with your siteâ€”contact forms, newsletter signups, order forms, etc. In WordPress, form plugins abstract away the complexity of handling submissions, validation, and security. Most plugins generate a shortcode (e.g., <code>[contact-form-7 id="123"]</code>) that you paste into any post/page.</p>
+                            
+                            <p>When choosing a form plugin, consider ease of use, features, and performance. Free plugins like Contact Form 7 are lightweight but require manual setup. Premium plugins like WPForms offer user-friendly interfaces and advanced features like payment integration.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-shield-alt"></i> Spam Protection</h4>
+                                    <p>Spam submissions can overwhelm you. Use CAPTCHA (reCAPTCHA, hCaptcha), honeypot fields, or Akismet integration to block automated spam.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-credit-card"></i> Payment Forms</h4>
+                                    <p>Plugins like WPForms and Gravity Forms integrate with Stripe, PayPal, and Square, allowing you to collect payments directly through forms.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-database"></i> Entry Management</h4>
+                                    <p>Premium form plugins store submissions in the database, letting you view, export, and manage entries from the WordPress admin.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-ticket-alt"></i> Event Registration</h4>
+                                <p>Event websites use forms for attendee registration. With conditional logic, you can show/hide fields based on previous answers (e.g., show dietary restrictions only if attending). Integration with payment gateways allows collecting ticket fees. Understanding form plugins enables you to build powerful interactive websites.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Create a Contact Form:</strong> Install and configure a form plugin on your local WordPress site:</p>
+                            <ul>
+                                <li>Install Contact Form 7 or WPForms (free version)</li>
+                                <li>Create a simple contact form with name, email, and message</li>
+                                <li>Embed the form on your "Contact" page</li>
+                                <li>Test the form and ensure you receive email notifications</li>
+                                <li>Explore the plugin's settings (spam protection, confirmation messages)</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 6: WordPress Themes -->
+            <div class="course-module" id="module6" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>WORDPRESS THEMES</h1>
+                    <h3>Learn to customize and build themes</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174881.png" class="module-icon" alt="WordPress Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 6: <span>Theme Structure, Customization, and Child Themes</span></h1>
+                    <p>A WordPress theme controls the visual appearance of your site. Themes consist of template files (PHP), stylesheets (CSS), and sometimes JavaScript. The WordPress template hierarchy determines which file is used for each type of content (e.g., single post, page, archive).</p>
+                    
+                    <p>You can customize themes using the built-in Customizer (appearance customizations) or by editing theme files. For safety, always use a <strong>child theme</strong> when making modifications to a third-party theme. This ensures your changes aren't lost when the parent theme updates.</p>
+                    
+                    <h3>Try It Yourself (simulate theme hierarchy):</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">HTML/CSS</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-6" spellcheck="false">&lt;!-- Simulating a basic theme structure --&gt;
+&lt;div style="max-width:800px; margin:0 auto;"&gt;
+    &lt;!-- header.php simulation --&gt;
+    &lt;header style="background:#21759B; color:white; padding:1rem; text-align:center;"&gt;
+        &lt;h1&gt;My WordPress Theme&lt;/h1&gt;
+        &lt;nav&gt;
+            &lt;a href="#" style="color:white; margin:0 0.5rem;"&gt;Home&lt;/a&gt;
+            &lt;a href="#" style="color:white; margin:0 0.5rem;"&gt;About&lt;/a&gt;
+            &lt;a href="#" style="color:white; margin:0 0.5rem;"&gt;Contact&lt;/a&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+    
+    &lt;!-- index.php or single.php simulation --&gt;
+    &lt;main style="display:flex; gap:2rem; padding:2rem;"&gt;
+        &lt;article style="flex:2;"&gt;
+            &lt;h2&gt;Blog Post Title&lt;/h2&gt;
+            &lt;p&gt;Published on February 20, 2026&lt;/p&gt;
+            &lt;p&gt;This is the content of the blog post. In a theme, this would be generated by &lt;code&gt;the_content()&lt;/code&gt;.&lt;/p&gt;
+        &lt;/article&gt;
+        &lt;aside style="flex:1; background:#2a3042; padding:1rem;"&gt;
+            &lt;h3&gt;Sidebar&lt;/h3&gt;
+            &lt;ul&gt;
+                &lt;li&gt;Recent Posts&lt;/li&gt;
+                &lt;li&gt;Categories&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/aside&gt;
+    &lt;/main&gt;
+    
+    &lt;!-- footer.php simulation --&gt;
+    &lt;footer style="background:#1a1f2e; color:white; text-align:center; padding:1rem;"&gt;
+        &lt;p&gt;&amp;copy; 2026 My WordPress Site.&lt;/p&gt;
+    &lt;/footer&gt;
+&lt;/div&gt;</textarea>
+                        <button class="run-btn" onclick="runCode('editor-6', 'output-6')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Preview
+                        </div>
+                        <div class="preview-container" id="output-6"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>Themes control the look and feel; plugins control functionality</li>
+                                <li>Template files: header.php, footer.php, index.php, single.php, page.php, archive.php</li>
+                                <li>The template hierarchy decides which file to load</li>
+                                <li>Child themes allow safe modifications (overriding parent files)</li>
+                                <li>The Customizer (Appearance > Customize) provides live preview settings</li>
+                                <li>Full Site Editing (FSE) with block themes lets you edit all parts using blocks</li>
+                                <li>Theme.json centralizes theme settings and styles in block themes</li>
+                                <li>Always backup your site before changing themes</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-paint-roller"></i> Understanding Theme Architecture</h3>
+                            <p>A WordPress theme is more than just a design; it's a structured collection of files that work together to display your content. The template hierarchy is a crucial concept: WordPress looks for specific template files based on the type of request. For example, when viewing a single post, it first looks for <code>single-{post-type}.php</code>, then <code>single.php</code>, then <code>index.php</code>. This hierarchy allows for granular control over every part of your site.</p>
+                            
+                            <p>Modern themes can be "classic" (using PHP templates) or "block" (using blocks for every part). Block themes, introduced in WordPress 5.9, allow full site editing where you can modify headers, footers, and templates visually using the block editor. This represents the future of WordPress theming.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-sitemap"></i> Template Hierarchy</h4>
+                                    <p>WordPress uses a specific order to determine which template file to use. Understanding this hierarchy allows you to create custom templates for categories, tags, custom post types, and more.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-child"></i> Child Themes</h4>
+                                    <p>A child theme inherits the parent theme's functionality and styling but allows you to override specific files. This is essential for updates: you can update the parent theme without losing your customizations.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-pen-fancy"></i> Full Site Editing</h4>
+                                    <p>Block themes use the Site Editor to edit templates, template parts, and global styles. This brings the flexibility of blocks to every part of your site, not just content.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-store-alt"></i> Custom E-Commerce Themes</h4>
+                                <p>Online stores often use child themes to customize WooCommerce templates. For example, a store might override <code>woocommerce/single-product.php</code> to reposition product images and add custom tabs. Understanding theme development allows you to build unique, branded experiences while maintaining compatibility with plugins.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Create a Child Theme:</strong></p>
+                            <ul>
+                                <li>Install a parent theme (e.g., Twenty Twenty-Four)</li>
+                                <li>Create a child theme with a style.css and functions.php</li>
+                                <li>Override the header.php or add custom CSS in the child theme</li>
+                                <li>Activate the child theme and verify your changes</li>
+                                <li>Use the Customizer to tweak colors and fonts</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 7: Media Handling (advanced) -->
+            <div class="course-module" id="module7" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>MEDIA HANDLING</h1>
+                    <h3>Advanced media techniques and optimization</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174881.png" class="module-icon" alt="WordPress Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 7: <span>Image Optimization, Galleries, and Audio/Video</span></h1>
+                    <p>Beyond basic uploads, WordPress offers advanced media features. You can edit images directly in the Media Library (crop, rotate, scale). Galleries can be created with the Gallery block or using plugins for more complex displays. For audio and video, WordPress supports playlists and individual players.</p>
+                    
+                    <p>Performance is critical: large images slow down your site. Use image optimization plugins to compress images, lazy load to defer off-screen images, and consider using a CDN for global delivery. Video hosting services like YouTube or Vimeo are often better than self-hosting large video files.</p>
+                    
+                    <h3>Try It Yourself (simulate a playlist):</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">HTML/CSS</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-7" spellcheck="false">&lt;!-- Simulating a WordPress audio playlist --&gt;
+&lt;div style="max-width:600px; margin:0 auto; background:#2a3042; padding:1.5rem; border-radius:8px;"&gt;
+    &lt;h2&gt;Podcast Episodes&lt;/h2&gt;
+    &lt;!-- Simulated playlist --&gt;
+    &lt;div style="border:1px solid #444; margin-bottom:0.5rem; padding:0.5rem; border-radius:4px;"&gt;
+        &lt;strong&gt;Episode 1: Introduction&lt;/strong&gt;
+        &lt;audio controls style="width:100%; margin-top:0.5rem;"&gt;
+            &lt;source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg"&gt;
+        &lt;/audio&gt;
+    &lt;/div&gt;
+    &lt;div style="border:1px solid #444; margin-bottom:0.5rem; padding:0.5rem; border-radius:4px;"&gt;
+        &lt;strong&gt;Episode 2: Getting Started&lt;/strong&gt;
+        &lt;audio controls style="width:100%; margin-top:0.5rem;"&gt;
+            &lt;source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg"&gt;
+        &lt;/audio&gt;
+    &lt;/div&gt;
+    &lt;p&gt;In WordPress, you can create audio/video playlists with the Playlist block.&lt;/p&gt;
+&lt;/div&gt;</textarea>
+                        <button class="run-btn" onclick="runCode('editor-7', 'output-7')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Preview
+                        </div>
+                        <div class="preview-container" id="output-7"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>Edit images in Media Library: crop, rotate, scale, flip</li>
+                                <li>Gallery block creates responsive image grids</li>
+                                <li>Audio and Video blocks support self-hosted files and embeds</li>
+                                <li>Playlist block creates a playlist of audio or video files</li>
+                                <li>Use optimization plugins: Smush, ShortPixel, Imagify</li>
+                                <li>Lazy loading improves page speed (built-in since WordPress 5.5)</li>
+                                <li>Consider using a CDN for media delivery</li>
+                                <li>Video hosting (YouTube/Vimeo) reduces server load</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-chart-line"></i> Media Performance & Delivery</h3>
+                            <p>Media files often account for the majority of a page's weight. Optimizing images and videos is crucial for Core Web Vitals and user experience. WordPress provides tools like image compression on upload (if configured), but additional plugins can further reduce file sizes without visible quality loss.</p>
+                            
+                            <p>Lazy loading defers the loading of images and iframes until they are about to enter the viewport. This reduces initial page load time and saves bandwidth for users who don't scroll all the way down. WordPress includes native lazy loading for images, but you can extend it with plugins for videos and iframes.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-image"></i> Image Formats</h4>
+                                    <p>Use modern formats like WebP or AVIF for better compression. Plugins can automatically convert uploaded images to WebP and serve them to supported browsers.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-play-circle"></i> Video Optimization</h4>
+                                    <p>Self-hosting videos can slow your site. Embed from YouTube/Vimeo for better performance, or use a video hosting service like Wistia or Vimeo Pro for professional needs.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-cloud-upload-alt"></i> CDN Integration</h4>
+                                    <p>A Content Delivery Network (CDN) distributes your media across global servers, reducing latency. Many optimization plugins include CDN options or integrate with services like Cloudflare.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-photo-video"></i> Photography Portfolio</h4>
+                                <p>A photographer's website showcases high-resolution images. Without optimization, the site would be painfully slow. By using WebP format, lazy loading, and a CDN, the site can load quickly while maintaining image quality. Galleries organized with the Gallery block or a dedicated gallery plugin (like NextGEN) provide an excellent user experience.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Optimize Your Media:</strong></p>
+                            <ul>
+                                <li>Upload a large image to your media library</li>
+                                <li>Install an image optimization plugin (e.g., Smush) and optimize the image</li>
+                                <li>Create an audio playlist with at least two audio files (use sample files)</li>
+                                <li>Embed a YouTube video using the URL method</li>
+                                <li>Compare page speed before and after optimization (use browser dev tools)</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 8: WordPress Plugins -->
+            <div class="course-module" id="module8" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>WORDPRESS PLUGINS</h1>
+                    <h3>Extend functionality with plugins</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174881.png" class="module-icon" alt="WordPress Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 8: <span>Plugin Basics, Installation, and Management</span></h1>
+                    <p>Plugins are packages of code that add features to WordPress. Want an online store? Install WooCommerce. Need SEO? Install Yoast SEO. There are over 60,000 free plugins in the WordPress repository, plus countless premium ones. Plugins are one of the main reasons WordPress is so versatile.</p>
+                    
+                    <p>You can install plugins directly from the WordPress admin (Plugins > Add New) or upload them manually. Always keep plugins updated for security and compatibility. Be selective: too many plugins can slow your site and introduce conflicts.</p>
+                    
+                    <h3>Try It Yourself (simulate plugin functionality):</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">HTML/CSS</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-8" spellcheck="false">&lt;!-- Simulating a plugin's output (e.g., a testimonials slider) --&gt;
+&lt;div style="max-width:800px; margin:0 auto; text-align:center;"&gt;
+    &lt;h2&gt;Testimonials&lt;/h2&gt;
+    &lt;div style="background:#2a3042; padding:2rem; border-radius:8px; position:relative;"&gt;
+        &lt;i class="fas fa-quote-left" style="color:#00C853; font-size:2rem; opacity:0.5;"&gt;&lt;/i&gt;
+        &lt;p style="font-style:italic;"&gt;"This plugin completely transformed our site!"&lt;/p&gt;
+        &lt;p&gt;&mdash; Happy Customer&lt;/p&gt;
+        &lt;div style="display:flex; justify-content:center; gap:0.5rem;"&gt;
+            &lt;span style="width:10px; height:10px; background:#00C853; border-radius:50%;"&gt;&lt;/span&gt;
+            &lt;span style="width:10px; height:10px; background:#555; border-radius:50%;"&gt;&lt;/span&gt;
+            &lt;span style="width:10px; height:10px; background:#555; border-radius:50%;"&gt;&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;p&gt;Many plugins provide shortcodes or blocks to display dynamic content like this slider.&lt;/p&gt;
+&lt;/div&gt;</textarea>
+                        <button class="run-btn" onclick="runCode('editor-8', 'output-8')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Preview
+                        </div>
+                        <div class="preview-container" id="output-8"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>Plugins add features: SEO, e-commerce, security, forms, etc.</li>
+                                <li>Install from WordPress.org repository or upload zip files</li>
+                                <li>Activate/deactivate plugins as needed</li>
+                                <li>Keep plugins updated for security and compatibility</li>
+                                <li>Too many plugins can slow your site; choose carefully</li>
+                                <li>Plugins may add shortcodes, blocks, widgets, or admin pages</li>
+                                <li>Always back up your site before installing new plugins</li>
+                                <li>Check compatibility with your WordPress version and theme</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-plug"></i> Plugin Ecosystem</h3>
+                            <p>Plugins are what make WordPress infinitely extendable. They work by hooking into WordPress core through actions and filters (hooks). This allows developers to modify or add functionality without changing core files. The WordPress Plugin Directory hosts thousands of free plugins, all reviewed for basic security and coding standards.</p>
+                            
+                            <p>When evaluating plugins, consider: update frequency, compatibility, reviews, support, and the number of active installations. Premium plugins often offer more features and dedicated support but come at a cost. Many successful websites use a combination of both free and premium plugins.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-shopping-cart"></i> Essential Plugins</h4>
+                                    <p>Must-have plugins for many sites: Yoast SEO (SEO), WooCommerce (e-commerce), Contact Form 7 (forms), Wordfence (security), UpdraftPlus (backup), Elementor (page builder).</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-exclamation-triangle"></i> Plugin Conflicts</h4>
+                                    <p>Sometimes plugins conflict with each other or with your theme. Symptoms include white screens, errors, or broken layouts. Troubleshoot by deactivating all plugins and reactivating one by one.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-code-branch"></i> Plugin Development</h4>
+                                    <p>If you can't find a plugin that meets your needs, you can create your own. WordPress provides extensive documentation and functions to create custom plugins.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-store"></i> Building an E-Commerce Site</h4>
+                                <p>To create an online store, you'd install WooCommerce. This plugin adds product management, cart, checkout, and payment processing. You might then add WooCommerce Subscriptions for recurring payments, Yoast SEO for product optimization, and a caching plugin for speed. Understanding how plugins work together is key to building complex sites efficiently.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Extend Your Site with Plugins:</strong></p>
+                            <ul>
+                                <li>Install and activate three plugins: a caching plugin (e.g., W3 Total Cache), a security plugin (e.g., Wordfence), and an SEO plugin (e.g., Yoast SEO)</li>
+                                <li>Configure each plugin (basic settings)</li>
+                                <li>Write a blog post and use Yoast SEO to optimize it</li>
+                                <li>Check your site's performance before and after caching</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 9: Accessibility in WordPress -->
+            <div class="course-module" id="module9" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>ACCESSIBILITY</h1>
+                    <h3>Make your WordPress site accessible</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174881.png" class="module-icon" alt="WordPress Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 9: <span>Web Accessibility (A11Y) in WordPress</span></h1>
+                    <p>Web accessibility ensures people with disabilities can use your website. WordPress is committed to accessibility, and many themes and plugins are built with accessibility in mind. However, it's your responsibility to choose accessible components and create accessible content.</p>
+                    
+                    <p>Key practices: use semantic HTML (provided by themes), provide alt text for images, ensure proper heading hierarchy, add labels to forms, use sufficient color contrast, and ensure keyboard navigation. Accessibility also benefits SEO and usability for everyone.</p>
+                    
+                    <h3>Try It Yourself (simulate accessible components):</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">HTML/CSS</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-9" spellcheck="false">&lt;!-- Simulating accessible WordPress content --&gt;
+&lt;div style="max-width:800px; margin:0 auto;"&gt;
+    &lt;h1&gt;Accessible Blog Post&lt;/h1&gt;
+    
+    &lt;!-- Proper heading hierarchy --&gt;
+    &lt;h2&gt;Introduction&lt;/h2&gt;
+    &lt;p&gt;This section uses an h2.&lt;/p&gt;
+    
+    &lt;h2&gt;Main Points&lt;/h2&gt;
+    &lt;h3&gt;Point 1&lt;/h3&gt;
+    &lt;p&gt;Explanation with proper subheading.&lt;/p&gt;
+    
+    &lt;!-- Image with alt text --&gt;
+    &lt;img src="https://via.placeholder.com/600x300" alt="A descriptive text about the image" style="width:100%; border-radius:8px;"&gt;
+    
+    &lt;!-- Accessible form --&gt;
+    &lt;form&gt;
+        &lt;label for="name"&gt;Name:&lt;/label&gt;
+        &lt;input type="text" id="name" name="name" style="width:100%; padding:0.5rem; margin-bottom:1rem;"&gt;
+        
+        &lt;label for="message"&gt;Message:&lt;/label&gt;
+        &lt;textarea id="message" name="message" style="width:100%; padding:0.5rem; margin-bottom:1rem;"&gt;&lt;/textarea&gt;
+        
+        &lt;button type="submit" style="background:#00C853; color:white; border:none; padding:0.5rem 1rem;"&gt;Submit&lt;/button&gt;
+    &lt;/form&gt;
+    
+    &lt;p style="color:#666;"&gt;Note: Sufficient color contrast is used.&lt;/p&gt;
+&lt;/div&gt;</textarea>
+                        <button class="run-btn" onclick="runCode('editor-9', 'output-9')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Preview
+                        </div>
+                        <div class="preview-container" id="output-9"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>Choose an accessibility-ready theme (tag "accessibility-ready")</li>
+                                <li>Use plugins that follow accessibility guidelines</li>
+                                <li>Always add alt text to images (can be empty for decorative images)</li>
+                                <li>Use proper heading hierarchy (h1-h6)</li>
+                                <li>Label all form fields</li>
+                                <li>Ensure keyboard navigation (tab through links, focus indicators)</li>
+                                <li>Check color contrast (WCAG minimum contrast ratio 4.5:1 for text)</li>
+                                <li>Use ARIA attributes when necessary (but prefer native HTML)</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-universal-access"></i> Building an Inclusive WordPress Site</h3>
+                            <p>WordPress itself strives to be accessible, with ongoing efforts to improve the admin area and default themes. The WordPress Accessibility Team audits core and provides resources. However, the final accessibility of your site depends on your choices: theme, plugins, and content.</p>
+                            
+                            <p>The Web Content Accessibility Guidelines (WCAG) are the international standard. Level AA conformance is the common target for legal compliance. Many countries have laws requiring accessible websites (ADA in the US, EN 301 549 in the EU). As a WordPress developer, you should be familiar with basic accessibility principles and testing tools.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-universal-access"></i> Accessibility Ready Themes</h4>
+                                    <p>The WordPress theme repository has an "accessibility-ready" tag. These themes meet specific accessibility requirements: skip links, proper heading structure, keyboard navigation, etc.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-tools"></i> Testing Tools</h4>
+                                    <p>Use browser extensions like WAVE, axe, or Lighthouse to audit accessibility. Also test with keyboard-only navigation and screen readers (NVDA, VoiceOver).</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-font"></i> Readable Typography</h4>
+                                    <p>Choose fonts that are easy to read, ensure sufficient line height, and allow users to resize text (use relative units like rem).</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-university"></i> Government & Educational Sites</h4>
+                                <p>Many government and university websites are built on WordPress and must comply with accessibility laws. For example, a university site must provide accessible course materials, forms, and navigation for students with disabilities. By following best practices, you ensure your site is not only inclusive but also legally compliant.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Audit and Improve Accessibility:</strong></p>
+                            <ul>
+                                <li>Run an accessibility audit on your local WordPress site using a tool like WAVE or Lighthouse</li>
+                                <li>Identify at least three issues (e.g., missing alt text, low contrast, heading issues)</li>
+                                <li>Fix these issues (add alt text, adjust colors, fix heading hierarchy)</li>
+                                <li>Re-audit to confirm improvements</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 10: Advanced WordPress -->
+            <div class="course-module" id="module10" data-aos="fade-up" data-difficulty="advanced">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>ADVANCED WORDPRESS</h1>
+                    <h3>Custom post types, taxonomies, and development</h3>
+                    <span class="difficulty">Advanced</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174881.png" class="module-icon" alt="WordPress Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 10: <span>Custom Post Types, Fields, and Hooks</span></h1>
+                    <p>To go beyond standard posts and pages, WordPress allows you to create <strong>custom post types</strong> (CPTs) like "Portfolio", "Testimonials", or "Events". You can also add custom fields to store additional data (e.g., event date, price). This turns WordPress into a flexible content management framework.</p>
+                    
+                    <p>Hooks (actions and filters) are the foundation of WordPress development. They allow you to modify core behavior without editing core files. Understanding hooks enables you to create custom plugins and themes that integrate seamlessly with WordPress.</p>
+                    
+                    <h3>Try It Yourself (simulate CPT output):</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">HTML/CSS</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-10" spellcheck="false">&lt;!-- Simulating a custom post type "Portfolio" display --&gt;
+&lt;div style="max-width:1000px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit, minmax(300px,1fr)); gap:20px;"&gt;
+    &lt;div style="background:#2a3042; padding:1rem; border-radius:8px;"&gt;
+        &lt;img src="https://via.placeholder.com/300x200" alt="Project 1" style="width:100%; border-radius:4px;"&gt;
+        &lt;h3&gt;Project Alpha&lt;/h3&gt;
+        &lt;p&gt;A web design project.&lt;/p&gt;
+        &lt;p&gt;&lt;strong&gt;Client:&lt;/strong&gt; ABC Corp&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div style="background:#2a3042; padding:1rem; border-radius:8px;"&gt;
+        &lt;img src="https://via.placeholder.com/300x200" alt="Project 2" style="width:100%; border-radius:4px;"&gt;
+        &lt;h3&gt;Project Beta&lt;/h3&gt;
+        &lt;p&gt;An e-commerce site.&lt;/p&gt;
+        &lt;p&gt;&lt;strong&gt;Client:&lt;/strong&gt; XYZ Ltd&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div style="background:#2a3042; padding:1rem; border-radius:8px;"&gt;
+        &lt;img src="https://via.placeholder.com/300x200" alt="Project 3" style="width:100%; border-radius:4px;"&gt;
+        &lt;h3&gt;Project Gamma&lt;/h3&gt;
+        &lt;p&gt;A mobile app.&lt;/p&gt;
+        &lt;p&gt;&lt;strong&gt;Client:&lt;/strong&gt; 123 Industries&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</textarea>
+                        <button class="run-btn" onclick="runCode('editor-10', 'output-10')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Preview
+                        </div>
+                        <div class="preview-container" id="output-10"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>Custom Post Types (CPTs) extend WordPress beyond posts and pages</li>
+                                <li>Register CPTs via functions.php or a plugin (e.g., Custom Post Type UI)</li>
+                                <li>Custom fields (metadata) store additional data; use Advanced Custom Fields (ACF) plugin</li>
+                                <li>Hooks (actions/filters) modify WordPress behavior without editing core</li>
+                                <li>Child themes and custom plugins are best practices for modifications</li>
+                                <li>Use WP_Query to display custom content anywhere in your theme</li>
+                                <li>WordPress REST API allows headless WordPress with external frontends</li>
+                                <li>Always follow WordPress coding standards</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-code"></i> Developer-Level Customization</h3>
+                            <p>Custom post types transform WordPress into a true content management framework. For example, a real estate site might have a "Properties" CPT with custom fields for price, bedrooms, and location. A restaurant site might have a "Menu Items" CPT with fields for price and description. Combined with custom taxonomies (like "Property Type"), you can build sophisticated, data-rich sites.</p>
+                            
+                            <p>Hooks are the secret sauce of WordPress development. Actions allow you to add functionality at specific points (e.g., after a post is saved). Filters let you modify data before it is output (e.g., changing the excerpt length). Mastering hooks is essential for creating maintainable, upgrade-safe code.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-database"></i> Advanced Custom Fields</h4>
+                                    <p>ACF is the most popular plugin for adding custom fields. It provides a UI to create field groups and assign them to posts, pages, CPTs, or options pages. It also offers field types like repeaters, flexible content, and galleries.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-code-branch"></i> Actions & Filters</h4>
+                                    <p>Actions: <code>add_action('hook_name', 'callback_function');</code> / Filters: <code>add_filter('hook_name', 'callback_function');</code>. Examples: add custom CSS to admin, modify the content before display.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-cloud"></i> Headless WordPress</h4>
+                                    <p>Using the WordPress REST API, you can use WordPress as a backend and build frontends with React, Vue, or Gatsby. This decoupled architecture offers flexibility for modern web applications.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-building"></i> Job Board Website</h4>
+                                <p>A job board can be built with a "Job Listings" CPT, custom fields for salary and location, and a custom taxonomy for "Job Category". Users can submit jobs via a form (using a plugin like WPForms with CPT integration). Search and filtering can be implemented with WP_Query and AJAX. This advanced use of WordPress creates a fully functional, scalable job board without a custom backend.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Create a Custom Post Type:</strong></p>
+                            <ul>
+                                <li>Install and activate the Custom Post Type UI plugin (or register via code in functions.php)</li>
+                                <li>Create a CPT called "Portfolio" (or "Projects")</li>
+                                <li>Add a few custom fields (e.g., Client, Project URL) using ACF</li>
+                                <li>Add several portfolio entries</li>
+                                <li>Display them on a page using a custom query (archive-portfolio.php or page template)</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Practice Playground -->
+            <div class="course-module" id="playground" data-aos="fade-up">
+                <div class="course-three">
+                    <h1>PRACTICE PLAYGROUND</h1>
+                    <h3>Experiment with what you've learned</h3>
+                    <i class="fas fa-laptop-code course-icon" style="color: var(--primary);"></i>
+                </div>
+                <div class="course-one">
+                    <h1>Your Coding Playground: <span>Try Your Own WordPress Blocks/CSS</span></h1>
+                    <p>Use this space to experiment with HTML/CSS that you might use in WordPress. Try building components you've learned aboutâ€”navigation menus, custom post type grids, forms, etc. This is your sandbox to practice and explore.</p>
+                    
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">HTML/CSS</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="playground-editor" spellcheck="false">&lt;!-- Your code here --&gt;
+&lt;div style="text-align: center; padding: 2rem;"&gt;
+    &lt;h1 style="color: var(--primary);"&gt;Welcome to Your WordPress Playground!&lt;/h1&gt;
+    &lt;p style="font-size: 1.1rem; max-width: 600px; margin: 0 auto 2rem;"&gt;
+        Edit this code and click "Run Code" to see your changes.
+        Try creating something inspired by WordPress: a custom header, a grid of portfolio items, a styled form, etc.
+    &lt;/p&gt;
+
+    &lt;div style="background: var(--glass-bg); 
+                padding: 1.5rem; 
+                border-radius: var(--radius);
+                margin: 0 auto;
+                max-width: 600px;"&gt;
+        &lt;h2&gt;Ideas to Try:&lt;/h2&gt;
+        &lt;ul style="text-align: left; margin-left: 2rem;"&gt;
+            &lt;li&gt;Build a portfolio grid using custom post type style&lt;/li&gt;
+            &lt;li&gt;Create a contact form with validation&lt;/li&gt;
+            &lt;li&gt;Design a custom header with navigation&lt;/li&gt;
+            &lt;li&gt;Style a block quote or testimonial section&lt;/li&gt;
+            &lt;li&gt;Simulate a plugin output (e.g., gallery, slider)&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+
+    &lt;p style="margin-top: 2rem;"&gt;
+        Remember the &lt;strong&gt;SkillMynte&lt;/strong&gt; color scheme:
+    &lt;/p&gt;
+    &lt;div style="display: flex; justify-content: center; gap: 1rem; margin: 1rem 0;"&gt;
+        &lt;div style="width: 50px; height: 50px; background: var(--primary); 
+                    border-radius: 50%;" title="Primary"&gt;&lt;/div&gt;
+        &lt;div style="width: 50px; height: 50px; background: var(--primary-dark); 
+                    border-radius: 50%;" title="Primary Dark"&gt;&lt;/div&gt;
+        &lt;div style="width: 50px; height: 50px; background: var(--primary-light); 
+                    border-radius: 50%;" title="Primary Light"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</textarea>
+                        <button class="run-btn" onclick="runCode('playground-editor', 'playground-output')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Preview
+                        </div>
+                        <div class="preview-container" id="playground-output"></div>
+                    </div>
+                    
+                    <div class="course-five">
+                        <h3>Challenge Exercises:</h3>
+                        <ol>
+                            <li>Create a responsive portfolio grid (simulate a CPT)</li>
+                            <li>Build a blog post layout with a sidebar</li>
+                            <li>Design a custom login form styled like WordPress admin</li>
+                            <li>Make a navigation bar that adapts to mobile</li>
+                            <li>Combine all concepts into a complete webpage layout</li>
+                        </ol>
+                        
+                        <h3>Tips & Resources:</h3>
+                        <ul>
+                            <li>Use the browser's developer tools (F12) to inspect elements</li>
+                            <li>Try adding inline styles with the <code>style</code> attribute</li>
+                            <li>Experiment with the SkillMynte color variables:
+                                <ul>
+                                    <li><code>var(--primary)</code> - Main green color (#00C853)</li>
+                                    <li><code>var(--primary-dark)</code> - Darker green (#009624)</li>
+                                    <li><code>var(--primary-light)</code> - Light green (#5EFC82)</li>
+                                    <li><code>var(--secondary)</code> - Blue color (#2962FF)</li>
+                                </ul>
+                            </li>
+                            <li>For more practice, try recreating components from popular WordPress themes</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Premium Subscription CTA (unchanged) -->
+            <div class="premium-subscription" id="premium-subscription" data-aos="fade-up">
+                <h2>Unlock Premium SkillMynte Content</h2>
+                <p>Upgrade to SkillMynte Pro for exclusive courses, advanced projects, and personalized learning paths</p>
+                
+                <div class="premium-features">
+                    <div class="premium-feature">
+                        <i class="fas fa-gem"></i>
+                        <h3>Premium Courses</h3>
+                        <p>Access our entire library of advanced courses and exclusive content</p>
+                    </div>
+                    <div class="premium-feature">
+                        <i class="fas fa-trophy"></i>
+                        <h3>Certification</h3>
+                        <p>Earn industry-recognized certificates to showcase your skills</p>
+                    </div>
+                    <div class="premium-feature">
+                        <i class="fas fa-user-graduate"></i>
+                        <h3>Mentorship</h3>
+                        <p>Get personalized guidance from industry experts</p>
+                    </div>
+                </div>
+                
+                <div class="pricing-options">
+                    <div class="pricing-option">
+                        <h3>Monthly</h3>
+                        <div class="price">₦3,500<span>/month</span></div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> All Premium Courses</li>
+                            <li><i class="fas fa-check"></i> Practice Projects</li>
+                            <li><i class="fas fa-check"></i> Community Access</li>
+                            <li><i class="fas fa-check"></i> Certificates</li>
+                            <li><i class="fas fa-check"></i> personal AI inbuilt</li>
+                        </ul>
+                        <a href="premium courses.html"><button class="pricing-btn">Get Started</button></a>
+                    </div>
+                    
+                    <div class="pricing-option" style="border-color: var(--white); transform: scale(1.05);">
+                        <h3>Annual <span style="background: var(--white); color: #2962FF; padding: 0.2rem 0.5rem; border-radius: 20px; font-size: 0.8rem; margin-left: 0.5rem;">Best Value</span></h3>
+                        <div class="price">₦37,000<span>/year</span></div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> All Premium Courses</li>
+                            <li><i class="fas fa-check"></i> Practice Projects</li>
+                            <li><i class="fas fa-check"></i> Community Access</li>
+                            <li><i class="fas fa-check"></i> Certificates</li>
+                            <li><i class="fas fa-check"></i> personal AI inbuilt</li>
+                        </ul>
+                        <a href="premium courses.html"><button class="pricing-btn">Get Started</button></a>
+                    </div>
+                    
+                    <div class="pricing-option">
+                        <h3>Lifetime</h3>
+                        <div class="price">₦200,000<span>/once</span></div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> All Premium Courses</li>
+                            <li><i class="fas fa-check"></i> Practice Projects</li>
+                            <li><i class="fas fa-check"></i> Community Access</li>
+                            <li><i class="fas fa-check"></i> Certificates</li>
+                            <li><i class="fas fa-check"></i> personal AI inbuilt</li>
+                        </ul>
+                        <a href="premium courses.html"><button class="pricing-btn">Get Started</button></a>
+                    </div>
+                </div>
+                
+                <button class="premium-cta-btn">
+                    <i class="fas fa-rocket"></i> Upgrade to SkillMynte Pro
+                </button>
+            </div>
+            
+            <!-- Footer -->
+            <footer>
+                <div class="footer-content">
+                    <div class="footer-column">
+                        <h3>About SkillMynte</h3>
+                        <p>SkillMynte is a premium learning platform dedicated to helping developers of all levels master web technologies through interactive courses and hands-on practice.</p>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/profile.php?id=61581069862024"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://x.com/SkillMynte_AI?t=CcoQtjWZGGOXqfTfrsufjQ&s=09"><i class="fab fa-twitter"></i></a>
+                            <a href="https://youtube.com/@skillmynte?si=LmX2MjSKU3N1Xa5S"><i class="fab fa-youtube"></i></a>
+                            <a href="https://www.instagram.com/skillmynte_ai?igsh=MTd1YWpjdXV1OHhrbA=="><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Quick Links</h3>
+                        <ul class="footer-links">
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Home</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Courses</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Practice</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Projects</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Popular Courses</h3>
+                        <ul class="footer-links">
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> WordPress Fundamentals</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Advanced WordPress</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> WooCommerce Development</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Custom Theme Building</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Plugin Development</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Contact Us</h3>
+                        <p><i class="fas fa-envelope"></i>Skillmynteofficial@gmail.com</p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 SkillMynte. All rights reserved. | Designed with <i class="fas fa-heart" style="color: var(--primary);"></i> for the developer community</p>
+                </div>
+            </footer>
+
+            <script>
+    // Function to run code in preview
+    function runCode(editorId, outputId) {
+        const editor = document.getElementById(editorId);
+        const output = document.getElementById(outputId);
+        
+        try {
+            output.innerHTML = editor.value;
+        } catch (error) {
+            output.innerHTML = `<div style="color: var(--accent); padding: 1rem;">Error: ${error.message}</div>`;
+        }
+    }
+    
+    // Initialize all editors with their default output
+    document.addEventListener('DOMContentLoaded', function() {
+        // Run all code editors on load
+        runCode('editor-1', 'output-1');
+        runCode('editor-2', 'output-2');
+        runCode('editor-3', 'output-3');
+        runCode('editor-4', 'output-4');
+        runCode('editor-5', 'output-5');
+        runCode('editor-6', 'output-6');
+        runCode('editor-7', 'output-7');
+        runCode('editor-8', 'output-8');
+        runCode('editor-9', 'output-9');
+        runCode('editor-10', 'output-10');
+        runCode('playground-editor', 'playground-output');
+        
+        // Add event listeners to all run buttons in editor headers
+        document.querySelectorAll('.run-editor').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const editorContainer = this.closest('.code-editor-container');
+                const editor = editorContainer.querySelector('.code-editor');
+                const output = editorContainer.querySelector('.preview-container');
+                runCode(editor.id, output.id);
+            });
+        });
+        
+        // Add reset functionality
+        document.querySelectorAll('.reset-editor').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const editorContainer = this.closest('.code-editor-container');
+                const editor = editorContainer.querySelector('.code-editor');
+                const originalContent = editor.dataset.original || editor.defaultValue;
+                editor.value = originalContent;
+                runCode(editor.id, editorContainer.querySelector('.preview-container').id);
+            });
+        });
+        
+        // Store original content for reset functionality
+        document.querySelectorAll('.code-editor').forEach(editor => {
+            editor.dataset.original = editor.value;
+        });
+
+        // Handle navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // FIXED: Hamburger menu functionality
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.querySelector('.nav-menu');
+        const sidebar = document.getElementById('sidebar');
+        const body = document.body;
+
+        function toggleMobileMenu() {
+            const isActive = navMenu.classList.contains('active');
+            
+            if (isActive) {
+                // Close menu
+                navMenu.classList.remove('active');
+                sidebar.classList.remove('active');
+                menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                body.classList.remove('menu-open');
+                menuToggle.setAttribute('aria-expanded', 'false');
+            } else {
+                // Open menu
+                navMenu.classList.add('active');
+                sidebar.classList.add('active');
+                menuToggle.innerHTML = '<i class="fas fa-times"></i>';
+                body.classList.add('menu-open');
+                menuToggle.setAttribute('aria-expanded', 'true');
+            }
+        }
+
+        function closeMobileMenu() {
+            navMenu.classList.remove('active');
+            sidebar.classList.remove('active');
+            menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            body.classList.remove('menu-open');
+            menuToggle.setAttribute('aria-expanded', 'false');
+        }
+
+        // Mobile menu toggle
+        menuToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            toggleMobileMenu();
+        });
+
+        // Close menu when clicking on nav links
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function() {
+                if (window.innerWidth <= 1024) {
+                    closeMobileMenu();
+                }
+            });
+        });
+
+        // Close menu when clicking on dropdown items
+        document.querySelectorAll('.dropdown-item').forEach(item => {
+            item.addEventListener('click', function() {
+                if (window.innerWidth <= 1024) {
+                    closeMobileMenu();
+                }
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (window.innerWidth <= 1024 && 
+                navMenu.classList.contains('active') &&
+                !e.target.closest('.nav-menu') && 
+                !e.target.closest('.menu-toggle') &&
+                !e.target.closest('.sidebar')) {
+                closeMobileMenu();
+            }
+        });
+
+        // Close menu on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+                closeMobileMenu();
+            }
+        });
+
+        // Close menu on resize if switching to desktop
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 1024 && navMenu.classList.contains('active')) {
+                closeMobileMenu();
+            }
+        });
+
+        // Mobile dropdown functionality
+        document.querySelectorAll('.courses-dropdown').forEach(dropdown => {
+            const button = dropdown.querySelector('.courses-btn');
+            
+            button.addEventListener('click', function(e) {
+                if (window.innerWidth <= 1024) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    dropdown.classList.toggle('active');
+                }
+            });
+        });
+
+        // Level filtering functionality
+        const levelButtons = document.querySelectorAll('.level-btn');
+        const modules = document.querySelectorAll('.course-module');
+        
+        levelButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const level = this.getAttribute('data-level');
+                
+                // Remove active class from all buttons
+                levelButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                this.classList.add('active');
+                
+                if (level === 'all') {
+                    // Show all modules
+                    modules.forEach(module => {
+                        module.style.display = 'flex';
+                    });
+                } else if (level === 'advanced') {
+                    // Show advanced modules (7-10) - adjust as needed for WordPress modules
+                    modules.forEach(module => {
+                        const moduleId = module.id;
+                        if (moduleId.includes('module7') || moduleId.includes('module8') || 
+                            moduleId.includes('module9') || moduleId.includes('module10')) {
+                            module.style.display = 'flex';
+                        } else {
+                            module.style.display = 'none';
+                        }
+                    });
+                } else {
+                    // Show modules with matching difficulty
+                    modules.forEach(module => {
+                        const difficulty = module.getAttribute('data-difficulty');
+                        if (difficulty === level) {
+                            module.style.display = 'flex';
+                        } else {
+                            module.style.display = 'none';
+                        }
+                    });
+                }
+                
+                // Scroll to first visible module
+                const firstVisible = document.querySelector('.course-module[style="display: flex;"]');
+                if (firstVisible) {
+                    firstVisible.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Search functionality
+        const searchInput = document.getElementById('search-input');
+        
+        searchInput.addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase().trim();
+            
+            if (searchTerm === '') {
+                // Show all modules if search is empty
+                modules.forEach(module => {
+                    module.style.display = 'flex';
+                });
+                return;
+            }
+            
+            modules.forEach(module => {
+                const moduleTitle = module.querySelector('h1').textContent.toLowerCase();
+                const moduleContent = module.textContent.toLowerCase();
+                
+                if (moduleTitle.includes(searchTerm) || moduleContent.includes(searchTerm)) {
+                    module.style.display = 'flex';
+                } else {
+                    module.style.display = 'none';
+                }
+            });
+        });
+    });
+    
+    // Smooth scrolling for sidebar links
+    document.querySelectorAll('.sidebar-item').forEach(item => {
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Remove active class from all items
+            document.querySelectorAll('.sidebar-item').forEach(i => {
+                i.classList.remove('active');
+            });
+            
+            // Add active class to clicked item
+            this.classList.add('active');
+            
+            // Close mobile menu if open
+            if (window.innerWidth <= 1024) {
+                document.querySelector('.nav-menu').classList.remove('active');
+                document.querySelector('.sidebar').classList.remove('active');
+                document.querySelector('.menu-toggle').innerHTML = '<i class="fas fa-bars"></i>';
+                document.body.classList.remove('menu-open');
+            }
+            
+            // Scroll to section
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 100,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+</script>
+        </div>
+    </div>
+</body>
+</html>

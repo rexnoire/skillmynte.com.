@@ -1,0 +1,3913 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Fundamentals | SkillMynte</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="rounded_logo.png">
+    <link rel="stylesheet" href="free python course .css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-code"></i>
+                SKILLMYNTE
+            </a>
+            <div class="nav-menu">
+                <a href="#" class="nav-link">Home</a>
+                <a href="#" class="nav-link">Courses</a>
+                <a href="#" class="nav-link">Practice</a>
+                <a href="#" class="nav-link">Projects</a>
+                
+                <div class="courses-dropdown">
+                    <button class="courses-btn">
+                        <i class="fas fa-book-open"></i> Jump to Module
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#module1" class="dropdown-item">
+                            <i class="fab fa-python python-icon"></i> Python Basics
+                        </a>
+                        <a href="#module2" class="dropdown-item">
+                            <i class="fab fa-python python-icon"></i> Variables & Data Types
+                        </a>
+                        <a href="#module3" class="dropdown-item">
+                            <i class="fab fa-python python-icon"></i> Operators & Expressions
+                        </a>
+                        <a href="#module4" class="dropdown-item">
+                            <i class="fab fa-python python-icon"></i> Lists & Tuples
+                        </a>
+                        <a href="#module5" class="dropdown-item">
+                            <i class="fab fa-python python-icon"></i> Dictionaries & Sets
+                        </a>
+                        <a href="#module6" class="dropdown-item">
+                            <i class="fab fa-python python-icon"></i> Control Flow
+                        </a>
+                        <a href="#module7" class="dropdown-item">
+                            <i class="fab fa-python python-icon"></i> Functions
+                        </a>
+                        <a href="#module8" class="dropdown-item">
+                            <i class="fab fa-python python-icon"></i> Modules & Packages
+                        </a>
+                        <a href="#module9" class="dropdown-item">
+                            <i class="fab fa-python python-icon"></i> File Handling
+                        </a>
+                        <a href="#module10" class="dropdown-item">
+                            <i class="fab fa-python python-icon"></i> OOP in Python
+                        </a>
+                        <a href="#playground" class="dropdown-item">
+                            <i class="fas fa-laptop-code"></i> Practice Playground
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Premium Course Navigation -->
+    <div class="course-navigation">
+        <div class="course-nav-container">
+            <div class="course-category">
+                <button class="category-btn">
+                    <i class="fas fa-layer-group"></i> Categories
+                </button>
+                <div class="category-dropdown">
+                    <a href="#" class="category-item">
+                        <i class="fab fa-python python-icon"></i> Python
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fab fa-js-square js-icon"></i> JavaScript
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fab fa-html5 html-icon"></i> HTML & CSS
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fab fa-java java-icon"></i> Java
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fas fa-database"></i> Databases
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fas fa-mobile-alt"></i> Mobile Development
+                    </a>
+                </div>
+            </div>
+            
+            <div class="course-levels">
+                <button class="level-btn active" data-level="all">All Levels</button>
+                <button class="level-btn" data-level="beginner">Beginner</button>
+                <button class="level-btn" data-level="intermediate">Intermediate</button>
+                <button class="level-btn" data-level="advanced">Advanced</button>
+            </div>
+            
+            <div class="course-search">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" class="search-input" id="search-input" placeholder="Search courses...">
+            </div>
+        </div>
+    </div>
+    
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <a href="#module1" class="sidebar-item active completed">
+            <i class="fab fa-python python-icon"></i>
+            <span>Module 1: Python Basics</span>
+            <span class="progress-indicator"><i class="fas fa-check"></i></span>
+        </a>
+        <a href="#module2" class="sidebar-item completed">
+            <i class="fab fa-python python-icon"></i>
+            <span>Module 2: Variables & Data Types</span>
+            <span class="progress-indicator"><i class="fas fa-check"></i></span>
+        </a>
+        <a href="#module3" class="sidebar-item completed">
+            <i class="fab fa-python python-icon"></i>
+            <span>Module 3: Operators & Expressions</span>
+            <span class="progress-indicator"><i class="fas fa-check"></i></span>
+        </a>
+        <a href="#module4" class="sidebar-item">
+            <i class="fab fa-python python-icon"></i>
+            <span>Module 4: Lists & Tuples</span>
+            <span class="progress-indicator">4</span>
+        </a>
+        <a href="#module5" class="sidebar-item">
+            <i class="fab fa-python python-icon"></i>
+            <span>Module 5: Dictionaries & Sets</span>
+            <span class="progress-indicator">5</span>
+        </a>
+        <a href="#module6" class="sidebar-item">
+            <i class="fab fa-python python-icon"></i>
+            <span>Module 6: Control Flow</span>
+            <span class="progress-indicator">6</span>
+        </a>
+        <a href="#module7" class="sidebar-item">
+            <i class="fab fa-python python-icon"></i>
+            <span>Module 7: Functions</span>
+            <span class="progress-indicator">7</span>
+        </a>
+        <a href="#module8" class="sidebar-item">
+            <i class="fab fa-python python-icon"></i>
+            <span>Module 8: Modules & Packages</span>
+            <span class="progress-indicator">8</span>
+        </a>
+        <a href="#module9" class="sidebar-item">
+            <i class="fab fa-python python-icon"></i>
+            <span>Module 9: File Handling</span>
+            <span class="progress-indicator">9</span>
+        </a>
+        <a href="#module10" class="sidebar-item">
+            <i class="fab fa-python python-icon"></i>
+            <span>Module 10: OOP in Python</span>
+            <span class="progress-indicator">10</span>
+        </a>
+        <a href="#playground" class="sidebar-item">
+            <i class="fas fa-laptop-code"></i>
+            <span>Practice Playground</span>
+        </a>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="content-wrapper">
+        <div class="container">
+            <!-- Module 1 -->
+            <div class="course-module" id="module1" data-aos="fade-up" data-difficulty="beginner">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>PYTHON BASICS</h1>
+                    <h3>Learn the fundamental structure of Python programs</h3>
+                    <span class="difficulty">Beginner</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" class="module-icon" alt="Python Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 1: <span>Python Programming Fundamentals</span></h1>
+                    <p>Python is a versatile, high-level programming language known for its simplicity and readability. Think of Python as a powerful tool that can build web applications, analyze data, create artificial intelligence, automate tasks, and much more. Python uses clean, English-like syntax that makes it perfect for beginners.</p>
+                    
+                    <p>Every Python program follows basic principles of programming. Python is an interpreted language, meaning it executes code line by line. It's dynamically typed (you don't need to declare variable types) and supports multiple programming paradigms including object-oriented, imperative, and functional programming.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Python</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-1" spellcheck="false"># Your first Python program
+print("Hello, World!")
+print("Welcome to Python Programming!")
+
+# Basic calculations
+print("2 + 3 =", 2 + 3)
+print("10 * 5 =", 10 * 5)
+
+# Variables
+name = "SkillMynte"
+age = 2025 - 1991  # Python was created in 1991
+print(f"{name} was created in 1991")
+print(f"That makes Python {age} years old!")
+
+# Getting user input
+user_name = input("What's your name? ")
+print(f"Hello, {user_name}! Ready to learn Python?")
+
+# Simple function
+def greet(person):
+    return f"Welcome, {person}!"
+
+print(greet("Python Developer"))
+
+# Edit this code and click "Run" to see your changes!</textarea>
+                        <button class="run-btn" onclick="runCode('editor-1', 'output-1')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Output
+                        </div>
+                        <div class="preview-container" id="output-1"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li><code>print()</code> displays output to the console</li>
+                                <li>Comments start with <code>#</code> and are ignored by Python</li>
+                                <li>Python uses indentation (spaces/tabs) to define code blocks</li>
+                                <li><code>input()</code> gets user input from the console</li>
+                                <li>Variables are created by assignment (<code>name = "value"</code>)</li>
+                                <li>Functions are defined with <code>def function_name():</code></li>
+                                <li>Python supports arithmetic operations (<code>+ - * /</code>)</li>
+                                <li>Strings can use single or double quotes</li>
+                                <li>f-strings (<code>f"text {variable}"</code>) format strings with variables</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-graduation-cap"></i> Python Foundation Explained</h3>
+                            <p>Python is the fundamental programming language that powers everything from simple scripts to complex machine learning algorithms. Think of it as the Swiss Army knife of programming - versatile, powerful, and accessible to beginners while remaining capable of handling enterprise-level applications. Without Python, we wouldn't have frameworks like Django for web development, Pandas for data analysis, or TensorFlow for artificial intelligence.</p>
+                            
+                            <p>Python's "batteries included" philosophy means it comes with a rich standard library that handles everything from file operations to web protocols. The <code>print()</code> function is your window to output, <code>input()</code> gathers user data, and variables store information for later use. Python's dynamic typing means you can create a variable without specifying its type - Python figures it out automatically based on what you assign to it.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-sitemap"></i> Readable Syntax</h4>
+                                    <p>Python emphasizes code readability with clean, English-like syntax. Unlike other languages that use curly braces, Python uses indentation to define code blocks, forcing consistent formatting that makes code easier to read and maintain.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-code"></i> Interpreted Language</h4>
+                                    <p>Python is interpreted line-by-line, which means you can run code immediately without compiling. This makes development faster and debugging easier since you get instant feedback on your code.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-globe"></i> Cross-Platform Compatibility</h4>
+                                    <p>Python runs on Windows, macOS, Linux, and even mobile platforms. Write your code once and run it anywhere, making Python ideal for multi-platform development and deployment.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-building"></i> Real-World Application</h4>
+                                <p>Every major tech company uses Python - Google's search algorithms, Netflix's recommendation systems, Instagram's backend, Spotify's data analysis, and NASA's space missions. Data scientists use Python with Pandas and NumPy, web developers build with Django and Flask, AI researchers train models with TensorFlow and PyTorch, and system administrators automate tasks with scripts. Mastering Python fundamentals is the first step toward building applications that are scalable, maintainable, and professionally structured.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Create Your First Python Program:</strong> Build a simple program that includes:</p>
+                            <ul>
+                                <li>A greeting message using print()</li>
+                                <li>Variables to store your name and age</li>
+                                <li>Calculations using arithmetic operators</li>
+                                <li>User input to get information from the user</li>
+                                <li>A simple function that processes data</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 2 -->
+            <div class="course-module" id="module2" data-aos="fade-up" data-difficulty="beginner">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>VARIABLES & DATA TYPES</h1>
+                    <h3>Learn to store and manipulate different types of data</h3>
+                    <span class="difficulty">Beginner</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" class="module-icon" alt="Python Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 2: <span>Variables and Data Types</span></h1>
+                    <p>Variables are containers that store data in memory. Think of them as labeled boxes where you can put information to use later. Python supports several data types including integers (whole numbers), floats (decimal numbers), strings (text), and booleans (True/False).</p>
+                    
+                    <p>Python is dynamically typed, meaning you don't need to declare a variable's type - Python figures it out based on what you assign. This makes Python flexible and easy to use, but it's important to understand what type of data you're working with to avoid errors.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Python</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-2" spellcheck="false"># ========== VARIABLES ==========
+# Creating variables
+name = "Alice"               # String
+age = 25                    # Integer
+height = 5.7                # Float
+is_student = True           # Boolean
+courses = []                # List
+
+print("Variable Examples:")
+print(f"Name: {name} (type: {type(name)})")
+print(f"Age: {age} (type: {type(age)})")
+print(f"Height: {height} (type: {type(height)})")
+print(f"Is Student: {is_student} (type: {type(is_student)})")
+
+# ========== DATA TYPES ==========
+# Numeric Types
+integer_number = 42
+float_number = 3.14159
+complex_number = 2 + 3j
+
+print("\nNumeric Types:")
+print(f"Integer: {integer_number}")
+print(f"Float: {float_number}")
+print(f"Complex: {complex_number}")
+
+# String Operations
+text = "Python Programming"
+print("\nString Operations:")
+print(f"Original: {text}")
+print(f"Uppercase: {text.upper()}")
+print(f"Lowercase: {text.lower()}")
+print(f"Length: {len(text)} characters")
+print(f"First 6 characters: {text[:6]}")
+
+# Boolean Operations
+has_experience = True
+knows_python = False
+
+print("\nBoolean Logic:")
+print(f"has_experience AND knows_python: {has_experience and knows_python}")
+print(f"has_experience OR knows_python: {has_experience or knows_python}")
+print(f"NOT knows_python: {not knows_python}")
+
+# Type Conversion
+print("\nType Conversion:")
+number_string = "123"
+converted_number = int(number_string)
+print(f"String '123' converted to integer: {converted_number} (type: {type(converted_number)})")
+
+float_string = "3.14"
+converted_float = float(float_string)
+print(f"String '3.14' converted to float: {converted_float} (type: {type(converted_float)})")
+
+# Multiple Assignment
+x, y, z = 10, 20, 30
+print(f"\nMultiple Assignment: x={x}, y={y}, z={z}")
+
+# Constants (by convention, use uppercase)
+PI = 3.14159
+MAX_USERS = 100
+print(f"\nConstants: PI={PI}, MAX_USERS={MAX_USERS}")</textarea>
+                        <button class="run-btn" onclick="runCode('editor-2', 'output-2')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Output
+                        </div>
+                        <div class="preview-container" id="output-2"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>Variables are created with assignment: <code>variable_name = value</code></li>
+                                <li>Python has several built-in data types:
+                                    <ul>
+                                        <li><code>int</code> - whole numbers (42, -10)</li>
+                                        <li><code>float</code> - decimal numbers (3.14, -0.5)</li>
+                                        <li><code>str</code> - text ("hello", 'world')</li>
+                                        <li><code>bool</code> - True or False</li>
+                                        <li><code>list</code> - ordered collection [1, 2, 3]</li>
+                                        <li><code>tuple</code> - immutable ordered collection (1, 2, 3)</li>
+                                        <li><code>dict</code> - key-value pairs {"key": "value"}</li>
+                                        <li><code>set</code> - unordered unique collection {1, 2, 3}</li>
+                                    </ul>
+                                </li>
+                                <li>Use <code>type()</code> to check a variable's data type</li>
+                                <li>Python is case-sensitive: <code>age</code> and <code>Age</code> are different variables</li>
+                                <li>Variable names should be descriptive and use snake_case</li>
+                                <li>Constants are usually written in UPPERCASE</li>
+                                <li>Strings have many built-in methods: <code>.upper()</code>, <code>.lower()</code>, <code>.strip()</code></li>
+                                <li>Type conversion: <code>int()</code>, <code>float()</code>, <code>str()</code>, <code>bool()</code></li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-database"></i> Data Storage & Type System</h3>
+                            <p>Variables and data types form the foundation of all programming. Think of variables as labeled containers in computer memory that hold information. Python's dynamic typing system automatically determines the type of data stored in each variable, making development faster but requiring developers to be mindful of type-related operations. This flexibility is one reason Python is so popular for rapid prototyping and data science.</p>
+                            
+                            <p>Understanding Python's type hierarchy is crucial for writing efficient code. Integers and floats handle numeric calculations, strings manage text, booleans control program flow, and collections (lists, tuples, dictionaries, sets) organize multiple values. Each data type has specific characteristics: strings are immutable sequences of characters, lists are mutable ordered collections, tuples are immutable ordered collections, dictionaries map keys to values, and sets store unique unordered elements.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-memory"></i> Memory Management</h4>
+                                    <p>Python automatically manages memory allocation and deallocation through garbage collection. Variables reference objects in memory, and when no variables reference an object, Python's garbage collector frees that memory.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-exchange-alt"></i> Type Coercion</h4>
+                                    <p>Python automatically converts between compatible types in certain operations (like adding integer and float). Understanding implicit and explicit type conversion prevents bugs and ensures data integrity.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-tag"></i> Naming Conventions</h4>
+                                    <p>PEP 8 (Python's style guide) recommends snake_case for variables/functions, PascalCase for classes, and UPPERCASE for constants. Following these conventions makes code readable and maintainable.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-chart-line"></i> Data Science Applications</h4>
+                                <p>Data scientists rely heavily on Python's type system. NumPy arrays store numerical data for mathematical operations, Pandas DataFrames (built on dictionaries) organize tabular data, and strings process text data for natural language processing. Machine learning models use floats for predictions, booleans for classification labels, and integers for indexing. Financial applications use Decimal type for precise monetary calculations. Understanding data types is essential for choosing the right tool for each data processing task and optimizing performance in data-intensive applications.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Create a Personal Information Program:</strong> Build a program that:</p>
+                            <ul>
+                                <li>Stores your personal information in variables (name, age, height, student status)</li>
+                                <li>Performs calculations with different numeric types</li>
+                                <li>Manipulates strings (convert case, find length, extract parts)</li>
+                                <li>Uses boolean logic to make decisions</li>
+                                <li>Converts between different data types</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 3 -->
+            <div class="course-module" id="module3" data-aos="fade-up" data-difficulty="beginner">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>OPERATORS & EXPRESSIONS</h1>
+                    <h3>Learn to perform operations and build expressions</h3>
+                    <span class="difficulty">Beginner</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" class="module-icon" alt="Python Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 3: <span>Operators and Expressions</span></h1>
+                    <p>Operators are special symbols that perform operations on variables and values. Python provides various types of operators including arithmetic (+, -, *, /), comparison (==, !=, >, <), logical (and, or, not), and assignment (=, +=, -=) operators.</p>
+                    
+                    <p>Expressions combine variables, values, and operators to produce new values. Understanding operator precedence (which operations happen first) is crucial for writing correct expressions. Python follows mathematical precedence rules, but you can use parentheses to control evaluation order.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Python</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-3" spellcheck="false"># ========== ARITHMETIC OPERATORS ==========
+print("ARITHMETIC OPERATORS:")
+a, b = 10, 3
+
+print(f"a = {a}, b = {b}")
+print(f"Addition: {a} + {b} = {a + b}")
+print(f"Subtraction: {a} - {b} = {a - b}")
+print(f"Multiplication: {a} * {b} = {a * b}")
+print(f"Division: {a} / {b} = {a / b}")
+print(f"Floor Division: {a} // {b} = {a // b}")  # Rounds down to nearest integer
+print(f"Modulus (Remainder): {a} % {b} = {a % b}")
+print(f"Exponentiation: {a} ** {b} = {a ** b}")
+
+# ========== COMPARISON OPERATORS ==========
+print("\nCOMPARISON OPERATORS:")
+x, y = 7, 12
+
+print(f"x = {x}, y = {y}")
+print(f"Equal: {x} == {y} -> {x == y}")
+print(f"Not Equal: {x} != {y} -> {x != y}")
+print(f"Greater Than: {x} > {y} -> {x > y}")
+print(f"Less Than: {x} < {y} -> {x < y}")
+print(f"Greater Than or Equal: {x} >= {y} -> {x >= y}")
+print(f"Less Than or Equal: {x} <= {y} -> {x <= y}")
+
+# ========== LOGICAL OPERATORS ==========
+print("\nLOGICAL OPERATORS:")
+is_raining = True
+has_umbrella = False
+temperature = 25  # Celsius
+
+print(f"is_raining = {is_raining}, has_umbrella = {has_umbrella}, temperature = {temperature}°C")
+print(f"AND: is_raining AND has_umbrella -> {is_raining and has_umbrella}")
+print(f"OR: is_raining OR has_umbrella -> {is_raining or has_umbrella}")
+print(f"NOT: NOT is_raining -> {not is_raining}")
+
+# Complex logical expression
+go_outside = not is_raining or (temperature > 20 and has_umbrella)
+print(f"Complex: go_outside = NOT is_raining OR (temperature > 20 AND has_umbrella)")
+print(f"Result: {go_outside}")
+
+# ========== ASSIGNMENT OPERATORS ==========
+print("\nASSIGNMENT OPERATORS:")
+counter = 5
+print(f"Initial counter: {counter}")
+
+counter += 3  # Same as: counter = counter + 3
+print(f"After counter += 3: {counter}")
+
+counter -= 2  # Same as: counter = counter - 2
+print(f"After counter -= 2: {counter}")
+
+counter *= 4  # Same as: counter = counter * 4
+print(f"After counter *= 4: {counter}")
+
+counter //= 2  # Same as: counter = counter // 2
+print(f"After counter //= 2: {counter}")
+
+# ========== MEMBERSHIP OPERATORS ==========
+print("\nMEMBERSHIP OPERATORS:")
+fruits = ["apple", "banana", "orange", "grape"]
+
+print(f"Fruits list: {fruits}")
+print(f"'banana' in fruits: {'banana' in fruits}")
+print(f"'mango' not in fruits: {'mango' not in fruits}")
+
+# ========== IDENTITY OPERATORS ==========
+print("\nIDENTITY OPERATORS:")
+list1 = [1, 2, 3]
+list2 = [1, 2, 3]
+list3 = list1
+
+print(f"list1 = {list1}, list2 = {list2}, list3 = list1")
+print(f"list1 is list2 (same object?): {list1 is list2}")
+print(f"list1 is list3 (same object?): {list1 is list3}")
+print(f"list1 == list2 (same value?): {list1 == list2}")
+
+# ========== OPERATOR PRECEDENCE ==========
+print("\nOPERATOR PRECEDENCE:")
+result1 = 2 + 3 * 4  # Multiplication happens first: 3 * 4 = 12, then 2 + 12 = 14
+result2 = (2 + 3) * 4  # Parentheses force addition first: 2 + 3 = 5, then 5 * 4 = 20
+
+print(f"2 + 3 * 4 = {result1} (multiplication before addition)")
+print(f"(2 + 3) * 4 = {result2} (parentheses change order)")
+
+# Complex expression
+complex_result = 5 + 3 ** 2 * 2 // 4 - 1
+print(f"\n5 + 3 ** 2 * 2 // 4 - 1 = {complex_result}")
+print("Order: Exponentiation (**), then Multiplication (*),")
+print("       then Floor Division (//), then Addition (+),")
+print("       then Subtraction (-)")</textarea>
+                        <button class="run-btn" onclick="runCode('editor-3', 'output-3')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Output
+                        </div>
+                        <div class="preview-container" id="output-3"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li><strong>Arithmetic Operators:</strong> <code>+</code> (add), <code>-</code> (subtract), <code>*</code> (multiply), <code>/</code> (divide), <code>//</code> (floor divide), <code>%</code> (modulus), <code>**</code> (exponent)</li>
+                                <li><strong>Comparison Operators:</strong> <code>==</code> (equal), <code>!=</code> (not equal), <code>></code> (greater), <code><</code> (less), <code>>=</code> (greater or equal), <code><=</code> (less or equal)</li>
+                                <li><strong>Logical Operators:</strong> <code>and</code>, <code>or</code>, <code>not</code> (evaluate to True/False)</li>
+                                <li><strong>Assignment Operators:</strong> <code>=</code>, <code>+=</code>, <code>-=</code>, <code>*=</code>, <code>/=</code>, etc.</li>
+                                <li><strong>Membership Operators:</strong> <code>in</code>, <code>not in</code> (check if value exists in sequence)</li>
+                                <li><strong>Identity Operators:</strong> <code>is</code>, <code>is not</code> (check if two objects are the same)</li>
+                                <li><strong>Operator Precedence:</strong> Parentheses > Exponentiation > Multiplication/Division > Addition/Subtraction</li>
+                                <li>Use parentheses to control evaluation order: <code>(2 + 3) * 4</code></li>
+                                <li>Boolean expressions evaluate to <code>True</code> or <code>False</code></li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-calculator"></i> Computational Logic & Evaluation</h3>
+                            <p>Operators and expressions form the computational core of Python programming. Think of operators as the verbs that perform actions on data (the nouns), and expressions as complete sentences that combine these elements to produce meaningful results. Python's rich set of operators allows everything from simple arithmetic to complex logical evaluations that control program flow and decision-making.</p>
+                            
+                            <p>Understanding operator precedence is critical for writing correct code. Python follows mathematical conventions (PEMDAS/BODMAS), but subtle differences exist. For example, comparison operators have lower precedence than arithmetic operators, which means <code>2 + 3 == 5</code> evaluates as <code>(2 + 3) == 5</code>, not <code>2 + (3 == 5)</code>. Logical operators have even lower precedence, with <code>not</code> having higher precedence than <code>and</code>, which has higher precedence than <code>or</code>.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-sort-amount-down"></i> Precedence Hierarchy</h4>
+                                    <p>Python's operator precedence follows: parentheses, exponentiation, unary plus/minus, multiplication/division/modulus, addition/subtraction, bitwise shifts, bitwise AND, bitwise XOR, bitwise OR, comparisons, identity, membership, logical NOT, logical AND, logical OR, conditional expressions, lambda expressions, assignment operators.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-balance-scale"></i> Short-Circuit Evaluation</h4>
+                                    <p>Logical operators <code>and</code> and <code>or</code> use short-circuit evaluation. For <code>and</code>, if the first operand is False, Python doesn't evaluate the second. For <code>or</code>, if the first is True, Python doesn't evaluate the second. This optimizes performance and enables safe expressions.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-object-group"></i> Object Identity vs Equality</h4>
+                                    <p>The <code>is</code> operator checks object identity (same memory location), while <code>==</code> checks equality (same value). Small integers and strings may be interned (cached), causing <code>is</code> to return True even for different creations.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-robot"></i> Algorithm Implementation</h4>
+                                <p>Search algorithms use comparison operators to find elements, sorting algorithms rely on comparison chains, machine learning models evaluate complex logical expressions for decision boundaries, game engines compute physics with arithmetic operators, and database queries translate to membership and logical operations. Financial systems use precise arithmetic with Decimal types, scientific computing leverages exponentiation and modulus operations, and authentication systems combine logical operators to check multiple conditions. In each case, proper understanding of operators and expressions ensures algorithms work correctly and efficiently.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Create a Calculator Program:</strong> Build a program that:</p>
+                            <ul>
+                                <li>Performs all basic arithmetic operations</li>
+                                <li>Compares different values and displays results</li>
+                                <li>Evaluates complex logical expressions</li>
+                                <li>Demonstrates operator precedence with and without parentheses</li>
+                                <li>Uses assignment operators to modify variables</li>
+                                <li>Checks membership in collections</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 4 -->
+            <div class="course-module" id="module4" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>LISTS & TUPLES</h1>
+                    <h3>Learn to work with ordered collections</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" class="module-icon" alt="Python Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 4: <span>Lists and Tuples</span></h1>
+                    <p>Lists and tuples are ordered collections that store multiple items in a single variable. Lists are mutable (can be changed), while tuples are immutable (cannot be changed). Think of lists as flexible containers where you can add, remove, or modify items, and tuples as fixed records where items have specific positions.</p>
+                    
+                    <p>Lists use square brackets <code>[]</code> and tuples use parentheses <code>()</code>. Both support indexing (accessing items by position), slicing (extracting portions), and various operations. Lists are ideal for data that changes, while tuples are perfect for data that shouldn't change (like coordinates, database records, or function return values).</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Python</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-4" spellcheck="false"># ========== LISTS ==========
+print("=== LISTS (Mutable Ordered Collections) ===")
+
+# Creating lists
+fruits = ["apple", "banana", "orange", "grape", "mango"]
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+mixed = ["Python", 3.9, True, 42, ["nested", "list"]]
+
+print(f"Fruits: {fruits}")
+print(f"Numbers: {numbers}")
+print(f"Mixed: {mixed}")
+
+# Accessing elements (Indexing)
+print("\n--- Indexing ---")
+print(f"First fruit: {fruits[0]}")
+print(f"Last fruit: {fruits[-1]}")
+print(f"Second fruit: {fruits[1]}")
+print(f"Third from end: {fruits[-3]}")
+
+# Slicing (Getting portions)
+print("\n--- Slicing ---")
+print(f"First three fruits: {fruits[:3]}")
+print(f"Fruits from index 2: {fruits[2:]}")
+print(f"Fruits 1 to 3: {fruits[1:4]}")
+print(f"Every other fruit: {fruits[::2]}")
+print(f"Reversed list: {fruits[::-1]}")
+
+# Modifying lists
+print("\n--- Modifying Lists ---")
+fruits.append("pineapple")
+print(f"After append('pineapple'): {fruits}")
+
+fruits.insert(2, "kiwi")
+print(f"After insert(2, 'kiwi'): {fruits}")
+
+fruits[1] = "blueberry"
+print(f"After fruits[1] = 'blueberry': {fruits}")
+
+removed_fruit = fruits.pop()  # Removes and returns last item
+print(f"After pop(): {fruits}, removed: {removed_fruit}")
+
+fruits.remove("orange")
+print(f"After remove('orange'): {fruits}")
+
+# List operations
+print("\n--- List Operations ---")
+list1 = [1, 2, 3]
+list2 = [4, 5, 6]
+
+combined = list1 + list2
+print(f"list1 + list2: {combined}")
+
+repeated = list1 * 3
+print(f"list1 * 3: {repeated}")
+
+print(f"Length of fruits: {len(fruits)}")
+print(f"'banana' in fruits: {'banana' in fruits}")
+print(f"Index of 'grape': {fruits.index('grape')}")
+
+# List comprehension (powerful feature!)
+print("\n--- List Comprehension ---")
+squares = [x**2 for x in range(1, 6)]
+print(f"Squares: {squares}")
+
+even_numbers = [x for x in range(1, 11) if x % 2 == 0]
+print(f"Even numbers 1-10: {even_numbers}")
+
+# ========== TUPLES ==========
+print("\n\n=== TUPLES (Immutable Ordered Collections) ===")
+
+# Creating tuples
+coordinates = (10, 20)
+rgb_color = (255, 128, 0)
+person = ("Alice", 25, "Engineer")
+
+print(f"Coordinates: {coordinates}")
+print(f"RGB Color: {rgb_color}")
+print(f"Person: {person}")
+
+# Accessing tuple elements
+print("\n--- Tuple Access ---")
+print(f"First coordinate: {coordinates[0]}")
+print(f"Last coordinate: {coordinates[-1]}")
+print(f"Person name: {person[0]}, age: {person[1]}, job: {person[2]}")
+
+# Tuple slicing (similar to lists)
+print(f"First two color values: {rgb_color[:2]}")
+
+# Tuple unpacking
+print("\n--- Tuple Unpacking ---")
+x, y = coordinates
+print(f"Unpacked coordinates: x={x}, y={y}")
+
+name, age, profession = person
+print(f"Unpacked person: {name} is {age} years old and works as {profession}")
+
+# Multiple return values (common tuple use case)
+def get_min_max(numbers_list):
+    return min(numbers_list), max(numbers_list)
+
+min_val, max_val = get_min_max([5, 2, 8, 1, 9, 3])
+print(f"\nMin and max of [5, 2, 8, 1, 9, 3]: min={min_val}, max={max_val}")
+
+# ========== COMPARISON ==========
+print("\n\n=== LISTS vs TUPLES ===")
+print("Lists are mutable (can be changed):")
+print("  - Can add, remove, modify elements")
+print("  - Use square brackets []")
+print("  - Ideal for collections that change")
+
+print("\nTuples are immutable (cannot be changed):")
+print("  - Cannot modify after creation")
+print("  - Use parentheses ()")
+print("  - Ideal for fixed records, coordinates, database rows")
+print("  - Slightly faster than lists")
+print("  - Can be used as dictionary keys (lists cannot)")</textarea>
+                        <button class="run-btn" onclick="runCode('editor-4', 'output-4')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Output
+                        </div>
+                        <div class="preview-container" id="output-4"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li><strong>Lists:</strong> Mutable, ordered collections using <code>[]</code></li>
+                                <li><strong>Tuples:</strong> Immutable, ordered collections using <code>()</code></li>
+                                <li><strong>Indexing:</strong> Access elements with <code>list[index]</code> (0-based)</li>
+                                <li><strong>Negative indexing:</strong> <code>list[-1]</code> gets last element</li>
+                                <li><strong>Slicing:</strong> <code>list[start:stop:step]</code> extracts portions</li>
+                                <li><strong>List methods:</strong> <code>.append()</code>, <code>.insert()</code>, <code>.remove()</code>, <code>.pop()</code>, <code>.sort()</code>, <code>.reverse()</code></li>
+                                <li><strong>List comprehension:</strong> <code>[expression for item in iterable]</code></li>
+                                <li><strong>Tuple unpacking:</strong> Assign multiple variables from tuple</li>
+                                <li><strong>Immutable vs Mutable:</strong> Tuples can't be changed after creation</li>
+                                <li>Use lists for data that changes, tuples for fixed data</li>
+                                <li>Tuples are faster than lists for iteration</li>
+                                <li>Tuples can be dictionary keys, lists cannot</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-th-list"></i> Ordered Collections & Sequences</h3>
+                            <p>Lists and tuples represent Python's primary ordered collection types, forming the backbone of data organization in Python programs. Lists provide the flexibility needed for dynamic data manipulation, while tuples offer the safety and performance benefits of immutability. Understanding when to use each type is crucial for writing efficient, maintainable code that properly represents your data's nature.</p>
+                            
+                            <p>The mutability distinction has profound implications. Lists can grow, shrink, and change, making them ideal for datasets that evolve during program execution. Tuples, being immutable, guarantee that data remains consistent once created, making them perfect for representing fixed records like database rows, function arguments, or configuration settings. This immutability also allows Python to optimize tuple operations and use tuples as dictionary keys (since keys must be hashable and immutable).</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-rocket"></i> Performance Characteristics</h4>
+                                    <p>Tuples are generally faster than lists for iteration and consume less memory. Lists have overhead for growth operations. For fixed-size collections, tuples provide better performance, while lists excel when frequent modifications are needed.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-sitemap"></i> Memory Layout</h4>
+                                    <p>Lists store references to objects in a dynamic array that can resize. Tuples store their elements directly in a fixed-size structure, making memory access patterns more predictable and cache-friendly.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-shield-alt"></i> Data Integrity</h4>
+                                    <p>Tuple immutability prevents accidental modification, ensuring data consistency. This is particularly valuable in concurrent programming where multiple threads might access the same data, and in APIs where you want to guarantee consumers can't modify returned data.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-database"></i> Data Processing Applications</h4>
+                                <p>Data science pipelines use lists for processing steps that transform data, while tuples store immutable metadata about datasets. Web frameworks like Django use tuples for URL patterns and settings. Game development uses lists for dynamic entities (characters, items) and tuples for fixed properties (positions, colors). Database interfaces return query results as lists of tuples. Configuration systems store settings as nested tuples to prevent runtime modification. Machine learning models use lists for training batches and tuples for hyperparameter sets. In each application, choosing the right collection type impacts performance, safety, and code clarity.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Create a Student Grade Manager:</strong> Build a program that:</p>
+                            <ul>
+                                <li>Uses lists to store student names and their grades</li>
+                                <li>Uses tuples to store individual student records (name, grade, subject)</li>
+                                <li>Implements functions to add, remove, and modify student data</li>
+                                <li>Calculates average grades using list operations</li>
+                                <li>Uses list comprehension to filter and transform data</li>
+                                <li>Demonstrates tuple unpacking for student records</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 5 -->
+            <div class="course-module" id="module5" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>DICTIONARIES & SETS</h1>
+                    <h3>Learn to work with key-value pairs and unique collections</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" class="module-icon" alt="Python Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 5: <span>Dictionaries and Sets</span></h1>
+                    <p>Dictionaries and sets are unordered collections that provide efficient data access and manipulation. Dictionaries store key-value pairs, allowing you to look up values by their associated keys. Sets store unique, unordered elements, perfect for membership testing and mathematical set operations.</p>
+                    
+                    <p>Dictionaries use curly braces <code>{}</code> with <code>key: value</code> pairs, while sets use curly braces <code>{}</code> or <code>set()</code> for empty sets. Dictionaries are mutable and keys must be immutable (strings, numbers, tuples). Sets are mutable but can only contain immutable elements.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Python</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-5" spellcheck="false"># ========== DICTIONARIES ==========
+print("=== DICTIONARIES (Key-Value Collections) ===")
+
+# Creating dictionaries
+student = {
+    "name": "Alice",
+    "age": 21,
+    "major": "Computer Science",
+    "gpa": 3.8,
+    "courses": ["Python", "Data Structures", "Algorithms"]
+}
+
+config = {
+    "host": "localhost",
+    "port": 8080,
+    "debug": True,
+    "max_connections": 100
+}
+
+# Different ways to create dictionaries
+empty_dict = {}
+another_dict = dict(name="Bob", age=25)
+
+print(f"Student: {student}")
+print(f"Config: {config}")
+print(f"Empty dict: {empty_dict}")
+print(f"Another dict: {another_dict}")
+
+# Accessing values
+print("\n--- Accessing Dictionary Values ---")
+print(f"Student name: {student['name']}")
+print(f"Student age: {student.get('age')}")
+print(f"Student GPA: {student.get('gpa', 'Not available')}")
+
+# Using get() with default value
+print(f"Student phone (with default): {student.get('phone', 'No phone number')}")
+
+# Accessing nested data
+print(f"First course: {student['courses'][0]}")
+
+# Modifying dictionaries
+print("\n--- Modifying Dictionaries ---")
+student["year"] = "Senior"
+print(f"After adding year: {student}")
+
+student["gpa"] = 3.9
+print(f"After updating GPA: {student}")
+
+student.update({"minor": "Mathematics", "scholarship": True})
+print(f"After update(): {student}")
+
+# Removing items
+removed_age = student.pop("age")
+print(f"After pop('age'): {student}, removed: {removed_age}")
+
+del student["minor"]
+print(f"After del student['minor']: {student}")
+
+# Dictionary operations
+print("\n--- Dictionary Operations ---")
+print(f"Keys: {list(student.keys())}")
+print(f"Values: {list(student.values())}")
+print(f"Items: {list(student.items())}")
+print(f"Length: {len(student)} items")
+print(f"'name' in student: {'name' in student}")
+print(f"'phone' in student: {'phone' in student}")
+
+# Dictionary comprehension
+print("\n--- Dictionary Comprehension ---")
+numbers = [1, 2, 3, 4, 5]
+squares_dict = {x: x**2 for x in numbers}
+print(f"Squares dictionary: {squares_dict}")
+
+even_squares = {x: x**2 for x in numbers if x % 2 == 0}
+print(f"Even squares: {even_squares}")
+
+# ========== SETS ==========
+print("\n\n=== SETS (Unique Unordered Collections) ===")
+
+# Creating sets
+fruits = {"apple", "banana", "orange", "grape", "apple"}  # Duplicates removed
+numbers_set = {1, 2, 3, 4, 5, 5, 5}  # Only unique values
+empty_set = set()  # Must use set(), not {} (that's empty dict)
+
+print(f"Fruits set: {fruits}")  # Order may vary
+print(f"Numbers set: {numbers_set}")
+print(f"Empty set: {empty_set}")
+
+# Set operations
+print("\n--- Set Operations ---")
+set_a = {1, 2, 3, 4, 5}
+set_b = {4, 5, 6, 7, 8}
+
+print(f"Set A: {set_a}")
+print(f"Set B: {set_b}")
+print(f"Union (A | B): {set_a | set_b}")
+print(f"Intersection (A & B): {set_a & set_b}")
+print(f"Difference (A - B): {set_a - set_b}")
+print(f"Symmetric Difference (A ^ B): {set_a ^ set_b}")
+
+# Set methods
+print("\n--- Set Methods ---")
+colors = {"red", "green", "blue"}
+
+colors.add("yellow")
+print(f"After add('yellow'): {colors}")
+
+colors.update(["orange", "purple", "red"])  # red already exists
+print(f"After update(): {colors}")
+
+colors.remove("green")  # Raises KeyError if not found
+print(f"After remove('green'): {colors}")
+
+colors.discard("pink")  # No error if not found
+print(f"After discard('pink'): {colors}")
+
+popped_color = colors.pop()  # Removes arbitrary element
+print(f"After pop(): {colors}, removed: {popped_color}")
+
+# Set membership testing (very fast!)
+print("\n--- Membership Testing ---")
+large_set = set(range(1000000))  # 1 million elements
+print(f"Is 999999 in large_set? {999999 in large_set}")
+print(f"Is 2000000 in large_set? {2000000 in large_set}")
+
+# Set comprehension
+print("\n--- Set Comprehension ---")
+even_numbers = {x for x in range(20) if x % 2 == 0}
+print(f"Even numbers under 20: {even_numbers}")
+
+# ========== COMPARISON ==========
+print("\n\n=== DICTIONARIES vs SETS ===")
+print("Dictionaries:")
+print("  - Store key-value pairs")
+print("  - Keys must be unique and immutable")
+print("  - Fast lookup by key")
+print("  - Use {} with key:value pairs")
+
+print("\nSets:")
+print("  - Store unique, unordered elements")
+print("  - Elements must be immutable")
+print("  - Fast membership testing")
+print("  - Support mathematical set operations")
+print("  - Use {} for non-empty, set() for empty")
+
+print("\nBoth dictionaries and sets:")
+print("  - Are unordered (Python 3.7+ dicts maintain insertion order)")
+print("  - Use hash tables internally for O(1) average operations")
+print("  - Cannot contain mutable elements as keys/set members")</textarea>
+                        <button class="run-btn" onclick="runCode('editor-5', 'output-5')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Output
+                        </div>
+                        <div class="preview-container" id="output-5"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li><strong>Dictionaries:</strong> Unordered key-value pairs using <code>{key: value}</code></li>
+                                <li><strong>Sets:</strong> Unordered unique elements using <code>{element}</code> or <code>set()</code></li>
+                                <li><strong>Dictionary methods:</strong> <code>.keys()</code>, <code>.values()</code>, <code>.items()</code>, <code>.get()</code>, <code>.update()</code>, <code>.pop()</code></li>
+                                <li><strong>Set operations:</strong> Union <code>|</code>, Intersection <code>&</code>, Difference <code>-</code>, Symmetric Difference <code>^</code></li>
+                                <li><strong>Set methods:</strong> <code>.add()</code>, <code>.remove()</code>, <code>.discard()</code>, <code>.pop()</code>, <code>.update()</code></li>
+                                <li><strong>Membership testing:</strong> <code>in</code> operator (very fast for sets/dicts)</li>
+                                <li><strong>Dictionary comprehension:</strong> <code>{key: value for item in iterable}</code></li>
+                                <li><strong>Set comprehension:</strong> <code>{expression for item in iterable}</code></li>
+                                <li>Dictionary keys and set elements must be immutable (hashable)</li>
+                                <li>Both use hash tables for O(1) average lookup time</li>
+                                <li>Python 3.7+ dictionaries maintain insertion order</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-project-diagram"></i> Hash-Based Collections</h3>
+                            <p>Dictionaries and sets represent Python's hash-based collections, providing extremely fast lookup operations through hash table implementation. Dictionaries map unique, immutable keys to values, creating associative arrays that excel at representing structured data. Sets store unique elements, offering mathematical set operations and rapid membership testing. Both collections are fundamental to writing efficient Python code for data-intensive applications.</p>
+                            
+                            <p>The hash table implementation gives dictionaries and sets their characteristic O(1) average time complexity for lookup, insertion, and deletion operations. This makes them dramatically faster than lists for membership testing (<code>in</code> operator). However, this performance comes with constraints: dictionary keys and set elements must be hashable (immutable). Understanding hashability and the trade-offs between different collection types is essential for optimizing Python programs.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-bolt"></i> Hash Table Performance</h4>
+                                    <p>Dictionaries and sets use hash tables that provide O(1) average case operations. Collisions are handled through open addressing, and Python dynamically resizes tables to maintain performance as items are added.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-lock"></i> Hashability Requirements</h4>
+                                    <p>Only immutable types (strings, numbers, tuples of immutables) are hashable and can be dictionary keys or set elements. This ensures hash values remain constant, maintaining hash table integrity.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-random"></i> Order Preservation</h4>
+                                    <p>Python 3.7+ dictionaries maintain insertion order as a language feature. Sets remain unordered. This distinction affects iteration behavior and has implications for data serialization and debugging.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-cogs"></i> System Design Applications</h4>
+                                <p>Web frameworks use dictionaries for request/response headers, URL parameters, and session data. Configuration systems store settings as nested dictionaries. Caching systems use dictionaries for memoization. Database ORMs map rows to dictionaries. Sets track unique visitors, find common interests in social networks, and remove duplicates from datasets. Graph algorithms use sets for visited nodes. Compilers use dictionaries for symbol tables. JSON serialization relies on dictionary representation. In each application, choosing between dictionaries, sets, and other collections impacts memory usage, performance, and code clarity.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Create a Contact Management System:</strong> Build a program that:</p>
+                            <ul>
+                                <li>Uses dictionaries to store contact information (name, phone, email)</li>
+                                <li>Uses sets to manage contact groups (family, friends, work)</li>
+                                <li>Implements functions to add, remove, and search contacts</li>
+                                <li>Uses dictionary comprehension to transform data</li>
+                                <li>Performs set operations to find contacts in multiple groups</li>
+                                <li>Demonstrates fast membership testing with large datasets</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 6 -->
+            <div class="course-module" id="module6" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>CONTROL FLOW</h1>
+                    <h3>Learn to control program execution flow</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" class="module-icon" alt="Python Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 6: <span>Control Flow Statements</span></h1>
+                    <p>Control flow statements determine the order in which code executes. Python provides several control structures including conditionals (if/elif/else) for decision-making, loops (for/while) for repetition, and control statements (break, continue, pass) for fine-grained control.</p>
+                    
+                    <p>Conditionals allow your program to make decisions based on conditions. Loops enable you to execute code repeatedly. Together, these constructs allow you to write programs that can handle complex logic, process data efficiently, and respond dynamically to different situations.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Python</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-6" spellcheck="false"># ========== CONDITIONAL STATEMENTS ==========
+print("=== CONDITIONAL STATEMENTS (if/elif/else) ===")
+
+# Basic if statement
+print("\n--- Basic if Statement ---")
+temperature = 25
+
+if temperature > 30:
+    print("It's hot outside!")
+elif temperature > 20:
+    print("It's warm outside.")
+elif temperature > 10:
+    print("It's cool outside.")
+else:
+    print("It's cold outside!")
+
+print(f"Temperature: {temperature}°C")
+
+# Nested conditionals
+print("\n--- Nested Conditionals ---")
+age = 18
+has_license = True
+
+if age >= 18:
+    if has_license:
+        print("You can drive a car.")
+    else:
+        print("You're old enough but need a license.")
+else:
+    print("You're too young to drive.")
+
+# Ternary operator (conditional expression)
+print("\n--- Ternary Operator ---")
+score = 85
+result = "Pass" if score >= 60 else "Fail"
+print(f"Score: {score}, Result: {result}")
+
+# Multiple conditions
+print("\n--- Multiple Conditions ---")
+is_weekend = False
+time = 14  # 2 PM
+
+if is_weekend and (9 <= time <= 17):
+    print("Store is open on weekend.")
+elif not is_weekend and (8 <= time <= 18):
+    print("Store is open on weekday.")
+else:
+    print("Store is closed.")
+
+# ========== LOOPS ==========
+print("\n\n=== LOOPS (for/while) ===")
+
+# For loop with range
+print("\n--- For Loop with range() ---")
+print("Counting from 1 to 5:")
+for i in range(1, 6):
+    print(f"  Number: {i}")
+
+print("\nCounting by 2s:")
+for i in range(0, 10, 2):
+    print(f"  Even number: {i}")
+
+print("\nCounting backwards:")
+for i in range(5, 0, -1):
+    print(f"  Countdown: {i}")
+
+# For loop with lists
+print("\n--- For Loop with Lists ---")
+fruits = ["apple", "banana", "orange", "grape"]
+
+print("Fruits in list:")
+for fruit in fruits:
+    print(f"  - {fruit}")
+
+print("\nFruits with index:")
+for index, fruit in enumerate(fruits):
+    print(f"  {index + 1}. {fruit}")
+
+# For loop with dictionaries
+print("\n--- For Loop with Dictionaries ---")
+student = {"name": "Alice", "age": 21, "major": "CS", "gpa": 3.8}
+
+print("Student dictionary items:")
+for key, value in student.items():
+    print(f"  {key}: {value}")
+
+# While loop
+print("\n--- While Loop ---")
+count = 1
+print("Counting with while loop:")
+while count <= 5:
+    print(f"  Count: {count}")
+    count += 1  # Important: don't forget to update!
+
+# While loop with user input
+print("\n--- While Loop with User Input ---")
+total = 0
+numbers_count = 0
+
+print("Enter numbers to sum (enter 'done' to finish):")
+while True:
+    user_input = input("Enter a number: ")
+    
+    if user_input.lower() == 'done':
+        break
+    
+    try:
+        number = float(user_input)
+        total += number
+        numbers_count += 1
+    except ValueError:
+        print("Please enter a valid number or 'done'")
+
+if numbers_count > 0:
+    average = total / numbers_count
+    print(f"\nSum: {total}")
+    print(f"Count: {numbers_count}")
+    print(f"Average: {average:.2f}")
+else:
+    print("\nNo numbers were entered.")
+
+# ========== LOOP CONTROL STATEMENTS ==========
+print("\n\n=== LOOP CONTROL (break/continue/pass) ===")
+
+# Break statement
+print("\n--- Break Statement ---")
+print("Finding first number divisible by 7:")
+for i in range(1, 51):
+    if i % 7 == 0:
+        print(f"  Found: {i}")
+        break
+    print(f"  Checking: {i}")
+
+# Continue statement
+print("\n--- Continue Statement ---")
+print("Odd numbers from 1 to 10:")
+for i in range(1, 11):
+    if i % 2 == 0:  # Skip even numbers
+        continue
+    print(f"  Odd: {i}")
+
+# Pass statement
+print("\n--- Pass Statement ---")
+for i in range(5):
+    if i == 2:
+        pass  # Do nothing, placeholder for future code
+    else:
+        print(f"  i = {i}")
+
+# ========== NESTED LOOPS ==========
+print("\n\n=== NESTED LOOPS ===")
+
+print("Multiplication table (1-3):")
+for i in range(1, 4):
+    for j in range(1, 4):
+        print(f"  {i} × {j} = {i * j}", end="   ")
+    print()  # New line after each row
+
+# ========== ELSE WITH LOOPS ==========
+print("\n\n=== ELSE WITH LOOPS ===")
+
+# Else with for loop
+print("Searching for number 5 in range 1-10:")
+for i in range(1, 11):
+    if i == 5:
+        print(f"  Found {i}!")
+        break
+else:
+    print("  Number 5 not found.")  # Executes if loop completes without break
+
+print("\nSearching for number 15 in range 1-10:")
+for i in range(1, 11):
+    if i == 15:
+        print(f"  Found {i}!")
+        break
+else:
+    print("  Number 15 not found.")  # This will execute
+
+# ========== PRACTICAL EXAMPLE ==========
+print("\n\n=== PRACTICAL EXAMPLE: Number Guessing Game ===")
+import random
+
+secret_number = random.randint(1, 100)
+attempts = 0
+max_attempts = 7
+
+print("I'm thinking of a number between 1 and 100.")
+print(f"You have {max_attempts} attempts to guess it.")
+
+while attempts < max_attempts:
+    try:
+        guess = int(input(f"\nAttempt {attempts + 1}/{max_attempts}: Enter your guess: "))
+        attempts += 1
+        
+        if guess < secret_number:
+            print("Too low! Try higher.")
+        elif guess > secret_number:
+            print("Too high! Try lower.")
+        else:
+            print(f"Congratulations! You guessed it in {attempts} attempts!")
+            break
+    except ValueError:
+        print("Please enter a valid number.")
+
+if attempts == max_attempts and guess != secret_number:
+    print(f"\nGame over! The number was {secret_number}.")</textarea>
+                        <button class="run-btn" onclick="runCode('editor-6', 'output-6')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Output
+                        </div>
+                        <div class="preview-container" id="output-6"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li><strong>Conditionals:</strong> <code>if</code>, <code>elif</code>, <code>else</code> for decision-making</li>
+                                <li><strong>Ternary operator:</strong> <code>x if condition else y</code> for simple conditions</li>
+                                <li><strong>For loops:</strong> Iterate over sequences (lists, strings, ranges, etc.)</li>
+                                <li><strong>While loops:</strong> Repeat while condition is True</li>
+                                <li><strong>Range function:</strong> <code>range(start, stop, step)</code> generates number sequences</li>
+                                <li><strong>Loop control:</strong> <code>break</code> (exit loop), <code>continue</code> (skip to next iteration), <code>pass</code> (do nothing)</li>
+                                <li><strong>Enumerate:</strong> <code>for index, value in enumerate(sequence)</code> gets index and value</li>
+                                <li><strong>Else with loops:</strong> Executes when loop completes normally (without break)</li>
+                                <li><strong>Nested loops:</strong> Loops inside other loops for multi-dimensional iteration</li>
+                                <li>Always update while loop conditions to avoid infinite loops</li>
+                                <li>Use meaningful variable names in loop counters</li>
+                                <li>Consider list comprehension as an alternative to simple loops</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-sitemap"></i> Program Logic & Execution Flow</h3>
+                            <p>Control flow statements form the logical backbone of all programming, determining how and when code executes. Conditionals enable programs to make decisions based on data, loops allow repetitive execution without code duplication, and control statements provide fine-grained management of iteration. Mastering control flow is essential for transforming simple scripts into complex, responsive applications that can handle diverse scenarios and data patterns.</p>
+                            
+                            <p>Python's control structures emphasize readability through clean syntax and meaningful keywords. The indentation-based block structure (unique among mainstream languages) visually represents logical groupings, making code self-documenting. Python also provides several specialized loop patterns: <code>enumerate()</code> for index-value pairs, <code>zip()</code> for parallel iteration, and the else clause for loops that completes when no <code>break</code> occurs. These features reduce boilerplate code and common errors.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-infinity"></i> Loop Optimization</h4>
+                                    <p>Python loops have overhead that can impact performance with large datasets. Techniques like list comprehension, generator expressions, and built-in functions (<code>map()</code>, <code>filter()</code>) often provide better performance and readability for data transformation tasks.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-project-diagram"></i> Control Flow Patterns</h4>
+                                    <p>Common patterns include sentinel loops (checking for special values), accumulator patterns (building results incrementally), nested loops for multi-dimensional data, and guard clauses that exit early from functions or loops to reduce nesting.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-exclamation-triangle"></i> Common Pitfalls</h4>
+                                    <p>Infinite loops from missing updates, off-by-one errors with ranges, modifying collections while iterating over them, and excessive nesting that reduces readability. Python's <code>enumerate()</code> and comprehension syntax help avoid many of these issues.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-cogs"></i> Algorithm Implementation</h4>
+                                <p>Search algorithms use loops to traverse data structures, sorting algorithms employ nested loops for comparisons, game engines run main loops that process events and update state, web servers handle request loops, data pipelines process streams with while loops, and machine learning models train with iterative optimization loops. Business logic uses conditionals for decision trees, validation systems apply conditional chains to check inputs, and user interfaces manage state with control flow. In each domain, proper control flow design affects correctness, performance, and maintainability.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Create a Data Analysis Program:</strong> Build a program that:</p>
+                            <ul>
+                                <li>Processes a list of numbers with various conditional checks</li>
+                                <li>Uses for loops to calculate statistics (mean, median, mode)</li>
+                                <li>Implements a while loop for interactive data entry</li>
+                                <li>Uses nested loops to create patterns or process 2D data</li>
+                                <li>Demonstrates break, continue, and pass in practical scenarios</li>
+                                <li>Includes a complex conditional structure for data categorization</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 7 -->
+            <div class="course-module" id="module7" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>FUNCTIONS</h1>
+                    <h3>Learn to create reusable code blocks</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" class="module-icon" alt="Python Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 7: <span>Functions and Modular Programming</span></h1>
+                    <p>Functions are reusable blocks of code that perform specific tasks. They help organize code into logical units, reduce repetition, and make programs easier to understand and maintain. Python functions are defined with the <code>def</code> keyword and can accept parameters, return values, and have default arguments.</p>
+                    
+                    <p>Functions promote modular programming - breaking complex problems into smaller, manageable pieces. Well-designed functions do one thing well, have clear names, and can be tested independently. Python also supports lambda functions (anonymous functions), decorators, and higher-order functions.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Python</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-7" spellcheck="false"># ========== BASIC FUNCTIONS ==========
+print("=== BASIC FUNCTION DEFINITION ===")
+
+# Simple function without parameters
+def greet():
+    """Display a greeting message."""
+    print("Hello, welcome to Python Functions!")
+
+# Function with parameters
+def greet_person(name):
+    """Greet a specific person."""
+    print(f"Hello, {name}! Nice to meet you.")
+
+# Function with return value
+def add_numbers(a, b):
+    """Add two numbers and return the result."""
+    return a + b
+
+# Function with multiple return values
+def get_min_max(numbers):
+    """Find minimum and maximum values in a list."""
+    if not numbers:  # Check if list is empty
+        return None, None
+    return min(numbers), max(numbers)
+
+# Testing the functions
+print("Testing basic functions:")
+greet()
+greet_person("Alice")
+
+result = add_numbers(5, 3)
+print(f"5 + 3 = {result}")
+
+min_val, max_val = get_min_max([5, 2, 8, 1, 9, 3])
+print(f"Min: {min_val}, Max: {max_val}")
+
+# ========== FUNCTION PARAMETERS ==========
+print("\n\n=== FUNCTION PARAMETERS ===")
+
+# Default parameters
+def describe_pet(name, animal_type="dog"):
+    """Describe a pet with optional animal type."""
+    print(f"I have a {animal_type} named {name}.")
+
+# Keyword arguments
+def create_user(username, email, age, is_admin=False):
+    """Create a user with keyword arguments."""
+    user = {
+        "username": username,
+        "email": email,
+        "age": age,
+        "is_admin": is_admin
+    }
+    return user
+
+# Variable-length arguments (*args)
+def sum_numbers(*args):
+    """Sum any number of arguments."""
+    total = 0
+    for number in args:
+        total += number
+    return total
+
+# Variable-length keyword arguments (**kwargs)
+def print_user_info(**kwargs):
+    """Print user information from keyword arguments."""
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")
+
+# Testing parameter variations
+print("Testing parameter variations:")
+describe_pet("Buddy")
+describe_pet("Whiskers", "cat")
+
+user1 = create_user("alice123", "alice@example.com", 25)
+user2 = create_user("bob456", "bob@example.com", 30, is_admin=True)
+print(f"User1: {user1}")
+print(f"User2: {user2}")
+
+print(f"Sum of 1, 2, 3: {sum_numbers(1, 2, 3)}")
+print(f"Sum of 10, 20, 30, 40: {sum_numbers(10, 20, 30, 40)}")
+
+print("\nUser info:")
+print_user_info(name="Alice", age=25, city="New York", occupation="Engineer")
+
+# ========== SCOPE AND NAMESPACES ==========
+print("\n\n=== SCOPE AND NAMESPACES ===")
+
+global_variable = "I'm global"
+
+def demonstrate_scope():
+    """Demonstrate local and global scope."""
+    local_variable = "I'm local"
+    global_modified = global_variable + " (modified)"
+    
+    print(f"Inside function:")
+    print(f"  Local variable: {local_variable}")
+    print(f"  Global variable: {global_variable}")
+    print(f"  Modified global: {global_modified}")
+    
+    # Nested function
+    def inner_function():
+        inner_variable = "I'm in inner function"
+        print(f"  Inside inner function: {inner_variable}")
+    
+    inner_function()
+    # print(inner_variable)  # This would cause an error
+
+print("Demonstrating scope:")
+demonstrate_scope()
+print(f"Outside function - Global variable: {global_variable}")
+# print(local_variable)  # This would cause an error
+
+# ========== LAMBDA FUNCTIONS ==========
+print("\n\n=== LAMBDA FUNCTIONS (Anonymous) ===")
+
+# Regular function for comparison
+def square(x):
+    return x ** 2
+
+# Equivalent lambda function
+square_lambda = lambda x: x ** 2
+
+# Lambda with multiple parameters
+multiply = lambda x, y: x * y
+
+# Lambda in higher-order functions
+numbers = [1, 2, 3, 4, 5]
+squared = list(map(lambda x: x ** 2, numbers))
+evens = list(filter(lambda x: x % 2 == 0, numbers))
+
+print(f"Square using regular function: {square(5)}")
+print(f"Square using lambda: {square_lambda(5)}")
+print(f"Multiply using lambda: {multiply(4, 5)}")
+print(f"Numbers: {numbers}")
+print(f"Squared using map+lambda: {squared}")
+print(f"Even numbers using filter+lambda: {evens}")
+
+# ========== DECORATORS ==========
+print("\n\n=== DECORATORS ===")
+
+# Basic decorator
+def simple_decorator(func):
+    """A simple decorator that adds timing."""
+    def wrapper():
+        print("=" * 40)
+        print(f"Calling function: {func.__name__}")
+        result = func()
+        print(f"Function completed successfully")
+        print("=" * 40)
+        return result
+    return wrapper
+
+@simple_decorator
+def say_hello():
+    print("Hello from decorated function!")
+
+# Decorator with arguments
+def repeat(n_times):
+    """Decorator that repeats function execution."""
+    def decorator(func):
+        def wrapper(*args, **kwargs):
+            for i in range(n_times):
+                print(f"\nIteration {i + 1}:")
+                result = func(*args, **kwargs)
+            return result
+        return wrapper
+    return decorator
+
+@repeat(n_times=3)
+def greet_with_name(name):
+    print(f"Hello, {name}!")
+
+print("Testing decorators:")
+say_hello()
+greet_with_name("Python Developer")
+
+# ========== RECURSION ==========
+print("\n\n=== RECURSIVE FUNCTIONS ===")
+
+def factorial(n):
+    """Calculate factorial using recursion."""
+    if n == 0 or n == 1:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+def fibonacci(n):
+    """Generate Fibonacci sequence using recursion."""
+    if n <= 0:
+        return []
+    elif n == 1:
+        return [0]
+    elif n == 2:
+        return [0, 1]
+    else:
+        fib_seq = fibonacci(n - 1)
+        fib_seq.append(fib_seq[-1] + fib_seq[-2])
+        return fib_seq
+
+print(f"Factorial of 5: {factorial(5)}")
+print(f"Factorial of 7: {factorial(7)}")
+
+print(f"First 10 Fibonacci numbers: {fibonacci(10)}")
+
+# ========== PRACTICAL EXAMPLE ==========
+print("\n\n=== PRACTICAL EXAMPLE: Calculator Module ===")
+
+def calculator():
+    """Interactive calculator using functions."""
+    
+    def add(a, b):
+        return a + b
+    
+    def subtract(a, b):
+        return a - b
+    
+    def multiply(a, b):
+        return a * b
+    
+    def divide(a, b):
+        if b == 0:
+            return "Error: Division by zero"
+        return a / b
+    
+    def power(a, b):
+        return a ** b
+    
+    operations = {
+        '+': add,
+        '-': subtract,
+        '*': multiply,
+        '/': divide,
+        '**': power
+    }
+    
+    print("Available operations: +, -, *, /, **")
+    
+    try:
+        num1 = float(input("Enter first number: "))
+        operator = input("Enter operator: ")
+        num2 = float(input("Enter second number: "))
+        
+        if operator in operations:
+            result = operations[operator](num1, num2)
+            print(f"{num1} {operator} {num2} = {result}")
+        else:
+            print("Invalid operator!")
+    
+    except ValueError:
+        print("Please enter valid numbers!")
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
+# Uncomment to run the calculator
+# calculator()</textarea>
+                        <button class="run-btn" onclick="runCode('editor-7', 'output-7')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Output
+                        </div>
+                        <div class="preview-container" id="output-7"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li><strong>Function definition:</strong> <code>def function_name(parameters):</code></li>
+                                <li><strong>Docstrings:</strong> Triple-quoted strings that document functions</li>
+                                <li><strong>Parameters vs Arguments:</strong> Parameters are in definition, arguments are passed</li>
+                                <li><strong>Default parameters:</strong> <code>def func(param=default_value)</code></li>
+                                <li><strong>Keyword arguments:</strong> Specify arguments by parameter name</li>
+                                <li><strong>*args:</strong> Collects extra positional arguments as tuple</li>
+                                <li><strong>**kwargs:</strong> Collects extra keyword arguments as dictionary</li>
+                                <li><strong>Return statement:</strong> Sends value back to caller (returns None if omitted)</li>
+                                <li><strong>Scope:</strong> Local (inside function) vs Global (module-level) variables</li>
+                                <li><strong>Lambda functions:</strong> Anonymous functions: <code>lambda params: expression</code></li>
+                                <li><strong>Decorators:</strong> Functions that modify other functions</li>
+                                <li><strong>Recursion:</strong> Functions that call themselves (need base case)</li>
+                                <li>Functions are first-class objects (can be assigned, passed, returned)</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-puzzle-piece"></i> Modular Code Organization</h3>
+                            <p>Functions represent the fundamental unit of code organization in Python, enabling modular programming where complex systems are decomposed into smaller, reusable, and testable components. Well-designed functions encapsulate specific functionality, hide implementation details behind clean interfaces, and promote code reuse. This modular approach is essential for building maintainable software that can evolve over time without becoming unmanageable.</p>
+                            
+                            <p>Python's function system is remarkably flexible, supporting multiple parameter patterns, first-class functions, closures, and decorators. Functions are objects that can be assigned to variables, stored in data structures, passed as arguments, and returned from other functions. This functional programming capability allows elegant solutions to problems involving transformation pipelines, callback systems, and dynamic behavior. Understanding these features separates basic Python usage from advanced, idiomatic Python programming.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-box"></i> Function Objects</h4>
+                                    <p>Python functions are first-class objects with attributes like <code>__name__</code>, <code>__doc__</code>, and <code>__annotations__</code>. They can be introspected, modified, and even created dynamically at runtime using <code>types.FunctionType</code> or <code>exec()</code>.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-layer-group"></i> Namespace Hierarchy</h4>
+                                    <p>Python uses LEGB rule for name resolution: Local, Enclosing (nonlocal), Global, Built-in. Understanding this hierarchy is crucial for debugging scope issues and designing clean interfaces between function layers.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-magic"></i> Decorator Patterns</h4>
+                                    <p>Decorators implement cross-cutting concerns like logging, timing, authentication, and caching without modifying function code. They can be stacked, parameterized, and applied to classes as well as functions.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-industry"></i> Enterprise Software Design</h4>
+                                <p>Web frameworks like Django and Flask route URLs to handler functions, middleware uses decorators for authentication, and view functions return HTTP responses. Data pipelines compose transformation functions, ETL systems use function chains, and batch processors apply functions to datasets. Testing frameworks discover test functions, mocking libraries replace functions, and assertion libraries provide helper functions. API clients use callback functions for async operations, GUI frameworks bind functions to events, and game engines use update functions per frame. In each domain, function design patterns affect system architecture, testability, and team collaboration.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Create a Utility Module:</strong> Build a module with various utility functions:</p>
+                            <ul>
+                                <li>Mathematical functions with different parameter patterns</li>
+                                <li>String processing functions using default and keyword arguments</li>
+                                <li>Data validation functions using *args and **kwargs</li>
+                                <li>A decorator that logs function execution</li>
+                                <li>Recursive functions for tree traversal or mathematical sequences</li>
+                                <li>Higher-order functions that operate on other functions</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 8 -->
+            <div class="course-module" id="module8" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>MODULES & PACKAGES</h1>
+                    <h3>Learn to organize code into reusable modules</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" class="module-icon" alt="Python Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 8: <span>Modules, Packages, and Code Organization</span></h1>
+                    <p>Modules and packages help organize Python code into logical, reusable units. A module is a single Python file (.py) containing code, while a package is a directory containing multiple modules and a special <code>__init__.py</code> file. This structure allows you to build large applications without everything in one file.</p>
+                    
+                    <p>Python's standard library includes hundreds of modules for common tasks like file I/O, networking, mathematics, and more. You can also create your own modules and packages, import third-party packages using pip, and manage dependencies for your projects.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Python</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-8" spellcheck="false"># ========== IMPORTING MODULES ==========
+print("=== IMPORTING STANDARD LIBRARY MODULES ===")
+
+# Different import styles
+import math  # Import entire module
+from datetime import datetime, date  # Import specific names
+from random import randint as rint  # Import with alias
+import json  # Import for later use
+
+print("Demonstrating different imports:")
+
+# Using math module
+print("\n--- Math Module ---")
+print(f"π (pi) = {math.pi}")
+print(f"Square root of 16 = {math.sqrt(16)}")
+print(f"Cosine of 60° = {math.cos(math.radians(60)):.3f}")
+print(f"Factorial of 5 = {math.factorial(5)}")
+
+# Using datetime module
+print("\n--- Datetime Module ---")
+now = datetime.now()
+today = date.today()
+print(f"Current datetime: {now}")
+print(f"Current date: {today}")
+print(f"Formatted date: {today.strftime('%A, %B %d, %Y')}")
+print(f"Year: {now.year}, Month: {now.month}, Day: {now.day}")
+
+# Using random module with alias
+print("\n--- Random Module ---")
+print(f"Random integer 1-10: {rint(1, 10)}")
+print(f"Random integer 1-100: {rint(1, 100)}")
+
+# ========== CREATING CUSTOM MODULES ==========
+print("\n\n=== CREATING AND USING CUSTOM MODULES ===")
+
+# Simulating a custom module (normally this would be in a separate file)
+# Let's create a "virtual" module by defining its contents here
+
+class Calculator:
+    """A simple calculator class."""
+    
+    @staticmethod
+    def add(a, b):
+        return a + b
+    
+    @staticmethod
+    def multiply(a, b):
+        return a * b
+    
+    @staticmethod
+    def power(base, exponent):
+        return base ** exponent
+
+def greet(name):
+    """Greet a person."""
+    return f"Hello, {name}!"
+
+def fibonacci(n):
+    """Generate first n Fibonacci numbers."""
+    sequence = [0, 1]
+    while len(sequence) < n:
+        sequence.append(sequence[-1] + sequence[-2])
+    return sequence[:n]
+
+# Module-level variable
+MODULE_VERSION = "1.0.0"
+
+# Now let's use our "module"
+print("Using custom module functions:")
+print(f"Greeting: {greet('Python Developer')}")
+print(f"5 + 3 = {Calculator.add(5, 3)}")
+print(f"5 * 3 = {Calculator.multiply(5, 3)}")
+print(f"First 10 Fibonacci numbers: {fibonacci(10)}")
+print(f"Module version: {MODULE_VERSION}")
+
+# ========== PACKAGE STRUCTURE ==========
+print("\n\n=== PACKAGE STRUCTURE ===")
+
+# Simulating package structure
+print("Example package structure:")
+print("""
+my_package/
+├── __init__.py          # Package initialization
+├── utils.py             # Utility functions
+├── models.py            # Data models
+├── api/
+│   ├── __init__.py     # Sub-package
+│   ├── client.py       # API client
+│   └── auth.py         # Authentication
+└── tests/               # Test directory (not a package)
+    ├── test_utils.py
+    └── test_models.py
+""")
+
+print("\nHow to import from packages:")
+print("  import my_package.utils")
+print("  from my_package.api import client")
+print("  from my_package.models import User, Product")
+
+# ========== IMPORT PATTERNS ==========
+print("\n\n=== IMPORT PATTERNS AND BEST PRACTICES ===")
+
+# Conditional imports
+try:
+    import numpy as np
+    NUMPY_AVAILABLE = True
+    print("NumPy is available")
+except ImportError:
+    NUMPY_AVAILABLE = False
+    print("NumPy is not available")
+
+# Import within functions (for optional dependencies)
+def advanced_calculation():
+    """Function that uses optional dependency."""
+    try:
+        import pandas as pd
+        # Use pandas for calculation
+        return "Using pandas for advanced calculation"
+    except ImportError:
+        # Fallback to basic calculation
+        return "Using basic calculation (pandas not available)"
+
+print(f"\nAdvanced calculation: {advanced_calculation()}")
+
+# Dynamic imports
+module_name = "json"  # Could be determined at runtime
+print(f"\nDynamically importing {module_name}:")
+try:
+    imported_module = __import__(module_name)
+    print(f"Successfully imported {imported_module.__name__}")
+except ImportError as e:
+    print(f"Failed to import {module_name}: {e}")
+
+# ========== STANDARD LIBRARY HIGHLIGHTS ==========
+print("\n\n=== STANDARD LIBRARY HIGHLIGHTS ===")
+
+# os module - operating system interface
+import os
+
+print("--- OS Module ---")
+print(f"Current working directory: {os.getcwd()}")
+print(f"Operating system: {os.name}")
+print(f"Environment variable HOME: {os.environ.get('HOME', 'Not set')}")
+
+# sys module - system-specific parameters
+import sys
+
+print("\n--- Sys Module ---")
+print(f"Python version: {sys.version}")
+print(f"Platform: {sys.platform}")
+print(f"Command line arguments: {sys.argv}")
+print(f"Module search path: {sys.path[:3]}...")  # First 3 entries
+
+# collections module - specialized container datatypes
+from collections import Counter, defaultdict, namedtuple
+
+print("\n--- Collections Module ---")
+# Counter
+words = ["apple", "banana", "apple", "orange", "banana", "apple"]
+word_count = Counter(words)
+print(f"Word counts: {word_count}")
+print(f"Most common: {word_count.most_common(2)}")
+
+# defaultdict
+inventory = defaultdict(int)
+inventory["apples"] = 10
+inventory["oranges"] += 5  # No KeyError, starts at 0
+print(f"Inventory: {dict(inventory)}")
+
+# namedtuple
+Point = namedtuple("Point", ["x", "y"])
+p = Point(10, 20)
+print(f"Point: x={p.x}, y={p.y}")
+
+# ========== VIRTUAL ENVIRONMENTS ==========
+print("\n\n=== VIRTUAL ENVIRONMENTS ===")
+
+print("Why use virtual environments?")
+print("1. Isolate project dependencies")
+print("2. Avoid version conflicts between projects")
+print("3. Reproduce exact environment for deployment")
+
+print("\nCommon commands:")
+print("  python -m venv myenv          # Create virtual environment")
+print("  source myenv/bin/activate     # Activate (Linux/Mac)")
+print("  myenv\\Scripts\\activate      # Activate (Windows)")
+print("  deactivate                    # Deactivate")
+print("  pip install package_name      # Install package")
+print("  pip freeze > requirements.txt # Save dependencies")
+print("  pip install -r requirements.txt # Install from file")
+
+# ========== PRACTICAL EXAMPLE ==========
+print("\n\n=== PRACTICAL EXAMPLE: Project Structure ===")
+
+print("""
+# requirements.txt
+flask==2.0.1
+requests==2.26.0
+pandas==1.3.3
+
+# main.py
+from myapp import create_app
+
+app = create_app()
+
+if __name__ == "__main__":
+    app.run(debug=True)
+
+# myapp/__init__.py
+from flask import Flask
+from . import routes, models, utils
+
+def create_app():
+    app = Flask(__name__)
+    
+    # Configuration
+    app.config.from_object('config.Config')
+    
+    # Initialize extensions
+    db.init_app(app)
+    
+    # Register blueprints
+    app.register_blueprint(routes.bp)
+    
+    return app
+
+# myapp/routes.py
+from flask import Blueprint, render_template, jsonify
+
+bp = Blueprint('main', __name__)
+
+@bp.route('/')
+def index():
+    return render_template('index.html')
+
+@bp.route('/api/data')
+def get_data():
+    data = {"message": "Hello from API!"}
+    return jsonify(data)
+""")
+
+print("\nThis structure allows:")
+print("• Organized code separation")
+print("• Easy testing of individual components")
+print("• Team collaboration on different parts")
+print("• Scalability as project grows")</textarea>
+                        <button class="run-btn" onclick="runCode('editor-8', 'output-8')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Output
+                        </div>
+                        <div class="preview-container" id="output-8"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li><strong>Module:</strong> Single Python file (.py) containing code</li>
+                                <li><strong>Package:</strong> Directory with <code>__init__.py</code> and modules</li>
+                                <li><strong>Import styles:</strong> <code>import module</code>, <code>from module import name</code>, <code>import module as alias</code></li>
+                                <li><strong>Standard Library:</strong> Built-in modules for common tasks (math, os, sys, datetime, etc.)</li>
+                                <li><strong>__init__.py:</strong> Makes directory a Python package (can be empty)</li>
+                                <li><strong>__name__ variable:</strong> <code>"__main__"</code> when run directly, module name when imported</li>
+                                <li><strong>Virtual environments:</strong> Isolate project dependencies using <code>venv</code></li>
+                                <li><strong>pip:</strong> Python package installer: <code>pip install package</code></li>
+                                <li><strong>requirements.txt:</strong> Lists project dependencies</li>
+                                <li><strong>Import path:</strong> Python searches <code>sys.path</code> for modules</li>
+                                <li><strong>Relative imports:</strong> <code>from . import sibling</code>, <code>from .. import parent</code></li>
+                                <li>Use <code>if __name__ == "__main__":</code> for code that should run only when executed directly</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-boxes"></i> Code Organization & Distribution</h3>
+                            <p>Modules and packages form the architectural foundation of Python software development, enabling code organization at scale. A well-structured codebase separates concerns into logical units, facilitates team collaboration, supports testing and maintenance, and enables code reuse across projects. Python's module system, combined with its extensive standard library and rich ecosystem of third-party packages, provides a powerful platform for building everything from simple scripts to enterprise applications.</p>
+                            
+                            <p>The Python Package Index (PyPI) hosts over 400,000 packages, making it one of the largest software repositories in the world. This ecosystem, managed by tools like pip and virtual environments, allows developers to leverage existing solutions rather than reinventing the wheel. Understanding how to navigate this ecosystem, manage dependencies, and structure your own code for distribution is essential for professional Python development.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-search"></i> Import System</h4>
+                                    <p>Python's import system involves finders that locate modules, loaders that create module objects, and a module cache that prevents redundant loading. Understanding this system helps debug import errors and optimize startup time.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-shield-alt"></i> Dependency Management</h4>
+                                    <p>Virtual environments isolate project dependencies, pip handles package installation, requirements.txt documents dependencies, and tools like pipenv and poetry provide enhanced dependency resolution and lock files for reproducible builds.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-cube"></i> Packaging & Distribution</h4>
+                                    <p>setuptools and pyproject.toml configure package metadata, wheel and sdist formats distribute packages, PyPI serves as the public repository, and private package indexes support enterprise development.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-industry"></i> Enterprise Development Workflow</h4>
+                                <p>Companies like Instagram, Dropbox, and Spotify structure Python codebases with hundreds of packages. Microservices architecture uses separate packages for each service, shared libraries provide common functionality, and internal PyPI servers host proprietary packages. CI/CD pipelines test packages, version them with semantic versioning, and publish to artifact repositories. Documentation generators like Sphinx process module docstrings, type checkers analyze imports, and dependency scanners identify security vulnerabilities. Teams use monorepos with tools like Bazel or Pants to manage inter-package dependencies while maintaining fast builds and tests. In this ecosystem, mastering modules and packages is essential for scalable, maintainable software development.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Create a Python Package:</strong> Build a small Python package with:</p>
+                            <ul>
+                                <li>Proper package structure with <code>__init__.py</code></li>
+                                <li>Multiple modules with related functionality</li>
+                                <li>Usage of standard library modules</li>
+                                <li>Conditional imports for optional features</li>
+                                <li>A setup.py or pyproject.toml for packaging</li>
+                                <li>A requirements.txt file with dependencies</li>
+                                <li>Example usage in a separate script</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 9 -->
+            <div class="course-module" id="module9" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>FILE HANDLING</h1>
+                    <h3>Learn to read from and write to files</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" class="module-icon" alt="Python Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 9: <span>File Input/Output Operations</span></h1>
+                    <p>File handling allows Python programs to interact with files on the filesystem - reading data from files, writing data to files, and manipulating file metadata. Python provides built-in functions and methods for working with text files, binary files, CSV files, JSON files, and more.</p>
+                    
+                    <p>File operations follow a consistent pattern: open the file, perform operations (read/write), and close the file. Python's <code>with</code> statement ensures files are properly closed even if errors occur. Understanding different file modes (read, write, append, binary) and encodings is crucial for correct file handling.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Python</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+<textarea class="code-editor" id="editor-9" spellcheck="false"># ========== BASIC FILE OPERATIONS ==========
+print("=== BASIC FILE READING AND WRITING ===")
+
+# Creating sample content
+sample_text = """Hello, File Handling!
+This is a sample text file.
+We'll use this to demonstrate various file operations in Python.
+
+Python makes file I/O straightforward with built-in functions.
+Remember to always close files or use the 'with' statement.
+
+Lines:
+1. First line
+2. Second line
+3. Third line
+4. Fourth line
+5. Fifth line
+"""
+
+# ========== WRITING FILES ==========
+print("\n--- Writing Files ---")
+
+# Method 1: Using open() and close()
+print("Method 1: Manual open/close")
+file1 = open("sample.txt", "w", encoding="utf-8")
+file1.write(sample_text)
+file1.close()
+print("  Written to sample.txt")
+
+# Method 2: Using with statement (recommended)
+print("\nMethod 2: Using 'with' statement (auto-closes)")
+with open("sample_with.txt", "w", encoding="utf-8") as file2:
+    file2.write(sample_text)
+print("  Written to sample_with.txt")
+
+# Writing multiple lines
+lines = ["Line 1\n", "Line 2\n", "Line 3\n", "Line 4\n"]
+
+with open("multiline.txt", "w", encoding="utf-8") as file:
+    file.writelines(lines)
+print("  Written multiple lines to multiline.txt")
+
+# ========== READING FILES ==========
+print("\n\n--- Reading Files ---")
+
+# Read entire file
+print("Method 1: read() - Entire file")
+with open("sample.txt", "r", encoding="utf-8") as file:
+    content = file.read()
+    print(f"  File size: {len(content)} characters")
+    print(f"  First 100 chars: {content[:100]}...")
+
+# Read line by line
+print("\nMethod 2: readline() - Line by line")
+with open("sample.txt", "r", encoding="utf-8") as file:
+    print("  First 3 lines:")
+    for i in range(3):
+        line = file.readline()
+        print(f"    Line {i+1}: {line.rstrip()}")
+
+# Read all lines into list
+print("\nMethod 3: readlines() - All lines as list")
+with open("sample.txt", "r", encoding="utf-8") as file:
+    lines = file.readlines()
+    print(f"  Total lines: {len(lines)}")
+    print(f"  Line 5: {lines[4].rstrip() if len(lines) > 4 else 'N/A'}")
+
+# Iterate directly over file object (memory efficient)
+print("\nMethod 4: Iterating over file object")
+with open("sample.txt", "r", encoding="utf-8") as file:
+    line_count = 0
+    for line in file:
+        line_count += 1
+        if line_count <= 2:
+            print(f"  Line {line_count}: {line.rstrip()}")
+    print(f"  Total lines (counted): {line_count}")
+
+# ========== FILE MODES ==========
+print("\n\n=== FILE MODES ===")
+
+print("Common file modes:")
+print("  'r'  - Read (default, file must exist)")
+print("  'w'  - Write (creates or truncates file)")
+print("  'a'  - Append (creates or appends to file)")
+print("  'x'  - Exclusive creation (fails if file exists)")
+print("  'b'  - Binary mode (combined with others: 'rb', 'wb')")
+print("  't'  - Text mode (default, combined: 'rt', 'wt')")
+print("  '+'  - Update mode (read and write: 'r+', 'w+', 'a+')")
+
+# Demonstrating different modes
+print("\nDemonstrating modes:")
+
+# Append mode
+with open("append_demo.txt", "w", encoding="utf-8") as f:
+    f.write("Original content\n")
+
+with open("append_demo.txt", "a", encoding="utf-8") as f:
+    f.write("Appended content\n")
+    f.write("More appended content\n")
+
+with open("append_demo.txt", "r", encoding="utf-8") as f:
+    print(f"  After append: {f.read().rstrip()}")
+
+# Read-write mode
+with open("rw_demo.txt", "w+", encoding="utf-8") as f:
+    f.write("Line 1\nLine 2\nLine 3\n")
+    f.seek(0)  # Go back to beginning
+    content = f.read()
+    print(f"  Read after write: {content.rstrip()}")
+
+# ========== BINARY FILES ==========
+print("\n\n=== BINARY FILE OPERATIONS ===")
+
+# Writing binary data
+binary_data = bytes([65, 66, 67, 68, 69])  # ASCII: A, B, C, D, E
+
+with open("binary_file.bin", "wb") as f:
+    f.write(binary_data)
+    f.write(b"\nMore binary data\n")
+print("  Written binary data to binary_file.bin")
+
+# Reading binary data
+with open("binary_file.bin", "rb") as f:
+    data = f.read()
+    print(f"  Binary data read: {data}")
+    print(f"  As text: {data.decode('ascii', errors='ignore')}")
+
+# ========== FILE POSITION ==========
+print("\n\n=== FILE POSITION AND SEEK ===")
+
+with open("sample.txt", "r", encoding="utf-8") as file:
+    # Get current position
+    start_pos = file.tell()
+    print(f"  Starting position: {start_pos}")
+    
+    # Read first 50 characters
+    first_part = file.read(50)
+    print(f"  After reading 50 chars, position: {file.tell()}")
+    
+    # Seek to a specific position
+    file.seek(100)  # Go to position 100
+    print(f"  After seek(100), position: {file.tell()}")
+    
+    # Read from position 100
+    from_100 = file.read(50)
+    print(f"  Content from position 100-150: {from_100[:50]}...")
+    
+    # Seek from current position
+    file.seek(10, 1)  # Move 10 bytes forward from current position
+    print(f"  After seek(10, 1), position: {file.tell()}")
+    
+    # Seek from end
+    file.seek(-20, 2)  # 20 bytes from end
+    print(f"  After seek(-20, 2), position: {file.tell()}")
+    end_content = file.read()
+    print(f"  Last 20 chars: {end_content}")
+
+# ========== WORKING WITH DIRECTORIES ==========
+print("\n\n=== WORKING WITH DIRECTORIES ===")
+
+import os
+
+# Get current directory
+current_dir = os.getcwd()
+print(f"  Current directory: {current_dir}")
+
+# List directory contents
+print(f"\n  Contents of current directory:")
+for item in os.listdir(current_dir):
+    if item.endswith(('.txt', '.bin', '.py')):
+        print(f"    - {item}")
+
+# Check if file exists
+files_to_check = ["sample.txt", "nonexistent.txt", "binary_file.bin"]
+for filename in files_to_check:
+    exists = os.path.exists(filename)
+    print(f"  {filename} exists: {exists}")
+
+# Get file information
+if os.path.exists("sample.txt"):
+    stat_info = os.stat("sample.txt")
+    print(f"\n  sample.txt info:")
+    print(f"    Size: {stat_info.st_size} bytes")
+    print(f"    Created: {stat_info.st_ctime}")
+    print(f"    Modified: {stat_info.st_mtime}")
+
+# ========== CSV FILES ==========
+print("\n\n=== WORKING WITH CSV FILES ===")
+
+import csv
+
+# Writing CSV data
+data = [
+    ["Name", "Age", "City", "Occupation"],
+    ["Alice", "28", "New York", "Engineer"],
+    ["Bob", "32", "London", "Designer"],
+    ["Charlie", "25", "Tokyo", "Developer"],
+    ["Diana", "30", "Paris", "Manager"]
+]
+
+with open("people.csv", "w", newline="", encoding="utf-8") as csvfile:
+    writer = csv.writer(csvfile)
+    writer.writerows(data)
+print("  Created people.csv")
+
+# Reading CSV data
+print("\n  Reading CSV file:")
+with open("people.csv", "r", newline="", encoding="utf-8") as csvfile:
+    reader = csv.reader(csvfile)
+    for row in reader:
+        print(f"    {row}")
+
+# Reading as dictionary
+print("\n  Reading as dictionary:")
+with open("people.csv", "r", newline="", encoding="utf-8") as csvfile:
+    reader = csv.DictReader(csvfile)
+    for row in reader:
+        print(f"    {row['Name']}: {row['Age']} years, {row['Occupation']} in {row['City']}")
+
+# ========== JSON FILES ==========
+print("\n\n=== WORKING WITH JSON FILES ===")
+
+import json
+
+# Data to serialize
+users = [
+    {"id": 1, "name": "Alice", "email": "alice@example.com", "active": True},
+    {"id": 2, "name": "Bob", "email": "bob@example.com", "active": True},
+    {"id": 3, "name": "Charlie", "email": "charlie@example.com", "active": False}
+]
+
+config = {
+    "app_name": "FileHandler",
+    "version": "1.0.0",
+    "settings": {
+        "auto_save": True,
+        "max_files": 100,
+        "default_encoding": "utf-8"
+    },
+    "users": users
+}
+
+# Write JSON
+with open("config.json", "w", encoding="utf-8") as jsonfile:
+    json.dump(config, jsonfile, indent=2)
+print("  Created config.json")
+
+# Read JSON
+with open("config.json", "r", encoding="utf-8") as jsonfile:
+    loaded_config = json.load(jsonfile)
+    print(f"\n  Loaded config:")
+    print(f"    App: {loaded_config['app_name']} v{loaded_config['version']}")
+    print(f"    Auto-save: {loaded_config['settings']['auto_save']}")
+    print(f"    Users: {len(loaded_config['users'])}")
+
+# ========== PRACTICAL EXAMPLE ==========
+print("\n\n=== PRACTICAL EXAMPLE: Log File Analyzer ===")
+
+def analyze_log_file(filename):
+    """Analyze a log file and extract statistics."""
+    
+    if not os.path.exists(filename):
+        print(f"  Error: File '{filename}' not found")
+        return
+    
+    stats = {
+        "total_lines": 0,
+        "error_count": 0,
+        "warning_count": 0,
+        "info_count": 0,
+        "unique_ips": set(),
+        "line_lengths": []
+    }
+    
+    try:
+        with open(filename, "r", encoding="utf-8") as file:
+            for line in file:
+                stats["total_lines"] += 1
+                stats["line_lengths"].append(len(line))
+                
+                # Simple log analysis (for demonstration)
+                line_lower = line.lower()
+                if "error" in line_lower:
+                    stats["error_count"] += 1
+                elif "warning" in line_lower:
+                    stats["warning_count"] += 1
+                elif "info" in line_lower:
+                    stats["info_count"] += 1
+                
+                # Extract IP addresses (simple pattern)
+                import re
+                ip_match = re.search(r'\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b', line)
+                if ip_match:
+                    stats["unique_ips"].add(ip_match.group())
+        
+        # Calculate averages
+        if stats["line_lengths"]:
+            avg_length = sum(stats["line_lengths"]) / len(stats["line_lengths"])
+        else:
+            avg_length = 0
+        
+        # Print results
+        print(f"  Log Analysis for '{filename}':")
+        print(f"    Total lines: {stats['total_lines']}")
+        print(f"    Errors: {stats['error_count']}")
+        print(f"    Warnings: {stats['warning_count']}")
+        print(f"    Info messages: {stats['info_count']}")
+        print(f"    Unique IPs: {len(stats['unique_ips'])}")
+        print(f"    Average line length: {avg_length:.1f} characters")
+        
+    except Exception as e:
+        print(f"  Error analyzing file: {e}")
+
+# Create a sample log file for analysis
+sample_log = """2023-10-01 10:15:32 INFO User 'alice' logged in from 192.168.1.100
+2023-10-01 10:16:45 WARNING High memory usage detected
+2023-10-01 10:17:12 ERROR Database connection failed
+2023-10-01 10:18:03 INFO Backup completed successfully
+2023-10-01 10:19:55 INFO User 'bob' logged in from 192.168.1.101
+2023-10-01 10:20:10 ERROR File not found: /var/log/app.log
+2023-10-01 10:21:33 WARNING SSL certificate expiring soon
+2023-10-01 10:22:47 INFO User 'charlie' logged in from 192.168.1.102
+"""
+
+with open("app.log", "w", encoding="utf-8") as logfile:
+    logfile.write(sample_log)
+
+# Analyze the log file
+analyze_log_file("app.log")
+
+print("\n=== CLEANUP: Removing created files ===")
+# Clean up created files
+files_to_remove = [
+    "sample.txt", "sample_with.txt", "multiline.txt",
+    "append_demo.txt", "rw_demo.txt", "binary_file.bin",
+    "people.csv", "config.json", "app.log"
+]
+
+for filename in files_to_remove:
+    if os.path.exists(filename):
+        os.remove(filename)
+        print(f"  Removed: {filename}")</textarea>
+                        <button class="run-btn" onclick="runCode('editor-9', 'output-9')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Output
+                        </div>
+                        <div class="preview-container" id="output-9"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li><strong>File modes:</strong> <code>'r'</code> (read), <code>'w'</code> (write), <code>'a'</code> (append), <code>'x'</code> (exclusive create), <code>'b'</code> (binary), <code>'+'</code> (update)</li>
+                                <li><strong>Open file:</strong> <code>open(filename, mode, encoding='utf-8')</code></li>
+                                <li><strong>With statement:</strong> <code>with open(...) as file:</code> ensures proper closing</li>
+                                <li><strong>Reading methods:</strong> <code>file.read()</code>, <code>file.readline()</code>, <code>file.readlines()</code></li>
+                                <li><strong>Writing methods:</strong> <code>file.write()</code>, <code>file.writelines()</code></li>
+                                <li><strong>File position:</strong> <code>file.tell()</code> returns position, <code>file.seek(offset, whence)</code> moves position</li>
+                                <li><strong>Binary files:</strong> Use <code>'rb'</code> or <code>'wb'</code> mode for non-text data</li>
+                                <li><strong>CSV files:</strong> Use <code>csv</code> module for structured data</li>
+                                <li><strong>JSON files:</strong> Use <code>json</code> module for structured data exchange</li>
+                                <li><strong>OS module:</strong> <code>os.path.exists()</code>, <code>os.listdir()</code>, <code>os.remove()</code></li>
+                                <li>Always specify encoding (usually <code>utf-8</code>) for text files</li>
+                                <li>Use <code>newline=''</code> with CSV files for cross-platform compatibility</li>
+                                <li>Handle file not found and permission errors with try-except</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-hdd"></i> Persistent Data Storage</h3>
+                            <p>File handling bridges the gap between transient program execution and persistent data storage, enabling programs to save state, process external data, and exchange information with other systems. Unlike variables that exist only in memory during program execution, files persist on disk, allowing data to survive program termination and system reboots. This persistence is fundamental to virtually all non-trivial software applications.</p>
+                            
+                            <p>Python's file I/O system supports multiple abstraction levels, from low-level byte operations to high-level structured data formats. Text files handle human-readable content with automatic encoding conversion, binary files process raw bytes for media files or proprietary formats, and specialized modules like <code>csv</code> and <code>json</code> provide domain-specific interfaces for common data interchange formats. The <code>with</code> statement (context manager) ensures proper resource cleanup, preventing file descriptor leaks that can crash long-running applications.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-compress-arrows-alt"></i> Buffering & Performance</h4>
+                                    <p>Python files are buffered by default, reducing expensive system calls. Buffer size affects I/O performance - larger buffers improve throughput for large files but increase memory usage. Binary mode avoids encoding overhead, while text mode handles line endings automatically.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-code"></i> Encoding & Internationalization</h4>
+                                    <p>Text files require character encoding specification. UTF-8 is the modern standard, supporting all Unicode characters. Legacy systems may use encodings like ASCII, Latin-1, or Windows-1252. Encoding errors cause <code>UnicodeDecodeError</code> when reading or <code>UnicodeEncodeError</code> when writing.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-database"></i> Structured Formats</h4>
+                                    <p>Beyond plain text, Python supports JSON (lightweight data interchange), CSV (tabular data), XML (document markup), Pickle (Python object serialization), and numerous third-party formats (YAML, TOML, Parquet, etc.). Each format has trade-offs between human readability, performance, and feature support.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-server"></i> Data Pipeline Applications</h4>
+                                <p>Web servers log requests to files, analytics pipelines process log files at scale, databases write transaction logs for crash recovery, backup systems copy files with progress tracking, media players stream from files, compilers read source files and write object files, version control systems diff file contents, configuration management reads YAML/TOML files, scientific computing loads datasets from CSV/JSON/HDF5 files, and machine learning pipelines serialize models to disk. In each case, efficient file handling impacts system reliability, performance, and maintainability. Large-scale systems often use memory-mapped files for performance or implement custom file formats optimized for specific access patterns.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Create a Data Processing Application:</strong> Build a program that:</p>
+                            <ul>
+                                <li>Reads data from multiple file formats (text, CSV, JSON)</li>
+                                <li>Processes and analyzes the data</li>
+                                <li>Writes results to different output formats</li>
+                                <li>Handles errors gracefully (missing files, permission issues)</li>
+                                <li>Uses appropriate file modes for different operations</li>
+                                <li>Implements efficient file reading strategies for large files</li>
+                                <li>Includes directory operations for file management</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 10 -->
+            <div class="course-module" id="module10" data-aos="fade-up" data-difficulty="advanced">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>OOP IN PYTHON</h1>
+                    <h3>Learn Object-Oriented Programming concepts</h3>
+                    <span class="difficulty">Advanced</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" class="module-icon" alt="Python Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 10: <span>Object-Oriented Programming in Python</span></h1>
+                    <p>Object-Oriented Programming (OOP) is a programming paradigm that organizes code around objects rather than functions and logic. Python is a multi-paradigm language that fully supports OOP with classes, objects, inheritance, polymorphism, and encapsulation.</p>
+                    
+                    <p>OOP helps manage complexity in large programs by bundling related data and behavior into objects. Classes define blueprints for objects, objects are instances of classes, and inheritance allows classes to share and extend functionality. Python's OOP implementation is flexible and powerful, supporting everything from simple data containers to complex framework design.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Python</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+<textarea class="code-editor" id="editor-10" spellcheck="false"># ========== CLASSES AND OBJECTS ==========
+print("=== CLASSES AND OBJECTS ===")
+
+# Basic class definition
+class Person:
+    """A simple class representing a person."""
+    
+    # Class attribute (shared by all instances)
+    species = "Homo sapiens"
+    
+    # Constructor (initializer)
+    def __init__(self, name, age):
+        # Instance attributes (unique to each instance)
+        self.name = name
+        self.age = age
+        self.__private_attr = "secret"  # Name mangling for "private"
+    
+    # Instance method
+    def introduce(self):
+        return f"Hi, I'm {self.name}, {self.age} years old."
+    
+    # Another instance method
+    def have_birthday(self):
+        self.age += 1
+        return f"Happy birthday! Now I'm {self.age}."
+    
+    # Class method
+    @classmethod
+    def from_birth_year(cls, name, birth_year):
+        """Alternative constructor from birth year."""
+        from datetime import datetime
+        current_year = datetime.now().year
+        age = current_year - birth_year
+        return cls(name, age)
+    
+    # Static method (no access to cls or self)
+    @staticmethod
+    def is_adult(age):
+        return age >= 18
+    
+    # Special methods (dunder methods)
+    def __str__(self):
+        return f"Person(name='{self.name}', age={self.age})"
+    
+    def __repr__(self):
+        return f"Person('{self.name}', {self.age})"
+    
+    def __eq__(self, other):
+        if isinstance(other, Person):
+            return self.name == other.name and self.age == other.age
+        return False
+
+# Creating objects (instances)
+print("Creating Person objects:")
+alice = Person("Alice", 25)
+bob = Person("Bob", 30)
+
+print(f"Alice: {alice}")
+print(f"Bob: {bob}")
+print(f"Alice introduces: {alice.introduce()}")
+print(f"Bob introduces: {bob.introduce()}")
+
+print(f"\nAlice has birthday: {alice.have_birthday()}")
+print(f"Alice after birthday: {alice}")
+
+# Using class method
+charlie = Person.from_birth_year("Charlie", 1995)
+print(f"\nCharlie (from birth year): {charlie}")
+
+# Using static method
+print(f"\nStatic method - Is 20 adult? {Person.is_adult(20)}")
+print(f"Is 15 adult? {Person.is_adult(15)}")
+
+# Class vs instance attributes
+print(f"\nClass attribute (species): {Person.species}")
+print(f"Alice species: {alice.species}")
+print(f"Bob species: {bob.species}")
+
+# Modify class attribute
+Person.species = "Human"
+print(f"\nAfter modifying class attribute:")
+print(f"Alice species: {alice.species}")
+print(f"Bob species: {bob.species}")
+
+# ========== INHERITANCE ==========
+print("\n\n=== INHERITANCE ===")
+
+# Base class
+class Animal:
+    def __init__(self, name, species):
+        self.name = name
+        self.species = species
+    
+    def speak(self):
+        return "Some generic animal sound"
+    
+    def move(self):
+        return f"{self.name} is moving"
+    
+    def __str__(self):
+        return f"{self.name} the {self.species}"
+
+# Derived class (inherits from Animal)
+class Dog(Animal):
+    def __init__(self, name, breed):
+        # Call parent constructor
+        super().__init__(name, "Dog")
+        self.breed = breed
+    
+    # Override parent method
+    def speak(self):
+        return "Woof! Woof!"
+    
+    # Add new method
+    def fetch(self, item):
+        return f"{self.name} fetches the {item}"
+
+# Another derived class
+class Cat(Animal):
+    def __init__(self, name, color):
+        super().__init__(name, "Cat")
+        self.color = color
+    
+    def speak(self):
+        return "Meow!"
+    
+    def purr(self):
+        return "Purrrrr..."
+
+# Using inheritance
+print("Creating animals:")
+buddy = Dog("Buddy", "Golden Retriever")
+whiskers = Cat("Whiskers", "Orange")
+
+print(f"Buddy: {buddy}")
+print(f"Whiskers: {whiskers}")
+
+print(f"\nBuddy speaks: {buddy.speak()}")
+print(f"Whiskers speaks: {whiskers.speak()}")
+
+print(f"\nBuddy moves: {buddy.move()}")
+print(f"Buddy fetches: {buddy.fetch('ball')}")
+print(f"Whiskers purrs: {whiskers.purr()}")
+
+# isinstance and issubclass checks
+print(f"\nisinstance checks:")
+print(f"  buddy is Animal: {isinstance(buddy, Animal)}")
+print(f"  buddy is Dog: {isinstance(buddy, Dog)}")
+print(f"  buddy is Cat: {isinstance(buddy, Cat)}")
+
+print(f"\nissubclass checks:")
+print(f"  Dog is subclass of Animal: {issubclass(Dog, Animal)}")
+print(f"  Animal is subclass of Dog: {issubclass(Animal, Dog)}")
+
+# ========== POLYMORPHISM ==========
+print("\n\n=== POLYMORPHISM ===")
+
+def animal_concert(animals):
+    """Demonstrate polymorphism - same method, different behaviors."""
+    for animal in animals:
+        print(f"{animal.name}: {animal.speak()}")
+
+# Create different types of animals
+animals = [
+    Dog("Rex", "German Shepherd"),
+    Cat("Mittens", "Calico"),
+    Dog("Luna", "Labrador"),
+    Cat("Shadow", "Black")
+]
+
+print("Animal concert (polymorphism in action):")
+animal_concert(animals)
+
+# Duck typing (Python's approach to polymorphism)
+class Car:
+    def __init__(self, model):
+        self.model = model
+    
+    def make_sound(self):
+        return "Vroom! Vroom!"
+
+class Clock:
+    def __init__(self, style):
+        self.style = style
+    
+    def make_sound(self):
+        return "Tick tock, tick tock"
+
+# Function works with any object that has make_sound()
+def make_noise(thing):
+    return thing.make_sound()
+
+print("\nDuck typing example:")
+car = Car("Sports Car")
+clock = Clock("Grandfather")
+
+print(f"Car: {make_noise(car)}")
+print(f"Clock: {make_noise(clock)}")
+
+# ========== ENCAPSULATION ==========
+print("\n\n=== ENCAPSULATION ===")
+
+class BankAccount:
+    """Demonstrate encapsulation with private attributes."""
+    
+    def __init__(self, owner, initial_balance=0):
+        self.owner = owner
+        self.__balance = initial_balance  # "Private" attribute
+        self._transaction_count = 0  # "Protected" attribute (convention)
+    
+    # Getter method (property)
+    @property
+    def balance(self):
+        return self.__balance
+    
+    # Setter method (with validation)
+    @balance.setter
+    def balance(self, amount):
+        if amount < 0:
+            raise ValueError("Balance cannot be negative")
+        self.__balance = amount
+    
+    def deposit(self, amount):
+        if amount <= 0:
+            raise ValueError("Deposit amount must be positive")
+        self.__balance += amount
+        self._transaction_count += 1
+        return f"Deposited ${amount}. New balance: ${self.__balance}"
+    
+    def withdraw(self, amount):
+        if amount <= 0:
+            raise ValueError("Withdrawal amount must be positive")
+        if amount > self.__balance:
+            raise ValueError("Insufficient funds")
+        self.__balance -= amount
+        self._transaction_count += 1
+        return f"Withdrew ${amount}. New balance: ${self.__balance}"
+    
+    def get_transaction_count(self):
+        return self._transaction_count
+    
+    def __str__(self):
+        return f"BankAccount(owner='{self.owner}', balance=${self.__balance})"
+
+# Using encapsulation
+print("Creating bank account:")
+account = BankAccount("Alice", 1000)
+
+print(f"Account: {account}")
+print(f"Balance via property: ${account.balance}")
+print(f"Transaction count: {account.get_transaction_count()}")
+
+print(f"\nMaking transactions:")
+print(account.deposit(500))
+print(account.withdraw(200))
+
+print(f"\nAfter transactions:")
+print(f"Balance: ${account.balance}")
+print(f"Transaction count: {account.get_transaction_count()}")
+
+# Try to access private attribute directly (will be name-mangled)
+try:
+    print(f"\nTrying to access private attribute: {account.__balance}")
+except AttributeError as e:
+    print(f"Can't access private attribute directly: {e}")
+
+# But we can still access it with name mangling (not recommended)
+print(f"Name-mangled access: {account._BankAccount__balance}")
+
+# ========== PROPERTIES AND DESCRIPTORS ==========
+print("\n\n=== PROPERTIES AND DESCRIPTORS ===")
+
+class Temperature:
+    """Demonstrate property decorators."""
+    
+    def __init__(self, celsius):
+        self._celsius = celsius
+    
+    @property
+    def celsius(self):
+        return self._celsius
+    
+    @celsius.setter
+    def celsius(self, value):
+        if value < -273.15:
+            raise ValueError("Temperature cannot be below absolute zero")
+        self._celsius = value
+    
+    @property
+    def fahrenheit(self):
+        return (self._celsius * 9/5) + 32
+    
+    @fahrenheit.setter
+    def fahrenheit(self, value):
+        self._celsius = (value - 32) * 5/9
+    
+    @property
+    def kelvin(self):
+        return self._celsius + 273.15
+    
+    @kelvin.setter
+    def kelvin(self, value):
+        if value < 0:
+            raise ValueError("Temperature cannot be below absolute zero")
+        self._celsius = value - 273.15
+
+print("Temperature conversions using properties:")
+temp = Temperature(25)
+
+print(f"Initial: {temp.celsius}°C")
+print(f"Fahrenheit: {temp.fahrenheit}°F")
+print(f"Kelvin: {temp.kelvin}K")
+
+print(f"\nSetting Fahrenheit to 100°F:")
+temp.fahrenheit = 100
+print(f"Celsius: {temp.celsius}°C")
+print(f"Fahrenheit: {temp.fahrenheit}°F")
+
+print(f"\nSetting Kelvin to 300K:")
+temp.kelvin = 300
+print(f"Celsius: {temp.celsius}°C")
+print(f"Kelvin: {temp.kelvin}K")
+
+# ========== SPECIAL METHODS (DUNDER METHODS) ==========
+print("\n\n=== SPECIAL METHODS (DUNDER METHODS) ===")
+
+class Vector:
+    """Demonstrate operator overloading with dunder methods."""
+    
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+    
+    # Representation methods
+    def __repr__(self):
+        return f"Vector({self.x}, {self.y})"
+    
+    def __str__(self):
+        return f"({self.x}, {self.y})"
+    
+    # Arithmetic operations
+    def __add__(self, other):
+        if isinstance(other, Vector):
+            return Vector(self.x + other.x, self.y + other.y)
+        return NotImplemented
+    
+    def __sub__(self, other):
+        if isinstance(other, Vector):
+            return Vector(self.x - other.x, self.y - other.y)
+        return NotImplemented
+    
+    def __mul__(self, scalar):
+        if isinstance(scalar, (int, float)):
+            return Vector(self.x * scalar, self.y * scalar)
+        return NotImplemented
+    
+    def __rmul__(self, scalar):
+        return self.__mul__(scalar)
+    
+    # Comparison operations
+    def __eq__(self, other):
+        if isinstance(other, Vector):
+            return self.x == other.x and self.y == other.y
+        return False
+    
+    def __lt__(self, other):
+        """Compare magnitudes."""
+        if isinstance(other, Vector):
+            return (self.x**2 + self.y**2) < (other.x**2 + other.y**2)
+        return NotImplemented
+    
+    # Container-like behavior
+    def __len__(self):
+        return 2  # Always 2D vector
+    
+    def __getitem__(self, index):
+        if index == 0:
+            return self.x
+        elif index == 1:
+            return self.y
+        else:
+            raise IndexError("Vector index out of range")
+    
+    def __iter__(self):
+        return iter((self.x, self.y))
+
+print("Vector operations using dunder methods:")
+v1 = Vector(3, 4)
+v2 = Vector(1, 2)
+
+print(f"v1 = {v1}")
+print(f"v2 = {v2}")
+print(f"v1 + v2 = {v1 + v2}")
+print(f"v1 - v2 = {v1 - v2}")
+print(f"v1 * 3 = {v1 * 3}")
+print(f"3 * v1 = {3 * v1}")
+print(f"v1 == v2: {v1 == v2}")
+print(f"v1 < v2: {v1 < v2}")
+print(f"Length of v1: {len(v1)}")
+print(f"v1[0] = {v1[0]}, v1[1] = {v1[1]}")
+
+print("\nIterating over vector:")
+for component in v1:
+    print(f"  Component: {component}")
+
+# ========== MULTIPLE INHERITANCE AND MIXINS ==========
+print("\n\n=== MULTIPLE INHERITANCE AND MIXINS ===")
+
+# Mixin classes (provide specific functionality)
+class JSONSerializableMixin:
+    def to_json(self):
+        import json
+        # Simple implementation - in real code, handle complex objects
+        return json.dumps(self.__dict__)
+
+class XMLSerializableMixin:
+    def to_xml(self):
+        # Simplified XML generation
+        attrs = " ".join([f'{k}="{v}"' for k, v in self.__dict__.items()])
+        return f"<object {attrs}/>"
+
+# Class using multiple inheritance
+class Product(JSONSerializableMixin, XMLSerializableMixin):
+    def __init__(self, name, price, category):
+        self.name = name
+        self.price = price
+        self.category = category
+    
+    def apply_discount(self, percentage):
+        self.price *= (1 - percentage/100)
+        return self.price
+
+print("Product with multiple inheritance (mixins):")
+product = Product("Laptop", 999.99, "Electronics")
+
+print(f"Product: {product.name}, Price: ${product.price}")
+print(f"After 10% discount: ${product.apply_discount(10):.2f}")
+
+print(f"\nSerialization using mixins:")
+print(f"JSON: {product.to_json()}")
+print(f"XML: {product.to_xml()}")
+
+# Method Resolution Order (MRO)
+print(f"\nMethod Resolution Order for Product:")
+for cls in Product.__mro__:
+    print(f"  {cls.__name__}")
+
+# ========== PRACTICAL EXAMPLE ==========
+print("\n\n=== PRACTICAL EXAMPLE: E-commerce System ===")
+
+from datetime import datetime
+from typing import List, Optional
+
+class ProductItem:
+    def __init__(self, product_id: int, name: str, price: float):
+        self.product_id = product_id
+        self.name = name
+        self.price = price
+    
+    def __repr__(self):
+        return f"ProductItem(id={self.product_id}, name='{self.name}', price=${self.price})"
+
+class CartItem:
+    def __init__(self, product: ProductItem, quantity: int = 1):
+        self.product = product
+        self.quantity = quantity
+    
+    @property
+    def total_price(self):
+        return self.product.price * self.quantity
+    
+    def __repr__(self):
+        return f"CartItem(product={self.product.name}, quantity={self.quantity}, total=${self.total_price:.2f})"
+
+class ShoppingCart:
+    def __init__(self):
+        self.items: List[CartItem] = []
+        self.created_at = datetime.now()
+    
+    def add_item(self, product: ProductItem, quantity: int = 1):
+        # Check if product already in cart
+        for item in self.items:
+            if item.product.product_id == product.product_id:
+                item.quantity += quantity
+                return
+        
+        # Add new item
+        self.items.append(CartItem(product, quantity))
+    
+    def remove_item(self, product_id: int, quantity: Optional[int] = None):
+        for i, item in enumerate(self.items):
+            if item.product.product_id == product_id:
+                if quantity is None or item.quantity <= quantity:
+                    # Remove entire item
+                    del self.items[i]
+                else:
+                    # Reduce quantity
+                    item.quantity -= quantity
+                return True
+        return False
+    
+    @property
+    def total_items(self):
+        return sum(item.quantity for item in self.items)
+    
+    @property
+    def total_price(self):
+        return sum(item.total_price for item in self.items)
+    
+    def clear(self):
+        self.items.clear()
+    
+    def __repr__(self):
+        return f"ShoppingCart(items={len(self.items)}, total=${self.total_price:.2f})"
+
+class Customer:
+    def __init__(self, customer_id: int, name: str, email: str):
+        self.customer_id = customer_id
+        self.name = name
+        self.email = email
+        self.cart = ShoppingCart()
+        self.order_history = []
+    
+    def add_to_cart(self, product: ProductItem, quantity: int = 1):
+        self.cart.add_item(product, quantity)
+        return f"Added {quantity} x {product.name} to cart"
+    
+    def checkout(self):
+        if not self.cart.items:
+            return "Cart is empty"
+        
+        order = {
+            'customer': self.name,
+            'items': [str(item) for item in self.cart.items],
+            'total': self.cart.total_price,
+            'date': datetime.now().isoformat()
+        }
+        
+        self.order_history.append(order)
+        self.cart.clear()
+        
+        return f"Order placed successfully! Total: ${order['total']:.2f}"
+    
+    def __repr__(self):
+        return f"Customer(id={self.customer_id}, name='{self.name}', email='{self.email}')"
+
+print("E-commerce system demonstration:")
+
+# Create products
+products = [
+    ProductItem(1, "Python Programming Book", 39.99),
+    ProductItem(2, "Wireless Mouse", 25.50),
+    ProductItem(3, "Mechanical Keyboard", 89.99),
+    ProductItem(4, "USB-C Cable", 15.99),
+]
+
+print("Available products:")
+for product in products:
+    print(f"  {product}")
+
+# Create customer
+customer = Customer(1001, "Alice", "alice@example.com")
+print(f"\nCustomer: {customer}")
+
+# Shopping
+print("\nShopping process:")
+print(customer.add_to_cart(products[0], 2))  # 2 books
+print(customer.add_to_cart(products[1]))     # 1 mouse
+print(customer.add_to_cart(products[3], 3))  # 3 cables
+
+print(f"\nCart contents:")
+for item in customer.cart.items:
+    print(f"  {item}")
+
+print(f"\nCart summary: {customer.cart}")
+print(f"Total items: {customer.cart.total_items}")
+print(f"Total price: ${customer.cart.total_price:.2f}")
+
+# Checkout
+print(f"\nCheckout: {customer.checkout()}")
+
+print(f"\nAfter checkout:")
+print(f"Cart: {customer.cart}")
+print(f"Order history: {customer.order_history}")
+
+print("\n=== OOP PRINCIPLES SUMMARY ===")
+print("1. ENCAPSULATION: Bundling data and methods, hiding implementation details")
+print("2. INHERITANCE: Creating new classes from existing ones")
+print("3. POLYMORPHISM: Same interface, different implementations")
+print("4. ABSTRACTION: Hiding complex reality while exposing essentials")</textarea>
+                        <button class="run-btn" onclick="runCode('editor-10', 'output-10')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Output
+                        </div>
+                        <div class="preview-container" id="output-10"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li><strong>Class:</strong> Blueprint for creating objects <code>class ClassName:</code></li>
+                                <li><strong>Object:</strong> Instance of a class <code>obj = ClassName()</code></li>
+                                <li><strong>Constructor:</strong> <code>__init__(self, ...)</code> initializes new objects</li>
+                                <li><strong>self:</strong> Reference to the current instance (first parameter in methods)</li>
+                                <li><strong>Instance attributes:</strong> <code>self.attribute = value</code> (unique per object)</li>
+                                <li><strong>Class attributes:</strong> Defined in class body (shared by all instances)</li>
+                                <li><strong>Methods:</strong> Functions defined inside class (instance, class, static)</li>
+                                <li><strong>Inheritance:</strong> <code>class Child(Parent):</code> creates child class</li>
+                                <li><strong>super():</strong> Calls parent class methods <code>super().__init__(...)</code></li>
+                                <li><strong>Polymorphism:</strong> Same method name, different implementations</li>
+                                <li><strong>Encapsulation:</strong> Hiding implementation details (use <code>_</code> or <code>__</code> prefix)</li>
+                                <li><strong>Properties:</strong> <code>@property</code> decorator for getter/setter methods</li>
+                                <li><strong>Special methods:</strong> <code>__str__</code>, <code>__repr__</code>, <code>__add__</code>, etc.</li>
+                                <li><strong>Multiple inheritance:</strong> Class can inherit from multiple parents</li>
+                                <li><strong>Mixin:</strong> Class providing specific functionality for multiple inheritance</li>
+                                <li><strong>Abstract classes:</strong> Use <code>abc</code> module for classes that shouldn't be instantiated directly</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-cubes"></i> Modeling Real-World Systems</h3>
+                            <p>Object-Oriented Programming in Python provides a powerful paradigm for modeling complex systems by representing real-world entities as objects with state (attributes) and behavior (methods). OOP organizes code around data rather than functions, creating natural boundaries that mirror problem domains. This approach facilitates code reuse through inheritance, enables polymorphism for flexible interfaces, and enforces encapsulation to protect data integrity.</p>
+                            
+                            <p>Python's OOP implementation is both elegant and pragmatic. Unlike statically-typed languages, Python uses duck typing ("if it looks like a duck and quacks like a duck, it's a duck") rather than rigid type hierarchies. Classes are first-class objects that can be modified at runtime, enabling dynamic class creation and metaprogramming. The consistent use of special methods (dunder methods) allows user-defined classes to integrate seamlessly with Python's syntax and built-in functions.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-sitemap"></i> Design Patterns</h4>
+                                    <p>Common OOP patterns include Singleton (single instance), Factory (object creation), Observer (event handling), Strategy (algorithm selection), and Decorator (function wrapping). Python's dynamic nature often provides simpler alternatives to classical patterns.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-project-diagram"></i> Composition over Inheritance</h4>
+                                    <p>Favor object composition (has-a relationships) over class inheritance (is-a relationships). Composition creates more flexible, testable designs by assembling functionality from smaller, focused components rather than deep inheritance hierarchies.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-bolt"></i> Performance Considerations</h4>
+                                    <p>Instance attribute access is optimized via dictionaries (<code>__dict__</code>), method resolution uses C3 linearization for multiple inheritance, and <code>__slots__</code> can reduce memory overhead for many instances by preventing <code>__dict__</code> creation.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-industry"></i> Framework Development</h4>
+                                <p>Django's ORM uses models as Python classes that map to database tables, with metaclasses generating SQL schemas. GUI frameworks like Tkinter and PyQt represent widgets as objects with properties and event handlers. Web frameworks use class-based views where HTTP methods map to class methods. Scientific computing libraries define array and matrix classes with overloaded operators. Game engines structure entities as object hierarchies with components. Machine learning libraries model layers, optimizers, and metrics as classes. In each domain, OOP provides the architectural foundation for extensible, maintainable systems that can evolve to meet complex requirements.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Create a Library Management System:</strong> Build an OOP-based system that:</p>
+                            <ul>
+                                <li>Defines classes for Book, Author, Member, and Library</li>
+                                <li>Uses inheritance for different types of books (eBook, PrintBook, etc.)</li>
+                                <li>Implements encapsulation with appropriate access controls</li>
+                                <li>Demonstrates polymorphism with different book formats</li>
+                                <li>Includes special methods for string representation and comparisons</li>
+                                <li>Uses composition to relate books, authors, and members</li>
+                                <li>Implements a checkout/return system with date tracking</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Practice Playground -->
+            <div class="course-module" id="playground" data-aos="fade-up">
+                <div class="course-three">
+                    <h1>PRACTICE PLAYGROUND</h1>
+                    <h3>Experiment with what you've learned</h3>
+                    <i class="fas fa-laptop-code course-icon" style="color: var(--primary);"></i>
+                </div>
+                <div class="course-one">
+                    <h1>Your Python Playground: <span>Try Your Own Python Code</span></h1>
+                    <p>Use this space to experiment with everything you've learned. Try combining different Python concepts and see the results in real-time! This is your sandbox to practice and explore Python programming.</p>
+                    
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Python</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="playground-editor" spellcheck="false"># ========== WELCOME TO PYTHON PLAYGROUND ==========
+# Edit this code and click "Run Code" to see your changes.
+# Try creating something amazing with what you've learned!
+
+print("=" * 50)
+print("PYTHON PLAYGROUND")
+print("=" * 50)
+
+# ========== BASIC EXAMPLES TO MODIFY ==========
+
+# Example 1: Variables and Data Types
+name = "Python Developer"
+age = 25
+height = 1.75
+is_student = True
+
+print(f"\n1. VARIABLES:")
+print(f"   Name: {name}")
+print(f"   Age: {age}")
+print(f"   Height: {height}m")
+print(f"   Is student: {is_student}")
+
+# Example 2: Lists and Operations
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+print(f"\n2. LIST OPERATIONS:")
+print(f"   Numbers: {numbers}")
+print(f"   First 3: {numbers[:3]}")
+print(f"   Even numbers: {[n for n in numbers if n % 2 == 0]}")
+
+# Example 3: Dictionary
+person = {
+    "name": "Alice",
+    "age": 30,
+    "skills": ["Python", "Data Analysis", "Web Development"]
+}
+print(f"\n3. DICTIONARY:")
+print(f"   Person: {person['name']}, {person['age']} years old")
+print(f"   Skills: {', '.join(person['skills'])}")
+
+# Example 4: Function
+def calculate_area(length, width):
+    """Calculate area of a rectangle."""
+    return length * width
+
+print(f"\n4. FUNCTION:")
+print(f"   Area of 5x3 rectangle: {calculate_area(5, 3)}")
+
+# Example 5: Class
+class Circle:
+    def __init__(self, radius):
+        self.radius = radius
+    
+    @property
+    def area(self):
+        return 3.14159 * self.radius ** 2
+    
+    @property
+    def circumference(self):
+        return 2 * 3.14159 * self.radius
+
+circle = Circle(5)
+print(f"\n5. CLASS:")
+print(f"   Circle with radius {circle.radius}:")
+print(f"   Area: {circle.area:.2f}")
+print(f"   Circumference: {circle.circumference:.2f}")
+
+# ========== YOUR CODE BELOW ==========
+print("\n" + "=" * 50)
+print("YOUR CODE STARTS HERE")
+print("=" * 50)
+
+# Add your own Python code below this line
+# Try creating:
+# - New variables and data structures
+# - Functions to perform calculations
+# - Classes to model real-world objects
+# - Control flow with conditionals and loops
+# - Anything else you've learned!
+
+print("\nStart coding here!")</textarea>
+                        <button class="run-btn" onclick="runCode('playground-editor', 'playground-output')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Output
+                        </div>
+                        <div class="preview-container" id="playground-output"></div>
+                    </div>
+                    
+                    <div class="course-five">
+                        <h3>Challenge Exercises:</h3>
+                        <ol>
+                            <li>Create a program that:
+                                <ul>
+                                    <li>Accepts user input for personal information</li>
+                                    <li>Stores data in appropriate data structures</li>
+                                    <li>Performs calculations or transformations</li>
+                                    <li>Displays formatted output</li>
+                                </ul>
+                            </li>
+                            <li>Build a number guessing game with:
+                                <ul>
+                                    <li>Random number generation</li>
+                                    <li>User input validation</li>
+                                    <li>Score tracking</li>
+                                    <li>Multiple difficulty levels</li>
+                                </ul>
+                            </li>
+                            <li>Create a simple inventory management system:
+                                <ul>
+                                    <li>Use classes for products</li>
+                                    <li>Implement CRUD operations</li>
+                                    <li>Calculate inventory value</li>
+                                    <li>Save/load data from files</li>
+                                </ul>
+                            </li>
+                            <li>Build a text analysis tool:
+                                <ul>
+                                    <li>Count words, characters, sentences</li>
+                                    <li>Find most common words</li>
+                                    <li>Calculate readability scores</li>
+                                    <li>Generate statistics report</li>
+                                </ul>
+                            </li>
+                            <li>Combine all concepts into a complete application</li>
+                        </ol>
+                        
+                        <h3>Tips & Resources:</h3>
+                        <ul>
+                            <li>Use print() statements to debug your code</li>
+                            <li>Try breaking problems into smaller functions</li>
+                            <li>Experiment with different data structures for different needs</li>
+                            <li>Use Python's built-in functions: <code>len()</code>, <code>sum()</code>, <code>max()</code>, <code>min()</code>, <code>sorted()</code></li>
+                            <li>For more practice, try solving coding challenges on platforms like HackerRank or LeetCode</li>
+                            <li>Check Python's official documentation for module references</li>
+                            <li>Use list/dictionary comprehensions for concise data transformations</li>
+                            <li>Remember to handle errors with try-except blocks</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Premium Subscription CTA -->
+            <div class="premium-subscription" id="premium-subscription" data-aos="fade-up">
+                <h2>Unlock Premium SkillMynte Content</h2>
+                <p>Upgrade to SkillMynte Pro for exclusive courses, advanced projects, and personalized learning paths</p>
+                
+                <div class="premium-features">
+                    <div class="premium-feature">
+                        <i class="fas fa-gem"></i>
+                        <h3>Premium Courses</h3>
+                        <p>Access our entire library of advanced courses and exclusive content</p>
+                    </div>
+                    <div class="premium-feature">
+                        <i class="fas fa-trophy"></i>
+                        <h3>Certification</h3>
+                        <p>Earn industry-recognized certificates to showcase your skills</p>
+                    </div>
+                    <div class="premium-feature">
+                        <i class="fas fa-user-graduate"></i>
+                        <h3>Mentorship</h3>
+                        <p>Get personalized guidance from industry experts</p>
+                    </div>
+                </div>
+                
+                <div class="pricing-options">
+                    <div class="pricing-option">
+                        <h3>Monthly</h3>
+                        <div class="price">₦3,500<span>/month</span></div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> All Premium Courses</li>
+                            <li><i class="fas fa-check"></i> Practice Projects</li>
+                            <li><i class="fas fa-check"></i> Community Access</li>
+                            <li><i class="fas fa-check"></i> Certificates</li>
+                            <li><i class="fas fa-check"></i> personal AI inbuilt</li>
+                        </ul>
+                        <a href="premium courses.html"><button class="pricing-btn">Get Started</button></a>
+                    </div>
+                    
+                    <div class="pricing-option" style="border-color: var(--white); transform: scale(1.05);">
+                        <h3>Annual <span style="background: var(--white); color: #2962FF; padding: 0.2rem 0.5rem; border-radius: 20px; font-size: 0.8rem; margin-left: 0.5rem;">Best Value</span></h3>
+                        <div class="price">₦37,000<span>/year</span></div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> All Premium Courses</li>
+                            <li><i class="fas fa-check"></i> Practice Projects</li>
+                            <li><i class="fas fa-check"></i> Community Access</li>
+                            <li><i class="fas fa-check"></i> Certificates</li>
+                            <li><i class="fas fa-check"></i> personal AI inbuilt</li>
+                        </ul>
+                        <a href="premium courses.html"><button class="pricing-btn">Get Started</button></a>
+                    </div>
+                    
+                    <div class="pricing-option">
+                        <h3>Lifetime</h3>
+                        <div class="price">₦200,000<span>/once</span></div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> All Premium Courses</li>
+                            <li><i class="fas fa-check"></i> Practice Projects</li>
+                            <li><i class="fas fa-check"></i> Community Access</li>
+                            <li><i class="fas fa-check"></i> Certificates</li>
+                            <li><i class="fas fa-check"></i> personal AI inbuilt</li>
+                        </ul>
+                        <a href="premium courses.html"><button class="pricing-btn">Get Started</button></a>
+                    </div>
+                </div>
+                
+                <button class="premium-cta-btn">
+                    <i class="fas fa-rocket"></i> Upgrade to SkillMynte Pro
+                </button>
+            </div>
+            
+            <!-- Footer -->
+            <footer>
+                <div class="footer-content">
+                    <div class="footer-column">
+                        <h3>About SkillMynte</h3>
+                        <p>SkillMynte is a premium learning platform dedicated to helping developers of all levels master programming technologies through interactive courses and hands-on practice.</p>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/profile.php?id=61581069862024"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://x.com/SkillMynte_AI?t=CcoQtjWZGGOXqfTfrsufjQ&s=09"><i class="fab fa-twitter"></i></a>
+                            <a href="https://youtube.com/@skillmynte?si=LmX2MjSKU3N1Xa5S"><i class="fab fa-youtube"></i></a>
+                            <a href="https://www.instagram.com/skillmynte_ai?igsh=MTd1YWpjdXV1OHhrbA=="><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Quick Links</h3>
+                        <ul class="footer-links">
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Home</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Courses</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Practice</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Projects</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Popular Courses</h3>
+                        <ul class="footer-links">
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Python Fundamentals</a></li>
+                            <li><a href="free JS Course.html"><i class="fas fa-chevron-right"></i> JavaScript Mastery</a></li>
+                            <li><a href="premium courses.html"><i class="fas fa-chevron-right"></i> Data Science with Python</a></li>
+                            <li><a href="free node.js.html"><i class="fas fa-chevron-right"></i> Web Development</a></li>
+                            <li><a href="free CSS Course.html"><i class="fas fa-chevron-right"></i> HTML & CSS Fundamentals</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Contact Us</h3>
+                        <p><i class="fas fa-envelope"></i>Skillmynteofficial@gmail.com</p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 SkillMynte. All rights reserved. | Designed with <i class="fas fa-heart" style="color: var(--primary);"></i> for the developer community</p>
+                </div>
+            </footer>
+
+           <script>
+    // Function to run Python code in preview
+    function runCode(editorId, outputId) {
+        const editor = document.getElementById(editorId);
+        const output = document.getElementById(outputId);
+        
+        try {
+            // Clear previous output
+            output.innerHTML = '';
+            
+            // Capture console.log output
+            const originalLog = console.log;
+            let logOutput = '';
+            
+            console.log = function(...args) {
+                logOutput += args.map(arg => {
+                    if (typeof arg === 'object') {
+                        try {
+                            return JSON.stringify(arg, null, 2);
+                        } catch {
+                            return String(arg);
+                        }
+                    }
+                    return String(arg);
+                }).join(' ') + '\n';
+                originalLog.apply(console, args);
+            };
+            
+            // Execute the code
+            const code = editor.value;
+            const result = eval(code);
+            
+            // Restore original console.log
+            console.log = originalLog;
+            
+            // Display output
+            if (logOutput) {
+                output.textContent = logOutput;
+            } else if (result !== undefined) {
+                output.textContent = String(result);
+            } else {
+                output.textContent = 'Code executed successfully (no output)';
+            }
+            
+        } catch (error) {
+            output.innerHTML = `<div style="color: var(--accent); padding: 1rem;">Error: ${error.message}</div>`;
+        }
+    }
+    
+    // Initialize all editors with their default output
+    document.addEventListener('DOMContentLoaded', function() {
+        // Run all code editors on load
+        runCode('editor-1', 'output-1');
+        runCode('editor-2', 'output-2');
+        runCode('editor-3', 'output-3');
+        runCode('editor-4', 'output-4');
+        runCode('editor-5', 'output-5');
+        runCode('editor-6', 'output-6');
+        runCode('editor-7', 'output-7');
+        runCode('editor-8', 'output-8');
+        runCode('editor-9', 'output-9');
+        runCode('editor-10', 'output-10');
+        runCode('playground-editor', 'playground-output');
+        
+        // Add event listeners to all run buttons in editor headers
+        document.querySelectorAll('.run-editor').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const editorContainer = this.closest('.code-editor-container');
+                const editor = editorContainer.querySelector('.code-editor');
+                const output = editorContainer.querySelector('.preview-container');
+                runCode(editor.id, output.id);
+            });
+        });
+        
+        // Add reset functionality
+        document.querySelectorAll('.reset-editor').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const editorContainer = this.closest('.code-editor-container');
+                const editor = editorContainer.querySelector('.code-editor');
+                const originalContent = editor.dataset.original || editor.defaultValue;
+                editor.value = originalContent;
+                runCode(editor.id, editorContainer.querySelector('.preview-container').id);
+            });
+        });
+        
+        // Store original content for reset functionality
+        document.querySelectorAll('.code-editor').forEach(editor => {
+            editor.dataset.original = editor.value;
+        });
+
+        // Handle navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // FIXED: Hamburger menu functionality
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.querySelector('.nav-menu');
+        const sidebar = document.getElementById('sidebar');
+        const body = document.body;
+
+        function toggleMobileMenu() {
+            const isActive = navMenu.classList.contains('active');
+            
+            if (isActive) {
+                // Close menu
+                navMenu.classList.remove('active');
+                sidebar.classList.remove('active');
+                menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                body.classList.remove('menu-open');
+                menuToggle.setAttribute('aria-expanded', 'false');
+            } else {
+                // Open menu
+                navMenu.classList.add('active');
+                sidebar.classList.add('active');
+                menuToggle.innerHTML = '<i class="fas fa-times"></i>';
+                body.classList.add('menu-open');
+                menuToggle.setAttribute('aria-expanded', 'true');
+            }
+        }
+
+        function closeMobileMenu() {
+            navMenu.classList.remove('active');
+            sidebar.classList.remove('active');
+            menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            body.classList.remove('menu-open');
+            menuToggle.setAttribute('aria-expanded', 'false');
+        }
+
+        // Mobile menu toggle
+        menuToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            toggleMobileMenu();
+        });
+
+        // Close menu when clicking on nav links
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function() {
+                if (window.innerWidth <= 1024) {
+                    closeMobileMenu();
+                }
+            });
+        });
+
+        // Close menu when clicking on dropdown items
+        document.querySelectorAll('.dropdown-item').forEach(item => {
+            item.addEventListener('click', function() {
+                if (window.innerWidth <= 1024) {
+                    closeMobileMenu();
+                }
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (window.innerWidth <= 1024 && 
+                navMenu.classList.contains('active') &&
+                !e.target.closest('.nav-menu') && 
+                !e.target.closest('.menu-toggle') &&
+                !e.target.closest('.sidebar')) {
+                closeMobileMenu();
+            }
+        });
+
+        // Close menu on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+                closeMobileMenu();
+            }
+        });
+
+        // Close menu on resize if switching to desktop
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 1024 && navMenu.classList.contains('active')) {
+                closeMobileMenu();
+            }
+        });
+
+        // Mobile dropdown functionality
+        document.querySelectorAll('.courses-dropdown').forEach(dropdown => {
+            const button = dropdown.querySelector('.courses-btn');
+            
+            button.addEventListener('click', function(e) {
+                if (window.innerWidth <= 1024) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    dropdown.classList.toggle('active');
+                }
+            });
+        });
+
+        // Level filtering functionality
+        const levelButtons = document.querySelectorAll('.level-btn');
+        const modules = document.querySelectorAll('.course-module');
+        
+        levelButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const level = this.getAttribute('data-level');
+                
+                // Remove active class from all buttons
+                levelButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                this.classList.add('active');
+                
+                if (level === 'all') {
+                    // Show all modules
+                    modules.forEach(module => {
+                        module.style.display = 'flex';
+                    });
+                } else if (level === 'advanced') {
+                    // Show advanced modules (7-10)
+                    modules.forEach(module => {
+                        const moduleId = module.id;
+                        if (moduleId.includes('module7') || moduleId.includes('module8') || 
+                            moduleId.includes('module9') || moduleId.includes('module10')) {
+                            module.style.display = 'flex';
+                        } else {
+                            module.style.display = 'none';
+                        }
+                    });
+                } else {
+                    // Show modules with matching difficulty
+                    modules.forEach(module => {
+                        const difficulty = module.getAttribute('data-difficulty');
+                        if (difficulty === level) {
+                            module.style.display = 'flex';
+                        } else {
+                            module.style.display = 'none';
+                        }
+                    });
+                }
+                
+                // Scroll to first visible module
+                const firstVisible = document.querySelector('.course-module[style="display: flex;"]');
+                if (firstVisible) {
+                    firstVisible.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Search functionality
+        const searchInput = document.getElementById('search-input');
+        
+        searchInput.addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase().trim();
+            
+            if (searchTerm === '') {
+                // Show all modules if search is empty
+                modules.forEach(module => {
+                    module.style.display = 'flex';
+                });
+                return;
+            }
+            
+            modules.forEach(module => {
+                const moduleTitle = module.querySelector('h1').textContent.toLowerCase();
+                const moduleContent = module.textContent.toLowerCase();
+                
+                if (moduleTitle.includes(searchTerm) || moduleContent.includes(searchTerm)) {
+                    module.style.display = 'flex';
+                } else {
+                    module.style.display = 'none';
+                }
+            });
+        });
+    });
+    
+    // Smooth scrolling for sidebar links
+    document.querySelectorAll('.sidebar-item').forEach(item => {
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Remove active class from all items
+            document.querySelectorAll('.sidebar-item').forEach(i => {
+                i.classList.remove('active');
+            });
+            
+            // Add active class to clicked item
+            this.classList.add('active');
+            
+            // Close mobile menu if open
+            if (window.innerWidth <= 1024) {
+                document.querySelector('.nav-menu').classList.remove('active');
+                document.querySelector('.sidebar').classList.remove('active');
+                document.querySelector('.menu-toggle').innerHTML = '<i class="fas fa-bars"></i>';
+                document.body.classList.remove('menu-open');
+            }
+            
+            // Scroll to section
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 100,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+</script>
+        </div>
+    </div>
+</body>
+</html>

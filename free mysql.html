@@ -1,0 +1,2169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MySQL Fundamentals | SkillMynte</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="rounded_logo.png">
+    <link rel="stylesheet" href="free mysql.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-code"></i>
+                SKILLMYNTE
+            </a>
+            <div class="nav-menu">
+                <a href="#" class="nav-link">Home</a>
+                <a href="#" class="nav-link">Courses</a>
+                <a href="#" class="nav-link">Practice</a>
+                <a href="#" class="nav-link">Projects</a>
+                
+                <div class="courses-dropdown">
+                    <button class="courses-btn">
+                        <i class="fas fa-book-open"></i> Jump to Module
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#module1" class="dropdown-item">
+                            <i class="fas fa-database"></i> MySQL Basics
+                        </a>
+                        <a href="#module2" class="dropdown-item">
+                            <i class="fas fa-database"></i> Data Types
+                        </a>
+                        <a href="#module3" class="dropdown-item">
+                            <i class="fas fa-database"></i> Creating Tables
+                        </a>
+                        <a href="#module4" class="dropdown-item">
+                            <i class="fas fa-database"></i> SELECT Queries
+                        </a>
+                        <a href="#module5" class="dropdown-item">
+                            <i class="fas fa-database"></i> INSERT/UPDATE/DELETE
+                        </a>
+                        <a href="#module6" class="dropdown-item">
+                            <i class="fas fa-database"></i> Joins
+                        </a>
+                        <a href="#module7" class="dropdown-item">
+                            <i class="fas fa-database"></i> Functions
+                        </a>
+                        <a href="#module8" class="dropdown-item">
+                            <i class="fas fa-database"></i> Indexes
+                        </a>
+                        <a href="#module9" class="dropdown-item">
+                            <i class="fas fa-database"></i> Stored Procedures
+                        </a>
+                        <a href="#module10" class="dropdown-item">
+                            <i class="fas fa-database"></i> Advanced MySQL
+                        </a>
+                        <a href="#playground" class="dropdown-item">
+                            <i class="fas fa-laptop-code"></i> Practice Playground
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Premium Course Navigation -->
+    <div class="course-navigation">
+        <div class="course-nav-container">
+            <div class="course-category">
+                <button class="category-btn">
+                    <i class="fas fa-layer-group"></i> Categories
+                </button>
+                <div class="category-dropdown">
+                    <a href="#" class="category-item">
+                        <i class="fas fa-database"></i> MySQL
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fab fa-js-square js-icon"></i> JavaScript
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fab fa-python python-icon"></i> Python
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fab fa-java java-icon"></i> Java
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fas fa-database"></i> Databases
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fas fa-mobile-alt"></i> Mobile Development
+                    </a>
+                </div>
+            </div>
+            
+            <div class="course-levels">
+                <button class="level-btn active" data-level="all">All Levels</button>
+                <button class="level-btn" data-level="beginner">Beginner</button>
+                <button class="level-btn" data-level="intermediate">Intermediate</button>
+                <button class="level-btn" data-level="advanced">Advanced</button>
+            </div>
+            
+            <div class="course-search">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" class="search-input" id="search-input" placeholder="Search courses...">
+            </div>
+        </div>
+    </div>
+    
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <a href="#module1" class="sidebar-item active completed">
+            <i class="fas fa-database"></i>
+            <span>Module 1: MySQL Basics</span>
+            <span class="progress-indicator"><i class="fas fa-check"></i></span>
+        </a>
+        <a href="#module2" class="sidebar-item completed">
+            <i class="fas fa-database"></i>
+            <span>Module 2: Data Types</span>
+            <span class="progress-indicator"><i class="fas fa-check"></i></span>
+        </a>
+        <a href="#module3" class="sidebar-item completed">
+            <i class="fas fa-database"></i>
+            <span>Module 3: Creating Tables</span>
+            <span class="progress-indicator"><i class="fas fa-check"></i></span>
+        </a>
+        <a href="#module4" class="sidebar-item">
+            <i class="fas fa-database"></i>
+            <span>Module 4: SELECT Queries</span>
+            <span class="progress-indicator">4</span>
+        </a>
+        <a href="#module5" class="sidebar-item">
+            <i class="fas fa-database"></i>
+            <span>Module 5: INSERT/UPDATE/DELETE</span>
+            <span class="progress-indicator">5</span>
+        </a>
+        <a href="#module6" class="sidebar-item">
+            <i class="fas fa-database"></i>
+            <span>Module 6: Joins</span>
+            <span class="progress-indicator">6</span>
+        </a>
+        <a href="#module7" class="sidebar-item">
+            <i class="fas fa-database"></i>
+            <span>Module 7: Functions</span>
+            <span class="progress-indicator">7</span>
+        </a>
+        <a href="#module8" class="sidebar-item">
+            <i class="fas fa-database"></i>
+            <span>Module 8: Indexes</span>
+            <span class="progress-indicator">8</span>
+        </a>
+        <a href="#module9" class="sidebar-item">
+            <i class="fas fa-database"></i>
+            <span>Module 9: Stored Procedures</span>
+            <span class="progress-indicator">9</span>
+        </a>
+        <a href="#module10" class="sidebar-item">
+            <i class="fas fa-database"></i>
+            <span>Module 10: Advanced MySQL</span>
+            <span class="progress-indicator">10</span>
+        </a>
+        <a href="#playground" class="sidebar-item">
+            <i class="fas fa-laptop-code"></i>
+            <span>Practice Playground</span>
+        </a>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="content-wrapper">
+        <div class="container">
+            <!-- Module 1 -->
+            <div class="course-module" id="module1" data-aos="fade-up" data-difficulty="beginner">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>MYSQL BASICS</h1>
+                    <h3>Learn fundamental concepts of MySQL databases</h3>
+                    <span class="difficulty">Beginner</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/919/919836.png" class="module-icon" alt="MySQL Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 1: <span>MySQL Database Fundamentals</span></h1>
+                    <p>MySQL is the world's most popular open-source relational database management system. Think of it as a highly organized digital filing system where you store, manage, and retrieve data efficiently. It uses Structured Query Language (SQL) to interact with data stored in tables, making it essential for dynamic websites and applications.</p>
+                    
+                    <p>Every MySQL database consists of tables that store related data. Tables have columns (fields) and rows (records). Before you can work with data, you need to create a database and tables. The basic commands are <code>CREATE DATABASE</code>, <code>USE</code>, and <code>CREATE TABLE</code>.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">SQL</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-1" spellcheck="false">-- Create a new database
+CREATE DATABASE IF NOT EXISTS school;
+
+-- Select the database to use
+USE school;
+
+-- Create a students table
+CREATE TABLE IF NOT EXISTS students (
+    student_id INT PRIMARY KEY AUTO_INCREMENT,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    email VARCHAR(100) UNIQUE,
+    enrollment_date DATE DEFAULT (CURRENT_DATE)
+);
+
+-- Insert a sample record
+INSERT INTO students (first_name, last_name, email)
+VALUES ('John', 'Doe', 'john.doe@example.com');
+
+-- Retrieve all students
+SELECT * FROM students;</textarea>
+                        <button class="run-btn" onclick="runCode('editor-1', 'output-1')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Preview (SQL output simulation)
+                        </div>
+                        <div class="preview-container" id="output-1"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li><code>CREATE DATABASE</code> creates a new database</li>
+                                <li><code>USE</code> selects the active database</li>
+                                <li><code>CREATE TABLE</code> defines the structure with columns and data types</li>
+                                <li><code>INT</code>, <code>VARCHAR</code>, <code>DATE</code> are common data types</li>
+                                <li><code>PRIMARY KEY</code> uniquely identifies each row</li>
+                                <li><code>AUTO_INCREMENT</code> automatically generates unique numbers</li>
+                                <li><code>NOT NULL</code> ensures a column cannot be empty</li>
+                                <li><code>UNIQUE</code> prevents duplicate values in a column</li>
+                                <li><code>INSERT</code> adds new rows to a table</li>
+                                <li><code>SELECT</code> retrieves data from a table</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-database"></i> MySQL Foundation Explained</h3>
+                            <p>MySQL is the backbone of countless web applications, from personal blogs to enterprise systems like Facebook, Twitter, and YouTube. It organizes data into structured tables, allowing for efficient storage, retrieval, and manipulation. The relational model means you can connect related data across tables, eliminating redundancy and ensuring data integrity.</p>
+                            
+                            <p>Understanding the basic building blocksâ€”databases, tables, columns, and rowsâ€”is crucial. A database is a container, tables are like spreadsheets with defined columns, and rows are individual records. SQL commands are divided into categories: DDL (Data Definition Language) for structure, DML (Data Manipulation Language) for data, and DQL (Data Query Language) for retrieval.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-cubes"></i> Relational Model</h4>
+                                    <p>Data is organized into tables that relate to each other via keys. This structure minimizes duplication and ensures consistency, making it ideal for complex applications with interrelated data.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-tachometer-alt"></i> Performance</h4>
+                                    <p>MySQL uses indexing and optimization techniques to handle millions of queries per second, making it suitable for high-traffic websites and data-intensive applications.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-lock"></i> Security & Integrity</h4>
+                                    <p>Features like constraints, user privileges, and transaction support ensure data remains secure and consistent, even during concurrent access.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-store"></i> Real-World Application</h4>
+                                <p>E-commerce platforms like Shopify use MySQL to store product catalogs, customer information, orders, and inventory. When you browse products, MySQL quickly retrieves the relevant data. When you place an order, transactions ensure that inventory updates and order creation happen together without errors. Mastering these fundamentals is the first step toward building data-driven applications.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Create a Library Database:</strong> Write SQL commands to:</p>
+                            <ul>
+                                <li>Create a database called <code>library</code></li>
+                                <li>Create a table <code>books</code> with columns: book_id (primary key, auto_increment), title (VARCHAR, not null), author (VARCHAR, not null), published_year (INT), isbn (VARCHAR, unique)</li>
+                                <li>Insert at least three books</li>
+                                <li>Select all books</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 2 -->
+            <div class="course-module" id="module2" data-aos="fade-up" data-difficulty="beginner">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>DATA TYPES</h1>
+                    <h3>Understanding MySQL data types</h3>
+                    <span class="difficulty">Beginner</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/919/919836.png" class="module-icon" alt="MySQL Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 2: <span>MySQL Data Types</span></h1>
+                    <p>Choosing the right data type for each column is critical for data integrity and performance. MySQL offers a rich set of data types including numeric, string, date/time, and spatial types. Using appropriate types ensures efficient storage and prevents errors.</p>
+                    
+                    <p>Numeric types include <code>INT</code>, <code>DECIMAL</code>, <code>FLOAT</code>, and <code>DOUBLE</code>. String types include <code>VARCHAR</code>, <code>CHAR</code>, <code>TEXT</code>, and <code>BLOB</code>. Date/time types include <code>DATE</code>, <code>DATETIME</code>, <code>TIMESTAMP</code>, and <code>TIME</code>. Choosing the right type depends on the nature and size of the data you need to store.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">SQL</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-2" spellcheck="false">-- Example table demonstrating various data types
+CREATE TABLE product_demo (
+    -- Numeric types
+    product_id INT PRIMARY KEY AUTO_INCREMENT,
+    price DECIMAL(10,2) NOT NULL,           -- 10 total digits, 2 after decimal
+    stock_quantity SMALLINT UNSIGNED DEFAULT 0,
+    weight_kg FLOAT,
+    
+    -- String types
+    sku VARCHAR(20) UNIQUE,
+    product_name VARCHAR(100) NOT NULL,
+    description TEXT,
+    product_code CHAR(10),                   -- Fixed length
+    
+    -- Date/Time types
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    available_from DATE,
+    last_updated TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    
+    -- Boolean (actually TINYINT(1))
+    is_active BOOLEAN DEFAULT TRUE
+);
+
+-- Insert sample data
+INSERT INTO product_demo (price, stock_quantity, weight_kg, sku, product_name, description, available_from)
+VALUES 
+    (19.99, 150, 0.5, 'ABC123', 'Wireless Mouse', 'Ergonomic wireless mouse with USB receiver', '2024-01-15'),
+    (499.99, 25, 2.3, 'XYZ789', 'Mechanical Keyboard', 'RGB mechanical keyboard with blue switches', '2024-02-01');
+
+-- View the inserted data
+SELECT * FROM product_demo;</textarea>
+                        <button class="run-btn" onclick="runCode('editor-2', 'output-2')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Preview
+                        </div>
+                        <div class="preview-container" id="output-2"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li><code>INT</code> for whole numbers; <code>SMALLINT</code>, <code>BIGINT</code> for different ranges</li>
+                                <li><code>DECIMAL(p,d)</code> for exact fixed-point numbers (e.g., money)</li>
+                                <li><code>FLOAT</code>/<code>DOUBLE</code> for approximate floating-point numbers</li>
+                                <li><code>VARCHAR(n)</code> for variable-length strings (n max length)</li>
+                                <li><code>CHAR(n)</code> for fixed-length strings (faster for short, fixed data)</li>
+                                <li><code>TEXT</code> for long text (up to 64KB)</li>
+                                <li><code>DATE</code> stores date (YYYY-MM-DD), <code>DATETIME</code> stores date and time</li>
+                                <li><code>TIMESTAMP</code> tracks changes, often used for last update</li>
+                                <li><code>BOOLEAN</code> is synonym for <code>TINYINT(1)</code> (0 false, 1 true)</li>
+                                <li><code>UNSIGNED</code> prevents negative values, doubling the positive range</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-tags"></i> Why Data Types Matter</h3>
+                            <p>Data types define how MySQL stores and interprets data. Using the correct type saves disk space, improves query speed, and prevents invalid data from entering your database. For example, storing a date as a string would prevent date arithmetic and sorting by date. Similarly, using <code>DECIMAL</code> for currency avoids floating-point rounding errors that could cause financial discrepancies.</p>
+                            
+                            <p>Each data type has specific properties and storage requirements. <code>VARCHAR</code> uses only as much space as needed (plus a length prefix), while <code>CHAR</code> always uses the defined length, making it faster for fixed-length data like country codes or status flags. Understanding these nuances helps you design efficient schemas.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-chart-line"></i> Performance Implications</h4>
+                                    <p>Smaller data types mean more rows fit in memory and indexes, speeding up queries. For example, using <code>SMALLINT</code> instead of <code>BIGINT</code> when possible reduces index size and improves cache efficiency.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-check-circle"></i> Data Integrity</h4>
+                                    <p>Proper data types enforce validation at the database level. Trying to insert text into an <code>INT</code> column fails, preventing data corruption. Constraints like <code>UNSIGNED</code> add additional safety.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-clock"></i> Date/Time Functions</h4>
+                                    <p>Using proper date/time types allows you to leverage MySQL's powerful date functions like <code>DATE_ADD</code>, <code>DATEDIFF</code>, and extraction of parts (year, month). This is essential for reporting and analytics.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-chart-pie"></i> Analytics & Reporting</h4>
+                                <p>In a sales analytics system, using the correct data types is critical. <code>DECIMAL</code> for monetary values ensures accurate calculations. <code>DATETIME</code> for transaction timestamps allows precise reporting by hour, day, or month. <code>ENUM</code> for status fields (e.g., 'pending','shipped') improves data integrity. Companies like Uber use optimized data types to store billions of trips efficiently while maintaining fast query performance for real-time analytics.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Employee Database Design:</strong> Create an <code>employees</code> table with appropriate data types for:</p>
+                            <ul>
+                                <li>employee_id (primary key, auto increment)</li>
+                                <li>first_name, last_name</li>
+                                <li>email (unique)</li>
+                                <li>phone_number (store as string, with format validation later)</li>
+                                <li>hire_date (date only)</li>
+                                <li>salary (up to 999999.99, with two decimals)</li>
+                                <li>is_manager (boolean)</li>
+                                <li>department (string, limited length)</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 3 -->
+            <div class="course-module" id="module3" data-aos="fade-up" data-difficulty="beginner">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>CREATING TABLES</h1>
+                    <h3>Design and create database tables</h3>
+                    <span class="difficulty">Beginner</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/919/919836.png" class="module-icon" alt="MySQL Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 3: <span>Table Creation and Constraints</span></h1>
+                    <p>Tables are the core structure of relational databases. Creating well-designed tables with proper constraints ensures data integrity and optimizes performance. Constraints like <code>PRIMARY KEY</code>, <code>FOREIGN KEY</code>, <code>UNIQUE</code>, <code>NOT NULL</code>, and <code>CHECK</code> enforce rules on your data.</p>
+                    
+                    <p>Foreign keys establish relationships between tables, linking records and ensuring referential integrity. For example, an <code>orders</code> table might have a <code>customer_id</code> that references the <code>customers</code> table, ensuring every order belongs to a valid customer.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">SQL</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-3" spellcheck="false">-- Customers table
+CREATE TABLE customers (
+    customer_id INT PRIMARY KEY AUTO_INCREMENT,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    phone VARCHAR(20),
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Orders table with foreign key
+CREATE TABLE orders (
+    order_id INT PRIMARY KEY AUTO_INCREMENT,
+    customer_id INT NOT NULL,
+    order_date DATETIME DEFAULT CURRENT_TIMESTAMP,
+    total_amount DECIMAL(10,2) NOT NULL CHECK (total_amount >= 0),
+    status ENUM('pending', 'processing', 'shipped', 'delivered', 'cancelled') DEFAULT 'pending',
+    
+    FOREIGN KEY (customer_id) REFERENCES customers(customer_id)
+        ON DELETE RESTRICT
+        ON UPDATE CASCADE
+);
+
+-- Order items table (junction for many-to-many between orders and products)
+CREATE TABLE order_items (
+    order_item_id INT PRIMARY KEY AUTO_INCREMENT,
+    order_id INT NOT NULL,
+    product_id INT NOT NULL,
+    quantity INT NOT NULL CHECK (quantity > 0),
+    price DECIMAL(10,2) NOT NULL CHECK (price >= 0),
+    
+    FOREIGN KEY (order_id) REFERENCES orders(order_id) ON DELETE CASCADE,
+    FOREIGN KEY (product_id) REFERENCES products(product_id) -- products table not shown
+);
+
+-- Insert sample customers
+INSERT INTO customers (first_name, last_name, email) VALUES
+('Alice', 'Smith', 'alice@example.com'),
+('Bob', 'Johnson', 'bob@example.com');
+
+-- Insert a sample order
+INSERT INTO orders (customer_id, total_amount) VALUES (1, 150.00);
+
+-- View customers with their orders (join preview)
+SELECT c.first_name, c.last_name, o.order_id, o.total_amount, o.status
+FROM customers c
+JOIN orders o ON c.customer_id = o.customer_id;</textarea>
+                        <button class="run-btn" onclick="runCode('editor-3', 'output-3')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Preview
+                        </div>
+                        <div class="preview-container" id="output-3"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li><code>PRIMARY KEY</code> uniquely identifies each row (automatically indexed)</li>
+                                <li><code>FOREIGN KEY</code> links tables and enforces referential integrity</li>
+                                <li><code>ON DELETE</code>/<code>ON UPDATE</code> define behavior when referenced data changes:
+                                    <ul>
+                                        <li><code>RESTRICT</code> prevents deletion/update if referenced</li>
+                                        <li><code>CASCADE</code> propagates changes to child rows</li>
+                                        <li><code>SET NULL</code> sets foreign key to NULL</li>
+                                    </ul>
+                                </li>
+                                <li><code>UNIQUE</code> ensures all values in a column are different</li>
+                                <li><code>NOT NULL</code> requires a value (cannot be empty)</li>
+                                <li><code>CHECK</code> validates data based on a condition (supported in MySQL 8+)</li>
+                                <li><code>DEFAULT</code> provides a default value when none is specified</li>
+                                <li><code>ENUM</code> restricts values to a predefined list</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-link"></i> Database Relationships</h3>
+                            <p>Real-world applications rarely use a single table; instead, they model complex relationships between entities. The three main relationship types are:</p>
+                            <ul>
+                                <li><strong>One-to-Many</strong> (e.g., one customer can have many orders) â€” implemented with a foreign key in the "many" table.</li>
+                                <li><strong>Many-to-Many</strong> (e.g., orders and products) â€” implemented via a junction table (like <code>order_items</code>) containing foreign keys to both sides.</li>
+                                <li><strong>One-to-One</strong> (e.g., user and user_profile) â€” often implemented by sharing the same primary key or a foreign key with unique constraint.</li>
+                            </ul>
+                            <p>Properly defining these relationships with foreign keys maintains data integrity and enables powerful queries using joins.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-shield-alt"></i> Referential Integrity</h4>
+                                    <p>Foreign keys prevent orphaned records. If you try to delete a customer who has orders, the database will reject the operation unless you've specified cascading deletes. This ensures your data remains consistent.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-sitemap"></i> Normalization</h4>
+                                    <p>Splitting data into related tables reduces redundancy and improves maintainability. Normalization is the process of organizing data to minimize duplication. First normal form (1NF), second (2NF), and third (3NF) are common design goals.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-bolt"></i> Indexing</h4>
+                                    <p>Primary keys and foreign keys automatically create indexes, speeding up joins and lookups. Additional indexes can be added on frequently queried columns for performance.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-shopping-cart"></i> E-Commerce Schema</h4>
+                                <p>Amazon's product database involves hundreds of interrelated tables: products, categories, inventory, prices, reviews, orders, shipments, etc. Each relationship is carefully defined with foreign keys and constraints to ensure that when a product is discontinued, related data is handled appropriately. For example, past orders should still reference the product (even if deleted) to maintain accurate history, so they might use <code>ON DELETE RESTRICT</code> or archive records instead of hard deletes.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>University Database:</strong> Create tables for a university system:</p>
+                            <ul>
+                                <li><code>students</code>: student_id, name, email, enrollment_date</li>
+                                <li><code>courses</code>: course_id, course_name, credits, department</li>
+                                <li><code>enrollments</code>: enrollment_id, student_id (FK), course_id (FK), semester, grade (optional)</li>
+                                <li>Define appropriate primary keys, foreign keys with <code>ON DELETE CASCADE</code> or <code>RESTRICT</code> as you see fit</li>
+                                <li>Add a <code>CHECK</code> constraint to ensure credits are positive</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 4 -->
+            <div class="course-module" id="module4" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>SELECT QUERIES</h1>
+                    <h3>Master data retrieval with SELECT</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/919/919836.png" class="module-icon" alt="MySQL Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 4: <span>The SELECT Statement</span></h1>
+                    <p>The <code>SELECT</code> statement is the workhorse of SQL, used to query and retrieve data from one or more tables. You can filter rows with <code>WHERE</code>, sort with <code>ORDER BY</code>, group data with <code>GROUP BY</code>, and limit results with <code>LIMIT</code>. Mastering these clauses allows you to extract exactly the information you need.</p>
+                    
+                    <p>You can also use functions, calculations, and aliases in your SELECT statements. Aggregate functions like <code>COUNT</code>, <code>SUM</code>, <code>AVG</code>, <code>MIN</code>, and <code>MAX</code> summarize data across groups.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">SQL</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-4" spellcheck="false">-- Sample data for SELECT practice
+CREATE TABLE employees (
+    emp_id INT PRIMARY KEY AUTO_INCREMENT,
+    first_name VARCHAR(50),
+    last_name VARCHAR(50),
+    department VARCHAR(50),
+    salary DECIMAL(10,2),
+    hire_date DATE
+);
+
+INSERT INTO employees (first_name, last_name, department, salary, hire_date) VALUES
+('John', 'Doe', 'IT', 75000, '2020-06-15'),
+('Jane', 'Smith', 'HR', 65000, '2019-03-10'),
+('Bob', 'Johnson', 'IT', 82000, '2018-11-20'),
+('Alice', 'Williams', 'Sales', 72000, '2021-01-05'),
+('Charlie', 'Brown', 'Sales', 68000, '2022-02-28'),
+('Diana', 'Prince', 'HR', 70000, '2020-09-12');
+
+-- Basic SELECT
+SELECT first_name, last_name, salary FROM employees;
+
+-- Filtering with WHERE
+SELECT * FROM employees WHERE department = 'IT' AND salary > 75000;
+
+-- Sorting
+SELECT first_name, last_name, salary FROM employees ORDER BY salary DESC;
+
+-- Group by department with aggregates
+SELECT 
+    department,
+    COUNT(*) AS employee_count,
+    AVG(salary) AS avg_salary,
+    MAX(salary) AS max_salary,
+    MIN(salary) AS min_salary
+FROM employees
+GROUP BY department
+HAVING COUNT(*) > 1;  -- HAVING filters groups after grouping
+
+-- Limiting results
+SELECT * FROM employees ORDER BY hire_date DESC LIMIT 3;
+
+-- Using LIKE for pattern matching
+SELECT * FROM employees WHERE first_name LIKE 'J%';
+
+-- Date functions
+SELECT 
+    first_name,
+    last_name,
+    hire_date,
+    YEAR(hire_date) AS hire_year,
+    DATEDIFF(CURDATE(), hire_date) AS days_employed
+FROM employees;</textarea>
+                        <button class="run-btn" onclick="runCode('editor-4', 'output-4')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Preview
+                        </div>
+                        <div class="preview-container" id="output-4"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li><code>SELECT column1, column2 FROM table</code> retrieves specific columns</li>
+                                <li><code>WHERE</code> filters rows before grouping (cannot use aggregate functions)</li>
+                                <li><code>GROUP BY</code> groups rows that have the same values in specified columns</li>
+                                <li><code>HAVING</code> filters groups after aggregation (can use aggregate functions)</li>
+                                <li><code>ORDER BY</code> sorts results (<code>ASC</code> ascending, <code>DESC</code> descending)</li>
+                                <li><code>LIMIT n</code> restricts number of rows returned</li>
+                                <li>Aggregate functions: <code>COUNT</code>, <code>SUM</code>, <code>AVG</code>, <code>MIN</code>, <code>MAX</code></li>
+                                <li>String patterns: <code>LIKE</code> with <code>%</code> (any characters) and <code>_</code> (single character)</li>
+                                <li>Date functions: <code>YEAR()</code>, <code>MONTH()</code>, <code>DATEDIFF()</code>, <code>NOW()</code></li>
+                                <li>Aliases (<code>AS</code>) make column names more readable</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-search"></i> Querying for Insights</h3>
+                            <p>The <code>SELECT</code> statement is how you ask questions of your data. Whether you need a simple list of customers or complex analytical reports, understanding the clauses and their order of execution is crucial. The logical order is: <code>FROM</code> â†’ <code>WHERE</code> â†’ <code>GROUP BY</code> â†’ <code>HAVING</code> â†’ <code>SELECT</code> â†’ <code>ORDER BY</code> â†’ <code>LIMIT</code>. Knowing this helps you write efficient queries and debug unexpected results.</p>
+                            
+                            <p>Aggregate queries transform detailed data into summaries, revealing trends and metrics. For example, sales by region, average order value, or employee count per department. These summaries drive business decisions and are the foundation of dashboards and reports.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-chart-bar"></i> Business Intelligence</h4>
+                                    <p>Companies use aggregated queries to monitor KPIs: total revenue, customer acquisition, inventory turnover. These queries run periodically and feed into BI tools like Tableau or PowerBI.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-filter"></i> Filtering Efficiency</h4>
+                                    <p>Using <code>WHERE</code> early reduces the amount of data processed, speeding up queries. Indexes on columns used in <code>WHERE</code>, <code>JOIN</code>, and <code>ORDER BY</code> dramatically improve performance.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-clock"></i> Time-Based Analysis</h4>
+                                    <p>Date functions allow you to analyze trends over time: month-over-month growth, year-over-year comparisons, or rolling averages. This is essential for forecasting and planning.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-chart-line"></i> Sales Dashboard</h4>
+                                <p>A typical e-commerce dashboard might show: total sales today (sum of order amounts with <code>WHERE DATE(order_date)=CURDATE()</code>), top-selling products (group by product, order by sum(quantity) desc, limit 10), revenue by category (join with products table, group by category). These queries run constantly to give real-time insights to business managers.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Analyze Employee Data:</strong> Using the employees table above, write queries to:</p>
+                            <ul>
+                                <li>Find all employees hired in 2020 or later, sorted by hire date (latest first)</li>
+                                <li>Calculate the average salary per department, but only for departments with at least 2 employees</li>
+                                <li>Get the highest salary overall, and the employee(s) who earn it</li>
+                                <li>Count how many employees have names starting with 'J'</li>
+                                <li>Show the total salary cost per department</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 5 -->
+            <div class="course-module" id="module5" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>INSERT/UPDATE/DELETE</h1>
+                    <h3>Modifying data in MySQL</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/919/919836.png" class="module-icon" alt="MySQL Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 5: <span>Data Manipulation Language (DML)</span></h1>
+                    <p>DML commandsâ€”<code>INSERT</code>, <code>UPDATE</code>, <code>DELETE</code>â€”let you add, change, or remove data in your tables. These operations are the primary way your application interacts with the database. Understanding how to use them safely and efficiently is critical for maintaining data integrity.</p>
+                    
+                    <p><code>INSERT</code> adds new rows, <code>UPDATE</code> modifies existing rows, and <code>DELETE</code> removes rows. Always use <code>WHERE</code> clauses with <code>UPDATE</code> and <code>DELETE</code> to avoid affecting the entire table. Transactions allow you to group multiple DML operations into an atomic unit that either fully succeeds or fully rolls back.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">SQL</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-5" spellcheck="false">-- Create a products table for demo
+CREATE TABLE products (
+    product_id INT PRIMARY KEY AUTO_INCREMENT,
+    product_name VARCHAR(100) NOT NULL,
+    category VARCHAR(50),
+    price DECIMAL(10,2) NOT NULL CHECK (price >= 0),
+    stock INT DEFAULT 0
+);
+
+-- INSERT examples
+INSERT INTO products (product_name, category, price, stock) VALUES
+('Laptop', 'Electronics', 899.99, 25),
+('Desk Chair', 'Furniture', 149.50, 10),
+('Monitor', 'Electronics', 249.99, 15),
+('Notebook', 'Stationery', 2.99, 200);
+
+-- UPDATE examples
+-- Increase price of all Electronics by 5%
+UPDATE products 
+SET price = price * 1.05 
+WHERE category = 'Electronics';
+
+-- Update stock for a specific product
+UPDATE products 
+SET stock = 30 
+WHERE product_name = 'Laptop';
+
+-- DELETE examples
+-- Delete products with zero stock (none here)
+DELETE FROM products WHERE stock = 0;
+
+-- Delete a specific product
+DELETE FROM products WHERE product_id = 4;  -- Notebook
+
+-- View the current state
+SELECT * FROM products;
+
+-- Transaction example (rollback if error)
+START TRANSACTION;
+INSERT INTO products (product_name, category, price, stock) VALUES ('Tablet', 'Electronics', 299.99, 12);
+UPDATE products SET price = 319.99 WHERE product_name = 'Tablet';
+-- Oops, maybe we want to undo
+ROLLBACK;  -- Tablet not inserted
+
+-- Safe delete with foreign key considerations (not applicable here)</textarea>
+                        <button class="run-btn" onclick="runCode('editor-5', 'output-5')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Preview
+                        </div>
+                        <div class="preview-container" id="output-5"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li><code>INSERT</code> can add single or multiple rows; you can specify columns or omit (requires all columns)</li>
+                                <li><code>UPDATE</code> modifies existing rows; always use <code>WHERE</code> to limit scope</li>
+                                <li><code>DELETE</code> removes rows; also requires <code>WHERE</code> to avoid clearing the whole table</li>
+                                <li><code>TRUNCATE</code> is faster than <code>DELETE</code> without <code>WHERE</code> but cannot be rolled back in some engines</li>
+                                <li>Transactions (<code>START TRANSACTION</code>, <code>COMMIT</code>, <code>ROLLBACK</code>) ensure data consistency for multi-step operations</li>
+                                <li>Foreign key constraints can prevent deletion of referenced rows (<code>ON DELETE RESTRICT</code>)</li>
+                                <li>Always backup or test DML operations in a safe environment before running on production data</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-pen"></i> Safe Data Manipulation</h3>
+                            <p>Modifying data is where mistakes can have serious consequences. A missing <code>WHERE</code> in an <code>UPDATE</code> could change every row in a table. A <code>DELETE</code> without <code>WHERE</code> could wipe out an entire table. That's why best practices include:</p>
+                            <ul>
+                                <li>Always write the <code>WHERE</code> clause first, then fill in the rest.</li>
+                                <li>Test with <code>SELECT</code> first to see which rows will be affected.</li>
+                                <li>Use transactions so you can roll back if something goes wrong.</li>
+                                <li>Limit permissions: application users should only have necessary DML privileges.</li>
+                            </ul>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-sync-alt"></i> Concurrency Control</h4>
+                                    <p>When multiple users modify data simultaneously, transactions with isolation levels prevent dirty reads, lost updates, and other anomalies. MySQL's InnoDB engine supports ACID transactions.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-history"></i> Auditing</h4>
+                                    <p>In many applications, changes are logged to an audit table. This can be done with triggers or application logic to track who changed what and when.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-database"></i> Bulk Operations</h4>
+                                    <p>For large inserts/updates, consider using batch operations (<code>INSERT ... VALUES (...), (...)</code>) or <code>LOAD DATA INFILE</code> for CSV imports. These are much faster than single-row inserts.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-shopping-bag"></i> Inventory Management</h4>
+                                <p>When a customer places an order, multiple DML operations occur within a transaction: insert into orders, insert into order_items, and update products set stock = stock - quantity. Using a transaction ensures that if any step fails (e.g., insufficient stock), the entire order is rolled back, preventing inconsistent data. This is how e-commerce platforms maintain accurate inventory.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Manage a Blog Database:</strong> Assume a <code>posts</code> table with columns: post_id, title, content, author, published_date, views. Write SQL for:</p>
+                            <ul>
+                                <li>Insert three new blog posts</li>
+                                <li>Update the views count for a specific post (increment by 1)</li>
+                                <li>Delete all posts by a certain author</li>
+                                <li>Increase the views of all posts published before 2023 by 10%</li>
+                                <li>Wrap a multi-step operation (e.g., delete old posts and archive them) in a transaction</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 6 -->
+            <div class="course-module" id="module6" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>JOINS</h1>
+                    <h3>Combine data from multiple tables</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/919/919836.png" class="module-icon" alt="MySQL Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 6: <span>SQL Joins</span></h1>
+                    <p>Joins allow you to retrieve data from two or more tables based on related columns. They are fundamental to relational databases because data is spread across multiple tables to avoid redundancy. The most common types are <code>INNER JOIN</code>, <code>LEFT JOIN</code>, <code>RIGHT JOIN</code>, and <code>CROSS JOIN</code>.</p>
+                    
+                    <p>Think of joins as combining tables horizontally: for each row in the first table, you find matching rows in the second table based on a condition (usually equality of foreign keys). The result includes columns from both tables.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">SQL</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-6" spellcheck="false">-- Customers and orders tables
+CREATE TABLE customers (
+    customer_id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(100)
+);
+
+CREATE TABLE orders (
+    order_id INT PRIMARY KEY AUTO_INCREMENT,
+    customer_id INT,
+    total DECIMAL(10,2),
+    order_date DATE,
+    FOREIGN KEY (customer_id) REFERENCES customers(customer_id)
+);
+
+INSERT INTO customers (name) VALUES
+('Alice'), ('Bob'), ('Charlie'), ('David');
+
+INSERT INTO orders (customer_id, total, order_date) VALUES
+(1, 150.00, '2024-01-10'),
+(2, 200.00, '2024-01-11'),
+(1, 75.00, '2024-01-12'),
+(3, 300.00, '2024-01-13'),
+(NULL, 50.00, '2024-01-14');  -- order with no customer
+
+-- INNER JOIN: only customers with orders
+SELECT c.name, o.order_id, o.total, o.order_date
+FROM customers c
+INNER JOIN orders o ON c.customer_id = o.customer_id;
+
+-- LEFT JOIN: all customers, even those without orders
+SELECT c.name, o.order_id, o.total
+FROM customers c
+LEFT JOIN orders o ON c.customer_id = o.customer_id;
+
+-- RIGHT JOIN: all orders, even those without customers
+SELECT c.name, o.order_id, o.total
+FROM customers c
+RIGHT JOIN orders o ON c.customer_id = o.customer_id;
+
+-- FULL OUTER JOIN not directly in MySQL, but can be simulated with UNION
+
+-- Self-join: employees and their managers
+CREATE TABLE employees (
+    emp_id INT PRIMARY KEY,
+    name VARCHAR(50),
+    manager_id INT
+);
+
+INSERT INTO employees VALUES
+(1, 'Alice', NULL),
+(2, 'Bob', 1),
+(3, 'Charlie', 1),
+(4, 'David', 2);
+
+SELECT e.name AS employee, m.name AS manager
+FROM employees e
+LEFT JOIN employees m ON e.manager_id = m.emp_id;
+
+-- Multiple joins: orders, customers, order_items (requires items table)
+-- (example would be longer, omitted for brevity)</textarea>
+                        <button class="run-btn" onclick="runCode('editor-6', 'output-6')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Preview
+                        </div>
+                        <div class="preview-container" id="output-6"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li><code>INNER JOIN</code> returns rows when there is a match in both tables</li>
+                                <li><code>LEFT JOIN</code> returns all rows from the left table, with matching right table rows (or NULL if no match)</li>
+                                <li><code>RIGHT JOIN</code> is the opposite: all rows from right table</li>
+                                <li><code>CROSS JOIN</code> returns Cartesian product (every combination) â€” rarely used intentionally</li>
+                                <li>You can join on equality (<code>ON table1.col = table2.col</code>) or other conditions</li>
+                                <li>Multiple joins can be chained: <code>FROM a JOIN b ON ... JOIN c ON ...</code></li>
+                                <li>Table aliases (<code>c</code>, <code>o</code>) make queries shorter and more readable</li>
+                                <li>Self-joins are useful for hierarchical data (e.g., employees, categories)</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-code-branch"></i> Combining Data Sources</h3>
+                            <p>In real applications, data is normalized across many tables. To answer business questions, you almost always need to join tables. For example, to show an order with customer name and product details, you might join orders â†’ customers, orders â†’ order_items â†’ products. Each join adds more columns to your result set.</p>
+                            
+                            <p>Understanding the difference between join types is crucial. <code>INNER JOIN</code> excludes unmatched rows; <code>LEFT JOIN</code> preserves all rows from the primary table, which is often what you want for reports (e.g., list all customers, even those who never ordered).</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-sitemap"></i> Hierarchical Data</h4>
+                                    <p>Self-joins are used for trees: employees with managers, categories with parent categories, threaded comments. You can also use recursive CTEs (Common Table Expressions) for more complex hierarchies.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-tachometer-alt"></i> Join Performance</h4>
+                                    <p>Joins can be expensive if tables are large and indexes are missing. Ensure foreign key columns are indexed. Also, be mindful of joining too many tables unnecessarily.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-filter"></i> Filtering with Joins</h4>
+                                    <p>You can add conditions in the <code>ON</code> clause or <code>WHERE</code>. Conditions in <code>ON</code> are applied during the join; conditions in <code>WHERE</code> are applied after. This matters for outer joins: filtering in <code>WHERE</code> can turn an outer join into an inner join.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-chart-pie"></i> Reporting</h4>
+                                <p>A sales report might join: orders (date, total) with customers (region) and order_items (product_id) and products (category). Then you can group by region and category to see sales trends. Such reports are built daily by businesses using complex join queries. For instance, a retail chain might analyze which products sell best in which regions by joining transaction data with store locations and product categories.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Library Management System:</strong> Given tables <code>authors</code> (author_id, name), <code>books</code> (book_id, title, author_id, published_year), <code>borrowers</code> (borrower_id, name), and <code>loans</code> (loan_id, book_id, borrower_id, loan_date, return_date). Write queries to:</p>
+                            <ul>
+                                <li>List all books with their author names (INNER JOIN)</li>
+                                <li>Show all borrowers and the books they've borrowed (including borrowers with no loans) â€” use LEFT JOIN</li>
+                                <li>Find the most borrowed book (count loans per book, join with books)</li>
+                                <li>List books that have never been borrowed (use LEFT JOIN and WHERE ... IS NULL)</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 7 -->
+            <div class="course-module" id="module7" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>FUNCTIONS</h1>
+                    <h3>Using built-in functions in MySQL</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/919/919836.png" class="module-icon" alt="MySQL Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 7: <span>MySQL Functions</span></h1>
+                    <p>MySQL provides a wide range of built-in functions for string manipulation, mathematical calculations, date/time operations, and data formatting. Using functions in your queries allows you to transform and analyze data directly within the database, reducing the need for post-processing in application code.</p>
+                    
+                    <p>Functions can be used in <code>SELECT</code> lists, <code>WHERE</code> clauses, and even in <code>ORDER BY</code>. Common categories: string functions (<code>CONCAT</code>, <code>SUBSTRING</code>, <code>UPPER</code>), numeric functions (<code>ROUND</code>, <code>RAND</code>), date functions (<code>NOW</code>, <code>DATE_ADD</code>), and aggregate functions (<code>COUNT</code>, <code>SUM</code>).</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">SQL</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-7" spellcheck="false">-- Sample data
+CREATE TABLE users (
+    user_id INT PRIMARY KEY AUTO_INCREMENT,
+    first_name VARCHAR(50),
+    last_name VARCHAR(50),
+    email VARCHAR(100),
+    birth_date DATE,
+    registration_date DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+INSERT INTO users (first_name, last_name, email, birth_date) VALUES
+('John', 'Doe', 'john.doe@example.com', '1990-05-15'),
+('Jane', 'Smith', 'jane.smith@example.com', '1985-08-22'),
+('Bob', 'Johnson', 'bob.j@example.com', '2000-01-10');
+
+-- String functions
+SELECT 
+    UPPER(first_name) AS upper_first,
+    CONCAT(first_name, ' ', last_name) AS full_name,
+    SUBSTRING(email, 1, 5) AS email_prefix,
+    LENGTH(email) AS email_length,
+    REPLACE(email, 'example.com', 'company.com') AS company_email
+FROM users;
+
+-- Date functions
+SELECT 
+    first_name,
+    last_name,
+    birth_date,
+    TIMESTAMPDIFF(YEAR, birth_date, CURDATE()) AS age,
+    DATE_FORMAT(birth_date, '%M %d, %Y') AS formatted_birth,
+    DAYNAME(birth_date) AS birth_weekday,
+    registration_date,
+    DATE_ADD(registration_date, INTERVAL 30 DAY) AS follow_up_date
+FROM users;
+
+-- Numeric functions
+SELECT 
+    RAND() * 100 AS random_value,
+    ROUND(123.4567, 2) AS rounded,
+    CEILING(12.3) AS ceil_example,
+    FLOOR(12.9) AS floor_example,
+    ABS(-10) AS absolute;
+
+-- Conditional functions
+SELECT 
+    first_name,
+    last_name,
+    IF(TIMESTAMPDIFF(YEAR, birth_date, CURDATE()) >= 18, 'Adult', 'Minor') AS age_group,
+    CASE 
+        WHEN TIMESTAMPDIFF(YEAR, birth_date, CURDATE()) < 30 THEN 'Young'
+        WHEN TIMESTAMPDIFF(YEAR, birth_date, CURDATE()) < 50 THEN 'Middle'
+        ELSE 'Senior'
+    END AS age_category
+FROM users;
+
+-- Aggregate with functions
+SELECT 
+    COUNT(*) AS total_users,
+    AVG(TIMESTAMPDIFF(YEAR, birth_date, CURDATE())) AS avg_age,
+    MAX(LENGTH(email)) AS max_email_length
+FROM users;</textarea>
+                        <button class="run-btn" onclick="runCode('editor-7', 'output-7')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Preview
+                        </div>
+                        <div class="preview-container" id="output-7"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>String functions: <code>CONCAT</code>, <code>SUBSTRING</code>, <code>UPPER</code>/<code>LOWER</code>, <code>TRIM</code>, <code>REPLACE</code>, <code>LENGTH</code></li>
+                                <li>Date functions: <code>NOW()</code>, <code>CURDATE()</code>, <code>DATE_ADD</code>, <code>DATEDIFF</code>, <code>DATE_FORMAT</code>, <code>YEAR()</code></li>
+                                <li>Numeric functions: <code>ROUND</code>, <code>CEILING</code>, <code>FLOOR</code>, <code>ABS</code>, <code>RAND</code></li>
+                                <li>Conditional: <code>IF(condition, true_value, false_value)</code>, <code>CASE WHEN ... THEN ... END</code></li>
+                                <li>Aggregate functions: <code>COUNT</code>, <code>SUM</code>, <code>AVG</code>, <code>MIN</code>, <code>MAX</code></li>
+                                <li>Functions can be nested</li>
+                                <li>Performance: using functions on columns in <code>WHERE</code> can prevent index usage (e.g., <code>WHERE YEAR(date) = 2020</code> is slower than <code>WHERE date BETWEEN '2020-01-01' AND '2020-12-31'</code>)</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-calculator"></i> Data Transformation</h3>
+                            <p>Functions allow you to shape data exactly as needed for reports, exports, or application use. Instead of fetching raw data and formatting it in code, you can do it directly in SQL, which is often more efficient and reduces application complexity.</p>
+                            
+                            <p>For example, <code>DATE_FORMAT</code> can present dates in user-friendly formats. <code>CONCAT</code> can assemble full names or addresses. <code>CASE</code> statements can categorize data into buckets for analysis. These capabilities are essential for building data-driven features.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-filter"></i> Filtering with Functions</h4>
+                                    <p>Be cautious when using functions in <code>WHERE</code> clauses, as they can negate index usage. For example, <code>WHERE UPPER(name) = 'ALICE'</code> won't use an index on <code>name</code>. Consider using generated columns or application-level formatting instead.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-chart-bar"></i> Statistical Analysis</h4>
+                                    <p>Aggregate functions combined with <code>GROUP BY</code> provide powerful statistical summaries. You can compute averages, sums, and counts across any dimension, giving insights into business metrics.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-random"></i> Random Sampling</h4>
+                                    <p><code>RAND()</code> can be used for random sampling: <code>ORDER BY RAND() LIMIT 5</code> picks random rows. However, this can be slow on large tables; alternatives exist.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-envelope"></i> Email Marketing</h4>
+                                <p>A marketing team might need to extract a list of customers with their full names, age groups, and formatted registration dates. Using string and date functions, they can generate personalized email content directly from SQL. For example: <code>CONCAT('Dear ', first_name, ' ', last_name)</code> as salutation, and <code>DATE_FORMAT(registration_date, '%M %e, %Y')</code> for a friendly join date.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>User Data Analysis:</strong> Using the users table above, write queries to:</p>
+                            <ul>
+                                <li>Show each user's age in years as of today</li>
+                                <li>Create a column "email_domain" by extracting the part after '@'</li>
+                                <li>Format registration date as 'DD/MM/YYYY HH:MI:SS'</li>
+                                <li>Classify users as 'Born in 80s', '90s', '2000s' based on birth year</li>
+                                <li>Calculate average age of users</li>
+                                <li>Select all users whose first name starts with 'J' (use string function or LIKE)</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 8 -->
+            <div class="course-module" id="module8" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>INDEXES</h1>
+                    <h3>Optimize query performance with indexes</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/919/919836.png" class="module-icon" alt="MySQL Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 8: <span>Indexes and Performance</span></h1>
+                    <p>Indexes are special data structures that improve the speed of data retrieval operations. They work like an index in a book: instead of scanning every page, you look up the term in the index and go directly to the relevant pages. Without indexes, MySQL performs full table scans, which become slow as tables grow.</p>
+                    
+                    <p>Indexes are created on columns that are frequently used in <code>WHERE</code>, <code>JOIN</code>, <code>ORDER BY</code>, and <code>GROUP BY</code> clauses. However, they come with a cost: they slow down <code>INSERT</code>, <code>UPDATE</code>, and <code>DELETE</code> operations because the index must also be updated. Balancing read and write performance is key.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">SQL</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-8" spellcheck="false">-- Create a large-ish table to demonstrate indexes
+CREATE TABLE users (
+    user_id INT PRIMARY KEY AUTO_INCREMENT,
+    username VARCHAR(50),
+    email VARCHAR(100),
+    last_login DATETIME,
+    status ENUM('active','inactive')
+);
+
+-- Insert 1000 sample rows (simulated with a loop in procedure, but for demo we'll insert few)
+INSERT INTO users (username, email, last_login, status) VALUES
+('alice', 'alice@ex.com', NOW(), 'active'),
+('bob', 'bob@ex.com', NOW(), 'active'),
+('charlie', 'charlie@ex.com', NOW(), 'inactive'),
+-- ... repeat many times
+('zoe', 'zoe@ex.com', NOW(), 'active');
+
+-- Create an index on username for faster searches
+CREATE INDEX idx_username ON users(username);
+
+-- Create a composite index on (status, last_login)
+CREATE INDEX idx_status_lastlogin ON users(status, last_login);
+
+-- View existing indexes
+SHOW INDEX FROM users;
+
+-- Now queries that can use indexes:
+EXPLAIN SELECT * FROM users WHERE username = 'alice';
+EXPLAIN SELECT * FROM users WHERE status = 'active' AND last_login > '2024-01-01';
+
+-- Queries that may not use indexes effectively:
+EXPLAIN SELECT * FROM users WHERE YEAR(last_login) = 2024;  -- function on column prevents index use
+EXPLAIN SELECT * FROM users WHERE email LIKE '%@ex.com';    -- leading wildcard prevents index use
+
+-- Drop an index
+DROP INDEX idx_username ON users;</textarea>
+                        <button class="run-btn" onclick="runCode('editor-8', 'output-8')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Preview
+                        </div>
+                        <div class="preview-container" id="output-8"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li><code>CREATE INDEX</code> creates an index on one or more columns</li>
+                                <li>Primary keys and unique constraints automatically create indexes</li>
+                                <li>Foreign keys also get indexes automatically in InnoDB</li>
+                                <li>Composite indexes (multiple columns) are useful for queries that filter on multiple columns</li>
+                                <li>Indexes speed up <code>SELECT</code> but slow down <code>INSERT</code>/<code>UPDATE</code>/<code>DELETE</code></li>
+                                <li>Use <code>EXPLAIN</code> to see if a query uses indexes</li>
+                                <li>Avoid functions or calculations on indexed columns in <code>WHERE</code></li>
+                                <li>Leading wildcards (<code>LIKE '%text'</code>) prevent index usage</li>
+                                <li>Not all queries benefit from indexes; small tables may be faster with full scan</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-bolt"></i> Query Optimization</h3>
+                            <p>Indexes are the primary tool for optimizing database performance. Understanding how to choose which columns to index, and what type of index (B-tree, hash, full-text) is essential for any database professional. The MySQL query optimizer decides whether to use an index based on statistics and the query structure.</p>
+                            
+                            <p>Best practices: index columns used in <code>WHERE</code> clauses, join conditions, and <code>ORDER BY</code>. For range queries, B-tree indexes work well. For full-text search, use <code>FULLTEXT</code> indexes. For equality searches on many columns, composite indexes with the most selective column first are effective.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-tree"></i> Index Types</h4>
+                                    <p>InnoDB uses B-tree indexes by default. There are also <code>UNIQUE</code> indexes (enforce uniqueness), <code>FULLTEXT</code> indexes for text search, and <code>SPATIAL</code> for geometric data.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-chart-line"></i> Cardinality</h4>
+                                    <p>Cardinality refers to the number of distinct values in an indexed column. High cardinality columns (like primary keys) benefit most from indexing. Low cardinality (like gender) might not need an index unless combined with other columns.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-wrench"></i> Maintenance</h4>
+                                    <p>Over time, indexes can become fragmented. Running <code>OPTIMIZE TABLE</code> can rebuild indexes. Also, unused indexes waste space and should be dropped.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-search"></i> Search Feature</h4>
+                                <p>Consider a user search feature in an admin panel. Without an index on <code>username</code> or <code>email</code>, a query like <code>SELECT * FROM users WHERE username = 'john_doe'</code> would scan millions of rows, taking seconds. With an index, it becomes instantaneous. Similarly, for a sortable table by <code>last_login</code>, an index on that column makes pagination fast. Proper indexing is what allows modern applications to remain responsive at scale.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Index Analysis:</strong> Given a large <code>orders</code> table with columns: order_id (PK), customer_id, order_date, status, total. Write SQL to:</p>
+                            <ul>
+                                <li>Create appropriate indexes to speed up:
+                                    <ul>
+                                        <li>Finding all orders for a specific customer</li>
+                                        <li>Counting orders by status</li>
+                                        <li>Finding orders placed in a date range</li>
+                                        <li>Sorting orders by order_date descending for pagination</li>
+                                    </ul>
+                                </li>
+                                <li>Use <code>EXPLAIN</code> to verify index usage (simulate with sample data)</li>
+                                <li>Explain why a composite index on (status, order_date) might be better than two separate indexes</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 9 -->
+            <div class="course-module" id="module9" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>STORED PROCEDURES</h1>
+                    <h3>Encapsulate logic with stored procedures</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/919/919836.png" class="module-icon" alt="MySQL Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 9: <span>Stored Procedures and Functions</span></h1>
+                    <p>Stored procedures are SQL code that you can save and reuse. They allow you to encapsulate complex business logic, accept parameters, and return results. Stored procedures can improve performance by reducing network traffic and enabling execution plans to be cached. They also enhance security by granting users access to procedures without direct table permissions.</p>
+                    
+                    <p>Stored functions are similar but return a single value and can be used in SQL expressions. Triggers are another type of stored routine that automatically execute in response to certain events on a table.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">SQL</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-9" spellcheck="false">-- Sample table
+CREATE TABLE accounts (
+    account_id INT PRIMARY KEY AUTO_INCREMENT,
+    owner VARCHAR(50),
+    balance DECIMAL(10,2) NOT NULL CHECK (balance >= 0)
+);
+
+INSERT INTO accounts (owner, balance) VALUES
+('Alice', 1000.00),
+('Bob', 500.00);
+
+-- Stored procedure to transfer money
+DELIMITER //
+
+CREATE PROCEDURE TransferMoney(
+    IN from_account INT,
+    IN to_account INT,
+    IN amount DECIMAL(10,2)
+)
+BEGIN
+    DECLARE EXIT HANDLER FOR SQLEXCEPTION
+    BEGIN
+        ROLLBACK;
+        RESIGNAL;
+    END;
+
+    START TRANSACTION;
+    
+    -- Deduct from source
+    UPDATE accounts SET balance = balance - amount 
+    WHERE account_id = from_account AND balance >= amount;
+    
+    -- Check if deduction succeeded
+    IF ROW_COUNT() = 0 THEN
+        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Insufficient funds or invalid account';
+    END IF;
+    
+    -- Add to destination
+    UPDATE accounts SET balance = balance + amount 
+    WHERE account_id = to_account;
+    
+    COMMIT;
+END //
+
+DELIMITER ;
+
+-- Call the procedure
+CALL TransferMoney(1, 2, 200.00);
+
+-- Check result
+SELECT * FROM accounts;
+
+-- Stored function example
+DELIMITER //
+
+CREATE FUNCTION GetAccountBalance(acc_id INT) 
+RETURNS DECIMAL(10,2)
+DETERMINISTIC
+READS SQL DATA
+BEGIN
+    DECLARE bal DECIMAL(10,2);
+    SELECT balance INTO bal FROM accounts WHERE account_id = acc_id;
+    RETURN bal;
+END //
+
+DELIMITER ;
+
+-- Use the function
+SELECT GetAccountBalance(1) AS balance;
+
+-- Drop procedure
+DROP PROCEDURE IF EXISTS TransferMoney;</textarea>
+                        <button class="run-btn" onclick="runCode('editor-9', 'output-9')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Preview
+                        </div>
+                        <div class="preview-container" id="output-9"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>Stored procedures: <code>CREATE PROCEDURE name (params) BEGIN ... END</code></li>
+                                <li>Parameters can be <code>IN</code>, <code>OUT</code>, <code>INOUT</code></li>
+                                <li>Use <code>DELIMITER</code> to change delimiter when defining procedures</li>
+                                <li>Variables: <code>DECLARE var_name datatype</code></li>
+                                <li>Control flow: <code>IF</code>, <code>CASE</code>, loops (<code>WHILE</code>, <code>REPEAT</code>)</li>
+                                <li>Error handling: <code>DECLARE ... HANDLER</code> and <code>SIGNAL</code> to raise exceptions</li>
+                                <li>Stored functions return a single value; they can be used in SQL expressions</li>
+                                <li>Triggers: <code>CREATE TRIGGER</code> for automatic actions on <code>INSERT</code>/<code>UPDATE</code>/<code>DELETE</code></li>
+                                <li>Stored routines enhance security, performance, and maintainability</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-cogs"></i> Business Logic in Database</h3>
+                            <p>Stored procedures allow you to centralize business logic close to the data. This can be beneficial for operations that require multiple steps and must be atomic (like money transfers). By encapsulating the logic in a procedure, you ensure consistency and reduce application complexity.</p>
+                            
+                            <p>Stored functions are often used for calculations that are reused across many queries, such as tax computation or formatting. Triggers can automatically maintain audit logs, update denormalized columns, or enforce complex business rules.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-shield-alt"></i> Security</h4>
+                                    <p>You can grant users permission to execute a procedure without giving them direct access to underlying tables. This is useful for sensitive operations where you want to control exactly what data can be modified.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-network-wired"></i> Reduced Network Traffic</h4>
+                                    <p>Instead of sending multiple SQL statements over the network, a single call to a procedure executes everything on the server, reducing latency and improving performance for complex operations.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-sync-alt"></i> Maintainability</h4>
+                                    <p>When business rules change, you can update the procedure in one place rather than modifying application code across multiple services. However, versioning and deployment can be trickier.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-university"></i> Banking Applications</h4>
+                                <p>Banks use stored procedures for transactions like funds transfer. The procedure ensures that the debit and credit happen atomically, checks for sufficient funds, and logs the transaction. All of this is done inside the database to maintain ACID compliance. Even if the application crashes mid-transaction, the database ensures consistency.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>E-commerce Order Procedure:</strong> Write a stored procedure <code>PlaceOrder</code> that:</p>
+                            <ul>
+                                <li>Accepts customer_id and a list of product_id and quantity (you can pass as JSON or multiple parameters with a separate table)</li>
+                                <li>Inserts a new order and order items</li>
+                                <li>Updates product stock (decrease by quantity)</li>
+                                <li>Calculates total amount</li>
+                                <li>Uses a transaction and handles errors (e.g., insufficient stock)</li>
+                                <li>Returns the new order_id via an OUT parameter</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 10 -->
+            <div class="course-module" id="module10" data-aos="fade-up" data-difficulty="advanced">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>ADVANCED MYSQL</h1>
+                    <h3>Master advanced MySQL topics</h3>
+                    <span class="difficulty">Advanced</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/919/919836.png" class="module-icon" alt="MySQL Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 10: <span>Advanced MySQL Techniques</span></h1>
+                    <p>This module covers advanced concepts that separate junior DBAs from experts: query optimization, replication, partitioning, full-text search, JSON support, and performance tuning. These topics are essential for managing large-scale, high-traffic databases.</p>
+                    
+                    <p>You'll learn how to analyze slow queries, design partitioning strategies for massive tables, set up replication for high availability, and leverage MySQL's JSON capabilities for semi-structured data. Understanding these advanced features allows you to build robust, scalable applications.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">SQL</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-10" spellcheck="false">-- JSON support (MySQL 5.7+)
+CREATE TABLE orders_json (
+    order_id INT PRIMARY KEY AUTO_INCREMENT,
+    customer_id INT,
+    items JSON,  -- store array of items as JSON
+    total DECIMAL(10,2)
+);
+
+INSERT INTO orders_json (customer_id, items, total) VALUES
+(1, '[{"product":"Laptop","qty":1,"price":899.99}, {"product":"Mouse","qty":1,"price":19.99}]', 919.98),
+(2, '[{"product":"Keyboard","qty":1,"price":49.99}]', 49.99);
+
+-- Query JSON data
+SELECT 
+    order_id,
+    JSON_EXTRACT(items, '$[0].product') AS first_product,
+    JSON_LENGTH(items) AS item_count,
+    JSON_SEARCH(items, 'all', 'Laptop') AS laptop_present
+FROM orders_json
+WHERE JSON_CONTAINS(items, '{"product":"Laptop"}', '$');
+
+-- Full-text search
+CREATE TABLE articles (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    title VARCHAR(200),
+    body TEXT,
+    FULLTEXT(title, body)
+);
+
+INSERT INTO articles (title, body) VALUES
+('MySQL Tutorial', 'This tutorial covers MySQL basics and advanced topics...'),
+('Database Design', 'Learn how to design efficient databases...');
+
+-- Full-text search in natural language mode
+SELECT * FROM articles
+WHERE MATCH(title, body) AGAINST('database tutorial');
+
+-- Query optimization with EXPLAIN ANALYZE (MySQL 8.0.18+)
+EXPLAIN ANALYZE SELECT * FROM articles WHERE MATCH(title, body) AGAINST('database');
+
+-- Partitioning example (range partitioning)
+CREATE TABLE sales (
+    sale_id INT,
+    sale_date DATE,
+    amount DECIMAL(10,2)
+)
+PARTITION BY RANGE (YEAR(sale_date)) (
+    PARTITION p0 VALUES LESS THAN (2020),
+    PARTITION p1 VALUES LESS THAN (2021),
+    PARTITION p2 VALUES LESS THAN (2022),
+    PARTITION p3 VALUES LESS THAN (2023),
+    PARTITION p4 VALUES LESS THAN (2024),
+    PARTITION p_future VALUES LESS THAN MAXVALUE
+);
+
+-- Replication setup (conceptual)
+-- On master: 
+--   server-id = 1, log_bin = ON, binlog_do_db = your_db
+--   CREATE USER 'repl'@'slave_ip' IDENTIFIED BY 'password';
+--   GRANT REPLICATION SLAVE ON *.* TO 'repl'@'slave_ip';
+-- On slave:
+--   CHANGE MASTER TO MASTER_HOST='master_ip', MASTER_USER='repl', ...;
+--   START SLAVE;</textarea>
+                        <button class="run-btn" onclick="runCode('editor-10', 'output-10')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Preview
+                        </div>
+                        <div class="preview-container" id="output-10"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li><strong>JSON support:</strong> store, index, and query JSON documents</li>
+                                <li><strong>Full-text search:</strong> natural language and boolean mode searches on text columns</li>
+                                <li><strong>Partitioning:</strong> split large tables into smaller physical pieces for easier management and faster queries</li>
+                                <li><strong>Replication:</strong> master-slave or group replication for scaling reads and high availability</li>
+                                <li><strong>Performance tuning:</strong> using <code>EXPLAIN</code>, slow query log, optimizer hints, and configuration parameters</li>
+                                <li><strong>Backup and recovery:</strong> <code>mysqldump</code>, physical backups, point-in-time recovery</li>
+                                <li><strong>Security:</strong> user privileges, SSL connections, data encryption</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-rocket"></i> Scaling MySQL</h3>
+                            <p>As applications grow, MySQL must scale to handle more data and higher concurrency. Replication allows you to distribute read traffic to multiple slaves, reducing load on the master. Partitioning can improve query performance on huge tables by limiting the amount of data scanned. Caching (e.g., Redis, memcached) can also complement MySQL for frequently accessed data.</p>
+                            
+                            <p>JSON support brings flexibility for semi-structured data, allowing you to combine relational and document-like storage in one database. Full-text search enables rich search capabilities without external search engines. These features make MySQL a versatile choice for modern applications.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-chart-line"></i> Monitoring</h4>
+                                    <p>Tools like MySQL Enterprise Monitor, Percona Monitoring and Management (PMM), or open-source tools help track performance metrics, query times, and server health.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-database"></i> High Availability</h4>
+                                    <p>Solutions like MySQL InnoDB Cluster (Group Replication) or Galera Cluster provide synchronous replication and automatic failover for high availability.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-cloud"></i> Cloud Deployments</h4>
+                                    <p>Managed services like Amazon RDS, Google Cloud SQL, or Azure Database for MySQL handle many operational tasks, but understanding underlying principles is still essential for optimization.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-globe"></i> Large-Scale Web Applications</h4>
+                                <p>Companies like Facebook, Twitter, and Uber use MySQL at massive scale. They employ sharding (splitting data across multiple databases) to handle petabytes of data, replication for disaster recovery, and sophisticated query optimization to keep response times under milliseconds. Understanding advanced MySQL concepts is critical for engineers working at such scales.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Design a Scalable Schema:</strong> You're building a social media app with posts, comments, and likes. Propose a database design that includes:</p>
+                            <ul>
+                                <li>Table structures with appropriate indexes</li>
+                                <li>Partitioning strategy for posts table (e.g., by date)</li>
+                                <li>How you would use replication (read slaves)</li>
+                                <li>Full-text search for posts (maybe with MySQL built-in or external)</li>
+                                <li>JSON for any semi-structured data (e.g., post metadata)</li>
+                                <li>Stored procedures for common operations (like adding a comment with transaction)</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Practice Playground -->
+            <div class="course-module" id="playground" data-aos="fade-up">
+                <div class="course-three">
+                    <h1>PRACTICE PLAYGROUND</h1>
+                    <h3>Experiment with what you've learned</h3>
+                    <i class="fas fa-laptop-code course-icon" style="color: var(--primary);"></i>
+                </div>
+                <div class="course-one">
+                    <h1>Your SQL Playground: <span>Try Your Own Queries</span></h1>
+                    <p>Use this space to experiment with everything you've learned. Try combining different MySQL commands and see the results in real-time! This is your sandbox to practice and explore.</p>
+                    
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">SQL</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="playground-editor" spellcheck="false">-- Your SQL code here
+-- Create a sample table
+CREATE TABLE IF NOT EXISTS playground (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(50),
+    value INT,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Insert some sample data
+INSERT INTO playground (name, value) VALUES
+('Alice', 100),
+('Bob', 200),
+('Charlie', 150);
+
+-- Query data
+SELECT * FROM playground;
+
+-- Try aggregations
+SELECT COUNT(*) AS total_rows, AVG(value) AS avg_value FROM playground;
+
+-- Try a join with another table (create another if needed)
+-- Experiment with functions, indexes, etc.
+
+-- Have fun and remember to use SkillMynte AI for feedback!</textarea>
+                        <button class="run-btn" onclick="runCode('playground-editor', 'playground-output')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Preview
+                        </div>
+                        <div class="preview-container" id="playground-output"></div>
+                    </div>
+                    
+                    <div class="course-five">
+                        <h3>Challenge Exercises:</h3>
+                        <ol>
+                            <li>Create a database for a movie rental store with tables: movies, customers, rentals</li>
+                            <li>Write a query to find the most rented movies</li>
+                            <li>Create a stored procedure to rent a movie (check availability, insert rental, update stock)</li>
+                            <li>Add a full-text index on movie titles and search for a title</li>
+                            <li>Design a partitioning strategy for a large log table</li>
+                        </ol>
+                        
+                        <h3>Tips & Resources:</h3>
+                        <ul>
+                            <li>Use <code>EXPLAIN</code> to analyze query performance</li>
+                            <li>Practice with different join types</li>
+                            <li>Experiment with indexes and see how they affect query speed</li>
+                            <li>Try using JSON functions if you have MySQL 5.7+</li>
+                            <li>Remember to use transactions when modifying multiple related tables</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Premium Subscription CTA -->
+            <div class="premium-subscription" id="premium-subscription" data-aos="fade-up">
+                <h2>Unlock Premium SkillMynte Content</h2>
+                <p>Upgrade to SkillMynte Pro for exclusive courses, advanced projects, and personalized learning paths</p>
+                
+                <div class="premium-features">
+                    <div class="premium-feature">
+                        <i class="fas fa-gem"></i>
+                        <h3>Premium Courses</h3>
+                        <p>Access our entire library of advanced courses and exclusive content</p>
+                    </div>
+                    <div class="premium-feature">
+                        <i class="fas fa-trophy"></i>
+                        <h3>Certification</h3>
+                        <p>Earn industry-recognized certificates to showcase your skills</p>
+                    </div>
+                    <div class="premium-feature">
+                        <i class="fas fa-user-graduate"></i>
+                        <h3>Mentorship</h3>
+                        <p>Get personalized guidance from industry experts</p>
+                    </div>
+                </div>
+                
+                <div class="pricing-options">
+                    <div class="pricing-option">
+                        <h3>Monthly</h3>
+                        <div class="price">₦3,500<span>/month</span></div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> All Premium Courses</li>
+                            <li><i class="fas fa-check"></i> Practice Projects</li>
+                            <li><i class="fas fa-check"></i> Community Access</li>
+                            <li><i class="fas fa-check"></i> Certificates</li>
+                            <li><i class="fas fa-check"></i> personal AI inbuilt</li>
+                        </ul>
+                        <a href="premium courses.html"><button class="pricing-btn">Get Started</button></a>
+                    </div>
+                    
+                    <div class="pricing-option" style="border-color: var(--white); transform: scale(1.05);">
+                        <h3>Annual <span style="background: var(--white); color: #2962FF; padding: 0.2rem 0.5rem; border-radius: 20px; font-size: 0.8rem; margin-left: 0.5rem;">Best Value</span></h3>
+                        <div class="price">₦37,000<span>/year</span></div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> All Premium Courses</li>
+                            <li><i class="fas fa-check"></i> Practice Projects</li>
+                            <li><i class="fas fa-check"></i> Community Access</li>
+                            <li><i class="fas fa-check"></i> Certificates</li>
+                            <li><i class="fas fa-check"></i> personal AI inbuilt</li>
+                        </ul>
+                        <a href="premium courses.html"><button class="pricing-btn">Get Started</button></a>
+                    </div>
+                    
+                    <div class="pricing-option">
+                        <h3>Lifetime</h3>
+                        <div class="price">₦200,000<span>/once</span></div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> All Premium Courses</li>
+                            <li><i class="fas fa-check"></i> Practice Projects</li>
+                            <li><i class="fas fa-check"></i> Community Access</li>
+                            <li><i class="fas fa-check"></i> Certificates</li>
+                            <li><i class="fas fa-check"></i> personal AI inbuilt</li>
+                        </ul>
+                        <a href="premium courses.html"><button class="pricing-btn">Get Started</button></a>
+                    </div>
+                </div>
+                
+                <button class="premium-cta-btn">
+                    <i class="fas fa-rocket"></i> Upgrade to SkillMynte Pro
+                </button>
+            </div>
+            
+            <!-- Footer -->
+            <footer>
+                <div class="footer-content">
+                    <div class="footer-column">
+                        <h3>About SkillMynte</h3>
+                        <p>SkillMynte is a premium learning platform dedicated to helping developers of all levels master web technologies through interactive courses and hands-on practice.</p>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/profile.php?id=61581069862024"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://x.com/SkillMynte_AI?t=CcoQtjWZGGOXqfTfrsufjQ&s=09"><i class="fab fa-twitter"></i></a>
+                            <a href="https://youtube.com/@skillmynte?si=LmX2MjSKU3N1Xa5S"><i class="fab fa-youtube"></i></a>
+                            <a href="https://www.instagram.com/skillmynte_ai?igsh=MTd1YWpjdXV1OHhrbA=="><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Quick Links</h3>
+                        <ul class="footer-links">
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Home</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Courses</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Practice</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Projects</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Popular Courses</h3>
+                        <ul class="footer-links">
+                            <li><a href="free CSS Course.html"><i class="fas fa-chevron-right"></i> HTML & CSS Fundamentals</a></li>
+                            <li><a href="free JS Course.html"><i class="fas fa-chevron-right"></i> JavaScript Mastery</a></li>
+                            <li><a href="premium courses.html"><i class="fas fa-chevron-right"></i> React.js Development</a></li>
+                            <li><a href="free node.js.html"><i class="fas fa-chevron-right"></i> Node.js Backend</a></li>
+                            <li><a href="free python course.html"><i class="fas fa-chevron-right"></i> Python for Beginners</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Contact Us</h3>
+                        <p><i class="fas fa-envelope"></i>Skillmynteofficial@gmail.com</p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 SkillMynte. All rights reserved. | Designed with <i class="fas fa-heart" style="color: var(--primary);"></i> for the developer community</p>
+                </div>
+            </footer>
+
+           <script>
+    // Function to run code in preview
+    function runCode(editorId, outputId) {
+        const editor = document.getElementById(editorId);
+        const output = document.getElementById(outputId);
+        
+        try {
+            output.innerHTML = editor.value;
+        } catch (error) {
+            output.innerHTML = `<div style="color: var(--accent); padding: 1rem;">Error: ${error.message}</div>`;
+        }
+    }
+    
+    // Initialize all editors with their default output
+    document.addEventListener('DOMContentLoaded', function() {
+        // Run all code editors on load
+        runCode('editor-1', 'output-1');
+        runCode('editor-2', 'output-2');
+        runCode('editor-3', 'output-3');
+        runCode('editor-4', 'output-4');
+        runCode('editor-5', 'output-5');
+        runCode('editor-6', 'output-6');
+        runCode('editor-7', 'output-7');
+        runCode('editor-8', 'output-8');
+        runCode('editor-9', 'output-9');
+        runCode('editor-10', 'output-10');
+        runCode('playground-editor', 'playground-output');
+        
+        // Add event listeners to all run buttons in editor headers
+        document.querySelectorAll('.run-editor').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const editorContainer = this.closest('.code-editor-container');
+                const editor = editorContainer.querySelector('.code-editor');
+                const output = editorContainer.querySelector('.preview-container');
+                runCode(editor.id, output.id);
+            });
+        });
+        
+        // Add reset functionality
+        document.querySelectorAll('.reset-editor').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const editorContainer = this.closest('.code-editor-container');
+                const editor = editorContainer.querySelector('.code-editor');
+                const originalContent = editor.dataset.original || editor.defaultValue;
+                editor.value = originalContent;
+                runCode(editor.id, editorContainer.querySelector('.preview-container').id);
+            });
+        });
+        
+        // Store original content for reset functionality
+        document.querySelectorAll('.code-editor').forEach(editor => {
+            editor.dataset.original = editor.value;
+        });
+
+        // Handle navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // FIXED: Hamburger menu functionality
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.querySelector('.nav-menu');
+        const sidebar = document.getElementById('sidebar');
+        const body = document.body;
+
+        function toggleMobileMenu() {
+            const isActive = navMenu.classList.contains('active');
+            
+            if (isActive) {
+                // Close menu
+                navMenu.classList.remove('active');
+                sidebar.classList.remove('active');
+                menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                body.classList.remove('menu-open');
+                menuToggle.setAttribute('aria-expanded', 'false');
+            } else {
+                // Open menu
+                navMenu.classList.add('active');
+                sidebar.classList.add('active');
+                menuToggle.innerHTML = '<i class="fas fa-times"></i>';
+                body.classList.add('menu-open');
+                menuToggle.setAttribute('aria-expanded', 'true');
+            }
+        }
+
+        function closeMobileMenu() {
+            navMenu.classList.remove('active');
+            sidebar.classList.remove('active');
+            menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            body.classList.remove('menu-open');
+            menuToggle.setAttribute('aria-expanded', 'false');
+        }
+
+        // Mobile menu toggle
+        menuToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            toggleMobileMenu();
+        });
+
+        // Close menu when clicking on nav links
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function() {
+                if (window.innerWidth <= 1024) {
+                    closeMobileMenu();
+                }
+            });
+        });
+
+        // Close menu when clicking on dropdown items
+        document.querySelectorAll('.dropdown-item').forEach(item => {
+            item.addEventListener('click', function() {
+                if (window.innerWidth <= 1024) {
+                    closeMobileMenu();
+                }
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (window.innerWidth <= 1024 && 
+                navMenu.classList.contains('active') &&
+                !e.target.closest('.nav-menu') && 
+                !e.target.closest('.menu-toggle') &&
+                !e.target.closest('.sidebar')) {
+                closeMobileMenu();
+            }
+        });
+
+        // Close menu on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+                closeMobileMenu();
+            }
+        });
+
+        // Close menu on resize if switching to desktop
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 1024 && navMenu.classList.contains('active')) {
+                closeMobileMenu();
+            }
+        });
+
+        // Mobile dropdown functionality
+        document.querySelectorAll('.courses-dropdown').forEach(dropdown => {
+            const button = dropdown.querySelector('.courses-btn');
+            
+            button.addEventListener('click', function(e) {
+                if (window.innerWidth <= 1024) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    dropdown.classList.toggle('active');
+                }
+            });
+        });
+
+        // Level filtering functionality
+        const levelButtons = document.querySelectorAll('.level-btn');
+        const modules = document.querySelectorAll('.course-module');
+        
+        levelButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const level = this.getAttribute('data-level');
+                
+                // Remove active class from all buttons
+                levelButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                this.classList.add('active');
+                
+                if (level === 'all') {
+                    // Show all modules
+                    modules.forEach(module => {
+                        module.style.display = 'flex';
+                    });
+                } else if (level === 'advanced') {
+                    // Show advanced modules (7-10)
+                    modules.forEach(module => {
+                        const moduleId = module.id;
+                        if (moduleId.includes('module7') || moduleId.includes('module8') || 
+                            moduleId.includes('module9') || moduleId.includes('module10')) {
+                            module.style.display = 'flex';
+                        } else {
+                            module.style.display = 'none';
+                        }
+                    });
+                } else {
+                    // Show modules with matching difficulty
+                    modules.forEach(module => {
+                        const difficulty = module.getAttribute('data-difficulty');
+                        if (difficulty === level) {
+                            module.style.display = 'flex';
+                        } else {
+                            module.style.display = 'none';
+                        }
+                    });
+                }
+                
+                // Scroll to first visible module
+                const firstVisible = document.querySelector('.course-module[style="display: flex;"]');
+                if (firstVisible) {
+                    firstVisible.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Search functionality
+        const searchInput = document.getElementById('search-input');
+        
+        searchInput.addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase().trim();
+            
+            if (searchTerm === '') {
+                // Show all modules if search is empty
+                modules.forEach(module => {
+                    module.style.display = 'flex';
+                });
+                return;
+            }
+            
+            modules.forEach(module => {
+                const moduleTitle = module.querySelector('h1').textContent.toLowerCase();
+                const moduleContent = module.textContent.toLowerCase();
+                
+                if (moduleTitle.includes(searchTerm) || moduleContent.includes(searchTerm)) {
+                    module.style.display = 'flex';
+                } else {
+                    module.style.display = 'none';
+                }
+            });
+        });
+    });
+    
+    // Smooth scrolling for sidebar links
+    document.querySelectorAll('.sidebar-item').forEach(item => {
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Remove active class from all items
+            document.querySelectorAll('.sidebar-item').forEach(i => {
+                i.classList.remove('active');
+            });
+            
+            // Add active class to clicked item
+            this.classList.add('active');
+            
+            // Close mobile menu if open
+            if (window.innerWidth <= 1024) {
+                document.querySelector('.nav-menu').classList.remove('active');
+                document.querySelector('.sidebar').classList.remove('active');
+                document.querySelector('.menu-toggle').innerHTML = '<i class="fas fa-bars"></i>';
+                document.body.classList.remove('menu-open');
+            }
+            
+            // Scroll to section
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 100,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+</script>
+        </div>
+    </div>
+</body>
+</html>

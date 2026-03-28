@@ -1,0 +1,2075 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Fundamentals | SkillMynte</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="rounded_logo.png">
+    <style>
+        /* ========== COMPLETE CSS FROM THE ORIGINAL COURSE (with minor tweaks) ========== */
+        :root {
+            --primary: #00C853;
+            --primary-dark: #009624;
+            --primary-light: #5EFC82;
+            --secondary: #2962FF;
+            --accent: #FF6B35;
+            --dark: #1a1f2e;
+            --darker: #121625;
+            --gray: #8a94a6;
+            --light-gray: #2a3042;
+            --white: #FFFFFF;
+            --premium-gradient: linear-gradient(135deg, #8A2BE2 0%, #4B0082 100%);
+            --shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+            --transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            --radius: 16px;
+            --gradient: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            --gradient-accent: linear-gradient(135deg, var(--accent) 0%, #FF4081 100%);
+            --glass-bg: rgba(255, 255, 255, 0.08);
+            --glass-border: rgba(255, 255, 255, 0.12);
+            --premium-blue: linear-gradient(135deg, #2962FF 0%, #00B0FF 50%, #00C853 100%);
+            --premium-blue-dark: linear-gradient(135deg, #1A237E 0%, #0066CC 50%, #009624 100%);
+        }
+
+        * { padding: 0; margin: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--white);
+            background-color: var(--darker);
+            line-height: 1.7;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            line-height: 1.3;
+            color: var(--white);
+        }
+
+        h1 { font-size: 2.2rem; font-weight: 800; }
+        h2 { font-size: 1.8rem; }
+        h3 { font-size: 1.4rem; }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-track { background: var(--light-gray); border-radius: 10px; }
+        ::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--primary-dark); }
+
+        /* Animations */
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.05); } 100% { transform: scale(1); } }
+        @keyframes float { 0% { transform: translateY(0px); } 50% { transform: translateY(-10px); } 100% { transform: translateY(0px); } }
+        @keyframes slideDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes slideIn { from { opacity: 0; transform: translateX(-100%); } to { opacity: 1; transform: translateX(0); } }
+
+        /* Icons */
+        .course-icon { font-size: 1.8rem; margin-bottom: 10px; transition: var(--transition); }
+        .html-icon { color: var(--primary); }
+        .css-icon { color: var(--secondary); }
+        .js-icon { color: #F0DB4F; }
+        .python-icon { color: #3776AB; }
+
+        /* Preloader */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--darker);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid rgba(0, 200, 83, 0.1);
+            border-top-color: var(--primary);
+            border-radius: 50%;
+            margin-bottom: 1.5rem;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        #preloader.fade-out { opacity: 0; visibility: hidden; }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            background-color: rgba(26, 31, 46, 0.98);
+            box-shadow: var(--shadow);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            padding: 0 2rem;
+            transition: var(--transition);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid var(--glass-border);
+        }
+        .navbar.scrolled { height: 70px; box-shadow: var(--shadow); }
+        .navbar-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: var(--transition);
+        }
+        .logo:hover { transform: translateY(-2px); }
+        .nav-menu {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+        .nav-link {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: var(--transition);
+            position: relative;
+            padding: 0.5rem 0;
+        }
+        .nav-link:hover { color: var(--primary); }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background-color: var(--primary);
+            transition: width 0.3s ease;
+            border-radius: 3px;
+        }
+        .nav-link:hover::after { width: 100%; }
+        .courses-dropdown { position: relative; }
+        .courses-btn {
+            background: var(--glass-bg);
+            color: var(--primary-light);
+            border: 1px solid var(--glass-border);
+            padding: 0.6rem 1.2rem;
+            border-radius: var(--radius);
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.95rem;
+        }
+        .courses-btn:hover {
+            background: var(--primary);
+            color: var(--white);
+            box-shadow: 0 5px 15px rgba(0, 200, 83, 0.3);
+            transform: translateY(-2px);
+        }
+        .dropdown-content {
+            position: absolute;
+            right: 0;
+            top: calc(100% + 10px);
+            background: var(--dark);
+            min-width: 250px;
+            box-shadow: var(--shadow);
+            border-radius: var(--radius);
+            padding: 0.5rem 0;
+            z-index: 100;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            transform: translateY(10px);
+            border: 1px solid var(--glass-border);
+        }
+        .courses-dropdown:hover .dropdown-content {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        .dropdown-item {
+            display: flex;
+            align-items: center;
+            padding: 0.8rem 1.5rem;
+            color: var(--white);
+            text-decoration: none;
+            transition: var(--transition);
+            font-weight: 500;
+        }
+        .dropdown-item:hover {
+            background: var(--glass-bg);
+            color: var(--primary-light);
+            padding-left: 1.7rem;
+        }
+        .dropdown-item i { margin-right: 0.8rem; width: 20px; text-align: center; font-size: 1.1rem; }
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: var(--white);
+            background: none;
+            border: none;
+            transition: var(--transition);
+            z-index: 1001;
+        }
+        .menu-toggle:hover { color: var(--primary); }
+
+        /* Course Navigation */
+        .course-navigation {
+            position: sticky;
+            top: 80px;
+            background: var(--dark);
+            z-index: 900;
+            padding: 1rem 0;
+            box-shadow: var(--shadow);
+            border-bottom: 1px solid var(--glass-border);
+        }
+        .course-nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .course-category { position: relative; }
+        .category-btn {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            padding: 0.8rem 1.5rem;
+            border-radius: var(--radius);
+            font-weight: 600;
+            color: var(--primary-light);
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .category-btn:hover {
+            background: var(--primary);
+            color: var(--white);
+            box-shadow: 0 5px 15px rgba(0, 200, 83, 0.3);
+        }
+        .category-dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: var(--dark);
+            min-width: 220px;
+            box-shadow: var(--shadow);
+            border-radius: var(--radius);
+            padding: 1rem 0;
+            z-index: 100;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            transform: translateY(10px);
+            border: 1px solid var(--glass-border);
+        }
+        .course-category:hover .category-dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        .category-item {
+            display: block;
+            padding: 0.8rem 1.5rem;
+            color: var(--white);
+            text-decoration: none;
+            transition: var(--transition);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+        .category-item:hover {
+            background: var(--glass-bg);
+            color: var(--primary-light);
+            padding-left: 1.8rem;
+        }
+        .course-levels { display: flex; gap: 0.5rem; }
+        .level-btn {
+            background: transparent;
+            border: 2px solid var(--glass-border);
+            padding: 0.6rem 1.2rem;
+            border-radius: var(--radius);
+            font-weight: 600;
+            color: var(--gray);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .level-btn:hover, .level-btn.active {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: var(--white);
+        }
+        .course-search { position: relative; }
+        .search-input {
+            padding: 0.8rem 1.5rem 0.8rem 3rem;
+            border: 2px solid var(--glass-border);
+            border-radius: var(--radius);
+            font-size: 0.95rem;
+            width: 250px;
+            transition: var(--transition);
+            background: var(--dark);
+            color: var(--white);
+        }
+        .search-input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(0, 200, 83, 0.2);
+        }
+        .search-input::placeholder { color: var(--gray); }
+        .search-icon {
+            position: absolute;
+            left: 1.2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--gray);
+        }
+
+        /* Sidebar */
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 80px;
+            bottom: 0;
+            width: 250px;
+            background: var(--dark);
+            overflow-y: auto;
+            padding: 1.5rem 0;
+            box-shadow: var(--shadow);
+            z-index: 999;
+            transition: transform 0.3s ease;
+            backdrop-filter: blur(8px);
+            border-right: 1px solid var(--glass-border);
+        }
+        .sidebar-item {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 0.8rem 1.5rem;
+            margin: 0.3rem 1rem;
+            border-radius: var(--radius);
+            color: var(--gray);
+            text-decoration: none;
+            transition: var(--transition);
+            font-weight: 500;
+            position: relative;
+        }
+        .sidebar-item:hover {
+            background-color: var(--glass-bg);
+            color: var(--primary-light);
+            transform: translateX(5px);
+        }
+        .sidebar-item.active {
+            background-color: var(--glass-bg);
+            color: var(--primary-light);
+            font-weight: 600;
+            box-shadow: inset 3px 0 0 var(--primary);
+        }
+        .sidebar-item i { font-size: 1.1rem; width: 24px; text-align: center; }
+        .progress-indicator {
+            position: absolute;
+            right: 1rem;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--glass-bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            color: var(--primary-light);
+            font-weight: 600;
+        }
+        .sidebar-item.completed .progress-indicator {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        /* Main Content */
+        .content-wrapper {
+            margin-left: 250px;
+            padding-top: 100px;
+            transition: margin-left 0.3s ease;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        .course-module {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            background: var(--dark);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 2.5rem;
+            animation: fadeIn 0.5s ease;
+            border: 1px solid var(--glass-border);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        .course-module::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: var(--gradient);
+            transition: var(--transition);
+        }
+        .course-module:hover {
+            box-shadow: var(--shadow);
+            transform: translateY(-3px);
+        }
+        .course-module:hover::before { width: 8px; }
+        .course-three {
+            flex: 1 1 300px;
+            padding: 1rem;
+        }
+        .course-three h1 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--primary-light);
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        .course-three h1::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--primary);
+            border-radius: 3px;
+        }
+        .course-three h3 {
+            font-size: 1rem;
+            color: var(--gray);
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        .difficulty {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            background: var(--glass-bg);
+            color: var(--primary-light);
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-top: 0.5rem;
+        }
+        .module-icon {
+            width: 120px;
+            height: 120px;
+            margin: 1.5rem auto;
+            display: block;
+            object-fit: contain;
+            filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.3));
+            transition: var(--transition);
+        }
+        .course-module:hover .module-icon { transform: scale(1.05) rotate(5deg); }
+        .course-one {
+            flex: 2 1 600px;
+            padding: 1rem;
+        }
+        .course-one h1 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        .course-one h1::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--primary);
+            border-radius: 3px;
+        }
+        .course-one p {
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        /* Code Editor */
+        .code-editor-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin: 2rem 0;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--glass-border);
+        }
+        .editor-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--light-gray);
+            color: var(--white);
+            padding: 0.7rem 1.2rem;
+        }
+        .editor-tabs { display: flex; gap: 0.5rem; }
+        .editor-tab {
+            padding: 0.4rem 0.9rem;
+            background: var(--dark);
+            border-radius: 4px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            transition: var(--transition);
+            color: var(--gray);
+        }
+        .editor-tab.active {
+            background: var(--primary);
+            color: var(--white);
+        }
+        .editor-actions { display: flex; gap: 0.5rem; }
+        .editor-actions button {
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: var(--white);
+            cursor: pointer;
+            padding: 0.4rem 0.8rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+        .editor-actions button:hover {
+            background: rgba(255, 255, 255, 0.2);
+            color: var(--primary);
+        }
+        .code-editor {
+            width: 100%;
+            min-height: 250px;
+            background: var(--light-gray);
+            color: var(--primary-light);
+            font-family: 'Fira Code', 'Courier New', monospace;
+            font-size: 14px;
+            line-height: 1.5;
+            padding: 1.2rem;
+            border: none;
+            outline: none;
+            tab-size: 2;
+            resize: vertical;
+        }
+        .preview-container {
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            margin-top: 1rem;
+            min-height: 200px;
+            background: var(--dark);
+            color: var(--white);
+        }
+        .run-btn {
+            background: var(--gradient);
+            color: var(--white);
+            border: none;
+            padding: 0.8rem 1.8rem;
+            border-radius: var(--radius);
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 1rem;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.95rem;
+            box-shadow: 0 4px 10px rgba(0, 200, 83, 0.3);
+        }
+        .run-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0, 200, 83, 0.4);
+        }
+        .output-title {
+            font-size: 0.9rem;
+            color: var(--gray);
+            margin: 1.5rem 0 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 600;
+        }
+        .output-title i { color: var(--primary); }
+        .course-five {
+            background: var(--glass-bg);
+            padding: 1.8rem;
+            border-radius: var(--radius);
+            margin-top: 2rem;
+            border-left: 4px solid var(--primary);
+        }
+        .course-five h3 { color: var(--primary-light); margin-bottom: 1.2rem; font-size: 1.2rem; }
+        .course-five ul, .course-five ol { padding-left: 1.2rem; margin-bottom: 1rem; }
+        .course-five li { margin-bottom: 0.7rem; color: var(--gray); line-height: 1.6; }
+        .course-five code {
+            background: rgba(0, 200, 83, 0.1);
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.9rem;
+            color: var(--primary-light);
+            border: 1px solid rgba(0, 200, 83, 0.2);
+        }
+
+        /* Module Explanation */
+        .module-explanation {
+            background: var(--dark);
+            padding: 2rem;
+            border-radius: var(--radius);
+            margin: 2rem 0;
+            border: 1px solid var(--glass-border);
+            position: relative;
+            overflow: hidden;
+        }
+        .module-explanation::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--gradient);
+        }
+        .module-explanation h3 {
+            color: var(--primary-light);
+            margin-bottom: 1.5rem;
+            font-size: 1.4rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+        .module-explanation h3 i { color: var(--primary); font-size: 1.2rem; }
+        .module-explanation p {
+            color: var(--gray);
+            margin-bottom: 1.2rem;
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+        .explanation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .explanation-card {
+            background: var(--glass-bg);
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--glass-border);
+            transition: var(--transition);
+        }
+        .explanation-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+        .explanation-card h4 {
+            color: var(--primary-light);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .explanation-card h4 i { color: var(--primary); font-size: 1rem; }
+        .explanation-card p { margin: 0; font-size: 0.95rem; }
+        .real-world-example {
+            background: rgba(41, 98, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            margin-top: 1.5rem;
+            border-left: 4px solid var(--secondary);
+        }
+        .real-world-example h4 {
+            color: var(--primary-light);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .real-world-example h4 i { color: var(--secondary); }
+
+        /* Assignment */
+        .assignment {
+            background: var(--glass-bg);
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            margin-top: 2rem;
+            border: 1px solid var(--glass-border);
+        }
+        .assignment h4 {
+            color: var(--primary-light);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .assignment h4 i { color: var(--primary); }
+        .assignment p { color: var(--gray); margin-bottom: 1rem; }
+        .assignment-note {
+            background: rgba(41, 98, 255, 0.1);
+            padding: 1rem;
+            border-radius: var(--radius);
+            border-left: 4px solid var(--secondary);
+            margin-top: 1rem;
+        }
+        .assignment-note p { color: var(--primary-light); margin: 0; font-style: italic; }
+
+        /* Premium Badge */
+        .premium-badge {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            background: var(--gradient-accent);
+            color: var(--white);
+            padding: 0.5rem 1rem;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            box-shadow: 0 4px 10px rgba(255, 107, 53, 0.3);
+            z-index: 10;
+            animation: pulse 2s infinite;
+        }
+
+        /* Premium Subscription */
+        .premium-subscription {
+            background: var(--premium-blue);
+            color: var(--white);
+            text-align: center;
+            padding: 5rem 2rem;
+            margin: 5rem 0;
+            border-radius: var(--radius);
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            animation: fadeIn 1s ease;
+        }
+        .premium-subscription::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 200px;
+            height: 200px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+        }
+        .premium-subscription::after {
+            content: '';
+            position: absolute;
+            bottom: -80px;
+            left: -80px;
+            width: 250px;
+            height: 250px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+        }
+        .premium-subscription h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+        .premium-subscription p {
+            max-width: 700px;
+            margin: 0 auto 2.5rem;
+            font-size: 1.2rem;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        .premium-features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            position: relative;
+            z-index: 1;
+        }
+        .premium-feature {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            width: 250px;
+            transition: var(--transition);
+        }
+        .premium-feature:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+        .premium-feature i {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--white);
+        }
+        .premium-feature h3 {
+            color: var(--white);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+        .premium-feature p {
+            font-size: 0.95rem;
+            margin: 0;
+        }
+        .premium-cta-btn {
+            background: var(--gradient);
+            color: var(--white);
+            border: none;
+            padding: 1.2rem 3rem;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            position: relative;
+            z-index: 1;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            animation: float 3s ease-in-out infinite;
+        }
+        .premium-cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            animation: none;
+            background: var(--primary-dark);
+        }
+        .pricing-options {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 3rem;
+            position: relative;
+            z-index: 1;
+        }
+        .pricing-option {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: var(--radius);
+            width: 280px;
+            transition: var(--transition);
+            border: 2px solid transparent;
+        }
+        .pricing-option:hover {
+            transform: translateY(-5px);
+            border-color: var(--white);
+        }
+        .pricing-option h3 {
+            color: var(--white);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        .price {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            color: var(--white);
+        }
+        .price span {
+            font-size: 1rem;
+            font-weight: 400;
+        }
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+        .pricing-features li {
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        .pricing-features li i { color: var(--white); }
+        .pricing-btn {
+            background: var(--gradient);
+            color: var(--white);
+            border: none;
+            padding: 0.8rem 2rem;
+            border-radius: 30px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            width: 100%;
+        }
+        .pricing-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: var(--white);
+            padding: 3rem 0 1rem;
+            margin-top: 4rem;
+            border-top: 1px solid var(--glass-border);
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        .footer-column h3 {
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: var(--primary);
+            border-radius: 3px;
+        }
+        .footer-column p {
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+            color: var(--gray);
+        }
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: var(--light-gray);
+            border-radius: 50%;
+            color: var(--white);
+            transition: var(--transition);
+        }
+        .social-links a:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+        .footer-links { list-style: none; }
+        .footer-links li { margin-bottom: 0.8rem; }
+        .footer-links a {
+            color: var(--gray);
+            text-decoration: none;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .footer-links a:hover {
+            color: var(--primary);
+            padding-left: 0.5rem;
+        }
+        .footer-links i {
+            font-size: 0.8rem;
+            color: var(--primary);
+        }
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 2rem auto 0;
+            padding: 1.5rem 2rem 0;
+            border-top: 1px solid var(--glass-border);
+            text-align: center;
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive (same as original) */
+        @media (max-width: 1200px) {
+            .sidebar { width: 220px; }
+            .content-wrapper { margin-left: 220px; }
+            .course-nav-container { justify-content: center; }
+            .course-search { display: none; }
+        }
+        @media (max-width: 1024px) {
+            .sidebar { transform: translateX(-100%); width: 280px; top: 70px; z-index: 998; }
+            .sidebar.active { transform: translateX(0); animation: slideIn 0.3s ease; }
+            .content-wrapper { margin-left: 0; padding-top: 140px; width: 100%; overflow-x: hidden; }
+            .navbar-container { padding: 0 1.5rem; }
+            .nav-menu {
+                position: fixed;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: var(--dark);
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 1.5rem 2rem;
+                box-shadow: var(--shadow);
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: var(--transition);
+                z-index: 997;
+                gap: 1rem;
+                backdrop-filter: blur(8px);
+                border-bottom: 1px solid var(--glass-border);
+                height: 0;
+                overflow: hidden;
+            }
+            .nav-menu.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+                height: auto;
+                animation: slideDown 0.3s ease;
+            }
+            .courses-dropdown { width: 100%; }
+            .dropdown-content {
+                position: static;
+                box-shadow: none;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                display: none;
+                width: 100%;
+                background: transparent;
+                padding: 0.5rem 0 0 1rem;
+                border: none;
+            }
+            .courses-dropdown.active .dropdown-content { display: block; }
+            .dropdown-item { padding: 0.7rem 1rem; }
+            .menu-toggle { display: block; }
+            .course-module { padding: 1.8rem; margin: 1rem; width: calc(100% - 2rem); }
+            .course-navigation { top: 70px; padding: 0.8rem 0; position: fixed; width: 100%; z-index: 996; }
+            .course-nav-container { flex-direction: column; gap: 1rem; padding: 0 1.5rem; }
+            .course-levels { width: 100%; justify-content: center; flex-wrap: wrap; gap: 0.5rem; }
+            .level-btn { flex: 1; min-width: 120px; text-align: center; padding: 0.8rem 0.5rem; font-size: 0.9rem; }
+            .pricing-options { flex-direction: column; align-items: center; gap: 1.5rem; }
+            .pricing-option { width: 100%; max-width: 400px; }
+            .premium-features { gap: 1.5rem; }
+            .premium-feature { width: calc(50% - 1rem); min-width: 200px; }
+            .container { padding: 0; width: 100%; max-width: 100%; }
+            .module-explanation { padding: 1.5rem; }
+            .explanation-grid { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 768px) {
+            .container { padding: 0; width: 100%; }
+            .navbar { padding: 0 1rem; height: 70px; }
+            .logo { font-size: 1.4rem; }
+            .course-module { flex-direction: column; padding: 1.5rem; margin: 1rem; width: calc(100% - 2rem); gap: 1.5rem; }
+            .course-three, .course-one { flex: 1 1 100%; padding: 0.5rem; width: 100%; }
+            .course-three h1, .course-one h1 { font-size: 1.5rem; word-wrap: break-word; }
+            .module-icon { width: 80px; height: 80px; margin: 1rem auto; }
+            .code-editor-container { margin: 1.5rem 0; width: 100%; }
+            .editor-header { flex-wrap: wrap; gap: 0.5rem; padding: 0.7rem; }
+            .editor-tabs, .editor-actions { width: 100%; justify-content: center; }
+            .code-editor { font-size: 13px; padding: 1rem; min-height: 200px; width: 100%; }
+            .premium-subscription { padding: 3rem 1rem; margin: 3rem 1rem; width: calc(100% - 2rem); border-radius: var(--radius); }
+            .premium-subscription h2 { font-size: 1.8rem; padding: 0 1rem; }
+            .premium-subscription p { font-size: 1rem; padding: 0 1rem; }
+            .premium-features { gap: 1rem; padding: 0 1rem; }
+            .premium-feature { width: 100%; max-width: 100%; margin: 0 1rem; }
+            .premium-cta-btn { padding: 1rem 2rem; font-size: 1rem; width: 90%; max-width: 300px; margin: 0 auto; }
+            .course-five { padding: 1.2rem; margin: 1rem 0; width: 100%; }
+            .assignment { padding: 1.2rem; }
+            .category-btn { padding: 0.8rem 1rem; font-size: 0.9rem; width: 100%; justify-content: center; }
+            .level-btn { padding: 0.6rem 0.8rem; font-size: 0.8rem; min-width: 100px; }
+            .price { font-size: 2rem; }
+            .footer-content { grid-template-columns: 1fr; text-align: center; gap: 1.5rem; padding: 0 1rem; }
+            .footer-column h3::after { left: 50%; transform: translateX(-50%); }
+            .social-links { justify-content: center; }
+            .premium-badge { position: relative; top: auto; right: auto; margin: 0 auto 1rem auto; width: fit-content; display: block; }
+            .course-one p { font-size: 1rem; line-height: 1.6; word-wrap: break-word; }
+            .course-five li { font-size: 0.9rem; line-height: 1.5; }
+            .module-explanation { padding: 1.2rem; }
+            .module-explanation h3 { font-size: 1.2rem; }
+        }
+        @media (max-width: 480px) {
+            .container { padding: 0; width: 100%; overflow-x: hidden; }
+            .navbar { padding: 0 0.8rem; height: 60px; }
+            .navbar-container { padding: 0; }
+            .logo { font-size: 1.2rem; }
+            .logo i { font-size: 1.1rem; }
+            .course-navigation { top: 60px; padding: 0.6rem 0; }
+            .course-nav-container { padding: 0 0.8rem; gap: 0.8rem; }
+            .course-levels { gap: 0.3rem; }
+            .level-btn { padding: 0.5rem 0.6rem; font-size: 0.75rem; min-width: 80px; }
+            .course-module { padding: 1.2rem; margin: 0.8rem; width: calc(100% - 1.6rem); border-radius: var(--radius); }
+            .course-three h1, .course-one h1 { font-size: 1.3rem; line-height: 1.3; margin-bottom: 0.8rem; }
+            .course-three h3 { font-size: 0.9rem; line-height: 1.4; }
+            .module-icon { width: 70px; height: 70px; }
+            .course-one p { font-size: 0.95rem; line-height: 1.6; word-wrap: break-word; }
+            .code-editor { font-size: 12px; padding: 0.8rem; min-height: 180px; width: 100%; }
+            .editor-header { padding: 0.5rem; }
+            .editor-tab { padding: 0.3rem 0.6rem; font-size: 0.7rem; }
+            .editor-actions button { padding: 0.3rem 0.5rem; font-size: 0.7rem; }
+            .run-btn { padding: 0.7rem 1.2rem; font-size: 0.85rem; width: 100%; }
+            .preview-container { padding: 1rem; min-height: 150px; width: 100%; }
+            .premium-subscription { padding: 2rem 0.8rem; margin: 2rem 0.8rem; width: calc(100% - 1.6rem); }
+            .premium-subscription h2 { font-size: 1.5rem; line-height: 1.3; padding: 0 0.5rem; }
+            .premium-subscription p { font-size: 0.95rem; margin-bottom: 1.5rem; padding: 0 0.5rem; }
+            .premium-feature { padding: 1rem; margin: 0.5rem; }
+            .premium-feature i { font-size: 1.8rem; }
+            .premium-feature h3 { font-size: 1rem; }
+            .premium-feature p { font-size: 0.85rem; }
+            .pricing-option { padding: 1.2rem; margin: 0.5rem; }
+            .price { font-size: 1.6rem; }
+            .pricing-btn { padding: 0.7rem 1.2rem; font-size: 0.9rem; }
+            .course-five { padding: 1rem; margin: 1rem 0; }
+            .assignment { padding: 1rem; }
+            .course-five h3 { font-size: 1.1rem; }
+            .course-five li { font-size: 0.85rem; line-height: 1.4; margin-bottom: 0.5rem; }
+            .footer-content { padding: 0 0.8rem; }
+            .footer-bottom { padding: 1rem 0.8rem 0; font-size: 0.8rem; }
+            .sidebar { width: 100%; top: 60px; }
+            .sidebar-item { padding: 0.7rem 1rem; margin: 0.2rem 0.5rem; font-size: 0.9rem; }
+            .content-wrapper { padding-top: 130px; }
+            html, body { max-width: 100%; overflow-x: hidden; }
+            * { max-width: 100%; }
+            .module-explanation { padding: 1rem; }
+            .module-explanation h3 { font-size: 1.1rem; }
+            .explanation-card { padding: 1rem; }
+        }
+        @media (max-width: 360px) {
+            .navbar { padding: 0 0.5rem; height: 55px; }
+            .logo { font-size: 1.1rem; }
+            .menu-toggle { font-size: 1.1rem; }
+            .course-navigation { top: 55px; }
+            .content-wrapper { padding-top: 120px; }
+            .container { padding: 0; }
+            .course-module { padding: 1rem; margin: 0.5rem; width: calc(100% - 1rem); }
+            .course-three h1, .course-one h1 { font-size: 1.1rem; }
+            .module-icon { width: 60px; height: 60px; }
+            .level-btn { padding: 0.4rem 0.5rem; font-size: 0.7rem; min-width: 70px; }
+            .code-editor { font-size: 11px; padding: 0.6rem; }
+            .premium-subscription h2 { font-size: 1.3rem; }
+            .premium-cta-btn { padding: 0.8rem 1.2rem; font-size: 0.9rem; }
+            .price { font-size: 1.4rem; }
+            .course-one p { font-size: 0.9rem; }
+        }
+        @media (max-height: 500px) and (orientation: landscape) {
+            .navbar { height: 55px; }
+            .sidebar { top: 55px; }
+            .content-wrapper { padding-top: 115px; }
+            .course-navigation { top: 55px; padding: 0.4rem 0; }
+            .premium-subscription { padding: 1.5rem 1rem; }
+            .code-editor { min-height: 120px; }
+            .course-module { padding: 1rem; }
+        }
+        @media (max-width: 320px) {
+            .course-three h1, .course-one h1 { font-size: 1rem; }
+            .course-one p { font-size: 0.85rem; }
+            .level-btn { font-size: 0.65rem; padding: 0.3rem 0.4rem; min-width: 60px; }
+            .premium-subscription h2 { font-size: 1.1rem; }
+        }
+        html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+        body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+        * { box-sizing: border-box; max-width: 100%; }
+        img, video, canvas { max-width: 100%; height: auto; }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo"><i class="fas fa-code"></i> SKILLMYNTE</a>
+            <div class="nav-menu">
+                <a href="#" class="nav-link">Home</a>
+                <a href="#" class="nav-link">Courses</a>
+                <a href="#" class="nav-link">Practice</a>
+                <a href="#" class="nav-link">Projects</a>
+                <div class="courses-dropdown">
+                    <button class="courses-btn"><i class="fas fa-book-open"></i> Jump to Module</button>
+                    <div class="dropdown-content">
+                        <a href="#module1" class="dropdown-item"><i class="fab fa-css3-alt css-icon"></i> CSS Basics</a>
+                        <a href="#module2" class="dropdown-item"><i class="fab fa-css3-alt css-icon"></i> Colors & Backgrounds</a>
+                        <a href="#module3" class="dropdown-item"><i class="fab fa-css3-alt css-icon"></i> Box Model</a>
+                        <a href="#module4" class="dropdown-item"><i class="fab fa-css3-alt css-icon"></i> Typography</a>
+                        <a href="#module5" class="dropdown-item"><i class="fab fa-css3-alt css-icon"></i> Flexbox</a>
+                        <a href="#module6" class="dropdown-item"><i class="fab fa-css3-alt css-icon"></i> Grid Layout</a>
+                        <a href="#module7" class="dropdown-item"><i class="fab fa-css3-alt css-icon"></i> Positioning & Display</a>
+                        <a href="#module8" class="dropdown-item"><i class="fab fa-css3-alt css-icon"></i> Transitions & Animations</a>
+                        <a href="#module9" class="dropdown-item"><i class="fab fa-css3-alt css-icon"></i> Responsive Design</a>
+                        <a href="#module10" class="dropdown-item"><i class="fab fa-css3-alt css-icon"></i> Advanced CSS</a>
+                        <a href="#playground" class="dropdown-item"><i class="fas fa-laptop-code"></i> Practice Playground</a>
+                    </div>
+                </div>
+            </div>
+            <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+    
+    <!-- Premium Course Navigation -->
+    <div class="course-navigation">
+        <div class="course-nav-container">
+            <div class="course-category">
+                <button class="category-btn"><i class="fas fa-layer-group"></i> Categories</button>
+                <div class="category-dropdown">
+                    <a href="#" class="category-item"><i class="fab fa-css3-alt css-icon"></i> CSS Fundamentals</a>
+                    <a href="#" class="category-item"><i class="fas fa-palette"></i> Styling & Colors</a>
+                    <a href="#" class="category-item"><i class="fas fa-th-large"></i> Layouts</a>
+                    <a href="#" class="category-item"><i class="fas fa-mobile-alt"></i> Responsive Design</a>
+                    <a href="#" class="category-item"><i class="fas fa-spinner"></i> Animations</a>
+                </div>
+            </div>
+            <div class="course-levels">
+                <button class="level-btn active" data-level="all">All Levels</button>
+                <button class="level-btn" data-level="beginner">Beginner</button>
+                <button class="level-btn" data-level="intermediate">Intermediate</button>
+                <button class="level-btn" data-level="advanced">Advanced</button>
+            </div>
+            <div class="course-search">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" class="search-input" id="search-input" placeholder="Search courses...">
+            </div>
+        </div>
+    </div>
+    
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <a href="#module1" class="sidebar-item active"><i class="fab fa-css3-alt css-icon"></i><span>Module 1: CSS Basics</span><span class="progress-indicator">1</span></a>
+        <a href="#module2" class="sidebar-item"><i class="fab fa-css3-alt css-icon"></i><span>Module 2: Colors & Backgrounds</span><span class="progress-indicator">2</span></a>
+        <a href="#module3" class="sidebar-item"><i class="fab fa-css3-alt css-icon"></i><span>Module 3: Box Model</span><span class="progress-indicator">3</span></a>
+        <a href="#module4" class="sidebar-item"><i class="fab fa-css3-alt css-icon"></i><span>Module 4: Typography</span><span class="progress-indicator">4</span></a>
+        <a href="#module5" class="sidebar-item"><i class="fab fa-css3-alt css-icon"></i><span>Module 5: Flexbox</span><span class="progress-indicator">5</span></a>
+        <a href="#module6" class="sidebar-item"><i class="fab fa-css3-alt css-icon"></i><span>Module 6: Grid Layout</span><span class="progress-indicator">6</span></a>
+        <a href="#module7" class="sidebar-item"><i class="fab fa-css3-alt css-icon"></i><span>Module 7: Positioning & Display</span><span class="progress-indicator">7</span></a>
+        <a href="#module8" class="sidebar-item"><i class="fab fa-css3-alt css-icon"></i><span>Module 8: Transitions & Animations</span><span class="progress-indicator">8</span></a>
+        <a href="#module9" class="sidebar-item"><i class="fab fa-css3-alt css-icon"></i><span>Module 9: Responsive Design</span><span class="progress-indicator">9</span></a>
+        <a href="#module10" class="sidebar-item"><i class="fab fa-css3-alt css-icon"></i><span>Module 10: Advanced CSS</span><span class="progress-indicator">10</span></a>
+        <a href="#playground" class="sidebar-item"><i class="fas fa-laptop-code"></i><span>Practice Playground</span></a>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="content-wrapper">
+        <div class="container">
+            <!-- ========== MODULE 1: CSS BASICS ========== -->
+            <div class="course-module" id="module1" data-difficulty="beginner">
+                <div class="premium-badge"><i class="fas fa-crown"></i> Premium Content</div>
+                <div class="course-three">
+                    <h1>CSS BASICS</h1>
+                    <h3>Learn CSS syntax, selectors, and how to style HTML</h3>
+                    <span class="difficulty">Beginner</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" class="module-icon" alt="CSS Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 1: <span>CSS Syntax & Selectors</span></h1>
+                    <p>CSS (Cascading Style Sheets) controls the presentation of HTML elements. It uses rules: a selector points to an HTML element, and a declaration block sets styles.</p>
+                    <p>Selectors can target element types, classes (<code>.class</code>), IDs (<code>#id</code>), or attributes. You can include CSS inline, inside <code>&lt;style&gt;</code> tags, or in external files.</p>
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs"><div class="editor-tab active">HTML+CSS</div></div>
+                            <div class="editor-actions"><button class="run-editor"><i class="fas fa-play"></i> Run</button><button class="reset-editor"><i class="fas fa-redo"></i> Reset</button></div>
+                        </div>
+                        <textarea class="code-editor" id="editor-1" spellcheck="false">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;style&gt;
+        /* Element selector */
+        h1 { color: #00C853; font-family: 'Poppins', sans-serif; }
+        /* Class selector */
+        .highlight { background-color: #f0f0f0; padding: 10px; border-left: 4px solid #2962FF; }
+        /* ID selector */
+        #special { font-size: 1.2rem; font-weight: bold; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Welcome to CSS&lt;/h1&gt;
+    &lt;p class="highlight"&gt;This paragraph has a class style.&lt;/p&gt;
+    &lt;p id="special"&gt;This one uses an ID selector.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+                        <button class="run-btn" onclick="runCode('editor-1', 'output-1')"><i class="fas fa-play"></i> Run Code</button>
+                        <div class="output-title"><i class="fas fa-desktop"></i> Live Preview</div>
+                        <div class="preview-container" id="output-1"></div>
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul><li>CSS rules consist of a selector and declaration block.</li><li>Use classes (<code>.class</code>) for reusable styles.</li><li>IDs (<code>#id</code>) are unique and have higher specificity.</li><li>Comments: <code>/* comment */</code>.</li></ul>
+                        </div>
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-code"></i> CSS Fundamentals</h3>
+                            <p>CSS cascades: later rules override earlier ones unless specificity differs. Understanding selectors and specificity is essential for maintainable styles.</p>
+                            <div class="explanation-grid">
+                                <div class="explanation-card"><h4><i class="fas fa-tachometer-alt"></i> Specificity</h4><p>IDs have highest specificity, then classes/attributes, then element selectors. Use low specificity for reusability.</p></div>
+                                <div class="explanation-card"><h4><i class="fas fa-chart-line"></i> Inheritance</h4><p>Some properties (color, font) inherit from parent elements, saving code.</p></div>
+                                <div class="explanation-card"><h4><i class="fas fa-shield-alt"></i> Best Practice</h4><p>Use class selectors over IDs for styling to maintain flexibility.</p></div>
+                            </div>
+                            <div class="real-world-example"><h4><i class="fas fa-globe"></i> Real-World Application</h4><p>Every website uses CSS selectors. Frameworks like Bootstrap rely heavily on class selectors for reusable components.</p></div>
+                        </div>
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p>Create an HTML page with three paragraphs. Style the first with a red color, the second with a blue background, and the third with a green border using different selectors.</p>
+                            <div class="assignment-note"><p>When finished, upload your work to SkillMynte AI for correction.</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== MODULE 2: COLORS & BACKGROUNDS ========== -->
+            <div class="course-module" id="module2" data-difficulty="beginner">
+                <div class="premium-badge"><i class="fas fa-crown"></i> Premium Content</div>
+                <div class="course-three">
+                    <h1>COLORS & BACKGROUNDS</h1>
+                    <h3>Master color values and background properties</h3>
+                    <span class="difficulty">Beginner</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" class="module-icon" alt="CSS Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 2: <span>Colors, Backgrounds & Gradients</span></h1>
+                    <p>CSS offers many ways to define colors: named, hex, RGB, RGBA, HSL, HSLA. Background properties include <code>background-color</code>, <code>background-image</code>, <code>background-repeat</code>, <code>background-position</code>, and <code>background-size</code>.</p>
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs"><div class="editor-tab active">HTML+CSS</div></div>
+                            <div class="editor-actions"><button class="run-editor"><i class="fas fa-play"></i> Run</button><button class="reset-editor"><i class="fas fa-redo"></i> Reset</button></div>
+                        </div>
+                        <textarea class="code-editor" id="editor-2" spellcheck="false">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;style&gt;
+        body { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); font-family: Arial; }
+        .card { background-color: rgba(255,255,255,0.9); padding: 20px; border-radius: 10px; margin: 20px; }
+        h1 { color: #2c3e50; background-image: url('https://www.w3schools.com/css/img_tree.png'); background-repeat: no-repeat; background-position: right center; padding: 20px; }
+        p { color: #e74c3c; background-color: #f9e79f; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="card"&gt;
+        &lt;h1&gt;Background Image Example&lt;/h1&gt;
+        &lt;p&gt;This paragraph has a custom color and background.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+                        <button class="run-btn" onclick="runCode('editor-2', 'output-2')"><i class="fas fa-play"></i> Run Code</button>
+                        <div class="output-title"><i class="fas fa-desktop"></i> Live Preview</div>
+                        <div class="preview-container" id="output-2"></div>
+                        <div class="course-five"><h3>Key Points:</h3><ul><li><code>color</code> for text, <code>background-color</code> for background.</li><li>Colors: named, hex, rgb(), rgba(), hsl(), hsla().</li><li>Gradients: <code>linear-gradient()</code>, <code>radial-gradient()</code>.</li><li>Background images can be positioned and sized.</li></ul></div>
+                        <div class="module-explanation"><h3><i class="fas fa-palette"></i> Color Theory & Backgrounds</h3><p>Accessible contrast is crucial. Use RGBA/HSLA for transparency. Gradients add depth without extra images. Optimize background images for performance.</p><div class="explanation-grid"><div class="explanation-card"><h4>Accessibility</h4><p>Ensure sufficient contrast between text and background (WCAG AA).</p></div><div class="explanation-card"><h4>Performance</h4><p>Use CSS gradients instead of large images where possible.</p></div><div class="explanation-card"><h4>Modern Techniques</h4><p>CSS variables can store color values for easy theming.</p></div></div><div class="real-world-example"><h4>Real‑World</h4><p>Modern UI often uses subtle gradients and semi-transparent overlays for cards and modals.</p></div></div>
+                        <div class="assignment"><h4><i class="fas fa-tasks"></i> Take Home Assignment</h4><p>Design a hero section with a gradient background, a centered heading, and a button with a semi-transparent background.</p><div class="assignment-note"><p>Upload your work to SkillMynte AI for review.</p></div></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== MODULE 3: BOX MODEL ========== -->
+            <div class="course-module" id="module3" data-difficulty="beginner">
+                <div class="premium-badge"><i class="fas fa-crown"></i> Premium Content</div>
+                <div class="course-three">
+                    <h1>BOX MODEL</h1>
+                    <h3>Understand margins, borders, padding, and content</h3>
+                    <span class="difficulty">Beginner</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" class="module-icon" alt="CSS Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 3: <span>The CSS Box Model</span></h1>
+                    <p>Every HTML element is a rectangular box. The box model consists of: content, padding, border, and margin. Understanding how they interact is key to layout.</p>
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs"><div class="editor-tab active">HTML+CSS</div></div>
+                            <div class="editor-actions"><button class="run-editor"><i class="fas fa-play"></i> Run</button><button class="reset-editor"><i class="fas fa-redo"></i> Reset</button></div>
+                        </div>
+                        <textarea class="code-editor" id="editor-3" spellcheck="false">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;style&gt;
+        .box { width: 200px; padding: 20px; border: 5px solid #00C853; margin: 20px; background-color: #f0f0f0; }
+        .box2 { box-sizing: border-box; width: 200px; padding: 20px; border: 5px solid #2962FF; margin: 20px; background-color: #ffe0b3; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="box"&gt;Content + padding + border = total width 200+40+10 = 250px&lt;/div&gt;
+    &lt;div class="box2"&gt;With box-sizing: border-box, total width stays 200px.&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+                        <button class="run-btn" onclick="runCode('editor-3', 'output-3')"><i class="fas fa-play"></i> Run Code</button>
+                        <div class="output-title"><i class="fas fa-desktop"></i> Live Preview</div>
+                        <div class="preview-container" id="output-3"></div>
+                        <div class="course-five"><h3>Key Points:</h3><ul><li><code>margin</code> outer space, <code>border</code> wraps padding, <code>padding</code> inner space.</li><li><code>box-sizing: border-box</code> makes width include padding and border.</li><li>Vertical margins collapse between adjacent elements.</li></ul></div>
+                        <div class="module-explanation"><h3><i class="fas fa-cube"></i> Understanding Layout</h3><p>The box model is the foundation of CSS layout. Use <code>box-sizing: border-box</code> to avoid unexpected dimensions. Margins collapse can be controlled with padding or border on the parent.</p><div class="explanation-grid"><div class="explanation-card"><h4>Margin Collapse</h4><p>Vertical margins of adjacent blocks combine into the larger margin.</p></div><div class="explanation-card"><h4>Inline vs Block</h4><p>Inline elements don’t respect vertical margins/padding fully.</p></div><div class="explanation-card"><h4>Reset</h4><p>Many resets apply <code>box-sizing: border-box</code> globally.</p></div></div><div class="real-world-example"><h4>Real‑World</h4><p>Layout frameworks like Bootstrap use border-box to simplify sizing.</p></div></div>
+                        <div class="assignment"><h4><i class="fas fa-tasks"></i> Take Home Assignment</h4><p>Create a card component with an image, title, description, and button. Use proper margin, padding, and border to separate elements.</p><div class="assignment-note"><p>Upload to SkillMynte AI for feedback.</p></div></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== MODULE 4: TYPOGRAPHY ========== -->
+            <div class="course-module" id="module4" data-difficulty="beginner">
+                <div class="premium-badge"><i class="fas fa-crown"></i> Premium Content</div>
+                <div class="course-three">
+                    <h1>TYPOGRAPHY</h1>
+                    <h3>Style text with fonts, spacing, and alignment</h3>
+                    <span class="difficulty">Beginner</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" class="module-icon" alt="CSS Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 4: <span>Fonts & Text Styling</span></h1>
+                    <p>Typography makes content readable and visually appealing. Use <code>font-family</code>, <code>font-size</code>, <code>font-weight</code>, <code>line-height</code>, <code>text-align</code>, and <code>letter-spacing</code>.</p>
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs"><div class="editor-tab active">HTML+CSS</div></div>
+                            <div class="editor-actions"><button class="run-editor"><i class="fas fa-play"></i> Run</button><button class="reset-editor"><i class="fas fa-redo"></i> Reset</button></div>
+                        </div>
+                        <textarea class="code-editor" id="editor-4" spellcheck="false">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;style&gt;
+        body { font-family: 'Poppins', sans-serif; font-size: 16px; line-height: 1.6; }
+        h1 { font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
+        p { font-weight: 300; text-align: justify; }
+        .quote { font-style: italic; text-decoration: underline; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Typography Matters&lt;/h1&gt;
+    &lt;p&gt;Good typography enhances readability and sets the tone. Use font stacks for fallbacks.&lt;/p&gt;
+    &lt;p class="quote"&gt;"Design is not just what it looks like and feels like. Design is how it works." - Steve Jobs&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+                        <button class="run-btn" onclick="runCode('editor-4', 'output-4')"><i class="fas fa-play"></i> Run Code</button>
+                        <div class="output-title"><i class="fas fa-desktop"></i> Live Preview</div>
+                        <div class="preview-container" id="output-4"></div>
+                        <div class="course-five"><h3>Key Points:</h3><ul><li>Use web-safe fonts or embed custom fonts via @font-face or Google Fonts.</li><li><code>line-height</code> improves readability (1.4–1.6 ideal).</li><li>Limit font families to 2–3 for consistency.</li></ul></div>
+                        <div class="module-explanation"><h3><i class="fas fa-font"></i> Typography Fundamentals</h3><p>Good typography creates hierarchy and improves user experience. Use relative units (em, rem) for scalability. Web fonts should be loaded efficiently to avoid layout shifts.</p><div class="explanation-grid"><div class="explanation-card"><h4>Web Fonts</h4><p>Use <code>@font-face</code> or Google Fonts to include custom fonts.</p></div><div class="explanation-card"><h4>Readability</h4><p>Optimal line length is 50–75 characters per line.</p></div><div class="explanation-card"><h4>Hierarchy</h4><p>Use font weights, sizes, and colors to establish content priority.</p></div></div><div class="real-world-example"><h4>Real‑World</h4><p>News websites and blogs carefully craft typography for readability and engagement.</p></div></div>
+                        <div class="assignment"><h4><i class="fas fa-tasks"></i> Take Home Assignment</h4><p>Create a blog post styled with a clean typography system: heading, subheading, body text, pull quote.</p><div class="assignment-note"><p>Upload to SkillMynte AI for review.</p></div></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== MODULE 5: FLEXBOX ========== -->
+            <div class="course-module" id="module5" data-difficulty="intermediate">
+                <div class="premium-badge"><i class="fas fa-crown"></i> Premium Content</div>
+                <div class="course-three">
+                    <h1>FLEXBOX</h1>
+                    <h3>Create flexible, responsive layouts with Flexbox</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" class="module-icon" alt="CSS Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 5: <span>Flexible Box Layout</span></h1>
+                    <p>Flexbox is a one‑dimensional layout model that distributes space along a row or column. It makes it easy to align items, distribute space, and create responsive designs without floats or positioning.</p>
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs"><div class="editor-tab active">HTML+CSS</div></div>
+                            <div class="editor-actions"><button class="run-editor"><i class="fas fa-play"></i> Run</button><button class="reset-editor"><i class="fas fa-redo"></i> Reset</button></div>
+                        </div>
+                        <textarea class="code-editor" id="editor-5" spellcheck="false">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;style&gt;
+        .container { display: flex; justify-content: space-between; align-items: center; background: #2a3042; padding: 20px; margin-bottom: 20px; }
+        .item { background: #00C853; padding: 20px; color: white; border-radius: 5px; }
+        .wrap-container { display: flex; flex-wrap: wrap; gap: 10px; background: #2a3042; padding: 20px; }
+        .wrap-item { background: #2962FF; padding: 20px; flex: 1 1 150px; text-align: center; border-radius: 5px; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="container"&gt;
+        &lt;div class="item"&gt;Item 1&lt;/div&gt;
+        &lt;div class="item"&gt;Item 2&lt;/div&gt;
+        &lt;div class="item"&gt;Item 3&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="wrap-container"&gt;
+        &lt;div class="wrap-item"&gt;1&lt;/div&gt;
+        &lt;div class="wrap-item"&gt;2&lt;/div&gt;
+        &lt;div class="wrap-item"&gt;3&lt;/div&gt;
+        &lt;div class="wrap-item"&gt;4&lt;/div&gt;
+        &lt;div class="wrap-item"&gt;5&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+                        <button class="run-btn" onclick="runCode('editor-5', 'output-5')"><i class="fas fa-play"></i> Run Code</button>
+                        <div class="output-title"><i class="fas fa-desktop"></i> Live Preview</div>
+                        <div class="preview-container" id="output-5"></div>
+                        <div class="course-five"><h3>Key Points:</h3><ul><li><code>display: flex</code> creates a flex container.</li><li><code>flex-direction</code> sets row or column.</li><li><code>justify-content</code> aligns items on main axis.</li><li><code>align-items</code> aligns on cross axis.</li><li><code>flex-wrap</code> allows items to wrap.</li></ul></div>
+                        <div class="module-explanation"><h3><i class="fas fa-arrows-alt-h"></i> Modern Layouts with Flexbox</h3><p>Flexbox simplifies centering, equal‑height columns, and responsive navigation. It's ideal for components like navbars, cards, and forms.</p><div class="explanation-grid"><div class="explanation-card"><h4>Centering</h4><p>Use <code>justify-content: center; align-items: center;</code> to center items perfectly.</p></div><div class="explanation-card"><h4>Ordering</h4><p><code>order</code> property changes visual order without changing HTML.</p></div><div class="explanation-card"><h4>Gap</h4><p><code>gap</code> property adds consistent spacing between flex items.</p></div></div><div class="real-world-example"><h4>Real‑World</h4><p>Flexbox powers many UI patterns: navigation bars, media objects, card grids, and responsive layouts.</p></div></div>
+                        <div class="assignment"><h4><i class="fas fa-tasks"></i> Take Home Assignment</h4><p>Build a responsive navigation bar using Flexbox that collapses to a column on mobile.</p><div class="assignment-note"><p>Upload to SkillMynte AI for review.</p></div></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== MODULE 6: GRID LAYOUT ========== -->
+            <div class="course-module" id="module6" data-difficulty="intermediate">
+                <div class="premium-badge"><i class="fas fa-crown"></i> Premium Content</div>
+                <div class="course-three">
+                    <h1>GRID LAYOUT</h1>
+                    <h3>Build two‑dimensional layouts with CSS Grid</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" class="module-icon" alt="CSS Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 6: <span>CSS Grid Layout</span></h1>
+                    <p>CSS Grid is a two‑dimensional layout system that lets you design both rows and columns simultaneously. It's perfect for complex page layouts.</p>
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs"><div class="editor-tab active">HTML+CSS</div></div>
+                            <div class="editor-actions"><button class="run-editor"><i class="fas fa-play"></i> Run</button><button class="reset-editor"><i class="fas fa-redo"></i> Reset</button></div>
+                        </div>
+                        <textarea class="code-editor" id="editor-6" spellcheck="false">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;style&gt;
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            gap: 20px;
+            background: #2a3042;
+            padding: 20px;
+        }
+        .grid-item {
+            background: #00C853;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+        }
+        .featured {
+            grid-column: span 2;
+            background: #2962FF;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="grid-container"&gt;
+        &lt;div class="grid-item"&gt;1&lt;/div&gt;
+        &lt;div class="grid-item"&gt;2&lt;/div&gt;
+        &lt;div class="grid-item"&gt;3&lt;/div&gt;
+        &lt;div class="grid-item featured"&gt;4 (span 2 columns)&lt;/div&gt;
+        &lt;div class="grid-item"&gt;5&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+                        <button class="run-btn" onclick="runCode('editor-6', 'output-6')"><i class="fas fa-play"></i> Run Code</button>
+                        <div class="output-title"><i class="fas fa-desktop"></i> Live Preview</div>
+                        <div class="preview-container" id="output-6"></div>
+                        <div class="course-five"><h3>Key Points:</h3><ul><li><code>display: grid</code> creates a grid container.</li><li><code>grid-template-columns/rows</code> define track sizes.</li><li><code>gap</code> sets spacing between grid items.</li><li><code>grid-column</code> / <code>grid-row</code> span items.</li></ul></div>
+                        <div class="module-explanation"><h3><i class="fas fa-th"></i> Two‑Dimensional Layouts</h3><p>Grid excels at overall page structure. Combine with Flexbox for components. Use <code>fr</code> units for flexible proportions.</p><div class="explanation-grid"><div class="explanation-card"><h4>Responsive Grids</h4><p>Use <code>auto-fit</code> and <code>minmax()</code> for responsive columns.</p></div><div class="explanation-card"><h4>Named Areas</h4><p><code>grid-template-areas</code> lets you visually design layout.</p></div><div class="explanation-card"><h4>Alignment</h4><p>Grid offers powerful alignment properties: <code>justify-items</code>, <code>align-items</code>.</p></div></div><div class="real-world-example"><h4>Real‑World</h4><p>Modern websites use Grid for overall page layout (header, main, sidebar, footer) and Flexbox for internal components.</p></div></div>
+                        <div class="assignment"><h4><i class="fas fa-tasks"></i> Take Home Assignment</h4><p>Create a magazine‑style layout with a header, main content area, sidebar, and footer using CSS Grid.</p><div class="assignment-note"><p>Upload to SkillMynte AI for review.</p></div></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== MODULE 7: POSITIONING & DISPLAY ========== -->
+            <div class="course-module" id="module7" data-difficulty="intermediate">
+                <div class="premium-badge"><i class="fas fa-crown"></i> Premium Content</div>
+                <div class="course-three">
+                    <h1>POSITIONING & DISPLAY</h1>
+                    <h3>Control element placement with positioning properties</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" class="module-icon" alt="CSS Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 7: <span>Positioning & Display Values</span></h1>
+                    <p>The <code>position</code> property allows you to take elements out of normal flow. Values: static, relative, absolute, fixed, sticky. <code>display</code> controls whether an element is block, inline, flex, grid, etc.</p>
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs"><div class="editor-tab active">HTML+CSS</div></div>
+                            <div class="editor-actions"><button class="run-editor"><i class="fas fa-play"></i> Run</button><button class="reset-editor"><i class="fas fa-redo"></i> Reset</button></div>
+                        </div>
+                        <textarea class="code-editor" id="editor-7" spellcheck="false">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;style&gt;
+        .relative { position: relative; top: 20px; left: 20px; background: #00C853; padding: 10px; }
+        .absolute-parent { position: relative; background: #2a3042; padding: 40px; margin: 20px 0; }
+        .absolute-child { position: absolute; bottom: 10px; right: 10px; background: #2962FF; padding: 5px; }
+        .sticky { position: sticky; top: 0; background: #FF6B35; padding: 10px; margin-top: 20px; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="relative"&gt;Relative positioned (moved 20px down and right)&lt;/div&gt;
+    &lt;div class="absolute-parent"&gt;
+        Relative parent
+        &lt;div class="absolute-child"&gt;Absolute child (bottom right)&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="sticky"&gt;Sticky header (sticks to top)&lt;/div&gt;
+    &lt;p&gt;Scroll to see sticky effect.&lt;/p&gt;
+    &lt;div style="height: 200px;"&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+                        <button class="run-btn" onclick="runCode('editor-7', 'output-7')"><i class="fas fa-play"></i> Run Code</button>
+                        <div class="output-title"><i class="fas fa-desktop"></i> Live Preview</div>
+                        <div class="preview-container" id="output-7"></div>
+                        <div class="course-five"><h3>Key Points:</h3><ul><li><code>position: relative</code> offsets element from normal position.</li><li><code>position: absolute</code> positions relative to nearest positioned ancestor.</li><li><code>position: fixed</code> positions relative to viewport.</li><li><code>position: sticky</code> toggles between relative and fixed based on scroll.</li></ul></div>
+                        <div class="module-explanation"><h3><i class="fas fa-arrows-alt"></i> Advanced Positioning</h3><p>Absolute positioning is powerful for overlays, tooltips, and modals. Sticky headers improve navigation. Always consider z‑index for stacking order.</p><div class="explanation-grid"><div class="explanation-card"><h4>Z‑Index</h4><p><code>z-index</code> controls stacking order. Only works on positioned elements.</p></div><div class="explanation-card"><h4>Containing Blocks</h4><p>Absolute elements are positioned relative to the nearest positioned ancestor (non‑static).</p></div><div class="explanation-card"><h4>Display</h4><p><code>display: none</code> removes element from layout; <code>visibility: hidden</code> hides but preserves space.</p></div></div><div class="real-world-example"><h4>Real‑World</h4><p>Sticky navigation bars, fixed headers, modal popups, and tooltips use these positioning techniques.</p></div></div>
+                        <div class="assignment"><h4><i class="fas fa-tasks"></i> Take Home Assignment</h4><p>Create a fixed back‑to‑top button that appears when scrolling down, and a sticky header for a webpage.</p><div class="assignment-note"><p>Upload to SkillMynte AI for review.</p></div></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== MODULE 8: TRANSITIONS & ANIMATIONS ========== -->
+            <div class="course-module" id="module8" data-difficulty="intermediate">
+                <div class="premium-badge"><i class="fas fa-crown"></i> Premium Content</div>
+                <div class="course-three">
+                    <h1>TRANSITIONS & ANIMATIONS</h1>
+                    <h3>Add motion and interactivity with CSS</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" class="module-icon" alt="CSS Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 8: <span>CSS Transitions & Keyframe Animations</span></h1>
+                    <p>Transitions smoothly change property values over time. Animations use keyframes to create complex motion. Both enhance user experience.</p>
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs"><div class="editor-tab active">HTML+CSS</div></div>
+                            <div class="editor-actions"><button class="run-editor"><i class="fas fa-play"></i> Run</button><button class="reset-editor"><i class="fas fa-redo"></i> Reset</button></div>
+                        </div>
+                        <textarea class="code-editor" id="editor-8" spellcheck="false">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;style&gt;
+        .btn {
+            background: #00C853;
+            padding: 10px 20px;
+            transition: transform 0.3s ease, background 0.3s;
+            display: inline-block;
+            margin: 20px;
+        }
+        .btn:hover {
+            transform: scale(1.1);
+            background: #2962FF;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        .animated {
+            animation: bounce 1s infinite;
+            background: #FF6B35;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="btn"&gt;Hover me&lt;/div&gt;
+    &lt;div class="animated"&gt;Bounce&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+                        <button class="run-btn" onclick="runCode('editor-8', 'output-8')"><i class="fas fa-play"></i> Run Code</button>
+                        <div class="output-title"><i class="fas fa-desktop"></i> Live Preview</div>
+                        <div class="preview-container" id="output-8"></div>
+                        <div class="course-five"><h3>Key Points:</h3><ul><li><code>transition</code> animates changes over time.</li><li><code>@keyframes</code> define animation steps.</li><li><code>animation</code> applies keyframes with duration, timing, iteration.</li><li>Use <code>transform</code> for performance‑friendly animations.</li></ul></div>
+                        <div class="module-explanation"><h3><i class="fas fa-play-circle"></i> Bringing UI to Life</h3><p>Smooth transitions improve perceived performance. Keyframe animations can create loading indicators, attention‑grabbing effects, and delightful micro‑interactions.</p><div class="explanation-grid"><div class="explanation-card"><h4>Performance</h4><p>Prefer <code>transform</code> and <code>opacity</code> for animations; they use the GPU.</p></div><div class="explanation-card"><h4>Timing Functions</h4><p>Use <code>ease</code>, <code>linear</code>, <code>cubic-bezier()</code> for custom motion.</p></div><div class="explanation-card"><h4>Accessibility</h4><p>Respect <code>prefers-reduced-motion</code> media query for users who dislike motion.</p></div></div><div class="real-world-example"><h4>Real‑World</h4><p>Hover effects, loading spinners, page transitions, and animated modals all rely on CSS transitions and animations.</p></div></div>
+                        <div class="assignment"><h4><i class="fas fa-tasks"></i> Take Home Assignment</h4><p>Create a card that flips on hover, or a button with a ripple effect using transitions/animations.</p><div class="assignment-note"><p>Upload to SkillMynte AI for review.</p></div></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== MODULE 9: RESPONSIVE DESIGN ========== -->
+            <div class="course-module" id="module9" data-difficulty="advanced">
+                <div class="premium-badge"><i class="fas fa-crown"></i> Premium Content</div>
+                <div class="course-three">
+                    <h1>RESPONSIVE DESIGN</h1>
+                    <h3>Make websites adapt to any screen size</h3>
+                    <span class="difficulty">Advanced</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" class="module-icon" alt="CSS Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 9: <span>Media Queries & Responsive Techniques</span></h1>
+                    <p>Responsive design ensures websites work on all devices. Use media queries to apply styles based on screen width, height, orientation, etc. Combine with fluid layouts, flexible images, and relative units.</p>
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs"><div class="editor-tab active">HTML+CSS</div></div>
+                            <div class="editor-actions"><button class="run-editor"><i class="fas fa-play"></i> Run</button><button class="reset-editor"><i class="fas fa-redo"></i> Reset</button></div>
+                        </div>
+                        <textarea class="code-editor" id="editor-9" spellcheck="false">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;style&gt;
+        body { font-family: Arial; padding: 20px; }
+        .container { display: flex; gap: 20px; flex-wrap: wrap; }
+        .box { background: #00C853; padding: 20px; flex: 1 1 200px; text-align: center; }
+        @media (max-width: 768px) {
+            .container { flex-direction: column; }
+            .box { background: #2962FF; }
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="container"&gt;
+        &lt;div class="box"&gt;Box 1&lt;/div&gt;
+        &lt;div class="box"&gt;Box 2&lt;/div&gt;
+        &lt;div class="box"&gt;Box 3&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;p&gt;Resize the window to see the layout change at 768px.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+                        <button class="run-btn" onclick="runCode('editor-9', 'output-9')"><i class="fas fa-play"></i> Run Code</button>
+                        <div class="output-title"><i class="fas fa-desktop"></i> Live Preview</div>
+                        <div class="preview-container" id="output-9"></div>
+                        <div class="course-five"><h3>Key Points:</h3><ul><li><code>@media (max-width: ...)</code> targets screens smaller than a breakpoint.</li><li>Use relative units (%, vw, rem) for fluid layouts.</li><li>Responsive images: <code>max-width: 100%</code> ensures images scale.</li><li>Mobile‑first design: start with mobile styles, then add breakpoints for larger screens.</li></ul></div>
+                        <div class="module-explanation"><h3><i class="fas fa-mobile-alt"></i> Designing for All Devices</h3><p>Modern websites use a mobile‑first approach. Breakpoints are typically based on common device widths (576px, 768px, 992px, 1200px). Test on real devices or browser dev tools.</p><div class="explanation-grid"><div class="explanation-card"><h4>Fluid Grids</h4><p>Use <code>fr</code> units, <code>calc()</code>, or <code>flex-wrap</code> for fluid columns.</p></div><div class="explanation-card"><h4>Viewport Meta</h4><p><code>&lt;meta name="viewport"&gt;</code> is essential for responsive design.</p></div><div class="explanation-card"><h4>Responsive Images</h4><p>Use <code>srcset</code> and <code>picture</code> for different resolutions.</p></div></div><div class="real-world-example"><h4>Real‑World</h4><p>All major websites (Amazon, BBC, etc.) implement responsive design to serve mobile, tablet, and desktop users seamlessly.</p></div></div>
+                        <div class="assignment"><h4><i class="fas fa-tasks"></i> Take Home Assignment</h4><p>Build a responsive portfolio that rearranges from a multi‑column grid on desktop to a single‑column layout on mobile.</p><div class="assignment-note"><p>Upload to SkillMynte AI for review.</p></div></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== MODULE 10: ADVANCED CSS ========== -->
+            <div class="course-module" id="module10" data-difficulty="advanced">
+                <div class="premium-badge"><i class="fas fa-crown"></i> Premium Content</div>
+                <div class="course-three">
+                    <h1>ADVANCED CSS</h1>
+                    <h3>Master modern CSS features and best practices</h3>
+                    <span class="difficulty">Advanced</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" class="module-icon" alt="CSS Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 10: <span>CSS Variables, Custom Properties & More</span></h1>
+                    <p>Advanced CSS includes custom properties (CSS variables), complex selectors, functions like <code>calc()</code>, <code>clamp()</code>, <code>min()</code>, <code>max()</code>, and techniques like CSS Houdini, container queries, and logical properties.</p>
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs"><div class="editor-tab active">HTML+CSS</div></div>
+                            <div class="editor-actions"><button class="run-editor"><i class="fas fa-play"></i> Run</button><button class="reset-editor"><i class="fas fa-redo"></i> Reset</button></div>
+                        </div>
+                        <textarea class="code-editor" id="editor-10" spellcheck="false">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;style&gt;
+        :root {
+            --primary-color: #00C853;
+            --spacing: 1rem;
+        }
+        .card {
+            background: var(--primary-color);
+            padding: var(--spacing);
+            border-radius: 8px;
+            width: calc(100% - 2rem);
+            margin: 1rem;
+        }
+        .responsive-text {
+            font-size: clamp(1rem, 5vw, 2rem);
+            background: #2a3042;
+            padding: 1rem;
+        }
+        .container-query {
+            container-type: inline-size;
+            background: #1a1f2e;
+            padding: 1rem;
+        }
+        @container (min-width: 400px) {
+            .container-query .inner {
+                background: #2962FF;
+                padding: 2rem;
+            }
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="card"&gt;CSS Variable Card&lt;/div&gt;
+    &lt;div class="responsive-text"&gt;This text scales with viewport (clamp)&lt;/div&gt;
+    &lt;div class="container-query"&gt;
+        &lt;div class="inner"&gt;Container query – resize this container!&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+                        <button class="run-btn" onclick="runCode('editor-10', 'output-10')"><i class="fas fa-play"></i> Run Code</button>
+                        <div class="output-title"><i class="fas fa-desktop"></i> Live Preview</div>
+                        <div class="preview-container" id="output-10"></div>
+                        <div class="course-five"><h3>Key Points:</h3><ul><li>CSS custom properties (<code>--var</code>) enable dynamic theming.</li><li><code>calc()</code>, <code>clamp()</code> create fluid typography and layouts.</li><li>Container queries allow component‑level responsiveness.</li><li>Logical properties (<code>margin-inline</code>, etc.) improve internationalization.</li></ul></div>
+                        <div class="module-explanation"><h3><i class="fas fa-cog"></i> Future‑Proof CSS</h3><p>CSS variables reduce duplication and enable theme switching. Container queries finally bring responsive design to components. New pseudo‑classes like <code>:has()</code> give powerful parent selection.</p><div class="explanation-grid"><div class="explanation-card"><h4>Custom Properties</h4><p>Declare in <code>:root</code> and override locally for themes.</p></div><div class="explanation-card"><h4>Container Queries</h4><p>Style elements based on their parent’s size, not the viewport.</p></div><div class="explanation-card"><h4>Modern Selectors</h4><p><code>:is()</code>, <code>:where()</code>, <code>:has()</code> reduce selector complexity.</p></div></div><div class="real-world-example"><h4>Real‑World</h4><p>Design systems like Material UI use CSS variables for theming. Container queries are being adopted for component libraries that need to be responsive anywhere.</p></div></div>
+                        <div class="assignment"><h4><i class="fas fa-tasks"></i> Take Home Assignment</h4><p>Create a theme switcher (light/dark) using CSS variables and JavaScript, and build a component that responds to its container size using container queries.</p><div class="assignment-note"><p>Upload to SkillMynte AI for review.</p></div></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== PRACTICE PLAYGROUND ========== -->
+            <div class="course-module" id="playground">
+                <div class="course-three">
+                    <h1>PRACTICE PLAYGROUND</h1>
+                    <h3>Experiment with what you've learned</h3>
+                    <i class="fas fa-laptop-code course-icon" style="color: var(--primary);"></i>
+                </div>
+                <div class="course-one">
+                    <h1>Your CSS Playground: <span>Try Your Own Code</span></h1>
+                    <p>Use this space to experiment with everything you've learned. Combine different CSS properties and see the results in real-time!</p>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs"><div class="editor-tab active">HTML+CSS</div></div>
+                            <div class="editor-actions"><button class="run-editor"><i class="fas fa-play"></i> Run</button><button class="reset-editor"><i class="fas fa-redo"></i> Reset</button></div>
+                        </div>
+                        <textarea class="code-editor" id="playground-editor" spellcheck="false">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;style&gt;
+        body { font-family: Arial; background: #f4f4f4; margin: 0; padding: 20px; }
+        .card { background: white; border-radius: 10px; padding: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        h1 { color: #00C853; }
+        .btn { background: #00C853; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; transition: transform 0.2s; }
+        .btn:hover { transform: scale(1.05); background: #009624; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="card"&gt;
+        &lt;h1&gt;Your CSS Playground&lt;/h1&gt;
+        &lt;p&gt;Edit the code and click Run to see your changes.&lt;/p&gt;
+        &lt;button class="btn"&gt;Hover me&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+                        <button class="run-btn" onclick="runCode('playground-editor', 'playground-output')"><i class="fas fa-play"></i> Run Code</button>
+                        <div class="output-title"><i class="fas fa-desktop"></i> Live Preview</div>
+                        <div class="preview-container" id="playground-output"></div>
+                    </div>
+                    <div class="course-five">
+                        <h3>Challenge Exercises:</h3>
+                        <ol>
+                            <li>Build a responsive pricing table using Flexbox or Grid.</li>
+                            <li>Create an animated loading spinner with keyframes.</li>
+                            <li>Design a modern card layout with hover effects and CSS variables.</li>
+                            <li>Make a responsive navbar that collapses on mobile using media queries.</li>
+                            <li>Combine multiple concepts into a complete landing page.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Premium Subscription (same as original) -->
+            <div class="premium-subscription" id="premium-subscription">
+                <h2>Unlock Premium SkillMynte Content</h2>
+                <p>Upgrade to SkillMynte Pro for exclusive courses, advanced projects, and personalized learning paths</p>
+                <div class="premium-features">
+                    <div class="premium-feature"><i class="fas fa-gem"></i><h3>Premium Courses</h3><p>Access our entire library of advanced courses and exclusive content</p></div>
+                    <div class="premium-feature"><i class="fas fa-trophy"></i><h3>Certification</h3><p>Earn industry-recognized certificates to showcase your skills</p></div>
+                    <div class="premium-feature"><i class="fas fa-user-graduate"></i><h3>Mentorship</h3><p>Get personalized guidance from industry experts</p></div>
+                </div>
+                <div class="pricing-options">
+                    <div class="pricing-option"><h3>Monthly</h3><div class="price">₦3,500<span>/month</span></div><ul class="pricing-features"><li><i class="fas fa-check"></i> All Premium Courses</li><li><i class="fas fa-check"></i> Practice Projects</li><li><i class="fas fa-check"></i> Community Access</li><li><i class="fas fa-check"></i> Certificates</li><li><i class="fas fa-check"></i> personal AI inbuilt</li></ul><a href="premium courses.html"><button class="pricing-btn">Get Started</button></a></div>
+                    <div class="pricing-option" style="border-color: var(--white); transform: scale(1.05);"><h3>Annual <span style="background: var(--white); color: #2962FF; padding: 0.2rem 0.5rem; border-radius: 20px; font-size: 0.8rem;">Best Value</span></h3><div class="price">₦37,000<span>/year</span></div><ul class="pricing-features"><li><i class="fas fa-check"></i> All Premium Courses</li><li><i class="fas fa-check"></i> Practice Projects</li><li><i class="fas fa-check"></i> Community Access</li><li><i class="fas fa-check"></i> Certificates</li><li><i class="fas fa-check"></i> personal AI inbuilt</li></ul><a href="premium courses.html"><button class="pricing-btn">Get Started</button></a></div>
+                    <div class="pricing-option"><h3>Lifetime</h3><div class="price">₦200,000<span>/once</span></div><ul class="pricing-features"><li><i class="fas fa-check"></i> All Premium Courses</li><li><i class="fas fa-check"></i> Practice Projects</li><li><i class="fas fa-check"></i> Community Access</li><li><i class="fas fa-check"></i> Certificates</li><li><i class="fas fa-check"></i> personal AI inbuilt</li></ul><a href="premium courses.html"><button class="pricing-btn">Get Started</button></a></div>
+                </div>
+                <button class="premium-cta-btn"><i class="fas fa-rocket"></i> Upgrade to SkillMynte Pro</button>
+            </div>
+
+            <!-- Footer -->
+            <footer>
+                <div class="footer-content">
+                    <div class="footer-column">
+                        <h3>About SkillMynte</h3>
+                        <p>SkillMynte is a premium learning platform dedicated to helping developers of all levels master web technologies through interactive courses and hands-on practice.</p>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/profile.php?id=61581069862024"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://x.com/SkillMynte_AI"><i class="fab fa-twitter"></i></a>
+                            <a href="https://youtube.com/@skillmynte"><i class="fab fa-youtube"></i></a>
+                            <a href="https://www.instagram.com/skillmynte_ai"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Quick Links</h3>
+                        <ul class="footer-links">
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Home</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Courses</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Practice</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Projects</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Popular Courses</h3>
+                        <ul class="footer-links">
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> HTML & CSS Fundamentals</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> JavaScript Mastery</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> React.js Development</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Node.js Backend</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Contact Us</h3>
+                        <p><i class="fas fa-envelope"></i> Skillmynteofficial@gmail.com</p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 SkillMynte. All rights reserved. | Designed with <i class="fas fa-heart" style="color: var(--primary);"></i> for the developer community</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        // Function to run code in preview
+        function runCode(editorId, outputId) {
+            const editor = document.getElementById(editorId);
+            const output = document.getElementById(outputId);
+            try {
+                output.innerHTML = editor.value;
+            } catch (error) {
+                output.innerHTML = `<div style="color: var(--accent); padding: 1rem;">Error: ${error.message}</div>`;
+            }
+        }
+
+        // Initialize all editors and set up event listeners
+        document.addEventListener('DOMContentLoaded', function() {
+            // Run all code editors on load
+            for (let i = 1; i <= 10; i++) {
+                const editor = document.getElementById(`editor-${i}`);
+                if (editor) runCode(`editor-${i}`, `output-${i}`);
+            }
+            if (document.getElementById('playground-editor')) {
+                runCode('playground-editor', 'playground-output');
+            }
+
+            // Store original content for reset functionality
+            document.querySelectorAll('.code-editor').forEach(editor => {
+                editor.dataset.original = editor.value;
+            });
+
+            // Run and reset buttons
+            document.querySelectorAll('.run-editor').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const container = this.closest('.code-editor-container');
+                    const editor = container.querySelector('.code-editor');
+                    const output = container.querySelector('.preview-container');
+                    runCode(editor.id, output.id);
+                });
+            });
+            document.querySelectorAll('.reset-editor').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const container = this.closest('.code-editor-container');
+                    const editor = container.querySelector('.code-editor');
+                    editor.value = editor.dataset.original;
+                    runCode(editor.id, container.querySelector('.preview-container').id);
+                });
+            });
+
+            // Navbar scroll effect
+            window.addEventListener('scroll', function() {
+                const navbar = document.getElementById('navbar');
+                if (window.scrollY > 50) navbar.classList.add('scrolled');
+                else navbar.classList.remove('scrolled');
+            });
+
+            // Mobile menu toggle
+            const menuToggle = document.getElementById('menuToggle');
+            const navMenu = document.querySelector('.nav-menu');
+            const sidebar = document.getElementById('sidebar');
+
+            function toggleMobileMenu() {
+                navMenu.classList.toggle('active');
+                sidebar.classList.toggle('active');
+                menuToggle.innerHTML = navMenu.classList.contains('active') ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+            }
+
+            menuToggle.addEventListener('click', toggleMobileMenu);
+
+            // Close menu when clicking outside
+            document.addEventListener('click', function(e) {
+                if (window.innerWidth <= 1024 && navMenu.classList.contains('active') &&
+                    !e.target.closest('.nav-menu') && !e.target.closest('.menu-toggle') && !e.target.closest('.sidebar')) {
+                    navMenu.classList.remove('active');
+                    sidebar.classList.remove('active');
+                    menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                }
+            });
+
+            // Level filtering
+            const levelBtns = document.querySelectorAll('.level-btn');
+            const modules = document.querySelectorAll('.course-module');
+            levelBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const level = this.dataset.level;
+                    levelBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    modules.forEach(module => {
+                        const difficulty = module.dataset.difficulty;
+                        if (level === 'all') module.style.display = 'flex';
+                        else if (level === 'advanced') {
+                            if (module.id === 'module7' || module.id === 'module8' || module.id === 'module9' || module.id === 'module10')
+                                module.style.display = 'flex';
+                            else module.style.display = 'none';
+                        } else {
+                            if (difficulty === level) module.style.display = 'flex';
+                            else module.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // Search functionality
+            const searchInput = document.getElementById('search-input');
+            searchInput.addEventListener('input', function() {
+                const term = this.value.toLowerCase();
+                modules.forEach(module => {
+                    const text = module.textContent.toLowerCase();
+                    if (term === '' || text.includes(term)) module.style.display = 'flex';
+                    else module.style.display = 'none';
+                });
+            });
+
+            // Smooth scrolling for sidebar links
+            document.querySelectorAll('.sidebar-item').forEach(item => {
+                item.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const target = document.querySelector(targetId);
+                    if (target) {
+                        window.scrollTo({ top: target.offsetTop - 100, behavior: 'smooth' });
+                        if (window.innerWidth <= 1024) toggleMobileMenu();
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

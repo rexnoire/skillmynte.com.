@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support SkillMynte</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="support page .css">
+    <link rel="shortcut icon" type="image/x-icon" href="sm_favicon_64 (1).png">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <span class="logo-badge">SM</span>
+                <span class="logo-text">SkillMynte</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Fuel SkillMynte's Growth Journey</h1>
+            <p>Your contribution isn't just support—it's an investment in quality education and the future of learning. Help us create more impact.</p>
+        </div>
+    </section>
+
+    <!-- Mission Statement -->
+    <section class="container">
+        <div class="mission-statement">
+            <h2>Your Support Creates Ripple Effects</h2>
+            <p>This is more than appreciation—it's <span class="highlight">co-creating the future</span> of learning and <span class="highlight">empowering SkillMynte's mission</span> to reach more students.</p>
+            <p>Every contribution directly fuels platform improvements, new course development, and helps us maintain the quality you've come to expect. You're not just saying "thank you"—you're planting seeds for future growth.</p>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <div class="container">
+        <div class="stats">
+            <div class="stat-item">
+                <span class="stat-number" id="students-count">0</span>
+                <span class="stat-label">Students Impacted</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" id="courses-count">0</span>
+                <span class="stat-label">Courses Available</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" id="supporters-count">0</span>
+                <span class="stat-label">Active Supporters</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Support Tiers -->
+    <section class="support-section">
+        <div class="container">
+            <h2 class="section-title">Choose Your Support Level</h2>
+            <div class="tiers-container">
+                <!-- Tier 1 -->
+                <div class="tier-card">
+                    <h3 class="tier-name">Course Appreciator</h3>
+                    <div class="tier-price">₦1,500</div>
+                    <div class="tier-interval">per month • Cancel anytime</div>
+                    
+                    <div class="tier-purpose">
+                        <h4>How This Helps:</h4>
+                        <p>Your monthly support helps sustain our operations and create new learning materials for the community.</p>
+                    </div>
+                    
+                    <div class="appreciation-note">
+                        <i class="fas fa-heart"></i>
+                        <span>Shows ongoing appreciation for our courses</span>
+                    </div>
+                    
+                    <button class="support-btn" data-amount="1500" data-type="monthly">Show Your Appreciation</button>
+                </div>
+
+                <!-- Tier 2 (Popular) -->
+                <div class="tier-card popular">
+                    <div class="badge">Most Popular</div>
+                    <h3 class="tier-name">Growth Contributor</h3>
+                    <div class="tier-price">₦5,000</div>
+                    <div class="tier-interval">one-time contribution</div>
+                    
+                    <div class="tier-purpose">
+                        <h4>How This Helps:</h4>
+                        <p>Your contribution directly funds platform improvements and helps us reach more students.</p>
+                    </div>
+                    
+                    <div class="appreciation-note">
+                        <i class="fas fa-seedling"></i>
+                        <span>Helps SkillMynte grow and expand its reach</span>
+                    </div>
+                    
+                    <button class="support-btn" data-amount="5000" data-type="one-time">Contribute to Growth</button>
+                </div>
+
+                <!-- Tier 3 -->
+                <div class="tier-card">
+                    <h3 class="tier-name">Vision Supporter</h3>
+                    <div class="tier-price">₦10,000</div>
+                    <div class="tier-interval">one-time contribution</div>
+                    
+                    <div class="tier-purpose">
+                        <h4>How This Helps:</h4>
+                        <p>Your significant support enables major platform enhancements and the development of advanced courses.</p>
+                    </div>
+                    
+                    <div class="appreciation-note">
+                        <i class="fas fa-rocket"></i>
+                        <span>Fuels ambitious projects and future innovations</span>
+                    </div>
+                    
+                    <button class="support-btn" data-amount="10000" data-type="one-time">Support Our Vision</button>
+                </div>
+            </div>
+
+            <!-- Custom Amount Section -->
+            <div class="custom-amount">
+                <h3>Choose Your Own Amount</h3>
+                <p class="custom-purpose">Any amount helps us grow and shows your appreciation for our courses</p>
+                <div class="input-group">
+                    <span class="currency">₦</span>
+                    <input type="number" class="amount-input" id="custom-amount" placeholder="Enter amount" min="100" value="5000">
+                </div>
+                <div class="amount-actions">
+                    <button class="quick-amount" data-amount="2000">₦2,000</button>
+                    <button class="quick-amount" data-amount="7500">₦7,500</button>
+                    <button class="quick-amount" data-amount="15000">₦15,000</button>
+                    <button class="custom-btn" id="custom-support">Show Support</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Email Collection Modal -->
+    <div class="email-modal" id="email-modal">
+        <div class="email-form">
+            <h3>Enter Your Email</h3>
+            <p style="color: var(--gray); text-align: center; margin-bottom: 20px; font-size: 0.95rem;">We'll send payment confirmation to this email</p>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="your@email.com" required>
+            </div>
+            <div class="form-actions">
+                <button class="form-btn cancel-btn" id="cancel-email">Cancel</button>
+                <button class="form-btn submit-btn" id="submit-email">Continue to Payment</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Indicator -->
+    <div class="spinner" id="spinner"></div>
+
+    <!-- Confirmation Modal -->
+    <div class="modal-overlay" id="modal">
+        <div class="modal">
+            <div class="modal-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>Thank You for Your Support!</h3>
+            <p>Your contribution of <span id="confirmed-amount">₦5,000</span> helps us continue improving SkillMynte and shows your appreciation for our courses. You will receive a confirmation email shortly.</p>
+            <button class="modal-btn" id="close-modal">Continue</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <span class="logo-badge">SM</span> SkillMynte
+            </div>
+            <div class="footer-links">
+                <a href="#">About Us</a>
+                <a href="contact support.html" class="contact-button">Contact Support</a>
+                <a href="Terms of Service.html">Terms of Service</a>
+                <a href="Privacy policy .html">Privacy Policy</a>
+                <a href="contact support.html">Contact</a>
+                <a href="FAQ page.html">FAQ</a>
+            </div>
+            <div class="copyright">© 2025 SkillMynte. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <!-- Paystack Inline JS -->
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+    
+    <script>
+        // Paystack configuration
+        const PAYSTACK_PUBLIC_KEY = 'pk_live_c92d63fed8ce6f22416cb3fb89e1a58c4119826c';
+        
+        // Store payment data
+        let currentPaymentData = {
+            amount: 0,
+            type: '',
+            email: ''
+        };
+
+        // Stats counter animation
+        function animateCounter(elementId, targetValue) {
+            let element = document.getElementById(elementId);
+            let current = 0;
+            let increment = targetValue / 50;
+            let timer = setInterval(() => {
+                current += increment;
+                if (current >= targetValue) {
+                    current = targetValue;
+                    clearInterval(timer);
+                }
+                element.textContent = Math.floor(current).toLocaleString();
+            }, 30);
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate stats counters
+            setTimeout(() => {
+                animateCounter('students-count', 12500);
+                animateCounter('courses-count', 42);
+                animateCounter('supporters-count', 856);
+            }, 500);
+
+            // Header scroll effect
+            const header = document.getElementById('header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+
+            // Get DOM elements
+            const modal = document.getElementById('modal');
+            const closeModal = document.getElementById('close-modal');
+            const confirmedAmount = document.getElementById('confirmed-amount');
+            const customAmountInput = document.getElementById('custom-amount');
+            const customSupportBtn = document.getElementById('custom-support');
+            const emailModal = document.getElementById('email-modal');
+            const emailInput = document.getElementById('email');
+            const cancelEmailBtn = document.getElementById('cancel-email');
+            const submitEmailBtn = document.getElementById('submit-email');
+            const spinner = document.getElementById('spinner');
+            
+            // Support tier buttons
+            const supportButtons = document.querySelectorAll('.support-btn');
+            
+            // Quick amount buttons
+            const quickAmountButtons = document.querySelectorAll('.quick-amount');
+            
+            // Function to show modal with amount
+            function showModal(amount) {
+                confirmedAmount.textContent = `₦${amount.toLocaleString()}`;
+                modal.classList.add('active');
+            }
+            
+            // Function to show email modal
+            function showEmailModal(amount, type) {
+                currentPaymentData.amount = amount;
+                currentPaymentData.type = type;
+                emailModal.classList.add('active');
+                emailInput.focus();
+            }
+            
+            // Function to hide email modal
+            function hideEmailModal() {
+                emailModal.classList.remove('active');
+                emailInput.value = '';
+            }
+            
+            // Function to process payment with Paystack
+            function processPaymentWithPaystack(email, amount) {
+                // Show loading spinner
+                spinner.style.display = 'block';
+                
+                // Convert amount to kobo (smallest currency unit)
+                const amountInKobo = amount * 100;
+                
+                // Create payment handler
+                const handler = PaystackPop.setup({
+                    key: PAYSTACK_PUBLIC_KEY,
+                    email: email,
+                    amount: amountInKobo,
+                    currency: 'NGN',
+                    ref: 'SKM_' + Math.floor((Math.random() * 1000000000) + 1),
+                    metadata: {
+                        custom_fields: [
+                            {
+                                display_name: "Support Type",
+                                variable_name: "support_type",
+                                value: currentPaymentData.type
+                            }
+                        ]
+                    },
+                    callback: function(response) {
+                        // Payment successful
+                        spinner.style.display = 'none';
+                        showModal(amount);
+                        console.log('Payment complete! Reference: ' + response.reference);
+                    },
+                    onClose: function() {
+                        // User closed payment modal
+                        spinner.style.display = 'none';
+                        alert('Payment was not completed. Window closed.');
+                    }
+                });
+                
+                handler.openIframe();
+            }
+            
+            // Add event listeners to support buttons
+            supportButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const amount = parseInt(this.getAttribute('data-amount'));
+                    const type = this.getAttribute('data-type');
+                    showEmailModal(amount, type);
+                });
+            });
+            
+            // Add event listeners to quick amount buttons
+            quickAmountButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const amount = parseInt(this.getAttribute('data-amount'));
+                    customAmountInput.value = amount;
+                    
+                    // Add visual feedback
+                    this.style.background = 'var(--primary)';
+                    setTimeout(() => {
+                        this.style.background = '';
+                    }, 300);
+                });
+            });
+            
+            // Custom support button
+            customSupportBtn.addEventListener('click', function() {
+                let amount = parseInt(customAmountInput.value);
+                
+                if (isNaN(amount) || amount < 100) {
+                    alert('Please enter a valid amount (minimum ₦100)');
+                    customAmountInput.focus();
+                    return;
+                }
+                
+                showEmailModal(amount, 'custom');
+            });
+            
+            // Submit email for payment
+            submitEmailBtn.addEventListener('click', function() {
+                const email = emailInput.value.trim();
+                
+                // Simple email validation
+                if (!email || !email.includes('@')) {
+                    alert('Please enter a valid email address');
+                    emailInput.focus();
+                    return;
+                }
+                
+                currentPaymentData.email = email;
+                hideEmailModal();
+                
+                // Process payment with Paystack
+                processPaymentWithPaystack(email, currentPaymentData.amount);
+            });
+            
+            // Cancel email collection
+            cancelEmailBtn.addEventListener('click', function() {
+                hideEmailModal();
+            });
+            
+            // Close modal
+            closeModal.addEventListener('click', function() {
+                modal.classList.remove('active');
+            });
+            
+            // Close modal when clicking outside
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.classList.remove('active');
+                }
+            });
+            
+            // Close email modal when clicking outside
+            emailModal.addEventListener('click', function(e) {
+                if (e.target === emailModal) {
+                    hideEmailModal();
+                }
+            });
+            
+            // Enter key support for email input
+            emailInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    submitEmailBtn.click();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

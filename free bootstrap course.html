@@ -1,0 +1,1456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Fundamentals | SkillMynte</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="rounded_logo.png">
+    <link rel="stylesheet" href="free bootstrap course.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-code"></i>
+                SKILLMYNTE
+            </a>
+            <div class="nav-menu">
+                <a href="#" class="nav-link">Home</a>
+                <a href="#" class="nav-link">Courses</a>
+                <a href="#" class="nav-link">Practice</a>
+                <a href="#" class="nav-link">Projects</a>
+                
+                <div class="courses-dropdown">
+                    <button class="courses-btn">
+                        <i class="fas fa-book-open"></i> Jump to Module
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#module1" class="dropdown-item"><i class="fab fa-bootstrap bootstrap-icon"></i> Bootstrap Basics</a>
+                        <a href="#module2" class="dropdown-item"><i class="fab fa-bootstrap bootstrap-icon"></i> Grid System</a>
+                        <a href="#module3" class="dropdown-item"><i class="fab fa-bootstrap bootstrap-icon"></i> Typography & Utilities</a>
+                        <a href="#module4" class="dropdown-item"><i class="fab fa-bootstrap bootstrap-icon"></i> Buttons & Badges</a>
+                        <a href="#module5" class="dropdown-item"><i class="fab fa-bootstrap bootstrap-icon"></i> Forms & Input Groups</a>
+                        <a href="#module6" class="dropdown-item"><i class="fab fa-bootstrap bootstrap-icon"></i> Navigation & Navbars</a>
+                        <a href="#module7" class="dropdown-item"><i class="fab fa-bootstrap bootstrap-icon"></i> Cards & Media Objects</a>
+                        <a href="#module8" class="dropdown-item"><i class="fab fa-bootstrap bootstrap-icon"></i> Modals & Offcanvas</a>
+                        <a href="#module9" class="dropdown-item"><i class="fab fa-bootstrap bootstrap-icon"></i> Carousels & Collapse</a>
+                        <a href="#module10" class="dropdown-item"><i class="fab fa-bootstrap bootstrap-icon"></i> Advanced Bootstrap</a>
+                        <a href="#playground" class="dropdown-item"><i class="fas fa-laptop-code"></i> Practice Playground</a>
+                    </div>
+                </div>
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Premium Course Navigation -->
+    <div class="course-navigation">
+        <div class="course-nav-container">
+            <div class="course-category">
+                <button class="category-btn">
+                    <i class="fas fa-layer-group"></i> Categories
+                </button>
+                <div class="category-dropdown">
+                    <a href="#" class="category-item"><i class="fab fa-bootstrap bootstrap-icon"></i> Bootstrap</a>
+                    <a href="#" class="category-item"><i class="fab fa-js-square js-icon"></i> JavaScript</a>
+                    <a href="#" class="category-item"><i class="fab fa-python python-icon"></i> Python</a>
+                    <a href="#" class="category-item"><i class="fab fa-java java-icon"></i> Java</a>
+                    <a href="#" class="category-item"><i class="fas fa-database"></i> Databases</a>
+                    <a href="#" class="category-item"><i class="fas fa-mobile-alt"></i> Mobile Development</a>
+                </div>
+            </div>
+            
+            <div class="course-levels">
+                <button class="level-btn active" data-level="all">All Levels</button>
+                <button class="level-btn" data-level="beginner">Beginner</button>
+                <button class="level-btn" data-level="intermediate">Intermediate</button>
+                <button class="level-btn" data-level="advanced">Advanced</button>
+            </div>
+            
+            <div class="course-search">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" class="search-input" id="search-input" placeholder="Search courses...">
+            </div>
+        </div>
+    </div>
+    
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <a href="#module1" class="sidebar-item active completed"><i class="fab fa-bootstrap bootstrap-icon"></i><span>Module 1: Bootstrap Basics</span><span class="progress-indicator"><i class="fas fa-check"></i></span></a>
+        <a href="#module2" class="sidebar-item completed"><i class="fab fa-bootstrap bootstrap-icon"></i><span>Module 2: Grid System</span><span class="progress-indicator"><i class="fas fa-check"></i></span></a>
+        <a href="#module3" class="sidebar-item completed"><i class="fab fa-bootstrap bootstrap-icon"></i><span>Module 3: Typography & Utilities</span><span class="progress-indicator"><i class="fas fa-check"></i></span></a>
+        <a href="#module4" class="sidebar-item"><i class="fab fa-bootstrap bootstrap-icon"></i><span>Module 4: Buttons & Badges</span><span class="progress-indicator">4</span></a>
+        <a href="#module5" class="sidebar-item"><i class="fab fa-bootstrap bootstrap-icon"></i><span>Module 5: Forms & Input Groups</span><span class="progress-indicator">5</span></a>
+        <a href="#module6" class="sidebar-item"><i class="fab fa-bootstrap bootstrap-icon"></i><span>Module 6: Navigation & Navbars</span><span class="progress-indicator">6</span></a>
+        <a href="#module7" class="sidebar-item"><i class="fab fa-bootstrap bootstrap-icon"></i><span>Module 7: Cards & Media Objects</span><span class="progress-indicator">7</span></a>
+        <a href="#module8" class="sidebar-item"><i class="fab fa-bootstrap bootstrap-icon"></i><span>Module 8: Modals & Offcanvas</span><span class="progress-indicator">8</span></a>
+        <a href="#module9" class="sidebar-item"><i class="fab fa-bootstrap bootstrap-icon"></i><span>Module 9: Carousels & Collapse</span><span class="progress-indicator">9</span></a>
+        <a href="#module10" class="sidebar-item"><i class="fab fa-bootstrap bootstrap-icon"></i><span>Module 10: Advanced Bootstrap</span><span class="progress-indicator">10</span></a>
+        <a href="#playground" class="sidebar-item"><i class="fas fa-laptop-code"></i><span>Practice Playground</span></a>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="content-wrapper">
+        <div class="container">
+            <!-- Module 1: Bootstrap Basics -->
+            <div class="course-module" id="module1" data-aos="fade-up" data-difficulty="beginner">
+                <div class="premium-badge"><i class="fas fa-crown"></i> Premium Content</div>
+                <div class="course-three">
+                    <h1>BOOTSTRAP BASICS</h1>
+                    <h3>Introduction to the world's most popular CSS framework</h3>
+                    <span class="difficulty">Beginner</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968672.png" class="module-icon" alt="Bootstrap Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 1: <span>What is Bootstrap?</span></h1>
+                    <p>Bootstrap is a powerful, free frontâ€‘end framework that helps you build responsive and mobileâ€‘first websites quickly. It provides a collection of CSS and JavaScript components (like navigation bars, buttons, forms, and modals) that you can simply drop into your project.</p>
+                    <p>To get started, you include Bootstrapâ€™s CSS and JavaScript files in your HTML. The easiest way is via a CDN (Content Delivery Network). Once included, you can start using Bootstrap classes to style your content and create responsive layouts without writing custom CSS from scratch.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs"><div class="editor-tab active">HTML</div></div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor"><i class="fas fa-play"></i> Run</button>
+                                <button title="Reset Code" class="reset-editor"><i class="fas fa-redo"></i> Reset</button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-1" spellcheck="false">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Bootstrap Starter&lt;/title&gt;
+    &lt;!-- Bootstrap CSS CDN --&gt;
+    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="container mt-5"&gt;
+        &lt;h1 class="text-primary"&gt;Hello, Bootstrap!&lt;/h1&gt;
+        &lt;p class="lead"&gt;This is a lead paragraph styled with Bootstrap.&lt;/p&gt;
+        &lt;button class="btn btn-success"&gt;Success Button&lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Bootstrap JavaScript Bundle (includes Popper) --&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+                        <button class="run-btn" onclick="runCode('editor-1', 'output-1')"><i class="fas fa-play"></i> Run Code</button>
+                        <div class="output-title"><i class="fas fa-desktop"></i> Live Preview</div>
+                        <div class="preview-container" id="output-1"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>Bootstrap is a mobileâ€‘first CSS framework with readyâ€‘toâ€‘use components.</li>
+                                <li>Include Bootstrapâ€™s CSS and JS via CDN or download locally.</li>
+                                <li>The <code>container</code> class centers content and provides responsive padding.</li>
+                                <li>Utility classes like <code>mt-5</code> (marginâ€‘top) and <code>text-primary</code> quickly style elements.</li>
+                                <li>Buttons use classes like <code>btn</code> and <code>btn-success</code>.</li>
+                                <li>Bootstrap requires the proper <code>&lt;meta viewport&gt;</code> tag for responsiveness.</li>
+                            </ul>
+                        </div>
+
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-graduation-cap"></i> Bootstrap Foundation</h3>
+                            <p>Bootstrap was originally created by Twitter engineers to ensure consistency across internal projects. It has since grown into the most starred project on GitHub and is used by millions of websites. At its core, Bootstrap provides a responsive grid system, extensive preâ€‘built components, and a suite of utility classes that let you build custom interfaces without writing CSS from scratch.</p>
+                            <p>The framework is built with flexibility in mind: you can use only the parts you need, customize Sass variables, and even compile a custom version. This module lays the foundation for everything that follows.</p>
+                            <div class="explanation-grid">
+                                <div class="explanation-card"><h4><i class="fas fa-mobile-alt"></i> Mobileâ€‘First</h4><p>Bootstrapâ€™s CSS is written to target small screens first, then uses media queries to add styles for larger devices. This ensures your site looks great on phones, tablets, and desktops.</p></div>
+                                <div class="explanation-card"><h4><i class="fas fa-puzzle-piece"></i> Componentâ€‘Driven</h4><p>From alerts to carousels, Bootstrap offers dozens of reusable components that follow consistent design patterns and accessibility best practices.</p></div>
+                                <div class="explanation-card"><h4><i class="fas fa-paint-brush"></i> Customizable</h4><p>You can override Bootstrapâ€™s default theme with your own colors, fonts, and spacing by editing Sass variables or simply overriding CSS classes.</p></div>
+                            </div>
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-building"></i> Realâ€‘World Application</h4>
+                                <p>Startups, Fortune 500 companies, and individual developers use Bootstrap to prototype quickly and ship production sites. For example, the eâ€‘commerce platform Shopify uses Bootstrap for parts of its admin interface, and many government websites rely on Bootstrap for accessible, responsive designs. By mastering Bootstrap, you can rapidly build professionalâ€‘grade interfaces that work everywhere.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Create a Bootstrapâ€‘powered page:</strong> Build a simple "About Me" page that includes:</p>
+                            <ul>
+                                <li>Bootstrap CSS and JS linked via CDN</li>
+                                <li>A <code>container</code> with a heading (<code>h1</code>) and a lead paragraph</li>
+                                <li>A button that uses a Bootstrap color class (e.g., <code>btn-primary</code>)</li>
+                            </ul>
+                            <div class="assignment-note"><p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 2: Grid System -->
+            <div class="course-module" id="module2" data-aos="fade-up" data-difficulty="beginner">
+                <div class="premium-badge"><i class="fas fa-crown"></i> Premium Content</div>
+                <div class="course-three">
+                    <h1>GRID SYSTEM</h1>
+                    <h3>Build flexible, responsive layouts with rows and columns</h3>
+                    <span class="difficulty">Beginner</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968672.png" class="module-icon" alt="Bootstrap Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 2: <span>Bootstrap Grid</span></h1>
+                    <p>Bootstrapâ€™s grid system uses a series of containers, rows, and columns to layout and align content. Itâ€™s built with flexbox and is fully responsive. Columns are defined using a 12â€‘column system: you can specify how many of the 12 columns an element should span at different breakpoints.</p>
+                    <p>For example, <code>col-md-6</code> means the column takes half the width (6 out of 12) on medium screens and above. On smaller screens, columns stack vertically.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs"><div class="editor-tab active">HTML</div></div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor"><i class="fas fa-play"></i> Run</button>
+                                <button title="Reset Code" class="reset-editor"><i class="fas fa-redo"></i> Reset</button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-2" spellcheck="false">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+    &lt;style&gt;
+        .row &gt; div { background-color: rgba(121, 82, 179, 0.2); border: 1px solid #7952b3; padding: 1rem; }
+    &lt;/style&gt;
+    &lt;title&gt;Bootstrap Grid&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="container mt-5"&gt;
+        &lt;h2&gt;Equal Width Columns&lt;/h2&gt;
+        &lt;div class="row mb-4"&gt;
+            &lt;div class="col"&gt;Column 1&lt;/div&gt;
+            &lt;div class="col"&gt;Column 2&lt;/div&gt;
+            &lt;div class="col"&gt;Column 3&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;h2&gt;Different Column Widths&lt;/h2&gt;
+        &lt;div class="row mb-4"&gt;
+            &lt;div class="col-6"&gt;col-6 (half)&lt;/div&gt;
+            &lt;div class="col-3"&gt;col-3 (quarter)&lt;/div&gt;
+            &lt;div class="col-2"&gt;col-2&lt;/div&gt;
+            &lt;div class="col-1"&gt;col-1&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;h2&gt;Responsive Columns&lt;/h2&gt;
+        &lt;div class="row"&gt;
+            &lt;div class="col-sm-6 col-md-4 col-lg-3"&gt;col-sm-6 col-md-4 col-lg-3&lt;/div&gt;
+            &lt;div class="col-sm-6 col-md-4 col-lg-3"&gt;col-sm-6 col-md-4 col-lg-3&lt;/div&gt;
+            &lt;div class="col-sm-6 col-md-4 col-lg-3"&gt;col-sm-6 col-md-4 col-lg-3&lt;/div&gt;
+            &lt;div class="col-sm-6 col-md-4 col-lg-3"&gt;col-sm-6 col-md-4 col-lg-3&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+                        <button class="run-btn" onclick="runCode('editor-2', 'output-2')"><i class="fas fa-play"></i> Run Code</button>
+                        <div class="output-title"><i class="fas fa-desktop"></i> Live Preview</div>
+                        <div class="preview-container" id="output-2"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>Grid columns are placed inside <code>.row</code> which must be inside a <code>.container</code> or <code>.container-fluid</code>.</li>
+                                <li>Use <code>.col-{breakpoint}-{number}</code> to set column span at specific breakpoints (xs, sm, md, lg, xl, xxl).</li>
+                                <li>If you don't specify a number, columns automatically become equal width.</li>
+                                <li>Breakpoints: sm (â‰¥576px), md (â‰¥768px), lg (â‰¥992px), xl (â‰¥1200px), xxl (â‰¥1400px).</li>
+                                <li>Columns total should not exceed 12 in a row.</li>
+                                <li>Use offset classes like <code>offset-md-2</code> to push columns.</li>
+                            </ul>
+                        </div>
+
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-th"></i> Understanding the Grid</h3>
+                            <p>The 12â€‘column grid is the backbone of Bootstrapâ€™s responsive layouts. By combining different column classes, you can create designs that adapt seamlessly to any screen size. For example, a sidebar might take 3 columns on desktops but stack above the main content on phones.</p>
+                            <p>Behind the scenes, Bootstrap uses flexbox, so you can also use alignment utilities (<code>align-items-center</code>, <code>justify-content-between</code>) on rows to control column positioning.</p>
+                            <div class="explanation-grid">
+                                <div class="explanation-card"><h4><i class="fas fa-arrows-alt-h"></i> Gutters</h4><p>Gutters (spacing between columns) can be adjusted with <code>g-0</code>, <code>g-2</code>, etc. on the row.</p></div>
+                                <div class="explanation-card"><h4><i class="fas fa-order"></i> Reordering</h4><p>Use <code>order-{breakpoint}-{1-5}</code> to change the visual order of columns.</p></div>
+                                <div class="explanation-card"><h4><i class="fas fa-columns"></i> Nesting</h4><p>You can nest rows inside columns to create more complex layouts.</p></div>
+                            </div>
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-laptop"></i> Realâ€‘World Application</h4>
+                                <p>News websites like The Verge use Bootstrapâ€™s grid to display articles in multiâ€‘column layouts that reflow on mobile. Dashboards and admin panels rely on the grid to arrange charts and widgets consistently.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Build a responsive layout:</strong> Create a page that shows three cards sideâ€‘byâ€‘side on medium screens and stacked on mobile. Use the grid system to achieve this.</p>
+                            <div class="assignment-note"><p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 3: Typography & Utilities -->
+            <div class="course-module" id="module3" data-aos="fade-up" data-difficulty="beginner">
+                <div class="premium-badge"><i class="fas fa-crown"></i> Premium Content</div>
+                <div class="course-three">
+                    <h1>TYPOGRAPHY & UTILITIES</h1>
+                    <h3>Style text and use utility classes for quick tweaks</h3>
+                    <span class="difficulty">Beginner</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968672.png" class="module-icon" alt="Bootstrap Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 3: <span>Typography & Utility Classes</span></h1>
+                    <p>Bootstrap provides a rich set of typography styles and hundreds of utility classes for margins, padding, colors, borders, and more. You can use these utilities to fineâ€‘tune your design without writing a single line of custom CSS.</p>
+                    <p>For example, <code>mt-3</code> adds a small top margin, <code>text-center</code> centers text, and <code>bg-primary</code> applies the primary background color.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs"><div class="editor-tab active">HTML</div></div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor"><i class="fas fa-play"></i> Run</button>
+                                <button title="Reset Code" class="reset-editor"><i class="fas fa-redo"></i> Reset</button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-3" spellcheck="false">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+    &lt;title&gt;Typography & Utilities&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="container mt-5"&gt;
+        &lt;h1 class="display-1"&gt;Display 1&lt;/h1&gt;
+        &lt;h1 class="display-4"&gt;Display 4&lt;/h1&gt;
+        &lt;p class="lead"&gt;This is a lead paragraph.&lt;/p&gt;
+        
+        &lt;p&gt;You can use &lt;mark&gt;mark&lt;/mark&gt; to highlight text.&lt;/p&gt;
+        &lt;p&gt;&lt;del&gt;Deleted text&lt;/del&gt; and &lt;u&gt;underlined text&lt;/u&gt;.&lt;/p&gt;
+        
+        &lt;div class="bg-primary text-white p-3 mb-2"&gt;Primary background with padding&lt;/div&gt;
+        &lt;div class="bg-success text-white p-3 mb-2"&gt;Success background&lt;/div&gt;
+        &lt;div class="border border-danger rounded p-3 mb-2"&gt;Danger border with rounded corners&lt;/div&gt;
+        
+        &lt;p class="text-truncate" style="max-width: 250px;"&gt;
+            This text is very long and will be truncated with an ellipsis.
+        &lt;/p&gt;
+        
+        &lt;div class="d-flex justify-content-around"&gt;
+            &lt;div&gt;Flex item 1&lt;/div&gt;
+            &lt;div&gt;Flex item 2&lt;/div&gt;
+            &lt;div&gt;Flex item 3&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+                        <button class="run-btn" onclick="runCode('editor-3', 'output-3')"><i class="fas fa-play"></i> Run Code</button>
+                        <div class="output-title"><i class="fas fa-desktop"></i> Live Preview</div>
+                        <div class="preview-container" id="output-3"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li><code>.display-1</code> to <code>.display-6</code> create large, prominent headings.</li>
+                                <li><code>.lead</code> makes a paragraph stand out.</li>
+                                <li>Inline text elements: <code>mark</code>, <code>del</code>, <code>u</code>, <code>small</code>, <code>strong</code>, <code>em</code>.</li>
+                                <li>Background colors: <code>bg-primary</code>, <code>bg-success</code>, etc.</li>
+                                <li>Spacing utilities: <code>m-*</code> (margin), <code>p-*</code> (padding) with values 0â€‘5.</li>
+                                <li>Borders: <code>border</code>, <code>border-{color}</code>, <code>rounded</code>.</li>
+                                <li>Flex utilities: <code>d-flex</code>, <code>justify-content-*</code>, <code>align-items-*</code>.</li>
+                            </ul>
+                        </div>
+
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-paint-roller"></i> Utilities: The Power of Bootstrap</h3>
+                            <p>Utilities are singleâ€‘purpose classes that let you apply specific styles without writing CSS. They cover spacing, sizing, colors, borders, flexbox, display, and much more. By combining utilities, you can build complex layouts and components directly in your HTML, keeping your stylesheets minimal.</p>
+                            <div class="explanation-grid">
+                                <div class="explanation-card"><h4><i class="fas fa-arrows-alt"></i> Spacing Scale</h4><p>Bootstrap uses a scale from 0 to 5 (and auto) for margins and paddings. For example, <code>mt-3</code> equals 1rem.</p></div>
+                                <div class="explanation-card"><h4><i class="fas fa-palette"></i> Colors</h4><p>Text colors (<code>text-primary</code>), background colors (<code>bg-secondary</code>), and border colors follow the theme palette.</p></div>
+                                <div class="explanation-card"><h4><i class="fas fa-align-left"></i> Text Alignment</h4><p><code>text-start</code>, <code>text-center</code>, <code>text-end</code> and responsive versions like <code>text-md-center</code>.</p></div>
+                            </div>
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-cogs"></i> Realâ€‘World Application</h4>
+                                <p>Marketing landing pages heavily use display headings, lead text, and background utilities to create visually striking sections. Dashboards use spacing utilities to create consistent whitespace between cards.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Style a quote block:</strong> Create a section that includes a large quote, the authorâ€™s name, and a colored background with rounded corners. Use only Bootstrap utilities and typography classes.</p>
+                            <div class="assignment-note"><p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 4: Buttons & Badges -->
+            <div class="course-module" id="module4" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge"><i class="fas fa-crown"></i> Premium Content</div>
+                <div class="course-three">
+                    <h1>BUTTONS & BADGES</h1>
+                    <h3>Interactive elements and notification indicators</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968672.png" class="module-icon" alt="Bootstrap Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 4: <span>Buttons, Badges & Button Groups</span></h1>
+                    <p>Bootstrap offers a wide variety of button styles, sizes, and states. Buttons can be created with <code>&lt;button&gt;</code>, <code>&lt;a&gt;</code>, or <code>&lt;input&gt;</code> elements by adding the <code>.btn</code> class and a contextual class like <code>.btn-primary</code>. Badges are small count indicators, often used inside buttons or as standalone labels.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs"><div class="editor-tab active">HTML</div></div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor"><i class="fas fa-play"></i> Run</button>
+                                <button title="Reset Code" class="reset-editor"><i class="fas fa-redo"></i> Reset</button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-4" spellcheck="false">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+    &lt;title&gt;Buttons & Badges&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="container mt-5"&gt;
+        &lt;h2&gt;Button Styles&lt;/h2&gt;
+        &lt;button type="button" class="btn btn-primary"&gt;Primary&lt;/button&gt;
+        &lt;button type="button" class="btn btn-secondary"&gt;Secondary&lt;/button&gt;
+        &lt;button type="button" class="btn btn-success"&gt;Success&lt;/button&gt;
+        &lt;button type="button" class="btn btn-danger"&gt;Danger&lt;/button&gt;
+        &lt;button type="button" class="btn btn-warning"&gt;Warning&lt;/button&gt;
+        &lt;button type="button" class="btn btn-info"&gt;Info&lt;/button&gt;
+        &lt;button type="button" class="btn btn-light"&gt;Light&lt;/button&gt;
+        &lt;button type="button" class="btn btn-dark"&gt;Dark&lt;/button&gt;
+        &lt;button type="button" class="btn btn-link"&gt;Link&lt;/button&gt;
+
+        &lt;h2 class="mt-4"&gt;Outline Buttons&lt;/h2&gt;
+        &lt;button type="button" class="btn btn-outline-primary"&gt;Primary&lt;/button&gt;
+        &lt;button type="button" class="btn btn-outline-secondary"&gt;Secondary&lt;/button&gt;
+
+        &lt;h2 class="mt-4"&gt;Sizes&lt;/h2&gt;
+        &lt;button type="button" class="btn btn-primary btn-lg"&gt;Large&lt;/button&gt;
+        &lt;button type="button" class="btn btn-primary"&gt;Default&lt;/button&gt;
+        &lt;button type="button" class="btn btn-primary btn-sm"&gt;Small&lt;/button&gt;
+
+        &lt;h2 class="mt-4"&gt;Badges&lt;/h2&gt;
+        &lt;h1&gt;Example heading &lt;span class="badge bg-secondary"&gt;New&lt;/span&gt;&lt;/h1&gt;
+        &lt;button type="button" class="btn btn-primary"&gt;
+            Notifications &lt;span class="badge bg-danger"&gt;4&lt;/span&gt;
+        &lt;/button&gt;
+        &lt;span class="badge rounded-pill bg-success"&gt;Success pill&lt;/span&gt;
+
+        &lt;h2 class="mt-4"&gt;Button Groups&lt;/h2&gt;
+        &lt;div class="btn-group" role="group" aria-label="Basic example"&gt;
+            &lt;button type="button" class="btn btn-outline-primary"&gt;Left&lt;/button&gt;
+            &lt;button type="button" class="btn btn-outline-primary"&gt;Middle&lt;/button&gt;
+            &lt;button type="button" class="btn btn-outline-primary"&gt;Right&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+                        <button class="run-btn" onclick="runCode('editor-4', 'output-4')"><i class="fas fa-play"></i> Run Code</button>
+                        <div class="output-title"><i class="fas fa-desktop"></i> Live Preview</div>
+                        <div class="preview-container" id="output-4"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>Buttons use <code>.btn</code> plus a contextual class (<code>.btn-primary</code>, <code>.btn-success</code>, etc.).</li>
+                                <li>Outline buttons replace the background with a border (<code>.btn-outline-*</code>).</li>
+                                <li>Button sizes: <code>.btn-lg</code>, <code>.btn-sm</code>.</li>
+                                <li>Badges can be used with <code>.badge</code> and <code>.bg-*</code> for colors; <code>.rounded-pill</code> makes them pills.</li>
+                                <li>Button groups group multiple buttons together on a single line.</li>
+                            </ul>
+                        </div>
+
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-hand-pointer"></i> Interactive Elements</h3>
+                            <p>Buttons are the primary way users interact with your site. Bootstrap ensures they are accessible, consistent, and easy to style. Badges provide subtle visual cues for counts or statuses. Combined, they form the building blocks of many UI patterns.</p>
+                            <div class="explanation-grid">
+                                <div class="explanation-card"><h4><i class="fas fa-check-circle"></i> Disabled State</h4><p>Add the <code>disabled</code> attribute to disable a button, and <code>.disabled</code> class for nonâ€‘functional styling.</p></div>
+                                <div class="explanation-card"><h4><i class="fas fa-toggle-on"></i> Toggle Buttons</h4><p>Use <code>data-bs-toggle="button"</code> to create toggle buttons.</p></div>
+                                <div class="explanation-card"><h4><i class="fas fa-layer-group"></i> Badge Positioning</h4><p>Badges can be used inside buttons or as standalone counters.</p></div>
+                            </div>
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-shopping-cart"></i> Realâ€‘World Application</h4>
+                                <p>Eâ€‘commerce sites use badges on cart icons to show item count. Dashboards use button groups for toggling views (e.g., day/week/month).</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Build a product card:</strong> Create a card that includes a product name, price, and an "Add to Cart" button with a badge showing "Sale". Use a button group for size options (Small, Medium, Large).</p>
+                            <div class="assignment-note"><p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 5: Forms & Input Groups -->
+            <div class="course-module" id="module5" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge"><i class="fas fa-crown"></i> Premium Content</div>
+                <div class="course-three">
+                    <h1>FORMS & INPUT GROUPS</h1>
+                    <h3>Styled forms, validation, and input addâ€‘ons</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968672.png" class="module-icon" alt="Bootstrap Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 5: <span>Forms & Input Groups</span></h1>
+                    <p>Bootstrap provides beautifully styled form controls, layout options, and validation feedback. From basic text inputs to custom selects, checkboxes, and file inputs, everything is designed to be consistent and responsive. Input groups let you attach text or buttons before or after inputs.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs"><div class="editor-tab active">HTML</div></div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor"><i class="fas fa-play"></i> Run</button>
+                                <button title="Reset Code" class="reset-editor"><i class="fas fa-redo"></i> Reset</button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-5" spellcheck="false">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+    &lt;title&gt;Bootstrap Forms&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="container mt-5"&gt;
+        &lt;form&gt;
+            &lt;div class="mb-3"&gt;
+                &lt;label for="exampleInputEmail1" class="form-label"&gt;Email address&lt;/label&gt;
+                &lt;input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"&gt;
+                &lt;div id="emailHelp" class="form-text"&gt;We'll never share your email.&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="mb-3"&gt;
+                &lt;label for="exampleInputPassword1" class="form-label"&gt;Password&lt;/label&gt;
+                &lt;input type="password" class="form-control" id="exampleInputPassword1"&gt;
+            &lt;/div&gt;
+            &lt;div class="mb-3 form-check"&gt;
+                &lt;input type="checkbox" class="form-check-input" id="exampleCheck1"&gt;
+                &lt;label class="form-check-label" for="exampleCheck1"&gt;Check me out&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;button type="submit" class="btn btn-primary"&gt;Submit&lt;/button&gt;
+        &lt;/form&gt;
+
+        &lt;hr&gt;
+        &lt;h2&gt;Input Groups&lt;/h2&gt;
+        &lt;div class="input-group mb-3"&gt;
+            &lt;span class="input-group-text" id="basic-addon1"&gt;@&lt;/span&gt;
+            &lt;input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1"&gt;
+        &lt;/div&gt;
+
+        &lt;div class="input-group mb-3"&gt;
+            &lt;input type="text" class="form-control" placeholder="Amount"&gt;
+            &lt;span class="input-group-text"&gt;.00&lt;/span&gt;
+        &lt;/div&gt;
+
+        &lt;h2&gt;Validation&lt;/h2&gt;
+        &lt;form class="row g-3 needs-validation" novalidate&gt;
+            &lt;div class="col-md-4"&gt;
+                &lt;label for="validationCustom01" class="form-label"&gt;First name&lt;/label&gt;
+                &lt;input type="text" class="form-control" id="validationCustom01" value="Mark" required&gt;
+                &lt;div class="valid-feedback"&gt;Looks good!&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="col-md-4"&gt;
+                &lt;label for="validationCustom02" class="form-label"&gt;Last name&lt;/label&gt;
+                &lt;input type="text" class="form-control" id="validationCustom02" value="Otto" required&gt;
+                &lt;div class="valid-feedback"&gt;Looks good!&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="col-12"&gt;
+                &lt;button class="btn btn-primary" type="submit"&gt;Submit form&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+                        <button class="run-btn" onclick="runCode('editor-5', 'output-5')"><i class="fas fa-play"></i> Run Code</button>
+                        <div class="output-title"><i class="fas fa-desktop"></i> Live Preview</div>
+                        <div class="preview-container" id="output-5"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>Form controls use <code>.form-control</code>, <code>.form-select</code>, <code>.form-check-input</code>, etc.</li>
+                                <li>Labels should always use <code>.form-label</code> for proper spacing.</li>
+                                <li>Input groups attach addâ€‘ons using <code>.input-group</code> and <code>.input-group-text</code>.</li>
+                                <li>Bootstrap 5 includes builtâ€‘in validation styles (<code>.valid-feedback</code>, <code>.invalid-feedback</code>).</li>
+                                <li>Use <code>novalidate</code> on the form to disable browser validation and use Bootstrapâ€™s.</li>
+                            </ul>
+                        </div>
+
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-edit"></i> Form Design</h3>
+                            <p>Forms are essential for user input. Bootstrapâ€™s form styles are clean, accessible, and fully responsive. The grid can be used to create complex form layouts. Validation feedback provides immediate guidance to users.</p>
+                            <div class="explanation-grid">
+                                <div class="explanation-card"><h4><i class="fas fa-sliders-h"></i> Range Inputs</h4><p>Use <code>.form-range</code> to style range sliders.</p></div>
+                                <div class="explanation-card"><h4><i class="fas fa-file-upload"></i> File Inputs</h4><p>File inputs are styled with <code>.form-control</code> and work across browsers.</p></div>
+                                <div class="explanation-card"><h4><i class="fas fa-check-double"></i> Floating Labels</h4><p>Add <code>.form-floating</code> for floating labels inside inputs.</p></div>
+                            </div>
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-sign-in-alt"></i> Realâ€‘World Application</h4>
+                                <p>Login forms, signâ€‘up pages, and checkout processes all rely on Bootstrapâ€™s form styles. Input groups are commonly used for currency symbols, email prefixes, or search buttons.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Create a signâ€‘up form:</strong> Build a registration form with name, email, password, and a terms checkbox. Include validation feedback and an input group for a username (e.g., @username).</p>
+                            <div class="assignment-note"><p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 6: Navigation & Navbars -->
+            <div class="course-module" id="module6" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge"><i class="fas fa-crown"></i> Premium Content</div>
+                <div class="course-three">
+                    <h1>NAVIGATION & NAVBARS</h1>
+                    <h3>Responsive navigation headers and menus</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968672.png" class="module-icon" alt="Bootstrap Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 6: <span>Navbars & Navigation Components</span></h1>
+                    <p>Bootstrapâ€™s navbar is a responsive navigation header that can include branding, links, forms, and dropdowns. It collapses on mobile and toggles with a button. You can also create simpler navigation components like tabs and pills.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs"><div class="editor-tab active">HTML</div></div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor"><i class="fas fa-play"></i> Run</button>
+                                <button title="Reset Code" class="reset-editor"><i class="fas fa-redo"></i> Reset</button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-6" spellcheck="false">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+    &lt;title&gt;Navbar Demo&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;nav class="navbar navbar-expand-lg navbar-dark bg-primary"&gt;
+        &lt;div class="container-fluid"&gt;
+            &lt;a class="navbar-brand" href="#"&gt;SkillMynte&lt;/a&gt;
+            &lt;button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"&gt;
+                &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+            &lt;/button&gt;
+            &lt;div class="collapse navbar-collapse" id="navbarNav"&gt;
+                &lt;ul class="navbar-nav ms-auto"&gt;
+                    &lt;li class="nav-item"&gt;
+                        &lt;a class="nav-link active" aria-current="page" href="#"&gt;Home&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class="nav-item"&gt;
+                        &lt;a class="nav-link" href="#"&gt;Courses&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class="nav-item dropdown"&gt;
+                        &lt;a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"&gt;
+                            More
+                        &lt;/a&gt;
+                        &lt;ul class="dropdown-menu" aria-labelledby="navbarDropdown"&gt;
+                            &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/nav&gt;
+
+    &lt;div class="container mt-5"&gt;
+        &lt;h2&gt;Tabs&lt;/h2&gt;
+        &lt;ul class="nav nav-tabs" id="myTab" role="tablist"&gt;
+            &lt;li class="nav-item" role="presentation"&gt;
+                &lt;button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab"&gt;Home&lt;/button&gt;
+            &lt;/li&gt;
+            &lt;li class="nav-item" role="presentation"&gt;
+                &lt;button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab"&gt;Profile&lt;/button&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;div class="tab-content" id="myTabContent"&gt;
+            &lt;div class="tab-pane fade show active" id="home" role="tabpanel"&gt;Home content&lt;/div&gt;
+            &lt;div class="tab-pane fade" id="profile" role="tabpanel"&gt;Profile content&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+                        <button class="run-btn" onclick="runCode('editor-6', 'output-6')"><i class="fas fa-play"></i> Run Code</button>
+                        <div class="output-title"><i class="fas fa-desktop"></i> Live Preview</div>
+                        <div class="preview-container" id="output-6"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>Navbars require a toggler for mobile (<code>.navbar-toggler</code>) and collapse wrapper (<code>.collapse.navbar-collapse</code>).</li>
+                                <li>Use <code>.navbar-expand{-sm|-md|-lg...}</code> to define when the navbar expands.</li>
+                                <li>Dropdowns require the Bootstrap JavaScript bundle.</li>
+                                <li>Tabs and pills (<code>.nav-pills</code>) can be used for tabbed interfaces.</li>
+                            </ul>
+                        </div>
+
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-bars"></i> Navigation Patterns</h3>
+                            <p>Navigation is critical for usability. Bootstrapâ€™s navbar handles branding, links, and dropdowns while remaining accessible and mobileâ€‘friendly. Tabs and pills organize content without leaving the page.</p>
+                            <div class="explanation-grid">
+                                <div class="explanation-card"><h4><i class="fas fa-search"></i> Search Forms</h4><p>You can add forms directly inside the navbar using <code>.d-flex</code>.</p></div>
+                                <div class="explanation-card"><h4><i class="fas fa-user"></i> User Menus</h4><p>Dropdowns in navbars are perfect for user account menus.</p></div>
+                                <div class="explanation-card"><h4><i class="fas fa-breadcrumb"></i> Breadcrumbs</h4><p>Use <code>.breadcrumb</code> for secondary navigation.</p></div>
+                            </div>
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-globe"></i> Realâ€‘World Application</h4>
+                                <p>Every multiâ€‘page site uses a navbar. Admin dashboards often use tabs to switch between sections. Bootstrapâ€™s components make these patterns easy to implement.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Build a responsive navbar:</strong> Create a navbar with a brand, three links, and a dropdown. Ensure it collapses correctly on mobile and includes a toggler.</p>
+                            <div class="assignment-note"><p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 7: Cards & Media Objects -->
+            <div class="course-module" id="module7" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge"><i class="fas fa-crown"></i> Premium Content</div>
+                <div class="course-three">
+                    <h1>CARDS & MEDIA OBJECTS</h1>
+                    <h3>Flexible content containers with images, text, and links</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968672.png" class="module-icon" alt="Bootstrap Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 7: <span>Cards & Media Objects</span></h1>
+                    <p>Cards are flexible, extensible content containers. They can include headers, footers, images, and a wide variety of content. Cards replace the older â€œmedia objectâ€ and are the goâ€‘to component for displaying blog posts, products, profiles, and more.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs"><div class="editor-tab active">HTML</div></div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor"><i class="fas fa-play"></i> Run</button>
+                                <button title="Reset Code" class="reset-editor"><i class="fas fa-redo"></i> Reset</button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-7" spellcheck="false">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+    &lt;title&gt;Bootstrap Cards&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="container mt-5"&gt;
+        &lt;div class="row"&gt;
+            &lt;div class="col-md-4"&gt;
+                &lt;div class="card"&gt;
+                    &lt;img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Placeholder"&gt;
+                    &lt;div class="card-body"&gt;
+                        &lt;h5 class="card-title"&gt;Card title&lt;/h5&gt;
+                        &lt;p class="card-text"&gt;Some quick example text to build on the card title.&lt;/p&gt;
+                        &lt;a href="#" class="btn btn-primary"&gt;Go somewhere&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="col-md-4"&gt;
+                &lt;div class="card text-white bg-primary mb-3"&gt;
+                    &lt;div class="card-header"&gt;Header&lt;/div&gt;
+                    &lt;div class="card-body"&gt;
+                        &lt;h5 class="card-title"&gt;Primary card title&lt;/h5&gt;
+                        &lt;p class="card-text"&gt;Some example text.&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="col-md-4"&gt;
+                &lt;div class="card border-success mb-3"&gt;
+                    &lt;div class="card-body"&gt;
+                        &lt;h5 class="card-title text-success"&gt;Success outline card&lt;/h5&gt;
+                        &lt;p class="card-text"&gt;This card has a border and text color.&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;h2 class="mt-4"&gt;Horizontal Card&lt;/h2&gt;
+        &lt;div class="card mb-3" style="max-width: 540px;"&gt;
+            &lt;div class="row g-0"&gt;
+                &lt;div class="col-md-4"&gt;
+                    &lt;img src="https://via.placeholder.com/200x200" class="img-fluid rounded-start" alt="..."&gt;
+                &lt;/div&gt;
+                &lt;div class="col-md-8"&gt;
+                    &lt;div class="card-body"&gt;
+                        &lt;h5 class="card-title"&gt;Horizontal card&lt;/h5&gt;
+                        &lt;p class="card-text"&gt;This is a wider card with supporting text.&lt;/p&gt;
+                        &lt;p class="card-text"&gt;&lt;small class="text-muted"&gt;Last updated 3 mins ago&lt;/small&gt;&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+                        <button class="run-btn" onclick="runCode('editor-7', 'output-7')"><i class="fas fa-play"></i> Run Code</button>
+                        <div class="output-title"><i class="fas fa-desktop"></i> Live Preview</div>
+                        <div class="preview-container" id="output-7"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>Cards are built with <code>.card</code> and can contain <code>.card-header</code>, <code>.card-body</code>, <code>.card-footer</code>.</li>
+                                <li><code>.card-img-top</code> places an image at the top.</li>
+                                <li>Use <code>.bg-*</code> and <code>.border-*</code> to change card colors.</li>
+                                <li>Cards can be arranged using the grid system.</li>
+                                <li>Horizontal cards use the grid inside the card.</li>
+                            </ul>
+                        </div>
+
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-id-card"></i> Versatile Containers</h3>
+                            <p>Cards are one of Bootstrapâ€™s most versatile components. They can be used for everything from blog posts to pricing tables to user profiles. Their consistent structure makes them easy to style and extend.</p>
+                            <div class="explanation-grid">
+                                <div class="explanation-card"><h4><i class="fas fa-layer-group"></i> Card Groups</h4><p>Use <code>.card-group</code> to display cards as a single attached element.</p></div>
+                                <div class="explanation-card"><h4><i class="fas fa-columns"></i> Masonry</h4><p>Combine cards with a masonry library for Pinterestâ€‘style layouts.</p></div>
+                                <div class="explanation-card"><h4><i class="fas fa-images"></i> Image Overlays</h4><p>Place text over an image with <code>.card-img-overlay</code>.</p></div>
+                            </div>
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-store"></i> Realâ€‘World Application</h4>
+                                <p>Product listings on eâ€‘commerce sites, user profiles on social networks, and dashboard widgets are all commonly implemented with cards.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Create a pricing table:</strong> Build three cards sideâ€‘byâ€‘side showing different pricing plans. Each card should have a header, price, features list, and a signâ€‘up button.</p>
+                            <div class="assignment-note"><p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 8: Modals & Offcanvas -->
+            <div class="course-module" id="module8" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge"><i class="fas fa-crown"></i> Premium Content</div>
+                <div class="course-three">
+                    <h1>MODALS & OFFCANVAS</h1>
+                    <h3>Dialog boxes and offâ€‘canvas side panels</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968672.png" class="module-icon" alt="Bootstrap Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 8: <span>Modals and Offcanvas</span></h1>
+                    <p>Modals are dialog boxes that appear on top of the page, used for lightboxes, user notifications, or custom content. Offcanvas is a sidebar that slides in from the edge of the screen, great for navigation or filters.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs"><div class="editor-tab active">HTML</div></div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor"><i class="fas fa-play"></i> Run</button>
+                                <button title="Reset Code" class="reset-editor"><i class="fas fa-redo"></i> Reset</button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-8" spellcheck="false">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+    &lt;title&gt;Modals & Offcanvas&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="container mt-5"&gt;
+        &lt;!-- Button trigger modal --&gt;
+        &lt;button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"&gt;
+            Launch demo modal
+        &lt;/button&gt;
+
+        &lt;!-- Modal --&gt;
+        &lt;div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"&gt;
+            &lt;div class="modal-dialog"&gt;
+                &lt;div class="modal-content"&gt;
+                    &lt;div class="modal-header"&gt;
+                        &lt;h5 class="modal-title" id="exampleModalLabel"&gt;Modal title&lt;/h5&gt;
+                        &lt;button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"&gt;&lt;/button&gt;
+                    &lt;/div&gt;
+                    &lt;div class="modal-body"&gt;
+                        &lt;p&gt;Modal body text goes here.&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class="modal-footer"&gt;
+                        &lt;button type="button" class="btn btn-secondary" data-bs-dismiss="modal"&gt;Close&lt;/button&gt;
+                        &lt;button type="button" class="btn btn-primary"&gt;Save changes&lt;/button&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Offcanvas trigger --&gt;
+        &lt;button class="btn btn-primary mt-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample"&gt;
+            Launch offcanvas
+        &lt;/button&gt;
+
+        &lt;div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel"&gt;
+            &lt;div class="offcanvas-header"&gt;
+                &lt;h5 class="offcanvas-title" id="offcanvasExampleLabel"&gt;Offcanvas&lt;/h5&gt;
+                &lt;button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"&gt;&lt;/button&gt;
+            &lt;/div&gt;
+            &lt;div class="offcanvas-body"&gt;
+                Content for the offcanvas panel.
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+                        <button class="run-btn" onclick="runCode('editor-8', 'output-8')"><i class="fas fa-play"></i> Run Code</button>
+                        <div class="output-title"><i class="fas fa-desktop"></i> Live Preview</div>
+                        <div class="preview-container" id="output-8"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>Modals require the Bootstrap JavaScript bundle.</li>
+                                <li>Use <code>.modal.fade</code> for animation, and <code>data-bs-toggle="modal"</code> to trigger.</li>
+                                <li>Offcanvas uses <code>.offcanvas</code> and similar data attributes.</li>
+                                <li>Both components can be positioned (top, bottom, start, end).</li>
+                            </ul>
+                        </div>
+
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-window-restore"></i> Overlays & Panels</h3>
+                            <p>Modals focus user attention on a specific task, while offcanvas provides extra content without leaving the page. Both are fully customizable and accessible.</p>
+                            <div class="explanation-grid">
+                                <div class="explanation-card"><h4><i class="fas fa-arrows-alt"></i> Sizing</h4><p>Add <code>.modal-sm</code>, <code>.modal-lg</code>, <code>.modal-xl</code> to modal dialogs.</p></div>
+                                <div class="explanation-card"><h4><i class="fas fa-backdrop"></i> Backdrop</h4><p>Control backdrop behavior with <code>data-bs-backdrop</code>.</p></div>
+                                <div class="explanation-card"><h4><i class="fas fa-sliders-h"></i> Offcanvas Placement</h4><p>Use <code>.offcanvas-start</code>, <code>.offcanvas-end</code>, <code>.offcanvas-top</code>, <code>.offcanvas-bottom</code>.</p></div>
+                            </div>
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-cog"></i> Realâ€‘World Application</h4>
+                                <p>Modals are used for login forms, image galleries, and confirmation dialogs. Offcanvas is popular for mobile menus and filter panels.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Create a settings panel:</strong> Build a button that opens an offcanvas with a few form controls (e.g., theme selection, notification toggle). Also add a modal that confirms an action.</p>
+                            <div class="assignment-note"><p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 9: Carousels & Collapse -->
+            <div class="course-module" id="module9" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge"><i class="fas fa-crown"></i> Premium Content</div>
+                <div class="course-three">
+                    <h1>CAROUSELS & COLLAPSE</h1>
+                    <h3>Slideshows and expandable content sections</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968672.png" class="module-icon" alt="Bootstrap Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 9: <span>Carousels and Collapse</span></h1>
+                    <p>Carousels cycle through a series of content, often images, using a slideshow. Collapse allows you to show and hide content with a click, useful for FAQs or accordions.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs"><div class="editor-tab active">HTML</div></div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor"><i class="fas fa-play"></i> Run</button>
+                                <button title="Reset Code" class="reset-editor"><i class="fas fa-redo"></i> Reset</button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-9" spellcheck="false">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+    &lt;title&gt;Carousel & Collapse&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="container mt-5"&gt;
+        &lt;!-- Carousel --&gt;
+        &lt;div id="carouselExample" class="carousel slide" data-bs-ride="carousel"&gt;
+            &lt;div class="carousel-inner"&gt;
+                &lt;div class="carousel-item active"&gt;
+                    &lt;img src="https://via.placeholder.com/800x400?text=First+slide" class="d-block w-100" alt="..."&gt;
+                &lt;/div&gt;
+                &lt;div class="carousel-item"&gt;
+                    &lt;img src="https://via.placeholder.com/800x400?text=Second+slide" class="d-block w-100" alt="..."&gt;
+                &lt;/div&gt;
+                &lt;div class="carousel-item"&gt;
+                    &lt;img src="https://via.placeholder.com/800x400?text=Third+slide" class="d-block w-100" alt="..."&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev"&gt;
+                &lt;span class="carousel-control-prev-icon" aria-hidden="true"&gt;&lt;/span&gt;
+                &lt;span class="visually-hidden"&gt;Previous&lt;/span&gt;
+            &lt;/button&gt;
+            &lt;button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next"&gt;
+                &lt;span class="carousel-control-next-icon" aria-hidden="true"&gt;&lt;/span&gt;
+                &lt;span class="visually-hidden"&gt;Next&lt;/span&gt;
+            &lt;/button&gt;
+        &lt;/div&gt;
+
+        &lt;h2 class="mt-5"&gt;Accordion (Collapse)&lt;/h2&gt;
+        &lt;div class="accordion" id="accordionExample"&gt;
+            &lt;div class="accordion-item"&gt;
+                &lt;h2 class="accordion-header" id="headingOne"&gt;
+                    &lt;button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"&gt;
+                        Accordion Item #1
+                    &lt;/button&gt;
+                &lt;/h2&gt;
+                &lt;div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample"&gt;
+                    &lt;div class="accordion-body"&gt;Content for item 1.&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="accordion-item"&gt;
+                &lt;h2 class="accordion-header" id="headingTwo"&gt;
+                    &lt;button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"&gt;
+                        Accordion Item #2
+                    &lt;/button&gt;
+                &lt;/h2&gt;
+                &lt;div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample"&gt;
+                    &lt;div class="accordion-body"&gt;Content for item 2.&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+                        <button class="run-btn" onclick="runCode('editor-9', 'output-9')"><i class="fas fa-play"></i> Run Code</button>
+                        <div class="output-title"><i class="fas fa-desktop"></i> Live Preview</div>
+                        <div class="preview-container" id="output-9"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>Carousels require <code>.carousel</code> and <code>.carousel-item</code>.</li>
+                                <li>Add controls and indicators for navigation.</li>
+                                <li>Accordions use <code>.accordion</code> and <code>.accordion-collapse</code>.</li>
+                                <li>Collapse can also be used independently with <code>.collapse</code> and a button with <code>data-bs-toggle="collapse"</code>.</li>
+                            </ul>
+                        </div>
+
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-images"></i> Dynamic Content</h3>
+                            <p>Carousels are perfect for image galleries or featured content. Collapse helps manage space by hiding content until needed, often used in FAQs or stepâ€‘byâ€‘step guides.</p>
+                            <div class="explanation-grid">
+                                <div class="explanation-card"><h4><i class="fas fa-circle"></i> Indicators</h4><p>Add <code>.carousel-indicators</code> for navigation dots.</p></div>
+                                <div class="explanation-card"><h4><i class="fas fa-clock"></i> Autoâ€‘play</h4><p>Use <code>data-bs-ride="carousel"</code> for automatic cycling.</p></div>
+                                <div class="explanation-card"><h4><i class="fas fa-plus-circle"></i> Custom Toggle</h4><p>Any element can toggle collapse with <code>data-bs-target</code>.</p></div>
+                            </div>
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-home"></i> Realâ€‘World Application</h4>
+                                <p>Homepages often feature a hero carousel. FAQ pages use accordions to keep the interface clean.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Build an FAQ accordion:</strong> Create an accordion with at least three items. Then add a simple carousel with three images.</p>
+                            <div class="assignment-note"><p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 10: Advanced Bootstrap -->
+            <div class="course-module" id="module10" data-aos="fade-up" data-difficulty="advanced">
+                <div class="premium-badge"><i class="fas fa-crown"></i> Premium Content</div>
+                <div class="course-three">
+                    <h1>ADVANCED BOOTSTRAP</h1>
+                    <h3>Customization, theming, and Sass</h3>
+                    <span class="difficulty">Advanced</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968672.png" class="module-icon" alt="Bootstrap Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 10: <span>Advanced Bootstrap Techniques</span></h1>
+                    <p>Bootstrap can be customized to match your brandâ€™s look and feel. By using Sass, you can override variables, include only the components you need, and build a custom theme. This module covers advanced usage, including utility API, RTL, and performance optimization.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs"><div class="editor-tab active">HTML</div></div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor"><i class="fas fa-play"></i> Run</button>
+                                <button title="Reset Code" class="reset-editor"><i class="fas fa-redo"></i> Reset</button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-10" spellcheck="false">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;!-- Custom Bootstrap theme (simulated via overrides) --&gt;
+    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+    &lt;style&gt;
+        /* Simulating custom Sass variables */
+        :root {
+            --bs-primary: #ff6b35;
+            --bs-primary-rgb: 255, 107, 53;
+        }
+        .btn-primary {
+            background-color: var(--bs-primary);
+            border-color: var(--bs-primary);
+        }
+        .text-primary { color: var(--bs-primary) !important; }
+        .bg-primary { background-color: var(--bs-primary) !important; }
+    &lt;/style&gt;
+    &lt;title&gt;Advanced Bootstrap&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="container mt-5"&gt;
+        &lt;h1 class="text-primary"&gt;Custom Theming&lt;/h1&gt;
+        &lt;p&gt;This primary color is changed to orange (#ff6b35) by overriding CSS variables. In a real project, you'd compile Sass.&lt;/p&gt;
+        &lt;button class="btn btn-primary"&gt;Custom Primary Button&lt;/button&gt;
+
+        &lt;h2 class="mt-4"&gt;RTL Support&lt;/h2&gt;
+        &lt;p&gt;Bootstrap 5 includes builtâ€‘in RTL. Add <code>dir="rtl"</code> to the &lt;html&gt; tag and use the RTL version of the CSS.&lt;/p&gt;
+
+        &lt;h2&gt;Utility API&lt;/h2&gt;
+        &lt;p&gt;You can generate custom utilities via Sass, e.g., <code>.mt-6</code> for larger margins.&lt;/p&gt;
+        &lt;div class="bg-info text-white p-4"&gt;This uses default utilities.&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+                        <button class="run-btn" onclick="runCode('editor-10', 'output-10')"><i class="fas fa-play"></i> Run Code</button>
+                        <div class="output-title"><i class="fas fa-desktop"></i> Live Preview</div>
+                        <div class="preview-container" id="output-10"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>Bootstrap is built with Sass, making it highly customizable.</li>
+                                <li>Override variables like <code>$primary</code> before compiling.</li>
+                                <li>Use the Utility API to generate new utility classes.</li>
+                                <li>Bootstrap supports RTL (rightâ€‘toâ€‘left) languages.</li>
+                                <li>You can also use Bootstrapâ€™s source files to include only the components you need.</li>
+                            </ul>
+                        </div>
+
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-cogs"></i> Taking Bootstrap Further</h3>
+                            <p>Advanced Bootstrap involves moving beyond the preâ€‘compiled CSS. By integrating Bootstrap into your build process (e.g., with npm and Sass), you can create a unique design while retaining the frameworkâ€™s reliability.</p>
+                            <div class="explanation-grid">
+                                <div class="explanation-card"><h4><i class="fas fa-paint-brush"></i> Theming</h4><p>Change colors, spacing, fonts, and more by editing Sass variables.</p></div>
+                                <div class="explanation-card"><h4><i class="fas fa-cogs"></i> Optimized Builds</h4><p>Include only the components you use to reduce file size.</p></div>
+                                <div class="explanation-card"><h4><i class="fas fa-globe"></i> RTL</h4><p>Use the RTL version of Bootstrap for Arabic, Hebrew, etc.</p></div>
+                            </div>
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-building"></i> Realâ€‘World Application</h4>
+                                <p>Large companies often create their own design systems on top of Bootstrap by customizing variables and extending components. For example, a bank might use a custom theme with their brand colors while still leveraging Bootstrapâ€™s grid and components.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Create a custom theme:</strong> Download Bootstrap Sass (or simulate via overrides) and change the primary color to your favorite color. Build a small page that demonstrates the new theme on buttons and backgrounds.</p>
+                            <div class="assignment-note"><p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Practice Playground -->
+            <div class="course-module" id="playground" data-aos="fade-up">
+                <div class="course-three">
+                    <h1>PRACTICE PLAYGROUND</h1>
+                    <h3>Experiment with Bootstrap components</h3>
+                    <i class="fab fa-bootstrap course-icon" style="color: var(--primary);"></i>
+                </div>
+                <div class="course-one">
+                    <h1>Your Coding Playground: <span>Try Your Own Bootstrap</span></h1>
+                    <p>Use this space to experiment with everything you've learned. Mix and match components, try the grid, and see your results live!</p>
+                    
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs"><div class="editor-tab active">HTML</div></div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor"><i class="fas fa-play"></i> Run</button>
+                                <button title="Reset Code" class="reset-editor"><i class="fas fa-redo"></i> Reset</button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="playground-editor" spellcheck="false">&lt;!-- Your Bootstrap playground --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+    &lt;title&gt;Bootstrap Playground&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="container mt-5"&gt;
+        &lt;div class="alert alert-primary" role="alert"&gt;
+            This is a primary alertâ€”play with it!
+        &lt;/div&gt;
+        
+        &lt;div class="row"&gt;
+            &lt;div class="col-md-6"&gt;
+                &lt;div class="card"&gt;
+                    &lt;div class="card-body"&gt;
+                        &lt;h5 class="card-title"&gt;Left column&lt;/h5&gt;
+                        &lt;p class="card-text"&gt;Try adding a button or a badge.&lt;/p&gt;
+                        &lt;span class="badge bg-success"&gt;New&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="col-md-6"&gt;
+                &lt;div class="card"&gt;
+                    &lt;div class="card-body"&gt;
+                        &lt;h5 class="card-title"&gt;Right column&lt;/h5&gt;
+                        &lt;button class="btn btn-outline-primary"&gt;Click me&lt;/button&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+                        <button class="run-btn" onclick="runCode('playground-editor', 'playground-output')"><i class="fas fa-play"></i> Run Code</button>
+                        <div class="output-title"><i class="fas fa-desktop"></i> Live Preview</div>
+                        <div class="preview-container" id="playground-output"></div>
+                    </div>
+                    
+                    <div class="course-five">
+                        <h3>Challenge Exercises:</h3>
+                        <ol>
+                            <li>Recreate a pricing table using cards and a grid.</li>
+                            <li>Build a responsive navbar with a dropdown.</li>
+                            <li>Create a form with validation and an input group.</li>
+                            <li>Design a modal that opens when a button is clicked.</li>
+                            <li>Combine an accordion and a carousel on one page.</li>
+                        </ol>
+                        
+                        <h3>Tips:</h3>
+                        <ul>
+                            <li>Use the browser's developer tools to inspect Bootstrap classes.</li>
+                            <li>Refer to the official Bootstrap documentation for component options.</li>
+                            <li>Experiment with utility classes to adjust spacing and colors.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Premium Subscription CTA -->
+            <div class="premium-subscription" id="premium-subscription" data-aos="fade-up">
+                <h2>Unlock Premium SkillMynte Content</h2>
+                <p>Upgrade to SkillMynte Pro for exclusive courses, advanced projects, and personalized learning paths</p>
+                
+                <div class="premium-features">
+                    <div class="premium-feature"><i class="fas fa-gem"></i><h3>Premium Courses</h3><p>Access our entire library of advanced courses and exclusive content</p></div>
+                    <div class="premium-feature"><i class="fas fa-trophy"></i><h3>Certification</h3><p>Earn industry-recognized certificates to showcase your skills</p></div>
+                    <div class="premium-feature"><i class="fas fa-user-graduate"></i><h3>Mentorship</h3><p>Get personalized guidance from industry experts</p></div>
+                </div>
+                
+                <div class="pricing-options">
+                    <div class="pricing-option">
+                        <h3>Monthly</h3><div class="price">₦3,500<span>/month</span></div>
+                        <ul class="pricing-features"><li><i class="fas fa-check"></i> All Premium Courses</li><li><i class="fas fa-check"></i> Practice Projects</li><li><i class="fas fa-check"></i> Community Access</li><li><i class="fas fa-check"></i> Certificates</li><li><i class="fas fa-check"></i> personal AI inbuilt</li></ul>
+                        <a href="premium courses.html"><button class="pricing-btn">Get Started</button></a>
+                    </div>
+                    <div class="pricing-option" style="border-color: var(--white); transform: scale(1.05);">
+                        <h3>Annual <span style="background: var(--white); color: #2962FF; padding: 0.2rem 0.5rem; border-radius: 20px; font-size: 0.8rem; margin-left: 0.5rem;">Best Value</span></h3>
+                        <div class="price">₦37,000<span>/year</span></div>
+                        <ul class="pricing-features"><li><i class="fas fa-check"></i> All Premium Courses</li><li><i class="fas fa-check"></i> Practice Projects</li><li><i class="fas fa-check"></i> Community Access</li><li><i class="fas fa-check"></i> Certificates</li><li><i class="fas fa-check"></i> personal AI inbuilt</li></ul>
+                        <a href="premium courses.html"><button class="pricing-btn">Get Started</button></a>
+                    </div>
+                    <div class="pricing-option">
+                        <h3>Lifetime</h3><div class="price">₦200,000<span>/once</span></div>
+                        <ul class="pricing-features"><li><i class="fas fa-check"></i> All Premium Courses</li><li><i class="fas fa-check"></i> Practice Projects</li><li><i class="fas fa-check"></i> Community Access</li><li><i class="fas fa-check"></i> Certificates</li><li><i class="fas fa-check"></i> personal AI inbuilt</li></ul>
+                        <a href="premium courses.html"><button class="pricing-btn">Get Started</button></a>
+                    </div>
+                </div>
+                
+                <button class="premium-cta-btn"><i class="fas fa-rocket"></i> Upgrade to SkillMynte Pro</button>
+            </div>
+            
+            <!-- Footer -->
+            <footer>
+                <div class="footer-content">
+                    <div class="footer-column"><h3>About SkillMynte</h3><p>SkillMynte is a premium learning platform dedicated to helping developers of all levels master web technologies through interactive courses and hands-on practice.</p><div class="social-links"><a href="https://www.facebook.com/profile.php?id=61581069862024"><i class="fab fa-facebook-f"></i></a><a href="https://x.com/SkillMynte_AI?t=CcoQtjWZGGOXqfTfrsufjQ&s=09"><i class="fab fa-twitter"></i></a><a href="https://youtube.com/@skillmynte?si=LmX2MjSKU3N1Xa5S"><i class="fab fa-youtube"></i></a><a href="https://www.instagram.com/skillmynte_ai?igsh=MTd1YWpjdXV1OHhrbA=="><i class="fab fa-instagram"></i></a></div></div>
+                    <div class="footer-column"><h3>Quick Links</h3><ul class="footer-links"><li><a href="#"><i class="fas fa-chevron-right"></i> Home</a></li><li><a href="#"><i class="fas fa-chevron-right"></i> Courses</a></li><li><a href="#"><i class="fas fa-chevron-right"></i> Practice</a></li><li><a href="#"><i class="fas fa-chevron-right"></i> Projects</a></li></ul></div>
+                    <div class="footer-column"><h3>Popular Courses</h3><ul class="footer-links"><li><a href="free CSS Course.html"><i class="fas fa-chevron-right"></i> HTML & CSS Fundamentals</a></li><li><a href="free JS Course.html"><i class="fas fa-chevron-right"></i> JavaScript Mastery</a></li><li><a href="premium courses.html"><i class="fas fa-chevron-right"></i> React.js Development</a></li><li><a href="free node.js.html"><i class="fas fa-chevron-right"></i> Node.js Backend</a></li><li><a href="free python course.html"><i class="fas fa-chevron-right"></i> Python for Beginners</a></li></ul></div>
+                    <div class="footer-column"><h3>Contact Us</h3><p><i class="fas fa-envelope"></i>Skillmynteofficial@gmail.com</p></div>
+                </div>
+                <div class="footer-bottom"><p>&copy; 2025 SkillMynte. All rights reserved. | Designed with <i class="fas fa-heart" style="color: var(--primary);"></i> for the developer community</p></div>
+            </footer>
+
+            <script>
+                // Function to run code in preview
+                function runCode(editorId, outputId) {
+                    const editor = document.getElementById(editorId);
+                    const output = document.getElementById(outputId);
+                    try {
+                        output.innerHTML = editor.value;
+                    } catch (error) {
+                        output.innerHTML = `<div style="color: var(--accent); padding: 1rem;">Error: ${error.message}</div>`;
+                    }
+                }
+                
+                document.addEventListener('DOMContentLoaded', function() {
+                    // Run all editors
+                    for (let i = 1; i <= 10; i++) {
+                        runCode(`editor-${i}`, `output-${i}`);
+                    }
+                    runCode('playground-editor', 'playground-output');
+                    
+                    // Attach run buttons
+                    document.querySelectorAll('.run-editor').forEach(btn => {
+                        btn.addEventListener('click', function() {
+                            const container = this.closest('.code-editor-container');
+                            const editor = container.querySelector('.code-editor');
+                            const output = container.querySelector('.preview-container');
+                            runCode(editor.id, output.id);
+                        });
+                    });
+                    
+                    // Reset functionality
+                    document.querySelectorAll('.reset-editor').forEach(btn => {
+                        btn.addEventListener('click', function() {
+                            const container = this.closest('.code-editor-container');
+                            const editor = container.querySelector('.code-editor');
+                            editor.value = editor.dataset.original || editor.defaultValue;
+                            runCode(editor.id, container.querySelector('.preview-container').id);
+                        });
+                    });
+                    
+                    document.querySelectorAll('.code-editor').forEach(editor => {
+                        editor.dataset.original = editor.value;
+                    });
+
+                    // Navbar scroll effect
+                    window.addEventListener('scroll', function() {
+                        document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+                    });
+
+                    // Mobile menu (same as original)
+                    const menuToggle = document.getElementById('menuToggle');
+                    const navMenu = document.querySelector('.nav-menu');
+                    const sidebar = document.getElementById('sidebar');
+
+                    function toggleMobileMenu() {
+                        const isActive = navMenu.classList.contains('active');
+                        navMenu.classList.toggle('active');
+                        sidebar.classList.toggle('active');
+                        menuToggle.innerHTML = isActive ? '<i class="fas fa-bars"></i>' : '<i class="fas fa-times"></i>';
+                        document.body.classList.toggle('menu-open');
+                    }
+
+                    menuToggle.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        toggleMobileMenu();
+                    });
+
+                    document.querySelectorAll('.nav-link, .dropdown-item').forEach(link => {
+                        link.addEventListener('click', () => {
+                            if (window.innerWidth <= 1024) {
+                                navMenu.classList.remove('active');
+                                sidebar.classList.remove('active');
+                                menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                                document.body.classList.remove('menu-open');
+                            }
+                        });
+                    });
+
+                    document.addEventListener('click', (e) => {
+                        if (window.innerWidth <= 1024 && navMenu.classList.contains('active') &&
+                            !e.target.closest('.nav-menu') && !e.target.closest('.menu-toggle') && !e.target.closest('.sidebar')) {
+                            navMenu.classList.remove('active');
+                            sidebar.classList.remove('active');
+                            menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                            document.body.classList.remove('menu-open');
+                        }
+                    });
+
+                    document.addEventListener('keydown', (e) => {
+                        if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+                            navMenu.classList.remove('active');
+                            sidebar.classList.remove('active');
+                            menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                            document.body.classList.remove('menu-open');
+                        }
+                    });
+
+                    window.addEventListener('resize', () => {
+                        if (window.innerWidth > 1024 && navMenu.classList.contains('active')) {
+                            navMenu.classList.remove('active');
+                            sidebar.classList.remove('active');
+                            menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                            document.body.classList.remove('menu-open');
+                        }
+                    });
+
+                    // Level filtering
+                    const levelButtons = document.querySelectorAll('.level-btn');
+                    const modules = document.querySelectorAll('.course-module');
+                    levelButtons.forEach(btn => {
+                        btn.addEventListener('click', function() {
+                            const level = this.dataset.level;
+                            levelButtons.forEach(b => b.classList.remove('active'));
+                            this.classList.add('active');
+                            modules.forEach(module => {
+                                if (level === 'all') module.style.display = 'flex';
+                                else if (level === 'advanced') {
+                                    const id = module.id;
+                                    module.style.display = (id.includes('module7') || id.includes('module8') || id.includes('module9') || id.includes('module10')) ? 'flex' : 'none';
+                                } else {
+                                    module.style.display = (module.dataset.difficulty === level) ? 'flex' : 'none';
+                                }
+                            });
+                        });
+                    });
+
+                    // Search
+                    document.getElementById('search-input').addEventListener('input', function() {
+                        const term = this.value.toLowerCase().trim();
+                        modules.forEach(module => {
+                            const title = module.querySelector('h1').textContent.toLowerCase();
+                            const content = module.textContent.toLowerCase();
+                            module.style.display = (term === '' || title.includes(term) || content.includes(term)) ? 'flex' : 'none';
+                        });
+                    });
+
+                    // Smooth scroll for sidebar
+                    document.querySelectorAll('.sidebar-item').forEach(item => {
+                        item.addEventListener('click', function(e) {
+                            e.preventDefault();
+                            document.querySelectorAll('.sidebar-item').forEach(i => i.classList.remove('active'));
+                            this.classList.add('active');
+                            if (window.innerWidth <= 1024) {
+                                navMenu.classList.remove('active');
+                                sidebar.classList.remove('active');
+                                menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                                document.body.classList.remove('menu-open');
+                            }
+                            const target = document.querySelector(this.getAttribute('href'));
+                            if (target) {
+                                window.scrollTo({ top: target.offsetTop - 100, behavior: 'smooth' });
+                            }
+                        });
+                    });
+                });
+            </script>
+        </div>
+    </div>
+</body>
+</html>

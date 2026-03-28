@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skillmynte Logo Generator | AI-Powered Logo Creator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="skill mynte LOGO generator.css">
+    <link rel="shortcut icon" type="image/x-icon" href="rounded_logo.png">
+</head>
+<body>
+    <div class="bg-elements">
+        <div class="bg-element bg-1"></div>
+        <div class="bg-element bg-2"></div>
+        <div class="bg-element bg-3"></div>
+    </div>
+
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+            <a href="index.html" class="logo">
+                <span class="logo-badge">SM</span> SKILLMYNTE
+            </a>
+                    <span class="ai-badge">AI</span>
+                </div>
+                <div class="hero-buttons" style="margin:0; padding:0;">
+                    <button class="ai-generate-btn" id="ai-generate-logo"><i class="fas fa-bolt"></i> AI Generate Logo</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>AI Logo Generator</h1>
+                <p>Create professional logos instantly with artificial intelligence. No design skills needed.</p>
+                <div class="ai-robot"><i class="fas fa-robot"></i></div>
+                <div class="hero-buttons">
+                    <button class="ai-generate-btn" id="start-creating" style="width: auto; min-width: 250px;"><i class="fas fa-bolt"></i> Start Creating</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="main-content">
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <div class="sidebar-section">
+                    <div class="sidebar-title"><i class="fas fa-palette"></i> Colors</div>
+                    <div class="color-palette" id="color-palette">
+                        <div class="color-option active" style="background-color: #00C853;" data-color="#00C853"></div>
+                        <div class="color-option" style="background-color: #2962FF;" data-color="#2962FF"></div>
+                        <div class="color-option" style="background-color: #FF6B35;" data-color="#FF6B35"></div>
+                        <div class="color-option" style="background-color: #9C27B0;" data-color="#9C27B0"></div>
+                        <div class="color-option" style="background-color: #FF4081;" data-color="#FF4081"></div>
+                        <div class="color-option" style="background-color: #FFC107;" data-color="#FFC107"></div>
+                        <div class="color-option" style="background-color: #2196F3;" data-color="#2196F3"></div>
+                        <div class="color-option" style="background-color: #F44336;" data-color="#F44336"></div>
+                        <div class="color-option" style="background-color: #4CAF50;" data-color="#4CAF50"></div>
+                        <div class="color-option" style="background-color: #FFFFFF;" data-color="#FFFFFF"></div>
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <div class="sidebar-title"><i class="fas fa-icons"></i> Icons</div>
+                    <div class="tool-options">
+                        <!-- New "None" option to remove icon -->
+                        <div class="tool-option" data-icon="none"><i class="fas fa-ban"></i></div>
+                        <div class="tool-option" data-icon="rocket"><i class="fas fa-rocket"></i></div>
+                        <div class="tool-option" data-icon="crown"><i class="fas fa-crown"></i></div>
+                        <div class="tool-option active" data-icon="lightbulb"><i class="fas fa-lightbulb"></i></div>
+                        <div class="tool-option" data-icon="globe"><i class="fas fa-globe"></i></div>
+                        <div class="tool-option" data-icon="leaf"><i class="fas fa-leaf"></i></div>
+                        <div class="tool-option" data-icon="fire"><i class="fas fa-fire"></i></div>
+                        <div class="tool-option" data-icon="gem"><i class="fas fa-gem"></i></div>
+                        <div class="tool-option" data-icon="atom"><i class="fas fa-atom"></i></div>
+                        <div class="tool-option" data-icon="star"><i class="fas fa-star"></i></div>
+                        <div class="tool-option" data-icon="heart"><i class="fas fa-heart"></i></div>
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <div class="sidebar-title"><i class="fas fa-magic"></i> Effects</div>
+                    <div class="tool-options">
+                        <div class="tool-option active" data-effect="glow"><i class="fas fa-sun"></i></div>
+                        <div class="tool-option" data-effect="shadow"><i class="fas fa-cloud"></i></div>
+                        <div class="tool-option" data-effect="gradient"><i class="fas fa-fill-drip"></i></div>
+                        <div class="tool-option" data-effect="border"><i class="fas fa-border-style"></i></div>
+                        <div class="tool-option" data-effect="rotate"><i class="fas fa-redo"></i></div>
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <div class="sidebar-title"><i class="fas fa-arrows-alt"></i> Position</div>
+                    <div class="position-controls">
+                        <button class="position-btn active" data-position="center">Center</button>
+                        <button class="position-btn" data-position="top">Top</button>
+                        <button class="position-btn" data-position="bottom">Bottom</button>
+                        <button class="position-btn" data-position="left">Left</button>
+                        <button class="position-btn" data-position="right">Right</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Canvas Area -->
+            <div class="canvas-container">
+                <div class="canvas-controls">
+                    <div class="canvas-tools">
+                        <div class="canvas-tool active" data-tool="select"><i class="fas fa-mouse-pointer"></i></div>
+                        <div class="canvas-tool" data-tool="pan"><i class="fas fa-arrows-alt"></i></div>
+                        <div class="canvas-tool" data-tool="zoom-in"><i class="fas fa-search-plus"></i></div>
+                        <div class="canvas-tool" data-tool="zoom-out"><i class="fas fa-search-minus"></i></div>
+                        <div class="canvas-tool" data-tool="undo"><i class="fas fa-undo"></i></div>
+                        <div class="canvas-tool" data-tool="redo"><i class="fas fa-redo"></i></div>
+                        <div class="canvas-tool" data-tool="reset"><i class="fas fa-trash"></i></div>
+                    </div>
+                </div>
+                <div class="canvas-area">
+                    <canvas id="logo-canvas" width="800" height="600"></canvas>
+                </div>
+            </div>
+
+            <!-- Control Panel -->
+            <div class="control-panel">
+                <div class="form-group">
+                    <label for="brand-name">Brand Name</label>
+                    <input type="text" id="brand-name" class="form-control" placeholder="Enter your brand name" value="SKILLMYNTE">
+                </div>
+                <div class="form-group">
+                    <label for="slogan">Slogan (Optional)</label>
+                    <input type="text" id="slogan" class="form-control" placeholder="Enter your slogan" value="AI-Powered Design">
+                </div>
+                <div class="form-group">
+                    <label for="font-selector">Font Style</label>
+                    <select id="font-selector" class="form-control">
+                        <option value="Orbitron">Orbitron (Modern)</option>
+                        <option value="Exo 2">Exo 2 (Clean)</option>
+                        <option value="Arial">Arial (Professional)</option>
+                        <option value="Georgia">Georgia (Elegant)</option>
+                        <option value="Courier New">Courier (Technical)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="font-size">Font Size</label>
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <input type="range" id="font-size" min="10" max="72" value="36" style="flex: 1;">
+                        <span id="font-size-value" style="min-width: 50px;">36px</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="text-color">Text Color</label>
+                    <input type="color" id="text-color" class="form-control" value="#00C853">
+                </div>
+                <div class="form-group">
+                    <label>Background</label>
+                    <div class="option-grid" id="background-options">
+                        <div class="option-item active" data-bg="transparent">Transparent</div>
+                        <div class="option-item" data-bg="white">White</div>
+                        <div class="option-item" data-bg="gradient">Gradient</div>
+                        <div class="option-item" data-bg="pattern1">Pattern 1</div>
+                        <div class="option-item" data-bg="pattern2">Pattern 2</div>
+                    </div>
+                </div>
+                <div class="ai-buttons">
+                    <button class="ai-btn accent" id="ai-auto-generate"><i class="fas fa-robot"></i> AI Generate Random Logo</button>
+                    <button class="ai-btn" id="generate-variations"><i class="fas fa-bolt"></i> Generate 5 Variations</button>
+                    <button class="ai-btn" id="ai-recolor"><i class="fas fa-palette"></i> AI Recolor</button>
+                    <button class="ai-btn premium" id="download-all"><i class="fas fa-download"></i> Download Logo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">SKILLMYNTE</div>
+                <p class="footer-text">Free AI-Powered Logo Generator • Create professional logos in seconds</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ==================== ENHANCED LOGO GENERATOR ====================
+        let canvas, ctx;
+        let logoState = {
+            brandName: "SKILLMYNTE",
+            slogan: "AI-Powered Design",
+            font: "Orbitron",
+            fontSize: 36,
+            textColor: "#00C853",
+            textGlow: true,
+            backgroundColor: "transparent",
+            bgColor: "#FFFFFF",
+            currentIcon: "lightbulb",   // can be "none" to hide icon
+            iconPosition: "center",
+            activeEffect: "glow"
+        };
+
+        // Font Awesome icon mapping (Unicode for canvas)
+        const iconMap = {
+            'none': null,
+            'rocket': '\uf135',
+            'crown': '\uf521',
+            'lightbulb': '\uf0eb',
+            'globe': '\uf0ac',
+            'leaf': '\uf06c',
+            'fire': '\uf06d',
+            'gem': '\uf3a5',
+            'atom': '\uf5d2',
+            'star': '\uf005',
+            'heart': '\uf004'
+        };
+
+        const fonts = ['Orbitron', 'Exo 2', 'Arial', 'Georgia', 'Courier New'];
+
+        let currentTool = 'select';
+        let zoomLevel = 1;
+        let panX = 0, panY = 0;
+        let isDragging = false;
+        let lastX, lastY;
+
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeCanvas();
+            setupEventListeners();
+            drawLogo();
+            setTimeout(() => showNotification("Welcome! Click 'AI Generate Logo' to create instantly!"), 1000);
+        });
+
+        function initializeCanvas() {
+            canvas = document.getElementById('logo-canvas');
+            ctx = canvas.getContext('2d', { alpha: true });
+            resizeCanvas();
+            window.addEventListener('resize', resizeCanvas);
+            canvas.addEventListener('mousedown', startDrag);
+            canvas.addEventListener('mousemove', drag);
+            canvas.addEventListener('mouseup', endDrag);
+            canvas.addEventListener('mouseleave', endDrag);
+            canvas.addEventListener('wheel', handleWheel);
+        }
+
+        function resizeCanvas() {
+            const container = document.querySelector('.canvas-area');
+            const containerWidth = container.clientWidth - 40;
+            const containerHeight = container.clientHeight - 40;
+            canvas.width = containerWidth;
+            canvas.height = containerHeight;
+            canvas.style.width = containerWidth + 'px';
+            canvas.style.height = containerHeight + 'px';
+            drawLogo();
+        }
+
+        function startDrag(e) {
+            if (currentTool === 'pan') {
+                isDragging = true;
+                lastX = e.offsetX;
+                lastY = e.offsetY;
+            }
+        }
+        function drag(e) {
+            if (isDragging && currentTool === 'pan') {
+                const dx = e.offsetX - lastX;
+                const dy = e.offsetY - lastY;
+                panX += dx;
+                panY += dy;
+                lastX = e.offsetX;
+                lastY = e.offsetY;
+                drawLogo();
+            }
+        }
+        function endDrag() { isDragging = false; }
+        function handleWheel(e) {
+            if (currentTool === 'zoom-in' || currentTool === 'zoom-out') {
+                e.preventDefault();
+                const delta = e.deltaY > 0 ? 0.9 : 1.1;
+                zoomLevel *= delta;
+                zoomLevel = Math.min(Math.max(zoomLevel, 0.5), 3);
+                drawLogo();
+            }
+        }
+
+        function setupEventListeners() {
+            // Input fields
+            document.getElementById('brand-name').addEventListener('input', function() {
+                logoState.brandName = this.value.toUpperCase();
+                drawLogo();
+            });
+            document.getElementById('slogan').addEventListener('input', function() {
+                logoState.slogan = this.value;
+                drawLogo();
+            });
+            document.getElementById('font-selector').addEventListener('change', function() {
+                logoState.font = this.value;
+                drawLogo();
+            });
+            document.getElementById('font-size').addEventListener('input', function() {
+                logoState.fontSize = parseInt(this.value);
+                document.getElementById('font-size-value').textContent = this.value + 'px';
+                drawLogo();
+            });
+            document.getElementById('text-color').addEventListener('input', function() {
+                logoState.textColor = this.value;
+                document.querySelectorAll('.color-option').forEach(opt => {
+                    opt.classList.toggle('active', opt.getAttribute('data-color') === logoState.textColor);
+                });
+                drawLogo();
+            });
+
+            // Color palette
+            document.querySelectorAll('.color-option').forEach(option => {
+                option.addEventListener('click', function() {
+                    document.querySelectorAll('.color-option').forEach(opt => opt.classList.remove('active'));
+                    this.classList.add('active');
+                    logoState.textColor = this.getAttribute('data-color');
+                    document.getElementById('text-color').value = logoState.textColor;
+                    drawLogo();
+                });
+            });
+
+            // Background options
+            document.querySelectorAll('#background-options .option-item').forEach(option => {
+                option.addEventListener('click', function() {
+                    document.querySelectorAll('#background-options .option-item').forEach(opt => opt.classList.remove('active'));
+                    this.classList.add('active');
+                    logoState.backgroundColor = this.getAttribute('data-bg');
+                    drawLogo();
+                });
+            });
+
+            // Icons (including "none")
+            document.querySelectorAll('.tool-option[data-icon]').forEach(tool => {
+                tool.addEventListener('click', function() {
+                    document.querySelectorAll('.tool-option[data-icon]').forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                    logoState.currentIcon = this.getAttribute('data-icon');
+                    drawLogo();
+                });
+            });
+
+            // Effects
+            document.querySelectorAll('.tool-option[data-effect]').forEach(tool => {
+                tool.addEventListener('click', function() {
+                    document.querySelectorAll('.tool-option[data-effect]').forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                    logoState.activeEffect = this.getAttribute('data-effect');
+                    drawLogo();
+                });
+            });
+
+            // Position
+            document.querySelectorAll('.position-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    document.querySelectorAll('.position-btn').forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    logoState.iconPosition = this.getAttribute('data-position');
+                    drawLogo();
+                });
+            });
+
+            // Canvas tools
+            document.querySelectorAll('.canvas-tool').forEach(tool => {
+                tool.addEventListener('click', function() {
+                    const toolType = this.getAttribute('data-tool');
+                    handleCanvasTool(toolType);
+                    if (toolType !== 'undo' && toolType !== 'redo' && toolType !== 'reset') {
+                        document.querySelectorAll('.canvas-tool').forEach(t => t.classList.remove('active'));
+                        this.classList.add('active');
+                        currentTool = toolType;
+                    }
+                });
+            });
+
+            // AI buttons
+            document.getElementById('ai-generate-logo').addEventListener('click', generateRandomLogo);
+            document.getElementById('start-creating').addEventListener('click', generateRandomLogo);
+            document.getElementById('ai-auto-generate').addEventListener('click', generateRandomLogo);
+            document.getElementById('generate-variations').addEventListener('click', generateVariations);
+            document.getElementById('ai-recolor').addEventListener('click', aiRecolor);
+            document.getElementById('download-all').addEventListener('click', downloadLogo);
+        }
+
+        // ==================== SMART POSITIONING ====================
+        function getAdjustedPositions() {
+            const w = canvas.width, h = canvas.height;
+            const centerX = w / 2, centerY = h / 2;
+            const iconSize = 80;
+            const brandSize = logoState.fontSize;
+            const sloganSize = logoState.fontSize * 0.5;
+            const gap = 40; // space between elements
+
+            let iconX = centerX, iconY = centerY;
+            let brandX = centerX, brandY = centerY;
+            let sloganX = centerX, sloganY = centerY;
+
+            const hasIcon = logoState.currentIcon !== 'none' && iconMap[logoState.currentIcon] !== null;
+
+            if (!hasIcon) {
+                // No icon: center both texts vertically
+                brandY = centerY - 30;
+                sloganY = centerY + 30;
+                return { iconX, iconY, brandX, brandY, sloganX, sloganY, drawIcon: false };
+            }
+
+            // Icon present: adjust based on position
+            switch (logoState.iconPosition) {
+                case 'top':
+                    iconY = 100; // near top
+                    brandY = centerY + 20;
+                    sloganY = brandY + brandSize/2 + sloganSize/2 + gap;
+                    break;
+                case 'bottom':
+                    iconY = h - 100;
+                    brandY = centerY - 60;
+                    sloganY = brandY + brandSize/2 + sloganSize/2 + gap;
+                    break;
+                case 'left':
+                    iconX = 120;
+                    brandX = centerX + 100;
+                    sloganX = brandX;
+                    brandY = centerY - 30;
+                    sloganY = centerY + 30;
+                    break;
+                case 'right':
+                    iconX = w - 120;
+                    brandX = centerX - 100;
+                    sloganX = brandX;
+                    brandY = centerY - 30;
+                    sloganY = centerY + 30;
+                    break;
+                case 'center':
+                default:
+                    // Icon centered above text
+                    iconY = centerY - 80;
+                    brandY = centerY + 20;
+                    sloganY = brandY + brandSize/2 + sloganSize/2 + gap;
+                    break;
+            }
+            return { iconX, iconY, brandX, brandY, sloganX, sloganY, drawIcon: true };
+        }
+
+        function drawLogo() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.save();
+            ctx.translate(panX, panY);
+            ctx.scale(zoomLevel, zoomLevel);
+
+            drawBackground();
+
+            const pos = getAdjustedPositions();
+
+            // Draw brand name
+            drawText(logoState.brandName, pos.brandX, pos.brandY, logoState.fontSize, logoState.textColor, logoState.font);
+
+            // Draw slogan if present
+            if (logoState.slogan && logoState.slogan.trim() !== "") {
+                drawText(logoState.slogan, pos.sloganX, pos.sloganY, logoState.fontSize * 0.5, logoState.textColor, logoState.font);
+            }
+
+            // Draw icon if requested
+            if (pos.drawIcon && logoState.currentIcon !== 'none') {
+                drawIcon(logoState.currentIcon, pos.iconX, pos.iconY, 80, logoState.textColor);
+            }
+
+            ctx.restore();
+        }
+
+        function drawBackground() {
+            const w = canvas.width, h = canvas.height;
+            switch(logoState.backgroundColor) {
+                case 'transparent':
+                    const size = 20;
+                    for (let y = 0; y < h; y += size)
+                        for (let x = 0; x < w; x += size)
+                            ctx.fillStyle = ((x + y) % (size * 2) === 0) ? '#e8e8e8' : '#f5f5f5', ctx.fillRect(x, y, size, size);
+                    break;
+                case 'white':
+                    ctx.fillStyle = '#FFFFFF', ctx.fillRect(0, 0, w, h);
+                    break;
+                case 'gradient':
+                    const gradient = ctx.createLinearGradient(0, 0, w, h);
+                    gradient.addColorStop(0, logoState.textColor);
+                    gradient.addColorStop(1, '#2962FF');
+                    ctx.fillStyle = gradient, ctx.fillRect(0, 0, w, h);
+                    break;
+                case 'pattern1':
+                    ctx.fillStyle = '#FFFFFF', ctx.fillRect(0, 0, w, h);
+                    ctx.fillStyle = `rgba(0, 200, 83, 0.1)`;
+                    for (let i = 0; i < w; i += 40)
+                        for (let j = 0; j < h; j += 40)
+                            if ((i + j) % 80 === 0) ctx.fillRect(i, j, 20, 20);
+                    break;
+                case 'pattern2':
+                    ctx.fillStyle = '#FFFFFF', ctx.fillRect(0, 0, w, h);
+                    ctx.strokeStyle = `rgba(41, 98, 255, 0.1)`, ctx.lineWidth = 2;
+                    for (let i = 0; i < w; i += 25) ctx.beginPath(), ctx.moveTo(i, 0), ctx.lineTo(i, h), ctx.stroke();
+                    for (let j = 0; j < h; j += 25) ctx.beginPath(), ctx.moveTo(0, j), ctx.lineTo(w, j), ctx.stroke();
+                    break;
+            }
+        }
+
+        function drawText(text, x, y, fontSize, color, fontFamily) {
+            ctx.save();
+            ctx.font = `bold ${fontSize}px ${fontFamily}`;
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            applyEffect(color);
+            ctx.fillStyle = color;
+            ctx.fillText(text, x, y);
+            if (logoState.activeEffect === 'border') {
+                ctx.strokeStyle = '#FFFFFF';
+                ctx.lineWidth = 2;
+                ctx.strokeText(text, x, y);
+            }
+            ctx.restore();
+        }
+
+        function drawIcon(iconType, x, y, size, color) {
+            if (iconType === 'none' || !iconMap[iconType]) return;
+            ctx.save();
+            ctx.font = `900 ${size}px "Font Awesome 6 Free"`;
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            applyEffect(color);
+            const icon = iconMap[iconType];
+            if (logoState.activeEffect === 'rotate') {
+                ctx.translate(x, y);
+                ctx.rotate(0.2);
+                ctx.fillStyle = color;
+                ctx.fillText(icon, 0, 0);
+            } else {
+                ctx.fillStyle = color;
+                ctx.fillText(icon, x, y);
+            }
+            if (logoState.activeEffect === 'border') {
+                ctx.strokeStyle = '#FFFFFF';
+                ctx.lineWidth = 2;
+                ctx.strokeText(icon, x, y);
+            }
+            ctx.restore();
+        }
+
+        function applyEffect(color) {
+            ctx.shadowColor = color;
+            ctx.shadowBlur = 0;
+            ctx.shadowOffsetX = 0;
+            ctx.shadowOffsetY = 0;
+            switch(logoState.activeEffect) {
+                case 'glow': ctx.shadowBlur = 20; break;
+                case 'shadow': ctx.shadowColor = '#000000'; ctx.shadowBlur = 10; ctx.shadowOffsetX = 5; ctx.shadowOffsetY = 5; break;
+                case 'gradient': // handled by fillStyle already
+                default: break;
+            }
+        }
+
+        // ==================== AI FUNCTIONS ====================
+        function generateRandomLogo() {
+            showNotification("🤖 AI is generating a unique logo...");
+            const brandNames = ["NEXUS","QUANTUM","OPTIMUS","VERITAS","SYNERGY","AURORA","ECHO","OMEGA","ZENITH","PYXIS"];
+            const slogans = ["Future Ready","Innovate Beyond","Digital Excellence","Smart Solutions","Next Generation"];
+            const iconKeys = Object.keys(iconMap).filter(k => k !== 'none');
+            const colors = ['#00C853','#2962FF','#FF6B35','#9C27B0','#FF4081','#FFC107','#2196F3'];
+            const effects = ['glow','shadow','gradient','border','rotate'];
+            const positions = ['center','top','bottom','left','right'];
+            const backgrounds = ['transparent','white','gradient','pattern1','pattern2'];
+
+            logoState.brandName = brandNames[Math.floor(Math.random() * brandNames.length)];
+            logoState.slogan = slogans[Math.floor(Math.random() * slogans.length)];
+            logoState.font = fonts[Math.floor(Math.random() * fonts.length)];
+            logoState.fontSize = 30 + Math.floor(Math.random() * 20);
+            logoState.textColor = colors[Math.floor(Math.random() * colors.length)];
+            logoState.currentIcon = iconKeys[Math.floor(Math.random() * iconKeys.length)];
+            logoState.iconPosition = positions[Math.floor(Math.random() * positions.length)];
+            logoState.activeEffect = effects[Math.floor(Math.random() * effects.length)];
+            logoState.backgroundColor = backgrounds[Math.floor(Math.random() * backgrounds.length)];
+
+            updateUIFromState();
+            drawLogo();
+            setTimeout(() => showNotification("✨ AI logo generated successfully!"), 500);
+        }
+
+        function generateVariations() {
+            showNotification("🎨 Generating 5 logo variations...");
+            let count = 0;
+            const originalState = {...logoState};
+            const interval = setInterval(() => {
+                count++;
+                logoState.textColor = getRandomColor();
+                logoState.font = fonts[Math.floor(Math.random() * fonts.length)];
+                logoState.fontSize = 28 + Math.floor(Math.random() * 24);
+                logoState.activeEffect = ['glow','shadow','gradient','border','rotate'][Math.floor(Math.random()*5)];
+                updateUIFromState();
+                drawLogo();
+                if (count === 5) {
+                    clearInterval(interval);
+                    logoState = originalState;
+                    updateUIFromState();
+                    drawLogo();
+                    showNotification("✅ 5 variations previewed! Final design restored.");
+                }
+            }, 600);
+        }
+
+        function aiRecolor() {
+            showNotification("🎨 AI recoloring logo...");
+            const colors = ['#00C853','#2962FF','#FF6B35','#9C27B0','#FF4081','#FFC107','#2196F3'];
+            let idx = colors.indexOf(logoState.textColor);
+            if (idx === -1) idx = 0;
+            idx = (idx + 1) % colors.length;
+            logoState.textColor = colors[idx];
+            document.getElementById('text-color').value = logoState.textColor;
+            document.querySelectorAll('.color-option').forEach(opt => opt.classList.toggle('active', opt.getAttribute('data-color') === logoState.textColor));
+            drawLogo();
+            showNotification("🌈 Color updated!");
+        }
+
+        function getRandomColor() {
+            const colors = ['#00C853','#2962FF','#FF6B35','#9C27B0','#FF4081','#FFC107','#2196F3'];
+            return colors[Math.floor(Math.random() * colors.length)];
+        }
+
+        function updateUIFromState() {
+            document.getElementById('brand-name').value = logoState.brandName;
+            document.getElementById('slogan').value = logoState.slogan;
+            document.getElementById('font-selector').value = logoState.font;
+            document.getElementById('font-size').value = logoState.fontSize;
+            document.getElementById('font-size-value').textContent = logoState.fontSize + 'px';
+            document.getElementById('text-color').value = logoState.textColor;
+
+            document.querySelectorAll('.color-option').forEach(opt => opt.classList.toggle('active', opt.getAttribute('data-color') === logoState.textColor));
+            document.querySelectorAll('#background-options .option-item').forEach(opt => opt.classList.toggle('active', opt.getAttribute('data-bg') === logoState.backgroundColor));
+            document.querySelectorAll('.tool-option[data-icon]').forEach(opt => opt.classList.toggle('active', opt.getAttribute('data-icon') === logoState.currentIcon));
+            document.querySelectorAll('.tool-option[data-effect]').forEach(opt => opt.classList.toggle('active', opt.getAttribute('data-effect') === logoState.activeEffect));
+            document.querySelectorAll('.position-btn').forEach(opt => opt.classList.toggle('active', opt.getAttribute('data-position') === logoState.iconPosition));
+        }
+
+        function handleCanvasTool(tool) {
+            switch(tool) {
+                case 'undo': showNotification("Undo feature would be implemented in full version"); break;
+                case 'redo': showNotification("Redo feature would be implemented in full version"); break;
+                case 'reset':
+                    if (confirm('Reset canvas to default?')) {
+                        logoState = {
+                            brandName: "SKILLMYNTE",
+                            slogan: "AI-Powered Design",
+                            font: "Orbitron",
+                            fontSize: 36,
+                            textColor: "#00C853",
+                            textGlow: true,
+                            backgroundColor: "transparent",
+                            bgColor: "#FFFFFF",
+                            currentIcon: "lightbulb",
+                            iconPosition: "center",
+                            activeEffect: "glow"
+                        };
+                        panX = 0; panY = 0; zoomLevel = 1;
+                        updateUIFromState();
+                        drawLogo();
+                        showNotification("Canvas reset");
+                    }
+                    break;
+                case 'zoom-in': zoomLevel = Math.min(zoomLevel * 1.2, 3); drawLogo(); break;
+                case 'zoom-out': zoomLevel = Math.max(zoomLevel * 0.8, 0.5); drawLogo(); break;
+                default: showNotification(`${tool} tool activated`);
+            }
+        }
+
+        function downloadLogo() {
+            showNotification("⬇️ Downloading logo...");
+            setTimeout(() => {
+                const link = document.createElement('a');
+                link.download = `logo-${logoState.brandName.toLowerCase()}.png`;
+                link.href = canvas.toDataURL('image/png');
+                link.click();
+                showNotification("✅ Logo downloaded successfully!");
+            }, 800);
+        }
+
+        function showNotification(message) {
+            const existing = document.querySelector('.notification');
+            if (existing) existing.remove();
+            const notification = document.createElement('div');
+            notification.className = 'notification';
+            notification.textContent = message;
+            document.body.appendChild(notification);
+            setTimeout(() => notification.classList.add('show'), 10);
+            setTimeout(() => {
+                notification.classList.remove('show');
+                setTimeout(() => notification.remove(), 300);
+            }, 3000);
+        }
+    </script>
+</body>
+</html>

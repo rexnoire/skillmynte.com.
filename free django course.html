@@ -1,0 +1,1876 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django Fundamentals | SkillMynte</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="rounded_logo.png">
+    <link rel="stylesheet" href="free django course.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-code"></i>
+                SKILLMYNTE
+            </a>
+            <div class="nav-menu">
+                <a href="#" class="nav-link">Home</a>
+                <a href="#" class="nav-link">Courses</a>
+                <a href="#" class="nav-link">Practice</a>
+                <a href="#" class="nav-link">Projects</a>
+                
+                <div class="courses-dropdown">
+                    <button class="courses-btn">
+                        <i class="fas fa-book-open"></i> Jump to Module
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#module1" class="dropdown-item">
+                            <i class="fab fa-python python-icon"></i> Django Basics
+                        </a>
+                        <a href="#module2" class="dropdown-item">
+                            <i class="fab fa-python python-icon"></i> Django Templates
+                        </a>
+                        <a href="#module3" class="dropdown-item">
+                            <i class="fab fa-python python-icon"></i> URLs & Views
+                        </a>
+                        <a href="#module4" class="dropdown-item">
+                            <i class="fab fa-python python-icon"></i> Models & ORM
+                        </a>
+                        <a href="#module5" class="dropdown-item">
+                            <i class="fab fa-python python-icon"></i> Django Forms
+                        </a>
+                        <a href="#module6" class="dropdown-item">
+                            <i class="fab fa-python python-icon"></i> Admin & Class-Based Views
+                        </a>
+                        <a href="#module7" class="dropdown-item">
+                            <i class="fab fa-python python-icon"></i> Static Files & Media
+                        </a>
+                        <a href="#module8" class="dropdown-item">
+                            <i class="fab fa-python python-icon"></i> Django REST Framework
+                        </a>
+                        <a href="#module9" class="dropdown-item">
+                            <i class="fab fa-python python-icon"></i> Security & Best Practices
+                        </a>
+                        <a href="#module10" class="dropdown-item">
+                            <i class="fab fa-python python-icon"></i> Advanced Django
+                        </a>
+                        <a href="#playground" class="dropdown-item">
+                            <i class="fas fa-laptop-code"></i> Practice Playground
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Premium Course Navigation -->
+    <div class="course-navigation">
+        <div class="course-nav-container">
+            <div class="course-category">
+                <button class="category-btn">
+                    <i class="fas fa-layer-group"></i> Categories
+                </button>
+                <div class="category-dropdown">
+                    <a href="#" class="category-item">
+                        <i class="fab fa-python python-icon"></i> Django
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fas fa-database"></i> Databases
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fas fa-cloud"></i> Deployment
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fas fa-lock"></i> Security
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fas fa-code-branch"></i> API Development
+                    </a>
+                </div>
+            </div>
+            
+            <div class="course-levels">
+                <button class="level-btn active" data-level="all">All Levels</button>
+                <button class="level-btn" data-level="beginner">Beginner</button>
+                <button class="level-btn" data-level="intermediate">Intermediate</button>
+                <button class="level-btn" data-level="advanced">Advanced</button>
+            </div>
+            
+            <div class="course-search">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" class="search-input" id="search-input" placeholder="Search courses...">
+            </div>
+        </div>
+    </div>
+    
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <a href="#module1" class="sidebar-item active completed">
+            <i class="fab fa-python python-icon"></i>
+            <span>Module 1: Django Basics</span>
+            <span class="progress-indicator"><i class="fas fa-check"></i></span>
+        </a>
+        <a href="#module2" class="sidebar-item completed">
+            <i class="fab fa-python python-icon"></i>
+            <span>Module 2: Django Templates</span>
+            <span class="progress-indicator"><i class="fas fa-check"></i></span>
+        </a>
+        <a href="#module3" class="sidebar-item completed">
+            <i class="fab fa-python python-icon"></i>
+            <span>Module 3: URLs & Views</span>
+            <span class="progress-indicator"><i class="fas fa-check"></i></span>
+        </a>
+        <a href="#module4" class="sidebar-item">
+            <i class="fab fa-python python-icon"></i>
+            <span>Module 4: Models & ORM</span>
+            <span class="progress-indicator">4</span>
+        </a>
+        <a href="#module5" class="sidebar-item">
+            <i class="fab fa-python python-icon"></i>
+            <span>Module 5: Django Forms</span>
+            <span class="progress-indicator">5</span>
+        </a>
+        <a href="#module6" class="sidebar-item">
+            <i class="fab fa-python python-icon"></i>
+            <span>Module 6: Admin & CBVs</span>
+            <span class="progress-indicator">6</span>
+        </a>
+        <a href="#module7" class="sidebar-item">
+            <i class="fab fa-python python-icon"></i>
+            <span>Module 7: Static & Media</span>
+            <span class="progress-indicator">7</span>
+        </a>
+        <a href="#module8" class="sidebar-item">
+            <i class="fab fa-python python-icon"></i>
+            <span>Module 8: Django REST</span>
+            <span class="progress-indicator">8</span>
+        </a>
+        <a href="#module9" class="sidebar-item">
+            <i class="fab fa-python python-icon"></i>
+            <span>Module 9: Security</span>
+            <span class="progress-indicator">9</span>
+        </a>
+        <a href="#module10" class="sidebar-item">
+            <i class="fab fa-python python-icon"></i>
+            <span>Module 10: Advanced Django</span>
+            <span class="progress-indicator">10</span>
+        </a>
+        <a href="#playground" class="sidebar-item">
+            <i class="fas fa-laptop-code"></i>
+            <span>Practice Playground</span>
+        </a>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="content-wrapper">
+        <div class="container">
+            <!-- Module 1: Django Basics -->
+            <div class="course-module" id="module1" data-aos="fade-up" data-difficulty="beginner">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>DJANGO BASICS</h1>
+                    <h3>Learn the fundamentals of Django framework</h3>
+                    <span class="difficulty">Beginner</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" class="module-icon" alt="Django Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 1: <span>Introduction to Django & MTV</span></h1>
+                    <p>Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design. It follows the Model-Template-View (MTV) architectural pattern, similar to MVC. Django takes care of much of the hassle of web development, so you can focus on writing your app without needing to reinvent the wheel.</p>
+                    
+                    <p>A Django project is composed of apps that handle specific functionality. The framework includes an ORM (Object-Relational Mapper), an automatic admin interface, a templating engine, and robust security features. Everything is designed to be reusable, pluggable, and maintainable.</p>
+                    
+                    <h3>Try It Yourself (Simulated Django Template):</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Django Template</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-1" spellcheck="false">&lt;!-- This simulates a Django template --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;My First Django Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Welcome to Django!&lt;/h1&gt;
+    &lt;p&gt;Hello, {{ name }}!&lt;/p&gt;
+    &lt;p&gt;Today is {{ date|date:"F j, Y" }}&lt;/p&gt;
+    
+    &lt;h2&gt;Your interests:&lt;/h2&gt;
+    &lt;ul&gt;
+    {% for item in interests %}
+        &lt;li&gt;{{ item }}&lt;/li&gt;
+    {% endfor %}
+    &lt;/ul&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+                        <button class="run-btn" onclick="runCode('editor-1', 'output-1')">
+                            <i class="fas fa-play"></i> Run Code (Simulate)
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Rendered HTML
+                        </div>
+                        <div class="preview-container" id="output-1"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li><code>django-admin startproject myproject</code> creates a new project</li>
+                                <li><code>python manage.py startapp myapp</code> creates an app</li>
+                                <li>MTV stands for Model (data), Template (presentation), View (logic)</li>
+                                <li>Django includes an ORM to interact with databases without SQL</li>
+                                <li>Built-in admin interface at <code>/admin</code></li>
+                                <li>Follows "Don't Repeat Yourself" (DRY) principle</li>
+                                <li>Security features like CSRF, XSS, SQL injection protection</li>
+                            </ul>
+                        </div>
+
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-layer-group"></i> Django's Architecture</h3>
+                            <p>Django's MTV pattern separates concerns: Models define your data structure, Templates handle presentation, and Views contain business logic. The framework also includes URL routing, middleware for request/response processing, and a powerful template language with inheritance, filters, and tags.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-database"></i> Models</h4>
+                                    <p>Python classes that map to database tables. Django automatically creates tables and provides a high-level query API.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-file-code"></i> Templates</h4>
+                                    <p>HTML files with Django template language for dynamic content. Support for inheritance, filters, and custom tags.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-cogs"></i> Views</h4>
+                                    <p>Python functions or classes that receive web requests and return responses. They contain the application logic.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-globe"></i> Real-World Application</h4>
+                                <p>Django powers many high-traffic sites: Instagram, Pinterest, Mozilla, Disqus, and The Washington Times. Its batteries-included approach lets developers build complex database-driven applications quickly, with built-in authentication, admin, and ORM that scale to millions of users.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Create your first Django project:</strong> Set up a Django project and app. Create a simple view that renders a template with a context variable (e.g., your name). Run the development server and see your page at http://127.0.0.1:8000/.</p>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 2: Django Templates -->
+            <div class="course-module" id="module2" data-aos="fade-up" data-difficulty="beginner">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>DJANGO TEMPLATES</h1>
+                    <h3>Master the Django template language</h3>
+                    <span class="difficulty">Beginner</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" class="module-icon" alt="Django Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 2: <span>Template Language & Inheritance</span></h1>
+                    <p>Django's template language is a powerful tool for generating dynamic HTML. It uses {{ variables }} and {% tags %} to insert data and logic. Templates can be extended and included, promoting reusability and maintainability.</p>
+                    
+                    <p>Template inheritance allows you to build a base skeleton template with common elements (header, footer, navigation), and child templates override specific blocks. This eliminates duplication and makes global changes easy.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Template</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-2" spellcheck="false">&lt;!-- base.html --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;{% block title %}My Site{% endblock %}&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;{% include "header.html" %}&lt;/header&gt;
+    &lt;main&gt;
+        {% block content %}{% endblock %}
+    &lt;/main&gt;
+    &lt;footer&gt;Â© 2023&lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+&lt;!-- child.html (extends base) --&gt;
+{% extends "base.html" %}
+{% block title %}Home Page{% endblock %}
+{% block content %}
+    &lt;h1&gt;Welcome, {{ user.username }}&lt;/h1&gt;
+    &lt;p&gt;You have {{ messages|length }} messages.&lt;/p&gt;
+    &lt;ul&gt;
+    {% for msg in messages %}
+        &lt;li&gt;{{ msg.subject }}: {{ msg.body|truncatewords:10 }}&lt;/li&gt;
+    {% empty %}
+        &lt;li&gt;No messages.&lt;/li&gt;
+    {% endfor %}
+    &lt;/ul&gt;
+{% endblock %}</textarea>
+                        <button class="run-btn" onclick="runCode('editor-2', 'output-2')">
+                            <i class="fas fa-play"></i> Run Code (Simulate)
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Simulated Output
+                        </div>
+                        <div class="preview-container" id="output-2"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>{{ variable }} outputs a variable, optionally filtered (e.g., <code>|date</code>, <code>|lower</code>)</li>
+                                <li>{% tag %} performs logic: for loops, if conditions, block definitions, includes</li>
+                                <li>Template inheritance: <code>{% extends "base.html" %}</code> and <code>{% block %}</code></li>
+                                <li><code>{% include "file.html" %}</code> includes another template</li>
+                                <li>Built-in filters: <code>date</code>, <code>length</code>, <code>default</code>, <code>safe</code>, <code>truncatechars</code></li>
+                                <li>Auto-escaping prevents XSS attacks; use <code>|safe</code> only with trusted content</li>
+                                <li>Custom tags and filters can be created in app's <code>templatetags</code> directory</li>
+                            </ul>
+                        </div>
+
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-paint-brush"></i> Template Design Patterns</h3>
+                            <p>Django templates encourage separation of presentation from logic. Use template inheritance to create a consistent layout across pages. Includes help reuse snippets like navigation bars. Filters modify variables in a chainable way, keeping templates clean.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-code-branch"></i> Template Inheritance</h4>
+                                    <p>Base templates define blocks that child templates override. This is the most powerful feature for DRY templates.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-filter"></i> Filters & Tags</h4>
+                                    <p>Filters transform values (e.g., <code>{{ price|floatformat:2 }}</code>). Tags like <code>{% url %}</code> generate URLs dynamically.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-shield-alt"></i> Auto-escaping</h4>
+                                    <p>Django automatically escapes HTML special characters to prevent XSS. Use <code>{% autoescape off %}</code> or <code>|safe</code> carefully.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-newspaper"></i> Content Management Systems</h4>
+                                <p>Django templates power CMS like Wagtail and Django CMS. They allow content editors to manage pages with custom templates, while developers maintain a consistent base. Large sites like The Onion use Django templates for their frontend.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Build a template hierarchy:</strong> Create a base template with header, footer, and sidebar blocks. Then create two child templates: one for a blog post list and one for a single post. Use template tags to loop over posts and display them.</p>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 3: URLs & Views -->
+            <div class="course-module" id="module3" data-aos="fade-up" data-difficulty="beginner">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>URLS & VIEWS</h1>
+                    <h3>Connect URLs to Python functions</h3>
+                    <span class="difficulty">Beginner</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" class="module-icon" alt="Django Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 3: <span>URL Dispatcher and View Functions</span></h1>
+                    <p>Django's URL dispatcher maps URL patterns to view functions (or class-based views). A view is a Python function that takes a request and returns a response. This clean separation lets you change URLs without touching views, and vice versa.</p>
+                    
+                    <p>URL patterns can include converters to capture parts of the URL as parameters (e.g., <code>&lt;int:post_id&gt;</code>). You can also name your URLs and use the <code>{% url %}</code> tag in templates, so you don't have to hardcode links.</p>
+                    
+                    <h3>Example URLconf & View:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">urls.py</div>
+                                <div class="editor-tab">views.py</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-3" spellcheck="false"># urls.py
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('', views.home, name='home'),
+    path('posts/', views.post_list, name='post-list'),
+    path('posts/&lt;int:post_id&gt;/', views.post_detail, name='post-detail'),
+]
+
+# views.py
+from django.shortcuts import render, get_object_or_404
+from .models import Post
+
+def home(request):
+    return render(request, 'home.html', {'message': 'Hello World!'})
+
+def post_list(request):
+    posts = Post.objects.all()
+    return render(request, 'post_list.html', {'posts': posts})
+
+def post_detail(request, post_id):
+    post = get_object_or_404(Post, pk=post_id)
+    return render(request, 'post_detail.html', {'post': post})</textarea>
+                        <button class="run-btn" onclick="runCode('editor-3', 'output-3')">
+                            <i class="fas fa-play"></i> Simulate View Output
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Simulated Response
+                        </div>
+                        <div class="preview-container" id="output-3"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li><code>path(route, view, name)</code> defines a URL pattern</li>
+                                <li>Converters: <code>int</code>, <code>str</code>, <code>slug</code>, <code>uuid</code>, <code>path</code></li>
+                                <li><code>include()</code> allows including other URLconfs for app modularity</li>
+                                <li><code>reverse()</code> or <code>{% url 'name' arg %}</code> generates URLs from names</li>
+                                <li>View functions always receive <code>request</code> and return <code>HttpResponse</code></li>
+                                <li>Shortcuts: <code>render()</code>, <code>redirect()</code>, <code>get_object_or_404()</code></li>
+                                <li>Class-based views (CBVs) offer reusable patterns (later module)</li>
+                            </ul>
+                        </div>
+
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-link"></i> Clean URL Design</h3>
+                            <p>Django encourages clean, SEO-friendly URLs. The dispatcher is regex-based but <code>path()</code> provides a simpler syntax. Each URL pattern corresponds to a view, and you can group related patterns in app-specific URLconfs.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-sitemap"></i> URL Namespacing</h4>
+                                    <p>Use <code>app_name</code> and <code>name</code> to avoid collisions between apps. Then reference as <code>{% url 'app:name' %}</code>.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-arrows-alt"></i> Redirecting</h4>
+                                    <p><code>redirect('view-name')</code> or <code>redirect(model_instance)</code> (uses get_absolute_url) for POST/redirect/GET pattern.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-search"></i> get_object_or_404</h4>
+                                    <p>Common pattern: try to get object, raise 404 if not found, keeping views concise.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-store"></i> E-commerce Sites</h4>
+                                <p>E-commerce platforms use URL patterns like <code>/product/&lt;slug:product_slug&gt;/</code> for product pages, <code>/category/&lt;slug:cat_slug&gt;/</code> for categories. Named URLs allow easy linking in templates without hardcoding.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Build a simple blog:</strong> Create a Django app with URL patterns for home, list of posts, and detail view. Implement views that fetch data from a model (you can create a dummy list in views for now). Use <code>{% url %}</code> in templates to link to detail pages.</p>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 4: Models & ORM -->
+            <div class="course-module" id="module4" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>MODELS & ORM</h1>
+                    <h3>Define data models and query database</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" class="module-icon" alt="Django Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 4: <span>Database Models and Django ORM</span></h1>
+                    <p>Models are Python classes that define the structure of your database tables. Each model maps to a single table, and each attribute represents a database field. Django automatically creates the tables and provides a high-level, Pythonic API to query the databaseâ€”the ORM.</p>
+                    
+                    <p>The ORM lets you retrieve, filter, create, update, and delete objects without writing SQL. It supports relationships (ForeignKey, ManyToMany, OneToOne) and complex lookups. Migrations handle schema changes over time.</p>
+                    
+                    <h3>Example Model and Queries:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">models.py</div>
+                                <div class="editor-tab">Queries</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-4" spellcheck="false"># models.py
+from django.db import models
+
+class Author(models.Model):
+    name = models.CharField(max_length=100)
+    email = models.EmailField(unique=True)
+    bio = models.TextField(blank=True)
+
+    def __str__(self):
+        return self.name
+
+class Post(models.Model):
+    title = models.CharField(max_length=200)
+    content = models.TextField()
+    published_date = models.DateTimeField(auto_now_add=True)
+    author = models.ForeignKey(Author, on_delete=models.CASCADE, related_name='posts')
+    tags = models.ManyToManyField('Tag', blank=True)
+
+    class Meta:
+        ordering = ['-published_date']
+
+    def __str__(self):
+        return self.title
+
+class Tag(models.Model):
+    name = models.CharField(max_length=50, unique=True)
+
+    def __str__(self):
+        return self.name
+
+# Sample ORM queries
+# Create
+author = Author.objects.create(name='John', email='john@example.com')
+post = Post.objects.create(title='Hello', content='...', author=author)
+
+# Read
+posts = Post.objects.filter(author__name='John')
+post = Post.objects.get(id=1)
+
+# Update
+post.title = 'Updated Title'
+post.save()
+
+# Delete
+post.delete()
+
+# Relationships
+author.posts.all()
+post.tags.add(tag)</textarea>
+                        <button class="run-btn" onclick="runCode('editor-4', 'output-4')">
+                            <i class="fas fa-play"></i> Simulate Output
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Simulated Query Results
+                        </div>
+                        <div class="preview-container" id="output-4"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>Model fields: CharField, TextField, IntegerField, DateField, BooleanField, etc.</li>
+                                <li>Relationships: ForeignKey (many-to-one), ManyToManyField, OneToOneField</li>
+                                <li>Meta class: defines ordering, table name, indexes, etc.</li>
+                                <li>Migrations: <code>python manage.py makemigrations</code> and <code>migrate</code></li>
+                                <li>ORM methods: <code>all()</code>, <code>filter()</code>, <code>exclude()</code>, <code>get()</code>, <code>create()</code></li>
+                                <li>Lookups: <code>field__exact</code>, <code>field__icontains</code>, <code>field__gt</code>, <code>field__in</code></li>
+                                <li>Aggregation: <code>Count</code>, <code>Sum</code>, <code>Avg</code> via <code>.aggregate()</code> or <code>.annotate()</code></li>
+                            </ul>
+                        </div>
+
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-database"></i> Django ORM Deep Dive</h3>
+                            <p>The ORM is one of Django's most powerful components. It supports lazy evaluation (queries are not executed until evaluated), queryset chaining, and efficient joins via <code>select_related</code> and <code>prefetch_related</code>.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-chart-line"></i> Aggregation</h4>
+                                    <p><code>Post.objects.aggregate(avg_comments=Avg('comments_count'))</code> returns a dictionary.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-link"></i> Related objects</h4>
+                                    <p>Access via <code>author.posts.all()</code> (reverse relation) or <code>post.author</code> (forward).</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-tachometer-alt"></i> Performance</h4>
+                                    <p>Use <code>.select_related('author')</code> for ForeignKey to reduce queries; <code>.prefetch_related('tags')</code> for ManyToMany.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-chart-pie"></i> Analytics Platforms</h4>
+                                <p>Companies like Disqus use Django's ORM to handle billions of rows. The ORM's ability to generate efficient SQL, combined with database optimizations, scales well. Complex queries for reporting are built using annotations and aggregations.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Build a model-driven blog:</strong> Define models for Post, Author, and Comment. Create views that list posts, show detail with comments, and a form to add comments (use Django shell to test). Implement proper foreign key relations.</p>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 5: Django Forms -->
+            <div class="course-module" id="module5" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>DJANGO FORMS</h1>
+                    <h3>Handle user input with Django forms</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" class="module-icon" alt="Django Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 5: <span>Form handling and validation</span></h1>
+                    <p>Django provides a comprehensive form library to handle HTML forms, validation, and error display. Forms can be built manually from <code>forms.Form</code> or generated from models using <code>ModelForm</code>. They handle rendering, cleaning, and saving data securely.</p>
+                    
+                    <p>A form consists of fields with validation rules. When submitted, you bind data to the form, validate it, and then process it (e.g., save a model instance). CSRF protection is automatically included.</p>
+                    
+                    <h3>Example ModelForm:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">forms.py</div>
+                                <div class="editor-tab">views.py</div>
+                                <div class="editor-tab">template</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-5" spellcheck="false"># forms.py
+from django import forms
+from .models import Post
+
+class PostForm(forms.ModelForm):
+    class Meta:
+        model = Post
+        fields = ['title', 'content', 'tags']
+        widgets = {
+            'content': forms.Textarea(attrs={'rows': 5}),
+        }
+
+    def clean_title(self):
+        title = self.cleaned_data['title']
+        if 'bad' in title.lower():
+            raise forms.ValidationError("Title contains inappropriate word.")
+        return title
+
+# views.py
+from django.shortcuts import render, redirect
+from .forms import PostForm
+
+def create_post(request):
+    if request.method == 'POST':
+        form = PostForm(request.POST)
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.author = request.user
+            post.save()
+            form.save_m2m()  # for many-to-many
+            return redirect('post-detail', post_id=post.id)
+    else:
+        form = PostForm()
+    return render(request, 'post_form.html', {'form': form})
+
+# post_form.html template
+&lt;form method="post"&gt;
+    {% csrf_token %}
+    {{ form.as_p }}
+    &lt;button type="submit"&gt;Save&lt;/button&gt;
+&lt;/form&gt;</textarea>
+                        <button class="run-btn" onclick="runCode('editor-5', 'output-5')">
+                            <i class="fas fa-play"></i> Simulate Form
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Simulated Form
+                        </div>
+                        <div class="preview-container" id="output-5"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li><code>forms.Form</code> for custom forms, <code>ModelForm</code> for model-based forms</li>
+                                <li>Field types: CharField, EmailField, ChoiceField, DateField, etc.</li>
+                                <li>Validation happens in <code>clean_&lt;fieldname&gt;</code> methods or <code>clean()</code></li>
+                                <li><code>is_valid()</code> runs validation and returns boolean</li>
+                                <li><code>cleaned_data</code> contains validated data after <code>is_valid()</code></li>
+                                <li><code>form.save(commit=False)</code> creates model instance without saving to DB</li>
+                                <li>Always include <code>{% csrf_token %}</code> in POST forms</li>
+                                <li>Form rendering: <code>as_p</code>, <code>as_table</code>, <code>as_ul</code>, or manual</li>
+                            </ul>
+                        </div>
+
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-check-circle"></i> Secure Form Handling</h3>
+                            <p>Django forms protect against CSRF, validate data, and prevent SQL injection via the ORM. Custom validation ensures business rules are enforced. Forms also handle file uploads with <code>forms.FileField</code> and <code>request.FILES</code>.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-upload"></i> File Uploads</h4>
+                                    <p>Use <code>forms.FileField</code> or <code>ImageField</code>. Set <code>enctype="multipart/form-data"</code> in form tag.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-redo-alt"></i> Form Processing</h4>
+                                    <p>Pattern: check POST, instantiate form with data, validate, save, redirect (POST/redirect/GET).</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-pencil-alt"></i> Widgets</h4>
+                                    <p>Customize HTML input with widgets: <code>forms.Textarea</code>, <code>forms.Select</code>, <code>forms.DateInput(attrs={'type': 'date'})</code>.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-user-plus"></i> User Registration</h4>
+                                <p>Django's built-in <code>UserCreationForm</code> is a ModelForm for the User model. Custom forms handle profile data, validation (unique email), and integration with authentication.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Create a contact form and a blog post form:</strong> Implement a contact form using <code>forms.Form</code> with name, email, message. On valid submission, send an email (simulate with print). Also implement a <code>ModelForm</code> for adding new blog posts with validation.</p>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 6: Admin & Class-Based Views -->
+            <div class="course-module" id="module6" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>ADMIN & CBVs</h1>
+                    <h3>Use Django admin and class-based views</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" class="module-icon" alt="Django Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 6: <span>Django Admin and Class-Based Views</span></h1>
+                    <p>The Django admin is an automatic, customizable interface for managing your models. After registering models, you get a full CRUD UI with search, filters, and permissions. It's a huge time-saver for internal tools and content management.</p>
+                    
+                    <p>Class-Based Views (CBVs) are reusable view classes that handle common patterns like displaying lists, details, forms, etc. They promote DRY and can be extended with mixins. Generic views like <code>ListView</code>, <code>DetailView</code>, <code>CreateView</code> reduce boilerplate.</p>
+                    
+                    <h3>Admin Registration and CBV Example:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">admin.py</div>
+                                <div class="editor-tab">views.py (CBV)</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-6" spellcheck="false"># admin.py
+from django.contrib import admin
+from .models import Post, Author
+
+@admin.register(Post)
+class PostAdmin(admin.ModelAdmin):
+    list_display = ('title', 'author', 'published_date')
+    list_filter = ('author', 'tags')
+    search_fields = ('title', 'content')
+    prepopulated_fields = {'slug': ('title',)}  # if you have slug field
+
+admin.site.register(Author)
+
+# views.py using Class-Based Views
+from django.views.generic import ListView, DetailView, CreateView
+from django.urls import reverse_lazy
+from .models import Post
+from .forms import PostForm
+
+class PostListView(ListView):
+    model = Post
+    template_name = 'post_list.html'
+    context_object_name = 'posts'
+    paginate_by = 10
+
+class PostDetailView(DetailView):
+    model = Post
+    template_name = 'post_detail.html'
+    context_object_name = 'post'
+
+class PostCreateView(CreateView):
+    model = Post
+    form_class = PostForm
+    template_name = 'post_form.html'
+    success_url = reverse_lazy('post-list')
+
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)</textarea>
+                        <button class="run-btn" onclick="runCode('editor-6', 'output-6')">
+                            <i class="fas fa-play"></i> Simulate
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Admin Preview
+                        </div>
+                        <div class="preview-container" id="output-6"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>Register models in <code>admin.py</code> to enable admin interface</li>
+                                <li>Customize admin with <code>ModelAdmin</code> options: <code>list_display</code>, <code>search_fields</code>, <code>list_filter</code>, etc.</li>
+                                <li>Class-Based Views: <code>View</code>, <code>TemplateView</code>, <code>ListView</code>, <code>DetailView</code>, <code>CreateView</code>, <code>UpdateView</code>, <code>DeleteView</code></li>
+                                <li>CBVs require specifying model or queryset, template name, context object name</li>
+                                <li>Mixins add reusable functionality (e.g., <code>LoginRequiredMixin</code>)</li>
+                                <li><code>reverse_lazy</code> for URLs in class attributes</li>
+                                <li>Override methods like <code>get_queryset()</code>, <code>form_valid()</code> for custom logic</li>
+                            </ul>
+                        </div>
+
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-tachometer-alt"></i> Admin Customization</h3>
+                            <p>The admin is highly customizable: you can create inline forms for related models, add custom actions, override templates, and control permissions. It's perfect for building internal dashboards quickly.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-cogs"></i> Admin Actions</h4>
+                                    <p>Define custom actions (e.g., "mark as published") that operate on selected items.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-sitemap"></i> Inlines</h4>
+                                    <p>Edit related objects on the same page using <code>TabularInline</code> or <code>StackedInline</code>.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-code-branch"></i> Mixins for CBVs</h4>
+                                    <p>Combine multiple mixins to add authentication, permission checks, or custom context.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-building"></i> Content Management</h4>
+                                <p>News sites use Django admin to allow editors to publish articles. They customize admin with rich text widgets, preview buttons, and workflow states. CBVs power the public-facing views, with ListView for archives and DetailView for articles.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Build a blog with admin and CBVs:</strong> Register your Post model with admin, customize list display. Convert your previous function-based views to class-based views: ListView, DetailView, and CreateView (with login required).</p>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 7: Static Files & Media -->
+            <div class="course-module" id="module7" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>STATIC & MEDIA</h1>
+                    <h3>Manage CSS, JavaScript, and uploaded files</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" class="module-icon" alt="Django Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 7: <span>Static files and user-uploaded media</span></h1>
+                    <p>Django provides a framework for managing static files (CSS, JavaScript, images) and user-uploaded media files. In development, Django serves them automatically; in production, you configure your web server to serve them or use a CDN.</p>
+                    
+                    <p>Static files are stored in app directories or a central static folder. Media files are uploaded by users via forms and stored in a media directory. Both use the <code>STATIC_URL</code> and <code>MEDIA_URL</code> settings.</p>
+                    
+                    <h3>Setup and Template Usage:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">settings.py</div>
+                                <div class="editor-tab">template</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-7" spellcheck="false"># settings.py
+import os
+
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]  # additional locations
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')     # for collectstatic
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# In main urls.py (development only)
+from django.conf import settings
+from django.conf.urls.static import static
+
+urlpatterns = [...] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+# Template usage
+{% load static %}
+&lt;link rel="stylesheet" href="{% static 'css/style.css' %}"&gt;
+&lt;img src="{% static 'images/logo.png' %}" alt="Logo"&gt;
+&lt;img src="{{ post.image.url }}" alt="{{ post.title }}"&gt;</textarea>
+                        <button class="run-btn" onclick="runCode('editor-7', 'output-7')">
+                            <i class="fas fa-play"></i> Simulate
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Static Files Preview
+                        </div>
+                        <div class="preview-container" id="output-7"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>Use <code>{% load static %}</code> in templates to access static tags</li>
+                                <li><code>{% static 'path' %}</code> generates absolute URL for static files</li>
+                                <li>Collect all static files to one location using <code>python manage.py collectstatic</code></li>
+                                <li>For uploaded files, define <code>MEDIA_URL</code> and <code>MEDIA_ROOT</code></li>
+                                <li>In development, add media serving to <code>urls.py</code> (only for development)</li>
+                                <li>Model <code>FileField</code> or <code>ImageField</code> store file paths; use <code>object.file.url</code> in template</li>
+                                <li>In production, configure web server (Nginx/Apache) to serve static/media</li>
+                            </ul>
+                        </div>
+
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-cloud-upload-alt"></i> Handling User Uploads</h3>
+                            <p>User-uploaded files require careful handling: validation (size, type), security (scan for malware), and storage (local or cloud like AWS S3). Django's <code>FileField</code> handles storage via <code>storage</code> backends.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-image"></i> ImageField</h4>
+                                    <p>Extends FileField with image validation (requires Pillow). Provides <code>.width</code> and <code>.height</code> attributes.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-shield-alt"></i> Security</h4>
+                                    <p>Never trust user-uploaded files. Validate content, limit file types, and serve them from a separate domain if possible to avoid XSS.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-sync-alt"></i> collectstatic</h4>
+                                    <p>Collects static files from all apps into one directory for easy deployment. Essential for production.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-camera-retro"></i> Photo Sharing Sites</h4>
+                                <p>Platforms like Instagram clones use Django to handle image uploads. They use <code>ImageField</code> to store photos, generate thumbnails with libraries like sorl-thumbnail, and serve from CDN. Static files are versioned and minified for performance.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Add profile pictures to your blog:</strong> Extend your User model (or create a Profile model) with an <code>ImageField</code>. Create a form to upload/update profile picture. Update the template to display the image using <code>MEDIA_URL</code>. Configure settings for media files.</p>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 8: Django REST Framework -->
+            <div class="course-module" id="module8" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>DJANGO REST</h1>
+                    <h3>Build REST APIs with Django REST Framework</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" class="module-icon" alt="Django Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 8: <span>Django REST Framework (DRF)</span></h1>
+                    <p>Django REST Framework is a powerful toolkit for building Web APIs. It integrates seamlessly with Django and provides serializers, viewsets, routers, authentication, and browsable API interfaces. It's the go-to choice for building RESTful APIs with Django.</p>
+                    
+                    <p>Serializers convert complex data (like querysets) to/from JSON. Viewsets combine logic for common actions (list, create, retrieve, update, delete). Routers automatically generate URL patterns for viewsets.</p>
+                    
+                    <h3>Basic DRF Example:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">serializers.py</div>
+                                <div class="editor-tab">views.py</div>
+                                <div class="editor-tab">urls.py</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-8" spellcheck="false"># serializers.py
+from rest_framework import serializers
+from .models import Post
+
+class PostSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Post
+        fields = ['id', 'title', 'content', 'author', 'published_date']
+
+# views.py
+from rest_framework import viewsets
+from .models import Post
+from .serializers import PostSerializer
+
+class PostViewSet(viewsets.ModelViewSet):
+    queryset = Post.objects.all()
+    serializer_class = PostSerializer
+
+# urls.py
+from django.urls import include, path
+from rest_framework.routers import DefaultRouter
+from .views import PostViewSet
+
+router = DefaultRouter()
+router.register(r'posts', PostViewSet)
+
+urlpatterns = [
+    path('api/', include(router.urls)),
+]</textarea>
+                        <button class="run-btn" onclick="runCode('editor-8', 'output-8')">
+                            <i class="fas fa-play"></i> Simulate API
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Browsable API Preview
+                        </div>
+                        <div class="preview-container" id="output-8"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>Install with <code>pip install djangorestframework</code> and add to <code>INSTALLED_APPS</code></li>
+                                <li><code>ModelSerializer</code> automatically generates fields based on model</li>
+                                <li><code>ModelViewSet</code> provides default CRUD actions</li>
+                                <li><code>DefaultRouter</code> generates URL patterns for viewsets (e.g., /api/posts/, /api/posts/1/)</li>
+                                <li>Permissions: <code>IsAuthenticated</code>, <code>AllowAny</code>, custom permissions</li>
+                                <li>Authentication: Session, Token, JWT, etc.</li>
+                                <li>Browsable API for easy testing and documentation</li>
+                            </ul>
+                        </div>
+
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-plug"></i> Building APIs</h3>
+                            <p>DRF makes it easy to build RESTful APIs with minimal code. It supports filtering, pagination, throttling, versioning, and content negotiation. You can also use function-based views with <code>@api_view</code> decorators.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-filter"></i> Filtering</h4>
+                                    <p>Use <code>django-filter</code> with DRF to add filtering, searching, and ordering to API endpoints.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-lock"></i> Authentication</h4>
+                                    <p>DRF supports multiple auth schemes: Basic, Session, Token, JWT (via third-party packages).</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-file-code"></i> Schema Generation</h4>
+                                    <p>Auto-generate OpenAPI (Swagger) schemas with <code>drf-yasg</code> or <code>drf-spectacular</code>.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-mobile-alt"></i> Mobile App Backends</h4>
+                                <p>Many mobile apps use Django REST Framework as their backend API. For example, a social media app might have endpoints for posts, likes, comments, and user profiles. DRF's built-in authentication and permissions handle user-specific data.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Create a REST API for your blog:</strong> Using DRF, build a full CRUD API for your Post model. Implement token authentication so only authenticated users can create/update/delete. Add filtering by author and date.</p>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 9: Security & Best Practices -->
+            <div class="course-module" id="module9" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>SECURITY</h1>
+                    <h3>Secure your Django applications</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" class="module-icon" alt="Django Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 9: <span>Security best practices and deployment</span></h1>
+                    <p>Django comes with many security features out of the box, but developers must configure them correctly. This module covers common threats (XSS, CSRF, SQL injection, clickjacking) and how Django protects against them, plus additional best practices for production deployments.</p>
+                    
+                    <h3>Security Checklist:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">settings.py</div>
+                                <div class="editor-tab">Best Practices</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-9" spellcheck="false"># settings.py production settings
+
+DEBUG = False
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
+ALLOWED_HOSTS = ['yourdomain.com']
+
+# Security middleware (already in MIDDLEWARE)
+# 'django.middleware.security.SecurityMiddleware'
+
+# HTTPS settings
+SECURE_SSL_REDIRECT = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+SECURE_HSTS_SECONDS = 31536000  # 1 year
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+SECURE_HSTS_PRELOAD = True
+SECURE_REFERRER_POLICY = 'same-origin'
+
+# Content Security Policy (using django-csp)
+CSP_DEFAULT_SRC = ("'self'",)
+
+# Additional protections
+X_FRAME_OPTIONS = 'DENY'
+SECURE_CONTENT_TYPE_NOSNIFF = True
+SECURE_BROWSER_XSS_FILTER = True
+
+# Never store passwords in plain text (Django hashes them)
+# Use strong password validators
+
+# Best Practices:
+# - Keep dependencies updated
+# - Use environment variables for secrets
+# - Run with least privilege (database user)
+# - Regular backups
+# - Monitor logs</textarea>
+                        <button class="run-btn" onclick="runCode('editor-9', 'output-9')">
+                            <i class="fas fa-play"></i> Simulate
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Security Checklist
+                        </div>
+                        <div class="preview-container" id="output-9"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>Cross-Site Scripting (XSS): Django templates auto-escape, but be careful with <code>|safe</code></li>
+                                <li>Cross-Site Request Forgery (CSRF): Django includes <code>{% csrf_token %}</code> and middleware</li>
+                                <li>SQL Injection: Django's ORM uses parameterized queries, but raw SQL must be safe</li>
+                                <li>Clickjacking: <code>X-Frame-Options</code> middleware prevents embedding in iframes</li>
+                                <li>Always use HTTPS in production; set <code>SECURE_SSL_REDIRECT</code> and HSTS</li>
+                                <li>Keep <code>SECRET_KEY</code> secret; use environment variables</li>
+                                <li>Set <code>DEBUG = False</code> and proper <code>ALLOWED_HOSTS</code></li>
+                            </ul>
+                        </div>
+
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-shield-alt"></i> Defense in Depth</h3>
+                            <p>Security is multi-layered. Django provides tools, but you must configure them. Use password validators to enforce strong passwords. Limit user permissions with Django's built-in authentication system. Regularly update dependencies to patch vulnerabilities.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-database"></i> Database Security</h4>
+                                    <p>Use a dedicated database user with minimal privileges. Never store sensitive data unencrypted; consider using Django's encryption utilities.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-cloud"></i> Deployment Security</h4>
+                                    <p>Use a reverse proxy (Nginx) to handle SSL and serve static files. Run your app as a non-root user. Use firewalls and fail2ban.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-file-export"></i> Logging & Monitoring</h4>
+                                    <p>Log errors and suspicious activities. Use tools like Sentry for error tracking and monitoring.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-bank"></i> Financial Applications</h4>
+                                <p>Banks and fintech apps built with Django implement strict security measures: HTTPS everywhere, encrypted data, audit logs, two-factor authentication, and regular security audits. They comply with regulations like PCI-DSS.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Audit your blog for security:</strong> Review your project settings against the security checklist. Ensure <code>DEBUG=False</code> in production. Set up environment variables for secret key. Configure HTTPS locally (using tools like ngrok for testing) and implement secure cookies.</p>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 10: Advanced Django -->
+            <div class="course-module" id="module10" data-aos="fade-up" data-difficulty="advanced">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>ADVANCED DJANGO</h1>
+                    <h3>Custom middleware, signals, caching, and more</h3>
+                    <span class="difficulty">Advanced</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" class="module-icon" alt="Django Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 10: <span>Advanced topics and optimization</span></h1>
+                    <p>This module covers advanced Django features: custom middleware for processing requests/responses, signals for decoupled event handling, caching strategies, asynchronous views, and performance optimization techniques.</p>
+                    
+                    <h3>Examples:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">middleware.py</div>
+                                <div class="editor-tab">signals.py</div>
+                                <div class="editor-tab">caching</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-10" spellcheck="false"># middleware.py
+class SimpleMiddleware:
+    def __init__(self, get_response):
+        self.get_response = get_response
+
+    def __call__(self, request):
+        # Code before view
+        request.start_time = time.time()
+        response = self.get_response(request)
+        # Code after view
+        duration = time.time() - request.start_time
+        print(f"Request took {duration}s")
+        return response
+
+# signals.py
+from django.db.models.signals import post_save
+from django.dispatch import receiver
+from .models import Post
+
+@receiver(post_save, sender=Post)
+def notify_followers(sender, instance, created, **kwargs):
+    if created:
+        # Send notification to followers
+        pass
+
+# caching
+from django.core.cache import cache
+
+def my_view(request):
+    data = cache.get('my_key')
+    if not data:
+        data = expensive_operation()
+        cache.set('my_key', data, 60*15)  # 15 min
+    return render(request, 'page.html', {'data': data})
+
+# settings.py for caching
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.redis.RedisCache',
+        'LOCATION': 'redis://127.0.0.1:6379',
+    }
+}</textarea>
+                        <button class="run-btn" onclick="runCode('editor-10', 'output-10')">
+                            <i class="fas fa-play"></i> Simulate
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Advanced Concepts
+                        </div>
+                        <div class="preview-container" id="output-10"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>Middleware hooks into request/response cycle; can modify request, response, or raise exceptions</li>
+                                <li>Signals allow decoupled applications to get notified when certain actions occur (e.g., post_save)</li>
+                                <li>Caching: per-view, template fragments, low-level API. Use Redis/Memcached for performance</li>
+                                <li>Asynchronous views (Django 3.1+): define async views with <code>async def</code> for I/O-bound tasks</li>
+                                <li>Custom management commands: write your own <code>manage.py</code> commands</li>
+                                <li>Database optimization: use indexes, <code>select_related</code>, <code>only()</code>, <code>defer()</code></li>
+                                <li>Task queues: Celery for background tasks (email, image processing)</li>
+                            </ul>
+                        </div>
+
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-rocket"></i> Scaling Django</h3>
+                            <p>To handle high traffic, you need caching, database optimization, load balancing, and async processing. Use CDNs for static/media, database read replicas, and connection pooling. Django's caching framework can significantly reduce database load.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-bolt"></i> Asynchronous Views</h4>
+                                    <p>Django supports async views, but you need an async server like Daphne or Uvicorn. Great for APIs that call external services.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-chart-line"></i> Performance Monitoring</h4>
+                                    <p>Use tools like Django Debug Toolbar, Silk, and New Relic to identify bottlenecks.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-cubes"></i> Third-party packages</h4>
+                                    <p>Leverage packages like django-cachalot (caching querysets), django-constance (dynamic settings), and django-guardian (per-object permissions).</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-chart-pie"></i> High-Traffic Platforms</h4>
+                                <p>Disqus serves billions of requests with Django, using extensive caching (memcached), database sharding, and asynchronous processing. Instagram uses Django with PostgreSQL, caching, and a customized ORM to handle millions of users.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Optimize your blog:</strong> Implement caching for your post list view. Write a custom middleware that logs request duration. Add a signal that sends an email to the author when a new comment is posted on their post (simulate with print).</p>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Practice Playground -->
+            <div class="course-module" id="playground" data-aos="fade-up">
+                <div class="course-three">
+                    <h1>PRACTICE PLAYGROUND</h1>
+                    <h3>Experiment with Django concepts</h3>
+                    <i class="fab fa-python course-icon" style="color: var(--primary);"></i>
+                </div>
+                <div class="course-one">
+                    <h1>Your Django Playground: <span>Try out templates, views, and models</span></h1>
+                    <p>Use this space to simulate Django template code and see the output. You can write Django template syntax with variables, filters, and tags. The preview will render as if the context was provided.</p>
+                    
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Django Template</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="playground-editor" spellcheck="false">&lt;!-- Sample Django template --&gt;
+{% load static %}
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;{{ page_title|default:"Django Playground" }}&lt;/title&gt;
+    &lt;link rel="stylesheet" href="{% static 'css/style.css' %}"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Welcome, {{ user.name }}!&lt;/h1&gt;
+    
+    &lt;h2&gt;Your posts ({{ posts|length }} total):&lt;/h2&gt;
+    &lt;ul&gt;
+    {% for post in posts %}
+        &lt;li&gt;
+            &lt;a href="{% url 'post-detail' post.id %}"&gt;{{ post.title }}&lt;/a&gt;
+            - {{ post.published_date|date:"M d, Y" }}
+        &lt;/li&gt;
+    {% empty %}
+        &lt;li&gt;No posts yet.&lt;/li&gt;
+    {% endfor %}
+    &lt;/ul&gt;
+
+    &lt;footer&gt;
+        &lt;p&gt;This page was rendered at {% now "Y-m-d H:i" %}&lt;/p&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+                        <button class="run-btn" onclick="runCode('playground-editor', 'playground-output')">
+                            <i class="fas fa-play"></i> Run Code (Simulate)
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Rendered Output
+                        </div>
+                        <div class="preview-container" id="playground-output"></div>
+                    </div>
+                    
+                    <div class="course-five">
+                        <h3>Challenge Exercises:</h3>
+                        <ol>
+                            <li>Build a Django template that lists items from a context variable <code>items</code> with alternating row colors.</li>
+                            <li>Create a template that extends a base and overrides multiple blocks.</li>
+                            <li>Use the <code>{% if %}</code> tag to conditionally show content based on a user's login status.</li>
+                            <li>Implement a simple form using Django's form rendering (simulate with hardcoded form HTML).</li>
+                        </ol>
+                        
+                        <h3>Tips:</h3>
+                        <ul>
+                            <li>Remember to include <code>{% csrf_token %}</code> in forms.</li>
+                            <li>Use <code>{% static %}</code> for linking CSS/JS.</li>
+                            <li>Filters like <code>|date</code>, <code>|default</code>, <code>|linebreaks</code> are very useful.</li>
+                            <li>For more advanced simulations, imagine a context with variables: <code>user</code>, <code>posts</code>, <code>page_title</code>.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Premium Subscription CTA -->
+            <div class="premium-subscription" id="premium-subscription" data-aos="fade-up">
+                <h2>Unlock Premium SkillMynte Content</h2>
+                <p>Upgrade to SkillMynte Pro for exclusive courses, advanced projects, and personalized learning paths</p>
+                
+                <div class="premium-features">
+                    <div class="premium-feature">
+                        <i class="fas fa-gem"></i>
+                        <h3>Premium Courses</h3>
+                        <p>Access our entire library of advanced courses and exclusive content</p>
+                    </div>
+                    <div class="premium-feature">
+                        <i class="fas fa-trophy"></i>
+                        <h3>Certification</h3>
+                        <p>Earn industry-recognized certificates to showcase your skills</p>
+                    </div>
+                    <div class="premium-feature">
+                        <i class="fas fa-user-graduate"></i>
+                        <h3>Mentorship</h3>
+                        <p>Get personalized guidance from industry experts</p>
+                    </div>
+                </div>
+                
+                <div class="pricing-options">
+                    <div class="pricing-option">
+                        <h3>Monthly</h3>
+                        <div class="price">₦3,500<span>/month</span></div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> All Premium Courses</li>
+                            <li><i class="fas fa-check"></i> Practice Projects</li>
+                            <li><i class="fas fa-check"></i> Community Access</li>
+                            <li><i class="fas fa-check"></i> Certificates</li>
+                            <li><i class="fas fa-check"></i> personal AI inbuilt</li>
+                        </ul>
+                        <a href="premium courses.html"><button class="pricing-btn">Get Started</button></a>
+                    </div>
+                    
+                    <div class="pricing-option" style="border-color: var(--white); transform: scale(1.05);">
+                        <h3>Annual <span style="background: var(--white); color: #2962FF; padding: 0.2rem 0.5rem; border-radius: 20px; font-size: 0.8rem; margin-left: 0.5rem;">Best Value</span></h3>
+                        <div class="price">₦37,000<span>/year</span></div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> All Premium Courses</li>
+                            <li><i class="fas fa-check"></i> Practice Projects</li>
+                            <li><i class="fas fa-check"></i> Community Access</li>
+                            <li><i class="fas fa-check"></i> Certificates</li>
+                            <li><i class="fas fa-check"></i> personal AI inbuilt</li>
+                        </ul>
+                        <a href="premium courses.html"><button class="pricing-btn">Get Started</button></a>
+                    </div>
+                    
+                    <div class="pricing-option">
+                        <h3>Lifetime</h3>
+                        <div class="price">₦200,000<span>/once</span></div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> All Premium Courses</li>
+                            <li><i class="fas fa-check"></i> Practice Projects</li>
+                            <li><i class="fas fa-check"></i> Community Access</li>
+                            <li><i class="fas fa-check"></i> Certificates</li>
+                            <li><i class="fas fa-check"></i> personal AI inbuilt</li>
+                        </ul>
+                        <a href="premium courses.html"><button class="pricing-btn">Get Started</button></a>
+                    </div>
+                </div>
+                
+                <button class="premium-cta-btn">
+                    <i class="fas fa-rocket"></i> Upgrade to SkillMynte Pro
+                </button>
+            </div>
+            
+            <!-- Footer -->
+            <footer>
+                <div class="footer-content">
+                    <div class="footer-column">
+                        <h3>About SkillMynte</h3>
+                        <p>SkillMynte is a premium learning platform dedicated to helping developers of all levels master web technologies through interactive courses and hands-on practice.</p>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/profile.php?id=61581069862024"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://x.com/SkillMynte_AI?t=CcoQtjWZGGOXqfTfrsufjQ&s=09"><i class="fab fa-twitter"></i></a>
+                            <a href="https://youtube.com/@skillmynte?si=LmX2MjSKU3N1Xa5S"><i class="fab fa-youtube"></i></a>
+                            <a href="https://www.instagram.com/skillmynte_ai?igsh=MTd1YWpjdXV1OHhrbA=="><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Quick Links</h3>
+                        <ul class="footer-links">
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Home</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Courses</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Practice</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Projects</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Popular Courses</h3>
+                        <ul class="footer-links">
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Django Mastery</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Django REST API</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Advanced Django</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Django with React</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Python for Web</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Contact Us</h3>
+                        <p><i class="fas fa-envelope"></i>Skillmynteofficial@gmail.com</p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 SkillMynte. All rights reserved. | Designed with <i class="fas fa-heart" style="color: var(--primary);"></i> for the developer community</p>
+                </div>
+            </footer>
+
+           <script>
+    // Function to run code in preview
+    function runCode(editorId, outputId) {
+        const editor = document.getElementById(editorId);
+        const output = document.getElementById(outputId);
+        
+        try {
+            output.innerHTML = editor.value;
+        } catch (error) {
+            output.innerHTML = `<div style="color: var(--accent); padding: 1rem;">Error: ${error.message}</div>`;
+        }
+    }
+    
+    // Initialize all editors with their default output
+    document.addEventListener('DOMContentLoaded', function() {
+        // Run all code editors on load
+        runCode('editor-1', 'output-1');
+        runCode('editor-2', 'output-2');
+        runCode('editor-3', 'output-3');
+        runCode('editor-4', 'output-4');
+        runCode('editor-5', 'output-5');
+        runCode('editor-6', 'output-6');
+        runCode('editor-7', 'output-7');
+        runCode('editor-8', 'output-8');
+        runCode('editor-9', 'output-9');
+        runCode('editor-10', 'output-10');
+        runCode('playground-editor', 'playground-output');
+        
+        // Add event listeners to all run buttons in editor headers
+        document.querySelectorAll('.run-editor').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const editorContainer = this.closest('.code-editor-container');
+                const editor = editorContainer.querySelector('.code-editor');
+                const output = editorContainer.querySelector('.preview-container');
+                runCode(editor.id, output.id);
+            });
+        });
+        
+        // Add reset functionality
+        document.querySelectorAll('.reset-editor').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const editorContainer = this.closest('.code-editor-container');
+                const editor = editorContainer.querySelector('.code-editor');
+                const originalContent = editor.dataset.original || editor.defaultValue;
+                editor.value = originalContent;
+                runCode(editor.id, editorContainer.querySelector('.preview-container').id);
+            });
+        });
+        
+        // Store original content for reset functionality
+        document.querySelectorAll('.code-editor').forEach(editor => {
+            editor.dataset.original = editor.value;
+        });
+
+        // Handle navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // FIXED: Hamburger menu functionality
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.querySelector('.nav-menu');
+        const sidebar = document.getElementById('sidebar');
+        const body = document.body;
+
+        function toggleMobileMenu() {
+            const isActive = navMenu.classList.contains('active');
+            
+            if (isActive) {
+                // Close menu
+                navMenu.classList.remove('active');
+                sidebar.classList.remove('active');
+                menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                body.classList.remove('menu-open');
+                menuToggle.setAttribute('aria-expanded', 'false');
+            } else {
+                // Open menu
+                navMenu.classList.add('active');
+                sidebar.classList.add('active');
+                menuToggle.innerHTML = '<i class="fas fa-times"></i>';
+                body.classList.add('menu-open');
+                menuToggle.setAttribute('aria-expanded', 'true');
+            }
+        }
+
+        function closeMobileMenu() {
+            navMenu.classList.remove('active');
+            sidebar.classList.remove('active');
+            menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            body.classList.remove('menu-open');
+            menuToggle.setAttribute('aria-expanded', 'false');
+        }
+
+        // Mobile menu toggle
+        menuToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            toggleMobileMenu();
+        });
+
+        // Close menu when clicking on nav links
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function() {
+                if (window.innerWidth <= 1024) {
+                    closeMobileMenu();
+                }
+            });
+        });
+
+        // Close menu when clicking on dropdown items
+        document.querySelectorAll('.dropdown-item').forEach(item => {
+            item.addEventListener('click', function() {
+                if (window.innerWidth <= 1024) {
+                    closeMobileMenu();
+                }
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (window.innerWidth <= 1024 && 
+                navMenu.classList.contains('active') &&
+                !e.target.closest('.nav-menu') && 
+                !e.target.closest('.menu-toggle') &&
+                !e.target.closest('.sidebar')) {
+                closeMobileMenu();
+            }
+        });
+
+        // Close menu on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+                closeMobileMenu();
+            }
+        });
+
+        // Close menu on resize if switching to desktop
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 1024 && navMenu.classList.contains('active')) {
+                closeMobileMenu();
+            }
+        });
+
+        // Mobile dropdown functionality
+        document.querySelectorAll('.courses-dropdown').forEach(dropdown => {
+            const button = dropdown.querySelector('.courses-btn');
+            
+            button.addEventListener('click', function(e) {
+                if (window.innerWidth <= 1024) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    dropdown.classList.toggle('active');
+                }
+            });
+        });
+
+        // Level filtering functionality
+        const levelButtons = document.querySelectorAll('.level-btn');
+        const modules = document.querySelectorAll('.course-module');
+        
+        levelButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const level = this.getAttribute('data-level');
+                
+                // Remove active class from all buttons
+                levelButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                this.classList.add('active');
+                
+                if (level === 'all') {
+                    // Show all modules
+                    modules.forEach(module => {
+                        module.style.display = 'flex';
+                    });
+                } else if (level === 'advanced') {
+                    // Show advanced modules (7-10)
+                    modules.forEach(module => {
+                        const moduleId = module.id;
+                        if (moduleId.includes('module7') || moduleId.includes('module8') || 
+                            moduleId.includes('module9') || moduleId.includes('module10')) {
+                            module.style.display = 'flex';
+                        } else {
+                            module.style.display = 'none';
+                        }
+                    });
+                } else {
+                    // Show modules with matching difficulty
+                    modules.forEach(module => {
+                        const difficulty = module.getAttribute('data-difficulty');
+                        if (difficulty === level) {
+                            module.style.display = 'flex';
+                        } else {
+                            module.style.display = 'none';
+                        }
+                    });
+                }
+                
+                // Scroll to first visible module
+                const firstVisible = document.querySelector('.course-module[style="display: flex;"]');
+                if (firstVisible) {
+                    firstVisible.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Search functionality
+        const searchInput = document.getElementById('search-input');
+        
+        searchInput.addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase().trim();
+            
+            if (searchTerm === '') {
+                // Show all modules if search is empty
+                modules.forEach(module => {
+                    module.style.display = 'flex';
+                });
+                return;
+            }
+            
+            modules.forEach(module => {
+                const moduleTitle = module.querySelector('h1').textContent.toLowerCase();
+                const moduleContent = module.textContent.toLowerCase();
+                
+                if (moduleTitle.includes(searchTerm) || moduleContent.includes(searchTerm)) {
+                    module.style.display = 'flex';
+                } else {
+                    module.style.display = 'none';
+                }
+            });
+        });
+    });
+    
+    // Smooth scrolling for sidebar links
+    document.querySelectorAll('.sidebar-item').forEach(item => {
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Remove active class from all items
+            document.querySelectorAll('.sidebar-item').forEach(i => {
+                i.classList.remove('active');
+            });
+            
+            // Add active class to clicked item
+            this.classList.add('active');
+            
+            // Close mobile menu if open
+            if (window.innerWidth <= 1024) {
+                document.querySelector('.nav-menu').classList.remove('active');
+                document.querySelector('.sidebar').classList.remove('active');
+                document.querySelector('.menu-toggle').innerHTML = '<i class="fas fa-bars"></i>';
+                document.body.classList.remove('menu-open');
+            }
+            
+            // Scroll to section
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 100,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+</script>
+        </div>
+    </div>
+</body>
+</html>

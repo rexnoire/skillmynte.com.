@@ -1,0 +1,2665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Basics | SkillMynte</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="rounded_logo.png">
+    <link rel="stylesheet" href="free coding basic .css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-code"></i>
+                SKILLMYNTE
+            </a>
+            <div class="nav-menu">
+                <a href="#" class="nav-link">Home</a>
+                <a href="#" class="nav-link">Courses</a>
+                <a href="#" class="nav-link">Practice</a>
+                <a href="#" class="nav-link">Projects</a>
+                
+                <div class="courses-dropdown">
+                    <button class="courses-btn">
+                        <i class="fas fa-book-open"></i> Jump to Module
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#module1" class="dropdown-item">
+                            <i class="fas fa-laptop-code algorithm-icon"></i> Programming Basics
+                        </a>
+                        <a href="#module2" class="dropdown-item">
+                            <i class="fas fa-cogs algorithm-icon"></i> Variables & Data Types
+                        </a>
+                        <a href="#module3" class="dropdown-item">
+                            <i class="fas fa-calculator algorithm-icon"></i> Operators & Expressions
+                        </a>
+                        <a href="#module4" class="dropdown-item">
+                            <i class="fas fa-code-branch algorithm-icon"></i> Control Structures
+                        </a>
+                        <a href="#module5" class="dropdown-item">
+                            <i class="fas fa-redo algorithm-icon"></i> Loops & Iteration
+                        </a>
+                        <a href="#module6" class="dropdown-item">
+                            <i class="fas fa-cube algorithm-icon"></i> Functions & Scope
+                        </a>
+                        <a href="#module7" class="dropdown-item">
+                            <i class="fas fa-layer-group algorithm-icon"></i> Arrays & Collections
+                        </a>
+                        <a href="#module8" class="dropdown-item">
+                            <i class="fas fa-object-group algorithm-icon"></i> Objects & Data Structures
+                        </a>
+                        <a href="#module9" class="dropdown-item">
+                            <i class="fas fa-bug algorithm-icon"></i> Debugging & Testing
+                        </a>
+                        <a href="#module10" class="dropdown-item">
+                            <i class="fas fa-rocket algorithm-icon"></i> Problem Solving
+                        </a>
+                        <a href="#playground" class="dropdown-item">
+                            <i class="fas fa-laptop-code"></i> Practice Playground
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Premium Course Navigation -->
+    <div class="course-navigation">
+        <div class="course-nav-container">
+            <div class="course-category">
+                <button class="category-btn">
+                    <i class="fas fa-layer-group"></i> Categories
+                </button>
+                <div class="category-dropdown">
+                    <a href="#" class="category-item">
+                        <i class="fas fa-laptop-code algorithm-icon"></i> Programming Basics
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fab fa-js-square js-icon"></i> JavaScript
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fab fa-python python-icon"></i> Python
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fab fa-java java-icon"></i> Java
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fas fa-project-diagram"></i> Algorithms
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fas fa-database"></i> Data Structures
+                    </a>
+                </div>
+            </div>
+            
+            <div class="course-levels">
+                <button class="level-btn active" data-level="all">All Levels</button>
+                <button class="level-btn" data-level="beginner">Beginner</button>
+                <button class="level-btn" data-level="intermediate">Intermediate</button>
+                <button class="level-btn" data-level="advanced">Advanced</button>
+            </div>
+            
+            <div class="course-search">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" class="search-input" id="search-input" placeholder="Search courses...">
+            </div>
+        </div>
+    </div>
+    
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <a href="#module1" class="sidebar-item active completed">
+            <i class="fas fa-laptop-code algorithm-icon"></i>
+            <span>Module 1: Programming Basics</span>
+            <span class="progress-indicator"><i class="fas fa-check"></i></span>
+        </a>
+        <a href="#module2" class="sidebar-item completed">
+            <i class="fas fa-cogs algorithm-icon"></i>
+            <span>Module 2: Variables & Data Types</span>
+            <span class="progress-indicator"><i class="fas fa-check"></i></span>
+        </a>
+        <a href="#module3" class="sidebar-item completed">
+            <i class="fas fa-calculator algorithm-icon"></i>
+            <span>Module 3: Operators & Expressions</span>
+            <span class="progress-indicator"><i class="fas fa-check"></i></span>
+        </a>
+        <a href="#module4" class="sidebar-item">
+            <i class="fas fa-code-branch algorithm-icon"></i>
+            <span>Module 4: Control Structures</span>
+            <span class="progress-indicator">4</span>
+        </a>
+        <a href="#module5" class="sidebar-item">
+            <i class="fas fa-redo algorithm-icon"></i>
+            <span>Module 5: Loops & Iteration</span>
+            <span class="progress-indicator">5</span>
+        </a>
+        <a href="#module6" class="sidebar-item">
+            <i class="fas fa-cube algorithm-icon"></i>
+            <span>Module 6: Functions & Scope</span>
+            <span class="progress-indicator">6</span>
+        </a>
+        <a href="#module7" class="sidebar-item">
+            <i class="fas fa-layer-group algorithm-icon"></i>
+            <span>Module 7: Arrays & Collections</span>
+            <span class="progress-indicator">7</span>
+        </a>
+        <a href="#module8" class="sidebar-item">
+            <i class="fas fa-object-group algorithm-icon"></i>
+            <span>Module 8: Objects & Data Structures</span>
+            <span class="progress-indicator">8</span>
+        </a>
+        <a href="#module9" class="sidebar-item">
+            <i class="fas fa-bug algorithm-icon"></i>
+            <span>Module 9: Debugging & Testing</span>
+            <span class="progress-indicator">9</span>
+        </a>
+        <a href="#module10" class="sidebar-item">
+            <i class="fas fa-rocket algorithm-icon"></i>
+            <span>Module 10: Problem Solving</span>
+            <span class="progress-indicator">10</span>
+        </a>
+        <a href="#playground" class="sidebar-item">
+            <i class="fas fa-laptop-code"></i>
+            <span>Practice Playground</span>
+        </a>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="content-wrapper">
+        <div class="container">
+            <!-- Module 1 -->
+            <div class="course-module" id="module1" data-aos="fade-up" data-difficulty="beginner">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>PROGRAMMING BASICS</h1>
+                    <h3>Learn the fundamental concepts of programming</h3>
+                    <span class="difficulty">Beginner</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/2920/2920277.png" class="module-icon" alt="Programming Basics Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 1: <span>Introduction to Programming</span></h1>
+                    <p>Programming is the process of giving computers instructions to perform specific tasks. Think of it as teaching a very obedient but literal student who follows your exact commands. Programs are written in programming languages that humans can understand and computers can execute.</p>
+                    
+                    <p>Every program follows a basic structure. The computer reads your code line by line, executing instructions in order. Understanding this flow is essential for creating effective programs. Programming involves problem-solving, logical thinking, and breaking complex tasks into simple steps.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">JavaScript</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-1" spellcheck="false">// Your first program!
+console.log("Hello, World!");
+console.log("Welcome to Programming Basics!");
+
+// Basic calculations
+console.log("2 + 3 = " + (2 + 3));
+console.log("10 * 5 = " + (10 * 5));
+
+// Variables store information
+let message = "Programming is fun!";
+console.log(message);
+
+// Conditional logic
+let temperature = 25;
+if (temperature > 20) {
+    console.log("It's warm outside!");
+} else {
+    console.log("It's cool outside!");
+}
+
+// Try changing the temperature value above!
+// What happens if you change it to 15?</textarea>
+                        <button class="run-btn" onclick="runCode('editor-1', 'output-1')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Output Console
+                        </div>
+                        <div class="preview-container" id="output-1"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Concepts:</h3>
+                            <ul>
+                                <li><code>console.log()</code> displays output in the console</li>
+                                <li>Comments (//) are notes for humans - computers ignore them</li>
+                                <li>Variables store and manage data using names like <code>message</code></li>
+                                <li>Basic math operations work as you'd expect: +, -, *, /</li>
+                                <li>Conditional statements (<code>if/else</code>) make decisions</li>
+                                <li>Code executes line by line from top to bottom</li>
+                                <li>Programming involves both syntax (rules) and logic (thinking)</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-graduation-cap"></i> Programming Foundation Explained</h3>
+                            <p>Programming is the fundamental skill that powers all software, from simple websites to complex artificial intelligence systems. Think of it as digital problem-solving - you identify a task, break it into steps, and translate those steps into code that a computer can understand and execute.</p>
+                            
+                            <p>The programming mindset involves thinking logically, systematically, and precisely. Computers don't understand ambiguity or assumptions - they execute exactly what you tell them. This precision is what makes programming both challenging and powerful. As you learn, you'll develop problem-solving skills that apply far beyond just writing code.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-sitemap"></i> Algorithmic Thinking</h4>
+                                    <p>At its core, programming is about creating algorithms - step-by-step procedures for solving problems. This systematic approach helps you tackle complex challenges by breaking them into manageable pieces.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-code"></i> Syntax & Semantics</h4>
+                                    <p>Every programming language has syntax (grammar rules) and semantics (meaning). Learning these rules is like learning a new language that lets you communicate with computers.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-brain"></i> Computational Thinking</h4>
+                                    <p>This mental framework involves decomposition (breaking down), pattern recognition, abstraction (simplifying), and algorithm design - skills valuable in any technical field.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-building"></i> Real-World Application</h4>
+                                <p>Every digital tool you use - from mobile apps to banking systems to social media platforms - started with someone writing code. Uber's ride-matching algorithm, Netflix's recommendation system, and Google's search engine are all complex programs built on these fundamental concepts. Even simple automation scripts that save hours of manual work demonstrate the power of programming basics applied to real problems.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Create Your First Program:</strong> Write a program that:</p>
+                            <ul>
+                                <li>Greets the user with a welcome message</li>
+                                <li>Performs and displays at least three different calculations</li>
+                                <li>Uses a variable to store your name</li>
+                                <li>Includes a simple conditional statement (if/else)</li>
+                                <li>Adds comments explaining what each part does</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 2 -->
+            <div class="course-module" id="module2" data-aos="fade-up" data-difficulty="beginner">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>VARIABLES & DATA TYPES</h1>
+                    <h3>Learn to store and manage information in programs</h3>
+                    <span class="difficulty">Beginner</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/2103/2103655.png" class="module-icon" alt="Variables Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 2: <span>Storing and Using Data</span></h1>
+                    <p>Variables are like labeled containers that store information in your programs. Data types define what kind of information you're storing - numbers, text, true/false values, and more. Understanding variables and data types is essential for managing information effectively.</p>
+                    
+                    <p>Think of variables as sticky notes with names: you write a value on the note and give it a label. Later, you can refer to the note by its label to use the value. Different data types serve different purposes: numbers for calculations, text for messages, booleans for yes/no decisions.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">JavaScript</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-2" spellcheck="false">// Different data types
+let age = 25;               // Number (for calculations)
+let name = "Alex";          // String (text in quotes)
+let isStudent = true;       // Boolean (true/false)
+let temperature = 22.5;     // Decimal number
+let favoriteColor = "blue"; // Another string
+
+console.log("Name: " + name);
+console.log("Age: " + age);
+console.log("Is student? " + isStudent);
+
+// Variable operations
+let birthYear = 2023 - age;
+console.log(name + " was born in " + birthYear);
+
+// Changing variable values (reassignment)
+let score = 0;
+console.log("Initial score: " + score);
+score = score + 10;  // Add 10 to score
+console.log("Updated score: " + score);
+
+// Working with different data types
+let price = 19.99;
+let quantity = 3;
+let total = price * quantity;
+console.log("Total price: $" + total);
+
+// Boolean logic
+let hasPermission = false;
+let isAdult = age >= 18;
+console.log("Has permission? " + hasPermission);
+console.log("Is adult? " + isAdult);
+
+// Try changing the values and see what happens!</textarea>
+                        <button class="run-btn" onclick="runCode('editor-2', 'output-2')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Output Console
+                        </div>
+                        <div class="preview-container" id="output-2"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Concepts:</h3>
+                            <ul>
+                                <li><code>let</code> declares a variable that can change</li>
+                                <li><code>const</code> declares a variable that cannot change (constant)</li>
+                                <li>Numbers can be integers (25) or decimals (22.5)</li>
+                                <li>Strings are text wrapped in quotes (single or double)</li>
+                                <li>Booleans are either <code>true</code> or <code>false</code></li>
+                                <li>Variables can be reassigned with new values</li>
+                                <li>Use meaningful names: <code>userAge</code> vs <code>x</code></li>
+                                <li>Type matters: <code>"5" + 3 = "53"</code> (string), <code>5 + 3 = 8</code> (number)</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-database"></i> Data Storage & Management</h3>
+                            <p>Variables and data types form the memory system of your programs. Just as human memory stores different kinds of information (facts, experiences, skills), computer programs use different data types to store and organize information efficiently. Choosing the right data type affects both how your program works and how efficiently it runs.</p>
+                            
+                            <p>Memory management through variables is fundamental to programming. Variables don't just store data - they give meaning to that data through their names. Well-named variables make code readable and maintainable. The distinction between mutable (<code>let</code>) and immutable (<code>const</code>) variables helps prevent bugs by controlling what can and cannot change during program execution.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-memory"></i> Memory Allocation</h4>
+                                    <p>Different data types use different amounts of memory. Numbers and booleans use fixed memory, while strings and collections use variable memory based on their content. Understanding this helps optimize program performance.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-exchange-alt"></i> Type Conversion</h4>
+                                    <p>Programming languages often convert between data types automatically (coercion) or explicitly (casting). Understanding type conversion prevents bugs like adding numbers to strings unexpectedly.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-tag"></i> Naming Conventions</h4>
+                                    <p>Good variable names follow conventions like camelCase, use descriptive terms, and avoid reserved words. This improves code readability and reduces errors when collaborating or returning to old code.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-shopping-cart"></i> E-Commerce Applications</h4>
+                                <p>Every online shopping cart uses variables extensively: product names (strings), prices (numbers), quantities (integers), in-stock status (booleans), and user preferences (various types). Amazon's systems manage millions of variables simultaneously, with optimized data types reducing memory usage and improving performance. Financial applications use precise decimal types for currency calculations. Social media platforms use strings for posts, numbers for likes and shares, and booleans for privacy settings.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Create a User Profile Program:</strong> Build a program that stores user information using variables:</p>
+                            <ul>
+                                <li>Store name, age, email, and membership status</li>
+                                <li>Use appropriate data types for each piece of information</li>
+                                <li>Calculate year of birth from age</li>
+                                <li>Create a welcome message using the stored information</li>
+                                <li>Update at least one variable value</li>
+                                <li>Use both <code>let</code> and <code>const</code> appropriately</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 3 -->
+            <div class="course-module" id="module3" data-aos="fade-up" data-difficulty="beginner">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>OPERATORS & EXPRESSIONS</h1>
+                    <h3>Learn to perform calculations and comparisons</h3>
+                    <span class="difficulty">Beginner</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/2103/2103658.png" class="module-icon" alt="Operators Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 3: <span>Manipulating Data</span></h1>
+                    <p>Operators are symbols that perform operations on values. Expressions combine values, variables, and operators to produce new values. Understanding operators and expressions allows you to manipulate data, make decisions, and control program flow.</p>
+                    
+                    <p>Think of operators as tools in a toolbox: arithmetic operators (+, -, *, /) for calculations, comparison operators (>, <, ==) for comparisons, and logical operators (&&, ||, !) for combining conditions. Expressions are like recipes that combine ingredients (values) using tools (operators) to create something new.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">JavaScript</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-3" spellcheck="false">// Arithmetic Operators
+let a = 10;
+let b = 3;
+
+console.log("Addition: " + (a + b));        // 13
+console.log("Subtraction: " + (a - b));     // 7
+console.log("Multiplication: " + (a * b));  // 30
+console.log("Division: " + (a / b));        // 3.333...
+console.log("Modulus (remainder): " + (a % b)); // 1
+console.log("Exponent: " + (a ** b));       // 1000
+
+// Assignment Operators
+let score = 100;
+score += 10;  // Same as: score = score + 10
+console.log("Score after += 10: " + score);
+
+score -= 20;  // Same as: score = score - 20
+console.log("Score after -= 20: " + score);
+
+// Comparison Operators
+console.log("Is a greater than b? " + (a > b));     // true
+console.log("Is a equal to 10? " + (a == 10));      // true
+console.log("Is a not equal to b? " + (a != b));    // true
+console.log("Is a less than or equal to 10? " + (a <= 10)); // true
+
+// Strict equality (type and value must match)
+console.log("10 == '10': " + (10 == '10'));   // true (type conversion)
+console.log("10 === '10': " + (10 === '10')); // false (no type conversion)
+
+// Logical Operators
+let hasTicket = true;
+let hasMoney = false;
+let isAdult = true;
+
+console.log("Can enter? " + (hasTicket && isAdult)); // true AND true = true
+console.log("Can buy? " + (hasTicket || hasMoney));  // true OR false = true
+console.log("Is child? " + (!isAdult));              // NOT true = false
+
+// Complex expressions
+let price = 100;
+let discount = 0.2;
+let finalPrice = price - (price * discount);
+console.log("Original: $" + price + ", Final: $" + finalPrice);
+
+// Try creating your own expressions!</textarea>
+                        <button class="run-btn" onclick="runCode('editor-3', 'output-3')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Output Console
+                        </div>
+                        <div class="preview-container" id="output-3"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Concepts:</h3>
+                            <ul>
+                                <li>Arithmetic operators: <code>+ - * / % **</code></li>
+                                <li>Assignment operators: <code>= += -= *= /=</code></li>
+                                <li>Comparison operators: <code>> < >= <= == != === !==</code></li>
+                                <li>Logical operators: <code>&&</code> (AND), <code>||</code> (OR), <code>!</code> (NOT)</li>
+                                <li><code>==</code> checks value equality (with type conversion)</li>
+                                <li><code>===</code> checks strict equality (value AND type)</li>
+                                <li>Operator precedence determines calculation order</li>
+                                <li>Use parentheses to control evaluation order</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-calculator"></i> Data Manipulation & Logic</h3>
+                            <p>Operators and expressions form the computational engine of programming. They transform raw data into meaningful information through calculations, comparisons, and logical operations. Mastering operators is essential for implementing business logic, making decisions, and processing user input in any application.</p>
+                            
+                            <p>The distinction between different equality operators highlights a fundamental programming concept: type safety. Loose equality (<code>==</code>) can lead to unexpected behavior through automatic type conversion, while strict equality (<code>===</code>) prevents bugs by requiring exact matches. Understanding operator precedence ensures expressions evaluate correctly without relying on implicit rules that vary between languages.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-sort-amount-down"></i> Operator Precedence</h4>
+                                    <p>Just like mathematical order of operations (PEMDAS), programming languages have operator precedence rules that determine calculation order. Understanding these prevents logic errors in complex expressions.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-balance-scale"></i> Boolean Algebra</h4>
+                                    <p>Logical operators implement Boolean algebra, the mathematics of true/false logic. This forms the foundation for decision-making in programs, from simple conditions to complex business rules.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-bolt"></i> Short-Circuit Evaluation</h4>
+                                    <p>Logical operators often use short-circuit evaluation: <code>&&</code> stops at the first false, <code>||</code> stops at the first true. This optimization also enables clever programming patterns.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-chart-line"></i> Financial & Scientific Computing</h4>
+                                <p>Stock trading platforms use complex mathematical operators to calculate moving averages, risk metrics, and trading signals. Scientific simulations use operators for physics calculations, statistical analysis, and modeling. Game engines combine arithmetic operators for physics simulations, comparison operators for collision detection, and logical operators for game rules. Weather forecasting systems process millions of data points using operators to predict temperature, precipitation, and storm paths.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Create a Calculator Program:</strong> Build a program that performs various calculations:</p>
+                            <ul>
+                                <li>Calculate area and perimeter of different shapes</li>
+                                <li>Convert between temperature units (Celsius/Fahrenheit)</li>
+                                <li>Implement discount calculations with multiple conditions</li>
+                                <li>Use all types of operators: arithmetic, comparison, logical</li>
+                                <li>Create complex expressions with proper precedence</li>
+                                <li>Test edge cases and different input values</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 4 -->
+            <div class="course-module" id="module4" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>CONTROL STRUCTURES</h1>
+                    <h3>Learn to make decisions and control program flow</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/2103/2103661.png" class="module-icon" alt="Control Structures Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 4: <span>Decision Making in Programs</span></h1>
+                    <p>Control structures direct the flow of your program, allowing it to make decisions and execute different code paths based on conditions. The <code>if</code>, <code>else if</code>, and <code>else</code> statements create branching logic, while <code>switch</code> statements handle multiple discrete cases.</p>
+                    
+                    <p>Think of control structures as road signs that tell your program which path to take. Without them, programs would always run the same way every time. With control structures, programs can adapt to different situations, user inputs, and data conditions.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">JavaScript</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-4" spellcheck="false">// Basic if statement
+let age = 18;
+
+if (age >= 18) {
+    console.log("You are an adult.");
+}
+
+// if-else statement
+let temperature = 15;
+
+if (temperature > 25) {
+    console.log("It's hot outside!");
+} else {
+    console.log("It's not hot outside.");
+}
+
+// else-if ladder
+let score = 85;
+let grade;
+
+if (score >= 90) {
+    grade = "A";
+    console.log("Excellent!");
+} else if (score >= 80) {
+    grade = "B";
+    console.log("Good job!");
+} else if (score >= 70) {
+    grade = "C";
+    console.log("Not bad!");
+} else if (score >= 60) {
+    grade = "D";
+    console.log("You passed.");
+} else {
+    grade = "F";
+    console.log("You failed.");
+}
+
+console.log("Your grade is: " + grade);
+
+// Nested if statements
+let hasTicket = true;
+let hasID = true;
+let age2 = 21;
+
+if (hasTicket) {
+    if (hasID) {
+        if (age2 >= 18) {
+            console.log("Welcome to the concert!");
+        } else {
+            console.log("Sorry, you must be 18 or older.");
+        }
+    } else {
+        console.log("ID required for entry.");
+    }
+} else {
+    console.log("Ticket required for entry.");
+}
+
+// Switch statement
+let day = "Monday";
+
+switch (day) {
+    case "Monday":
+        console.log("Start of the work week.");
+        break;
+    case "Friday":
+        console.log("Weekend is coming!");
+        break;
+    case "Saturday":
+    case "Sunday":
+        console.log("It's the weekend!");
+        break;
+    default:
+        console.log("It's a regular work day.");
+}
+
+// Try changing the values and see how the flow changes!</textarea>
+                        <button class="run-btn" onclick="runCode('editor-4', 'output-4')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Output Console
+                        </div>
+                        <div class="preview-container" id="output-4"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Concepts:</h3>
+                            <ul>
+                                <li><code>if</code> executes code only if condition is true</li>
+                                <li><code>else</code> provides alternative path when condition is false</li>
+                                <li><code>else if</code> checks additional conditions</li>
+                                <li>Conditions must evaluate to <code>true</code> or <code>false</code></li>
+                                <li><code>switch</code> handles multiple discrete values efficiently</li>
+                                <li><code>break</code> prevents falling through to next case in switch</li>
+                                <li>Nested conditions create complex decision trees</li>
+                                <li>Use curly braces <code>{}</code> for code blocks (even when optional)</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-code-branch"></i> Program Flow & Decision Logic</h3>
+                            <p>Control structures implement the decision-making capabilities that distinguish software from simple calculators. They enable programs to respond dynamically to different inputs, conditions, and states. Mastering control flow is essential for creating interactive, responsive, and intelligent applications.</p>
+                            
+                            <p>The choice between different control structures affects both code readability and performance. <code>if-else</code> chains work well for ranges and complex conditions, while <code>switch</code> statements excel at matching discrete values. Understanding when to use each approach, and how to avoid common pitfalls like missing <code>break</code> statements or deeply nested conditions, separates novice from experienced programmers.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-project-diagram"></i> Decision Trees</h4>
+                                    <p>Complex business logic often maps to decision trees - hierarchical structures of conditions and outcomes. Control structures implement these trees, with each branch representing a possible path through the program logic.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-tachometer-alt"></i> Performance Considerations</h4>
+                                    <p>Switch statements often compile to jump tables for O(1) performance, while if-else chains have O(n) performance. For many conditions, choosing the right structure impacts execution speed.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-sitemap"></i> State Machines</h4>
+                                    <p>Control structures form the foundation of state machines - systems that change behavior based on current state. This pattern powers everything from UI components to game AI to network protocols.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-robot"></i> AI & Business Rules Engines</h4>
+                                <p>Expert systems use complex decision trees to emulate human expertise in fields like medical diagnosis or financial planning. E-commerce platforms implement pricing rules with nested conditions for discounts, taxes, and shipping. Autonomous vehicles process sensor data through decision trees to navigate safely. Financial institutions use control structures to implement fraud detection algorithms that analyze transaction patterns and trigger alerts based on multiple conditions.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Create a Decision-Making Program:</strong> Build a program that implements complex logic:</p>
+                            <ul>
+                                <li>Create a grading system with multiple criteria</li>
+                                <li>Implement a ticket pricing system with age discounts</li>
+                                <li>Build a simple chatbot with different responses</li>
+                                <li>Use both if-else chains and switch statements appropriately</li>
+                                <li>Handle edge cases and invalid inputs gracefully</li>
+                                <li>Create nested conditions for complex scenarios</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 5 -->
+            <div class="course-module" id="module5" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>LOOPS & ITERATION</h1>
+                    <h3>Learn to repeat actions efficiently</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/2103/2103663.png" class="module-icon" alt="Loops Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 5: <span>Repeating Actions in Programs</span></h1>
+                    <p>Loops allow programs to repeat actions without writing the same code multiple times. The <code>for</code> loop repeats a specific number of times, <code>while</code> repeats while a condition is true, and <code>do-while</code> guarantees at least one execution before checking the condition.</p>
+                    
+                    <p>Think of loops as automation tools: instead of manually performing the same task 100 times, you write the instructions once and tell the computer to repeat them. Loops process collections of data, wait for events, and implement repetitive algorithms efficiently.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">JavaScript</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-5" spellcheck="false">// For loop - when you know how many times to repeat
+console.log("Counting from 1 to 5:");
+for (let i = 1; i <= 5; i++) {
+    console.log("Count: " + i);
+}
+
+console.log("\nMultiplication table (5):");
+for (let i = 1; i <= 10; i++) {
+    console.log("5 × " + i + " = " + (5 * i));
+}
+
+// While loop - when you don't know how many times to repeat
+console.log("\nCountdown from 10:");
+let count = 10;
+while (count > 0) {
+    console.log(count + "...");
+    count--;  // Decrease count by 1
+}
+console.log("Blast off!");
+
+// Do-while loop - executes at least once
+console.log("\nGuessing game:");
+let secretNumber = 7;
+let guess;
+let attempts = 0;
+
+do {
+    guess = Math.floor(Math.random() * 10) + 1; // Random 1-10
+    attempts++;
+    console.log("Attempt " + attempts + ": Guessed " + guess);
+} while (guess !== secretNumber);
+
+console.log("Found the secret number (" + secretNumber + ") in " + attempts + " attempts!");
+
+// Nested loops
+console.log("\nPattern with nested loops:");
+for (let row = 1; row <= 5; row++) {
+    let pattern = "";
+    for (let col = 1; col <= row; col++) {
+        pattern += "* ";
+    }
+    console.log(pattern);
+}
+
+// Loop control: break and continue
+console.log("\nBreak and continue example:");
+for (let i = 1; i <= 10; i++) {
+    if (i === 3) {
+        continue; // Skip iteration when i is 3
+    }
+    if (i === 8) {
+        break; // Exit loop when i is 8
+    }
+    console.log("Processing number: " + i);
+}
+
+// Infinite loop prevention (always have an exit condition!)
+console.log("\nSafe counter example:");
+let safeCounter = 0;
+while (safeCounter < 100) { // Always have a limit!
+    // Do something
+    safeCounter++;
+}</textarea>
+                        <button class="run-btn" onclick="runCode('editor-5', 'output-5')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Output Console
+                        </div>
+                        <div class="preview-container" id="output-5"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Concepts:</h3>
+                            <ul>
+                                <li><code>for</code> loop: <code>for(initialization; condition; increment)</code></li>
+                                <li><code>while</code> loop: repeats while condition is true</li>
+                                <li><code>do-while</code> loop: executes once, then repeats while condition true</li>
+                                <li><code>break</code> exits the loop immediately</li>
+                                <li><code>continue</code> skips to next iteration</li>
+                                <li>Loop variables (like <code>i</code>) track iteration count</li>
+                                <li>Nested loops handle multi-dimensional problems</li>
+                                <li>Avoid infinite loops with proper exit conditions</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-redo"></i> Repetition & Automation</h3>
+                            <p>Loops implement the computational principle of iteration - repeating operations to process collections, search data, or perform calculations. They transform computers from simple calculators into powerful data processors capable of handling massive datasets efficiently. Without loops, programming would be impractical for real-world applications.</p>
+                            
+                            <p>The choice of loop type affects both code clarity and performance characteristics. <code>for</code> loops excel at counted iterations, <code>while</code> loops handle condition-based repetition, and <code>do-while</code> loops ensure at least one execution. Understanding loop complexity (Big O notation) becomes crucial when processing large datasets, as inefficient loops can make programs unusably slow.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-chart-line"></i> Algorithmic Complexity</h4>
+                                    <p>Loops directly impact time complexity: a single loop often indicates O(n), nested loops O(n²), and deeper nesting O(n³). Understanding these relationships helps optimize performance for large datasets.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-stream"></i> Iteration Patterns</h4>
+                                    <p>Common loop patterns include accumulation (summing values), search (finding elements), transformation (modifying elements), and filtration (selecting elements). These patterns form the basis of data processing.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-infinity"></i> Loop Invariants</h4>
+                                    <p>Loop invariants are conditions that remain true throughout loop execution. Identifying invariants helps prove correctness and debug complex loops, especially in algorithm implementation.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-database"></i> Big Data & Scientific Computing</h4>
+                                <p>Search engines use loops to process billions of web pages, applying ranking algorithms to each. Scientific simulations loop through millions of time steps to model climate change or protein folding. Image processing software uses nested loops to manipulate pixels in photos and videos. Database systems optimize loop execution through query planning and indexing. Machine learning algorithms train models by looping through datasets thousands of times, adjusting parameters with each iteration.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Create Loop-Based Programs:</strong> Build programs that demonstrate different loop types:</p>
+                            <ul>
+                                <li>Generate multiplication tables using nested loops</li>
+                                <li>Implement number guessing games with while loops</li>
+                                <li>Create pattern generators with different loop structures</li>
+                                <li>Process arrays of data with for loops</li>
+                                <li>Use break and continue for flow control</li>
+                                <li>Implement algorithms like factorial or Fibonacci sequence</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 6 -->
+            <div class="course-module" id="module6" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>FUNCTIONS & SCOPE</h1>
+                    <h3>Learn to organize code into reusable blocks</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/2103/2103665.png" class="module-icon" alt="Functions Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 6: <span>Code Organization & Reusability</span></h1>
+                    <p>Functions are named blocks of code that perform specific tasks. They promote code reuse, organization, and abstraction. Scope defines where variables are accessible - global scope (available everywhere) vs local scope (available only within function).</p>
+                    
+                    <p>Think of functions as recipes: you define the recipe once with ingredients (parameters) and steps (code), then use it whenever you need that dish. Scope is like kitchen organization: some ingredients are available throughout the kitchen (global), while others are only in specific cabinets (local).</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">JavaScript</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-6" spellcheck="false">// Basic function definition
+function greet() {
+    console.log("Hello, welcome to programming!");
+}
+
+// Calling/invoking the function
+greet();
+greet(); // Can call multiple times
+
+// Function with parameters
+function greetPerson(name) {
+    console.log("Hello, " + name + "!");
+}
+
+greetPerson("Alice");
+greetPerson("Bob");
+
+// Function with multiple parameters and return value
+function addNumbers(a, b) {
+    let sum = a + b;
+    return sum;
+}
+
+let result = addNumbers(5, 3);
+console.log("5 + 3 = " + result);
+
+// More complex function
+function calculateArea(length, width) {
+    if (length <= 0 || width <= 0) {
+        return "Invalid dimensions";
+    }
+    return length * width;
+}
+
+console.log("Area of 4x6: " + calculateArea(4, 6));
+console.log("Area of -2x5: " + calculateArea(-2, 5));
+
+// Scope demonstration
+let globalVar = "I'm global";
+
+function demonstrateScope() {
+    let localVar = "I'm local";
+    console.log("Inside function:");
+    console.log(" - Can access globalVar: " + globalVar);
+    console.log(" - Can access localVar: " + localVar);
+    
+    // Nested function with its own scope
+    function innerFunction() {
+        let innerVar = "I'm in inner function";
+        console.log("Inside inner function:");
+        console.log(" - Can access globalVar: " + globalVar);
+        console.log(" - Can access localVar: " + localVar);
+        console.log(" - Can access innerVar: " + innerVar);
+    }
+    
+    innerFunction();
+}
+
+demonstrateScope();
+
+console.log("\nOutside function:");
+console.log(" - Can access globalVar: " + globalVar);
+// console.log(" - Cannot access localVar: " + localVar); // This would cause an error
+
+// Function expressions (assigning functions to variables)
+const multiply = function(x, y) {
+    return x * y;
+};
+
+console.log("3 × 7 = " + multiply(3, 7));
+
+// Arrow functions (modern syntax)
+const divide = (a, b) => {
+    if (b === 0) return "Cannot divide by zero";
+    return a / b;
+};
+
+console.log("10 ÷ 2 = " + divide(10, 2));</textarea>
+                        <button class="run-btn" onclick="runCode('editor-6', 'output-6')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Output Console
+                        </div>
+                        <div class="preview-container" id="output-6"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Concepts:</h3>
+                            <ul>
+                                <li><code>function name() { }</code> defines a function</li>
+                                <li>Parameters are inputs: <code>function add(a, b)</code></li>
+                                <li><code>return</code> sends output back to caller</li>
+                                <li>Global scope: variables accessible everywhere</li>
+                                <li>Local scope: variables accessible only within function</li>
+                                <li>Function expressions: <code>const func = function() { }</code></li>
+                                <li>Arrow functions: <code>const func = () => { }</code></li>
+                                <li>Functions can call other functions (composition)</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-cube"></i> Modular Programming & Encapsulation</h3>
+                            <p>Functions represent the fundamental unit of code organization in programming. They enable modular design by encapsulating specific functionality behind well-defined interfaces. This separation of concerns makes programs easier to understand, test, and maintain. As programs grow from simple scripts to complex applications, function design becomes increasingly important.</p>
+                            
+                            <p>Scope management through functions creates encapsulation boundaries that prevent unintended interactions between different parts of a program. The principle of least privilege suggests variables should have the smallest possible scope needed for their purpose. This minimizes bugs caused by accidental modification and makes code reasoning more local. Understanding scope chains and closure (functions remembering their creation context) unlocks powerful programming patterns.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-puzzle-piece"></i> Modular Design</h4>
+                                    <p>Functions enable building complex systems from simple, reusable components. Each function should have a single responsibility, making the overall system easier to comprehend and modify.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-shield-alt"></i> Encapsulation</h4>
+                                    <p>By hiding implementation details behind function interfaces, encapsulation reduces coupling between different parts of a program. This allows internal changes without affecting dependent code.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-test-tube"></i> Testability</h4>
+                                    <p>Well-designed functions with clear inputs and outputs are easily testable. Unit testing verifies each function independently before integration, catching bugs early in development.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-industry"></i> Enterprise Software Architecture</h4>
+                                <p>Large-scale applications like banking systems or e-commerce platforms organize thousands of functions into modules, packages, and services. Each function handles specific business logic: calculating interest, processing payments, validating user input. Modern frameworks like React organize UI as function components. Microservices architecture treats entire services as functions with HTTP interfaces. API design centers around function signatures that other systems can call remotely. Library and framework development focuses on providing useful, well-documented functions for other developers to use.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Create a Library of Functions:</strong> Build a collection of reusable functions:</p>
+                            <ul>
+                                <li>Mathematical functions (factorial, prime check, etc.)</li>
+                                <li>String manipulation functions (reverse, palindrome check)</li>
+                                <li>Conversion functions (temperature, currency, units)</li>
+                                <li>Validation functions (email, password strength)</li>
+                                <li>Use different function types (declarations, expressions, arrow)</li>
+                                <li>Demonstrate proper scope management</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 7 -->
+            <div class="course-module" id="module7" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>ARRAYS & COLLECTIONS</h1>
+                    <h3>Learn to work with groups of data</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/2103/2103667.png" class="module-icon" alt="Arrays Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 7: <span>Working with Data Collections</span></h1>
+                    <p>Arrays store collections of data in ordered lists. They allow you to group related values together and access them by position (index). Arrays are fundamental for working with multiple data items, from simple lists to complex datasets.</p>
+                    
+                    <p>Think of arrays as numbered shelves where each shelf holds one item. The position (index) tells you which shelf to look at. Arrays make it easy to store, access, and manipulate groups of related data without creating individual variables for each item.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">JavaScript</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-7" spellcheck="false">// Creating arrays
+let fruits = ["apple", "banana", "orange", "grape"];
+let numbers = [1, 2, 3, 4, 5];
+let mixed = ["text", 42, true, null];
+
+console.log("Fruits array: " + fruits);
+console.log("Numbers array: " + numbers);
+
+// Accessing array elements (zero-indexed)
+console.log("\nFirst fruit: " + fruits[0]);      // apple
+console.log("Second fruit: " + fruits[1]);     // banana
+console.log("Last fruit: " + fruits[fruits.length - 1]); // grape
+
+// Modifying arrays
+fruits[1] = "blueberry";  // Change element
+console.log("\nModified fruits: " + fruits);
+
+// Array methods - adding and removing
+fruits.push("mango");     // Add to end
+console.log("After push: " + fruits);
+
+let lastFruit = fruits.pop();  // Remove from end
+console.log("Removed: " + lastFruit);
+console.log("After pop: " + fruits);
+
+fruits.unshift("strawberry");  // Add to beginning
+console.log("After unshift: " + fruits);
+
+let firstFruit = fruits.shift();  // Remove from beginning
+console.log("Removed: " + firstFruit);
+console.log("After shift: " + fruits);
+
+// Iterating through arrays
+console.log("\nIterating with for loop:");
+for (let i = 0; i < fruits.length; i++) {
+    console.log("Fruit " + i + ": " + fruits[i]);
+}
+
+console.log("\nIterating with for...of:");
+for (let fruit of fruits) {
+    console.log("Fruit: " + fruit);
+}
+
+// Array methods for transformation
+let scores = [85, 92, 78, 95, 88];
+
+// map: transform each element
+let increasedScores = scores.map(score => score + 5);
+console.log("\nIncreased scores: " + increasedScores);
+
+// filter: select elements meeting condition
+let highScores = scores.filter(score => score >= 90);
+console.log("High scores (>=90): " + highScores);
+
+// reduce: accumulate values
+let totalScore = scores.reduce((sum, score) => sum + score, 0);
+let averageScore = totalScore / scores.length;
+console.log("Average score: " + averageScore);
+
+// find: search for element
+let firstHighScore = scores.find(score => score > 90);
+console.log("First score > 90: " + firstHighScore);
+
+// Multi-dimensional arrays (arrays of arrays)
+let matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+];
+
+console.log("\nMatrix element at [1][2]: " + matrix[1][2]); // 6
+
+// Spread operator for arrays
+let moreFruits = ["kiwi", "pineapple"];
+let allFruits = [...fruits, ...moreFruits];
+console.log("\nCombined fruits: " + allFruits);</textarea>
+                        <button class="run-btn" onclick="runCode('editor-7', 'output-7')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Output Console
+                        </div>
+                        <div class="preview-container" id="output-7"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Concepts:</h3>
+                            <ul>
+                                <li>Arrays are created with square brackets: <code>[ ]</code></li>
+                                <li>Elements are accessed by index (starting at 0)</li>
+                                <li><code>array.length</code> gives number of elements</li>
+                                <li><code>push()</code>/<code>pop()</code> add/remove from end</li>
+                                <li><code>unshift()</code>/<code>shift()</code> add/remove from beginning</li>
+                                <li><code>map()</code> transforms each element</li>
+                                <li><code>filter()</code> selects elements matching condition</li>
+                                <li><code>reduce()</code> accumulates values into single result</li>
+                                <li>Spread operator <code>...</code> copies/combines arrays</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-layer-group"></i> Data Aggregation & Processing</h3>
+                            <p>Arrays represent the most fundamental data structure in programming, providing ordered storage for collections of values. Their simplicity belies their power: arrays form the foundation for more complex data structures and enable efficient processing of datasets through iteration and transformation. Understanding arrays is essential for working with real-world data, which rarely comes as isolated values.</p>
+                            
+                            <p>The evolution from manual array manipulation to functional methods like <code>map</code>, <code>filter</code>, and <code>reduce</code> represents a paradigm shift in how programmers work with collections. These higher-order functions treat operations as first-class citizens, enabling declarative code that focuses on what to do rather than how to do it. This approach leads to more readable, maintainable, and testable code, especially when processing complex data transformations.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-memory"></i> Memory Layout</h4>
+                                    <p>Arrays store elements contiguously in memory, enabling O(1) access by index. This predictable layout allows CPUs to prefetch data efficiently, making arrays faster than other structures for indexed access.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-stream"></i> Functional Programming</h4>
+                                    <p>Array methods like map, filter, and reduce implement functional programming patterns. These pure functions (no side effects) enable predictable data transformations and facilitate parallel processing.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-project-diagram"></i> Multi-dimensional Data</h4>
+                                    <p>Arrays of arrays model grids, matrices, and tables. Image processing, scientific computing, and game development rely heavily on multi-dimensional arrays for spatial data representation.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-chart-bar"></i> Data Analytics & Machine Learning</h4>
+                                <p>Data science libraries like NumPy and Pandas build on array concepts to process billions of data points. Machine learning models represent training data as arrays of features. Image recognition systems store pixels as 3D arrays (width × height × color channels). Financial analysis processes time series data as arrays of prices and indicators. Geographic information systems use arrays to represent elevation maps, population density, and satellite imagery. Social media platforms store user interactions, posts, and connections in array-like structures optimized for different query patterns.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Create Array Processing Programs:</strong> Build programs that manipulate arrays:</p>
+                            <ul>
+                                <li>Implement statistical functions (mean, median, mode)</li>
+                                <li>Create search and sort algorithms</li>
+                                <li>Process multi-dimensional arrays (matrices)</li>
+                                <li>Transform data using map, filter, and reduce</li>
+                                <li>Implement common array utilities (unique, shuffle, chunk)</li>
+                                <li>Work with arrays of objects (users, products, etc.)</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 8 -->
+            <div class="course-module" id="module8" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>OBJECTS & DATA STRUCTURES</h1>
+                    <h3>Learn to model complex data relationships</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/2103/2103669.png" class="module-icon" alt="Objects Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 8: <span>Modeling Real-World Data</span></h1>
+                    <p>Objects allow you to group related data and functionality together using key-value pairs. They model real-world entities with properties (characteristics) and methods (actions). Objects provide a way to organize complex data structures that represent things in your program.</p>
+                    
+                    <p>Think of objects as file folders: each folder (object) contains related documents (properties) and has specific procedures (methods) for working with those documents. Objects let you bundle data and behavior together, creating self-contained units that make your code more organized and intuitive.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">JavaScript</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-8" spellcheck="false">// Creating objects
+let person = {
+    firstName: "John",
+    lastName: "Doe",
+    age: 30,
+    isStudent: false,
+    hobbies: ["reading", "coding", "hiking"],
+    
+    // Method (function inside object)
+    getFullName: function() {
+        return this.firstName + " " + this.lastName;
+    },
+    
+    celebrateBirthday: function() {
+        this.age++;
+        console.log("Happy birthday! Now " + this.age + " years old.");
+    }
+};
+
+// Accessing object properties
+console.log("First name: " + person.firstName);
+console.log("Age: " + person.age);
+console.log("Hobbies: " + person.hobbies.join(", "));
+
+// Using object methods
+console.log("Full name: " + person.getFullName());
+person.celebrateBirthday();
+
+// Modifying objects
+person.email = "john.doe@example.com";
+person.hobbies.push("gaming");
+console.log("\nUpdated email: " + person.email);
+console.log("Updated hobbies: " + person.hobbies);
+
+// Object constructor (creating multiple similar objects)
+function Book(title, author, pages) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.isRead = false;
+    
+    this.read = function() {
+        this.isRead = true;
+        console.log("You read: " + this.title);
+    };
+    
+    this.getInfo = function() {
+        return this.title + " by " + this.author + ", " + this.pages + " pages";
+    };
+}
+
+// Creating book objects
+let book1 = new Book("1984", "George Orwell", 328);
+let book2 = new Book("To Kill a Mockingbird", "Harper Lee", 281);
+
+console.log("\n" + book1.getInfo());
+console.log(book2.getInfo());
+book1.read();
+console.log("Book 1 read status: " + book1.isRead);
+
+// Objects within objects
+let library = {
+    name: "City Library",
+    books: [book1, book2],
+    location: {
+        street: "123 Main St",
+        city: "Metropolis",
+        zipCode: "12345"
+    },
+    
+    listBooks: function() {
+        console.log("\nBooks in " + this.name + ":");
+        this.books.forEach(book => {
+            console.log(" - " + book.getInfo());
+        });
+    }
+};
+
+library.listBooks();
+console.log("Library city: " + library.location.city);
+
+// Object iteration
+console.log("\nPerson object properties:");
+for (let key in person) {
+    if (typeof person[key] !== 'function') {
+        console.log(key + ": " + person[key]);
+    }
+}
+
+// Object destructuring
+let { firstName, age } = person;
+console.log("\nDestructured: " + firstName + " is " + age + " years old");
+
+// JSON (JavaScript Object Notation)
+let car = {
+    make: "Toyota",
+    model: "Camry",
+    year: 2022,
+    features: ["GPS", "Backup Camera", "Bluetooth"]
+};
+
+let carJSON = JSON.stringify(car);
+console.log("\nCar as JSON: " + carJSON);
+
+let parsedCar = JSON.parse(carJSON);
+console.log("Parsed make: " + parsedCar.make);</textarea>
+                        <button class="run-btn" onclick="runCode('editor-8', 'output-8')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Output Console
+                        </div>
+                        <div class="preview-container" id="output-8"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Concepts:</h3>
+                            <ul>
+                                <li>Objects created with curly braces: <code>{ }</code></li>
+                                <li>Properties: <code>key: value</code> pairs</li>
+                                <li>Methods: functions inside objects</li>
+                                <li><code>this</code> refers to current object</li>
+                                <li>Constructor functions create multiple similar objects</li>
+                                <li>Dot notation: <code>object.property</code></li>
+                                <li>Bracket notation: <code>object["property"]</code></li>
+                                <li>JSON: standard format for data exchange</li>
+                                <li>Destructuring extracts properties into variables</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-object-group"></i> Data Modeling & Abstraction</h3>
+                            <p>Objects represent the cornerstone of object-oriented programming, enabling developers to model real-world entities and their relationships in code. By bundling data (properties) with behavior (methods), objects create self-contained modules that encapsulate complexity behind simple interfaces. This approach mirrors how humans naturally think about the world - in terms of things that have characteristics and can perform actions.</p>
+                            
+                            <p>The power of objects extends beyond simple data containers. Through concepts like inheritance, polymorphism, and composition, objects enable code reuse and flexible system design. JavaScript's prototypal inheritance provides a unique approach to object relationships, while modern ES6 classes offer more familiar syntax for developers from classical OOP backgrounds. Understanding these patterns is essential for building maintainable, scalable applications.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-sitemap"></i> Domain Modeling</h4>
+                                    <p>Objects map directly to business domain concepts: User, Product, Order, Invoice. This alignment between code structure and real-world concepts makes systems more intuitive to understand and modify as requirements evolve.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-shield-alt"></i> Encapsulation</h4>
+                                    <p>Objects hide internal state and implementation details behind public interfaces. This information hiding reduces coupling between system components and prevents unauthorized access to sensitive data.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-code-branch"></i> Polymorphism</h4>
+                                    <p>Different objects can respond to the same method calls in different ways. This enables flexible systems where components can be swapped without changing the code that uses them.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-shopping-cart"></i> Enterprise Systems & APIs</h4>
+                                <p>E-commerce platforms model customers, products, carts, and orders as objects with complex relationships. Banking systems represent accounts, transactions, and users as objects with strict security boundaries. Game engines model characters, items, and environments as objects with physics, AI, and rendering behaviors. Web APIs communicate using JSON objects that serialize complex data structures. Modern frontend frameworks like React and Vue componentize UIs as reusable object hierarchies. Database ORMs (Object-Relational Mappers) bridge the gap between object-oriented code and relational database tables.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Create Object-Oriented Systems:</strong> Build programs using objects:</p>
+                            <ul>
+                                <li>Model a library system with books, users, and loans</li>
+                                <li>Create a simple e-commerce system with products and carts</li>
+                                <li>Implement a banking system with accounts and transactions</li>
+                                <li>Design a game with characters, items, and inventory</li>
+                                <li>Use constructors, methods, and object relationships</li>
+                                <li>Serialize and deserialize objects using JSON</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 9 -->
+            <div class="course-module" id="module9" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>DEBUGGING & TESTING</h1>
+                    <h3>Learn to find and fix errors in your code</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/2103/2103671.png" class="module-icon" alt="Debugging Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 9: <span>Ensuring Code Quality</span></h1>
+                    <p>Debugging is the process of finding and fixing errors in your code. Testing involves writing code to verify that your programs work correctly. Together, they ensure code reliability, prevent bugs, and maintain software quality throughout development.</p>
+                    
+                    <p>Think of debugging as detective work: you have clues (error messages, unexpected behavior), you investigate the crime scene (your code), and you find the culprit (the bug). Testing is like quality control: you systematically check that each part works as expected before shipping the final product.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">JavaScript</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-9" spellcheck="false">// Common types of errors
+console.log("=== Common Error Types ===");
+
+// 1. Syntax Errors (caught before execution)
+// console.log("Missing closing quote);  // Uncomment to see error
+
+// 2. Runtime Errors (occur during execution)
+function divide(a, b) {
+    if (b === 0) {
+        throw new Error("Cannot divide by zero!");
+    }
+    return a / b;
+}
+
+try {
+    console.log("10 ÷ 2 = " + divide(10, 2));
+    console.log("10 ÷ 0 = " + divide(10, 0)); // This will throw error
+} catch (error) {
+    console.log("Caught error: " + error.message);
+} finally {
+    console.log("Division attempt completed.");
+}
+
+// 3. Logical Errors (code runs but produces wrong result)
+function calculateAverage(numbers) {
+    // Bug: Should divide by numbers.length, not numbers.length - 1
+    let sum = 0;
+    for (let num of numbers) {
+        sum += num;
+    }
+    return sum / (numbers.length - 1); // Intentional bug
+}
+
+let testScores = [85, 92, 78];
+console.log("\nAverage (with bug): " + calculateAverage(testScores));
+console.log("Correct average: " + (85+92+78)/3);
+
+// Debugging techniques
+console.log("\n=== Debugging Techniques ===");
+
+// Console logging
+function processOrder(items) {
+    console.log("Processing order with items:", items);
+    
+    let total = 0;
+    for (let i = 0; i < items.length; i++) {
+        console.log(`Item ${i}: ${items[i].name} - $${items[i].price}`);
+        total += items[i].price;
+    }
+    
+    console.log("Subtotal: $" + total);
+    let tax = total * 0.08;
+    console.log("Tax: $" + tax);
+    
+    return total + tax;
+}
+
+let orderItems = [
+    { name: "Book", price: 15.99 },
+    { name: "Pen", price: 1.49 },
+    { name: "Notebook", price: 4.99 }
+];
+
+console.log("Order total: $" + processOrder(orderItems));
+
+// Using debugger statement
+function findMax(numbers) {
+    let max = numbers[0];
+    
+    for (let i = 1; i < numbers.length; i++) {
+        // Uncomment next line to pause execution in browser dev tools
+        // debugger;
+        if (numbers[i] > max) {
+            max = numbers[i];
+        }
+    }
+    
+    return max;
+}
+
+console.log("\nMaximum: " + findMax([3, 7, 2, 9, 1]));
+
+// Testing functions
+console.log("\n=== Testing ===");
+
+// Simple test function
+function test(description, actual, expected) {
+    if (actual === expected) {
+        console.log("✓ PASS: " + description);
+        return true;
+    } else {
+        console.log("✗ FAIL: " + description);
+        console.log("  Expected: " + expected);
+        console.log("  Actual: " + actual);
+        return false;
+    }
+}
+
+// Test cases for a function
+function add(a, b) {
+    return a + b;
+}
+
+console.log("\nTesting add function:");
+test("Add positive numbers", add(2, 3), 5);
+test("Add negative numbers", add(-1, -1), -2);
+test("Add zero", add(5, 0), 5);
+
+// Edge case testing
+function getInitials(name) {
+    if (!name || name.trim() === "") {
+        return "N/A";
+    }
+    
+    let parts = name.trim().split(" ");
+    if (parts.length === 1) {
+        return parts[0].charAt(0).toUpperCase();
+    }
+    
+    return (parts[0].charAt(0) + parts[parts.length - 1].charAt(0)).toUpperCase();
+}
+
+console.log("\nTesting getInitials function:");
+test("Full name", getInitials("John Doe"), "JD");
+test("Single name", getInitials("Cher"), "C");
+test("Empty string", getInitials(""), "N/A");
+test("Multiple spaces", getInitials("  John  Michael  Doe  "), "JD");
+
+// Error prevention with validation
+function safeDivide(a, b) {
+    if (typeof a !== 'number' || typeof b !== 'number') {
+        return "Both arguments must be numbers";
+    }
+    
+    if (b === 0) {
+        return "Cannot divide by zero";
+    }
+    
+    return a / b;
+}
+
+console.log("\nTesting safeDivide:");
+test("Valid division", safeDivide(10, 2), 5);
+test("Divide by zero", safeDivide(10, 0), "Cannot divide by zero");
+test("Invalid input", safeDivide(10, "two"), "Both arguments must be numbers");</textarea>
+                        <button class="run-btn" onclick="runCode('editor-9', 'output-9')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Output Console
+                        </div>
+                        <div class="preview-container" id="output-9"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Concepts:</h3>
+                            <ul>
+                                <li>Syntax errors: invalid code structure</li>
+                                <li>Runtime errors: occur during execution</li>
+                                <li>Logical errors: code runs but gives wrong results</li>
+                                <li><code>try/catch/finally</code> handles errors gracefully</li>
+                                <li><code>console.log()</code> prints debug information</li>
+                                <li><code>debugger</code> statement pauses execution</li>
+                                <li>Unit tests verify individual functions work correctly</li>
+                                <li>Edge cases test boundaries and unusual inputs</li>
+                                <li>Input validation prevents errors before they occur</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-bug"></i> Quality Assurance & Robustness</h3>
+                            <p>Debugging and testing represent the quality assurance dimension of programming. While writing code creates functionality, debugging and testing ensure that functionality works correctly, reliably, and securely. Professional software development typically spends more time on testing and debugging than on initial coding, recognizing that quality is not an afterthought but a continuous process integrated throughout development.</p>
+                            
+                            <p>Modern debugging goes beyond simple print statements to include sophisticated tools: breakpoints, watch expressions, call stack inspection, memory profiling, and performance analysis. Testing has evolved from manual verification to automated test suites, continuous integration, and behavior-driven development. The shift-left approach embeds testing early in the development lifecycle, catching bugs when they're cheapest to fix and preventing them from reaching production.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-search"></i> Systematic Debugging</h4>
+                                    <p>Effective debugging follows scientific method: hypothesize potential causes, design experiments to test hypotheses, analyze results, and iteratively narrow down the root cause. Rubber duck debugging (explaining code to an inanimate object) often reveals oversights.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-vial"></i> Test-Driven Development</h4>
+                                    <p>TDD involves writing tests before implementation code. This approach ensures testability, clarifies requirements, and creates a safety net for refactoring. The red-green-refactor cycle (write failing test, make it pass, improve code) drives incremental development.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-shield-alt"></i> Defensive Programming</h4>
+                                    <p>Writing code that anticipates and handles potential errors prevents crashes and security vulnerabilities. Input validation, boundary checking, and graceful degradation create robust systems that maintain functionality even when things go wrong.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-heartbeat"></i> Mission-Critical Systems</h4>
+                                <p>Aerospace software undergoes rigorous testing with code coverage requirements exceeding 90%. Medical device firmware includes extensive error handling to prevent patient harm. Financial trading systems implement redundant validation to prevent erroneous transactions. Automotive software (especially autonomous vehicles) requires comprehensive testing across millions of scenarios. Web services at companies like Google and Amazon run billions of automated tests daily across distributed systems. Open-source projects use continuous integration to ensure contributions don't break existing functionality across diverse environments.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Create Tested, Robust Programs:</strong> Build programs with comprehensive debugging and testing:</p>
+                            <ul>
+                                <li>Write functions with proper error handling</li>
+                                <li>Create comprehensive test suites for your functions</li>
+                                <li>Test edge cases and invalid inputs</li>
+                                <li>Use debugging techniques to find and fix bugs</li>
+                                <li>Implement input validation and defensive programming</li>
+                                <li>Practice test-driven development on new features</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 10 -->
+            <div class="course-module" id="module10" data-aos="fade-up" data-difficulty="advanced">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>PROBLEM SOLVING</h1>
+                    <h3>Learn algorithmic thinking and solution design</h3>
+                    <span class="difficulty">Advanced</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/2103/2103673.png" class="module-icon" alt="Problem Solving Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 10: <span>Algorithmic Thinking & Solution Design</span></h1>
+                    <p>Problem solving is the core skill of programming. It involves understanding problems, designing solutions, implementing algorithms, and optimizing performance. This module brings together all previous concepts to solve complex, real-world programming challenges.</p>
+                    
+                    <p>Think of problem solving as engineering: you analyze requirements, design a solution blueprint, build the components, test the system, and optimize for performance. Great programmers aren't just coders - they're problem solvers who can tackle challenges methodically and creatively.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">JavaScript</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-10" spellcheck="false">// Problem Solving Framework
+console.log("=== PROBLEM SOLVING FRAMEWORK ===\n");
+
+// 1. Understand the Problem
+console.log("1. UNDERSTAND THE PROBLEM");
+console.log("   - What are the inputs?");
+console.log("   - What should the output be?");
+console.log("   - Are there any constraints?");
+console.log("   - What edge cases should be considered?\n");
+
+// 2. Explore Concrete Examples
+console.log("2. EXPLORE CONCRETE EXAMPLES");
+console.log("   - Simple cases");
+console.log("   - More complex cases");
+console.log("   - Edge cases");
+console.log("   - Invalid inputs\n");
+
+// Example Problem: Find the maximum number in an array
+console.log("EXAMPLE PROBLEM: Find maximum number in array\n");
+
+// 3. Break It Down (Pseudocode)
+console.log("3. BREAK IT DOWN (Pseudocode)");
+console.log("   function findMax(numbers):");
+console.log("     if array is empty, return undefined");
+console.log("     initialize max with first element");
+console.log("     for each remaining element:");
+console.log("       if element > max:");
+console.log("         update max");
+console.log("     return max\n");
+
+// 4. Solve/Simplify
+console.log("4. SOLVE/SIMPLIFY");
+
+function findMax(numbers) {
+    if (!Array.isArray(numbers) || numbers.length === 0) {
+        return undefined;
+    }
+    
+    let max = numbers[0];
+    
+    for (let i = 1; i < numbers.length; i++) {
+        if (numbers[i] > max) {
+            max = numbers[i];
+        }
+    }
+    
+    return max;
+}
+
+// Test the solution
+console.log("Test 1: [3, 7, 2, 9, 1] → " + findMax([3, 7, 2, 9, 1]));
+console.log("Test 2: [-5, -2, -10] → " + findMax([-5, -2, -10]));
+console.log("Test 3: [42] → " + findMax([42]));
+console.log("Test 4: [] → " + findMax([]) + "\n");
+
+// 5. Look Back and Refactor
+console.log("5. LOOK BACK AND REFACTOR");
+
+// Alternative implementation using reduce
+function findMaxRefactored(numbers) {
+    if (!Array.isArray(numbers) || numbers.length === 0) {
+        return undefined;
+    }
+    
+    return numbers.reduce((max, current) => {
+        return current > max ? current : max;
+    }, numbers[0]);
+}
+
+console.log("Refactored version test: [3, 7, 2, 9, 1] → " + findMaxRefactored([3, 7, 2, 9, 1]) + "\n");
+
+// More Complex Problem: FizzBuzz
+console.log("=== MORE COMPLEX: FIZZBUZZ ===\n");
+
+function fizzBuzz(n) {
+    let result = [];
+    
+    for (let i = 1; i <= n; i++) {
+        if (i % 3 === 0 && i % 5 === 0) {
+            result.push("FizzBuzz");
+        } else if (i % 3 === 0) {
+            result.push("Fizz");
+        } else if (i % 5 === 0) {
+            result.push("Buzz");
+        } else {
+            result.push(i.toString());
+        }
+    }
+    
+    return result;
+}
+
+console.log("FizzBuzz for 15:");
+console.log(fizzBuzz(15).join(", "));
+console.log();
+
+// Algorithm Patterns
+console.log("=== COMMON ALGORITHM PATTERNS ===\n");
+
+// Frequency Counter Pattern
+console.log("Frequency Counter: Check if two arrays have same squared values");
+
+function sameSquared(arr1, arr2) {
+    if (arr1.length !== arr2.length) return false;
+    
+    let frequency1 = {};
+    let frequency2 = {};
+    
+    // Count frequencies in first array
+    for (let val of arr1) {
+        frequency1[val] = (frequency1[val] || 0) + 1;
+    }
+    
+    // Count frequencies in second array
+    for (let val of arr2) {
+        frequency2[val] = (frequency2[val] || 0) + 1;
+    }
+    
+    // Compare squared frequencies
+    for (let key in frequency1) {
+        let squared = key * key;
+        if (!(squared in frequency2)) return false;
+        if (frequency2[squared] !== frequency1[key]) return false;
+    }
+    
+    return true;
+}
+
+console.log("[1, 2, 3] and [1, 4, 9]: " + sameSquared([1, 2, 3], [1, 4, 9]));
+console.log("[1, 2, 3] and [4, 1, 9]: " + sameSquared([1, 2, 3], [4, 1, 9]));
+console.log("[1, 2, 1] and [4, 4, 1]: " + sameSquared([1, 2, 1], [4, 4, 1]) + "\n");
+
+// Multiple Pointers Pattern
+console.log("Multiple Pointers: Find first pair that sums to zero");
+
+function sumZero(sortedArr) {
+    let left = 0;
+    let right = sortedArr.length - 1;
+    
+    while (left < right) {
+        let sum = sortedArr[left] + sortedArr[right];
+        
+        if (sum === 0) {
+            return [sortedArr[left], sortedArr[right]];
+        } else if (sum > 0) {
+            right--;
+        } else {
+            left++;
+        }
+    }
+    
+    return undefined;
+}
+
+console.log("[-4, -3, -2, -1, 0, 1, 2, 5]: " + sumZero([-4, -3, -2, -1, 0, 1, 2, 5]));
+console.log("[-3, -2, -1, 0, 1, 2, 3]: " + sumZero([-3, -2, -1, 0, 1, 2, 3]));
+console.log("[-2, 0, 1, 3]: " + sumZero([-2, 0, 1, 3]) + "\n");
+
+// Sliding Window Pattern
+console.log("Sliding Window: Maximum sum of n consecutive elements");
+
+function maxSubarraySum(arr, num) {
+    if (arr.length < num) return null;
+    
+    let maxSum = 0;
+    let tempSum = 0;
+    
+    // Calculate initial window sum
+    for (let i = 0; i < num; i++) {
+        maxSum += arr[i];
+    }
+    
+    tempSum = maxSum;
+    
+    // Slide the window
+    for (let i = num; i < arr.length; i++) {
+        tempSum = tempSum - arr[i - num] + arr[i];
+        maxSum = Math.max(maxSum, tempSum);
+    }
+    
+    return maxSum;
+}
+
+console.log("[1, 2, 5, 2, 8, 1, 5], 2 → " + maxSubarraySum([1, 2, 5, 2, 8, 1, 5], 2));
+console.log("[1, 2, 5, 2, 8, 1, 5], 4 → " + maxSubarraySum([1, 2, 5, 2, 8, 1, 5], 4) + "\n");
+
+// Problem Solving Practice
+console.log("=== PRACTICE PROBLEM ===\n");
+
+console.log("PROBLEM: Validate a palindrome");
+console.log("A palindrome reads the same forward and backward");
+console.log("Examples: 'racecar', 'madam', 'a', ''\n");
+
+function isPalindrome(str) {
+    // Clean the string: lowercase and remove non-alphanumeric
+    const cleanStr = str.toLowerCase().replace(/[^a-z0-9]/g, '');
+    
+    // Compare with reversed version
+    const reversed = cleanStr.split('').reverse().join('');
+    
+    return cleanStr === reversed;
+}
+
+console.log("Test 'racecar': " + isPalindrome('racecar'));
+console.log("Test 'hello': " + isPalindrome('hello'));
+console.log("Test 'A man, a plan, a canal: Panama': " + isPalindrome('A man, a plan, a canal: Panama'));
+console.log("Test '': " + isPalindrome(''));
+console.log("Test '12321': " + isPalindrome('12321'));</textarea>
+                        <button class="run-btn" onclick="runCode('editor-10', 'output-10')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Output Console
+                        </div>
+                        <div class="preview-container" id="output-10"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Concepts:</h3>
+                            <ul>
+                                <li>Problem-solving framework: understand, plan, execute, review</li>
+                                <li>Algorithm patterns: frequency counter, multiple pointers, sliding window</li>
+                                <li>Time complexity (Big O) analysis</li>
+                                <li>Space complexity analysis</li>
+                                <li>Divide and conquer strategy</li>
+                                <li>Recursive vs iterative solutions</li>
+                                <li>Optimization techniques</li>
+                                <li>Testing with edge cases and constraints</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-rocket"></i> Computational Thinking & Algorithm Design</h3>
+                            <p>Problem solving transcends specific programming languages or technologies - it's the meta-skill that enables developers to tackle novel challenges systematically. Computational thinking involves decomposing complex problems into manageable parts, recognizing patterns, abstracting details, and designing algorithmic solutions. This mental framework applies to everything from simple scripting tasks to architecting distributed systems.</p>
+                            
+                            <p>The study of algorithms and data structures provides a toolkit for efficient problem solving. Understanding time and space complexity (Big O notation) allows developers to choose appropriate solutions for different constraints. Common algorithm patterns like frequency counters, multiple pointers, and sliding windows offer reusable approaches to recurring problem types. Mastering these patterns accelerates development and improves solution quality across diverse domains.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-project-diagram"></i> Algorithmic Patterns</h4>
+                                    <p>Recognizing common patterns like two-pointer technique, sliding window, or depth-first search enables rapid solution design. These patterns represent distilled wisdom from decades of computer science research and practical experience.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-chart-line"></i> Complexity Analysis</h4>
+                                    <p>Big O notation quantifies how algorithm performance scales with input size. Understanding O(1), O(log n), O(n), O(n²), and exponential complexities guides appropriate algorithm selection for different problem sizes.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-sitemap"></i> Solution Design</h4>
+                                    <p>Systematic approaches like top-down design, bottom-up implementation, and iterative refinement transform vague requirements into concrete implementations. Whiteboarding, pseudocode, and test-driven development support this process.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-search"></i> Technical Interviews & Real Systems</h4>
+                                <p>Tech company interviews heavily emphasize algorithmic problem solving to assess candidates' computational thinking. Google's search algorithm, Facebook's news feed ranking, and Netflix's recommendation system all solve complex optimization problems at massive scale. Routing algorithms power GPS navigation and internet packet delivery. Compression algorithms reduce file sizes for storage and transmission. Machine learning algorithms optimize parameters through gradient descent. Cryptography algorithms secure digital communications. Database query optimizers choose execution plans based on cost estimation. In each case, effective problem solving combines domain knowledge with algorithmic thinking to create efficient, scalable solutions.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Solve Complex Programming Challenges:</strong> Apply problem-solving skills to challenging problems:</p>
+                            <ul>
+                                <li>Implement common algorithms (sorting, searching, etc.)</li>
+                                <li>Solve algorithmic challenges from platforms like LeetCode</li>
+                                <li>Design and implement data structures</li>
+                                <li>Optimize existing solutions for better performance</li>
+                                <li>Analyze time and space complexity of solutions</li>
+                                <li>Apply different algorithm patterns to appropriate problems</li>
+                                <li>Document your problem-solving process step by step</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Practice Playground -->
+            <div class="course-module" id="playground" data-aos="fade-up">
+                <div class="course-three">
+                    <h1>PRACTICE PLAYGROUND</h1>
+                    <h3>Experiment with what you've learned</h3>
+                    <i class="fas fa-laptop-code course-icon" style="color: var(--primary);"></i>
+                </div>
+                <div class="course-one">
+                    <h1>Your Coding Playground: <span>Try Your Own Programs</span></h1>
+                    <p>Use this space to experiment with everything you've learned. Try combining different programming concepts and see the results in real-time! This is your sandbox to practice and explore computational thinking.</p>
+                    
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">JavaScript</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="playground-editor" spellcheck="false">// Welcome to your programming playground!
+// Try out any code you want here.
+
+console.log("=== WELCOME TO CODING PLAYGROUND ===\n");
+
+// Example: Create a simple calculator
+function calculator(operation, a, b) {
+    switch(operation) {
+        case 'add':
+            return a + b;
+        case 'subtract':
+            return a - b;
+        case 'multiply':
+            return a * b;
+        case 'divide':
+            return b !== 0 ? a / b : 'Cannot divide by zero';
+        default:
+            return 'Invalid operation';
+    }
+}
+
+console.log("Calculator Examples:");
+console.log("5 + 3 = " + calculator('add', 5, 3));
+console.log("10 - 4 = " + calculator('subtract', 10, 4));
+console.log("6 × 7 = " + calculator('multiply', 6, 7));
+console.log("20 ÷ 5 = " + calculator('divide', 20, 5));
+console.log("10 ÷ 0 = " + calculator('divide', 10, 0) + "\n");
+
+// Example: Work with arrays
+let numbers = [12, 45, 23, 67, 34, 89, 56];
+
+console.log("Array Processing:");
+console.log("Original array: " + numbers);
+
+let doubled = numbers.map(n => n * 2);
+console.log("Doubled: " + doubled);
+
+let evens = numbers.filter(n => n % 2 === 0);
+console.log("Even numbers: " + evens);
+
+let sum = numbers.reduce((total, n) => total + n, 0);
+console.log("Sum: " + sum);
+console.log("Average: " + (sum / numbers.length).toFixed(2) + "\n");
+
+// Example: Object manipulation
+let student = {
+    name: "Alex Johnson",
+    age: 21,
+    courses: ["Math", "Computer Science", "Physics"],
+    grades: {
+        Math: 85,
+        "Computer Science": 92,
+        Physics: 78
+    },
+    
+    getAverageGrade: function() {
+        let total = 0;
+        let count = 0;
+        
+        for (let course in this.grades) {
+            total += this.grades[course];
+            count++;
+        }
+        
+        return count > 0 ? total / count : 0;
+    },
+    
+    addCourse: function(courseName, grade) {
+        this.courses.push(courseName);
+        this.grades[courseName] = grade;
+    }
+};
+
+console.log("Student Information:");
+console.log("Name: " + student.name);
+console.log("Age: " + student.age);
+console.log("Courses: " + student.courses.join(", "));
+console.log("Average grade: " + student.getAverageGrade().toFixed(2));
+
+student.addCourse("Chemistry", 88);
+console.log("\nAfter adding Chemistry:");
+console.log("Courses: " + student.courses.join(", "));
+console.log("New average: " + student.getAverageGrade().toFixed(2) + "\n");
+
+// Your turn! Try writing your own code below:
+console.log("=== YOUR CODE BELOW ===\n");
+
+// Write your experiments here:
+
+// Example: Try creating a function
+function sayHello(name) {
+    return "Hello, " + name + "!";
+}
+
+console.log(sayHello("Programmer"));
+
+// Or create an array and process it
+let myNumbers = [1, 2, 3, 4, 5];
+console.log("My numbers: " + myNumbers);
+
+// Or make an object
+let myCar = {
+    make: "Toyota",
+    model: "Camry",
+    year: 2020,
+    drive: function() {
+        return "Driving the " + this.year + " " + this.make + " " + this.model;
+    }
+};
+
+console.log(myCar.drive());
+
+// Keep experimenting below!</textarea>
+                        <button class="run-btn" onclick="runCode('playground-editor', 'playground-output')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Output Console
+                        </div>
+                        <div class="preview-container" id="playground-output"></div>
+                    </div>
+                    
+                    <div class="course-five">
+                        <h3>Challenge Exercises:</h3>
+                        <ol>
+                            <li>Create a program that:
+                                <ul>
+                                    <li>Manages a to-do list with add, remove, and complete functions</li>
+                                    <li>Tracks completion status and deadlines</li>
+                                    <li>Provides statistics about your tasks</li>
+                                </ul>
+                            </li>
+                            <li>Build a simple banking system with:
+                                <ul>
+                                    <li>Account creation with unique IDs</li>
+                                    <li>Deposit, withdrawal, and transfer functions</li>
+                                    <li>Balance inquiry and transaction history</li>
+                                </ul>
+                            </li>
+                            <li>Design a quiz game with:
+                                <ul>
+                                    <li>Multiple choice questions stored in objects</li>
+                                    <li>Score tracking and progress indicators</li>
+                                    <li>Different difficulty levels</li>
+                                </ul>
+                            </li>
+                            <li>Implement common algorithms:
+                                <ul>
+                                    <li>Sorting algorithms (bubble sort, selection sort)</li>
+                                    <li>Search algorithms (linear search, binary search)</li>
+                                    <li>String manipulation algorithms</li>
+                                </ul>
+                            </li>
+                            <li>Combine all concepts into a complete application</li>
+                        </ol>
+                        
+                        <h3>Tips & Resources:</h3>
+                        <ul>
+                            <li>Use <code>console.log()</code> frequently to see what's happening</li>
+                            <li>Break complex problems into smaller functions</li>
+                            <li>Test your code with different inputs and edge cases</li>
+                            <li>Experiment with JavaScript's built-in methods for arrays and strings</li>
+                            <li>For more practice, try coding challenge websites:
+                                <ul>
+                                    <li>FreeCodeCamp</li>
+                                    <li>LeetCode (easy problems)</li>
+                                    <li>HackerRank</li>
+                                    <li>Codewars</li>
+                                </ul>
+                            </li>
+                            <li>Remember: Programming is about solving problems, not just writing code</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Premium Subscription CTA -->
+            <div class="premium-subscription" id="premium-subscription" data-aos="fade-up">
+                <h2>Unlock Premium SkillMynte Content</h2>
+                <p>Upgrade to SkillMynte Pro for exclusive courses, advanced projects, and personalized learning paths</p>
+                
+                <div class="premium-features">
+                    <div class="premium-feature">
+                        <i class="fas fa-gem"></i>
+                        <h3>Premium Courses</h3>
+                        <p>Access our entire library of advanced courses and exclusive content</p>
+                    </div>
+                    <div class="premium-feature">
+                        <i class="fas fa-trophy"></i>
+                        <h3>Certification</h3>
+                        <p>Earn industry-recognized certificates to showcase your skills</p>
+                    </div>
+                    <div class="premium-feature">
+                        <i class="fas fa-user-graduate"></i>
+                        <h3>Mentorship</h3>
+                        <p>Get personalized guidance from industry experts</p>
+                    </div>
+                </div>
+                
+                <div class="pricing-options">
+                    <div class="pricing-option">
+                        <h3>Monthly</h3>
+                        <div class="price">₦3,500<span>/month</span></div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> All Premium Courses</li>
+                            <li><i class="fas fa-check"></i> Practice Projects</li>
+                            <li><i class="fas fa-check"></i> Community Access</li>
+                            <li><i class="fas fa-check"></i> Certificates</li>
+                            <li><i class="fas fa-check"></i> personal AI inbuilt</li>
+                        </ul>
+                        <a href="premium courses.html"><button class="pricing-btn">Get Started</button></a>
+                    </div>
+                    
+                    <div class="pricing-option" style="border-color: var(--white); transform: scale(1.05);">
+                        <h3>Annual <span style="background: var(--white); color: #2962FF; padding: 0.2rem 0.5rem; border-radius: 20px; font-size: 0.8rem; margin-left: 0.5rem;">Best Value</span></h3>
+                        <div class="price">₦37,000<span>/year</span></div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> All Premium Courses</li>
+                            <li><i class="fas fa-check"></i> Practice Projects</li>
+                            <li><i class="fas fa-check"></i> Community Access</li>
+                            <li><i class="fas fa-check"></i> Certificates</li>
+                            <li><i class="fas fa-check"></i> personal AI inbuilt</li>
+                        </ul>
+                        <a href="premium courses.html"><button class="pricing-btn">Get Started</button></a>
+                    </div>
+                    
+                    <div class="pricing-option">
+                        <h3>Lifetime</h3>
+                        <div class="price">₦200,000<span>/once</span></div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> All Premium Courses</li>
+                            <li><i class="fas fa-check"></i> Practice Projects</li>
+                            <li><i class="fas fa-check"></i> Community Access</li>
+                            <li><i class="fas fa-check"></i> Certificates</li>
+                            <li><i class="fas fa-check"></i> personal AI inbuilt</li>
+                        </ul>
+                        <a href="premium courses.html"><button class="pricing-btn">Get Started</button></a>
+                    </div>
+                </div>
+                
+                <button class="premium-cta-btn">
+                    <i class="fas fa-rocket"></i> Upgrade to SkillMynte Pro
+                </button>
+            </div>
+            
+            <!-- Footer -->
+            <footer>
+                <div class="footer-content">
+                    <div class="footer-column">
+                        <h3>About SkillMynte</h3>
+                        <p>SkillMynte is a premium learning platform dedicated to helping developers of all levels master programming through interactive courses and hands-on practice.</p>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/profile.php?id=61581069862024"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://x.com/SkillMynte_AI?t=CcoQtjWZGGOXqfTfrsufjQ&s=09"><i class="fab fa-twitter"></i></a>
+                            <a href="https://youtube.com/@skillmynte?si=LmX2MjSKU3N1Xa5S"><i class="fab fa-youtube"></i></a>
+                            <a href="https://www.instagram.com/skillmynte_ai?igsh=MTd1YWpjdXV1OHhrbA=="><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Quick Links</h3>
+                        <ul class="footer-links">
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Home</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Courses</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Practice</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Projects</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Popular Courses</h3>
+                        <ul class="footer-links">
+                            <li><a href="coding-basics-course.html"><i class="fas fa-chevron-right"></i> Coding Basics</a></li>
+                            <li><a href="free JS Course.html"><i class="fas fa-chevron-right"></i> JavaScript Mastery</a></li>
+                            <li><a href="premium courses.html"><i class="fas fa-chevron-right"></i> Python Programming</a></li>
+                            <li><a href="free node.js.html"><i class="fas fa-chevron-right"></i> Web Development</a></li>
+                            <li><a href="free python course.html"><i class="fas fa-chevron-right"></i> Data Structures</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Contact Us</h3>
+                        <p><i class="fas fa-envelope"></i>Skillmynteofficial@gmail.com</p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 SkillMynte. All rights reserved. | Designed with <i class="fas fa-heart" style="color: var(--primary);"></i> for the developer community</p>
+                </div>
+            </footer>
+
+           <script>
+    // Function to run code in preview
+    function runCode(editorId, outputId) {
+        const editor = document.getElementById(editorId);
+        const output = document.getElementById(outputId);
+        
+        try {
+            // Clear previous output
+            output.innerHTML = '';
+            
+            // Capture console.log output
+            const originalLog = console.log;
+            let logOutput = '';
+            
+            console.log = function(...args) {
+                logOutput += args.map(arg => {
+                    if (typeof arg === 'object') {
+                        return JSON.stringify(arg, null, 2);
+                    }
+                    return String(arg);
+                }).join(' ') + '\n';
+                originalLog.apply(console, args);
+            };
+            
+            // Execute the code
+            eval(editor.value);
+            
+            // Restore original console.log
+            console.log = originalLog;
+            
+            // Display output with proper formatting
+            output.innerHTML = '<pre style="color: var(--primary-light); font-family: \'Fira Code\', monospace; white-space: pre-wrap; word-wrap: break-word;">' + 
+                               logOutput.replace(/</g, '&lt;').replace(/>/g, '&gt;') + '</pre>';
+        } catch (error) {
+            output.innerHTML = `<div style="color: var(--accent); padding: 1rem; font-family: 'Fira Code', monospace;">Error: ${error.message}</div>`;
+        }
+    }
+    
+    // Initialize all editors with their default output
+    document.addEventListener('DOMContentLoaded', function() {
+        // Run all code editors on load
+        setTimeout(() => {
+            runCode('editor-1', 'output-1');
+            runCode('editor-2', 'output-2');
+            runCode('editor-3', 'output-3');
+            runCode('editor-4', 'output-4');
+            runCode('editor-5', 'output-5');
+            runCode('editor-6', 'output-6');
+            runCode('editor-7', 'output-7');
+            runCode('editor-8', 'output-8');
+            runCode('editor-9', 'output-9');
+            runCode('editor-10', 'output-10');
+            runCode('playground-editor', 'playground-output');
+        }, 500);
+        
+        // Add event listeners to all run buttons in editor headers
+        document.querySelectorAll('.run-editor').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const editorContainer = this.closest('.code-editor-container');
+                const editor = editorContainer.querySelector('.code-editor');
+                const output = editorContainer.querySelector('.preview-container');
+                runCode(editor.id, output.id);
+            });
+        });
+        
+        // Add reset functionality
+        document.querySelectorAll('.reset-editor').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const editorContainer = this.closest('.code-editor-container');
+                const editor = editorContainer.querySelector('.code-editor');
+                const originalContent = editor.dataset.original || editor.defaultValue;
+                editor.value = originalContent;
+                runCode(editor.id, editorContainer.querySelector('.preview-container').id);
+            });
+        });
+        
+        // Store original content for reset functionality
+        document.querySelectorAll('.code-editor').forEach(editor => {
+            editor.dataset.original = editor.value;
+        });
+
+        // Handle navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // FIXED: Hamburger menu functionality
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.querySelector('.nav-menu');
+        const sidebar = document.getElementById('sidebar');
+        const body = document.body;
+
+        function toggleMobileMenu() {
+            const isActive = navMenu.classList.contains('active');
+            
+            if (isActive) {
+                // Close menu
+                navMenu.classList.remove('active');
+                sidebar.classList.remove('active');
+                menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                body.classList.remove('menu-open');
+                menuToggle.setAttribute('aria-expanded', 'false');
+            } else {
+                // Open menu
+                navMenu.classList.add('active');
+                sidebar.classList.add('active');
+                menuToggle.innerHTML = '<i class="fas fa-times"></i>';
+                body.classList.add('menu-open');
+                menuToggle.setAttribute('aria-expanded', 'true');
+            }
+        }
+
+        function closeMobileMenu() {
+            navMenu.classList.remove('active');
+            sidebar.classList.remove('active');
+            menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            body.classList.remove('menu-open');
+            menuToggle.setAttribute('aria-expanded', 'false');
+        }
+
+        // Mobile menu toggle
+        menuToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            toggleMobileMenu();
+        });
+
+        // Close menu when clicking on nav links
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function() {
+                if (window.innerWidth <= 1024) {
+                    closeMobileMenu();
+                }
+            });
+        });
+
+        // Close menu when clicking on dropdown items
+        document.querySelectorAll('.dropdown-item').forEach(item => {
+            item.addEventListener('click', function() {
+                if (window.innerWidth <= 1024) {
+                    closeMobileMenu();
+                }
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (window.innerWidth <= 1024 && 
+                navMenu.classList.contains('active') &&
+                !e.target.closest('.nav-menu') && 
+                !e.target.closest('.menu-toggle') &&
+                !e.target.closest('.sidebar')) {
+                closeMobileMenu();
+            }
+        });
+
+        // Close menu on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+                closeMobileMenu();
+            }
+        });
+
+        // Close menu on resize if switching to desktop
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 1024 && navMenu.classList.contains('active')) {
+                closeMobileMenu();
+            }
+        });
+
+        // Mobile dropdown functionality
+        document.querySelectorAll('.courses-dropdown').forEach(dropdown => {
+            const button = dropdown.querySelector('.courses-btn');
+            
+            button.addEventListener('click', function(e) {
+                if (window.innerWidth <= 1024) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    dropdown.classList.toggle('active');
+                }
+            });
+        });
+
+        // Level filtering functionality
+        const levelButtons = document.querySelectorAll('.level-btn');
+        const modules = document.querySelectorAll('.course-module');
+        
+        levelButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const level = this.getAttribute('data-level');
+                
+                // Remove active class from all buttons
+                levelButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                this.classList.add('active');
+                
+                if (level === 'all') {
+                    // Show all modules
+                    modules.forEach(module => {
+                        module.style.display = 'flex';
+                    });
+                } else if (level === 'advanced') {
+                    // Show advanced modules (7-10)
+                    modules.forEach(module => {
+                        const moduleId = module.id;
+                        if (moduleId.includes('module7') || moduleId.includes('module8') || 
+                            moduleId.includes('module9') || moduleId.includes('module10')) {
+                            module.style.display = 'flex';
+                        } else {
+                            module.style.display = 'none';
+                        }
+                    });
+                } else {
+                    // Show modules with matching difficulty
+                    modules.forEach(module => {
+                        const difficulty = module.getAttribute('data-difficulty');
+                        if (difficulty === level) {
+                            module.style.display = 'flex';
+                        } else {
+                            module.style.display = 'none';
+                        }
+                    });
+                }
+                
+                // Scroll to first visible module
+                const firstVisible = document.querySelector('.course-module[style="display: flex;"]');
+                if (firstVisible) {
+                    firstVisible.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Search functionality
+        const searchInput = document.getElementById('search-input');
+        
+        searchInput.addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase().trim();
+            
+            if (searchTerm === '') {
+                // Show all modules if search is empty
+                modules.forEach(module => {
+                    module.style.display = 'flex';
+                });
+                return;
+            }
+            
+            modules.forEach(module => {
+                const moduleTitle = module.querySelector('h1').textContent.toLowerCase();
+                const moduleContent = module.textContent.toLowerCase();
+                
+                if (moduleTitle.includes(searchTerm) || moduleContent.includes(searchTerm)) {
+                    module.style.display = 'flex';
+                } else {
+                    module.style.display = 'none';
+                }
+            });
+        });
+    });
+    
+    // Smooth scrolling for sidebar links
+    document.querySelectorAll('.sidebar-item').forEach(item => {
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Remove active class from all items
+            document.querySelectorAll('.sidebar-item').forEach(i => {
+                i.classList.remove('active');
+            });
+            
+            // Add active class to clicked item
+            this.classList.add('active');
+            
+            // Close mobile menu if open
+            if (window.innerWidth <= 1024) {
+                document.querySelector('.nav-menu').classList.remove('active');
+                document.querySelector('.sidebar').classList.remove('active');
+                document.querySelector('.menu-toggle').innerHTML = '<i class="fas fa-bars"></i>';
+                document.body.classList.remove('menu-open');
+            }
+            
+            // Scroll to section
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 100,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+</script>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Center - SkillMynte</title>
+    <link rel="shortcut icon" type="image/x-icon" href="sm_favicon_64 (1).png">
+    <link rel="stylesheet" href="help center.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <span class="logo-badge">SM</span>
+                    <span>SkillMynte</span>
+                </a>
+                
+                <button class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <nav id="nav-menu">
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="free courses.html"><i class="fas fa-graduation-cap"></i> Courses</a></li>
+                        <li><a href="FAQ page.html"><i class="fas fa-tag"></i> Pricing</a></li>
+                        <li><a href="Login page.html" class="nav-button"><i class="fas fa-rocket"></i> Get Started</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="mobile-overlay" id="mobileOverlay"></div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="page-header">
+            <h1>Help Center</h1>
+            <p>Welcome to the SkillMynte Help Center! Find answers to common questions, troubleshooting guides, and resources to help you succeed in your coding journey.</p>
+            <div class="badge">Your Success is Our Priority</div>
+        </div>
+
+        <section class="search-section">
+            <h2 class="section-title"><i class="fas fa-search"></i> How can we help you today?</h2>
+            <div class="search-container">
+                <input type="text" class="search-box" placeholder="Search for answers, guides, or troubleshooting...">
+                <button class="search-button"><i class="fas fa-search"></i> Search</button>
+            </div>
+            <div class="search-results">
+                <p class="search-results-count" id="searchResultsCount"></p>
+            </div>
+        </section>
+
+        <section class="help-sections">
+            <article class="help-card searchable">
+                <div class="help-icon">📖</div>
+                <h3 class="help-title">Getting Started</h3>
+                <p class="help-description">New to SkillMynte? Follow our step-by-step guides to set up your account and start learning.</p>
+                <a href="Terms of Service.html" class="help-link">View Guides</a>
+            </article>
+            
+            <article class="help-card searchable">
+                <div class="help-icon">❓</div>
+                <h3 class="help-title">Frequently Asked Questions</h3>
+                <p class="help-description">Find quick answers to the most common questions about our platform and services.</p>
+                <a href="FAQ page.html" class="help-link">Browse FAQs</a>
+            </article>
+            
+            <article class="help-card searchable">
+                <div class="help-icon">🔧</div>
+                <h3 class="help-title">Troubleshooting</h3>
+                <p class="help-description">Experiencing issues? Find solutions to common technical problems and platform issues.</p>
+                <a href="contact support.html" class="help-link">Contact Support</a>
+            </article>
+            
+            <article class="help-card searchable">
+                <div class="help-icon">📋</div>
+                <h3 class="help-title">Policies & Legal</h3>
+                <p class="help-description">Review our Terms of Service, Privacy Policy, and other important legal documents.</p>
+                <a href="Privacy policy .html" class="help-link">View Policies</a>
+            </article>
+        </section>
+
+        <section id="getting-started" class="content-section">
+            <h2 class="section-title"><i class="fas fa-road"></i> Getting Started with SkillMynte</h2>
+            <div class="guides-container">
+                <article class="guide-card searchable">
+                    <div class="guide-step">STEP 1</div>
+                    <h3 class="guide-title">Create Your Account</h3>
+                    <p class="guide-description">Sign up with your email address and create a password. Verify your email to activate your account.</p>
+                </article>
+                
+                <article class="guide-card searchable">
+                    <div class="guide-step">STEP 2</div>
+                    <h3 class="guide-title">Choose Your Subscription Plan</h3>
+                    <p class="guide-description">Select from our affordable plans: ₦2,500 monthly, ₦25,000 yearly, or ₦800,000 lifetime access.</p>
+                </article>
+                
+                <article class="guide-card searchable">
+                    <div class="guide-step">STEP 3</div>
+                    <h3 class="guide-title">Complete Your Profile</h3>
+                    <p class="guide-description">Tell us about your coding experience and goals so we can personalize your learning path.</p>
+                </article>
+                
+                <article class="guide-card searchable">
+                    <div class="guide-step">STEP 4</div>
+                    <h3 class="guide-title">Explore Courses</h3>
+                    <p class="guide-description">Browse our coding courses in HTML, CSS, JavaScript, and more. Start with the basics or jump to advanced topics.</p>
+                </article>
+                
+                <article class="guide-card searchable">
+                    <div class="guide-step">STEP 5</div>
+                    <h3 class="guide-title">Engage with AI Support</h3>
+                    <p class="guide-description">Use our AI-guided learning assistant for personalized help, code reviews, and learning recommendations.</p>
+                </article>
+                
+                <article class="guide-card searchable">
+                    <div class="guide-step">STEP 6</div>
+                    <h3 class="guide-title">Track Your Progress</h3>
+                    <p class="guide-description">Monitor your learning journey, complete projects, and earn certificates as you master new skills.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="troubleshooting" class="content-section">
+            <h2 class="section-title"><i class="fas fa-question-circle"></i> Popular Questions & Troubleshooting</h2>
+            <div class="faq-container">
+                <article class="faq-item searchable">
+                    <h3 class="faq-question"><i class="fas fa-key"></i> How do I reset my password?</h3>
+                    <p class="faq-answer">Click "Forgot Password" on the login page. We'll send a reset link to your email address. The link expires after 24 hours for security.</p>
+                </article>
+                
+                <article class="faq-item searchable">
+                    <h3 class="faq-question"><i class="fas fa-lock"></i> Why can't I access my courses after payment?</h3>
+                    <p class="faq-answer">Course access is usually instant. If you're having issues, try refreshing the page or logging out and back in. If problems persist, contact our support team.</p>
+                </article>
+                
+                <article class="faq-item searchable">
+                    <h3 class="faq-question"><i class="fas fa-robot"></i> The AI tutor isn't responding to my questions</h3>
+                    <p class="faq-answer">First, check your internet connection. If that's working, try refreshing the page. For persistent issues, clear your browser cache or try a different browser.</p>
+                </article>
+                
+                <article class="faq-item searchable">
+                    <h3 class="faq-question"><i class="fas fa-ban"></i> How do I cancel my subscription?</h3>
+                    <p class="faq-answer">Go to Account Settings > Subscription to cancel. You'll retain access until the end of your billing period. Lifetime plans don't require cancellation.</p>
+                </article>
+                
+                <article class="faq-item searchable">
+                    <h3 class="faq-question"><i class="fas fa-download"></i> Can I download courses for offline viewing?</h3>
+                    <p class="faq-answer">Yes! You can download course materials through our mobile app. Note that some interactive features require an internet connection.</p>
+                </article>
+                
+                <article class="faq-item searchable">
+                    <h3 class="faq-question"><i class="fas fa-certificate"></i> My certificate didn't generate after course completion</h3>
+                    <p class="faq-answer">Certificates are automatically generated when you complete all course requirements. If yours is missing, ensure you've completed all lessons and assessments.</p>
+                </article>
+                
+                <article class="faq-item searchable">
+                    <h3 class="faq-question"><i class="fas fa-video"></i> The video lessons are buffering or loading slowly</h3>
+                    <p class="faq-answer">Try lowering the video quality in the player settings. Also check your internet connection and close other bandwidth-intensive applications.</p>
+                </article>
+                
+                <article class="faq-item searchable">
+                    <h3 class="faq-question"><i class="fas fa-exchange-alt"></i> How do I change my subscription plan?</h3>
+                    <p class="faq-answer">You can upgrade your plan anytime in Account Settings. Downgrades will take effect at the end of your current billing cycle.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="policies" class="content-section">
+            <h2 class="section-title"><i class="fas fa-gavel"></i> Policies & Legal Documents</h2>
+            <div class="guides-container">
+                <article class="guide-card searchable">
+                    <h3 class="guide-title">Terms of Service</h3>
+                    <p class="guide-description">Understand the rules and guidelines for using SkillMynte, including subscription terms and user responsibilities.</p>
+                    <a href="Terms of Service.html" class="help-link" style="margin-top: 15px; padding: 10px 20px; font-size: 0.9rem;">Read Terms</a>
+                </article>
+                
+                <article class="guide-card searchable">
+                    <h3 class="guide-title">Privacy Policy</h3>
+                    <p class="guide-description">Learn how we collect, use, and protect your personal information in compliance with Nigerian data protection laws.</p>
+                    <a href="Privacy policy .html" class="help-link" style="margin-top: 15px; padding: 10px 20px; font-size: 0.9rem;">Read Policy</a>
+                </article>
+                
+                <article class="guide-card searchable">
+                    <h3 class="guide-title">Cookies Policy</h3>
+                    <p class="guide-description">Understand how we use cookies and similar technologies to enhance your learning experience on our platform.</p>
+                    <a href="Cookies skillmynte.html" class="help-link" style="margin-top: 15px; padding: 10px 20px; font-size: 0.9rem;">Read Policy</a>
+                </article>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <h3 class="contact-title">Still Need Help?</h3>
+            <p class="contact-description">Our support team is ready to assist you with any questions or issues you might have. We're committed to helping you succeed in your coding journey.</p>
+            <a href="contact support.html" class="contact-button">Contact Support</a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-badge">SM</span>
+                    SkillMynte
+                </div>
+                <div class="footer-links">
+                    <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                    <a href="contact support.html"><i class="fas fa-headset"></i> Contact Support</a>
+                    <a href="free courses.html"><i class="fas fa-graduation-cap"></i> Courses</a>
+                    <a href="#"><i class="fas fa-info-circle"></i> About Us</a>
+                    <a href="#"><i class="fas fa-envelope"></i> Contact</a>
+                    <a href="Privacy policy .html"><i class="fas fa-shield-alt"></i> Privacy Policy</a>
+                    <a href="Terms of Service.html"><i class="fas fa-file-contract"></i> Terms of Service</a>
+                    <a href="Cookies skillmynte.html"><i class="fas fa-cookie-bite"></i> Cookies Policy</a>
+                </div>
+                <div class="copyright">
+                    &copy; 2025 SkillMynte. All rights reserved.<br>
+                    Empowering Nigerian learners through AI-powered education.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <script>
+        // Hamburger Menu Functionality
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+        const mobileOverlay = document.getElementById('mobileOverlay');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            mobileOverlay.classList.toggle('active');
+            document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : 'auto';
+        });
+        
+        mobileOverlay.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+            mobileOverlay.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+        
+        // Close menu when clicking on a link
+        document.querySelectorAll('#nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+                mobileOverlay.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
+        });
+
+        // Back to top functionality
+        const backToTop = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        backToTop.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Enhanced search functionality
+        const searchBox = document.querySelector('.search-box');
+        const searchButton = document.querySelector('.search-button');
+        const searchResultsCount = document.getElementById('searchResultsCount');
+        const searchableElements = document.querySelectorAll('.searchable');
+        const contentSections = document.querySelectorAll('.content-section');
+        
+        // Function to perform search
+        function performSearch() {
+            const searchTerm = searchBox.value.trim().toLowerCase();
+            
+            // If search term is empty, show all content
+            if (searchTerm === '') {
+                resetSearch();
+                return;
+            }
+            
+            let resultsCount = 0;
+            let hasResults = false;
+            
+            // Remove previous highlights
+            searchableElements.forEach(element => {
+                removeHighlights(element);
+            });
+            
+            // Search through all searchable elements
+            searchableElements.forEach(element => {
+                const textContent = element.textContent.toLowerCase();
+                
+                if (textContent.includes(searchTerm)) {
+                    element.classList.remove('hidden');
+                    resultsCount++;
+                    
+                    // Highlight the search term
+                    highlightSearchTerm(element, searchTerm);
+                    
+                    // Find parent section and show it
+                    let parentSection = element.closest('.content-section');
+                    if (parentSection) {
+                        parentSection.classList.remove('hidden');
+                        hasResults = true;
+                    }
+                } else {
+                    element.classList.add('hidden');
+                }
+            });
+            
+            // Show/hide section headers based on whether they have visible content
+            contentSections.forEach(section => {
+                const visibleItems = section.querySelectorAll('.searchable:not(.hidden)');
+                if (visibleItems.length > 0) {
+                    section.classList.remove('hidden');
+                    hasResults = true;
+                } else {
+                    section.classList.add('hidden');
+                }
+            });
+            
+            // Show/hide help sections
+            const helpSections = document.querySelector('.help-sections');
+            const helpCards = helpSections.querySelectorAll('.searchable:not(.hidden)');
+            if (helpCards.length > 0) {
+                helpSections.classList.remove('hidden');
+                hasResults = true;
+            } else {
+                helpSections.classList.add('hidden');
+            }
+            
+            // Update results count
+            if (resultsCount > 0) {
+                searchResultsCount.textContent = `Found ${resultsCount} result${resultsCount !== 1 ? 's' : ''} for "${searchTerm}"`;
+                searchResultsCount.style.color = 'var(--primary)';
+                
+                // Remove no results message if it exists
+                const noResults = document.querySelector('.no-results');
+                if (noResults) {
+                    noResults.remove();
+                }
+            } else {
+                searchResultsCount.textContent = `No results found for "${searchTerm}". Try different keywords.`;
+                searchResultsCount.style.color = 'var(--gray)';
+                
+                // Show a "no results" message
+                if (!document.querySelector('.no-results')) {
+                    const noResults = document.createElement('div');
+                    noResults.className = 'no-results';
+                    noResults.textContent = 'No matching content found. Try searching with different keywords or browse the categories above.';
+                    document.querySelector('.search-results').appendChild(noResults);
+                }
+            }
+            
+            // Scroll to search results
+            window.scrollTo({
+                top: document.querySelector('.search-section').offsetTop - 100,
+                behavior: 'smooth'
+            });
+        }
+        
+        // Function to reset search
+        function resetSearch() {
+            searchableElements.forEach(element => {
+                element.classList.remove('hidden');
+                removeHighlights(element);
+            });
+            
+            contentSections.forEach(section => {
+                section.classList.remove('hidden');
+            });
+            
+            document.querySelector('.help-sections').classList.remove('hidden');
+            
+            searchResultsCount.textContent = '';
+            
+            // Remove no results message if it exists
+            const noResults = document.querySelector('.no-results');
+            if (noResults) {
+                noResults.remove();
+            }
+        }
+        
+        // Function to highlight search terms
+        function highlightSearchTerm(element, term) {
+            const regex = new RegExp(term, 'gi');
+            const html = element.innerHTML;
+            
+            element.innerHTML = html.replace(regex, match => 
+                `<span class="highlight">${match}</span>`
+            );
+        }
+        
+        // Function to remove highlights
+        function removeHighlights(element) {
+            const highlights = element.querySelectorAll('.highlight');
+            highlights.forEach(highlight => {
+                const parent = highlight.parentNode;
+                parent.replaceChild(document.createTextNode(highlight.textContent), highlight);
+                parent.normalize();
+            });
+        }
+        
+        // Event listeners for search
+        searchButton.addEventListener('click', performSearch);
+        
+        searchBox.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                performSearch();
+            }
+        });
+        
+        // Clear search when input is cleared
+        searchBox.addEventListener('input', function() {
+            if (this.value.trim() === '') {
+                resetSearch();
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Close mobile menu if open
+                    hamburger.classList.remove('active');
+                    navMenu.classList.remove('active');
+                    mobileOverlay.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                    
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Add scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards for animation
+        document.querySelectorAll('.help-card, .guide-card, .faq-item').forEach((card, index) => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            card.style.transitionDelay = `${(index % 6) * 0.1}s`;
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>

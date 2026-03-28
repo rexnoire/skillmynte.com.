@@ -1,0 +1,3624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kotlin Programming | SkillMynte</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="rounded_logo.png">
+    <link rel="stylesheet" href="free kotlin course.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-code"></i>
+                SKILLMYNTE
+            </a>
+            <div class="nav-menu">
+                <a href="#" class="nav-link">Home</a>
+                <a href="#" class="nav-link">Courses</a>
+                <a href="#" class="nav-link">Practice</a>
+                <a href="#" class="nav-link">Projects</a>
+                
+                <div class="courses-dropdown">
+                    <button class="courses-btn">
+                        <i class="fas fa-book-open"></i> Jump to Module
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#module1" class="dropdown-item">
+                            <i class="fab fa-kotlin kotlin-icon"></i> Kotlin Basics
+                        </a>
+                        <a href="#module2" class="dropdown-item">
+                            <i class="fab fa-kotlin kotlin-icon"></i> Variables & Data Types
+                        </a>
+                        <a href="#module3" class="dropdown-item">
+                            <i class="fab fa-kotlin kotlin-icon"></i> Control Flow
+                        </a>
+                        <a href="#module4" class="dropdown-item">
+                            <i class="fab fa-kotlin kotlin-icon"></i> Functions
+                        </a>
+                        <a href="#module5" class="dropdown-item">
+                            <i class="fab fa-kotlin kotlin-icon"></i> Collections
+                        </a>
+                        <a href="#module6" class="dropdown-item">
+                            <i class="fab fa-kotlin kotlin-icon"></i> OOP in Kotlin
+                        </a>
+                        <a href="#module7" class="dropdown-item">
+                            <i class="fab fa-kotlin kotlin-icon"></i> Null Safety
+                        </a>
+                        <a href="#module8" class="dropdown-item">
+                            <i class="fab fa-kotlin kotlin-icon"></i> Coroutines
+                        </a>
+                        <a href="#module9" class="dropdown-item">
+                            <i class="fab fa-kotlin kotlin-icon"></i> Android Development
+                        </a>
+                        <a href="#module10" class="dropdown-item">
+                            <i class="fab fa-kotlin kotlin-icon"></i> Advanced Kotlin
+                        </a>
+                        <a href="#playground" class="dropdown-item">
+                            <i class="fas fa-laptop-code"></i> Practice Playground
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Premium Course Navigation -->
+    <div class="course-navigation">
+        <div class="course-nav-container">
+            <div class="course-category">
+                <button class="category-btn">
+                    <i class="fas fa-layer-group"></i> Categories
+                </button>
+                <div class="category-dropdown">
+                    <a href="#" class="category-item">
+                        <i class="fab fa-kotlin kotlin-icon"></i> Kotlin Programming
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fab fa-android android-icon"></i> Android Development
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fab fa-java java-icon"></i> Java & JVM
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fab fa-spring spring-icon"></i> Spring Framework
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fas fa-database database-icon"></i> Backend Development
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fas fa-mobile-alt"></i> Mobile Development
+                    </a>
+                </div>
+            </div>
+            
+            <div class="course-levels">
+                <button class="level-btn active" data-level="all">All Levels</button>
+                <button class="level-btn" data-level="beginner">Beginner</button>
+                <button class="level-btn" data-level="intermediate">Intermediate</button>
+                <button class="level-btn" data-level="advanced">Advanced</button>
+            </div>
+            
+            <div class="course-search">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" class="search-input" id="search-input" placeholder="Search courses...">
+            </div>
+        </div>
+    </div>
+    
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <a href="#module1" class="sidebar-item active completed">
+            <i class="fab fa-kotlin kotlin-icon"></i>
+            <span>Module 1: Kotlin Basics</span>
+            <span class="progress-indicator"><i class="fas fa-check"></i></span>
+        </a>
+        <a href="#module2" class="sidebar-item completed">
+            <i class="fab fa-kotlin kotlin-icon"></i>
+            <span>Module 2: Variables & Data Types</span>
+            <span class="progress-indicator"><i class="fas fa-check"></i></span>
+        </a>
+        <a href="#module3" class="sidebar-item completed">
+            <i class="fab fa-kotlin kotlin-icon"></i>
+            <span>Module 3: Control Flow</span>
+            <span class="progress-indicator"><i class="fas fa-check"></i></span>
+        </a>
+        <a href="#module4" class="sidebar-item">
+            <i class="fab fa-kotlin kotlin-icon"></i>
+            <span>Module 4: Functions</span>
+            <span class="progress-indicator">4</span>
+        </a>
+        <a href="#module5" class="sidebar-item">
+            <i class="fab fa-kotlin kotlin-icon"></i>
+            <span>Module 5: Collections</span>
+            <span class="progress-indicator">5</span>
+        </a>
+        <a href="#module6" class="sidebar-item">
+            <i class="fab fa-kotlin kotlin-icon"></i>
+            <span>Module 6: OOP in Kotlin</span>
+            <span class="progress-indicator">6</span>
+        </a>
+        <a href="#module7" class="sidebar-item">
+            <i class="fab fa-kotlin kotlin-icon"></i>
+            <span>Module 7: Null Safety</span>
+            <span class="progress-indicator">7</span>
+        </a>
+        <a href="#module8" class="sidebar-item">
+            <i class="fab fa-kotlin kotlin-icon"></i>
+            <span>Module 8: Coroutines</span>
+            <span class="progress-indicator">8</span>
+        </a>
+        <a href="#module9" class="sidebar-item">
+            <i class="fab fa-kotlin kotlin-icon"></i>
+            <span>Module 9: Android Development</span>
+            <span class="progress-indicator">9</span>
+        </a>
+        <a href="#module10" class="sidebar-item">
+            <i class="fab fa-kotlin kotlin-icon"></i>
+            <span>Module 10: Advanced Kotlin</span>
+            <span class="progress-indicator">10</span>
+        </a>
+        <a href="#playground" class="sidebar-item">
+            <i class="fas fa-laptop-code"></i>
+            <span>Practice Playground</span>
+        </a>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="content-wrapper">
+        <div class="container">
+            <!-- Module 1 -->
+            <div class="course-module" id="module1" data-aos="fade-up" data-difficulty="beginner">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>KOTLIN BASICS</h1>
+                    <h3>Learn the fundamental structure of Kotlin programs</h3>
+                    <span class="difficulty">Beginner</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968242.png" class="module-icon" alt="Kotlin Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 1: <span>Your First Kotlin Program</span></h1>
+                    <p>Kotlin is a modern, expressive programming language that runs on the Java Virtual Machine (JVM). Developed by JetBrains, Kotlin combines object-oriented and functional programming features while being fully interoperable with Java. It's the preferred language for Android development and is rapidly growing in popularity for backend and multiplatform applications.</p>
+                    
+                    <p>Every Kotlin program starts with a main function. The <code>fun</code> keyword defines functions, and <code>println()</code> outputs text to the console. Kotlin files have a <code>.kt</code> extension and don't require semicolons at the end of statements. Let's create your first Kotlin program!</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Kotlin</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-1" spellcheck="false">// Your first Kotlin program
+fun main() {
+    // Print a message to the console
+    println("Hello, Kotlin World!")
+    
+    // Basic arithmetic operations
+    val sum = 10 + 5
+    println("10 + 5 = $sum")
+    
+    // String concatenation
+    val greeting = "Welcome to "
+    val language = "Kotlin"
+    println(greeting + language + "!")
+    
+    // Using string templates
+    println("This is Kotlin version: ${getKotlinVersion()}")
+}
+
+fun getKotlinVersion(): String {
+    return "1.8.0"
+}</textarea>
+                        <button class="run-btn" onclick="runCode('editor-1', 'output-1')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-terminal"></i> Console Output
+                        </div>
+                        <div class="preview-container" id="output-1">
+                            <pre style="color: var(--primary-light); margin: 0;">Hello, Kotlin World!
+10 + 5 = 15
+Welcome to Kotlin!
+This is Kotlin version: 1.8.0</pre>
+                        </div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li><code>fun main()</code> is the entry point of every Kotlin program</li>
+                                <li><code>println()</code> outputs text with a new line</li>
+                                <li><code>//</code> creates single-line comments</li>
+                                <li>Kotlin files have <code>.kt</code> extension</li>
+                                <li>No semicolons required at end of statements</li>
+                                <li><code>val</code> declares read-only variables</li>
+                                <li>String templates (<code>$variable</code>) embed values in strings</li>
+                                <li>Kotlin is statically typed but supports type inference</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-graduation-cap"></i> Kotlin Foundation Explained</h3>
+                            <p>Kotlin is a pragmatic programming language designed to be concise, safe, and fully interoperable with Java. Created by JetBrains in 2011, it was officially adopted by Google as a first-class language for Android development in 2017. Kotlin addresses many pain points of Java while maintaining seamless compatibility, allowing you to call Java code from Kotlin and vice versa.</p>
+                            
+                            <p>The language's syntax is clean and expressive, reducing boilerplate code significantly. Features like type inference, data classes, and extension functions make Kotlin both powerful and enjoyable to work with. As a JVM language, Kotlin benefits from Java's mature ecosystem while providing modern language features that improve developer productivity and code safety.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-mobile-alt"></i> Android Development</h4>
+                                    <p>Kotlin is Google's preferred language for Android, offering null safety, extension functions, and coroutines that simplify asynchronous programming.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-server"></i> Backend Development</h4>
+                                    <p>Kotlin works seamlessly with Spring Boot and other Java frameworks while providing more concise syntax and better type safety.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-globe"></i> Multiplatform</h4>
+                                    <p>Kotlin Multiplatform allows sharing business logic between iOS, Android, web, and desktop applications.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-building"></i> Real-World Application</h4>
+                                <p>Companies like Google, Netflix, Uber, and Pinterest have adopted Kotlin for their Android applications. Google's entire suite of Android apps is being rewritten in Kotlin. Backend services at companies like Slack and Atlassian use Kotlin for its safety features and expressiveness. Kotlin's growth in the Android ecosystem has been explosive, with over 60% of professional Android developers using it as their primary language.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Create Your First Kotlin Program:</strong> Write a Kotlin program that includes:</p>
+                            <ul>
+                                <li>A main function with proper entry point</li>
+                                <li>Print statements to display your name and favorite programming language</li>
+                                <li>Variables for your age and programming experience</li>
+                                <li>Basic arithmetic operations (addition, multiplication)</li>
+                                <li>String concatenation and string templates</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 2 -->
+            <div class="course-module" id="module2" data-aos="fade-up" data-difficulty="beginner">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>VARIABLES & DATA TYPES</h1>
+                    <h3>Learn to declare variables and understand data types</h3>
+                    <span class="difficulty">Beginner</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968242.png" class="module-icon" alt="Kotlin Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 2: <span>Variables and Data Types</span></h1>
+                    <p>Variables in Kotlin are declared using <code>val</code> (immutable) or <code>var</code> (mutable). Kotlin is statically typed, which means the type of every variable is known at compile time, but it also supports type inference so you don't always need to specify types explicitly.</p>
+                    
+                    <p>Kotlin has two categories of types: primitive types (like <code>Int</code>, <code>Double</code>, <code>Boolean</code>) and reference types (like <code>String</code>, <code>List</code>, custom classes). All types in Kotlin are objects, meaning they have methods and properties you can access.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Kotlin</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-2" spellcheck="false">fun main() {
+    // Variables: val vs var
+    val immutableName = "SkillMynte"  // Cannot be reassigned
+    var mutableCount = 10             // Can be reassigned
+    
+    println("Immutable: $immutableName")
+    println("Mutable: $mutableCount")
+    
+    // Reassigning mutable variable
+    mutableCount = 20
+    println("Updated count: $mutableCount")
+    
+    // Basic data types
+    val age: Int = 25                // Integer
+    val price: Double = 19.99        // Double precision
+    val isKotlinFun: Boolean = true  // Boolean
+    val firstLetter: Char = 'K'      // Character
+    val message: String = "Learning Kotlin" // String
+    
+    // Type inference (Kotlin can guess the type)
+    val inferredInt = 42            // Inferred as Int
+    val inferredDouble = 3.14       // Inferred as Double
+    val inferredString = "Hello"    // Inferred as String
+    
+    // Type checking and conversion
+    val numberString = "123"
+    val convertedNumber = numberString.toInt()
+    println("Converted: $convertedNumber (Type: ${convertedNumber::class.simpleName})")
+    
+    // Nullable types (more on this in Module 7)
+    val nullableString: String? = null
+    println("Nullable: $nullableString")
+    
+    // Arrays
+    val numbers = arrayOf(1, 2, 3, 4, 5)
+    println("Array size: ${numbers.size}")
+    println("First element: ${numbers[0]}")
+    
+    // Multi-line strings
+    val multiline = """
+        This is a multi-line string
+        It preserves formatting
+        And can span multiple lines
+    """.trimIndent()
+    println(multiline)
+}</textarea>
+                        <button class="run-btn" onclick="runCode('editor-2', 'output-2')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-terminal"></i> Console Output
+                        </div>
+                        <div class="preview-container" id="output-2">
+                            <pre style="color: var(--primary-light); margin: 0;">Immutable: SkillMynte
+Mutable: 10
+Updated count: 20
+Converted: 123 (Type: Int)
+Nullable: null
+Array size: 5
+First element: 1
+This is a multi-line string
+It preserves formatting
+And can span multiple lines</pre>
+                        </div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>Use <code>val</code> for immutable variables (cannot be reassigned)</li>
+                                <li>Use <code>var</code> for mutable variables (can be reassigned)</li>
+                                <li>Basic types: <code>Int</code>, <code>Double</code>, <code>Boolean</code>, <code>Char</code>, <code>String</code></li>
+                                <li>Type inference: Kotlin can often guess the type (<code>val x = 10</code>)</li>
+                                <li>Explicit types: <code>val name: String = "Kotlin"</code></li>
+                                <li>Nullable types use <code>?</code> (<code>String?</code> can be null)</li>
+                                <li><code>arrayOf()</code> creates arrays</li>
+                                <li>Triple quotes (<code>"""</code>) create multi-line strings</li>
+                                <li>Type conversion methods: <code>toInt()</code>, <code>toDouble()</code>, etc.</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-database"></i> Type System & Safety</h3>
+                            <p>Kotlin's type system is designed to eliminate common programming errors. The distinction between <code>val</code> and <code>var</code> encourages immutable programming, which leads to safer, more predictable code. By default, Kotlin variables are non-nullable, preventing the dreaded NullPointerException that plagues many Java programs. When you need nullable types, you must explicitly declare them with <code>?</code>, making your intent clear to both the compiler and other developers.</p>
+                            
+                            <p>Type inference in Kotlin is smart and reduces boilerplate without sacrificing type safety. The compiler analyzes your code to determine types, allowing you to write cleaner, more readable code. This combination of explicit type declarations when needed and inference when possible gives you the best of both worlds: safety and conciseness.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-shield-alt"></i> Null Safety</h4>
+                                    <p>Kotlin's type system distinguishes between nullable and non-nullable types, eliminating NullPointerExceptions at compile time and forcing developers to handle null cases explicitly.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-bolt"></i> Type Inference</h4>
+                                    <p>The Kotlin compiler can infer types in most cases, reducing boilerplate while maintaining all the benefits of static typing and compile-time safety.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-exchange-alt"></i> Java Interoperability</h4>
+                                    <p>Kotlin types map directly to Java types, allowing seamless integration with existing Java codebases and libraries while providing enhanced safety features.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-mobile-alt"></i> Android Application Development</h4>
+                                <p>In Android development, proper variable declaration is crucial for performance and memory management. Using <code>val</code> for view references prevents accidental reassignment. Type-safe builders for UI components ensure compile-time checking of XML attributes. The Android Studio IDE provides excellent Kotlin support with real-time type inference feedback, auto-completion for Kotlin-specific features, and seamless conversion from Java to Kotlin. Major apps like Trello, Evernote, and Coursera have migrated to Kotlin, reporting significant reductions in crash rates due to improved null safety and type checking.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Create a Student Profile Program:</strong> Build a program that stores and displays student information:</p>
+                            <ul>
+                                <li>Use <code>val</code> for immutable student details (name, ID)</li>
+                                <li>Use <code>var</code> for mutable data (grade, attendance)</li>
+                                <li>Include different data types: String, Int, Double, Boolean</li>
+                                <li>Create an array of subjects the student is taking</li>
+                                <li>Use type inference where possible</li>
+                                <li>Create a multi-line string for student bio</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 3 -->
+            <div class="course-module" id="module3" data-aos="fade-up" data-difficulty="beginner">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>CONTROL FLOW</h1>
+                    <h3>Learn to control program execution flow</h3>
+                    <span class="difficulty">Beginner</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968242.png" class="module-icon" alt="Kotlin Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 3: <span>Conditionals and Loops</span></h1>
+                    <p>Control flow statements determine the order in which your code executes. Kotlin provides familiar constructs like <code>if</code>, <code>when</code>, <code>for</code>, and <code>while</code>, but with some powerful enhancements. The <code>when</code> expression is particularly powerful, serving as a more flexible replacement for Java's <code>switch</code> statement.</p>
+                    
+                    <p>In Kotlin, <code>if</code> and <code>when</code> are expressions, not just statements. This means they return values, allowing you to write more concise code. Ranges (<code>..</code>) and progression operators (<code>until</code>, <code>downTo</code>, <code>step</code>) make working with loops more intuitive.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Kotlin</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-3" spellcheck="false">fun main() {
+    // If-else as expression (returns a value)
+    val score = 85
+    val grade = if (score >= 90) {
+        "A"
+    } else if (score >= 80) {
+        "B"
+    } else if (score >= 70) {
+        "C"
+    } else {
+        "F"
+    }
+    println("Score: $score, Grade: $grade")
+    
+    // When expression (supercharged switch)
+    val day = 3
+    val dayName = when (day) {
+        1 -> "Monday"
+        2 -> "Tuesday"
+        3 -> "Wednesday"
+        4 -> "Thursday"
+        5 -> "Friday"
+        6, 7 -> "Weekend"
+        else -> "Invalid day"
+    }
+    println("Day $day is $dayName")
+    
+    // When with ranges and conditions
+    val temperature = 25
+    val weather = when {
+        temperature < 0 -> "Freezing"
+        temperature in 0..10 -> "Cold"
+        temperature in 11..20 -> "Cool"
+        temperature in 21..30 -> "Warm"
+        else -> "Hot"
+    }
+    println("Temperature: ${temperature}°C, Weather: $weather")
+    
+    // For loops with ranges
+    println("Counting up:")
+    for (i in 1..5) {
+        print("$i ")
+    }
+    println()
+    
+    // For loops with progression operators
+    println("Counting down:")
+    for (i in 5 downTo 1) {
+        print("$i ")
+    }
+    println()
+    
+    println("Even numbers:")
+    for (i in 2..10 step 2) {
+        print("$i ")
+    }
+    println()
+    
+    // While loop
+    println("While loop:")
+    var counter = 0
+    while (counter < 3) {
+        println("Counter: $counter")
+        counter++
+    }
+    
+    // Do-while loop
+    println("Do-while loop:")
+    var x = 0
+    do {
+        println("x = $x")
+        x++
+    } while (x < 3)
+    
+    // Break and continue
+    println("Break example:")
+    for (i in 1..10) {
+        if (i == 5) break
+        print("$i ")
+    }
+    println()
+    
+    println("Continue example:")
+    for (i in 1..5) {
+        if (i == 3) continue
+        print("$i ")
+    }
+    println()
+}</textarea>
+                        <button class="run-btn" onclick="runCode('editor-3', 'output-3')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-terminal"></i> Console Output
+                        </div>
+                        <div class="preview-container" id="output-3">
+                            <pre style="color: var(--primary-light); margin: 0;">Score: 85, Grade: B
+Day 3 is Wednesday
+Temperature: 25°C, Weather: Warm
+Counting up:
+1 2 3 4 5 
+Counting down:
+5 4 3 2 1 
+Even numbers:
+2 4 6 8 10 
+While loop:
+Counter: 0
+Counter: 1
+Counter: 2
+Do-while loop:
+x = 0
+x = 1
+x = 2
+Break example:
+1 2 3 4 
+Continue example:
+1 2 4 5</pre>
+                        </div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li><code>if</code> can be used as an expression (returns a value)</li>
+                                <li><code>when</code> replaces <code>switch</code> and is more powerful</li>
+                                <li>Ranges: <code>1..5</code> creates inclusive range 1 through 5</li>
+                                <li>Progression operators: <code>downTo</code>, <code>step</code></li>
+                                <li><code>for</code> loop iterates over ranges, arrays, or collections</li>
+                                <li><code>while</code> and <code>do-while</code> loops for conditional iteration</li>
+                                <li><code>break</code> exits a loop, <code>continue</code> skips to next iteration</li>
+                                <li><code>in</code> operator checks if value is in a range/collection</li>
+                                <li><code>when</code> can have multiple conditions separated by commas</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-code-branch"></i> Expressive Control Flow</h3>
+                            <p>Kotlin's control flow constructs are designed to be both safe and expressive. The fact that <code>if</code> and <code>when</code> are expressions (not just statements) enables functional programming patterns and reduces boilerplate code. This design eliminates entire categories of bugs related to missing <code>else</code> branches or uninitialized variables.</p>
+                            
+                            <p>The <code>when</code> expression is particularly powerful. It can match against constants, ranges, types, and even arbitrary conditions. Unlike Java's <code>switch</code>, Kotlin's <code>when</code> doesn't have fall-through behavior, preventing a common source of bugs. The compiler also ensures exhaustiveness when used as an expression, guaranteeing that all cases are handled.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-check-circle"></i> Exhaustive Checking</h4>
+                                    <p>When used as expressions, <code>when</code> constructs must be exhaustive or have an <code>else</code> branch, ensuring all possible cases are handled at compile time.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-infinity"></i> Range Operations</h4>
+                                    <p>Kotlin's range syntax (<code>..</code>, <code>until</code>, <code>downTo</code>) provides intuitive ways to work with numerical sequences and collections.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-sync-alt"></i> Loop Optimization</h4>
+                                    <p>Kotlin's loops compile to efficient bytecode, and the language provides multiple ways to iterate (for-each, indexed, with step) for different performance characteristics.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-robot"></i> Business Logic Implementation</h4>
+                                <p>In enterprise applications, control flow constructs handle complex business rules. E-commerce platforms use <code>when</code> expressions to calculate shipping costs based on weight, destination, and shipping method. Banking applications use nested conditionals to determine loan eligibility. Gaming applications use loops for game loops and physics simulations. The Android ViewModel pattern often uses <code>when</code> expressions to handle different UI states (Loading, Success, Error, Empty). Kotlin's expressive control flow makes these complex logic blocks more readable and maintainable than equivalent Java code.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Create a Grading System:</strong> Build a program that calculates grades based on scores:</p>
+                            <ul>
+                                <li>Use <code>when</code> expression to convert scores to letter grades</li>
+                                <li>Implement different grading scales (A-F, Pass/Fail)</li>
+                                <li>Use ranges in your conditions</li>
+                                <li>Create loops to process multiple student scores</li>
+                                <li>Implement input validation using conditionals</li>
+                                <li>Use <code>break</code> and <code>continue</code> appropriately</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 4 -->
+            <div class="course-module" id="module4" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>FUNCTIONS</h1>
+                    <h3>Learn to create reusable code with functions</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968242.png" class="module-icon" alt="Kotlin Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 4: <span>Functions and Lambdas</span></h1>
+                    <p>Functions are the building blocks of Kotlin programs. They allow you to encapsulate logic, promote code reuse, and make your programs more modular. Kotlin functions have some powerful features like default arguments, named arguments, single-expression functions, and extension functions.</p>
+                    
+                    <p>Lambdas (anonymous functions) and higher-order functions (functions that take other functions as parameters or return them) enable functional programming patterns. Kotlin's function syntax is concise yet expressive, making it easy to write clean, maintainable code.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Kotlin</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-4" spellcheck="false">fun main() {
+    // Basic function call
+    greet("SkillMynte")
+    
+    // Function with return value
+    val sum = add(5, 3)
+    println("5 + 3 = $sum")
+    
+    // Function with default arguments
+    printMessage()
+    printMessage("Custom message")
+    
+    // Named arguments
+    createUser(name = "Alice", age = 30, email = "alice@example.com")
+    createUser(email = "bob@example.com", age = 25, name = "Bob")
+    
+    // Single-expression function
+    val doubled = double(7)
+    println("Double of 7 is $doubled")
+    
+    // Extension function
+    val greeting = "hello"
+    println(greeting.capitalized())
+    
+    // Higher-order function
+    val numbers = listOf(1, 2, 3, 4, 5)
+    val squared = transform(numbers) { it * it }
+    println("Squared: $squared")
+    
+    // Lambda expressions
+    val multiply: (Int, Int) -> Int = { a, b -> a * b }
+    println("3 * 4 = ${multiply(3, 4)}")
+    
+    // Function type
+    val operation: (Int, Int) -> Int = ::add
+    println("Operation result: ${operation(10, 20)}")
+    
+    // Inline functions (for performance)
+    calculateTime { 
+        var sum = 0
+        for (i in 1..1000000) {
+            sum += i
+        }
+        println("Sum calculated: $sum")
+    }
+}
+
+// Basic function
+fun greet(name: String) {
+    println("Hello, $name!")
+}
+
+// Function with return type
+fun add(a: Int, b: Int): Int {
+    return a + b
+}
+
+// Function with default arguments
+fun printMessage(message: String = "Hello, World!") {
+    println(message)
+}
+
+// Function with named arguments support
+fun createUser(name: String, age: Int, email: String) {
+    println("Creating user: $name, Age: $age, Email: $email")
+}
+
+// Single-expression function
+fun double(x: Int): Int = x * 2
+
+// Extension function (adds new functionality to existing class)
+fun String.capitalized(): String {
+    return this.replaceFirstChar { it.uppercase() }
+}
+
+// Higher-order function (takes function as parameter)
+fun transform(numbers: List<Int>, transformer: (Int) -> Int): List<Int> {
+    val result = mutableListOf<Int>()
+    for (number in numbers) {
+        result.add(transformer(number))
+    }
+    return result
+}
+
+// Inline function (reduces overhead of lambda expressions)
+inline fun calculateTime(block: () -> Unit) {
+    val start = System.currentTimeMillis()
+    block()
+    val end = System.currentTimeMillis()
+    println("Time taken: ${end - start}ms")
+}</textarea>
+                        <button class="run-btn" onclick="runCode('editor-4', 'output-4')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-terminal"></i> Console Output
+                        </div>
+                        <div class="preview-container" id="output-4">
+                            <pre style="color: var(--primary-light); margin: 0;">Hello, SkillMynte!
+5 + 3 = 8
+Hello, World!
+Custom message
+Creating user: Alice, Age: 30, Email: alice@example.com
+Creating user: Bob, Age: 25, Email: bob@example.com
+Double of 7 is 14
+Hello
+Squared: [1, 4, 9, 16, 25]
+3 * 4 = 12
+Operation result: 30
+Sum calculated: 500000500000
+Time taken: Xms</pre>
+                        </div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>Functions are declared with <code>fun</code> keyword</li>
+                                <li>Default arguments provide flexibility</li>
+                                <li>Named arguments improve readability</li>
+                                <li>Single-expression functions: <code>fun square(x: Int) = x * x</code></li>
+                                <li>Extension functions add methods to existing classes</li>
+                                <li>Higher-order functions take/return other functions</li>
+                                <li>Lambda syntax: <code>{ parameters -> body }</code></li>
+                                <li><code>it</code> is implicit name for single parameter in lambda</li>
+                                <li>Inline functions improve performance with lambdas</li>
+                                <li>Function types: <code>(Int, String) -> Boolean</code></li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-cogs"></i> Functional Programming Features</h3>
+                            <p>Kotlin's function system bridges object-oriented and functional programming paradigms. Extension functions allow you to add functionality to existing classes without inheritance or decoration, enabling clean, readable APIs. Default and named arguments eliminate the need for builder patterns or multiple overloaded method versions, making your code more concise and self-documenting.</p>
+                            
+                            <p>Higher-order functions and lambdas enable functional programming patterns like map, filter, and reduce operations. The <code>inline</code> keyword optimizes performance by eliminating lambda overhead at runtime. Kotlin's standard library is rich with higher-order functions that work seamlessly with collections, making common data transformations elegant and efficient.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-box-open"></i> Extension Functions</h4>
+                                    <p>Add new functionality to existing classes without modifying their source code or using inheritance, promoting the Open-Closed Principle and cleaner APIs.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-bolt"></i> Inline Optimization</h4>
+                                    <p>Inline functions eliminate the runtime overhead of lambda expressions by copying the function body at the call site, crucial for performance-sensitive code.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-random"></i> Higher-Order Functions</h4>
+                                    <p>Functions that operate on other functions enable functional programming patterns, making code more declarative and reducing side effects.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-shopping-cart"></i> E-Commerce & API Development</h4>
+                                <p>In e-commerce applications, extension functions are used to add formatting methods to monetary values. Higher-order functions process shopping cart items with transformations and filters. REST API controllers use default arguments for pagination parameters. Android development heavily uses extension functions for View manipulation and Kotlin Android Extensions for view binding. The Spring Framework's Kotlin support leverages default arguments for configuration beans and extension functions for DSL-style configuration. These patterns demonstrate how Kotlin's function features enable clean, maintainable code in production applications.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Create a Math Utilities Library:</strong> Build a collection of mathematical functions:</p>
+                            <ul>
+                                <li>Basic arithmetic functions with default arguments</li>
+                                <li>Extension functions for number formatting</li>
+                                <li>Higher-order functions for mathematical transformations</li>
+                                <li>Single-expression functions for simple calculations</li>
+                                <li>Named arguments for complex function calls</li>
+                                <li>Inline functions for performance-critical operations</li>
+                                <li>Lambda expressions for custom operations</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 5 -->
+            <div class="course-module" id="module5" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>COLLECTIONS</h1>
+                    <h3>Learn to work with data collections in Kotlin</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968242.png" class="module-icon" alt="Kotlin Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 5: <span>Collections Framework</span></h1>
+                    <p>Kotlin provides a rich collections framework that builds upon Java's collections but adds many useful extensions and improvements. Collections are divided into immutable (read-only) and mutable (read-write) variants. The main collection types are List, Set, and Map, each with their immutable and mutable versions.</p>
+                    
+                    <p>Kotlin's collection operations are designed to be functional and expressive. You can chain operations like <code>filter</code>, <code>map</code>, <code>reduce</code>, and <code>groupBy</code> to transform data in clean, readable ways. The framework also includes specialized collections like sequences for lazy evaluation.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Kotlin</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-5" spellcheck="false">fun main() {
+    // Lists (ordered collections, allow duplicates)
+    println("=== LISTS ===")
+    val immutableList = listOf("Apple", "Banana", "Cherry")
+    val mutableList = mutableListOf("Red", "Green", "Blue")
+    
+    println("Immutable list: $immutableList")
+    println("Mutable list: $mutableList")
+    
+    mutableList.add("Yellow")
+    println("After adding Yellow: $mutableList")
+    
+    // List operations
+    val numbers = listOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+    println("Original numbers: $numbers")
+    
+    // Filter (returns new list)
+    val evens = numbers.filter { it % 2 == 0 }
+    println("Even numbers: $evens")
+    
+    // Map (transforms each element)
+    val squares = numbers.map { it * it }
+    println("Squares: $squares")
+    
+    // Reduce (combines elements)
+    val sum = numbers.reduce { acc, num -> acc + num }
+    println("Sum: $sum")
+    
+    // Fold (reduce with initial value)
+    val product = numbers.fold(1) { acc, num -> acc * num }
+    println("Product: $product")
+    
+    // Sets (unique elements, no order guarantee)
+    println("\n=== SETS ===")
+    val immutableSet = setOf(1, 2, 3, 2, 1) // Duplicates removed
+    val mutableSet = mutableSetOf("A", "B", "C")
+    
+    println("Immutable set: $immutableSet")
+    println("Mutable set: $mutableSet")
+    
+    mutableSet.add("D")
+    mutableSet.add("A") // Won't add duplicate
+    println("After additions: $mutableSet")
+    
+    // Set operations
+    val set1 = setOf(1, 2, 3, 4)
+    val set2 = setOf(3, 4, 5, 6)
+    
+    println("Union: ${set1 union set2}")
+    println("Intersection: ${set1 intersect set2}")
+    println("Difference: ${set1 subtract set2}")
+    
+    // Maps (key-value pairs)
+    println("\n=== MAPS ===")
+    val immutableMap = mapOf(
+        "name" to "SkillMynte",
+        "language" to "Kotlin",
+        "rating" to 5
+    )
+    val mutableMap = mutableMapOf(
+        1 to "January",
+        2 to "February",
+        3 to "March"
+    )
+    
+    println("Immutable map: $immutableMap")
+    println("Mutable map: $mutableMap")
+    
+    mutableMap[4] = "April"
+    println("After adding April: $mutableMap")
+    
+    // Map operations
+    println("All keys: ${mutableMap.keys}")
+    println("All values: ${mutableMap.values}")
+    println("Contains key 2: ${mutableMap.containsKey(2)}")
+    
+    // Transform map
+    val doubledValues = mutableMap.mapValues { (key, value) -> value.uppercase() }
+    println("Uppercased values: $doubledValues")
+    
+    // Collections utility functions
+    println("\n=== UTILITY FUNCTIONS ===")
+    
+    // Any, All, None
+    val hasEven = numbers.any { it % 2 == 0 }
+    val allPositive = numbers.all { it > 0 }
+    val noneNegative = numbers.none { it < 0 }
+    
+    println("Has even: $hasEven")
+    println("All positive: $allPositive")
+    println("None negative: $noneNegative")
+    
+    // Group by
+    val words = listOf("apple", "banana", "apricot", "blueberry", "cherry")
+    val groupedByFirstLetter = words.groupBy { it.first() }
+    println("Grouped by first letter: $groupedByFirstLetter")
+    
+    // Partition
+    val (shortWords, longWords) = words.partition { it.length <= 5 }
+    println("Short words: $shortWords")
+    println("Long words: $longWords")
+    
+    // Sequences (lazy evaluation)
+    println("\n=== SEQUENCES ===")
+    val sequenceResult = (1..1_000_000)
+        .asSequence()
+        .filter { it % 2 == 0 }
+        .map { it * 2 }
+        .take(10)
+        .toList()
+    println("First 10 even numbers doubled: $sequenceResult")
+    
+    // Collection builders
+    println("\n=== BUILDERS ===")
+    val builtList = buildList {
+        add("First")
+        addAll(listOf("Second", "Third"))
+        if (size > 1) {
+            removeAt(0)
+        }
+    }
+    println("Built list: $builtList")
+}</textarea>
+                        <button class="run-btn" onclick="runCode('editor-5', 'output-5')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-terminal"></i> Console Output
+                        </div>
+                        <div class="preview-container" id="output-5">
+                            <pre style="color: var(--primary-light); margin: 0;">=== LISTS ===
+Immutable list: [Apple, Banana, Cherry]
+Mutable list: [Red, Green, Blue]
+After adding Yellow: [Red, Green, Blue, Yellow]
+Original numbers: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Even numbers: [2, 4, 6, 8, 10]
+Squares: [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+Sum: 55
+Product: 3628800
+
+=== SETS ===
+Immutable set: [1, 2, 3]
+Mutable set: [A, B, C]
+After additions: [A, B, C, D]
+Union: [1, 2, 3, 4, 5, 6]
+Intersection: [3, 4]
+Difference: [1, 2]
+
+=== MAPS ===
+Immutable map: {name=SkillMynte, language=Kotlin, rating=5}
+Mutable map: {1=January, 2=February, 3=March}
+After adding April: {1=January, 2=February, 3=March, 4=April}
+All keys: [1, 2, 3, 4]
+All values: [January, February, March, April]
+Contains key 2: true
+Uppercased values: {1=JANUARY, 2=FEBRUARY, 3=MARCH, 4=APRIL}
+
+=== UTILITY FUNCTIONS ===
+Has even: true
+All positive: true
+None negative: true
+Grouped by first letter: {a=[apple, apricot], b=[banana, blueberry], c=[cherry]}
+Short words: [apple, cherry]
+Long words: [banana, apricot, blueberry]
+
+=== SEQUENCES ===
+First 10 even numbers doubled: [4, 8, 12, 16, 20, 24, 28, 32, 36, 40]
+
+=== BUILDERS ===
+Built list: [Second, Third]</pre>
+                        </div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>Immutable collections: <code>listOf()</code>, <code>setOf()</code>, <code>mapOf()</code></li>
+                                <li>Mutable collections: <code>mutableListOf()</code>, <code>mutableSetOf()</code>, <code>mutableMapOf()</code></li>
+                                <li><code>filter()</code> selects elements matching a condition</li>
+                                <li><code>map()</code> transforms each element</li>
+                                <li><code>reduce()</code> and <code>fold()</code> combine elements</li>
+                                <li>Set operations: <code>union</code>, <code>intersect</code>, <code>subtract</code></li>
+                                <li>Map operations: <code>keys</code>, <code>values</code>, <code>mapValues()</code></li>
+                                <li>Utility functions: <code>any()</code>, <code>all()</code>, <code>none()</code></li>
+                                <li><code>groupBy()</code> groups elements by a key</li>
+                                <li><code>partition()</code> splits collection into two</li>
+                                <li>Sequences provide lazy evaluation for large datasets</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-layer-group"></i> Functional Collection Processing</h3>
+                            <p>Kotlin's collections framework is designed for functional programming while maintaining seamless interoperability with Java collections. The distinction between immutable and mutable collections at the type level encourages immutable programming patterns, which lead to safer, more predictable code. When you declare a collection as immutable, the compiler prevents modification, eliminating entire classes of concurrency bugs.</p>
+                            
+                            <p>The rich set of extension functions on collections enables declarative data processing. Instead of writing imperative loops with temporary variables, you can chain operations like <code>filter</code>, <code>map</code>, and <code>reduce</code> to express complex transformations concisely. Sequences provide lazy evaluation for performance-critical operations on large datasets, deferring computation until needed and minimizing intermediate collections.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-shield-alt"></i> Immutability by Default</h4>
+                                    <p>Immutable collections prevent accidental modifications, making code safer for concurrent access and easier to reason about. The compiler enforces immutability at the type level.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-bolt"></i> Lazy Sequences</h4>
+                                    <p>Sequences process elements one at a time, only computing results as needed. This minimizes memory usage and improves performance for large datasets or complex transformations.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-exchange-alt"></i> Java Interoperability</h4>
+                                    <p>Kotlin collections are built on Java collections, allowing seamless integration with existing Java code while providing enhanced APIs and type safety.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-chart-line"></i> Data Processing & Analytics</h4>
+                                <p>In data processing applications, Kotlin collections handle complex transformations efficiently. E-commerce platforms process order histories with <code>groupBy</code> and <code>map</code> operations. Analytics engines use sequences to process streaming data lazily. Banking applications filter and transform transaction data with functional operations. Android apps use collections to manage RecyclerView adapters and process API responses. The Spring Framework leverages Kotlin collections for data access layer operations. These patterns demonstrate how Kotlin's collection framework enables clean, efficient data processing in production systems.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Create a Student Management System:</strong> Build a program that manages student data using collections:</p>
+                            <ul>
+                                <li>Use lists for student records and grades</li>
+                                <li>Use maps to store student information (ID → Student)</li>
+                                <li>Implement filtering to find top-performing students</li>
+                                <li>Use mapping to calculate grade point averages</li>
+                                <li>Group students by their major/course</li>
+                                <li>Implement search functionality using collection operations</li>
+                                <li>Use sequences for processing large datasets efficiently</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 6 -->
+            <div class="course-module" id="module6" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>OOP IN KOTLIN</h1>
+                    <h3>Learn Object-Oriented Programming in Kotlin</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968242.png" class="module-icon" alt="Kotlin Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 6: <span>Classes, Objects, and Inheritance</span></h1>
+                    <p>Kotlin is a fully object-oriented language with modern features that improve upon traditional OOP concepts. Classes in Kotlin are more concise than in Java, with primary constructors, properties, and data classes reducing boilerplate code. Kotlin also introduces sealed classes, object declarations, and companion objects for specific use cases.</p>
+                    
+                    <p>While Kotlin supports inheritance and polymorphism, it encourages composition over inheritance through features like interfaces with default implementations and delegation. The language also provides visibility modifiers to control access to class members, with sensible defaults that promote encapsulation.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Kotlin</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-6" spellcheck="false">fun main() {
+    // Basic class instantiation
+    val person = Person("Alice", 30)
+    println(person.introduce())
+    
+    // Accessing properties
+    println("Name: ${person.name}, Age: ${person.age}")
+    
+    // Data class
+    val book1 = Book("Kotlin in Action", "Dmitry Jemerov", 2017)
+    val book2 = Book("Kotlin in Action", "Dmitry Jemerov", 2017)
+    val book3 = book1.copy(year = 2020)
+    
+    println("Book1: $book1")
+    println("Book2: $book2")
+    println("Book3: $book3")
+    println("Book1 == Book2: ${book1 == book2}")
+    println("Book1 === Book2: ${book1 === book2}")
+    
+    // Inheritance
+    val dog = Dog("Buddy", "Golden Retriever")
+    dog.makeSound()
+    dog.eat()
+    
+    // Interface implementation
+    val circle = Circle(5.0)
+    println("Circle area: ${circle.area()}")
+    println("Circle perimeter: ${circle.perimeter()}")
+    
+    // Sealed class
+    val result: Result = Result.Success(listOf(1, 2, 3))
+    processResult(result)
+    
+    // Object declaration (Singleton)
+    Database.connect()
+    println("Database URL: ${Database.url}")
+    
+    // Companion object
+    println("Default username: ${User.DEFAULT_USERNAME}")
+    val user = User.create("admin")
+    println("Created user: ${user.username}")
+    
+    // Enum class
+    val day = DayOfWeek.MONDAY
+    println("Day: $day")
+    println("Is weekend: ${day.isWeekend}")
+    
+    // Class delegation
+    val file = FileLogger("app.log")
+    file.log("Application started")
+    file.log("Processing data...")
+}
+
+// Basic class with primary constructor
+class Person(val name: String, var age: Int) {
+    // Secondary constructor
+    constructor(name: String) : this(name, 0)
+    
+    // Method
+    fun introduce(): String {
+        return "Hello, I'm $name and I'm $age years old."
+    }
+}
+
+// Data class (automatically generates equals(), hashCode(), toString(), copy())
+data class Book(val title: String, val author: String, val year: Int)
+
+// Open class (allows inheritance)
+open class Animal(val name: String) {
+    open fun makeSound() {
+        println("$name makes a sound")
+    }
+    
+    fun eat() {
+        println("$name is eating")
+    }
+}
+
+// Inheritance
+class Dog(name: String, val breed: String) : Animal(name) {
+    override fun makeSound() {
+        println("$name barks")
+    }
+}
+
+// Interface
+interface Shape {
+    fun area(): Double
+    fun perimeter(): Double
+}
+
+// Interface implementation
+class Circle(val radius: Double) : Shape {
+    override fun area(): Double = Math.PI * radius * radius
+    override fun perimeter(): Double = 2 * Math.PI * radius
+}
+
+// Sealed class (restricted class hierarchies)
+sealed class Result {
+    data class Success(val data: List<Int>) : Result()
+    data class Error(val message: String) : Result()
+    object Loading : Result()
+}
+
+fun processResult(result: Result) {
+    when (result) {
+        is Result.Success -> println("Success with data: ${result.data}")
+        is Result.Error -> println("Error: ${result.message}")
+        Result.Loading -> println("Loading...")
+    }
+}
+
+// Object declaration (Singleton)
+object Database {
+    val url = "jdbc:mysql://localhost:3306/mydb"
+    
+    fun connect() {
+        println("Connected to database: $url")
+    }
+}
+
+// Companion object (similar to static members in Java)
+class User(val username: String) {
+    companion object {
+        const val DEFAULT_USERNAME = "guest"
+        
+        fun create(username: String): User {
+            return User(username)
+        }
+    }
+}
+
+// Enum class
+enum class DayOfWeek {
+    MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY;
+    
+    val isWeekend: Boolean
+        get() = this == SATURDAY || this == SUNDAY
+}
+
+// Interface for delegation
+interface Logger {
+    fun log(message: String)
+}
+
+// Class implementing interface
+class ConsoleLogger : Logger {
+    override fun log(message: String) {
+        println("LOG: $message")
+    }
+}
+
+// Class delegation (using "by" keyword)
+class FileLogger(filename: String) : Logger by ConsoleLogger() {
+    // Can override delegated methods
+    override fun log(message: String) {
+        println("FILE LOG: $message")
+        // Would write to file in real implementation
+    }
+}</textarea>
+                        <button class="run-btn" onclick="runCode('editor-6', 'output-6')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-terminal"></i> Console Output
+                        </div>
+                        <div class="preview-container" id="output-6">
+                            <pre style="color: var(--primary-light); margin: 0;">Hello, I'm Alice and I'm 30 years old.
+Name: Alice, Age: 30
+Book1: Book(title=Kotlin in Action, author=Dmitry Jemerov, year=2017)
+Book2: Book(title=Kotlin in Action, author=Dmitry Jemerov, year=2017)
+Book3: Book(title=Kotlin in Action, author=Dmitry Jemerov, year=2020)
+Book1 == Book2: true
+Book1 === Book2: false
+Buddy barks
+Buddy is eating
+Circle area: 78.53981633974483
+Circle perimeter: 31.41592653589793
+Success with data: [1, 2, 3]
+Connected to database: jdbc:mysql://localhost:3306/mydb
+Database URL: jdbc:mysql://localhost:3306/mydb
+Default username: guest
+Created user: admin
+Day: MONDAY
+Is weekend: false
+FILE LOG: Application started
+FILE LOG: Processing data...</pre>
+                        </div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>Classes declared with <code>class</code> keyword</li>
+                                <li>Primary constructor in class header</li>
+                                <li>Properties automatically generate getters/setters</li>
+                                <li><code>data class</code> generates equals(), hashCode(), toString(), copy()</li>
+                                <li><code>open</code> modifier required for inheritance</li>
+                                <li><code>override</code> modifier for overriding methods</li>
+                                <li>Interfaces can have default implementations</li>
+                                <li><code>sealed class</code> for restricted hierarchies</li>
+                                <li><code>object</code> for singleton pattern</li>
+                                <li><code>companion object</code> for static-like members</li>
+                                <li><code>enum class</code> for enumerated types</li>
+                                <li>Class delegation with <code>by</code> keyword</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-cube"></i> Modern Object-Oriented Design</h3>
+                            <p>Kotlin's approach to object-oriented programming removes much of the boilerplate found in Java while adding powerful features that enable cleaner, safer designs. Data classes eliminate the need to manually implement value object patterns. Sealed classes provide exhaustive when-expressions for restricted class hierarchies. Properties replace JavaBean patterns with concise syntax that automatically generates accessors.</p>
+                            
+                            <p>The language encourages composition over inheritance through class delegation and interface default implementations. By making classes <code>final</code> by default (requiring <code>open</code> for inheritance), Kotlin prevents fragile base class problems. Companion objects provide a cleaner alternative to Java's static members, while object declarations offer first-class singleton support without the double-checked locking boilerplate.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-database"></i> Data Classes</h4>
+                                    <p>Automatically generate equals(), hashCode(), toString(), and copy() methods, eliminating boilerplate for value objects and enabling immutability patterns.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-lock"></i> Sealed Classes</h4>
+                                    <p>Restrict class hierarchies to a known set of subclasses, enabling exhaustive when-expressions and pattern matching-like functionality.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-user-friends"></i> Class Delegation</h4>
+                                    <p>Implement the delegation pattern natively with the <code>by</code> keyword, promoting composition over inheritance and reducing boilerplate.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-mobile-alt"></i> Android & Enterprise Applications</h4>
+                                <p>In Android development, data classes model entities like User, Product, or Order. ViewModels often use sealed classes to represent UI states (Loading, Success, Error). Singleton patterns with object declarations manage shared resources like databases or API clients. The Model-View-ViewModel (MVVM) architecture leverages Kotlin's OOP features for clean separation of concerns. In backend development, Spring Boot applications use data classes for request/response DTOs. The repository pattern benefits from interface default implementations. These patterns demonstrate how Kotlin's modern OOP features enable maintainable, scalable application architectures.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Design a Library Management System:</strong> Create a complete OOP system for managing a library:</p>
+                            <ul>
+                                <li>Data classes for Book, Author, Member</li>
+                                <li>Inheritance hierarchy for different media types (Book, DVD, Magazine)</li>
+                                <li>Interfaces for borrowable items</li>
+                                <li>Sealed classes for transaction results</li>
+                                <li>Singleton for Library database</li>
+                                <li>Companion objects for factory methods</li>
+                                <li>Class delegation for logging functionality</li>
+                                <li>Enum classes for book categories</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 7 -->
+            <div class="course-module" id="module7" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>NULL SAFETY</h1>
+                    <h3>Learn Kotlin's revolutionary null safety features</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968242.png" class="module-icon" alt="Kotlin Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 7: <span>Null Safety and Optional Types</span></h1>
+                    <p>Null safety is one of Kotlin's most celebrated features. The language distinguishes between nullable and non-nullable types at the type system level, eliminating NullPointerExceptions (NPEs) at compile time. By default, all types in Kotlin are non-nullable - you must explicitly mark types as nullable using the <code>?</code> operator.</p>
+                    
+                    <p>Kotlin provides several operators to work with nullable types safely: the safe call operator (<code>?.</code>), Elvis operator (<code>?:</code>), not-null assertion (<code>!!</code>), and safe casts (<code>as?</code>). These tools allow you to write concise, safe code when dealing with potentially null values.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Kotlin</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+<textarea class="code-editor" id="editor-7" spellcheck="false">fun main() {
+    // Nullable vs Non-nullable types
+    val nonNullable: String = "Hello"  // Cannot be null
+    // val error: String = null        // Compilation error!
+    
+    val nullable: String? = null       // Can be null
+    println("Nullable string: $nullable")
+    
+    // Safe call operator (?.) - returns null if receiver is null
+    val length: Int? = nullable?.length
+    println("Length of nullable string: $length")
+    
+    val notNullString: String? = "Kotlin"
+    val notNullLength = notNullString?.length
+    println("Length of 'Kotlin': $notNullLength")
+    
+    // Chained safe calls
+    val user: User? = getUser()
+    val streetName: String? = user?.address?.street
+    println("Street name: $streetName")
+    
+    // Elvis operator (?:) - provides default value
+    val safeLength = nullable?.length ?: 0
+    println("Safe length: $safeLength")
+    
+    val username = user?.name ?: "Guest"
+    println("Username: $username")
+    
+    // Not-null assertion (!!) - throws NPE if null
+    try {
+        val dangerousLength = nullable!!.length  // Throws NullPointerException
+        println("This won't print")
+    } catch (e: NullPointerException) {
+        println("Caught NPE: ${e.message}")
+    }
+    
+    // Safe casts (as?) - returns null if cast fails
+    val anyObject: Any = "This is a string"
+    val stringCast: String? = anyObject as? String
+    val intCast: Int? = anyObject as? Int
+    
+    println("String cast: $stringCast")
+    println("Int cast: $intCast")
+    
+    // Let function - executes block only if not null
+    val message: String? = "Hello, World!"
+    message?.let {
+        println("Message is not null: $it")
+        println("Message length: ${it.length}")
+    }
+    
+    val nullMessage: String? = null
+    nullMessage?.let {
+        println("This won't execute")
+    }
+    
+    // Also function - useful for side effects
+    val list = mutableListOf(1, 2, 3)
+    list.also {
+        it.add(4)
+        println("Added element to list: $it")
+    }
+    
+    // Apply function - configure object properties
+    val person = Person().apply {
+        name = "Alice"
+        age = 30
+        city = "New York"
+    }
+    println("Configured person: $person")
+    
+    // Run function - combine object configuration and result
+    val result = person.run {
+        "${name.uppercase()} is $age years old and lives in $city"
+    }
+    println("Run result: $result")
+    
+    // With function - work with object without repeating name
+    with(person) {
+        println("With block: $name, $age, $city")
+    }
+    
+    // TakeIf and TakeUnless
+    val number = 42
+    val evenNumber = number.takeIf { it % 2 == 0 }
+    val oddNumber = number.takeUnless { it % 2 == 0 }
+    
+    println("Even check: $evenNumber")
+    println("Odd check: $oddNumber")
+    
+    // Nullable collections
+    val nullableList: List<Int?> = listOf(1, 2, null, 4, null, 6)
+    val nonNullList = nullableList.filterNotNull()
+    println("Original list: $nullableList")
+    println("Filtered list: $nonNullList")
+    
+    // Platform types (interoperability with Java)
+    val javaString: String = JavaInterop.getNullableString()  // Platform type!
+    println("Java string length: ${javaString.length}")  // Possible NPE!
+    
+    // Better: treat as nullable
+    val safeJavaString: String? = JavaInterop.getNullableString()
+    println("Safe Java string length: ${safeJavaString?.length ?: 0}")
+}
+
+// Data classes for examples
+data class User(val name: String? = null, val address: Address? = null)
+data class Address(val street: String? = null, val city: String? = null)
+
+class Person {
+    var name: String = ""
+    var age: Int = 0
+    var city: String = ""
+    
+    override fun toString(): String {
+        return "Person(name='$name', age=$age, city='$city')"
+    }
+}
+
+fun getUser(): User? {
+    // Simulate sometimes returning null
+    return if (Math.random() > 0.5) {
+        User("John", Address("Main St", "Boston"))
+    } else {
+        null
+    }
+}
+
+// Simulating Java interop
+object JavaInterop {
+    @JvmStatic
+    fun getNullableString(): String {
+        return if (Math.random() > 0.5) "Java String" else null!!
+    }
+}</textarea>
+                        <button class="run-btn" onclick="runCode('editor-7', 'output-7')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-terminal"></i> Console Output
+                        </div>
+                        <div class="preview-container" id="output-7">
+                            <pre style="color: var(--primary-light); margin: 0;">Nullable string: null
+Length of nullable string: null
+Length of 'Kotlin': 6
+Street name: null
+Safe length: 0
+Username: John
+Caught NPE: null
+String cast: This is a string
+Int cast: null
+Message is not null: Hello, World!
+Message length: 13
+Added element to list: [1, 2, 3, 4]
+Configured person: Person(name='Alice', age=30, city='New York')
+Run result: ALICE is 30 years old and lives in New York
+With block: Alice, 30, New York
+Even check: 42
+Odd check: null
+Original list: [1, 2, null, 4, null, 6]
+Filtered list: [1, 2, 4, 6]
+Java string length: X
+Safe Java string length: X</pre>
+                        </div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li><code>Type?</code> declares a nullable type</li>
+                                <li>Safe call: <code>obj?.method()</code> returns null if obj is null</li>
+                                <li>Elvis operator: <code>value ?: defaultValue</code></li>
+                                <li>Not-null assertion: <code>value!!</code> (throws NPE if null)</li>
+                                <li>Safe cast: <code>value as? Type</code> returns null if cast fails</li>
+                                <li><code>let()</code> executes block only if value is not null</li>
+                                <li><code>also()</code> for side effects, returns original object</li>
+                                <li><code>apply()</code> for object configuration, returns receiver</li>
+                                <li><code>run()</code> combines configuration and result</li>
+                                <li><code>with()</code> works with object without repeating name</li>
+                                <li><code>takeIf()</code> returns value if condition true, else null</li>
+                                <li><code>takeUnless()</code> returns value if condition false, else null</li>
+                                <li>Platform types from Java code need careful handling</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-shield-alt"></i> Compile-Time Null Safety</h3>
+                            <p>Kotlin's null safety is built into the type system, making nullability explicit and enforceable at compile time. This design eliminates the billion-dollar mistake of null references by making non-nullable types the default. When you see a non-nullable type, you can be certain it will never be null, which dramatically reduces cognitive load and eliminates whole categories of runtime errors.</p>
+                            
+                            <p>The suite of null-safe operators (<code>?.</code>, <code>?:</code>, <code>!!</code>, <code>as?</code>) provides ergonomic ways to work with nullable values. Scope functions (<code>let</code>, <code>also</code>, <code>apply</code>, <code>run</code>, <code>with</code>) enable clean, functional-style code when dealing with potentially null objects. These features combine to make null handling in Kotlin not just safe, but also concise and readable.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-bug"></i> NPE Prevention</h4>
+                                    <p>By distinguishing nullable from non-nullable types at compile time, Kotlin prevents NullPointerExceptions before code ever runs, dramatically improving application stability.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-code"></i> Expressive Syntax</h4>
+                                    <p>Safe call chains, Elvis operators, and scope functions provide concise, readable ways to handle null cases without verbose null checks.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-exchange-alt"></i> Java Interoperability</h4>
+                                    <p>Platform types from Java code are treated specially, allowing seamless interop while encouraging null-safe handling through annotations and careful coding.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-mobile-alt"></i> Production Android Applications</h4>
+                                <p>In Android development, null safety prevents crashes from null Views, empty Intents, or missing Bundle extras. The ViewModel pattern uses nullable LiveData to represent loading/error states safely. Retrofit API responses use nullable types for optional fields. Room database entities use nullable columns for optional data. Google's own Android apps reported up to 30% reduction in crashes after migrating to Kotlin, largely due to improved null safety. Enterprise backend services benefit similarly, with Spring Boot applications experiencing fewer null-related bugs in production. This demonstrates how Kotlin's null safety features directly translate to more stable, reliable software.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Create a Safe Data Processing System:</strong> Build a program that safely processes potentially null data:</p>
+                            <ul>
+                                <li>Create data classes with nullable and non-nullable properties</li>
+                                <li>Implement safe data retrieval with safe call operator chains</li>
+                                <li>Use Elvis operator to provide default values</li>
+                                <li>Apply scope functions for safe object configuration</li>
+                                <li>Handle platform types from simulated Java interop</li>
+                                <li>Implement safe type casting for heterogeneous data</li>
+                                <li>Use takeIf/takeUnless for conditional processing</li>
+                                <li>Process collections containing nullable elements safely</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 8 -->
+            <div class="course-module" id="module8" data-aos="fade-up" data-difficulty="advanced">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>COROUTINES</h1>
+                    <h3>Learn asynchronous programming with Kotlin Coroutines</h3>
+                    <span class="difficulty">Advanced</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968242.png" class="module-icon" alt="Kotlin Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 8: <span>Asynchronous Programming</span></h1>
+                    <p>Coroutines are Kotlin's solution for asynchronous, non-blocking programming. They provide a simpler, more readable alternative to callbacks and reactive streams for handling concurrent operations. Coroutines allow you to write asynchronous code that looks like synchronous code, making it easier to reason about and maintain.</p>
+                    
+                    <p>At their core, coroutines are lightweight threads that can be suspended and resumed. They're managed by the Kotlin runtime rather than the operating system, making them extremely efficient (you can have millions of coroutines active simultaneously). Coroutines are built on suspend functions and coroutine contexts.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Kotlin</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-8" spellcheck="false">import kotlinx.coroutines.*
+import kotlin.system.measureTimeMillis
+
+fun main() = runBlocking {
+    println("=== BASIC COROUTINES ===")
+    
+    // Launch a coroutine
+    val job = launch {
+        delay(1000L) // Non-blocking delay
+        println("World!")
+    }
+    
+    print("Hello, ")
+    job.join() // Wait for coroutine to complete
+    
+    // Async/await pattern
+    println("\n=== ASYNC/AWAIT ===")
+    val time = measureTimeMillis {
+        val result1 = async { compute(10) }
+        val result2 = async { compute(20) }
+        
+        println("Result: ${result1.await() + result2.await()}")
+    }
+    println("Completed in $time ms")
+    
+    // Structured concurrency
+    println("\n=== STRUCTURED CONCURRENCY ===")
+    val parentJob = launch {
+        // Child coroutines
+        launch {
+            delay(500)
+            println("Child 1 completed")
+        }
+        
+        launch {
+            delay(1000)
+            println("Child 2 completed")
+        }
+    }
+    
+    parentJob.join()
+    println("All children completed")
+    
+    // Coroutine context and dispatchers
+    println("\n=== DISPATCHERS ===")
+    launch(Dispatchers.Default) {
+        println("Default: running in thread pool")
+    }
+    
+    launch(Dispatchers.IO) {
+        println("IO: optimized for IO operations")
+    }
+    
+    launch(Dispatchers.Main) {
+        println("Main: UI thread (Android)")
+    }
+    
+    launch(newSingleThreadContext("MyThread")) {
+        println("Custom: running in custom thread")
+    }
+    
+    delay(100)
+    
+    // Coroutine scope
+    println("\n=== COROUTINE SCOPE ===")
+    val customScope = CoroutineScope(Dispatchers.Default + CoroutineName("CustomScope"))
+    
+    customScope.launch {
+        println("Running in custom scope: ${coroutineContext[CoroutineName]}")
+    }
+    
+    delay(100)
+    customScope.cancel() // Cancel all coroutines in scope
+    
+    // Exception handling
+    println("\n=== EXCEPTION HANDLING ===")
+    val handler = CoroutineExceptionHandler { _, exception ->
+        println("Caught exception: $exception")
+    }
+    
+    val supervisedJob = SupervisorJob()
+    val scope = CoroutineScope(Dispatchers.Default + handler + supervisedJob)
+    
+    scope.launch {
+        throw RuntimeException("Test exception")
+    }
+    
+    scope.launch {
+        delay(100)
+        println("This coroutine continues despite exception in sibling")
+    }
+    
+    delay(200)
+    
+    // Flow (cold stream)
+    println("\n=== FLOW ===")
+    val numberFlow = flow {
+        for (i in 1..5) {
+            delay(100)
+            emit(i) // Send value
+        }
+    }
+    
+    launch {
+        numberFlow.collect { value ->
+            println("Received: $value")
+        }
+    }
+    
+    delay(600)
+    
+    // Channels (hot stream)
+    println("\n=== CHANNELS ===")
+    val channel = Channel<Int>()
+    
+    launch {
+        for (x in 1..5) {
+            delay(100)
+            channel.send(x * x)
+        }
+        channel.close()
+    }
+    
+    launch {
+        for (y in channel) {
+            println("Channel received: $y")
+        }
+    }
+    
+    delay(600)
+    
+    // Real-world example: API calls
+    println("\n=== REAL-WORLD EXAMPLE ===")
+    val user = getUserProfile()
+    println("User profile: $user")
+}
+
+suspend fun compute(n: Int): Int {
+    delay(1000L) // Simulate long computation
+    return n * n
+}
+
+// Simulate API calls
+suspend fun fetchUser(): String {
+    delay(500)
+    return "User123"
+}
+
+suspend fun fetchPosts(userId: String): List<String> {
+    delay(300)
+    return listOf("Post1", "Post2", "Post3")
+}
+
+suspend fun fetchComments(postId: String): List<String> {
+    delay(200)
+    return listOf("Comment1", "Comment2")
+}
+
+suspend fun getUserProfile(): UserProfile = coroutineScope {
+    val userDeferred = async { fetchUser() }
+    val postsDeferred = async { fetchPosts("dummy") }
+    
+    val user = userDeferred.await()
+    val posts = postsDeferred.await()
+    
+    val commentsDeferred = posts.map { post ->
+        async { fetchComments(post) }
+    }
+    
+    val comments = commentsDeferred.awaitAll().flatten()
+    
+    UserProfile(user, posts, comments)
+}
+
+data class UserProfile(
+    val username: String,
+    val posts: List<String>,
+    val comments: List<String>
+)</textarea>
+                        <button class="run-btn" onclick="runCode('editor-8', 'output-8')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-terminal"></i> Console Output
+                        </div>
+                        <div class="preview-container" id="output-8">
+                            <pre style="color: var(--primary-light); margin: 0;">=== BASIC COROUTINES ===
+Hello, World!
+
+=== ASYNC/AWAIT ===
+Result: 500
+Completed in 1012 ms
+
+=== STRUCTURED CONCURRENCY ===
+Child 1 completed
+Child 2 completed
+All children completed
+
+=== DISPATCHERS ===
+Default: running in thread pool
+IO: optimized for IO operations
+Main: UI thread (Android)
+Custom: running in custom thread
+
+=== COROUTINE SCOPE ===
+Running in custom scope: CoroutineName(CustomScope)
+
+=== EXCEPTION HANDLING ===
+Caught exception: java.lang.RuntimeException: Test exception
+This coroutine continues despite exception in sibling
+
+=== FLOW ===
+Received: 1
+Received: 2
+Received: 3
+Received: 4
+Received: 5
+
+=== CHANNELS ===
+Channel received: 1
+Channel received: 4
+Channel received: 9
+Channel received: 16
+Channel received: 25
+
+=== REAL-WORLD EXAMPLE ===
+User profile: UserProfile(username=User123, posts=[Post1, Post2, Post3], comments=[Comment1, Comment2, Comment1, Comment2, Comment1, Comment2])</pre>
+                        </div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li><code>runBlocking</code> bridges coroutine and non-coroutine code</li>
+                                <li><code>launch</code> starts a coroutine (fire and forget)</li>
+                                <li><code>async</code> starts a coroutine that returns a result</li>
+                                <li><code>delay()</code> is non-blocking suspend function</li>
+                                <li><code>suspend</code> modifier marks coroutine functions</li>
+                                <li>Dispatchers: <code>Default</code>, <code>IO</code>, <code>Main</code>, <code>Unconfined</code></li>
+                                <li>Structured concurrency manages coroutine lifecycles</li>
+                                <li><code>CoroutineScope</code> defines coroutine boundaries</li>
+                                <li><code>Job</code> represents cancellable coroutine</li>
+                                <li><code>Deferred</code> is a Job with result</li>
+                                <li><code>Flow</code> for cold asynchronous streams</li>
+                                <li><code>Channel</code> for hot asynchronous communication</li>
+                                <li>Exception handling with <code>CoroutineExceptionHandler</code></li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-bolt"></i> Lightweight Concurrency</h3>
+                            <p>Coroutines revolutionize asynchronous programming by making concurrent code look sequential. Unlike traditional threads, coroutines are extremely lightweight—you can launch millions of them without exhausting system resources. They're managed by the Kotlin runtime, which schedules them onto a small number of actual threads, providing efficient context switching and resource utilization.</p>
+                            
+                            <p>The structured concurrency model ensures coroutines are properly managed and don't leak. Parent-child relationships guarantee that when a parent coroutine is cancelled, all its children are cancelled too. This prevents common bugs in concurrent programming like orphaned tasks or resource leaks. Coroutine contexts and dispatchers provide fine-grained control over where and how coroutines execute, making it easy to follow platform-specific threading rules (like not blocking the main thread in Android).</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-weight"></i> Lightweight Threads</h4>
+                                    <p>Coroutines are 100-1000x lighter than OS threads, allowing millions of concurrent operations without performance degradation or memory overhead.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-sitemap"></i> Structured Concurrency</h4>
+                                    <p>Parent-child relationships and scopes ensure proper cleanup and cancellation, preventing common concurrency bugs like resource leaks or orphaned tasks.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-exchange-alt"></i> Seamless Integration</h4>
+                                    <p>Coroutines integrate with existing Java concurrency primitives and libraries, making adoption gradual and compatible with legacy code.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-mobile-alt"></i> Modern Application Development</h4>
+                                <p>In Android development, coroutines replace AsyncTask and callbacks for network requests, database operations, and complex UI updates. The ViewModelScope and LifecycleScope extensions integrate coroutines with Android architecture components. Backend services use coroutines for handling thousands of concurrent connections efficiently. The Spring Framework has built-in coroutine support for reactive web applications. Companies like Google, Netflix, and Twitter use coroutines to build scalable, responsive applications. The Android CameraX library, Google's modern camera API, uses coroutines extensively for asynchronous camera operations. This demonstrates how coroutines have become the standard for asynchronous programming in the Kotlin ecosystem.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Build an Async Data Processor:</strong> Create a program that demonstrates coroutine concepts:</p>
+                            <ul>
+                                <li>Implement parallel API calls using async/await</li>
+                                <li>Create a coroutine scope with proper lifecycle management</li>
+                                <li>Use different dispatchers for CPU vs IO operations</li>
+                                <li>Implement error handling with CoroutineExceptionHandler</li>
+                                <li>Create data streams using Flow</li>
+                                <li>Implement producer-consumer patterns with Channels</li>
+                                <li>Use structured concurrency for complex async workflows</li>
+                                <li>Simulate real-world scenarios (network calls, database operations)</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 9 -->
+            <div class="course-module" id="module9" data-aos="fade-up" data-difficulty="advanced">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>ANDROID DEVELOPMENT</h1>
+                    <h3>Learn to build Android apps with Kotlin</h3>
+                    <span class="difficulty">Advanced</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968242.png" class="module-icon" alt="Kotlin Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 9: <span>Building Android Applications</span></h1>
+                    <p>Kotlin is now the preferred language for Android development, officially supported by Google since 2017. Building Android apps with Kotlin leverages all the language's modern features while working seamlessly with the Android SDK. This module covers the essentials of Android development with Kotlin, from basic UI creation to advanced architecture patterns.</p>
+                    
+                    <p>You'll learn about Activities, Fragments, ViewModels, LiveData, Room database, Retrofit for networking, and modern Android architecture components. Kotlin's concise syntax and null safety features make Android development more productive and less error-prone compared to Java.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Kotlin</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-9" spellcheck="false">import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import kotlinx.coroutines.launch
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.http.GET
+
+// Main Activity
+class MainActivity : AppCompatActivity() {
+    private lateinit var viewModel: MainViewModel
+    private lateinit var binding: ActivityMainBinding
+    
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        
+        // ViewBinding (modern alternative to findViewById)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        
+        // Initialize ViewModel
+        viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
+        
+        // Setup UI
+        setupUI()
+        setupObservers()
+    }
+    
+    private fun setupUI() {
+        // Kotlin Android Extensions (synthetic view access)
+        binding.buttonFetch.setOnClickListener {
+            viewModel.fetchUsers()
+        }
+        
+        binding.buttonClear.setOnClickListener {
+            viewModel.clearUsers()
+        }
+        
+        // RecyclerView setup
+        val adapter = UserAdapter { user ->
+            // Handle item click
+            showUserDetails(user)
+        }
+        
+        binding.recyclerView.apply {
+            layoutManager = LinearLayoutManager(this@MainActivity)
+            this.adapter = adapter
+        }
+    }
+    
+    private fun setupObservers() {
+        // Observe LiveData from ViewModel
+        viewModel.users.observe(this) { users ->
+            (binding.recyclerView.adapter as UserAdapter).submitList(users)
+        }
+        
+        viewModel.isLoading.observe(this) { isLoading ->
+            binding.progressBar.isVisible = isLoading
+        }
+        
+        viewModel.errorMessage.observe(this) { error ->
+            if (error != null) {
+                Toast.makeText(this, error, Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+    
+    private fun showUserDetails(user: User) {
+        // Navigation with Safe Args
+        val action = MainFragmentDirections.actionMainFragmentToDetailFragment(user.id)
+        findNavController().navigate(action)
+    }
+}
+
+// ViewModel
+class MainViewModel : ViewModel() {
+    private val repository = UserRepository()
+    
+    private val _users = MutableLiveData<List<User>>()
+    val users: LiveData<List<User>> = _users
+    
+    private val _isLoading = MutableLiveData(false)
+    val isLoading: LiveData<Boolean> = _isLoading
+    
+    private val _errorMessage = MutableLiveData<String?>()
+    val errorMessage: LiveData<String?> = _errorMessage
+    
+    fun fetchUsers() {
+        _isLoading.value = true
+        _errorMessage.value = null
+        
+        viewModelScope.launch {
+            try {
+                val userList = repository.getUsers()
+                _users.value = userList
+            } catch (e: Exception) {
+                _errorMessage.value = "Failed to load users: ${e.message}"
+            } finally {
+                _isLoading.value = false
+            }
+        }
+    }
+    
+    fun clearUsers() {
+        _users.value = emptyList()
+    }
+}
+
+// Data Class
+data class User(
+    val id: Int,
+    val name: String,
+    val email: String,
+    val avatar: String
+)
+
+// Repository Pattern
+class UserRepository {
+    private val apiService = ApiService.create()
+    private val userDao = AppDatabase.getInstance().userDao()
+    
+    suspend fun getUsers(): List<User> {
+        // Try to get from cache first
+        val cachedUsers = userDao.getAllUsers()
+        if (cachedUsers.isNotEmpty()) {
+            return cachedUsers
+        }
+        
+        // Fetch from network
+        val users = apiService.getUsers()
+        
+        // Cache the result
+        userDao.insertAll(users)
+        
+        return users
+    }
+}
+
+// Room Database
+@Database(entities = [User::class], version = 1)
+abstract class AppDatabase : RoomDatabase() {
+    abstract fun userDao(): UserDao
+    
+    companion object {
+        @Volatile
+        private var INSTANCE: AppDatabase? = null
+        
+        fun getInstance(): AppDatabase {
+            return INSTANCE ?: synchronized(this) {
+                INSTANCE ?: buildDatabase().also { INSTANCE = it }
+            }
+        }
+        
+        private fun buildDatabase(): AppDatabase {
+            return Room.databaseBuilder(
+                context,
+                AppDatabase::class.java,
+                "app-database"
+            ).build()
+        }
+    }
+}
+
+@Dao
+interface UserDao {
+    @Query("SELECT * FROM user")
+    suspend fun getAllUsers(): List<User>
+    
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertAll(users: List<User>)
+}
+
+// Retrofit API Service
+interface ApiService {
+    @GET("users")
+    suspend fun getUsers(): List<User>
+    
+    companion object {
+        fun create(): ApiService {
+            val retrofit = Retrofit.Builder()
+                .baseUrl("https://api.example.com/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build()
+            
+            return retrofit.create(ApiService::class.java)
+        }
+    }
+}
+
+// RecyclerView Adapter with ListAdapter (uses DiffUtil)
+class UserAdapter(
+    private val onItemClick: (User) -> Unit
+) : ListAdapter<User, UserAdapter.UserViewHolder>(UserDiffCallback()) {
+    
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserViewHolder {
+        val binding = ItemUserBinding.inflate(
+            LayoutInflater.from(parent.context),
+            parent,
+            false
+        )
+        return UserViewHolder(binding)
+    }
+    
+    override fun onBindViewHolder(holder: UserViewHolder, position: Int) {
+        holder.bind(getItem(position))
+    }
+    
+    inner class UserViewHolder(
+        private val binding: ItemUserBinding
+    ) : RecyclerView.ViewHolder(binding.root) {
+        
+        fun bind(user: User) {
+            binding.textName.text = user.name
+            binding.textEmail.text = user.email
+            
+            // Load image with Coil (Kotlin image loading library)
+            binding.imageAvatar.load(user.avatar) {
+                crossfade(true)
+                placeholder(R.drawable.avatar_placeholder)
+            }
+            
+            binding.root.setOnClickListener {
+                onItemClick(user)
+            }
+        }
+    }
+}
+
+class UserDiffCallback : DiffUtil.ItemCallback<User>() {
+    override fun areItemsTheSame(oldItem: User, newItem: User): Boolean {
+        return oldItem.id == newItem.id
+    }
+    
+    override fun areContentsTheSame(oldItem: User, newItem: User): Boolean {
+        return oldItem == newItem
+    }
+}
+
+// Dependency Injection with Koin
+val appModule = module {
+    single { ApiService.create() }
+    single { AppDatabase.getInstance() }
+    single { UserRepository() }
+    viewModel { MainViewModel() }
+}
+
+class MyApplication : Application() {
+    override fun onCreate() {
+        super.onCreate()
+        startKoin {
+            androidContext(this@MyApplication)
+            modules(appModule)
+        }
+    }
+}
+
+// Compose UI (Modern declarative UI toolkit)
+@Composable
+fun UserListScreen(viewModel: MainViewModel = getViewModel()) {
+    val users by viewModel.users.observeAsState(emptyList())
+    val isLoading by viewModel.isLoading.observeAsState(false)
+    
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(16.dp)
+    ) {
+        if (isLoading) {
+            CircularProgressIndicator(
+                modifier = Modifier.align(Alignment.CenterHorizontally)
+            )
+        } else {
+            LazyColumn {
+                items(users) { user ->
+                    UserItem(user = user) {
+                        viewModel.onUserClicked(user)
+                    }
+                }
+            }
+        }
+    }
+}
+
+@Composable
+fun UserItem(user: User, onClick: () -> Unit) {
+    Card(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(vertical = 4.dp)
+            .clickable { onClick() },
+        elevation = 2.dp
+    ) {
+        Row(
+            modifier = Modifier.padding(16.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            AsyncImage(
+                model = user.avatar,
+                contentDescription = "User avatar",
+                modifier = Modifier
+                    .size(48.dp)
+                    .clip(CircleShape)
+            )
+            
+            Spacer(modifier = Modifier.width(16.dp))
+            
+            Column {
+                Text(
+                    text = user.name,
+                    fontWeight = FontWeight.Bold
+                )
+                Text(text = user.email)
+            }
+        }
+    }
+}</textarea>
+                        <button class="run-btn" onclick="runCode('editor-9', 'output-9')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-terminal"></i> Console Output
+                        </div>
+                        <div class="preview-container" id="output-9">
+                            <pre style="color: var(--primary-light); margin: 0;">Note: This is Android code that requires an Android environment to run.
+The code demonstrates:
+1. MVVM Architecture with ViewModel and LiveData
+2. Coroutines for async operations
+3. Room Database for local storage
+4. Retrofit for network calls
+5. RecyclerView with ListAdapter
+6. ViewBinding for type-safe view access
+7. Koin for dependency injection
+8. Jetpack Compose for declarative UI
+
+In a real Android environment, this would:
+- Display a list of users
+- Fetch data from API with caching
+- Show loading states
+- Handle errors
+- Support offline functionality
+- Use modern Android architecture components</pre>
+                        </div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>MVVM Architecture: Model-View-ViewModel pattern</li>
+                                <li>LiveData: Observable data holder for UI</li>
+                                <li>ViewModel: Manages UI-related data</li>
+                                <li>Room: SQLite abstraction layer</li>
+                                <li>Retrofit: Type-safe HTTP client</li>
+                                <li>Coroutines: Asynchronous programming</li>
+                                <li>ViewBinding/DataBinding: Type-safe view access</li>
+                                <li>Navigation Component: Fragment navigation</li>
+                                <li>RecyclerView: Efficient list display</li>
+                                <li>Koin/Dagger: Dependency injection</li>
+                                <li>Jetpack Compose: Modern declarative UI</li>
+                                <li>Repository Pattern: Single source of truth</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-mobile-alt"></i> Modern Android Architecture</h3>
+                            <p>Android development with Kotlin leverages the language's modern features to create more maintainable, testable, and robust applications. The recommended architecture follows the Model-View-ViewModel (MVVM) pattern with Android Architecture Components. This separation of concerns makes code easier to test, maintain, and scale as applications grow in complexity.</p>
+                            
+                            <p>Kotlin's null safety eliminates common Android crashes related to null Views or Bundle extras. Extension functions simplify common Android patterns like view manipulation or resource access. Coroutines provide a clean solution for asynchronous operations, replacing callback hell with sequential-looking code. Data classes work perfectly with Room entities and Retrofit models, reducing boilerplate.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-shield-alt"></i> Crash Reduction</h4>
+                                    <p>Kotlin's null safety and type system prevent common Android crashes, with Google reporting up to 30% reduction in crash rates for apps migrated from Java to Kotlin.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-bolt"></i> Developer Productivity</h4>
+                                    <p>Concise syntax, extension functions, and coroutines reduce boilerplate and make Android development faster and more enjoyable compared to Java.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-paint-brush"></i> Modern UI Toolkit</h4>
+                                    <p>Jetpack Compose, Google's modern UI toolkit, is designed for Kotlin and provides declarative UI programming that's more intuitive and less error-prone than XML.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-google"></i> Production Android Applications</h4>
+                                <p>Google's own apps like Google Maps, Gmail, and YouTube are being rewritten in Kotlin. Major companies like Netflix, Uber, Pinterest, and Trello have migrated their Android apps to Kotlin. The Android developer community overwhelmingly prefers Kotlin, with over 60% of professional Android developers using it as their primary language. Google's Android documentation and samples now feature Kotlin first. The Play Store shows that apps written in Kotlin have higher ratings and lower crash rates on average. This widespread adoption demonstrates Kotlin's superiority for Android development in terms of developer satisfaction, code quality, and application stability.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Design an Android App Architecture:</strong> Plan and implement a complete Android app structure:</p>
+                            <ul>
+                                <li>Design MVVM architecture with proper separation of concerns</li>
+                                <li>Create data models with Room entities and Retrofit models</li>
+                                <li>Implement repository pattern with local and remote data sources</li>
+                                <li>Design ViewModel with LiveData and coroutines</li>
+                                <li>Create UI with Jetpack Compose or XML layouts</li>
+                                <li>Implement navigation between screens</li>
+                                <li>Add error handling and loading states</li>
+                                <li>Include unit tests for ViewModel and repository</li>
+                                <li>Implement dependency injection with Koin or Hilt</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 10 -->
+            <div class="course-module" id="module10" data-aos="fade-up" data-difficulty="advanced">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>ADVANCED KOTLIN</h1>
+                    <h3>Master advanced Kotlin concepts and best practices</h3>
+                    <span class="difficulty">Advanced</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968242.png" class="module-icon" alt="Kotlin Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 10: <span>Advanced Kotlin Techniques</span></h1>
+                    <p>Advanced Kotlin involves mastering the language's powerful features for building robust, efficient, and maintainable applications. This module covers advanced type system features, DSL creation, inline classes, contracts, and optimization techniques that separate intermediate Kotlin developers from experts.</p>
+                    
+                    <p>You'll learn about reified types, delegation patterns, contract-based programming, and performance optimizations. These techniques enable you to write more expressive, type-safe, and efficient Kotlin code, whether you're building Android apps, backend services, or multiplatform applications.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Kotlin</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-10" spellcheck="false">import kotlin.contracts.ExperimentalContracts
+import kotlin.contracts.contract
+import kotlin.reflect.KClass
+
+fun main() {
+    // Inline classes (value classes)
+    println("=== INLINE CLASSES ===")
+    val email = Email("user@example.com")
+    val username = Username("john_doe")
+    
+    println("Email: $email")
+    println("Username: $username")
+    println("Email value: ${email.value}")
+    
+    // Type aliases
+    println("\n=== TYPE ALIASES ===")
+    val userMap: UserMap = mapOf(
+        "id" to 1,
+        "name" to "Alice",
+        "email" to "alice@example.com"
+    )
+    println("User map: $userMap")
+    
+    // Reified type parameters
+    println("\n=== REIFIED TYPES ===")
+    val stringList = listOf("a", "b", "c")
+    val intList = listOf(1, 2, 3)
+    
+    println("Is string list: ${stringList.isInstanceOf<List<String>>()}")
+    println("Is int list: ${intList.isInstanceOf<List<Int>>()}")
+    
+    // Create instance using reified type
+    val createdList = createList<String>(size = 3) { "Item $it" }
+    println("Created list: $createdList")
+    
+    // Contracts (Kotlin 1.3+)
+    println("\n=== CONTRACTS ===")
+    val nullableString: String? = "Hello"
+    
+    if (nullableString.isNotNull()) {
+        println("String length: ${nullableString.length}") // Smart cast works
+    }
+    
+    // Delegated properties
+    println("\n=== DELEGATED PROPERTIES ===")
+    val user = User()
+    user.name = "Alice"
+    user.name = "Bob"
+    println("User name history: ${user.nameHistory}")
+    
+    user.score = 100
+    user.score = 150
+    println("User score: ${user.score}")
+    println("Score changes: ${user.scoreChanges}")
+    
+    // DSL creation
+    println("\n=== DSL CREATION ===")
+    val html = html {
+        head {
+            title { "My Page" }
+            style {
+                """
+                body { font-family: Arial; }
+                h1 { color: #333; }
+                """
+            }
+        }
+        body {
+            h1 { "Welcome to My Page" }
+            p {
+                "This is a paragraph created with Kotlin DSL"
+            }
+            ul {
+                for (i in 1..3) {
+                    li { "Item $i" }
+                }
+            }
+        }
+    }
+    
+    println("Generated HTML:\n$html")
+    
+    // Inline functions with reified types
+    println("\n=== INLINE FUNCTIONS ===")
+    val numbers = listOf(1, 2, 3, 4, 5)
+    val filtered = numbers.filterWithLog { it > 2 }
+    println("Filtered: $filtered")
+    
+    // Scope functions in depth
+    println("\n=== SCOPE FUNCTIONS DEEP DIVE ===")
+    val config = Configuration().apply {
+        host = "localhost"
+        port = 8080
+        timeout = 5000
+    }.also {
+        println("Configuration created: $it")
+    }.run {
+        "http://$host:$port"
+    }
+    
+    println("Server URL: $config")
+    
+    // Functional programming patterns
+    println("\n=== FUNCTIONAL PATTERNS ===")
+    val operations = listOf(
+        Operation("add", 10),
+        Operation("multiply", 2),
+        Operation("subtract", 5)
+    )
+    
+    val result = operations.fold(5) { acc, op ->
+        when (op.type) {
+            "add" -> acc + op.value
+            "multiply" -> acc * op.value
+            "subtract" -> acc - op.value
+            else -> acc
+        }
+    }
+    
+    println("Operation result: $result")
+    
+    // Coroutine advanced patterns
+    println("\n=== COROUTINE PATTERNS ===")
+    runBlocking {
+        val deferredResults = (1..5).map { n ->
+            async {
+                computeWithRetry(n)
+            }
+        }
+        
+        val results = deferredResults.awaitAll()
+        println("Computed results: $results")
+    }
+    
+    // Reflection (use sparingly!)
+    println("\n=== REFLECTION ===")
+    val userClass = User::class
+    println("User class properties:")
+    userClass.members
+        .filterIsInstance<kotlin.reflect.KProperty<*>>()
+        .forEach { prop ->
+            println("  - ${prop.name}: ${prop.returnType}")
+        }
+}
+
+// Inline classes (Kotlin 1.3+)
+@JvmInline
+value class Email(val value: String)
+
+@JvmInline
+value class Username(val value: String) {
+    init {
+        require(value.length >= 3) { "Username must be at least 3 characters" }
+    }
+}
+
+// Type aliases
+typealias UserId = Int
+typealias UserMap = Map<String, Any>
+typealias StringProcessor = (String) -> String
+
+// Reified type parameter example
+inline fun <reified T> List<*>.isInstanceOf(): Boolean {
+    return all { it is T }
+}
+
+inline fun <reified T> createList(size: Int, init: (Int) -> T): List<T> {
+    return List(size) { init(it) }
+}
+
+// Contracts example
+@OptIn(ExperimentalContracts::class)
+fun String?.isNotNull(): Boolean {
+    contract {
+        returns(true) implies (this@isNotNull != null)
+    }
+    return this != null
+}
+
+// Delegated properties examples
+class User {
+    var name: String by Observable("") { old, new ->
+        println("Name changed from '$old' to '$new'")
+        nameHistory.add("$old -> $new")
+    }
+    
+    val nameHistory = mutableListOf<String>()
+    
+    var score: Int by Vetoable(0) { _, old, new ->
+        if (new >= 0) {
+            scoreChanges++
+            true // Allow change
+        } else {
+            false // Veto change
+        }
+    }
+    
+    var scoreChanges = 0
+}
+
+// Observable property delegate
+class Observable<T>(
+    initialValue: T,
+    private val onChange: (T, T) -> Unit
+) {
+    private var value: T = initialValue
+    
+    operator fun getValue(thisRef: Any?, property: kotlin.reflect.KProperty<*>): T {
+        return value
+    }
+    
+    operator fun setValue(thisRef: Any?, property: kotlin.reflect.KProperty<*>, newValue: T) {
+        val oldValue = value
+        value = newValue
+        onChange(oldValue, newValue)
+    }
+}
+
+// Vetoable property delegate
+class Vetoable<T>(
+    initialValue: T,
+    private val onChange: (Any?, T, T) -> Boolean
+) {
+    private var value: T = initialValue
+    
+    operator fun getValue(thisRef: Any?, property: kotlin.reflect.KProperty<*>): T {
+        return value
+    }
+    
+    operator fun setValue(thisRef: Any?, property: kotlin.reflect.KProperty<*>, newValue: T) {
+        if (onChange(thisRef, value, newValue)) {
+            value = newValue
+        }
+    }
+}
+
+// DSL for HTML
+class Html {
+    private val children = mutableListOf<Any>()
+    
+    fun head(block: Head.() -> Unit) {
+        children.add(Head().apply(block))
+    }
+    
+    fun body(block: Body.() -> Unit) {
+        children.add(Body().apply(block))
+    }
+    
+    override fun toString(): String {
+        return "<!DOCTYPE html>\n<html>\n${children.joinToString("\n")}\n</html>"
+    }
+}
+
+class Head {
+    private val children = mutableListOf<String>()
+    
+    fun title(block: () -> String) {
+        children.add("<title>${block()}</title>")
+    }
+    
+    fun style(block: () -> String) {
+        children.add("<style>\n${block().trimIndent()}\n</style>")
+    }
+    
+    override fun toString(): String {
+        return "<head>\n${children.joinToString("\n")}\n</head>"
+    }
+}
+
+class Body {
+    private val children = mutableListOf<String>()
+    
+    fun h1(block: () -> String) {
+        children.add("<h1>${block()}</h1>")
+    }
+    
+    fun p(block: () -> String) {
+        children.add("<p>${block()}</p>")
+    }
+    
+    fun ul(block: Ul.() -> Unit) {
+        children.add(Ul().apply(block).toString())
+    }
+    
+    override fun toString(): String {
+        return "<body>\n${children.joinToString("\n")}\n</body>"
+    }
+}
+
+class Ul {
+    private val items = mutableListOf<String>()
+    
+    fun li(block: () -> String) {
+        items.add("<li>${block()}</li>")
+    }
+    
+    override fun toString(): String {
+        return "<ul>\n${items.joinToString("\n")}\n</ul>"
+    }
+}
+
+fun html(block: Html.() -> Unit): Html {
+    return Html().apply(block)
+}
+
+// Inline function with logging
+inline fun <T> Iterable<T>.filterWithLog(
+    crossinline predicate: (T) -> Boolean
+): List<T> {
+    val result = mutableListOf<T>()
+    forEach { element ->
+        if (predicate(element)) {
+            println("Keeping element: $element")
+            result.add(element)
+        } else {
+            println("Filtering out element: $element")
+        }
+    }
+    return result
+}
+
+// Configuration class
+data class Configuration(
+    var host: String = "",
+    var port: Int = 0,
+    var timeout: Int = 0
+)
+
+// Functional pattern example
+data class Operation(val type: String, val value: Int)
+
+// Coroutine with retry logic
+suspend fun computeWithRetry(n: Int): Int = coroutineScope {
+    var attempt = 0
+    var result: Int? = null
+    
+    while (attempt < 3 && result == null) {
+        try {
+            delay(100 * attempt.toLong()) // Exponential backoff
+            result = n * n
+            println("Computed $n² = $result (attempt ${attempt + 1})")
+        } catch (e: Exception) {
+            attempt++
+            println("Attempt $attempt failed for $n: ${e.message}")
+        }
+    }
+    
+    result ?: throw RuntimeException("Failed to compute after $attempt attempts")
+}</textarea>
+                        <button class="run-btn" onclick="runCode('editor-10', 'output-10')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-terminal"></i> Console Output
+                        </div>
+                        <div class="preview-container" id="output-10">
+                            <pre style="color: var(--primary-light); margin: 0;">=== INLINE CLASSES ===
+Email: Email(value=user@example.com)
+Username: Username(value=john_doe)
+Email value: user@example.com
+
+=== TYPE ALIASES ===
+User map: {id=1, name=Alice, email=alice@example.com}
+
+=== REIFIED TYPES ===
+Is string list: true
+Is int list: true
+Created list: [Item 0, Item 1, Item 2]
+
+=== CONTRACTS ===
+String length: 5
+
+=== DELEGATED PROPERTIES ===
+Name changed from '' to 'Alice'
+Name changed from 'Alice' to 'Bob'
+User name history: [ -> Alice, Alice -> Bob]
+User score: 150
+Score changes: 2
+
+=== DSL CREATION ===
+Generated HTML:
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;My Page&lt;/title&gt;
+&lt;style&gt;
+body { font-family: Arial; }
+h1 { color: #333; }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;Welcome to My Page&lt;/h1&gt;
+&lt;p&gt;This is a paragraph created with Kotlin DSL&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Item 1&lt;/li&gt;
+&lt;li&gt;Item 2&lt;/li&gt;
+&lt;li&gt;Item 3&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+=== INLINE FUNCTIONS ===
+Filtering out element: 1
+Filtering out element: 2
+Keeping element: 3
+Keeping element: 4
+Keeping element: 5
+Filtered: [3, 4, 5]
+
+=== SCOPE FUNCTIONS DEEP DIVE ===
+Configuration created: Configuration(host=localhost, port=8080, timeout=5000)
+Server URL: http://localhost:8080
+
+=== FUNCTIONAL PATTERNS ===
+Operation result: 15
+
+=== COROUTINE PATTERNS ===
+Computed 1² = 1 (attempt 1)
+Computed 2² = 4 (attempt 1)
+Computed 3² = 9 (attempt 1)
+Computed 4² = 16 (attempt 1)
+Computed 5² = 25 (attempt 1)
+Computed results: [1, 4, 9, 16, 25]
+
+=== REFLECTION ===
+User class properties:
+  - nameHistory: kotlin.collections.MutableList&lt;kotlin.String&gt;
+  - scoreChanges: kotlin.Int
+  - name: kotlin.String
+  - score: kotlin.Int</pre>
+                        </div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>Inline classes: <code>value class</code> for wrapper types without overhead</li>
+                                <li>Type aliases: <code>typealias</code> for complex type names</li>
+                                <li>Reified types: <code>reified</code> preserves type information at runtime</li>
+                                <li>Contracts: <code>contract</code> for compiler optimizations</li>
+                                <li>Delegated properties: <code>by</code> for property delegation patterns</li>
+                                <li>DSL creation: Builder pattern with lambda parameters</li>
+                                <li>Scope functions: <code>apply</code>, <code>also</code>, <code>run</code>, <code>with</code>, <code>let</code></li>
+                                <li>Functional patterns: <code>fold</code>, <code>reduce</code>, function composition</li>
+                                <li>Coroutine patterns: Retry logic, error handling, structured concurrency</li>
+                                <li>Reflection: <code>KClass</code>, <code>KProperty</code> for runtime type inspection</li>
+                                <li>Crossinline: Prevents non-local returns in inline lambdas</li>
+                                <li>Noinline: Prevents inlining of specific lambda parameters</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-rocket"></i> Expert-Level Kotlin Development</h3>
+                            <p>Advanced Kotlin techniques enable building robust, efficient, and maintainable applications at scale. Inline classes provide type-safe wrappers without runtime overhead, crucial for domain modeling. Reified types enable type-safe generic operations that would require Class parameters in Java. Contracts give the compiler hints about function behavior, enabling smarter optimizations and better tooling support.</p>
+                            
+                            <p>Domain-Specific Languages (DSLs) created with Kotlin's builder pattern syntax enable readable, type-safe configuration and data definition. Delegated properties encapsulate common property patterns like observables, vetoable changes, or lazy initialization. These advanced features, when used appropriately, result in code that's not just functional, but also expressive, safe, and maintainable.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-code"></i> Type-Safe DSLs</h4>
+                                    <p>Kotlin's builder pattern syntax enables creating internal DSLs that are type-safe, provide IDE autocompletion, and prevent invalid configurations at compile time.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-bolt"></i> Zero-Overhead Abstractions</h4>
+                                    <p>Inline classes and reified types provide abstraction benefits without runtime overhead, crucial for performance-sensitive code like collections or numeric types.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-shield-alt"></i> Compiler Contracts</h4>
+                                    <p>Contracts give the compiler additional information about function behavior, enabling smarter optimizations, better warnings, and improved tooling support.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-industry"></i> Enterprise & Library Development</h4>
+                                <p>Kotlin libraries like Ktor use DSLs for configuring web servers and clients. Spring Framework's Kotlin DSL provides type-safe bean configuration. Android's Compose UI toolkit is built as a Kotlin DSL. Arrow library provides advanced functional programming constructs using Kotlin's type system. Gradle's Kotlin DSL replaces Groovy with type-safe build scripts. These real-world implementations demonstrate how advanced Kotlin features enable creating expressive, type-safe APIs that improve developer experience while maintaining performance and safety. Companies building internal tools or public libraries leverage these techniques to create maintainable, discoverable, and robust APIs.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Build an Advanced Kotlin Library:</strong> Create a library demonstrating advanced Kotlin concepts:</p>
+                            <ul>
+                                <li>Create type-safe DSL for a domain of your choice</li>
+                                <li>Implement inline classes for domain primitives</li>
+                                <li>Use reified types for type-safe reflection operations</li>
+                                <li>Create property delegates for common patterns</li>
+                                <li>Implement contracts for compiler optimizations</li>
+                                <li>Build functional programming utilities</li>
+                                <li>Create coroutine utilities with advanced patterns</li>
+                                <li>Use sealed classes for comprehensive error handling</li>
+                                <li>Implement performance optimizations with inline functions</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Practice Playground -->
+            <div class="course-module" id="playground" data-aos="fade-up">
+                <div class="course-three">
+                    <h1>PRACTICE PLAYGROUND</h1>
+                    <h3>Experiment with what you've learned</h3>
+                    <i class="fab fa-kotlin course-icon" style="color: var(--primary);"></i>
+                </div>
+                <div class="course-one">
+                    <h1>Your Coding Playground: <span>Try Your Own Kotlin Code</span></h1>
+                    <p>Use this space to experiment with everything you've learned. Try combining different Kotlin features and see the results in real-time! This is your sandbox to practice and explore Kotlin programming.</p>
+                    
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Kotlin</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="playground-editor" spellcheck="false">// Your Kotlin playground
+// Try out different Kotlin features here
+
+fun main() {
+    println("=== KOTLIN PLAYGROUND ===")
+    
+    // Experiment with basic syntax
+    val message = "Welcome to Kotlin Playground!"
+    println(message)
+    
+    // Try variables and data types
+    val number = 42
+    val pi = 3.14159
+    val isKotlinAwesome = true
+    
+    println("Number: $number, Pi: $pi, Is Awesome: $isKotlinAwesome")
+    
+    // Experiment with control flow
+    val score = 85
+    val grade = when {
+        score >= 90 -> "A"
+        score >= 80 -> "B"
+        score >= 70 -> "C"
+        else -> "F"
+    }
+    println("Score: $score, Grade: $grade")
+    
+    // Try collections
+    val numbers = listOf(1, 2, 3, 4, 5)
+    val transformed = numbers
+        .filter { it % 2 == 0 }
+        .map { it * it }
+        .joinToString(", ")
+    
+    println("Even squares: $transformed")
+    
+    // Experiment with functions
+    fun greet(name: String = "Developer"): String {
+        return "Hello, $name!"
+    }
+    
+    println(greet("SkillMynte"))
+    println(greet())
+    
+    // Try extension functions
+    fun String.exclaim(): String = "$this!"
+    println("Kotlin is fun".exclaim())
+    
+    // Experiment with classes
+    data class Person(val name: String, val age: Int)
+    
+    val person = Person("Alice", 30)
+    println("Person: $person")
+    
+    // Try null safety
+    val nullableString: String? = null
+    val safeLength = nullableString?.length ?: 0
+    println("Safe length of null string: $safeLength")
+    
+    // Experiment with scope functions
+    val result = "Kotlin".let {
+        it.uppercase()
+    }.run {
+        "$this is cool!"
+    }
+    
+    println(result)
+    
+    // Your experiments here!
+    println("\n=== YOUR EXPERIMENTS ===")
+    
+    // Add your own code below:
+    // Example: Create a simple calculator
+    fun calculate(a: Int, b: Int, operation: (Int, Int) -> Int): Int {
+        return operation(a, b)
+    }
+    
+    val sum = calculate(10, 5) { x, y -> x + y }
+    val product = calculate(10, 5) { x, y -> x * y }
+    
+    println("10 + 5 = $sum")
+    println("10 * 5 = $product")
+    
+    // Try creating your own experiments!
+    // 1. Create a data class for a Book
+    // 2. Make a list of books and filter by author
+    // 3. Create an extension function for String
+    // 4. Try coroutines (if you're feeling adventurous)
+    // 5. Build a simple DSL
+    
+    println("\nHappy coding! 🚀")
+}</textarea>
+                        <button class="run-btn" onclick="runCode('playground-editor', 'playground-output')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-terminal"></i> Console Output
+                        </div>
+                        <div class="preview-container" id="playground-output">
+                            <pre style="color: var(--primary-light); margin: 0;">=== KOTLIN PLAYGROUND ===
+Welcome to Kotlin Playground!
+Number: 42, Pi: 3.14159, Is Awesome: true
+Score: 85, Grade: B
+Even squares: 4, 16
+Hello, SkillMynte!
+Hello, Developer!
+Kotlin is fun!
+Person: Person(name=Alice, age=30)
+Safe length of null string: 0
+KOTLIN is cool!
+
+=== YOUR EXPERIMENTS ===
+10 + 5 = 15
+10 * 5 = 50
+
+Happy coding! 🚀</pre>
+                        </div>
+                    </div>
+                    
+                    <div class="course-five">
+                        <h3>Challenge Exercises:</h3>
+                        <ol>
+                            <li>Create a complete Kotlin program that:
+                                <ul>
+                                    <li>Uses data classes to model real-world entities</li>
+                                    <li>Implements business logic with extension functions</li>
+                                    <li>Handles errors with sealed classes</li>
+                                    <li>Processes collections with functional operations</li>
+                                </ul>
+                            </li>
+                            <li>Build a DSL for creating configuration objects</li>
+                            <li>Implement a reactive data stream using Flow</li>
+                            <li>Create a type-safe builder for HTML or JSON</li>
+                            <li>Experiment with coroutines for concurrent operations</li>
+                            <li>Combine all concepts into a complete application architecture</li>
+                        </ol>
+                        
+                        <h3>Tips & Resources:</h3>
+                        <ul>
+                            <li>Use the Kotlin Playground (play.kotlinlang.org) for quick experiments</li>
+                            <li>Try adding <code>@OptIn</code> for experimental features</li>
+                            <li>Experiment with Kotlin's standard library functions</li>
+                            <li>Check out Kotlin Koans for interactive exercises</li>
+                            <li>Explore Kotlin's documentation for advanced features</li>
+                            <li>For Android: Use Android Studio with Kotlin plugin</li>
+                            <li>For backend: Try Ktor or Spring Boot with Kotlin</li>
+                            <li>Join Kotlin communities for help and inspiration</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Premium Subscription CTA -->
+            <div class="premium-subscription" id="premium-subscription" data-aos="fade-up">
+                <h2>Unlock Premium SkillMynte Content</h2>
+                <p>Upgrade to SkillMynte Pro for exclusive courses, advanced projects, and personalized learning paths</p>
+                
+                <div class="premium-features">
+                    <div class="premium-feature">
+                        <i class="fas fa-gem"></i>
+                        <h3>Premium Courses</h3>
+                        <p>Access our entire library of advanced courses and exclusive content</p>
+                    </div>
+                    <div class="premium-feature">
+                        <i class="fas fa-trophy"></i>
+                        <h3>Certification</h3>
+                        <p>Earn industry-recognized certificates to showcase your skills</p>
+                    </div>
+                    <div class="premium-feature">
+                        <i class="fas fa-user-graduate"></i>
+                        <h3>Mentorship</h3>
+                        <p>Get personalized guidance from industry experts</p>
+                    </div>
+                </div>
+                
+                <div class="pricing-options">
+                    <div class="pricing-option">
+                        <h3>Monthly</h3>
+                        <div class="price">₦3,500<span>/month</span></div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> All Premium Courses</li>
+                            <li><i class="fas fa-check"></i> Practice Projects</li>
+                            <li><i class="fas fa-check"></i> Community Access</li>
+                            <li><i class="fas fa-check"></i> Certificates</li>
+                            <li><i class="fas fa-check"></i> personal AI inbuilt</li>
+                        </ul>
+                        <a href="premium courses.html"><button class="pricing-btn">Get Started</button></a>
+                    </div>
+                    
+                    <div class="pricing-option" style="border-color: var(--white); transform: scale(1.05);">
+                        <h3>Annual <span style="background: var(--white); color: var(--kotlin-blue); padding: 0.2rem 0.5rem; border-radius: 20px; font-size: 0.8rem; margin-left: 0.5rem;">Best Value</span></h3>
+                        <div class="price">₦37,000<span>/year</span></div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> All Premium Courses</li>
+                            <li><i class="fas fa-check"></i> Practice Projects</li>
+                            <li><i class="fas fa-check"></i> Community Access</li>
+                            <li><i class="fas fa-check"></i> Certificates</li>
+                            <li><i class="fas fa-check"></i> personal AI inbuilt</li>
+                        </ul>
+                        <a href="premium courses.html"><button class="pricing-btn">Get Started</button></a>
+                    </div>
+                    
+                    <div class="pricing-option">
+                        <h3>Lifetime</h3>
+                        <div class="price">₦200,000<span>/once</span></div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> All Premium Courses</li>
+                            <li><i class="fas fa-check"></i> Practice Projects</li>
+                            <li><i class="fas fa-check"></i> Community Access</li>
+                            <li><i class="fas fa-check"></i> Certificates</li>
+                            <li><i class="fas fa-check"></i> personal AI inbuilt</li>
+                        </ul>
+                        <a href="premium courses.html"><button class="pricing-btn">Get Started</button></a>
+                    </div>
+                </div>
+                
+                <button class="premium-cta-btn">
+                    <i class="fas fa-rocket"></i> Upgrade to SkillMynte Pro
+                </button>
+            </div>
+            
+            <!-- Footer -->
+            <footer>
+                <div class="footer-content">
+                    <div class="footer-column">
+                        <h3>About SkillMynte</h3>
+                        <p>SkillMynte is a premium learning platform dedicated to helping developers of all levels master programming technologies through interactive courses and hands-on practice.</p>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/profile.php?id=61581069862024"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://x.com/SkillMynte_AI?t=CcoQtjWZGGOXqfTfrsufjQ&s=09"><i class="fab fa-twitter"></i></a>
+                            <a href="https://youtube.com/@skillmynte?si=LmX2MjSKU3N1Xa5S"><i class="fab fa-youtube"></i></a>
+                            <a href="https://www.instagram.com/skillmynte_ai?igsh=MTd1YWpjdXV1OHhrbA=="><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Quick Links</h3>
+                        <ul class="footer-links">
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Home</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Courses</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Practice</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Projects</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Popular Courses</h3>
+                        <ul class="footer-links">
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Kotlin Programming</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Android Development</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Spring Boot with Kotlin</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Kotlin Coroutines</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Kotlin Multiplatform</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Contact Us</h3>
+                        <p><i class="fas fa-envelope"></i>Skillmynteofficial@gmail.com</p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 SkillMynte. All rights reserved. | Designed with <i class="fas fa-heart" style="color: var(--primary);"></i> for the developer community</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+    // Function to run code in preview
+    function runCode(editorId, outputId) {
+        const editor = document.getElementById(editorId);
+        const output = document.getElementById(outputId);
+        
+        try {
+            // For Kotlin code, we'll simulate execution
+            const code = editor.value;
+            
+            // Simple simulation - in real implementation, you'd use Kotlin/JS or backend compilation
+            if (code.includes('println')) {
+                // Extract print statements for simulation
+                const lines = code.split('\n');
+                let result = '';
+                let inMain = false;
+                
+                for (let line of lines) {
+                    if (line.includes('fun main()')) {
+                        inMain = true;
+                        continue;
+                    }
+                    
+                    if (inMain && line.includes('println(')) {
+                        // Extract string inside println
+                        const match = line.match(/println\(["'](.*?)["']\)/);
+                        if (match) {
+                            result += match[1] + '\n';
+                        } else {
+                            // Handle string templates
+                            const templateMatch = line.match(/println\((.*?)\)/);
+                            if (templateMatch) {
+                                const content = templateMatch[1];
+                                // Very basic simulation
+                                if (content.includes('$')) {
+                                    const simulated = content.replace(/\$\{[^}]*\}/g, 'X')
+                                                           .replace(/\$[a-zA-Z_][a-zA-Z0-9_]*/g, 'X');
+                                    result += simulated + '\n';
+                                } else {
+                                    result += content + '\n';
+                                }
+                            }
+                        }
+                    }
+                }
+                
+                output.innerHTML = `<pre style="color: var(--primary-light); margin: 0;">${result || 'No output generated'}</pre>`;
+            } else {
+                output.innerHTML = '<pre style="color: var(--primary-light); margin: 0;">Code executed successfully (simulation)</pre>';
+            }
+        } catch (error) {
+            output.innerHTML = `<div style="color: var(--accent); padding: 1rem;">Error: ${error.message}</div>`;
+        }
+    }
+    
+    // Initialize all editors with their default output
+    document.addEventListener('DOMContentLoaded', function() {
+        // Run all code editors on load
+        runCode('editor-1', 'output-1');
+        runCode('editor-2', 'output-2');
+        runCode('editor-3', 'output-3');
+        runCode('editor-4', 'output-4');
+        runCode('editor-5', 'output-5');
+        runCode('editor-6', 'output-6');
+        runCode('editor-7', 'output-7');
+        runCode('editor-8', 'output-8');
+        runCode('editor-9', 'output-9');
+        runCode('editor-10', 'output-10');
+        runCode('playground-editor', 'playground-output');
+        
+        // Add event listeners to all run buttons in editor headers
+        document.querySelectorAll('.run-editor').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const editorContainer = this.closest('.code-editor-container');
+                const editor = editorContainer.querySelector('.code-editor');
+                const output = editorContainer.querySelector('.preview-container');
+                runCode(editor.id, output.id);
+            });
+        });
+        
+        // Add reset functionality
+        document.querySelectorAll('.reset-editor').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const editorContainer = this.closest('.code-editor-container');
+                const editor = editorContainer.querySelector('.code-editor');
+                const originalContent = editor.dataset.original || editor.defaultValue;
+                editor.value = originalContent;
+                runCode(editor.id, editorContainer.querySelector('.preview-container').id);
+            });
+        });
+        
+        // Store original content for reset functionality
+        document.querySelectorAll('.code-editor').forEach(editor => {
+            editor.dataset.original = editor.value;
+        });
+
+        // Handle navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // FIXED: Hamburger menu functionality
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.querySelector('.nav-menu');
+        const sidebar = document.getElementById('sidebar');
+        const body = document.body;
+
+        function toggleMobileMenu() {
+            const isActive = navMenu.classList.contains('active');
+            
+            if (isActive) {
+                // Close menu
+                navMenu.classList.remove('active');
+                sidebar.classList.remove('active');
+                menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                body.classList.remove('menu-open');
+                menuToggle.setAttribute('aria-expanded', 'false');
+            } else {
+                // Open menu
+                navMenu.classList.add('active');
+                sidebar.classList.add('active');
+                menuToggle.innerHTML = '<i class="fas fa-times"></i>';
+                body.classList.add('menu-open');
+                menuToggle.setAttribute('aria-expanded', 'true');
+            }
+        }
+
+        function closeMobileMenu() {
+            navMenu.classList.remove('active');
+            sidebar.classList.remove('active');
+            menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            body.classList.remove('menu-open');
+            menuToggle.setAttribute('aria-expanded', 'false');
+        }
+
+        // Mobile menu toggle
+        menuToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            toggleMobileMenu();
+        });
+
+        // Close menu when clicking on nav links
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function() {
+                if (window.innerWidth <= 1024) {
+                    closeMobileMenu();
+                }
+            });
+        });
+
+        // Close menu when clicking on dropdown items
+        document.querySelectorAll('.dropdown-item').forEach(item => {
+            item.addEventListener('click', function() {
+                if (window.innerWidth <= 1024) {
+                    closeMobileMenu();
+                }
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (window.innerWidth <= 1024 && 
+                navMenu.classList.contains('active') &&
+                !e.target.closest('.nav-menu') && 
+                !e.target.closest('.menu-toggle') &&
+                !e.target.closest('.sidebar')) {
+                closeMobileMenu();
+            }
+        });
+
+        // Close menu on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+                closeMobileMenu();
+            }
+        });
+
+        // Close menu on resize if switching to desktop
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 1024 && navMenu.classList.contains('active')) {
+                closeMobileMenu();
+            }
+        });
+
+        // Mobile dropdown functionality
+        document.querySelectorAll('.courses-dropdown').forEach(dropdown => {
+            const button = dropdown.querySelector('.courses-btn');
+            
+            button.addEventListener('click', function(e) {
+                if (window.innerWidth <= 1024) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    dropdown.classList.toggle('active');
+                }
+            });
+        });
+
+        // Level filtering functionality
+        const levelButtons = document.querySelectorAll('.level-btn');
+        const modules = document.querySelectorAll('.course-module');
+        
+        levelButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const level = this.getAttribute('data-level');
+                
+                // Remove active class from all buttons
+                levelButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                this.classList.add('active');
+                
+                if (level === 'all') {
+                    // Show all modules
+                    modules.forEach(module => {
+                        module.style.display = 'flex';
+                    });
+                } else if (level === 'advanced') {
+                    // Show advanced modules (7-10)
+                    modules.forEach(module => {
+                        const moduleId = module.id;
+                        if (moduleId.includes('module7') || moduleId.includes('module8') || 
+                            moduleId.includes('module9') || moduleId.includes('module10')) {
+                            module.style.display = 'flex';
+                        } else {
+                            module.style.display = 'none';
+                        }
+                    });
+                } else {
+                    // Show modules with matching difficulty
+                    modules.forEach(module => {
+                        const difficulty = module.getAttribute('data-difficulty');
+                        if (difficulty === level) {
+                            module.style.display = 'flex';
+                        } else {
+                            module.style.display = 'none';
+                        }
+                    });
+                }
+                
+                // Scroll to first visible module
+                const firstVisible = document.querySelector('.course-module[style="display: flex;"]');
+                if (firstVisible) {
+                    firstVisible.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Search functionality
+        const searchInput = document.getElementById('search-input');
+        
+        searchInput.addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase().trim();
+            
+            if (searchTerm === '') {
+                // Show all modules if search is empty
+                modules.forEach(module => {
+                    module.style.display = 'flex';
+                });
+                return;
+            }
+            
+            modules.forEach(module => {
+                const moduleTitle = module.querySelector('h1').textContent.toLowerCase();
+                const moduleContent = module.textContent.toLowerCase();
+                
+                if (moduleTitle.includes(searchTerm) || moduleContent.includes(searchTerm)) {
+                    module.style.display = 'flex';
+                } else {
+                    module.style.display = 'none';
+                }
+            });
+        });
+    });
+    
+    // Smooth scrolling for sidebar links
+    document.querySelectorAll('.sidebar-item').forEach(item => {
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Remove active class from all items
+            document.querySelectorAll('.sidebar-item').forEach(i => {
+                i.classList.remove('active');
+            });
+            
+            // Add active class to clicked item
+            this.classList.add('active');
+            
+            // Close mobile menu if open
+            if (window.innerWidth <= 1024) {
+                document.querySelector('.nav-menu').classList.remove('active');
+                document.querySelector('.sidebar').classList.remove('active');
+                document.querySelector('.menu-toggle').innerHTML = '<i class="fas fa-bars"></i>';
+                document.body.classList.remove('menu-open');
+            }
+            
+            // Scroll to section
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 100,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skillmynte · online code editor</title>
+    <link rel="stylesheet" href="premium code compiler .css">
+</head>
+<body>
+    <div class="code-lab">
+        <h2>online code compiler · html / css / js</h2>
+
+        <!-- three editors -->
+        <div class="editor-grid">
+            <!-- HTML editor card -->
+            <div class="editor-card">
+                <div class="editor-header"><span></span> HTML</div>
+                <div class="editor-wrapper" id="htmlWrapper">
+                    <pre class="editor-highlight" id="htmlHighlight"></pre>
+                    <textarea class="editor-textarea" id="htmlInput" spellcheck="false" wrap="off" placeholder="HTML"></textarea>
+                </div>
+            </div>
+            <!-- CSS editor card -->
+            <div class="editor-card">
+                <div class="editor-header"><span></span> CSS</div>
+                <div class="editor-wrapper" id="cssWrapper">
+                    <pre class="editor-highlight" id="cssHighlight"></pre>
+                    <textarea class="editor-textarea" id="cssInput" spellcheck="false" wrap="off" placeholder="CSS"></textarea>
+                </div>
+            </div>
+            <!-- JavaScript editor card -->
+            <div class="editor-card">
+                <div class="editor-header"><span></span> JavaScript</div>
+                <div class="editor-wrapper" id="jsWrapper">
+                    <pre class="editor-highlight" id="jsHighlight"></pre>
+                    <textarea class="editor-textarea" id="jsInput" spellcheck="false" wrap="off" placeholder="JavaScript"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <!-- action buttons -->
+        <div class="action-row">
+            <button class="btn btn-primary" id="runBtn">▶ RUN CODE</button>
+            <button class="btn" id="clearBtn">⌫ CLEAR ALL</button>
+        </div>
+
+        <!-- preview iframe -->
+        <div class="preview-frame">
+            <iframe id="outputFrame" title="live preview" sandbox="allow-scripts allow-same-origin allow-forms"></iframe>
+        </div>
+    </div>
+
+    <!-- floating UI buttons (no functionality) -->
+    <div class="floating-ai">✨ Ask Skillmynte AI</div>
+    <div class="floating-course">⬅ Back to Course</div>
+
+    <script>
+        (function() {
+            // ----- get all elements -----
+            const htmlInput = document.getElementById('htmlInput');
+            const cssInput = document.getElementById('cssInput');
+            const jsInput = document.getElementById('jsInput');
+            const htmlHighlight = document.getElementById('htmlHighlight');
+            const cssHighlight = document.getElementById('cssHighlight');
+            const jsHighlight = document.getElementById('jsHighlight');
+            const runBtn = document.getElementById('runBtn');
+            const clearBtn = document.getElementById('clearBtn');
+            const outputFrame = document.getElementById('outputFrame');
+
+            // ----- default starter code (with colored simulation) -----
+            const defaultHTML = `<!-- html example -->
+<div class="container">
+  <h1>Hello, Skillmynte</h1>
+  <p>edit the code → see changes</p>
+</div>`;
+
+            const defaultCSS = `/* css styles */
+body {
+  background: #1e2b3a;
+  color: white;
+  font-family: system-ui;
+}
+h1 {
+  color: #ffaa66;
+  border-bottom: 2px solid #3c9cdb;
+}`;
+
+            const defaultJS = `// javascript
+console.log("editor ready");
+
+function updateMessage() {
+  const title = document.querySelector('h1');
+  if(title) title.style.color = '#b5cea8';
+}
+// try calling updateMessage() in console`;
+
+            // ----- helper: escape HTML special chars -----
+            function escapeHTML(str) {
+                return str.replace(/&/g, '&amp;')
+                          .replace(/</g, '&lt;')
+                          .replace(/>/g, '&gt;')
+                          .replace(/"/g, '&quot;')
+                          .replace(/'/g, '&#039;');
+            }
+
+            // ----- syntax highlighter: HTML -----
+            function highlightHTML(raw) {
+                let escaped = escapeHTML(raw);
+                // highlight tags <...> (including closing tag)
+                escaped = escaped.replace(/(&lt;[\/]?[^&]*(?:&gt;)?)/g, '<span class="html-tag">$1</span>');
+                // simple attribute highlight inside tags (very basic)
+                escaped = escaped.replace(/( [a-zA-Z-]+)(=)(&quot;.*?&quot;)/g, '<span class="html-attr">$1</span>$2<span class="html-attr">$3</span>');
+                return escaped;
+            }
+
+            // ----- syntax highlighter: CSS (basic) -----
+            function highlightCSS(raw) {
+                let escaped = escapeHTML(raw);
+                // properties (word before colon)
+                escaped = escaped.replace(/([a-zA-Z-]+)(\s*:)/g, '<span class="css-prop">$1</span>$2');
+                // values (between : and ; or {)
+                escaped = escaped.replace(/(:\s*)([^;{]+)/g, '$1<span class="css-value">$2</span>');
+                // comments /* ... */  (very simple)
+                escaped = escaped.replace(/(\/\*.*?\*\/)/g, '<span class="js-comment">$1</span>');
+                return escaped;
+            }
+
+            // ----- syntax highlighter: JavaScript (keywords, strings, numbers) -----
+            function highlightJS(raw) {
+                let escaped = escapeHTML(raw);
+                // keywords (simplified list)
+                const keywords = ['function', 'var', 'let', 'const', 'if', 'else', 'for', 'while', 'return', 'switch', 'case', 'break', 'console', 'log', 'alert'];
+                keywords.forEach(kw => {
+                    const regex = new RegExp('\\b(' + kw + ')\\b', 'g');
+                    escaped = escaped.replace(regex, '<span class="js-keyword">$1</span>');
+                });
+                // strings (double quoted)
+                escaped = escaped.replace(/"([^"\\]*(\\.[^"\\]*)*)"/g, '<span class="js-string">"$1"</span>');
+                escaped = escaped.replace(/'([^'\\]*(\\.[^'\\]*)*)'/g, '<span class="js-string">\'$1\'</span>');
+                // numbers (simple)
+                escaped = escaped.replace(/\b(\d+)\b/g, '<span class="js-number">$1</span>');
+                // comments // line
+                escaped = escaped.replace(/(\/\/.*?)(?=\n|$)/g, '<span class="js-comment">$1</span>');
+                return escaped;
+            }
+
+            // ----- update pre layers from textarea values -----
+            function updateHighlights() {
+                htmlHighlight.innerHTML = highlightHTML(htmlInput.value);
+                cssHighlight.innerHTML = highlightCSS(cssInput.value);
+                jsHighlight.innerHTML = highlightJS(jsInput.value);
+            }
+
+            // ----- scroll sync: keep pre aligned with textarea -----
+            function syncScroll(textarea, pre) {
+                textarea.addEventListener('scroll', function() {
+                    pre.scrollTop = textarea.scrollTop;
+                    pre.scrollLeft = textarea.scrollLeft;
+                });
+            }
+
+            // attach scroll sync for each pair
+            syncScroll(htmlInput, htmlHighlight);
+            syncScroll(cssInput, cssHighlight);
+            syncScroll(jsInput, jsHighlight);
+
+            // input events → update highlighting
+            htmlInput.addEventListener('input', updateHighlights);
+            cssInput.addEventListener('input', updateHighlights);
+            jsInput.addEventListener('input', updateHighlights);
+
+            // set default values and highlight on load
+            htmlInput.value = defaultHTML;
+            cssInput.value = defaultCSS;
+            jsInput.value = defaultJS;
+            updateHighlights();
+
+            // ----- RUN button: combine and write to iframe -----
+            runBtn.addEventListener('click', function() {
+                const htmlCode = htmlInput.value;
+                const cssCode = cssInput.value;
+                const jsCode = jsInput.value;
+
+                const combined = `<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><style>${cssCode}</style></head>
+<body>${htmlCode}<script>${jsCode}<\/script></body>
+</html>`;
+                outputFrame.srcdoc = combined;
+            });
+
+            // trigger initial run so preview shows default
+            setTimeout(() => runBtn.click(), 50);
+
+            // ----- CLEAR button: reset to default starter code -----
+            clearBtn.addEventListener('click', function() {
+                htmlInput.value = defaultHTML;
+                cssInput.value = defaultCSS;
+                jsInput.value = defaultJS;
+                updateHighlights();
+                runBtn.click();  // refresh preview
+            });
+
+            // minor: ensure transparent textarea caret remains visible
+            // also fix for Firefox selection background
+            const style = document.createElement('style');
+            style.textContent = `
+                .editor-textarea::-moz-selection { background: #264f78; }
+                .editor-textarea::selection { background: #264f78; }
+            `;
+            document.head.appendChild(style);
+        })();
+    </script>
+</body>
+</html>

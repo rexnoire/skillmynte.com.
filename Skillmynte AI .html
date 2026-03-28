@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillMynte Frontend Compiler</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/theme/monokai.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/scroll/simplescrollbars.min.css">
+    <style>
+        :root {
+            --primary: #00C853;
+            --primary-dark: #009624;
+            --primary-light: #5EFC82;
+            --secondary: #2962FF;
+            --accent: #FF6B35;
+            --dark: #1a1f2e;
+            --darker: #121625;
+            --gray: #8a94a6;
+            --light-gray: #2a3042;
+            --white: #FFFFFF;
+            --shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+            --transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            --radius: 16px;
+            --gradient: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            --gradient-accent: linear-gradient(135deg, var(--accent) 0%, #FF4081 100%);
+            --glass-bg: rgba(255, 255, 255, 0.08);
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: var(--darker);
+            color: var(--white);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border-radius: var(--radius);
+            border: 1px solid var(--glass-border);
+            box-shadow: var(--shadow);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+
+        .logo i {
+            font-size: 2.8rem;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .tagline {
+            color: var(--gray);
+            font-size: 1.1rem;
+            margin-top: 5px;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            height: 70vh;
+        }
+
+        @media (max-width: 1200px) {
+            .main-content {
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 1fr;
+                height: 130vh;
+            }
+        }
+
+        .editor-container, .output-container {
+            background: var(--dark);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            display: flex;
+            flex-direction: column;
+            border: 1px solid var(--light-gray);
+        }
+
+        .panel-header {
+            background: var(--light-gray);
+            padding: 18px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .panel-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
+        .panel-title i {
+            color: var(--primary);
+        }
+
+        .editor-actions {
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border-radius: 50px;
+            border: none;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition);
+            font-size: 0.95rem;
+        }
+
+        .btn-run {
+            background: var(--gradient);
+            color: var(--white);
+        }
+
+        .btn-run:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 20px rgba(41, 98, 255, 0.3);
+        }
+
+        .btn-copy {
+            background: var(--glass-bg);
+            color: var(--white);
+            border: 1px solid var(--glass-border);
+        }
+
+        .btn-copy:hover {
+            background: var(--light-gray);
+            transform: translateY(-2px);
+        }
+
+        .btn-active {
+            background: var(--accent);
+            color: white;
+        }
+
+        .tab-container {
+            display: flex;
+            background: var(--light-gray);
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .tab {
+            padding: 15px 25px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: var(--transition);
+            border-bottom: 3px solid transparent;
+        }
+
+        .tab:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .tab.active {
+            border-bottom: 3px solid var(--primary);
+            color: var(--primary-light);
+            background: rgba(0, 200, 83, 0.05);
+        }
+
+        .editor-wrapper, .output-frame {
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .CodeMirror {
+            height: 100% !important;
+            font-size: 16px;
+            line-height: 1.6;
+            padding: 15px 0;
+        }
+
+        .CodeMirror-scroll {
+            padding: 0 15px;
+        }
+
+        .output-frame {
+            background: white;
+            border: none;
+            width: 100%;
+            height: 100%;
+        }
+
+        .output-area {
+            width: 100%;
+            height: 100%;
+            background: white;
+            color: #333;
+            overflow: auto;
+            padding: 20px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 25px;
+            color: var(--gray);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--glass-border);
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 15px;
+        }
+
+        .footer-links a {
+            color: var(--primary-light);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+            text-decoration: underline;
+        }
+
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--gradient);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 50px;
+            box-shadow: var(--shadow);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transform: translateY(100px);
+            opacity: 0;
+            transition: var(--transition);
+            z-index: 1000;
+        }
+
+        .toast.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .status-indicator {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        .status-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--primary);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 0.6; }
+            50% { opacity: 1; }
+            100% { opacity: 0.6; }
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                height: 140vh;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .editor-actions {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .btn {
+                padding: 8px 16px;
+                font-size: 0.85rem;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-code"></i>
+                <h1>SkillMynte Frontend Compiler</h1>
+            </div>
+            <p class="tagline">Write, preview, and test HTML, CSS, and JavaScript code in real-time</p>
+        </header>
+
+        <div class="main-content">
+            <div class="editor-container">
+                <div class="panel-header">
+                    <div class="panel-title">
+                        <i class="fas fa-edit"></i>
+                        <span>Code Editor</span>
+                    </div>
+                    <div class="status-indicator">
+                        <div class="status-dot"></div>
+                        <span>Live</span>
+                    </div>
+                </div>
+                
+                <div class="tab-container">
+                    <div class="tab active" data-tab="html">
+                        <i class="fab fa-html5"></i> HTML
+                    </div>
+                    <div class="tab" data-tab="css">
+                        <i class="fab fa-css3-alt"></i> CSS
+                    </div>
+                    <div class="tab" data-tab="js">
+                        <i class="fab fa-js-square"></i> JavaScript
+                    </div>
+                </div>
+                
+                <div class="editor-wrapper">
+                    <textarea id="html-code" style="display:none;"><!DOCTYPE html>
+<html>
+<head>
+    <title>My Preview</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+        }
+        button {
+            background: #00C853;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 20px;
+        }
+        button:hover {
+            background: #009624;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to SkillMynte!</h1>
+        <p>This is a live preview of your HTML, CSS, and JavaScript code.</p>
+        <p>Edit the code in the editor to see changes here in real-time.</p>
+        <button id="demo-button">Click Me!</button>
+        <p id="output-text" style="margin-top: 30px; font-size: 1.5rem;"></p>
+    </div>
+    
+    <script>
+        document.getElementById('demo-button').addEventListener('click', function() {
+            const messages = [
+                "Great job! 🎉",
+                "Code executed successfully! ✅",
+                "Frontend magic happening! ✨",
+                "SkillMynte power! ⚡",
+                "You're a coding wizard! 🧙"
+            ];
+            const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+            document.getElementById('output-text').textContent = randomMessage;
+            
+            // Add some visual effect
+            this.style.background = '#FF6B35';
+            setTimeout(() => {
+                this.style.background = '#00C853';
+            }, 300);
+        });
+    </script>
+</body>
+</html></textarea>
+                    <textarea id="css-code" style="display:none;">/* Add your custom CSS here */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+.special-heading {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+}
+
+.card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border-radius: var(--radius);
+    padding: 25px;
+    border: 1px solid var(--glass-border);
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow);
+}
+
+.btn-grad {
+    background: var(--gradient);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-grad:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(41, 98, 255, 0.4);
+}
+
+/* Responsive grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}</textarea>
+                    <textarea id="js-code" style="display:none;">// JavaScript code will execute in the preview
+console.log("SkillMynte Compiler Ready!");
+
+// Example interactive function
+function showAlert(message) {
+    alert(message);
+}
+
+// Dynamic content generator
+function addNewElement() {
+    const newElement = document.createElement('div');
+    newElement.className = 'card';
+    newElement.innerHTML = `
+        <h3>New Dynamic Card</h3>
+        <p>This element was created with JavaScript at ${new Date().toLocaleTimeString()}</p>
+        <button class="btn-grad" onclick="this.parentElement.remove()">Remove</button>
+    `;
+    document.body.appendChild(newElement);
+}
+
+// Theme toggle example
+function toggleTheme() {
+    document.body.classList.toggle('light-theme');
+}
+
+// Counter functionality
+let counter = 0;
+function updateCounter() {
+    counter++;
+    document.getElementById('counter-display').innerText = `Count: ${counter}`;
+}
+
+// Initialize when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    console.log("Preview loaded successfully!");
+    
+    // Add a welcome message to the console
+    console.log("%c SkillMynte Frontend Compiler", "color: #00C853; font-size: 20px; font-weight: bold;");
+    console.log("%c Write your code and see instant results!", "color: #2962FF;");
+});</textarea>
+                </div>
+                
+                <div class="panel-header">
+                    <div class="editor-actions">
+                        <button class="btn btn-run" id="run-button">
+                            <i class="fas fa-play-circle"></i> Run Code
+                        </button>
+                        <button class="btn btn-copy" id="copy-button">
+                            <i class="fas fa-copy"></i> Copy Code
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="output-container">
+                <div class="panel-header">
+                    <div class="panel-title">
+                        <i class="fas fa-eye"></i>
+                        <span>Live Preview</span>
+                    </div>
+                    <div class="editor-actions">
+                        <button class="btn btn-copy" id="refresh-button">
+                            <i class="fas fa-redo"></i> Refresh
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="output-wrapper">
+                    <iframe class="output-frame" id="preview-frame" sandbox="allow-scripts allow-modals allow-forms"></iframe>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>SkillMynte Frontend Compiler &copy; 2023 | Real-time HTML, CSS & JavaScript Editor</p>
+            <div class="footer-links">
+                <a href="#"><i class="fas fa-question-circle"></i> Documentation</a>
+                <a href="#"><i class="fas fa-share-alt"></i> Share</a>
+                <a href="#"><i class="fas fa-download"></i> Export</a>
+                <a href="#"><i class="fas fa-bug"></i> Report Issue</a>
+            </div>
+        </footer>
+        
+        <div class="toast" id="toast">
+            <i class="fas fa-check-circle"></i>
+            <span id="toast-message">Code copied to clipboard!</span>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/xml/xml.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/css/css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/javascript/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/htmlmixed/htmlmixed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/scroll/simplescrollbars.min.js"></script>
+    <script>
+        // Initialize CodeMirror editors
+        const htmlEditor = CodeMirror.fromTextArea(document.getElementById('html-code'), {
+            mode: 'htmlmixed',
+            theme: 'monokai',
+            lineNumbers: true,
+            scrollbarStyle: 'simple',
+            lineWrapping: true,
+            autoCloseTags: true,
+            matchBrackets: true,
+            indentUnit: 4
+        });
+
+        const cssEditor = CodeMirror.fromTextArea(document.getElementById('css-code'), {
+            mode: 'css',
+            theme: 'monokai',
+            lineNumbers: true,
+            scrollbarStyle: 'simple',
+            lineWrapping: true,
+            matchBrackets: true,
+            indentUnit: 4
+        });
+
+        const jsEditor = CodeMirror.fromTextArea(document.getElementById('js-code'), {
+            mode: 'javascript',
+            theme: 'monokai',
+            lineNumbers: true,
+            scrollbarStyle: 'simple',
+            lineWrapping: true,
+            matchBrackets: true,
+            indentUnit: 4
+        });
+
+        // Set initial active editor
+        let activeEditor = htmlEditor;
+        htmlEditor.refresh();
+
+        // Tab switching
+        const tabs = document.querySelectorAll('.tab');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Update tab UI
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                
+                // Show corresponding editor
+                const tabType = tab.getAttribute('data-tab');
+                const editors = {
+                    'html': htmlEditor,
+                    'css': cssEditor,
+                    'js': jsEditor
+                };
+                
+                activeEditor = editors[tabType];
+                htmlEditor.getWrapperElement().style.display = tabType === 'html' ? 'block' : 'none';
+                cssEditor.getWrapperElement().style.display = tabType === 'css' ? 'block' : 'none';
+                jsEditor.getWrapperElement().style.display = tabType === 'js' ? 'block' : 'none';
+                
+                // Refresh the active editor
+                activeEditor.refresh();
+            });
+        });
+
+        // Run code button
+        document.getElementById('run-button').addEventListener('click', runCode);
+        document.getElementById('refresh-button').addEventListener('click', runCode);
+
+        // Copy code button
+        document.getElementById('copy-button').addEventListener('click', copyCode);
+
+        // Toast notification
+        const toast = document.getElementById('toast');
+        const toastMessage = document.getElementById('toast-message');
+
+        function showToast(message) {
+            toastMessage.textContent = message;
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000);
+        }
+
+        // Run code function
+        function runCode() {
+            const html = htmlEditor.getValue();
+            const css = cssEditor.getValue();
+            const js = jsEditor.getValue();
+            
+            // Create a complete HTML document
+            const previewHtml = `
+                <!DOCTYPE html>
+                <html>
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <style>
+                        ${css}
+                        body {
+                            margin: 0;
+                            padding: 20px;
+                            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                            transition: all 0.3s ease;
+                            min-height: 100vh;
+                        }
+                        .light-theme {
+                            background: #f5f7fa;
+                            color: #333;
+                        }
+                    </style>
+                </head>
+                <body>
+                    ${html}
+                    <script>
+                        ${js}
+                    <\/script>
+                </body>
+                </html>
+            `;
+            
+            // Update the iframe
+            const iframe = document.getElementById('preview-frame');
+            const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+            iframeDoc.open();
+            iframeDoc.write(previewHtml);
+            iframeDoc.close();
+            
+            // Show success message
+            showToast('Code executed successfully!');
+        }
+
+        // Copy code function
+        function copyCode() {
+            const codeToCopy = activeEditor.getValue();
+            navigator.clipboard.writeText(codeToCopy)
+                .then(() => {
+                    showToast('Code copied to clipboard!');
+                })
+                .catch(err => {
+                    console.error('Failed to copy: ', err);
+                    showToast('Failed to copy code');
+                });
+        }
+
+        // Auto-run on first load
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(runCode, 500);
+            
+            // Add some example code highlighting
+            const exampleCSS = `/* Try adding this to see the effect */
+.card {
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}`;
+            
+            cssEditor.setValue(exampleCSS + cssEditor.getValue());
+            
+            // Refresh editors
+            htmlEditor.refresh();
+            cssEditor.refresh();
+            jsEditor.refresh();
+        });
+
+        // Keyboard shortcuts
+        document.addEventListener('keydown', (e) => {
+            // Ctrl+Enter or Cmd+Enter to run code
+            if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
+                e.preventDefault();
+                runCode();
+            }
+            
+            // Ctrl+/ or Cmd+/ for comment toggle
+            if ((e.ctrlKey || e.metaKey) && e.key === '/') {
+                e.preventDefault();
+                activeEditor.execCommand('toggleComment');
+            }
+        });
+    </script>
+</body>
+</html>

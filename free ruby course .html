@@ -1,0 +1,4645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruby Programming | SkillMynte</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="rounded_logo.png">
+    <link rel="stylesheet" href="free ruby course.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-gem"></i>
+                SKILLMYNTE
+            </a>
+            <div class="nav-menu">
+                <a href="#" class="nav-link">Home</a>
+                <a href="#" class="nav-link">Courses</a>
+                <a href="#" class="nav-link">Practice</a>
+                <a href="#" class="nav-link">Projects</a>
+                
+                <div class="courses-dropdown">
+                    <button class="courses-btn">
+                        <i class="fas fa-book-open"></i> Jump to Module
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#module1" class="dropdown-item">
+                            <i class="fas fa-gem ruby-icon"></i> Ruby Basics
+                        </a>
+                        <a href="#module2" class="dropdown-item">
+                            <i class="fas fa-gem ruby-icon"></i> Variables & Data Types
+                        </a>
+                        <a href="#module3" class="dropdown-item">
+                            <i class="fas fa-gem ruby-icon"></i> Control Structures
+                        </a>
+                        <a href="#module4" class="dropdown-item">
+                            <i class="fas fa-gem ruby-icon"></i> Methods & Functions
+                        </a>
+                        <a href="#module5" class="dropdown-item">
+                            <i class="fas fa-gem ruby-icon"></i> Arrays & Hashes
+                        </a>
+                        <a href="#module6" class="dropdown-item">
+                            <i class="fas fa-gem ruby-icon"></i> Object-Oriented Programming
+                        </a>
+                        <a href="#module7" class="dropdown-item">
+                            <i class="fas fa-gem ruby-icon"></i> Ruby on Rails Basics
+                        </a>
+                        <a href="#module8" class="dropdown-item">
+                            <i class="fas fa-gem ruby-icon"></i> Database Integration
+                        </a>
+                        <a href="#module9" class="dropdown-item">
+                            <i class="fas fa-gem ruby-icon"></i> Testing with RSpec
+                        </a>
+                        <a href="#module10" class="dropdown-item">
+                            <i class="fas fa-gem ruby-icon"></i> Advanced Ruby Topics
+                        </a>
+                        <a href="#playground" class="dropdown-item">
+                            <i class="fas fa-laptop-code"></i> Practice Playground
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Premium Course Navigation -->
+    <div class="course-navigation">
+        <div class="course-nav-container">
+            <div class="course-category">
+                <button class="category-btn">
+                    <i class="fas fa-layer-group"></i> Categories
+                </button>
+                <div class="category-dropdown">
+                    <a href="#" class="category-item">
+                        <i class="fas fa-gem ruby-icon"></i> Ruby Programming
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fab fa-js-square js-icon"></i> JavaScript
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fab fa-python python-icon"></i> Python
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fab fa-java java-icon"></i> Java
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fas fa-database database-icon"></i> Databases
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fas fa-mobile-alt"></i> Web Development
+                    </a>
+                </div>
+            </div>
+            
+            <div class="course-levels">
+                <button class="level-btn active" data-level="all">All Levels</button>
+                <button class="level-btn" data-level="beginner">Beginner</button>
+                <button class="level-btn" data-level="intermediate">Intermediate</button>
+                <button class="level-btn" data-level="advanced">Advanced</button>
+            </div>
+            
+            <div class="course-search">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" class="search-input" id="search-input" placeholder="Search courses...">
+            </div>
+        </div>
+    </div>
+    
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <a href="#module1" class="sidebar-item active completed">
+            <i class="fas fa-gem ruby-icon"></i>
+            <span>Module 1: Ruby Basics</span>
+            <span class="progress-indicator"><i class="fas fa-check"></i></span>
+        </a>
+        <a href="#module2" class="sidebar-item completed">
+            <i class="fas fa-gem ruby-icon"></i>
+            <span>Module 2: Variables & Data Types</span>
+            <span class="progress-indicator"><i class="fas fa-check"></i></span>
+        </a>
+        <a href="#module3" class="sidebar-item completed">
+            <i class="fas fa-gem ruby-icon"></i>
+            <span>Module 3: Control Structures</span>
+            <span class="progress-indicator"><i class="fas fa-check"></i></span>
+        </a>
+        <a href="#module4" class="sidebar-item">
+            <i class="fas fa-gem ruby-icon"></i>
+            <span>Module 4: Methods & Functions</span>
+            <span class="progress-indicator">4</span>
+        </a>
+        <a href="#module5" class="sidebar-item">
+            <i class="fas fa-gem ruby-icon"></i>
+            <span>Module 5: Arrays & Hashes</span>
+            <span class="progress-indicator">5</span>
+        </a>
+        <a href="#module6" class="sidebar-item">
+            <i class="fas fa-gem ruby-icon"></i>
+            <span>Module 6: Object-Oriented Programming</span>
+            <span class="progress-indicator">6</span>
+        </a>
+        <a href="#module7" class="sidebar-item">
+            <i class="fas fa-gem ruby-icon"></i>
+            <span>Module 7: Ruby on Rails Basics</span>
+            <span class="progress-indicator">7</span>
+        </a>
+        <a href="#module8" class="sidebar-item">
+            <i class="fas fa-gem ruby-icon"></i>
+            <span>Module 8: Database Integration</span>
+            <span class="progress-indicator">8</span>
+        </a>
+        <a href="#module9" class="sidebar-item">
+            <i class="fas fa-gem ruby-icon"></i>
+            <span>Module 9: Testing with RSpec</span>
+            <span class="progress-indicator">9</span>
+        </a>
+        <a href="#module10" class="sidebar-item">
+            <i class="fas fa-gem ruby-icon"></i>
+            <span>Module 10: Advanced Ruby Topics</span>
+            <span class="progress-indicator">10</span>
+        </a>
+        <a href="#playground" class="sidebar-item">
+            <i class="fas fa-laptop-code"></i>
+            <span>Practice Playground</span>
+        </a>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="content-wrapper">
+        <div class="container">
+            <!-- Module 1: Ruby Basics -->
+            <div class="course-module" id="module1" data-aos="fade-up" data-difficulty="beginner">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>RUBY BASICS</h1>
+                    <h3>Learn the fundamental syntax of Ruby programming</h3>
+                    <span class="difficulty">Beginner</span>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ruby/ruby-original.svg" class="module-icon" alt="Ruby Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 1: <span>Ruby Syntax and Fundamentals</span></h1>
+                    <p>Ruby is a dynamic, open-source programming language with a focus on simplicity and productivity. Created by Yukihiro "Matz" Matsumoto, Ruby has an elegant syntax that is natural to read and easy to write. Think of Ruby as a language that optimizes for programmer happiness.</p>
+                    
+                    <p>Every Ruby program follows basic syntax rules. Ruby is an interpreted language, meaning you don't need to compile it before running. The language is object-oriented - everything in Ruby is an object, including numbers and even nil (which represents "nothing").</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Ruby</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-1" spellcheck="false"># Welcome to Ruby Programming!
+# This is a comment in Ruby
+
+puts "Hello, SkillMynte!"
+puts "Welcome to Ruby Programming Course"
+
+# Basic arithmetic
+puts "2 + 3 = #{2 + 3}"
+puts "10 - 4 = #{10 - 4}"
+puts "6 * 7 = #{6 * 7}"
+puts "15 / 3 = #{15 / 3}"
+
+# String manipulation
+name = "SkillMynte"
+puts "Hello, #{name}!"
+puts "Name in uppercase: #{name.upcase}"
+puts "Name in lowercase: #{name.downcase}"
+puts "Name length: #{name.length} characters"
+
+# Boolean operations
+puts "Is 5 greater than 3? #{5 > 3}"
+puts "Is 'ruby' equal to 'Ruby'? #{'ruby' == 'Ruby'}"
+
+# Edit this code and click "Run" to see your changes!</textarea>
+                        <button class="run-btn" onclick="runCode('editor-1', 'output-1')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Output
+                        </div>
+                        <div class="preview-container" id="output-1"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li><code>puts</code> prints output to the console with a new line</li>
+                                <li><code>#</code> starts a comment (code that won't execute)</li>
+                                <li>Ruby uses <code>#{expression}</code> for string interpolation</li>
+                                <li>Everything in Ruby is an object with methods</li>
+                                <li>Variables don't need type declarations</li>
+                                <li>Ruby is case-sensitive (<code>name</code> and <code>Name</code> are different)</li>
+                                <li>Method names should be lowercase with underscores</li>
+                                <li>Indentation is 2 spaces (convention, not requirement)</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-graduation-cap"></i> Ruby Philosophy Explained</h3>
+                            <p>Ruby was designed with the principle of "least surprise" - the language should behave in a way that minimizes confusion for experienced programmers. This philosophy makes Ruby exceptionally readable and maintainable. Unlike languages that require verbose syntax, Ruby emphasizes human-friendly code that reads almost like English.</p>
+                            
+                            <p>The dynamic nature of Ruby means you don't need to declare variable types, and you can modify classes and objects at runtime. This flexibility comes with responsibility - while it enables rapid development and metaprogramming, it requires disciplined testing practices. Ruby's garbage collection automatically manages memory, freeing developers from manual memory management concerns.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-heart"></i> Developer Happiness</h4>
+                                    <p>Ruby prioritizes programmer productivity and happiness over machine optimization. The clean syntax reduces cognitive load, allowing developers to focus on solving business problems rather than language intricacies.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-object-group"></i> Everything is an Object</h4>
+                                    <p>In Ruby, everything from numbers and strings to classes and modules are objects. This consistent object model enables powerful metaprogramming capabilities and clean, predictable APIs.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-gem"></i> Convention Over Configuration</h4>
+                                    <p>Ruby and its ecosystem (especially Rails) follow established conventions that reduce decision fatigue and promote consistency across projects, making codebases easier to understand and maintain.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-building"></i> Real-World Application</h4>
+                                <p>Companies like GitHub, Shopify, Airbnb, and Twitter have built massive platforms using Ruby. GitHub uses Ruby for its core platform, handling millions of repositories. Shopify processes billions in e-commerce transactions with Ruby. These companies demonstrate Ruby's scalability and suitability for mission-critical applications when combined with proper architecture and optimization techniques.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Create Your First Ruby Program:</strong> Build a simple program that:</p>
+                            <ul>
+                                <li>Greets the user with a personalized message</li>
+                                <li>Performs basic arithmetic operations</li>
+                                <li>Manipulates strings (convert case, calculate length)</li>
+                                <li>Uses variables to store and display information</li>
+                                <li>Includes comments explaining each section</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 2: Variables & Data Types -->
+            <div class="course-module" id="module2" data-aos="fade-up" data-difficulty="beginner">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>VARIABLES & DATA TYPES</h1>
+                    <h3>Learn to store and manipulate data in Ruby</h3>
+                    <span class="difficulty">Beginner</span>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ruby/ruby-original.svg" class="module-icon" alt="Ruby Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 2: <span>Variables and Data Types</span></h1>
+                    <p>Variables are containers for storing data values. In Ruby, you don't need to declare a variable's type - Ruby dynamically determines it based on what you assign. Different data types serve different purposes: numbers for calculations, strings for text, booleans for true/false values, and more complex types for structured data.</p>
+                    
+                    <p>Ruby is dynamically typed, which means you can reassign a variable to hold different types of data. While flexible, this requires careful programming to avoid type-related bugs. Understanding Ruby's core data types is fundamental to writing effective programs.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Ruby</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-2" spellcheck="false"># Variables and Data Types in Ruby
+
+# ===== VARIABLE TYPES =====
+# Local variables (lowercase or underscore)
+name = "SkillMynte"
+age = 25
+price = 19.99
+is_active = true
+
+# Constants (uppercase)
+MAX_USERS = 1000
+PI = 3.14159
+
+# Global variables (start with $) - use sparingly
+$global_count = 0
+
+# Instance variables (start with @)
+@instance_var = "I'm an instance variable"
+
+# Class variables (start with @@)
+@@class_var = "I'm a class variable"
+
+# ===== DATA TYPES =====
+puts "=== STRINGS ==="
+string1 = "Hello, Ruby!"
+string2 = 'Single quotes work too'
+multiline_string = <<~TEXT
+  This is a multi-line
+  string in Ruby!
+  Very useful for documentation.
+TEXT
+
+puts string1
+puts "Length: #{string1.length}"
+puts "Uppercase: #{string1.upcase}"
+puts "Reverse: #{string1.reverse}"
+
+puts "\n=== NUMBERS ==="
+integer_num = 42
+float_num = 3.14159
+big_num = 1_000_000  # Underscores for readability
+
+puts "Integer: #{integer_num}"
+puts "Float: #{float_num}"
+puts "Sum: #{integer_num + float_num}"
+puts "Division (integers): #{10 / 3}"  # Returns 3 (integer division)
+puts "Division (floats): #{10.0 / 3}"  # Returns 3.333...
+
+puts "\n=== BOOLEANS ==="
+true_value = true
+false_value = false
+nil_value = nil  # Represents "nothing"
+
+puts "True: #{true_value}"
+puts "False: #{false_value}"
+puts "Nil: #{nil_value.inspect}"
+
+puts "\n=== TYPE CHECKING ==="
+puts "name is a: #{name.class}"
+puts "age is a: #{age.class}"
+puts "price is a: #{price.class}"
+puts "is_active is a: #{is_active.class}"
+puts "nil_value is a: #{nil_value.class}"
+
+# ===== TYPE CONVERSION =====
+puts "\n=== TYPE CONVERSION ==="
+string_number = "123"
+converted_number = string_number.to_i
+puts "String '123' to integer: #{converted_number}"
+puts "Is it now an integer? #{converted_number.class}"
+
+number_to_string = 456.to_s
+puts "Integer 456 to string: #{number_to_string}"
+puts "Is it now a string? #{number_to_string.class}"</textarea>
+                        <button class="run-btn" onclick="runCode('editor-2', 'output-2')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Output
+                        </div>
+                        <div class="preview-container" id="output-2"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>Local variables: lowercase or underscore (<code>name</code>, <code>user_age</code>)</li>
+                                <li>Constants: uppercase (<code>MAX_SIZE</code>, <code>PI</code>)</li>
+                                <li>Global variables: start with <code>$</code> (<code>$count</code>) - use sparingly</li>
+                                <li>Instance variables: start with <code>@</code> (<code>@name</code>)</li>
+                                <li>Class variables: start with <code>@@</code> (<code>@@count</code>)</li>
+                                <li>Strings can use single or double quotes (interpolation only in double)</li>
+                                <li>Integers and Floats are different numeric types</li>
+                                <li><code>nil</code> represents "nothing" or "no value"</li>
+                                <li>Use <code>.class</code> to check an object's type</li>
+                                <li><code>.to_i</code>, <code>.to_s</code>, <code>.to_f</code> convert between types</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-database"></i> Data Storage & Type System</h3>
+                            <p>Ruby's dynamic typing system provides flexibility while maintaining strong typing characteristics. Variables don't have inherent types, but the objects they reference do. This means you can reassign a variable to hold completely different data types, but operations must be valid for the current object type. Ruby will raise errors if you try to perform incompatible operations, providing runtime type safety.</p>
+                            
+                            <p>The distinction between different variable scopes (local, instance, class, global) is crucial for Ruby's object-oriented paradigm. Local variables exist within their current scope, instance variables belong to object instances, class variables are shared across all instances of a class, and global variables are accessible everywhere. Understanding these scopes prevents bugs related to variable visibility and lifetime.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-exchange-alt"></i> Duck Typing</h4>
+                                    <p>Ruby uses "duck typing" - if an object quacks like a duck (has the methods we need), we treat it like a duck. This focuses on behavior rather than explicit types, enabling flexible polymorphism without inheritance hierarchies.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-memory"></i> Memory Management</h4>
+                                    <p>Ruby's garbage collector automatically manages memory, freeing developers from manual allocation/deallocation. Understanding variable scope helps prevent memory leaks by ensuring objects are properly eligible for garbage collection.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-bolt"></i> Performance Considerations</h4>
+                                    <p>While dynamic typing offers flexibility, it has performance implications. Ruby 3.0+ includes type profiling and JIT compilation that optimize based on actual usage patterns, narrowing the performance gap with statically-typed languages.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-shopping-cart"></i> E-Commerce Applications</h4>
+                                <p>Shopify's massive e-commerce platform demonstrates sophisticated Ruby type handling. Product prices use BigDecimal for precise currency calculations, avoiding floating-point rounding errors. User data employs strings with encoding considerations for international names. Inventory counts use integers with boundary checking. The system converts between types when integrating with payment gateways, shipping APIs, and tax calculation services, all while maintaining data integrity across billions of transactions.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Create a Product Inventory System:</strong> Build a program that tracks products:</p>
+                            <ul>
+                                <li>Create variables for product name, price, quantity, and availability</li>
+                                <li>Use appropriate data types for each variable</li>
+                                <li>Calculate total inventory value (price × quantity)</li>
+                                <li>Convert data between types when necessary</li>
+                                <li>Display formatted product information</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 3: Control Structures -->
+            <div class="course-module" id="module3" data-aos="fade-up" data-difficulty="beginner">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>CONTROL STRUCTURES</h1>
+                    <h3>Learn to control program flow with conditions and loops</h3>
+                    <span class="difficulty">Beginner</span>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ruby/ruby-original.svg" class="module-icon" alt="Ruby Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 3: <span>Control Structures and Loops</span></h1>
+                    <p>Control structures allow your programs to make decisions and repeat actions. Conditional statements (<code>if</code>, <code>unless</code>, <code>case</code>) execute code based on conditions, while loops (<code>while</code>, <code>until</code>, <code>for</code>, iterators) repeat code until conditions are met.</p>
+                    
+                    <p>Ruby provides elegant and readable control structures. The <code>if</code> statement can be used as a modifier at the end of a line for concise conditions. Ruby's iterators (<code>each</code>, <code>map</code>, <code>select</code>) provide powerful ways to work with collections without traditional loop counters.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Ruby</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-3" spellcheck="false"># Control Structures in Ruby
+
+puts "=== CONDITIONAL STATEMENTS ==="
+
+# Basic if-else
+temperature = 25
+if temperature > 30
+  puts "It's hot outside!"
+elsif temperature > 20
+  puts "It's warm outside."
+elsif temperature > 10
+  puts "It's cool outside."
+else
+  puts "It's cold outside!"
+end
+
+# Unless (opposite of if)
+age = 17
+unless age >= 18
+  puts "You're not old enough to vote."
+else
+  puts "You can vote!"
+end
+
+# One-line if
+puts "It's perfect weather!" if temperature.between?(20, 28)
+
+# One-line unless
+puts "Bring a jacket!" unless temperature > 15
+
+# Case statement (switch in other languages)
+grade = 'B'
+case grade
+when 'A'
+  puts "Excellent!"
+when 'B'
+  puts "Good job!"
+when 'C'
+  puts "You passed."
+when 'D', 'F'
+  puts "You need to improve."
+else
+  puts "Invalid grade."
+end
+
+# Ternary operator
+points = 85
+result = points >= 80 ? "Pass" : "Fail"
+puts "Result: #{result}"
+
+puts "\n=== LOOPS ==="
+
+# While loop
+counter = 1
+puts "While loop:"
+while counter <= 5
+  puts "Counter: #{counter}"
+  counter += 1
+end
+
+# Until loop (opposite of while)
+countdown = 5
+puts "\nUntil loop (Countdown):"
+until countdown == 0
+  puts "Countdown: #{countdown}"
+  countdown -= 1
+end
+puts "Blast off!"
+
+# For loop (less common in Ruby)
+puts "\nFor loop:"
+for number in 1..3
+  puts "Number: #{number}"
+end
+
+# Times iterator (Ruby idiomatic)
+puts "\nTimes iterator:"
+5.times do |i|
+  puts "Iteration #{i + 1}"
+end
+
+# Upto iterator
+puts "\nUpto iterator:"
+1.upto(3) do |num|
+  puts "Number: #{num}"
+end
+
+# Downto iterator
+puts "\nDownto iterator:"
+3.downto(1) do |num|
+  puts "Countdown: #{num}"
+end
+
+puts "\n=== LOOP CONTROL ==="
+
+# Break - exit loop early
+puts "Break example:"
+1.upto(10) do |i|
+  break if i > 5
+  puts i
+end
+
+# Next - skip to next iteration
+puts "\nNext example (skip even numbers):"
+1.upto(10) do |i|
+  next if i.even?
+  puts i
+end
+
+# Redo - restart current iteration
+puts "\nRedo example (simplified):"
+attempts = 0
+3.times do |i|
+  attempts += 1
+  puts "Attempt #{attempts}"
+  redo if attempts == 2 && i < 2
+end</textarea>
+                        <button class="run-btn" onclick="runCode('editor-3', 'output-3')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Output
+                        </div>
+                        <div class="preview-container" id="output-3"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li><code>if</code>/<code>elsif</code>/<code>else</code> for conditional execution</li>
+                                <li><code>unless</code> is the opposite of <code>if</code> (executes if condition is false)</li>
+                                <li><code>case</code>/<code>when</code> for multiple conditions (like switch statements)</li>
+                                <li>One-line modifiers: <code>action if condition</code> or <code>action unless condition</code></li>
+                                <li>Ternary operator: <code>condition ? true_value : false_value</code></li>
+                                <li><code>while</code> loops while condition is true</li>
+                                <li><code>until</code> loops until condition is true (opposite of while)</li>
+                                <li><code>times</code>, <code>upto</code>, <code>downto</code> are Ruby's idiomatic iterators</li>
+                                <li><code>break</code> exits loops, <code>next</code> skips to next iteration</li>
+                                <li>Rubyists prefer iterators over traditional for/while loops</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-code-branch"></i> Program Flow & Logic</h3>
+                            <p>Control structures form the decision-making backbone of any programming language. Ruby's approach emphasizes readability and expressiveness through natural language-like constructs. The postfix conditional syntax (<code>do_something if condition</code>) reads like English and reduces visual clutter for simple conditions. This design choice reflects Ruby's philosophy of optimizing for developer happiness and code clarity.</p>
+                            
+                            <p>Ruby's iterator methods represent a fundamental shift from traditional loop constructs. Methods like <code>each</code>, <code>map</code>, and <code>select</code> encapsulate common iteration patterns while abstracting away index management. This functional programming influence reduces off-by-one errors and makes code more declarative. The block syntax (<code>do |item| ... end</code> or <code>{ |item| ... }</code>) provides a clean way to pass behavior to these iterators, enabling powerful data transformation pipelines.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-project-diagram"></i> Block-Based Iteration</h4>
+                                    <p>Ruby's block syntax creates self-contained units of behavior that can be passed to methods. This enables sophisticated control flow patterns like retry logic, resource cleanup (ensure blocks), and custom iteration strategies without callback functions or anonymous classes.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-sync-alt"></i> Lazy Evaluation</h4>
+                                    <p>Ruby 2.0+ introduced lazy enumerators that enable processing of infinite sequences or large datasets without loading everything into memory. This functional programming technique improves performance and enables new algorithmic approaches.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-exclamation-triangle"></i> Error Flow Control</h4>
+                                    <p>Ruby's exception handling (<code>begin</code>/<code>rescue</code>/<code>ensure</code>) provides structured error recovery. Combined with control structures, it enables robust programs that gracefully handle unexpected conditions while maintaining clean execution paths.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-robot"></i> API Processing & Data Pipelines</h4>
+                                <p>GitHub's API processing systems use sophisticated control structures to handle webhook events, user requests, and background jobs. Conditional logic routes different event types to appropriate handlers. Iterators process paginated API responses efficiently. Error handling with retry logic ensures reliable processing despite intermittent failures. Background job processors use loops with exponential backoff for failed jobs. These patterns demonstrate how control structures enable scalable, resilient systems that process millions of events daily while maintaining clear, maintainable code structure.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Create a Grade Calculator:</strong> Build a program that:</p>
+                            <ul>
+                                <li>Takes multiple test scores as input</li>
+                                <li>Uses conditionals to assign letter grades</li>
+                                <li>Calculates average score using loops</li>
+                                <li>Implements different grading curves based on conditions</li>
+                                <li>Handles edge cases (perfect scores, failing scores)</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 4: Methods & Functions -->
+            <div class="course-module" id="module4" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>METHODS & FUNCTIONS</h1>
+                    <h3>Learn to create reusable code with methods</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ruby/ruby-original.svg" class="module-icon" alt="Ruby Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 4: <span>Methods and Functions</span></h1>
+                    <p>Methods (called functions in other languages) are reusable blocks of code that perform specific tasks. They help organize your code, avoid repetition, and make programs easier to understand and maintain. In Ruby, everything is an object, and methods are messages you send to objects.</p>
+                    
+                    <p>Methods can take parameters, return values, and have default arguments. Ruby also supports splat arguments for variable-length parameter lists, keyword arguments for named parameters, and blocks for passing code to methods. Understanding methods is key to writing clean, modular Ruby code.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Ruby</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-4" spellcheck="false"># Methods in Ruby
+
+puts "=== BASIC METHODS ==="
+
+# Simple method without parameters
+def greet
+  puts "Hello from SkillMynte!"
+end
+
+greet  # Call the method
+
+# Method with parameters
+def say_hello(name)
+  puts "Hello, #{name}!"
+end
+
+say_hello("Alice")
+say_hello("Bob")
+
+# Method with return value
+def add(a, b)
+  return a + b  # Explicit return
+end
+
+result = add(5, 3)
+puts "5 + 3 = #{result}"
+
+# Implicit return (Ruby returns last expression)
+def multiply(a, b)
+  a * b  # No return keyword needed
+end
+
+puts "4 * 6 = #{multiply(4, 6)}"
+
+puts "\n=== METHOD PARAMETERS ==="
+
+# Default parameters
+def greet_person(name = "Guest")
+  puts "Welcome, #{name}!"
+end
+
+greet_person("Charlie")
+greet_person()  # Uses default
+
+# Multiple parameters
+def introduce(name, age, city)
+  puts "#{name} is #{age} years old and lives in #{city}."
+end
+
+introduce("David", 30, "New York")
+
+# Variable-length arguments (splat)
+def sum(*numbers)
+  total = 0
+  numbers.each { |n| total += n }
+  total
+end
+
+puts "Sum of 1,2,3: #{sum(1, 2, 3)}"
+puts "Sum of 4,5,6,7: #{sum(4, 5, 6, 7)}"
+
+# Keyword arguments (Ruby 2.0+)
+def create_user(name:, email:, age: 18)
+  puts "Creating user: #{name}, #{email}, #{age}"
+end
+
+create_user(name: "Emma", email: "emma@example.com")
+create_user(name: "Frank", email: "frank@example.com", age: 25)
+
+# Mix of argument types
+def complex_method(required, *args, key: "default", **kwargs)
+  puts "Required: #{required}"
+  puts "Args: #{args}"
+  puts "Key: #{key}"
+  puts "Kwargs: #{kwargs}"
+end
+
+complex_method("first", 2, 3, key: "custom", extra: "value")
+
+puts "\n=== BLOCKS AND YIELD ==="
+
+# Method that accepts a block
+def with_logging
+  puts "Starting operation..."
+  yield if block_given?  # Execute the block
+  puts "Operation complete!"
+end
+
+with_logging do
+  puts "Performing calculation..."
+  puts "2 + 2 = #{2 + 2}"
+end
+
+# Block parameters
+def repeat(times)
+  times.times do |i|
+    yield(i) if block_given?
+  end
+end
+
+repeat(3) do |count|
+  puts "Iteration #{count + 1}"
+end
+
+puts "\n=== METHOD ALIASES ==="
+
+def original_method
+  puts "Original method"
+end
+
+alias new_name original_method
+
+original_method
+new_name  # Same as original_method
+
+puts "\n=== PRIVATE METHODS ==="
+
+class Calculator
+  def add(a, b)
+    a + b
+  end
+  
+  def complex_calculation(a, b)
+    intermediate = helper_method(a)
+    intermediate * b
+  end
+  
+  private  # Methods below are private
+  
+  def helper_method(x)
+    x * 2
+  end
+end
+
+calc = Calculator.new
+puts "5 + 3 = #{calc.add(5, 3)}"
+puts "Complex: #{calc.complex_calculation(3, 4)}"
+# calc.helper_method(5)  # This would raise an error (private method)
+
+puts "\n=== LAMBDA AND PROC ==="
+
+# Lambda (strict about arguments)
+double = ->(x) { x * 2 }
+puts "Double 5: #{double.call(5)}"
+
+# Proc (flexible about arguments)
+triple = Proc.new { |x| x * 3 }
+puts "Triple 5: #{triple.call(5)}"
+
+# Passing lambda to method
+def apply_operation(number, operation)
+  operation.call(number)
+end
+
+square = ->(x) { x * x }
+puts "Square of 4: #{apply_operation(4, square)}"</textarea>
+                        <button class="run-btn" onclick="runCode('editor-4', 'output-4')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Output
+                        </div>
+                        <div class="preview-container" id="output-4"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>Define methods with <code>def method_name(parameters)</code></li>
+                                <li>Ruby returns the last expression automatically (implicit return)</li>
+                                <li>Use <code>return</code> for early exit or explicit returns</li>
+                                <li>Default parameters: <code>def method(param = default)</code></li>
+                                <li>Splat arguments (<code>*args</code>) accept variable number of arguments</li>
+                                <li>Keyword arguments (<code>key: value</code>) provide named parameters</li>
+                                <li>Use <code>yield</code> to execute a block passed to method</li>
+                                <li>Check <code>block_given?</code> to see if block was provided</li>
+                                <li><code>private</code> makes methods accessible only within class</li>
+                                <li>Lambdas and Procs are anonymous functions (closures)</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-cube"></i> Code Organization & Reusability</h3>
+                            <p>Methods in Ruby represent the fundamental unit of code organization and reuse. Beyond simple function definitions, Ruby's method system includes sophisticated features like method missing for dynamic dispatch, singleton methods for object-specific behavior, and method objects that can be stored and passed like any other value. This flexibility enables patterns like decorators, strategy patterns, and command objects that would require more verbose constructs in other languages.</p>
+                            
+                            <p>Ruby's block syntax revolutionizes method design by enabling callers to inject behavior. Methods like <code>each</code>, <code>map</code>, and <code>select</code> accept blocks that transform their operation. This design pattern appears throughout Ruby's standard library, creating a consistent, composable API. The <code>yield</code> keyword and block parameter (<code>&block</code>) syntax provide multiple ways to work with blocks, from simple iteration to complex DSL construction.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-magic"></i> Metaprogramming</h4>
+                                    <p>Ruby's method system supports metaprogramming through <code>define_method</code>, <code>method_missing</code>, and reflection APIs. This enables dynamic method creation, DSLs, and frameworks like Rails that generate methods based on database schemas or configuration.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-puzzle-piece"></i> Functional Programming</h4>
+                                    <p>Ruby supports functional patterns through lambdas, procs, and method objects. These can be stored in variables, passed as arguments, and composed to create complex behavior from simple functions, enabling elegant solutions to data transformation problems.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-shield-alt"></i> Encapsulation & API Design</h4>
+                                    <p>Method visibility (<code>public</code>, <code>protected</code>, <code>private</code>) controls encapsulation while keyword arguments and default parameters create self-documenting APIs. Well-designed methods form the contract between different parts of a system, enabling clean separation of concerns.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-cogs"></i> Framework Design & DSLs</h4>
+                                <p>Ruby on Rails demonstrates sophisticated method usage throughout its design. ActiveRecord uses dynamic method generation to create finder methods based on database columns. RSpec's testing DSL uses method chaining and blocks to create readable specifications. Sinatra's route definitions use blocks to associate HTTP verbs with handler code. These frameworks leverage Ruby's method system to create expressive, domain-specific languages that dramatically reduce boilerplate while maintaining the full power of Ruby for complex logic. The result is frameworks that feel intuitive while enabling enterprise-scale applications.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Create a Math Utility Library:</strong> Build a collection of methods that:</p>
+                            <ul>
+                                <li>Includes basic arithmetic operations as methods</li>
+                                <li>Uses default parameters and keyword arguments</li>
+                                <li>Implements a method that accepts a block for custom operations</li>
+                                <li>Creates methods with variable-length arguments</li>
+                                <li>Organizes methods with proper encapsulation (public/private)</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 5: Arrays & Hashes -->
+            <div class="course-module" id="module5" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>ARRAYS & HASHES</h1>
+                    <h3>Learn to work with collections and key-value pairs</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ruby/ruby-original.svg" class="module-icon" alt="Ruby Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 5: <span>Arrays and Hashes</span></h1>
+                    <p>Arrays and hashes are Ruby's primary collection types. Arrays are ordered collections of objects, while hashes are collections of key-value pairs (like dictionaries in other languages). Both are essential for storing and manipulating groups of data.</p>
+                    
+                    <p>Ruby provides rich APIs for working with collections. Arrays support indexing, slicing, and powerful enumeration methods. Hashes provide fast lookup by key and support complex nested structures. Understanding these collection types is crucial for Ruby programming.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Ruby</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+<textarea class="code-editor" id="editor-5" spellcheck="false"># Arrays and Hashes in Ruby
+
+puts "=== ARRAYS ==="
+
+# Creating arrays
+empty_array = []
+numbers = [1, 2, 3, 4, 5]
+mixed = [1, "hello", 3.14, true]
+words = %w[apple banana cherry]  # Word array syntax
+
+puts "Numbers array: #{numbers}"
+puts "Mixed array: #{mixed}"
+puts "Words array: #{words}"
+
+# Array access
+puts "\n=== ARRAY ACCESS ==="
+puts "First element: #{numbers[0]}"          # Index 0
+puts "Last element: #{numbers[-1]}"          # Negative index
+puts "Elements 1-3: #{numbers[1..3]}"        # Range
+puts "First 3: #{numbers.first(3)}"          # First n
+puts "Last 2: #{numbers.last(2)}"            # Last n
+
+# Array modification
+puts "\n=== ARRAY MODIFICATION ==="
+fruits = ["apple", "banana"]
+fruits << "cherry"            # Append
+fruits.push("date")           # Append
+fruits.unshift("apricot")     # Prepend
+fruits.insert(2, "blueberry") # Insert at position
+
+puts "Fruits: #{fruits}"
+puts "Removed: #{fruits.pop}"      # Remove last
+puts "Removed: #{fruits.shift}"    # Remove first
+puts "Fruits now: #{fruits}"
+
+fruits[1] = "blackberry"      # Replace element
+puts "After replacement: #{fruits}"
+
+# Array methods
+puts "\n=== ARRAY METHODS ==="
+nums = [3, 1, 4, 1, 5, 9]
+puts "Original: #{nums}"
+puts "Sorted: #{nums.sort}"
+puts "Reversed: #{nums.reverse}"
+puts "Unique: #{nums.uniq}"
+puts "Joined: #{nums.join(', ')}"
+puts "Includes 4? #{nums.include?(4)}"
+puts "Length: #{nums.length}"
+puts "Empty? #{nums.empty?}"
+
+# Array iteration
+puts "\n=== ARRAY ITERATION ==="
+puts "Each iteration:"
+[10, 20, 30].each do |num|
+  puts "Number: #{num}"
+end
+
+puts "\nMap (transform):"
+squares = [1, 2, 3].map { |n| n * n }
+puts "Squares: #{squares}"
+
+puts "\nSelect (filter):"
+evens = [1, 2, 3, 4, 5].select { |n| n.even? }
+puts "Even numbers: #{evens}"
+
+puts "\nReduce (accumulate):"
+sum = [1, 2, 3, 4].reduce(0) { |total, n| total + n }
+puts "Sum: #{sum}"
+
+puts "\n=== HASHES ==="
+
+# Creating hashes
+empty_hash = {}
+user = { name: "Alice", age: 30, active: true }  # Symbol keys (Ruby 1.9+)
+old_syntax = { "name" => "Bob", "age" => 25 }    # String keys
+
+puts "User hash: #{user}"
+puts "Old syntax: #{old_syntax}"
+
+# Hash access
+puts "\n=== HASH ACCESS ==="
+puts "Name: #{user[:name]}"
+puts "Age: #{user[:age]}"
+puts "All keys: #{user.keys}"
+puts "All values: #{user.values}"
+puts "Has key :age? #{user.key?(:age)}"
+puts "Has value 30? #{user.value?(30)}"
+
+# Hash modification
+puts "\n=== HASH MODIFICATION ==="
+user[:email] = "alice@example.com"      # Add/update
+user[:age] = 31                         # Update
+user.delete(:active)                    # Remove key
+
+puts "Updated user: #{user}"
+
+# Hash iteration
+puts "\n=== HASH ITERATION ==="
+puts "Each pair:"
+user.each do |key, value|
+  puts "  #{key}: #{value}"
+end
+
+puts "\nEach key:"
+user.each_key { |key| puts "  Key: #{key}" }
+
+puts "\nEach value:"
+user.each_value { |value| puts "  Value: #{value}" }
+
+# Hash methods
+puts "\n=== HASH METHODS ==="
+scores = { math: 90, science: 85, history: 88 }
+puts "Original: #{scores}"
+puts "Inverted: #{scores.invert}"
+puts "Merged: #{scores.merge({english: 92})}"
+puts "Length: #{scores.length}"
+puts "Empty? #{scores.empty?}"
+
+# Default values
+puts "\n=== HASH DEFAULTS ==="
+counter = Hash.new(0)  # Default value is 0
+words = ["apple", "banana", "apple", "cherry", "banana", "apple"]
+words.each { |word| counter[word] += 1 }
+puts "Word counts: #{counter}"
+
+# Nested structures
+puts "\n=== NESTED STRUCTURES ==="
+company = {
+  name: "TechCorp",
+  employees: [
+    { name: "Alice", role: "Developer" },
+    { name: "Bob", role: "Designer" }
+  ],
+  departments: {
+    engineering: { head: "Charlie", size: 50 },
+    sales: { head: "Diana", size: 20 }
+  }
+}
+
+puts "Company name: #{company[:name]}"
+puts "First employee: #{company[:employees][0][:name]}"
+puts "Engineering head: #{company[:departments][:engineering][:head]}"
+
+# Symbol keys vs String keys
+puts "\n=== SYMBOLS VS STRINGS ==="
+symbol_hash = { ruby: "awesome" }
+string_hash = { "ruby" => "awesome" }
+
+puts "Symbol hash: #{symbol_hash[:ruby]}"
+puts "String hash: #{string_hash['ruby']}"
+# puts symbol_hash['ruby']  # This would be nil (different key type)</textarea>
+                        <button class="run-btn" onclick="runCode('editor-5', 'output-5')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Output
+                        </div>
+                        <div class="preview-container" id="output-5"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>Arrays: ordered collections, zero-indexed, <code>[ ]</code> syntax</li>
+                                <li>Hashes: key-value pairs, <code>{ }</code> syntax, keys can be any object</li>
+                                <li>Symbol keys: <code>{ key: value }</code> (Ruby 1.9+ style)</li>
+                                <li>String keys: <code>{ "key" => value }</code> (older style)</li>
+                                <li>Array methods: <code>push</code>, <code>pop</code>, <code>shift</code>, <code>unshift</code></li>
+                                <li>Hash methods: <code>keys</code>, <code>values</code>, <code>has_key?</code>, <code>has_value?</code></li>
+                                <li>Iteration: <code>each</code>, <code>map</code>, <code>select</code>, <code>reduce</code></li>
+                                <li><code>%w[]</code> creates array of strings from whitespace-separated words</li>
+                                <li>Negative indices count from end (<code>-1</code> is last element)</li>
+                                <li>Ranges: <code>[1..3]</code> gets elements 1 through 3</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-layer-group"></i> Data Structures & Collection Processing</h3>
+                            <p>Ruby's collection types form the foundation of data manipulation in the language. Arrays provide ordered, indexed storage optimized for sequential access and positional operations. Hashes offer associative storage with near-constant-time lookup, ideal for dictionaries, caches, and configuration. Beyond these basics, Ruby's Enumerable module unifies collection processing with a rich set of methods that work across both types, enabling expressive data transformation pipelines.</p>
+                            
+                            <p>The distinction between symbol and string keys in hashes reflects Ruby's evolution. Symbols are immutable, interned strings that provide memory efficiency and faster comparison. Modern Ruby favors symbol keys (<code>{ key: value }</code>) for static keys known at coding time, while string keys remain useful for dynamic keys from external sources. Ruby 3.0 introduces pattern matching that works seamlessly with both hash styles, further unifying collection processing.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-stream"></i> Enumerable Protocol</h4>
+                                    <p>The Enumerable module provides powerful collection operations like <code>map</code>, <code>select</code>, <code>reduce</code>, and <code>group_by</code>. Any class implementing <code>each</code> gains these methods for free, creating consistent APIs across diverse data structures.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-project-diagram"></i> Nested Structures</h4>
+                                    <p>Ruby's flexible typing allows deeply nested structures combining arrays, hashes, and objects. The <code>dig</code> method provides safe navigation through nested structures, while pattern matching (Ruby 2.7+) enables elegant destructuring of complex data.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-bolt"></i> Performance Characteristics</h4>
+                                    <p>Arrays provide O(1) access by index but O(n) search. Hashes provide amortized O(1) lookup but maintain insertion order (since Ruby 1.9). Understanding these characteristics guides appropriate collection choice for different use cases.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-chart-line"></i> Data Processing & Analytics</h4>
+                                <p>GitHub's data processing systems extensively use Ruby collections. User activity streams are processed with arrays of events, filtered by type using <code>select</code>, and aggregated with <code>reduce</code>. Repository metadata is stored in nested hashes with symbol keys for efficient access. GraphQL responses are built from deeply nested hash structures. Background job processors use arrays as queues and hashes as job arguments. These systems demonstrate how Ruby's collection APIs enable clear, maintainable code for complex data processing tasks at massive scale, processing petabytes of data across millions of repositories.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Create a Student Management System:</strong> Build a program that:</p>
+                            <ul>
+                                <li>Uses arrays to store lists of students and courses</li>
+                                <li>Uses hashes to store student information (name, ID, grades)</li>
+                                <li>Implements methods to add/remove students and courses</li>
+                                <li>Calculates statistics (averages, highest/lowest grades)</li>
+                                <li>Searches and filters students based on criteria</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 6: Object-Oriented Programming -->
+            <div class="course-module" id="module6" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>OBJECT-ORIENTED PROGRAMMING</h1>
+                    <h3>Learn Ruby's object-oriented programming features</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ruby/ruby-original.svg" class="module-icon" alt="Ruby Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 6: <span>Object-Oriented Programming in Ruby</span></h1>
+                    <p>Ruby is a pure object-oriented language - everything is an object, and all operations are method calls on objects. Classes are blueprints for creating objects, defining their attributes (instance variables) and behaviors (methods). Objects are instances of classes.</p>
+                    
+                    <p>Ruby supports inheritance for code reuse, modules for mixins and namespaces, and encapsulation through access controls. Understanding OOP in Ruby means understanding how to create flexible, maintainable systems using classes, inheritance, polymorphism, and composition.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Ruby</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-6" spellcheck="false"># Object-Oriented Programming in Ruby
+
+puts "=== CLASSES AND OBJECTS ==="
+
+# Defining a class
+class Person
+  # Constructor (called when creating new object)
+  def initialize(name, age)
+    @name = name  # Instance variable
+    @age = age
+  end
+  
+  # Instance methods
+  def introduce
+    puts "Hello, I'm #{@name} and I'm #{@age} years old."
+  end
+  
+  def celebrate_birthday
+    @age += 1
+    puts "Happy birthday #{@name}! You're now #{@age}."
+  end
+  
+  # Getter methods (access instance variables)
+  def name
+    @name
+  end
+  
+  def age
+    @age
+  end
+  
+  # Setter methods (modify instance variables)
+  def name=(new_name)
+    @name = new_name
+  end
+  
+  def age=(new_age)
+    @age = new_age
+  end
+end
+
+# Creating objects
+alice = Person.new("Alice", 30)
+bob = Person.new("Bob", 25)
+
+alice.introduce
+bob.introduce
+
+alice.celebrate_birthday
+puts "Alice's new age: #{alice.age}"
+
+# Using setter methods
+alice.name = "Alicia"
+puts "Alice is now called: #{alice.name}"
+
+puts "\n=== ATTRIBUTE ACCESSORS ==="
+
+# Ruby provides shortcuts for getters/setters
+class Student
+  # attr_reader creates getter methods
+  # attr_writer creates setter methods  
+  # attr_accessor creates both
+  attr_accessor :name, :grade
+  attr_reader :id
+  attr_writer :password
+  
+  def initialize(name, grade)
+    @name = name
+    @grade = grade
+    @id = generate_id
+    @password = nil
+  end
+  
+  def display_info
+    puts "Student: #{@name}, Grade: #{@grade}, ID: #{@id}"
+  end
+  
+  private
+  
+  def generate_id
+    rand(1000..9999)
+  end
+end
+
+student = Student.new("Charlie", "A")
+student.display_info
+student.grade = "A+"
+puts "Updated grade: #{student.grade}"
+
+puts "\n=== INHERITANCE ==="
+
+class Animal
+  attr_accessor :name, :age
+  
+  def initialize(name, age)
+    @name = name
+    @age = age
+  end
+  
+  def speak
+    puts "Some generic animal sound"
+  end
+  
+  def info
+    puts "#{@name} is #{@age} years old"
+  end
+end
+
+class Dog < Animal  # Dog inherits from Animal
+  def speak  # Override parent method
+    puts "Woof! Woof!"
+  end
+  
+  def fetch(item)
+    puts "#{@name} fetches the #{item}"
+  end
+end
+
+class Cat < Animal
+  def speak
+    puts "Meow!"
+  end
+  
+  def climb(tree)
+    puts "#{@name} climbs the #{tree}"
+  end
+end
+
+dog = Dog.new("Buddy", 3)
+cat = Cat.new("Whiskers", 2)
+
+dog.info
+dog.speak
+dog.fetch("ball")
+
+cat.info
+cat.speak
+cat.climb("oak tree")
+
+puts "\n=== MODULES AS MIXINS ==="
+
+module Swimmable
+  def swim
+    puts "#{@name} is swimming!"
+  end
+end
+
+module Flyable
+  def fly
+    puts "#{@name} is flying!"
+  end
+end
+
+class Duck < Animal
+  include Swimmable
+  include Flyable
+  
+  def speak
+    puts "Quack!"
+  end
+end
+
+duck = Duck.new("Donald", 1)
+duck.speak
+duck.swim
+duck.fly
+
+puts "\n=== CLASS METHODS AND VARIABLES ==="
+
+class Counter
+  @@count = 0  # Class variable (shared across all instances)
+  
+  def initialize
+    @@count += 1
+    @id = @@count
+  end
+  
+  def id
+    @id
+  end
+  
+  # Class method (call on class itself, not instances)
+  def self.total_count
+    @@count
+  end
+  
+  def self.reset_count
+    @@count = 0
+  end
+end
+
+counter1 = Counter.new
+counter2 = Counter.new
+counter3 = Counter.new
+
+puts "Counter 1 ID: #{counter1.id}"
+puts "Counter 2 ID: #{counter2.id}"
+puts "Total counters: #{Counter.total_count}"
+
+Counter.reset_count
+puts "After reset: #{Counter.total_count}"
+
+puts "\n=== POLYMORPHISM ==="
+
+class Shape
+  def area
+    raise "Subclass must implement area method"
+  end
+end
+
+class Circle < Shape
+  def initialize(radius)
+    @radius = radius
+  end
+  
+  def area
+    Math::PI * @radius ** 2
+  end
+end
+
+class Rectangle < Shape
+  def initialize(width, height)
+    @width = width
+    @height = height
+  end
+  
+  def area
+    @width * @height
+  end
+end
+
+shapes = [Circle.new(5), Rectangle.new(4, 6)]
+shapes.each do |shape|
+  puts "Area: #{shape.area.round(2)}"
+end
+
+puts "\n=== SINGLETON METHODS ==="
+
+unique_object = Object.new
+def unique_object.special_method
+  puts "I'm a special method for this one object!"
+end
+
+unique_object.special_method
+
+puts "\n=== METHOD VISIBILITY ==="
+
+class BankAccount
+  def initialize(balance)
+    @balance = balance
+  end
+  
+  # Public methods (default)
+  def deposit(amount)
+    @balance += amount
+    log_transaction("Deposit", amount)
+  end
+  
+  def withdraw(amount)
+    if amount <= @balance
+      @balance -= amount
+      log_transaction("Withdrawal", amount)
+    else
+      puts "Insufficient funds!"
+    end
+  end
+  
+  def balance
+    @balance
+  end
+  
+  private  # Methods below are private
+  
+  def log_transaction(type, amount)
+    puts "#{type}: $#{amount} (New balance: $#{@balance})"
+    # In real app, would write to database or log file
+  end
+  
+  protected  # Methods below are protected
+  
+  def internal_transfer(other_account, amount)
+    # Can be called by other BankAccount objects
+  end
+end
+
+account = BankAccount.new(1000)
+account.deposit(500)
+account.withdraw(200)
+puts "Current balance: $#{account.balance}"
+# account.log_transaction("Test", 100)  # Would raise error (private method)</textarea>
+                        <button class="run-btn" onclick="runCode('editor-6', 'output-6')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Output
+                        </div>
+                        <div class="preview-container" id="output-6"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>Define classes with <code>class ClassName</code></li>
+                                <li><code>initialize</code> method is the constructor</li>
+                                <li>Instance variables start with <code>@</code> (<code>@name</code>)</li>
+                                <li>Class variables start with <code>@@</code> (<code>@@count</code>)</li>
+                                <li><code>attr_accessor</code>, <code>attr_reader</code>, <code>attr_writer</code> create getters/setters</li>
+                                <li>Inheritance: <code>class Child < Parent</code></li>
+                                <li><code>super</code> calls parent class's method</li>
+                                <li>Modules: <code>module ModuleName</code>, include with <code>include</code></li>
+                                <li>Method visibility: <code>public</code>, <code>protected</code>, <code>private</code></li>
+                                <li>Class methods: <code>def self.method_name</code> or <code>class << self</code></li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-sitemap"></i> Object Model & System Design</h3>
+                            <p>Ruby's object model is both elegantly simple and powerfully expressive. Unlike languages with primitive types, everything in Ruby is an object with a consistent interface. This purity enables metaprogramming techniques that would be impossible in hybrid object systems. The object model includes sophisticated features like eigenclasses (singleton classes) that allow per-object method definitions, providing the foundation for Ruby's flexible class system.</p>
+                            
+                            <p>Ruby's approach to inheritance and composition reflects modern software design principles. Single inheritance provides clear hierarchical relationships, while modules enable multiple inheritance of behavior through mixins. This combination avoids the diamond problem of multiple inheritance while providing code reuse flexibility. The <code>super</code> keyword allows controlled method overriding, and Ruby 2.0's <code>prepend</code> feature enables module method injection before the class's own methods, supporting advanced decoration patterns.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-cogs"></i> Metaclasses & Eigenclasses</h4>
+                                    <p>Every Ruby object has a hidden eigenclass that stores singleton methods. Class objects themselves are instances of Class, creating a consistent metaclass hierarchy. This uniform object model enables sophisticated metaprogramming patterns used extensively in Rails and other frameworks.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-puzzle-piece"></i> Composition Over Inheritance</h4>
+                                    <p>Modern Ruby design favors module composition through mixins over deep inheritance hierarchies. Modules provide namespacing, method sharing, and can be included or prepended to modify class behavior dynamically, enabling flexible system architecture.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-shield-alt"></i> Encapsulation & DSL Design</h4>
+                                    <p>Ruby's method visibility controls (<code>public</code>, <code>protected</code>, <code>private</code>) work with modules to create clean APIs. Combined with block syntax and instance evaluation, these features enable internal domain-specific languages (DSLs) that feel like natural extensions to Ruby.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-industry"></i> Enterprise Framework Architecture</h4>
+                                <p>Ruby on Rails exemplifies sophisticated OOP design. ActiveRecord uses inheritance for model classes while mixing in concerns via modules. ActionController employs inheritance hierarchies for controller organization with module-based concerns for cross-cutting functionality. The entire framework uses Ruby's object model to create expressive DSLs for routes (<code>resources :users</code>), validations (<code>validates :email, presence: true</code>), and associations (<code>has_many :posts</code>). This OOP foundation enables Rails to provide convention-over-configuration magic while remaining extensible through standard Ruby inheritance and composition patterns, supporting applications from small prototypes to billion-dollar platforms like Shopify and GitHub.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Design a Library Management System:</strong> Create an OOP system that:</p>
+                            <ul>
+                                <li>Defines classes for Book, Author, Member, and Library</li>
+                                <li>Uses inheritance for different types of members (Student, Faculty)</li>
+                                <li>Implements modules for shared behaviors</li>
+                                <li>Uses proper encapsulation with accessor methods</li>
+                                <li>Demonstrates polymorphism through shared interfaces</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 7: Ruby on Rails Basics -->
+            <div class="course-module" id="module7" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>RUBY ON RAILS BASICS</h1>
+                    <h3>Learn web development with Ruby on Rails framework</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rails/rails-original-wordmark.svg" class="module-icon" alt="Rails Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 7: <span>Ruby on Rails Fundamentals</span></h1>
+                    <p>Ruby on Rails is a full-stack web framework that emphasizes convention over configuration and the DRY (Don't Repeat Yourself) principle. Rails provides everything needed to build database-backed web applications according to the MVC (Model-View-Controller) pattern.</p>
+                    
+                    <p>Rails includes built-in solutions for common web development tasks: ActiveRecord for database interactions, ActionController for handling requests, ActionView for templates, and ActiveJob for background processing. Understanding Rails means understanding how these components work together.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Ruby</div>
+                                <div class="editor-tab">ERB</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-7" spellcheck="false"># Ruby on Rails Basics
+
+puts "=== RAILS MVC ARCHITECTURE ==="
+
+# MODEL (app/models/user.rb)
+class User < ApplicationRecord
+  # ActiveRecord provides database interactions
+  has_many :posts
+  has_many :comments
+  
+  validates :email, presence: true, uniqueness: true
+  validates :name, presence: true
+  
+  before_create :generate_confirmation_token
+  
+  def full_name
+    "#{first_name} #{last_name}".strip
+  end
+  
+  def admin?
+    role == 'admin'
+  end
+  
+  private
+  
+  def generate_confirmation_token
+    self.confirmation_token = SecureRandom.hex(10)
+  end
+end
+
+# CONTROLLER (app/controllers/users_controller.rb)
+class UsersController < ApplicationController
+  before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :require_admin, only: [:destroy]
+  
+  # GET /users
+  def index
+    @users = User.all.order(created_at: :desc)
+  end
+  
+  # GET /users/1
+  def show
+    # @user is set by before_action
+  end
+  
+  # GET /users/new
+  def new
+    @user = User.new
+  end
+  
+  # GET /users/1/edit
+  def edit
+  end
+  
+  # POST /users
+  def create
+    @user = User.new(user_params)
+    
+    if @user.save
+      redirect_to @user, notice: 'User was successfully created.'
+    else
+      render :new, status: :unprocessable_entity
+    end
+  end
+  
+  # PATCH/PUT /users/1
+  def update
+    if @user.update(user_params)
+      redirect_to @user, notice: 'User was successfully updated.'
+    else
+      render :edit, status: :unprocessable_entity
+    end
+  end
+  
+  # DELETE /users/1
+  def destroy
+    @user.destroy
+    redirect_to users_url, notice: 'User was successfully destroyed.'
+  end
+  
+  private
+  
+  def set_user
+    @user = User.find(params[:id])
+  end
+  
+  def user_params
+    params.require(:user).permit(:name, :email, :password, :role)
+  end
+  
+  def require_admin
+    unless current_user.admin?
+      redirect_to root_path, alert: 'You must be an admin to perform this action.'
+    end
+  end
+end
+
+# VIEW TEMPLATE (app/views/users/index.html.erb)
+=begin
+<!-- ERB (Embedded Ruby) template -->
+<h1>Users</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Role</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.full_name %></td>
+        <td><%= user.email %></td>
+        <td><%= user.role %></td>
+        <td><%= link_to 'Show', user %></td>
+        <td><%= link_to 'Edit', edit_user_path(user) %></td>
+        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User', new_user_path %>
+=end
+
+puts "\n=== ACTIVE RECORD BASICS ==="
+
+# ActiveRecord provides ORM (Object-Relational Mapping)
+class Post < ApplicationRecord
+  belongs_to :user
+  has_many :comments, dependent: :destroy
+  has_many :tags, through: :post_tags
+  
+  scope :published, -> { where(published: true) }
+  scope :recent, -> { where('created_at > ?', 1.week.ago) }
+  
+  validates :title, presence: true, length: { minimum: 5 }
+  validates :content, presence: true
+  
+  before_save :generate_slug
+  after_create :notify_subscribers
+  
+  def self.search(query)
+    where("title LIKE ? OR content LIKE ?", "%#{query}%", "%#{query}%")
+  end
+  
+  def publish!
+    update(published: true, published_at: Time.current)
+  end
+  
+  private
+  
+  def generate_slug
+    self.slug = title.parameterize
+  end
+  
+  def notify_subscribers
+    # Background job example
+    NotifySubscribersJob.perform_later(self)
+  end
+end
+
+# Database queries with ActiveRecord
+puts "ActiveRecord Query Examples:"
+=begin
+# Find by ID
+user = User.find(1)
+
+# Find by attributes
+admin = User.find_by(role: 'admin')
+
+# Where clauses
+active_users = User.where(active: true)
+recent_users = User.where('created_at > ?', 1.month.ago)
+
+# Chaining queries
+recent_admins = User.where(role: 'admin').where('created_at > ?', 1.week.ago)
+
+# Ordering and limiting
+latest_users = User.order(created_at: :desc).limit(10)
+
+# Aggregations
+user_count = User.count
+avg_age = User.average(:age)
+total_posts = Post.sum(:view_count)
+
+# Associations
+user_posts = user.posts
+post_comments = post.comments.includes(:user)
+
+# Eager loading (N+1 solution)
+users_with_posts = User.includes(:posts).all
+=end
+
+puts "\n=== RAILS ROUTES ==="
+
+# config/routes.rb
+=begin
+Rails.application.routes.draw do
+  # RESTful resources
+  resources :users do
+    member do
+      get 'profile'
+      post 'follow'
+    end
+    
+    collection do
+      get 'search'
+      get 'admins'
+    end
+  end
+  
+  resources :posts do
+    resources :comments, only: [:create, :destroy]
+    resources :likes, only: [:create, :destroy]
+  end
+  
+  # Custom routes
+  get 'about', to: 'pages#about'
+  get 'contact', to: 'pages#contact'
+  post 'contact', to: 'pages#send_message'
+  
+  # Authentication routes
+  get 'login', to: 'sessions#new'
+  post 'login', to: 'sessions#create'
+  delete 'logout', to: 'sessions#destroy'
+  
+  # API namespace
+  namespace :api do
+    namespace :v1 do
+      resources :users, only: [:index, :show]
+      resources :posts, only: [:index, :show, :create]
+    end
+  end
+  
+  # Root route
+  root 'pages#home'
+end
+=end
+
+puts "\n=== RAILS HELPERS ==="
+
+# View helpers examples
+=begin
+<!-- Link helpers -->
+<%= link_to 'Home', root_path %>
+<%= link_to 'Edit Profile', edit_user_path(current_user) %>
+<%= link_to 'Delete', @post, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+<!-- Form helpers -->
+<%= form_with model: @user do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+  
+  <%= form.label :email %>
+  <%= form.email_field :email %>
+  
+  <%= form.submit 'Save' %>
+<% end %>
+
+<!-- Asset helpers -->
+<%= image_tag 'logo.png', alt: 'Logo' %>
+<%= stylesheet_link_tag 'application' %>
+<%= javascript_include_tag 'application' %>
+
+<!-- Content helpers -->
+<%= content_tag :div, class: 'alert' do %>
+  <%= notice %>
+<% end %>
+
+<!-- Time helpers -->
+<%= time_ago_in_words(@post.created_at) %> ago
+<%= l(@event.date, format: :long) %>
+=end
+
+puts "\n=== RAILS CONSOLE EXAMPLES ==="
+
+# Rails console is a powerful tool for development
+=begin
+# Start Rails console: rails console or rails c
+
+# Create records
+user = User.create(name: "Alice", email: "alice@example.com")
+post = user.posts.create(title: "Hello Rails", content: "My first post!")
+
+# Update records
+user.update(name: "Alicia")
+post.update_columns(published: true)
+
+# Find records
+User.find_by(email: "alice@example.com")
+Post.where("title LIKE ?", "%Rails%")
+
+# Associations
+user.posts.count
+post.user.name
+
+# Destroy records
+post.destroy
+user.destroy
+
+# Batch operations
+User.where(active: false).destroy_all
+Post.update_all(view_count: 0)
+
+# Transactions
+User.transaction do
+  user1 = User.create!(name: "Bob")
+  user2 = User.create!(name: "Charlie")
+  # Both create or neither
+end
+=end
+
+puts "\n=== RAILS GENERATORS ==="
+
+# Rails generators automate common tasks
+=begin
+# Generate a model with attributes
+rails generate model Product name:string price:decimal description:text
+
+# Generate a controller with actions
+rails generate controller Products index show new create edit update destroy
+
+# Generate a migration
+rails generate migration AddCategoryToProducts category:string
+
+# Generate a scaffold (model + controller + views + migration)
+rails generate scaffold Article title:string content:text published:boolean
+
+# Run migrations
+rails db:migrate
+
+# Rollback migrations
+rails db:rollback
+=end</textarea>
+                        <button class="run-btn" onclick="runCode('editor-7', 'output-7')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Output
+                        </div>
+                        <div class="preview-container" id="output-7"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>MVC pattern: Models (data), Views (UI), Controllers (logic)</li>
+                                <li>ActiveRecord: ORM for database interactions</li>
+                                <li>Convention over Configuration: Standard locations for everything</li>
+                                <li>DRY Principle: Don't Repeat Yourself</li>
+                                <li>RESTful design: Resources with standard CRUD actions</li>
+                                <li>Migrations: Version-controlled database schema changes</li>
+                                <li>ERB templates: Embedded Ruby in HTML</li>
+                                <li>Helpers: Reusable view components</li>
+                                <li>Generators: Code generation for common patterns</li>
+                                <li>Rails Console: Interactive development environment</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-rocket"></i> Web Framework Architecture</h3>
+                            <p>Ruby on Rails represents a paradigm shift in web development through its opinionated, convention-driven approach. By establishing sensible defaults for project structure, database design, and code organization, Rails eliminates decision fatigue and enables developers to focus on application logic rather than configuration. The framework's "magic" comes from consistent naming conventions that allow Rails to infer relationships between models, views, and controllers without explicit configuration.</p>
+                            
+                            <p>Rails follows the principle of "convention over configuration" to remarkable extremes. Database table names are pluralized versions of model class names (<code>User</code> model → <code>users</code> table). Controller actions map to view templates by name (<code>UsersController#index</code> → <code>app/views/users/index.html.erb</code>). Route helpers are generated from resource declarations (<code>resources :users</code> → <code>users_path</code>, <code>new_user_path</code>). This consistency reduces cognitive load and enables powerful metaprogramming features throughout the framework.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-database"></i> ActiveRecord Pattern</h4>
+                                    <p>ActiveRecord implements the Active Record design pattern, where objects carry both persistent data and behavior for manipulating that data. This includes associations, validations, callbacks, and query interfaces that abstract SQL into Ruby method chains, making database interactions intuitive while maintaining performance.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-sync-alt"></i> Asset Pipeline & Webpack</h4>
+                                    <p>Rails manages frontend assets through integrated tooling. The asset pipeline (Sprockets) concatenates and minifies CSS/JS, while modern Rails includes Webpack for JavaScript module bundling. This integrated approach simplifies frontend build processes within Ruby projects.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-tasks"></i> Convention Over Configuration</h4>
+                                    <p>Rails' conventions eliminate boilerplate configuration through naming patterns and directory structure. Controllers in <code>app/controllers</code>, models in <code>app/models</code>, and views in <code>app/views</code> follow predictable patterns that the framework can automatically wire together without explicit configuration files.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-store"></i> Enterprise E-Commerce Platforms</h4>
+                                <p>Shopify, processing over $200 billion in merchandise, demonstrates Rails' scalability. The platform uses Rails' modular architecture with engines for different features (checkout, inventory, analytics). ActiveRecord handles complex product variants and inventory tracking. ActionCable (WebSockets) powers real-time admin dashboards. Background jobs process millions of daily orders. The monorail architecture allows shared code across Shopify's entire ecosystem while maintaining performance through database sharding, caching layers, and CDN integration. This shows how Rails' conventions enable both rapid iteration for new features and the architectural patterns needed for global scale.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Design a Blog Application:</strong> Plan a Rails application that includes:</p>
+                            <ul>
+                                <li>Models for User, Post, Comment, and Tag with appropriate associations</li>
+                                <li>RESTful controllers for all resources</li>
+                                <li>View templates using ERB and Rails helpers</li>
+                                <li>Database migrations for all tables</li>
+                                <li>Routes following RESTful conventions</li>
+                                <li>Basic authentication and authorization</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 8: Database Integration -->
+            <div class="course-module" id="module8" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>DATABASE INTEGRATION</h1>
+                    <h3>Learn to work with databases in Ruby applications</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" class="module-icon" alt="Database Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 8: <span>Database Integration with ActiveRecord</span></h1>
+                    <p>Database integration is crucial for most Ruby applications. ActiveRecord, Rails' Object-Relational Mapping (ORM) layer, provides an elegant interface for working with databases. It maps database tables to Ruby classes, rows to objects, and columns to object attributes.</p>
+                    
+                    <p>ActiveRecord handles SQL generation, connection management, transactions, and database-agnostic querying. It supports associations (relationships between models), validations, callbacks, and migrations. Understanding ActiveRecord is essential for building data-driven Ruby applications.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Ruby</div>
+                                <div class="editor-tab">SQL</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-8" spellcheck="false"># Database Integration with ActiveRecord
+
+puts "=== DATABASE MIGRATIONS ==="
+
+# Database migrations (db/migrate/20230101000000_create_users.rb)
+=begin
+class CreateUsers < ActiveRecord::Migration[7.0]
+  def change
+    create_table :users do |t|
+      t.string :first_name, null: false
+      t.string :last_name, null: false
+      t.string :email, null: false, index: { unique: true }
+      t.string :password_digest
+      t.string :role, default: 'user'
+      t.boolean :active, default: true
+      t.datetime :confirmed_at
+      t.timestamps  # Creates created_at and updated_at columns
+    end
+    
+    # Add index for performance
+    add_index :users, [:last_name, :first_name]
+    add_index :users, :role
+  end
+end
+
+# Add columns to existing table
+class AddBioToUsers < ActiveRecord::Migration[7.0]
+  def change
+    add_column :users, :bio, :text
+    add_column :users, :website, :string
+    add_column :users, :social_links, :jsonb, default: {}
+  end
+end
+
+# Create join table for many-to-many relationship
+class CreatePostTags < ActiveRecord::Migration[7.0]
+  def change
+    create_table :post_tags do |t|
+      t.references :post, null: false, foreign_key: true
+      t.references :tag, null: false, foreign_key: true
+      t.timestamps
+    end
+    
+    # Composite unique index to prevent duplicates
+    add_index :post_tags, [:post_id, :tag_id], unique: true
+  end
+end
+=end
+
+puts "\n=== ACTIVE RECORD MODELS ==="
+
+# Complete model with associations, validations, and callbacks
+class Product < ApplicationRecord
+  # Associations
+  belongs_to :category
+  belongs_to :user
+  has_many :reviews, dependent: :destroy
+  has_many :order_items, dependent: :restrict_with_error
+  has_many :orders, through: :order_items
+  has_many_attached :images  # Active Storage for file uploads
+  
+  # Validations
+  validates :name, presence: true, length: { maximum: 100 }
+  validates :description, presence: true, length: { minimum: 10 }
+  validates :price, presence: true, numericality: { greater_than: 0 }
+  validates :sku, presence: true, uniqueness: true
+  validates :stock_quantity, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
+  validates :images, content_type: ['image/png', 'image/jpeg', 'image/jpg'],
+                     size: { less_than: 5.megabytes }
+  
+  # Callbacks
+  before_validation :generate_sku, if: -> { sku.blank? }
+  before_save :calculate_discounted_price
+  after_save :update_category_product_count
+  after_commit :notify_low_stock, if: :low_stock?
+  
+  # Scopes (reusable query fragments)
+  scope :in_stock, -> { where('stock_quantity > 0') }
+  scope :out_of_stock, -> { where(stock_quantity: 0) }
+  scope :featured, -> { where(featured: true) }
+  scope :by_category, ->(category_id) { where(category_id: category_id) }
+  scope :price_between, ->(min, max) { where(price: min..max) }
+  
+  # Class methods
+  def self.search(query)
+    where("name ILIKE :query OR description ILIKE :query OR sku = :query", 
+          query: "%#{query}%")
+  end
+  
+  def self.top_selling(limit = 10)
+    joins(:order_items)
+      .select('products.*, SUM(order_items.quantity) as total_sold')
+      .group('products.id')
+      .order('total_sold DESC')
+      .limit(limit)
+  end
+  
+  # Instance methods
+  def low_stock?
+    stock_quantity < 10
+  end
+  
+  def average_rating
+    reviews.average(:rating).to_f.round(1)
+  end
+  
+  def in_stock?
+    stock_quantity > 0
+  end
+  
+  def reduce_stock(quantity)
+    with_lock do  # Pessimistic locking for concurrency
+      if stock_quantity >= quantity
+        update!(stock_quantity: stock_quantity - quantity)
+        true
+      else
+        false
+      end
+    end
+  end
+  
+  def restock(quantity)
+    update!(stock_quantity: stock_quantity + quantity)
+  end
+  
+  # Private methods
+  private
+  
+  def generate_sku
+    self.sku = "SKU-#{SecureRandom.alphanumeric(8).upcase}"
+  end
+  
+  def calculate_discounted_price
+    if discount_percentage && discount_percentage > 0
+      self.discounted_price = price * (1 - discount_percentage / 100.0)
+    else
+      self.discounted_price = price
+    end
+  end
+  
+  def update_category_product_count
+    category.update_product_count if category.persisted?
+  end
+  
+  def notify_low_stock
+    LowStockNotificationJob.perform_later(self)
+  end
+end
+
+puts "\n=== ADVANCED ACTIVE RECORD QUERIES ==="
+
+# Complex queries with ActiveRecord
+=begin
+# Basic queries
+Product.all
+Product.find(1)
+Product.find_by(sku: 'SKU-ABC123')
+Product.where(category_id: 1)
+Product.where('price > ?', 100)
+
+# Chaining queries
+Product.in_stock.featured.by_category(1)
+
+# Aggregations
+Product.count
+Product.average(:price)
+Product.maximum(:price)
+Product.minimum(:price)
+Product.sum(:stock_quantity)
+
+# Grouping and having
+Product.group(:category_id).count
+Product.group(:category_id).average(:price)
+Product.having('AVG(price) > ?', 50).group(:category_id)
+
+# Joins
+Product.joins(:category).where(categories: { name: 'Electronics' })
+Product.joins(:reviews).where('reviews.rating >= ?', 4)
+
+# Includes (eager loading to prevent N+1)
+products = Product.includes(:category, :reviews).all
+products.each do |product|
+  puts product.category.name  # No additional query
+  product.reviews.each do |review|
+    puts review.comment  # No additional query
+  end
+end
+
+# Preload (alternative to includes)
+Product.preload(:reviews).where('price > 100')
+
+# Eager_load (single query with LEFT JOIN)
+Product.eager_load(:reviews).where('reviews.rating > 3')
+
+# Complex where conditions
+Product.where("name LIKE ? AND (price < ? OR featured = ?)", 
+              "%phone%", 1000, true)
+
+# OR conditions (Rails 5+)
+Product.where(category_id: 1).or(Product.where(featured: true))
+
+# Not conditions
+Product.where.not(category_id: 1)
+Product.where.not(price: [nil, 0])
+
+# Ordering
+Product.order(price: :desc)
+Product.order(:name, created_at: :desc)
+
+# Limit and offset
+Product.limit(10).offset(20)  # Pagination
+
+# Select specific columns
+Product.select(:id, :name, :price)
+Product.select('products.*, categories.name as category_name')
+       .joins(:category)
+
+# Calculations with select
+Product.select('AVG(price) as average_price').first.average_price
+
+# Transactions
+Product.transaction do
+  product1 = Product.create!(name: "Product 1", price: 100)
+  product2 = Product.create!(name: "Product 2", price: 200)
+  # Both succeed or both fail
+end
+
+# Find or create
+Product.find_or_create_by(sku: 'SKU-123') do |product|
+  product.name = "New Product"
+  product.price = 50
+end
+
+# Update all
+Product.where(category_id: 1).update_all(featured: true)
+
+# Destroy with conditions
+Product.where('stock_quantity = 0').destroy_all
+
+# Touch (update timestamps)
+product.touch  # Updates updated_at
+product.touch(:last_purchased_at)  # Updates specific timestamp
+=end
+
+puts "\n=== DATABASE TRANSACTIONS ==="
+
+# Transaction examples
+class Order < ApplicationRecord
+  belongs_to :user
+  has_many :order_items
+  has_many :products, through: :order_items
+  
+  def process_payment
+    transaction do
+      # Lock the user's account for concurrent updates
+      user.with_lock do
+        # Validate payment
+        raise "Insufficient funds" unless user.balance >= total_amount
+        
+        # Process each order item
+        order_items.each do |item|
+          product = item.product
+          product.with_lock do
+            raise "Insufficient stock for #{product.name}" unless product.reduce_stock(item.quantity)
+          end
+        end
+        
+        # Deduct from user balance
+        user.update!(balance: user.balance - total_amount)
+        
+        # Mark order as paid
+        update!(status: 'paid', paid_at: Time.current)
+        
+        # Create transaction record
+        Transaction.create!(
+          user: user,
+          amount: total_amount,
+          transaction_type: 'purchase',
+          reference: "ORDER-#{id}"
+        )
+      end
+    end
+  rescue => e
+    # Transaction will be rolled back automatically
+    errors.add(:base, "Payment failed: #{e.message}")
+    false
+  end
+end
+
+puts "\n=== DATABASE INDEXING ==="
+
+# Understanding database indexes
+=begin
+# Good candidates for indexing:
+# - Foreign keys (category_id, user_id)
+# - Columns used in WHERE clauses (status, published)
+# - Columns used in ORDER BY (created_at, price)
+# - Columns used in JOIN conditions
+# - Columns with UNIQUE constraints (email, sku)
+
+# Composite indexes for multiple columns:
+# add_index :products, [:category_id, :featured, :price]
+# Useful for queries like:
+# Product.where(category_id: 1, featured: true).order(price: :desc)
+
+# Partial indexes for filtered data:
+# add_index :products, :featured, where: 'featured = true'
+# add_index :users, :email, where: 'confirmed_at IS NOT NULL'
+
+# Expression indexes:
+# add_index :products, 'LOWER(name)'
+# Useful for case-insensitive searches
+=end
+
+puts "\n=== DATABASE SEEDS ==="
+
+# Database seeding (db/seeds.rb)
+=begin
+# Clear existing data
+Product.destroy_all
+Category.destroy_all
+User.destroy_all
+
+# Create admin user
+admin = User.create!(
+  email: 'admin@example.com',
+  password: 'password123',
+  role: 'admin',
+  confirmed_at: Time.current
+)
+
+# Create categories
+categories = ['Electronics', 'Books', 'Clothing', 'Home & Garden']
+categories.each do |name|
+  Category.create!(name: name, description: "Products in #{name} category")
+end
+
+# Create sample products
+electronics = Category.find_by(name: 'Electronics')
+books = Category.find_by(name: 'Books')
+
+Product.create!(
+  name: 'Wireless Headphones',
+  description: 'Noise-cancelling wireless headphones with 30-hour battery',
+  price: 199.99,
+  sku: 'WH-1000XM4',
+  category: electronics,
+  stock_quantity: 50,
+  featured: true
+)
+
+Product.create!(
+  name: 'Programming Ruby 3.0',
+  description: 'The Pragmatic Programmers Guide to Ruby 3.0',
+  price: 49.99,
+  sku: 'BOOK-RUBY3',
+  category: books,
+  stock_quantity: 100,
+  featured: true
+)
+
+# Create more products in bulk
+10.times do |i|
+  Product.create!(
+    name: "Sample Product #{i + 1}",
+    description: "Description for sample product #{i + 1}",
+    price: rand(10.0..100.0).round(2),
+    sku: "SAMPLE-#{i + 1}",
+    category: Category.all.sample,
+    stock_quantity: rand(0..200)
+  )
+end
+
+puts "Created #{User.count} users"
+puts "Created #{Category.count} categories"
+puts "Created #{Product.count} products"
+=end</textarea>
+                        <button class="run-btn" onclick="runCode('editor-8', 'output-8')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Output
+                        </div>
+                        <div class="preview-container" id="output-8"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>Migrations: Version-controlled database schema changes</li>
+                                <li>Associations: <code>belongs_to</code>, <code>has_many</code>, <code>has_one</code>, <code>has_and_belongs_to_many</code></li>
+                                <li>Validations: Ensure data integrity before saving</li>
+                                <li>Callbacks: <code>before_save</code>, <code>after_create</code>, <code>around_update</code></li>
+                                <li>Scopes: Reusable query fragments</li>
+                                <li>Transactions: Ensure database operations are atomic</li>
+                                <li>Eager Loading: Prevent N+1 query problems with <code>includes</code></li>
+                                <li>Indexes: Improve query performance on frequently searched columns</li>
+                                <li>Locking: Prevent race conditions with optimistic/pessimistic locking</li>
+                                <li>Seeds: Populate database with initial data</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-database"></i> Data Persistence & ORM Patterns</h3>
+                            <p>ActiveRecord implements the Active Record pattern where objects carry both data and behavior for persisting that data. This contrasts with Data Mapper patterns that separate persistence logic from business logic. ActiveRecord's integrated approach simplifies common CRUD operations while providing escape hatches for complex queries through SQL fragments and Arel (Ruby's SQL AST manager). The balance between convenience and control makes ActiveRecord suitable for applications ranging from simple prototypes to complex enterprise systems.</p>
+                            
+                            <p>Database performance in Ruby applications hinges on understanding ActiveRecord's query generation and the N+1 query problem. The <code>includes</code>, <code>preload</code>, and <code>eager_load</code> methods provide different strategies for eager loading associations. Bullet gem and Rails development logs help identify N+1 issues. Database indexing strategies must balance read performance against write overhead, with composite indexes optimizing common query patterns and partial indexes reducing index size for filtered data.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-bolt"></i> Query Optimization</h4>
+                                    <p>ActiveRecord queries can be optimized through proper indexing, selective column loading (<code>select</code>), batch processing (<code>find_each</code>), and database-specific optimizations like covering indexes and materialized views for complex aggregations.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-exchange-alt"></i> Database Agnosticism</h4>
+                                    <p>ActiveRecord abstracts database differences through adapters, enabling applications to switch between PostgreSQL, MySQL, SQLite, and others. Database-specific features are accessible through <code>execute</code> method when needed for performance optimizations.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-history"></i> Migration Strategies</h4>
+                                    <p>Database migrations support zero-downtime deployments through techniques like background migrations, safe column changes, and versioned API approaches. Rails provides mechanisms for rolling back failed migrations and maintaining data consistency during schema changes.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-chart-line"></i> High-Volume E-Commerce</h4>
+                                <p>Shopify's database architecture demonstrates advanced ActiveRecord usage at scale. The platform uses database sharding to distribute load across multiple PostgreSQL clusters. ActiveRecord associations work across shard boundaries through custom connection handling. Background migrations process billions of rows without blocking operations. Read replicas handle reporting queries. Materialized views cache complex aggregations. Connection pooling manages thousands of simultaneous requests. Despite this complexity, developers interact with a familiar ActiveRecord interface, demonstrating how Rails' database abstractions enable both developer productivity and massive scalability through layered architectural patterns.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Design an E-Commerce Database:</strong> Create a database schema for an online store:</p>
+                            <ul>
+                                <li>Design models for Products, Categories, Users, Orders, and Reviews</li>
+                                <li>Create migrations with proper indexes and constraints</li>
+                                <li>Implement associations between all models</li>
+                                <li>Add validations and callbacks for business logic</li>
+                                <li>Write complex queries for reporting and analytics</li>
+                                <li>Create seed data for development and testing</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 9: Testing with RSpec -->
+            <div class="course-module" id="module9" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>TESTING WITH RSPEC</h1>
+                    <h3>Learn to write tests for Ruby applications</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rspec/rspec-original.svg" class="module-icon" alt="RSpec Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 9: <span>Testing Ruby Applications with RSpec</span></h1>
+                    <p>Testing is crucial for building reliable, maintainable Ruby applications. RSpec is the most popular testing framework in the Ruby ecosystem, providing a domain-specific language (DSL) for writing expressive tests. Good testing practices catch bugs early, document behavior, and enable safe refactoring.</p>
+                    
+                    <p>RSpec supports different types of tests: unit tests for individual components, integration tests for component interactions, and feature tests for user workflows. The framework includes matchers for assertions, hooks for test setup, and mocks for isolating components. Understanding testing is essential for professional Ruby development.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Ruby</div>
+                                <div class="editor-tab">RSpec</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-9" spellcheck="false"># Testing with RSpec
+
+puts "=== RSPEC BASICS ==="
+
+# Model to test
+class Calculator
+  def add(a, b)
+    a + b
+  end
+  
+  def subtract(a, b)
+    a - b
+  end
+  
+  def multiply(a, b)
+    a * b
+  end
+  
+  def divide(a, b)
+    raise ArgumentError, "Cannot divide by zero" if b == 0
+    a / b.to_f
+  end
+  
+  def factorial(n)
+    raise ArgumentError, "Factorial not defined for negative numbers" if n < 0
+    return 1 if n <= 1
+    (1..n).reduce(:*)
+  end
+end
+
+# RSpec test file (spec/calculator_spec.rb)
+=begin
+RSpec.describe Calculator do
+  # Before hooks run before each test
+  before(:each) do
+    @calculator = Calculator.new
+  end
+  
+  # After hooks run after each test
+  after(:each) do
+    puts "Test completed!"
+  end
+  
+  # Context groups related tests
+  context "basic operations" do
+    describe "#add" do
+      it "adds two positive numbers" do
+        result = @calculator.add(2, 3)
+        expect(result).to eq(5)
+      end
+      
+      it "adds negative numbers" do
+        result = @calculator.add(-5, -3)
+        expect(result).to eq(-8)
+      end
+      
+      it "adds positive and negative numbers" do
+        result = @calculator.add(10, -4)
+        expect(result).to eq(6)
+      end
+    end
+    
+    describe "#subtract" do
+      it "subtracts two numbers" do
+        result = @calculator.subtract(10, 4)
+        expect(result).to eq(6)
+      end
+    end
+  end
+  
+  context "advanced operations" do
+    describe "#multiply" do
+      it "multiplies two numbers" do
+        result = @calculator.multiply(7, 6)
+        expect(result).to eq(42)
+      end
+    end
+    
+    describe "#divide" do
+      it "divides two numbers" do
+        result = @calculator.divide(10, 2)
+        expect(result).to eq(5.0)
+      end
+      
+      it "returns float when dividing integers" do
+        result = @calculator.divide(5, 2)
+        expect(result).to eq(2.5)
+      end
+      
+      it "raises error when dividing by zero" do
+        expect { @calculator.divide(10, 0) }.to raise_error(ArgumentError, "Cannot divide by zero")
+      end
+    end
+    
+    describe "#factorial" do
+      it "returns 1 for factorial of 0" do
+        result = @calculator.factorial(0)
+        expect(result).to eq(1)
+      end
+      
+      it "returns 1 for factorial of 1" do
+        result = @calculator.factorial(1)
+        expect(result).to eq(1)
+      end
+      
+      it "calculates factorial of positive number" do
+        result = @calculator.factorial(5)
+        expect(result).to eq(120)
+      end
+      
+      it "raises error for negative numbers" do
+        expect { @calculator.factorial(-1) }.to raise_error(ArgumentError, "Factorial not defined for negative numbers")
+      end
+    end
+  end
+  
+  # Shared examples for reusable test patterns
+  shared_examples "a commutative operation" do |operation|
+    it "is commutative" do
+      calc = Calculator.new
+      result1 = calc.send(operation, 2, 3)
+      result2 = calc.send(operation, 3, 2)
+      expect(result1).to eq(result2)
+    end
+  end
+  
+  describe "#add" do
+    include_examples "a commutative operation", :add
+  end
+  
+  describe "#multiply" do
+    include_examples "a commutative operation", :multiply
+  end
+end
+=end
+
+puts "\n=== MODEL TESTING ==="
+
+# Testing ActiveRecord models
+=begin
+# spec/models/user_spec.rb
+RSpec.describe User, type: :model do
+  # FactoryBot for test data (using factories)
+  let(:user) { build(:user) }
+  let(:admin_user) { build(:user, :admin) }
+  
+  describe "validations" do
+    it "is valid with valid attributes" do
+      expect(user).to be_valid
+    end
+    
+    it "is invalid without email" do
+      user.email = nil
+      expect(user).not_to be_valid
+      expect(user.errors[:email]).to include("can't be blank")
+    end
+    
+    it "is invalid with duplicate email" do
+      create(:user, email: "test@example.com")
+      user.email = "test@example.com"
+      expect(user).not_to be_valid
+      expect(user.errors[:email]).to include("has already been taken")
+    end
+    
+    it "is invalid with invalid email format" do
+      user.email = "invalid-email"
+      expect(user).not_to be_valid
+      expect(user.errors[:email]).to include("is invalid")
+    end
+    
+    it "is invalid without name" do
+      user.name = nil
+      expect(user).not_to be_valid
+      expect(user.errors[:name]).to include("can't be blank")
+    end
+    
+    it "is invalid with short password" do
+      user.password = "123"
+      expect(user).not_to be_valid
+      expect(user.errors[:password]).to include("is too short (minimum is 6 characters)")
+    end
+  end
+  
+  describe "associations" do
+    it "has many posts" do
+      association = described_class.reflect_on_association(:posts)
+      expect(association.macro).to eq(:has_many)
+    end
+    
+    it "has many comments" do
+      association = described_class.reflect_on_association(:comments)
+      expect(association.macro).to eq(:has_many)
+    end
+  end
+  
+  describe "scopes" do
+    let!(:active_user) { create(:user, active: true) }
+    let!(:inactive_user) { create(:user, active: false) }
+    
+    it "returns active users" do
+      expect(User.active).to include(active_user)
+      expect(User.active).not_to include(inactive_user)
+    end
+    
+    it "returns inactive users" do
+      expect(User.inactive).to include(inactive_user)
+      expect(User.inactive).not_to include(active_user)
+    end
+    
+    it "returns admins" do
+      admin = create(:user, :admin)
+      expect(User.admins).to include(admin)
+      expect(User.admins).not_to include(user)
+    end
+  end
+  
+  describe "instance methods" do
+    describe "#full_name" do
+      it "returns full name" do
+        user = build(:user, first_name: "John", last_name: "Doe")
+        expect(user.full_name).to eq("John Doe")
+      end
+      
+      it "handles missing last name" do
+        user = build(:user, first_name: "John", last_name: nil)
+        expect(user.full_name).to eq("John")
+      end
+    end
+    
+    describe "#admin?" do
+      it "returns true for admin users" do
+        expect(admin_user.admin?).to be true
+      end
+      
+      it "returns false for regular users" do
+        expect(user.admin?).to be false
+      end
+    end
+  end
+  
+  describe "callbacks" do
+    it "generates confirmation token before create" do
+      user = build(:user)
+      expect(user.confirmation_token).to be_nil
+      user.save
+      expect(user.confirmation_token).not_to be_nil
+    end
+    
+    it "sends welcome email after create" do
+      expect { create(:user) }.to change { ActionMailer::Base.deliveries.count }.by(1)
+    end
+  end
+  
+  describe "class methods" do
+    describe ".search" do
+      let!(:user1) { create(:user, name: "John Doe", email: "john@example.com") }
+      let!(:user2) { create(:user, name: "Jane Smith", email: "jane@example.com") }
+      
+      it "finds users by name" do
+        results = User.search("John")
+        expect(results).to include(user1)
+        expect(results).not_to include(user2)
+      end
+      
+      it "finds users by email" do
+        results = User.search("jane@example.com")
+        expect(results).to include(user2)
+        expect(results).not_to include(user1)
+      end
+      
+      it "returns empty relation for no matches" do
+        results = User.search("nonexistent")
+        expect(results).to be_empty
+      end
+    end
+  end
+end
+=end
+
+puts "\n=== CONTROLLER TESTING ==="
+
+# Testing Rails controllers
+=begin
+# spec/controllers/users_controller_spec.rb
+RSpec.describe UsersController, type: :controller do
+  # Devise test helpers for authentication
+  include Devise::Test::ControllerHelpers
+  
+  let(:user) { create(:user) }
+  let(:admin) { create(:user, :admin) }
+  let(:valid_attributes) { attributes_for(:user) }
+  let(:invalid_attributes) { attributes_for(:user, email: nil) }
+  
+  describe "GET #index" do
+    context "as admin" do
+      before { sign_in admin }
+      
+      it "returns a success response" do
+        get :index
+        expect(response).to be_successful
+      end
+      
+      it "assigns all users as @users" do
+        get :index
+        expect(assigns(:users)).to include(user, admin)
+      end
+    end
+    
+    context "as regular user" do
+      before { sign_in user }
+      
+      it "redirects to root path" do
+        get :index
+        expect(response).to redirect_to(root_path)
+      end
+      
+      it "sets flash alert" do
+        get :index
+        expect(flash[:alert]).to eq("You must be an admin to access this page")
+      end
+    end
+    
+    context "as guest" do
+      it "redirects to login" do
+        get :index
+        expect(response).to redirect_to(new_user_session_path)
+      end
+    end
+  end
+  
+  describe "GET #show" do
+    before { sign_in user }
+    
+    it "returns a success response" do
+      get :show, params: { id: user.id }
+      expect(response).to be_successful
+    end
+    
+    it "assigns the requested user as @user" do
+      get :show, params: { id: user.id }
+      expect(assigns(:user)).to eq(user)
+    end
+  end
+  
+  describe "POST #create" do
+    context "with valid params" do
+      it "creates a new User" do
+        expect {
+          post :create, params: { user: valid_attributes }
+        }.to change(User, :count).by(1)
+      end
+      
+      it "redirects to the created user" do
+        post :create, params: { user: valid_attributes }
+        expect(response).to redirect_to(User.last)
+      end
+      
+      it "sets flash notice" do
+        post :create, params: { user: valid_attributes }
+        expect(flash[:notice]).to eq("User was successfully created.")
+      end
+    end
+    
+    context "with invalid params" do
+      it "does not create a new User" do
+        expect {
+          post :create, params: { user: invalid_attributes }
+        }.not_to change(User, :count)
+      end
+      
+      it "renders the new template" do
+        post :create, params: { user: invalid_attributes }
+        expect(response).to render_template(:new)
+      end
+      
+      it "returns unprocessable entity status" do
+        post :create, params: { user: invalid_attributes }
+        expect(response).to have_http_status(:unprocessable_entity)
+      end
+    end
+  end
+  
+  describe "PATCH #update" do
+    before { sign_in user }
+    
+    context "with valid params" do
+      let(:new_attributes) { { name: "Updated Name" } }
+      
+      it "updates the requested user" do
+        patch :update, params: { id: user.id, user: new_attributes }
+        user.reload
+        expect(user.name).to eq("Updated Name")
+      end
+      
+      it "redirects to the user" do
+        patch :update, params: { id: user.id, user: new_attributes }
+        expect(response).to redirect_to(user)
+      end
+    end
+  end
+  
+  describe "DELETE #destroy" do
+    context "as admin" do
+      before { sign_in admin }
+      
+      it "destroys the requested user" do
+        user_to_delete = create(:user)
+        expect {
+          delete :destroy, params: { id: user_to_delete.id }
+        }.to change(User, :count).by(-1)
+      end
+      
+      it "redirects to the users list" do
+        delete :destroy, params: { id: user.id }
+        expect(response).to redirect_to(users_url)
+      end
+    end
+    
+    context "as regular user" do
+      before { sign_in user }
+      
+      it "does not destroy the user" do
+        expect {
+          delete :destroy, params: { id: user.id }
+        }.not_to change(User, :count)
+      end
+    end
+  end
+end
+=end
+
+puts "\n=== REQUEST TESTING ==="
+
+# Testing API endpoints
+=begin
+# spec/requests/api/v1/users_spec.rb
+RSpec.describe "API::V1::Users", type: :request do
+  let(:user) { create(:user) }
+  let(:admin) { create(:user, :admin) }
+  let(:headers) { { "ACCEPT" => "application/json" } }
+  let(:auth_headers) { headers.merge(user.create_new_auth_token) }
+  let(:admin_auth_headers) { headers.merge(admin.create_new_auth_token) }
+  
+  describe "GET /api/v1/users" do
+    context "as admin" do
+      it "returns all users" do
+        create_list(:user, 3)
+        get "/api/v1/users", headers: admin_auth_headers
+        
+        expect(response).to have_http_status(:ok)
+        expect(json_response.size).to eq(4)  # 3 created + admin
+        expect(json_response.first.keys).to include("id", "name", "email")
+      end
+    end
+    
+    context "as regular user" do
+      it "returns forbidden" do
+        get "/api/v1/users", headers: auth_headers
+        expect(response).to have_http_status(:forbidden)
+      end
+    end
+    
+    context "without authentication" do
+      it "returns unauthorized" do
+        get "/api/v1/users", headers: headers
+        expect(response).to have_http_status(:unauthorized)
+      end
+    end
+  end
+  
+  describe "GET /api/v1/users/:id" do
+    it "returns the user" do
+      get "/api/v1/users/#{user.id}", headers: auth_headers
+      
+      expect(response).to have_http_status(:ok)
+      expect(json_response["id"]).to eq(user.id)
+      expect(json_response["name"]).to eq(user.name)
+    end
+    
+    it "returns not found for non-existent user" do
+      get "/api/v1/users/999999", headers: auth_headers
+      expect(response).to have_http_status(:not_found)
+    end
+  end
+  
+  describe "POST /api/v1/users" do
+    let(:valid_params) do
+      {
+        user: {
+          name: "New User",
+          email: "new@example.com",
+          password: "password123",
+          password_confirmation: "password123"
+        }
+      }
+    end
+    
+    context "with valid params" do
+      it "creates a new user" do
+        expect {
+          post "/api/v1/users", params: valid_params, headers: headers
+        }.to change(User, :count).by(1)
+        
+        expect(response).to have_http_status(:created)
+        expect(json_response["email"]).to eq("new@example.com")
+      end
+    end
+    
+    context "with invalid params" do
+      it "returns unprocessable entity" do
+        post "/api/v1/users", params: { user: { email: "invalid" } }, headers: headers
+        expect(response).to have_http_status(:unprocessable_entity)
+        expect(json_response["errors"]).to include("email")
+      end
+    end
+  end
+  
+  describe "PATCH /api/v1/users/:id" do
+    let(:update_params) { { user: { name: "Updated Name" } } }
+    
+    context "as the user" do
+      it "updates the user" do
+        patch "/api/v1/users/#{user.id}", params: update_params, headers: auth_headers
+        
+        expect(response).to have_http_status(:ok)
+        user.reload
+        expect(user.name).to eq("Updated Name")
+      end
+    end
+    
+    context "as another user" do
+      it "returns forbidden" do
+        other_user = create(:user)
+        patch "/api/v1/users/#{other_user.id}", params: update_params, headers: auth_headers
+        
+        expect(response).to have_http_status(:forbidden)
+      end
+    end
+  end
+  
+  describe "DELETE /api/v1/users/:id" do
+    context "as admin" do
+      it "deletes the user" do
+        user_to_delete = create(:user)
+        
+        expect {
+          delete "/api/v1/users/#{user_to_delete.id}", headers: admin_auth_headers
+        }.to change(User, :count).by(-1)
+        
+        expect(response).to have_http_status(:no_content)
+      end
+    end
+  end
+  
+  # Helper method to parse JSON response
+  def json_response
+    JSON.parse(response.body)
+  end
+end
+=end
+
+puts "\n=== TEST DOUBLES AND MOCKS ==="
+
+# Using test doubles (mocks, stubs, spies)
+=begin
+RSpec.describe "Test Doubles" do
+  # Mock objects
+  describe "mocks" do
+    it "verifies method calls" do
+      # Create a mock object
+      email_service = instance_double("EmailService")
+      
+      # Define expected behavior
+      expect(email_service).to receive(:send_welcome_email).with("user@example.com")
+      
+      # Use the mock
+      email_service.send_welcome_email("user@example.com")
+    end
+  end
+  
+  # Stubs
+  describe "stubs" do
+    it "returns predefined values" do
+      calculator = instance_double("Calculator")
+      allow(calculator).to receive(:add).and_return(10)
+      
+      expect(calculator.add(2, 3)).to eq(10)
+      expect(calculator.add(100, 200)).to eq(10)  # Always returns 10
+    end
+    
+    it "can raise errors" do
+      service = instance_double("ExternalService")
+      allow(service).to receive(:call).and_raise(StandardError, "Service unavailable")
+      
+      expect { service.call }.to raise_error(StandardError, "Service unavailable")
+    end
+  end
+  
+  # Spies
+  describe "spies" do
+    it "verifies calls after they happen" do
+      email_service = spy("EmailService")
+      
+      email_service.send_welcome_email("user@example.com")
+      
+      expect(email_service).to have_received(:send_welcome_email).with("user@example.com")
+    end
+  end
+  
+  # Partial test doubles (mocking real objects)
+  describe "partial test doubles" do
+    let(:user) { User.new(name: "Test", email: "test@example.com") }
+    
+    it "mocks specific methods on real objects" do
+      # Stub a method
+      allow(user).to receive(:admin?).and_return(true)
+      
+      expect(user.admin?).to be true
+    end
+    
+    it "verifies calls on real objects" do
+      # Mock a method with expectations
+      expect(user).to receive(:save).and_return(true)
+      
+      user.save
+    end
+  end
+  
+  # Testing with external services
+  describe "external services" do
+    let(:payment_gateway) { instance_double("PaymentGateway") }
+    let(:order) { Order.new(total: 100) }
+    
+    before do
+      allow(PaymentGateway).to receive(:new).and_return(payment_gateway)
+      allow(payment_gateway).to receive(:charge).and_return(OpenStruct.new(success?: true, id: "ch_123"))
+    end
+    
+    it "processes payment successfully" do
+      result = order.process_payment
+      
+      expect(result).to be true
+      expect(payment_gateway).to have_received(:charge).with(100, anything)
+    end
+  end
+end
+=end
+
+puts "\n=== FACTORY BOT ==="
+
+# Using Factory Bot for test data
+=begin
+# spec/factories/users.rb
+FactoryBot.define do
+  factory :user do
+    sequence(:email) { |n| "user#{n}@example.com" }
+    name { "Test User" }
+    password { "password123" }
+    confirmed_at { Time.current }
+    
+    trait :admin do
+      role { "admin" }
+    end
+    
+    trait :inactive do
+      active { false }
+    end
+    
+    trait :with_posts do
+      after(:create) do |user|
+        create_list(:post, 3, user: user)
+      end
+    end
+    
+    factory :admin_user, traits: [:admin]
+    factory :inactive_user, traits: [:inactive]
+  end
+  
+  factory :post do
+    title { "Test Post" }
+    content { "This is a test post content." }
+    user
+    
+    trait :published do
+      published { true }
+      published_at { Time.current }
+    end
+    
+    trait :with_comments do
+      after(:create) do |post|
+        create_list(:comment, 3, post: post)
+      end
+    end
+  end
+end
+
+# Using factories in tests
+RSpec.describe User do
+  # Build (creates unsaved instance)
+  let(:built_user) { build(:user) }
+  
+  # Create (creates and saves to database)
+  let(:created_user) { create(:user) }
+  
+  # Attributes for (hash of attributes)
+  let(:user_attributes) { attributes_for(:user) }
+  
+  # Build list (multiple unsaved instances)
+  let(:users) { build_list(:user, 3) }
+  
+  # Create list (multiple saved instances)
+  let!(:created_users) { create_list(:user, 3) }
+  
+  # Using traits
+  let(:admin) { create(:user, :admin) }
+  let(:user_with_posts) { create(:user, :with_posts) }
+  
+  # Build with overrides
+  let(:custom_user) { build(:user, name: "Custom Name", email: "custom@example.com") }
+end
+=end</textarea>
+                        <button class="run-btn" onclick="runCode('editor-9', 'output-9')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Output
+                        </div>
+                        <div class="preview-container" id="output-9"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li><code>RSpec.describe</code> defines a test suite</li>
+                                <li><code>it</code> defines individual test cases</li>
+                                <li><code>expect(actual).to matcher</code> makes assertions</li>
+                                <li><code>before</code> and <code>after</code> hooks run setup/teardown code</li>
+                                <li><code>let</code> and <code>let!</code> define memoized test data</li>
+                                <li><code>context</code> groups related tests</li>
+                                <li>FactoryBot creates test objects with realistic data</li>
+                                <li>Test doubles (mocks, stubs, spies) isolate components</li>
+                                <li>Shared examples define reusable test patterns</li>
+                                <li>Matchers: <code>eq</code>, <code>be</code>, <code>include</code>, <code>raise_error</code></li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-vial"></i> Test-Driven Development & Quality Assurance</h3>
+                            <p>RSpec embodies Ruby's philosophy of developer happiness through its expressive, English-like DSL. The framework encourages behavior-driven development (BDD) where tests specify expected behavior rather than implementation details. This approach produces tests that serve as living documentation, readable by both technical and non-technical stakeholders. RSpec's nested <code>describe</code> and <code>context</code> blocks create a specification hierarchy that mirrors the application's domain, making test suites self-documenting.</p>
+                            
+                            <p>Effective testing requires understanding different test types and their purposes. Unit tests verify individual components in isolation, integration tests check component interactions, and feature tests validate user workflows. RSpec supports all these through different spec types (<code>type: :model</code>, <code>type: :controller</code>, <code>type: :request</code>). FactoryBot generates test data with realistic attributes and relationships, while test doubles isolate units from dependencies. This comprehensive testing strategy enables refactoring with confidence and prevents regression bugs.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-tachometer-alt"></i> Test Performance</h4>
+                                    <p>Optimizing test suites involves techniques like transactional tests, database cleaning strategies, parallel test execution, and selective test runs. Fast tests enable rapid feedback loops essential for TDD/BDD workflows and continuous integration pipelines.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-code-branch"></i> Test Organization</h4>
+                                    <p>Well-organized test suites use consistent naming, shared examples for common patterns, custom matchers for domain assertions, and helper modules for test utilities. This organization reduces duplication and makes tests easier to maintain as applications evolve.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-shield-alt"></i> Test Coverage & Quality</h4>
+                                    <p>Beyond line coverage, effective testing considers edge cases, error conditions, and integration scenarios. Mutation testing, property-based testing, and contract testing provide additional quality assurance layers beyond traditional unit tests.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-industry"></i> Enterprise Test Suites</h4>
+                                <p>GitHub's test suite exemplifies sophisticated testing practices at scale. The codebase includes thousands of tests running in parallel across multiple CI workers. Custom RSpec matchers verify complex domain logic. FactoryBot generates realistic test data mimicking production scenarios. VCR records external API interactions for reliable integration tests. Database cleaner strategies maintain test isolation without sacrificing performance. The test suite runs on every pull request, providing developers with rapid feedback while maintaining high code quality across millions of lines of Ruby code. This investment in testing enables continuous deployment with confidence, shipping changes to production hundreds of times daily.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Create a Comprehensive Test Suite:</strong> Write tests for a Blog application:</p>
+                            <ul>
+                                <li>Unit tests for all models with validations and associations</li>
+                                <li>Controller tests for CRUD operations</li>
+                                <li>Request tests for API endpoints</li>
+                                <li>Integration tests for user workflows</li>
+                                <li>Test doubles for external services</li>
+                                <li>FactoryBot factories for all models</li>
+                                <li>Shared examples for common patterns</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 10: Advanced Ruby Topics -->
+            <div class="course-module" id="module10" data-aos="fade-up" data-difficulty="advanced">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>ADVANCED RUBY TOPICS</h1>
+                    <h3>Master advanced Ruby concepts and patterns</h3>
+                    <span class="difficulty">Advanced</span>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ruby/ruby-original.svg" class="module-icon" alt="Ruby Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 10: <span>Advanced Ruby Programming</span></h1>
+                    <p>Advanced Ruby topics include metaprogramming, concurrency, performance optimization, and design patterns. These concepts separate intermediate Ruby developers from experts who can build scalable, maintainable systems. Understanding these topics enables you to write more expressive code and solve complex problems elegantly.</p>
+                    
+                    <p>This module covers Ruby's powerful metaprogramming capabilities, concurrent programming with threads and fibers, memory management, and advanced design patterns. You'll learn techniques used in production Ruby applications at companies like GitHub, Shopify, and Basecamp.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Ruby</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-10" spellcheck="false"># Advanced Ruby Topics
+
+puts "=== METAPROGRAMMING ==="
+
+# Dynamic method definition
+class DynamicClass
+  # Define methods dynamically
+  ['add', 'subtract', 'multiply', 'divide'].each do |method_name|
+    define_method(method_name) do |a, b|
+      case method_name
+      when 'add' then a + b
+      when 'subtract' then a - b
+      when 'multiply' then a * b
+      when 'divide' then a / b.to_f
+      end
+    end
+  end
+  
+  # Method missing for dynamic dispatch
+  def method_missing(method_name, *args)
+    if method_name.to_s.start_with?('find_by_')
+      attribute = method_name.to_s.gsub('find_by_', '')
+      if @data.respond_to?(attribute)
+        @data.send(attribute)
+      else
+        super
+      end
+    else
+      super
+    end
+  end
+  
+  def respond_to_missing?(method_name, include_private = false)
+    method_name.to_s.start_with?('find_by_') || super
+  end
+end
+
+dynamic = DynamicClass.new
+puts "Dynamic add: #{dynamic.add(10, 5)}"
+puts "Dynamic multiply: #{dynamic.multiply(4, 3)}"
+
+# Singleton classes (eigenclasses)
+obj = Object.new
+
+# Add method to just this object
+class << obj
+  def custom_method
+    "I'm a singleton method!"
+  end
+end
+
+puts obj.custom_method
+
+# Another object doesn't have this method
+another_obj = Object.new
+# another_obj.custom_method  # Would raise NoMethodError
+
+puts "\n=== CONSTANT LOOKUP ==="
+
+module Outer
+  CONST = "Outer constant"
+  
+  module Inner
+    CONST = "Inner constant"
+    
+    def self.show_constants
+      puts "Self::CONST: #{self::CONST}"
+      puts "CONST: #{CONST}"
+      puts "Outer::CONST: #{Outer::CONST}"
+      puts "::CONST (top-level): #{::CONST}" if defined?(::CONST)
+    end
+  end
+end
+
+Outer::Inner.show_constants
+
+puts "\n=== CONCURRENCY ==="
+
+# Threads (shared memory concurrency)
+puts "Thread example:"
+threads = []
+results = []
+
+5.times do |i|
+  threads << Thread.new do
+    sleep rand(0.1..0.5)  # Simulate work
+    results << "Thread #{i} completed"
+  end
+end
+
+threads.each(&:join)
+puts results
+
+# Mutex for thread safety
+puts "\nThread safety with Mutex:"
+counter = 0
+mutex = Mutex.new
+
+10.times.map do
+  Thread.new do
+    1000.times do
+      mutex.synchronize do
+        counter += 1
+      end
+    end
+  end
+end.each(&:join)
+
+puts "Final counter: #{counter} (should be 10000)"
+
+# Fibers (cooperative concurrency)
+puts "\nFiber example:"
+fiber = Fiber.new do
+  puts "Fiber started"
+  Fiber.yield "First yield"
+  puts "Fiber resumed"
+  Fiber.yield "Second yield"
+  puts "Fiber ending"
+  "Final result"
+end
+
+puts fiber.resume  # "First yield"
+puts fiber.resume  # "Second yield"
+puts fiber.resume  # "Final result"
+
+# Ractors (Ruby 3.0+ for true parallelism)
+puts "\nRactor example (simplified):"
+if defined?(Ractor)
+  ractor = Ractor.new do
+    Ractor.receive * 2
+  end
+  
+  ractor.send(21)
+  puts "Ractor result: #{ractor.take}"  # 42
+else
+  puts "Ractors not available (Ruby < 3.0)"
+end
+
+puts "\n=== PERFORMANCE OPTIMIZATION ==="
+
+# Benchmarking
+require 'benchmark'
+
+puts "Benchmarking string concatenation:"
+n = 10000
+
+Benchmark.bm do |x|
+  x.report("String#+") do
+    str = ""
+    n.times { str += "a" }
+  end
+  
+  x.report("String#<<") do
+    str = ""
+    n.times { str << "a" }
+  end
+  
+  x.report("Array#join") do
+    arr = []
+    n.times { arr << "a" }
+    arr.join
+  end
+end
+
+# Memory profiling
+puts "\nMemory usage example:"
+def memory_intensive
+  array = []
+  100000.times { array << "x" * 1024 }  # 100MB of strings
+  array
+end
+
+# GC statistics
+GC.start
+before = GC.stat
+memory_intensive
+after = GC.stat
+
+puts "GC runs: #{after[:count] - before[:count]}"
+puts "Objects allocated: #{after[:total_allocated_objects] - before[:total_allocated_objects]}"
+
+puts "\n=== ADVANCED DESIGN PATTERNS ==="
+
+# Decorator pattern
+module Decoratable
+  def decorate(decorator_class)
+    decorator_class.new(self)
+  end
+end
+
+class User
+  include Decoratable
+  
+  attr_reader :name, :email
+  
+  def initialize(name, email)
+    @name = name
+    @email = email
+  end
+end
+
+class EmailDecorator
+  def initialize(user)
+    @user = user
+  end
+  
+  def email_with_name
+    "#{@user.name} <#{@user.email}>"
+  end
+  
+  # Delegate other methods to the wrapped object
+  def method_missing(method, *args, &block)
+    @user.send(method, *args, &block)
+  end
+  
+  def respond_to_missing?(method, include_private = false)
+    @user.respond_to?(method) || super
+  end
+end
+
+user = User.new("Alice", "alice@example.com")
+decorated_user = user.decorate(EmailDecorator)
+puts "Decorated email: #{decorated_user.email_with_name}"
+puts "Original name still accessible: #{decorated_user.name}"
+
+# Strategy pattern
+class PaymentProcessor
+  def initialize(strategy)
+    @strategy = strategy
+  end
+  
+  def process(amount)
+    @strategy.process(amount)
+  end
+end
+
+class CreditCardStrategy
+  def process(amount)
+    puts "Processing $#{amount} via Credit Card"
+    # Credit card processing logic
+    { success: true, id: "cc_#{rand(1000)}" }
+  end
+end
+
+class PayPalStrategy
+  def process(amount)
+    puts "Processing $#{amount} via PayPal"
+    # PayPal processing logic
+    { success: true, id: "pp_#{rand(1000)}" }
+  end
+end
+
+processor = PaymentProcessor.new(CreditCardStrategy.new)
+processor.process(100)
+
+processor = PaymentProcessor.new(PayPalStrategy.new)
+processor.process(200)
+
+# Observer pattern
+module Observable
+  def initialize
+    @observers = []
+  end
+  
+  def add_observer(observer)
+    @observers << observer
+  end
+  
+  def notify_observers(event, *args)
+    @observers.each do |observer|
+      observer.update(event, *args) if observer.respond_to?(:update)
+    end
+  end
+end
+
+class Order
+  include Observable
+  
+  attr_reader :status
+  
+  def initialize
+    super
+    @status = :pending
+  end
+  
+  def process
+    @status = :processing
+    notify_observers(:status_changed, :processing)
+    
+    # Process order...
+    sleep 0.1
+    
+    @status = :completed
+    notify_observers(:status_changed, :completed)
+    notify_observers(:order_completed, self)
+  end
+end
+
+class LoggerObserver
+  def update(event, *args)
+    puts "LOG: Event #{event} with args #{args}"
+  end
+end
+
+class EmailObserver
+  def update(event, *args)
+    if event == :order_completed
+      order = args.first
+      puts "EMAIL: Order #{order.object_id} completed!"
+    end
+  end
+end
+
+order = Order.new
+order.add_observer(LoggerObserver.new)
+order.add_observer(EmailObserver.new)
+order.process
+
+puts "\n=== ADVANCED BLOCKS AND PROCS ==="
+
+# Closure example
+def multiplier(factor)
+  ->(x) { x * factor }
+end
+
+double = multiplier(2)
+triple = multiplier(3)
+
+puts "Double 5: #{double.call(5)}"
+puts "Triple 5: #{double.call(5)}"
+
+# Instance eval and class eval
+class Builder
+  def initialize
+    @attributes = {}
+  end
+  
+  def method_missing(name, *args)
+    if name.to_s.end_with?('=')
+      attribute = name.to_s.chomp('=')
+      @attributes[attribute] = args.first
+    else
+      @attributes[name.to_s]
+    end
+  end
+  
+  def build(&block)
+    instance_eval(&block) if block_given?
+    self
+  end
+end
+
+product = Builder.new.build do
+  name = "Laptop"
+  price = 999.99
+  category = "Electronics"
+end
+
+puts "Built product: #{product.inspect}"
+
+puts "\n=== RUBY 3.0+ FEATURES ==="
+
+# Pattern matching (Ruby 2.7+)
+case { name: "Alice", age: 30, role: :admin }
+in { name:, age: 18.., role: :admin }
+  puts "Admin #{name} is #{age} years old"
+in { name:, age: 18.. }
+  puts "User #{name} is #{age} years old"
+else
+  puts "No match"
+end
+
+# Rightward assignment (Ruby 3.0+)
+{ x: 1, y: 2 } => { x:, y: }
+puts "Rightward assignment: x=#{x}, y=#{y}"
+
+# Endless methods (Ruby 3.0+)
+def square(x) = x * x
+def cube(x) = x * x * x
+
+puts "Square of 5: #{square(5)}"
+puts "Cube of 3: #{cube(3)}"
+
+# RBS (Ruby Type Signatures - Ruby 3.0+)
+puts "\nRBS type signatures:"
+=begin
+# user.rbs
+class User
+  attr_reader name: String
+  attr_reader email: String
+  attr_reader age: Integer?
+  
+  def initialize: (String name, String email, ?Integer age) -> void
+  def full_name: () -> String
+  def admin?: () -> bool
+end
+=end
+
+puts "\n=== MEMORY MANAGEMENT ==="
+
+# Object allocation tracking
+require 'objspace'
+
+puts "Object space statistics:"
+puts "Total objects: #{ObjectSpace.count_objects[:TOTAL]}"
+puts "Free objects: #{ObjectSpace.count_objects[:FREE]}"
+puts "String objects: #{ObjectSpace.count_objects[:T_STRING]}"
+
+# Weak references
+require 'weakref'
+
+puts "\nWeak references:"
+obj = "I'm a string"
+weak_ref = WeakRef.new(obj)
+
+puts "Original object: #{obj}"
+puts "Weak reference: #{weak_ref}"
+
+# Remove strong reference
+obj = nil
+GC.start
+
+begin
+  puts "Weak reference after GC: #{weak_ref}"
+rescue WeakRef::RefError => e
+  puts "Weak reference collected: #{e.message}"
+end
+
+puts "\n=== ADVANCED DEBUGGING ==="
+
+# TracePoint
+puts "TracePoint example:"
+trace = TracePoint.new(:call) do |tp|
+  puts "Call: #{tp.defined_class}##{tp.method_id} at #{tp.path}:#{tp.lineno}"
+end
+
+def traced_method
+  puts "Inside traced method"
+end
+
+trace.enable
+traced_method
+trace.disable
+
+# Binding for advanced debugging
+def debug_method
+  x = 10
+  y = 20
+  binding  # Returns current binding
+end
+
+b = debug_method
+puts "Debug binding eval: x=#{b.eval('x')}, y=#{b.eval('y')}"
+
+puts "\n=== SECURITY BEST PRACTICES ==="
+
+# Safe evaluation
+def safe_eval(code, variables = {})
+  # Create a safe binding
+  safe_binding = binding
+  
+  # Set variables in the safe binding
+  variables.each do |key, value|
+    safe_binding.local_variable_set(key, value)
+  end
+  
+  # Evaluate with restrictions
+  safe_binding.eval(code)
+end
+
+result = safe_eval("x + y", x: 10, y: 20)
+puts "Safe eval result: #{result}"
+
+# Secure random
+require 'securerandom'
+puts "Secure random token: #{SecureRandom.hex(16)}"
+puts "Secure random UUID: #{SecureRandom.uuid}"
+
+puts "\n=== ADVANCED FILE HANDLING ==="
+
+# Memory-mapped files (fast large file processing)
+require 'mmap' if defined?(Mmap)
+
+puts "Advanced file operations:"
+# Write test file
+File.write('test.txt', 'Hello, Ruby!')
+
+# Process file in chunks
+File.open('test.txt', 'r') do |file|
+  while chunk = file.read(1024)
+    puts "Read chunk: #{chunk.bytesize} bytes"
+  end
+end
+
+# Clean up
+File.delete('test.txt') if File.exist?('test.txt')
+
+puts "\n=== FINAL EXAMPLE: COMPLETE APPLICATION ==="
+
+# A complete advanced Ruby example
+module AdvancedRuby
+  class Cache
+    include Observable
+    
+    def initialize
+      super
+      @store = {}
+      @mutex = Mutex.new
+      @expirations = {}
+    end
+    
+    def fetch(key, expires_in: nil, &block)
+      @mutex.synchronize do
+        if @store.key?(key) && !expired?(key)
+          @store[key]
+        else
+          value = block.call
+          set(key, value, expires_in: expires_in)
+          value
+        end
+      end
+    end
+    
+    def set(key, value, expires_in: nil)
+      @mutex.synchronize do
+        @store[key] = value
+        @expirations[key] = Time.now + expires_in if expires_in
+        notify_observers(:key_set, key, value)
+      end
+    end
+    
+    def clear
+      @mutex.synchronize do
+        old_store = @store.dup
+        @store.clear
+        @expirations.clear
+        notify_observers(:cache_cleared, old_store)
+      end
+    end
+    
+    private
+    
+    def expired?(key)
+      return false unless @expirations.key?(key)
+      Time.now > @expirations[key]
+    end
+  end
+  
+  class CacheLogger
+    def update(event, *args)
+      case event
+      when :key_set
+        key, value = args
+        puts "CACHE LOG: Set #{key} = #{value.inspect}"
+      when :cache_cleared
+        old_store = args.first
+        puts "CACHE LOG: Cleared #{old_store.size} items"
+      end
+    end
+  end
+end
+
+# Use the advanced cache
+cache = AdvancedRuby::Cache.new
+cache.add_observer(AdvancedRuby::CacheLogger.new)
+
+# Fetch with expiration
+result = cache.fetch(:expensive_calculation, expires_in: 60) do
+  puts "Calculating..."
+  sleep 0.1
+  42
+end
+
+puts "Cache result: #{result}"
+
+# Get from cache (won't recalculate)
+result2 = cache.fetch(:expensive_calculation) do
+  puts "This won't execute"
+  99
+end
+
+puts "Cached result: #{result2}"</textarea>
+                        <button class="run-btn" onclick="runCode('editor-10', 'output-10')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Output
+                        </div>
+                        <div class="preview-container" id="output-10"></div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>Metaprogramming: <code>define_method</code>, <code>method_missing</code>, <code>class_eval</code></li>
+                                <li>Singleton classes: Add methods to individual objects</li>
+                                <li>Concurrency: Threads (shared memory), Fibers (cooperative), Ractors (parallel)</li>
+                                <li>Thread safety: Mutex, atomic operations, thread-local storage</li>
+                                <li>Performance: Benchmarking, memory profiling, optimization techniques</li>
+                                <li>Design patterns: Decorator, Strategy, Observer, Factory, etc.</li>
+                                <li>Closures: Blocks, Procs, lambdas that capture their environment</li>
+                                <li>Ruby 3.0+: Pattern matching, endless methods, RBS type signatures</li>
+                                <li>Memory management: Garbage collection, weak references, object allocation</li>
+                                <li>Security: Safe evaluation, input validation, secure random</li>
+                            </ul>
+                        </div>
+
+                        <!-- MODULE EXPLANATION -->
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-rocket"></i> Expert-Level Ruby Mastery</h3>
+                            <p>Advanced Ruby programming transcends basic syntax to encompass the language's most powerful and subtle features. Metaprogramming enables code that writes code, creating domain-specific languages and flexible frameworks. Ruby's object model, with its consistent treatment of classes as objects and metaclass hierarchy, provides the foundation for these capabilities. Understanding these concepts allows developers to write more expressive code and build sophisticated abstractions.</p>
+                            
+                            <p>Concurrency and parallelism in Ruby have evolved significantly. While the Global Interpreter Lock (GIL) in MRI Ruby limits true parallelism, JRuby and TruffleRuby offer alternatives without this restriction. Ruby 3.0 introduced Ractors for actor-model concurrency and fiber schedulers for non-blocking I/O. These advancements, combined with traditional thread pools and event-driven architectures, enable Ruby applications to handle high concurrency demands efficiently. Performance optimization requires understanding Ruby's garbage collection algorithms, memory allocation patterns, and JIT compilation in Ruby 3.0+.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-magic"></i> Metaprogramming Mastery</h4>
+                                    <p>Advanced metaprogramming techniques include dynamic constant resolution, method resolution order manipulation, and reflection APIs. These enable frameworks like Rails to create expressive APIs while maintaining runtime flexibility for developer customization.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-tachometer-alt"></i> Performance Architecture</h4>
+                                    <p>High-performance Ruby applications employ caching strategies, database optimization, background job processing, and CDN integration. Understanding Ruby's performance characteristics guides architectural decisions around microservices, monoliths, and hybrid approaches.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-shield-alt"></i> Production Readiness</h4>
+                                    <p>Production Ruby applications require monitoring, logging, error tracking, and deployment strategies. Advanced topics include zero-downtime deployments, database migration strategies, and scaling techniques for high-traffic applications.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-globe"></i> Global-Scale Ruby Applications</h4>
+                                <p>GitHub's codebase demonstrates advanced Ruby techniques at massive scale. The platform uses sophisticated caching layers with expiration strategies and invalidation patterns. Background job processors handle millions of events with priority queues and retry logic. Database access employs connection pooling, read replicas, and query optimization. The application uses metaprogramming for flexible API endpoints while maintaining performance through JIT compilation and optimized garbage collection. Monitoring systems track thousands of metrics, while deployment pipelines enable continuous delivery with automated rollback capabilities. This comprehensive approach shows how advanced Ruby concepts combine to create resilient, scalable systems serving millions of developers worldwide.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Build an Advanced Ruby Application:</strong> Create a comprehensive application demonstrating:</p>
+                            <ul>
+                                <li>Metaprogramming for dynamic method generation</li>
+                                <li>Concurrent processing with threads or fibers</li>
+                                <li>Design patterns (at least 3 different patterns)</li>
+                                <li>Performance optimization techniques</li>
+                                <li>Memory management and profiling</li>
+                                <li>Advanced debugging and error handling</li>
+                                <li>Security best practices</li>
+                                <li>Ruby 3.0+ features implementation</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish your assignment, open SkillMynte AI and upload your work so the AI can correct it for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Practice Playground -->
+            <div class="course-module" id="playground" data-aos="fade-up">
+                <div class="course-three">
+                    <h1>PRACTICE PLAYGROUND</h1>
+                    <h3>Experiment with what you've learned</h3>
+                    <i class="fas fa-laptop-code course-icon" style="color: #CC342D;"></i>
+                </div>
+                <div class="course-one">
+                    <h1>Your Ruby Playground: <span>Try Your Own Code</span></h1>
+                    <p>Use this space to experiment with everything you've learned. Try combining different Ruby concepts and see the results in real-time! This is your sandbox to practice and explore Ruby programming.</p>
+                    
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Ruby</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="playground-editor" spellcheck="false"># Welcome to Ruby Playground!
+# Edit this code and click "Run Code" to see your changes
+
+puts "=" * 50
+puts "RUBY PROGRAMMING PLAYGROUND"
+puts "=" * 50
+
+# Try creating your own Ruby code here
+class Playground
+  def initialize(name)
+    @name = name
+  end
+  
+  def welcome
+    puts "Welcome to #{@name}'s Ruby Playground!"
+    puts "Current time: #{Time.now}"
+  end
+  
+  def demonstrate_features
+    puts "\n=== DEMONSTRATING RUBY FEATURES ==="
+    
+    # Strings and interpolation
+    name = "SkillMynte"
+    puts "Hello, #{name}!"
+    puts "Name reversed: #{name.reverse}"
+    puts "Name length: #{name.length}"
+    
+    # Arrays
+    numbers = [1, 2, 3, 4, 5]
+    puts "\nNumbers array: #{numbers}"
+    puts "Sum: #{numbers.sum}"
+    puts "Even numbers: #{numbers.select(&:even?)}"
+    
+    # Hashes
+    person = { name: "Alice", age: 30, city: "Rubyville" }
+    puts "\nPerson hash: #{person}"
+    puts "Person's city: #{person[:city]}"
+    
+    # Blocks and iteration
+    puts "\nIterating with blocks:"
+    numbers.each_with_index do |num, index|
+      puts "  numbers[#{index}] = #{num}"
+    end
+    
+    # Custom methods
+    puts "\nCustom calculations:"
+    puts "  5 + 3 = #{add(5, 3)}"
+    puts "  10 * 2 = #{multiply(10, 2)}"
+    
+    # Object-oriented programming
+    dog = Dog.new("Buddy")
+    dog.bark
+    dog.fetch("ball")
+  end
+  
+  private
+  
+  def add(a, b)
+    a + b
+  end
+  
+  def multiply(a, b)
+    a * b
+  end
+end
+
+class Dog
+  def initialize(name)
+    @name = name
+  end
+  
+  def bark
+    puts "#{@name} says: Woof! Woof!"
+  end
+  
+  def fetch(item)
+    puts "#{@name} fetches the #{item}!"
+  end
+end
+
+# Create and run playground
+playground = Playground.new("SkillMynte")
+playground.welcome
+playground.demonstrate_features
+
+puts "\n" + "=" * 50
+puts "CHALLENGE: Try modifying this code!"
+puts "=" * 50
+
+puts "\nIdeas to try:"
+puts "1. Add a Cat class with meow method"
+puts "2. Create a Calculator class with more operations"
+puts "3. Implement a simple game (guess the number)"
+puts "4. Practice with arrays and hashes"
+puts "5. Try metaprogramming with define_method"
+
+# Your code here - experiment freely!
+
+puts "\nHappy coding! 🚀"</textarea>
+                        <button class="run-btn" onclick="runCode('playground-editor', 'playground-output')">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Output
+                        </div>
+                        <div class="preview-container" id="playground-output"></div>
+                    </div>
+                    
+                    <div class="course-five">
+                        <h3>Challenge Exercises:</h3>
+                        <ol>
+                            <li>Create a complete Ruby application with:
+                                <ul>
+                                    <li>Classes and objects</li>
+                                    <li>Inheritance and modules</li>
+                                    <li>Error handling</li>
+                                    <li>File I/O operations</li>
+                                </ul>
+                            </li>
+                            <li>Build a command-line tool that:
+                                <ul>
+                                    <li>Reads and processes files</li>
+                                    <li>Uses command-line arguments</li>
+                                    <li>Includes help documentation</li>
+                                    <li>Handles errors gracefully</li>
+                                </ul>
+                            </li>
+                            <li>Implement common algorithms:
+                                <ul>
+                                    <li>Sorting algorithms (bubble, quick, merge)</li>
+                                    <li>Search algorithms (binary, linear)</li>
+                                    <li>Data structures (linked lists, trees)</li>
+                                </ul>
+                            </li>
+                            <li>Create a mini web framework:
+                                <ul>
+                                    <li>Routing system</li>
+                                    <li>Template rendering</li>
+                                    <li>Middleware support</li>
+                                </ul>
+                            </li>
+                            <li>Combine all concepts into a complete project</li>
+                        </ol>
+                        
+                        <h3>Tips & Resources:</h3>
+                        <ul>
+                            <li>Use <code>irb</code> or <code>pry</code> for interactive experimentation</li>
+                            <li>Read Ruby documentation at <a href="https://ruby-doc.org" style="color: var(--primary-light);">ruby-doc.org</a></li>
+                            <li>Practice with coding challenge websites</li>
+                            <li>Study open-source Ruby projects on GitHub</li>
+                            <li>Join Ruby communities for help and inspiration</li>
+                            <li>For Rails: <a href="https://guides.rubyonrails.org" style="color: var(--primary-light);">Ruby on Rails Guides</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Premium Subscription CTA -->
+            <div class="premium-subscription" id="premium-subscription" data-aos="fade-up">
+                <h2>Unlock Premium SkillMynte Content</h2>
+                <p>Upgrade to SkillMynte Pro for exclusive courses, advanced projects, and personalized learning paths</p>
+                
+                <div class="premium-features">
+                    <div class="premium-feature">
+                        <i class="fas fa-gem"></i>
+                        <h3>Premium Courses</h3>
+                        <p>Access our entire library of advanced courses and exclusive content</p>
+                    </div>
+                    <div class="premium-feature">
+                        <i class="fas fa-trophy"></i>
+                        <h3>Certification</h3>
+                        <p>Earn industry-recognized certificates to showcase your skills</p>
+                    </div>
+                    <div class="premium-feature">
+                        <i class="fas fa-user-graduate"></i>
+                        <h3>Mentorship</h3>
+                        <p>Get personalized guidance from industry experts</p>
+                    </div>
+                </div>
+                
+                <div class="pricing-options">
+                    <div class="pricing-option">
+                        <h3>Monthly</h3>
+                        <div class="price">₦3,500<span>/month</span></div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> All Premium Courses</li>
+                            <li><i class="fas fa-check"></i> Practice Projects</li>
+                            <li><i class="fas fa-check"></i> Community Access</li>
+                            <li><i class="fas fa-check"></i> Certificates</li>
+                            <li><i class="fas fa-check"></i> personal AI inbuilt</li>
+                        </ul>
+                        <a href="premium courses.html"><button class="pricing-btn">Get Started</button></a>
+                    </div>
+                    
+                    <div class="pricing-option" style="border-color: var(--white); transform: scale(1.05);">
+                        <h3>Annual <span style="background: var(--white); color: #2962FF; padding: 0.2rem 0.5rem; border-radius: 20px; font-size: 0.8rem; margin-left: 0.5rem;">Best Value</span></h3>
+                        <div class="price">₦37,000<span>/year</span></div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> All Premium Courses</li>
+                            <li><i class="fas fa-check"></i> Practice Projects</li>
+                            <li><i class="fas fa-check"></i> Community Access</li>
+                            <li><i class="fas fa-check"></i> Certificates</li>
+                            <li><i class="fas fa-check"></i> personal AI inbuilt</li>
+                        </ul>
+                        <a href="premium courses.html"><button class="pricing-btn">Get Started</button></a>
+                    </div>
+                    
+                    <div class="pricing-option">
+                        <h3>Lifetime</h3>
+                        <div class="price">₦200,000<span>/once</span></div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> All Premium Courses</li>
+                            <li><i class="fas fa-check"></i> Practice Projects</li>
+                            <li><i class="fas fa-check"></i> Community Access</li>
+                            <li><i class="fas fa-check"></i> Certificates</li>
+                            <li><i class="fas fa-check"></i> personal AI inbuilt</li>
+                        </ul>
+                        <a href="premium courses.html"><button class="pricing-btn">Get Started</button></a>
+                    </div>
+                </div>
+                
+                <button class="premium-cta-btn">
+                    <i class="fas fa-rocket"></i> Upgrade to SkillMynte Pro
+                </button>
+            </div>
+            
+            <!-- Footer -->
+            <footer>
+                <div class="footer-content">
+                    <div class="footer-column">
+                        <h3>About SkillMynte</h3>
+                        <p>SkillMynte is a premium learning platform dedicated to helping developers of all levels master programming technologies through interactive courses and hands-on practice.</p>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/profile.php?id=61581069862024"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://x.com/SkillMynte_AI?t=CcoQtjWZGGOXqfTfrsufjQ&s=09"><i class="fab fa-twitter"></i></a>
+                            <a href="https://youtube.com/@skillmynte?si=LmX2MjSKU3N1Xa5S"><i class="fab fa-youtube"></i></a>
+                            <a href="https://www.instagram.com/skillmynte_ai?igsh=MTd1YWpjdXV1OHhrbA=="><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Quick Links</h3>
+                        <ul class="footer-links">
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Home</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Courses</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Practice</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Projects</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Popular Courses</h3>
+                        <ul class="footer-links">
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Ruby Programming</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Ruby on Rails</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> JavaScript Mastery</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Python Development</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Web Development</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Contact Us</h3>
+                        <p><i class="fas fa-envelope"></i>Skillmynteofficial@gmail.com</p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 SkillMynte. All rights reserved. | Designed with <i class="fas fa-heart" style="color: var(--primary);"></i> for the developer community</p>
+                </div>
+            </footer>
+
+            <script>
+                // Function to run code in preview
+                function runCode(editorId, outputId) {
+                    const editor = document.getElementById(editorId);
+                    const output = document.getElementById(outputId);
+                    
+                    try {
+                        // For Ruby-like output simulation
+                        const code = editor.value;
+                        let result = "";
+                        
+                        // Simple Ruby code execution simulation
+                        if (code.includes("puts") || code.includes("print")) {
+                            // Extract puts statements and simulate output
+                            const lines = code.split('\n');
+                            lines.forEach(line => {
+                                if (line.includes('puts "') || line.includes("puts '")) {
+                                    const match = line.match(/puts ["'](.*)["']/);
+                                    if (match) {
+                                        result += match[1] + "\n";
+                                    }
+                                } else if (line.includes('puts ')) {
+                                    const match = line.match(/puts (.*)/);
+                                    if (match && !match[1].includes('"') && !match[1].includes("'")) {
+                                        // Evaluate simple expressions
+                                        try {
+                                            const evalResult = eval(match[1]);
+                                            result += evalResult + "\n";
+                                        } catch (e) {
+                                            result += "[Expression output]\n";
+                                        }
+                                    }
+                                }
+                            });
+                        } else {
+                            result = "Code executed successfully. Try adding 'puts' statements to see output!";
+                        }
+                        
+                        output.innerHTML = `<pre style="color: var(--primary-light); white-space: pre-wrap;">${result}</pre>`;
+                    } catch (error) {
+                        output.innerHTML = `<div style="color: var(--accent); padding: 1rem;">Error: ${error.message}</div>`;
+                    }
+                }
+                
+                // Initialize all editors with their default output
+                document.addEventListener('DOMContentLoaded', function() {
+                    // Run all code editors on load
+                    runCode('editor-1', 'output-1');
+                    runCode('editor-2', 'output-2');
+                    runCode('editor-3', 'output-3');
+                    runCode('editor-4', 'output-4');
+                    runCode('editor-5', 'output-5');
+                    runCode('editor-6', 'output-6');
+                    runCode('editor-7', 'output-7');
+                    runCode('editor-8', 'output-8');
+                    runCode('editor-9', 'output-9');
+                    runCode('editor-10', 'output-10');
+                    runCode('playground-editor', 'playground-output');
+                    
+                    // Add event listeners to all run buttons in editor headers
+                    document.querySelectorAll('.run-editor').forEach(btn => {
+                        btn.addEventListener('click', function() {
+                            const editorContainer = this.closest('.code-editor-container');
+                            const editor = editorContainer.querySelector('.code-editor');
+                            const output = editorContainer.querySelector('.preview-container');
+                            runCode(editor.id, output.id);
+                        });
+                    });
+                    
+                    // Add reset functionality
+                    document.querySelectorAll('.reset-editor').forEach(btn => {
+                        btn.addEventListener('click', function() {
+                            const editorContainer = this.closest('.code-editor-container');
+                            const editor = editorContainer.querySelector('.code-editor');
+                            const originalContent = editor.dataset.original || editor.defaultValue;
+                            editor.value = originalContent;
+                            runCode(editor.id, editorContainer.querySelector('.preview-container').id);
+                        });
+                    });
+                    
+                    // Store original content for reset functionality
+                    document.querySelectorAll('.code-editor').forEach(editor => {
+                        editor.dataset.original = editor.value;
+                    });
+
+                    // Handle navbar scroll effect
+                    window.addEventListener('scroll', function() {
+                        const navbar = document.getElementById('navbar');
+                        if (window.scrollY > 50) {
+                            navbar.classList.add('scrolled');
+                        } else {
+                            navbar.classList.remove('scrolled');
+                        }
+                    });
+
+                    // FIXED: Hamburger menu functionality
+                    const menuToggle = document.getElementById('menuToggle');
+                    const navMenu = document.querySelector('.nav-menu');
+                    const sidebar = document.getElementById('sidebar');
+                    const body = document.body;
+
+                    function toggleMobileMenu() {
+                        const isActive = navMenu.classList.contains('active');
+                        
+                        if (isActive) {
+                            // Close menu
+                            navMenu.classList.remove('active');
+                            sidebar.classList.remove('active');
+                            menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                            body.classList.remove('menu-open');
+                            menuToggle.setAttribute('aria-expanded', 'false');
+                        } else {
+                            // Open menu
+                            navMenu.classList.add('active');
+                            sidebar.classList.add('active');
+                            menuToggle.innerHTML = '<i class="fas fa-times"></i>';
+                            body.classList.add('menu-open');
+                            menuToggle.setAttribute('aria-expanded', 'true');
+                        }
+                    }
+
+                    function closeMobileMenu() {
+                        navMenu.classList.remove('active');
+                        sidebar.classList.remove('active');
+                        menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                        body.classList.remove('menu-open');
+                        menuToggle.setAttribute('aria-expanded', 'false');
+                    }
+
+                    // Mobile menu toggle
+                    menuToggle.addEventListener('click', function(e) {
+                        e.stopPropagation();
+                        toggleMobileMenu();
+                    });
+
+                    // Close menu when clicking on nav links
+                    document.querySelectorAll('.nav-link').forEach(link => {
+                        link.addEventListener('click', function() {
+                            if (window.innerWidth <= 1024) {
+                                closeMobileMenu();
+                            }
+                        });
+                    });
+
+                    // Close menu when clicking on dropdown items
+                    document.querySelectorAll('.dropdown-item').forEach(item => {
+                        item.addEventListener('click', function() {
+                            if (window.innerWidth <= 1024) {
+                                closeMobileMenu();
+                            }
+                        });
+                    });
+
+                    // Close menu when clicking outside
+                    document.addEventListener('click', function(e) {
+                        if (window.innerWidth <= 1024 && 
+                            navMenu.classList.contains('active') &&
+                            !e.target.closest('.nav-menu') && 
+                            !e.target.closest('.menu-toggle') &&
+                            !e.target.closest('.sidebar')) {
+                            closeMobileMenu();
+                        }
+                    });
+
+                    // Close menu on escape key
+                    document.addEventListener('keydown', function(e) {
+                        if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+                            closeMobileMenu();
+                        }
+                    });
+
+                    // Close menu on resize if switching to desktop
+                    window.addEventListener('resize', function() {
+                        if (window.innerWidth > 1024 && navMenu.classList.contains('active')) {
+                            closeMobileMenu();
+                        }
+                    });
+
+                    // Mobile dropdown functionality
+                    document.querySelectorAll('.courses-dropdown').forEach(dropdown => {
+                        const button = dropdown.querySelector('.courses-btn');
+                        
+                        button.addEventListener('click', function(e) {
+                            if (window.innerWidth <= 1024) {
+                                e.preventDefault();
+                                e.stopPropagation();
+                                dropdown.classList.toggle('active');
+                            }
+                        });
+                    });
+
+                    // Level filtering functionality
+                    const levelButtons = document.querySelectorAll('.level-btn');
+                    const modules = document.querySelectorAll('.course-module');
+                    
+                    levelButtons.forEach(button => {
+                        button.addEventListener('click', function() {
+                            const level = this.getAttribute('data-level');
+                            
+                            // Remove active class from all buttons
+                            levelButtons.forEach(btn => btn.classList.remove('active'));
+                            // Add active class to clicked button
+                            this.classList.add('active');
+                            
+                            if (level === 'all') {
+                                // Show all modules
+                                modules.forEach(module => {
+                                    module.style.display = 'flex';
+                                });
+                            } else if (level === 'advanced') {
+                                // Show advanced modules (7-10)
+                                modules.forEach(module => {
+                                    const moduleId = module.id;
+                                    if (moduleId.includes('module7') || moduleId.includes('module8') || 
+                                        moduleId.includes('module9') || moduleId.includes('module10')) {
+                                        module.style.display = 'flex';
+                                    } else {
+                                        module.style.display = 'none';
+                                    }
+                                });
+                            } else {
+                                // Show modules with matching difficulty
+                                modules.forEach(module => {
+                                    const difficulty = module.getAttribute('data-difficulty');
+                                    if (difficulty === level) {
+                                        module.style.display = 'flex';
+                                    } else {
+                                        module.style.display = 'none';
+                                    }
+                                });
+                            }
+                            
+                            // Scroll to first visible module
+                            const firstVisible = document.querySelector('.course-module[style="display: flex;"]');
+                            if (firstVisible) {
+                                firstVisible.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                            }
+                        });
+                    });
+
+                    // Search functionality
+                    const searchInput = document.getElementById('search-input');
+                    
+                    searchInput.addEventListener('input', function() {
+                        const searchTerm = this.value.toLowerCase().trim();
+                        
+                        if (searchTerm === '') {
+                            // Show all modules if search is empty
+                            modules.forEach(module => {
+                                module.style.display = 'flex';
+                            });
+                            return;
+                        }
+                        
+                        modules.forEach(module => {
+                            const moduleTitle = module.querySelector('h1').textContent.toLowerCase();
+                            const moduleContent = module.textContent.toLowerCase();
+                            
+                            if (moduleTitle.includes(searchTerm) || moduleContent.includes(searchTerm)) {
+                                module.style.display = 'flex';
+                            } else {
+                                module.style.display = 'none';
+                            }
+                        });
+                    });
+                });
+                
+                // Smooth scrolling for sidebar links
+                document.querySelectorAll('.sidebar-item').forEach(item => {
+                    item.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        
+                        // Remove active class from all items
+                        document.querySelectorAll('.sidebar-item').forEach(i => {
+                            i.classList.remove('active');
+                        });
+                        
+                        // Add active class to clicked item
+                        this.classList.add('active');
+                        
+                        // Close mobile menu if open
+                        if (window.innerWidth <= 1024) {
+                            document.querySelector('.nav-menu').classList.remove('active');
+                            document.querySelector('.sidebar').classList.remove('active');
+                            document.querySelector('.menu-toggle').innerHTML = '<i class="fas fa-bars"></i>';
+                            document.body.classList.remove('menu-open');
+                        }
+                        
+                        // Scroll to section
+                        const targetId = this.getAttribute('href');
+                        const targetElement = document.querySelector(targetId);
+                        if (targetElement) {
+                            window.scrollTo({
+                                top: targetElement.offsetTop - 100,
+                                behavior: 'smooth'
+                            });
+                        }
+                    });
+                });
+            </script>
+        </div>
+    </div>
+</body>
+</html>

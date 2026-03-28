@@ -1,0 +1,2047 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laravel Fundamentals | SkillMynte</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="rounded_logo.png">
+    <link rel="stylesheet" href="free laravel course.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-code"></i>
+                SKILLMYNTE
+            </a>
+            <div class="nav-menu">
+                <a href="#" class="nav-link">Home</a>
+                <a href="#" class="nav-link">Courses</a>
+                <a href="#" class="nav-link">Practice</a>
+                <a href="#" class="nav-link">Projects</a>
+                
+                <div class="courses-dropdown">
+                    <button class="courses-btn">
+                        <i class="fas fa-book-open"></i> Jump to Module
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#module1" class="dropdown-item">
+                            <i class="fab fa-php php-icon"></i> Installation & Setup
+                        </a>
+                        <a href="#module2" class="dropdown-item">
+                            <i class="fab fa-php php-icon"></i> Routing
+                        </a>
+                        <a href="#module3" class="dropdown-item">
+                            <i class="fab fa-php php-icon"></i> Controllers
+                        </a>
+                        <a href="#module4" class="dropdown-item">
+                            <i class="fab fa-php php-icon"></i> Blade Templating
+                        </a>
+                        <a href="#module5" class="dropdown-item">
+                            <i class="fab fa-php php-icon"></i> Eloquent ORM
+                        </a>
+                        <a href="#module6" class="dropdown-item">
+                            <i class="fab fa-php php-icon"></i> Forms & Validation
+                        </a>
+                        <a href="#module7" class="dropdown-item">
+                            <i class="fab fa-php php-icon"></i> Authentication
+                        </a>
+                        <a href="#module8" class="dropdown-item">
+                            <i class="fab fa-php php-icon"></i> Relationships
+                        </a>
+                        <a href="#module9" class="dropdown-item">
+                            <i class="fab fa-php php-icon"></i> API Development
+                        </a>
+                        <a href="#module10" class="dropdown-item">
+                            <i class="fab fa-php php-icon"></i> Advanced Concepts
+                        </a>
+                        <a href="#playground" class="dropdown-item">
+                            <i class="fas fa-laptop-code"></i> Practice Playground
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Premium Course Navigation -->
+    <div class="course-navigation">
+        <div class="course-nav-container">
+            <div class="course-category">
+                <button class="category-btn">
+                    <i class="fas fa-layer-group"></i> Categories
+                </button>
+                <div class="category-dropdown">
+                    <a href="#" class="category-item">
+                        <i class="fab fa-php php-icon"></i> PHP & Laravel
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fab fa-js-square js-icon"></i> JavaScript
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fab fa-python python-icon"></i> Python
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fab fa-java java-icon"></i> Java
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fas fa-database"></i> Databases
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fas fa-mobile-alt"></i> Mobile Development
+                    </a>
+                </div>
+            </div>
+            
+            <div class="course-levels">
+                <button class="level-btn active" data-level="all">All Levels</button>
+                <button class="level-btn" data-level="beginner">Beginner</button>
+                <button class="level-btn" data-level="intermediate">Intermediate</button>
+                <button class="level-btn" data-level="advanced">Advanced</button>
+            </div>
+            
+            <div class="course-search">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" class="search-input" id="search-input" placeholder="Search courses...">
+            </div>
+        </div>
+    </div>
+    
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <a href="#module1" class="sidebar-item active completed">
+            <i class="fab fa-php php-icon"></i>
+            <span>Module 1: Installation & Setup</span>
+            <span class="progress-indicator"><i class="fas fa-check"></i></span>
+        </a>
+        <a href="#module2" class="sidebar-item completed">
+            <i class="fab fa-php php-icon"></i>
+            <span>Module 2: Routing</span>
+            <span class="progress-indicator"><i class="fas fa-check"></i></span>
+        </a>
+        <a href="#module3" class="sidebar-item completed">
+            <i class="fab fa-php php-icon"></i>
+            <span>Module 3: Controllers</span>
+            <span class="progress-indicator"><i class="fas fa-check"></i></span>
+        </a>
+        <a href="#module4" class="sidebar-item">
+            <i class="fab fa-php php-icon"></i>
+            <span>Module 4: Blade Templating</span>
+            <span class="progress-indicator">4</span>
+        </a>
+        <a href="#module5" class="sidebar-item">
+            <i class="fab fa-php php-icon"></i>
+            <span>Module 5: Eloquent ORM</span>
+            <span class="progress-indicator">5</span>
+        </a>
+        <a href="#module6" class="sidebar-item">
+            <i class="fab fa-php php-icon"></i>
+            <span>Module 6: Forms & Validation</span>
+            <span class="progress-indicator">6</span>
+        </a>
+        <a href="#module7" class="sidebar-item">
+            <i class="fab fa-php php-icon"></i>
+            <span>Module 7: Authentication</span>
+            <span class="progress-indicator">7</span>
+        </a>
+        <a href="#module8" class="sidebar-item">
+            <i class="fab fa-php php-icon"></i>
+            <span>Module 8: Relationships</span>
+            <span class="progress-indicator">8</span>
+        </a>
+        <a href="#module9" class="sidebar-item">
+            <i class="fab fa-php php-icon"></i>
+            <span>Module 9: API Development</span>
+            <span class="progress-indicator">9</span>
+        </a>
+        <a href="#module10" class="sidebar-item">
+            <i class="fab fa-php php-icon"></i>
+            <span>Module 10: Advanced Concepts</span>
+            <span class="progress-indicator">10</span>
+        </a>
+        <a href="#playground" class="sidebar-item">
+            <i class="fas fa-laptop-code"></i>
+            <span>Practice Playground</span>
+        </a>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="content-wrapper">
+        <div class="container">
+            <!-- Module 1: Installation & Setup -->
+            <div class="course-module" id="module1" data-aos="fade-up" data-difficulty="beginner">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>LARAVEL BASICS</h1>
+                    <h3>Installation, configuration, and project structure</h3>
+                    <span class="difficulty">Beginner</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/919/919830.png" class="module-icon" alt="PHP Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 1: <span>Getting Started with Laravel</span></h1>
+                    <p>Laravel is a powerful PHP framework that makes web development elegant and expressive. It follows the Model-View-Controller (MVC) architectural pattern and provides a rich set of features out of the box. In this module, you'll learn how to install Laravel, understand its directory structure, and create your first project.</p>
+                    
+                    <p>The installation process is simple using Composer, PHP's dependency manager. Once installed, you'll explore the default project layout: <code>routes/</code> for web and API routes, <code>app/</code> for your application logic, <code>resources/views/</code> for Blade templates, and more.</p>
+                    
+                    <h3>Try It Yourself (CLI commands):</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Bash</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-1" spellcheck="false"># Install Laravel via Composer
+composer create-project laravel/laravel my-first-app
+
+# Navigate into the project
+cd my-first-app
+
+# Start the development server
+php artisan serve
+
+# Your application will be available at http://localhost:8000</textarea>
+                        <button class="run-btn" onclick="runCode('editor-1', 'output-1')">
+                            <i class="fas fa-play"></i> Run Code (simulated)
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Output
+                        </div>
+                        <div class="preview-container" id="output-1">(Commands shown â€“ run them in your terminal)</div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>Laravel requires PHP â‰¥ 8.1 and Composer</li>
+                                <li>The <code>artisan</code> CLI tool provides many helpful commands</li>
+                                <li><code>php artisan serve</code> starts a local development server</li>
+                                <li>Key directories: <code>app/</code>, <code>routes/</code>, <code>resources/views/</code>, <code>database/migrations/</code></li>
+                                <li>Environment settings are stored in <code>.env</code> file</li>
+                                <li>Laravel follows MVC pattern â€“ Models, Views, Controllers</li>
+                                <li>The framework is modular, using service containers and facades</li>
+                            </ul>
+                        </div>
+
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-cogs"></i> Laravel Philosophy</h3>
+                            <p>Laravel aims to make common web development tasks enjoyable and intuitive. It provides expressive, elegant syntax while maintaining powerful features like the Eloquent ORM, Blade templating, and a robust routing system. The framework's "convention over configuration" approach means you can build productionâ€‘ready applications quickly without sacrificing code quality or maintainability.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-box"></i> Modular Structure</h4>
+                                    <p>Laravel's directory structure organizes your application logically. Controllers handle HTTP requests, Models interact with the database, and Views present data. This separation of concerns makes your code easier to test and maintain.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-tools"></i> Artisan Console</h4>
+                                    <p>Artisan is Laravel's commandâ€‘line tool. It can generate boilerplate code, run database migrations, create seeders, and even build custom commands, dramatically speeding up development.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-shield-alt"></i> Security</h4>
+                                    <p>Laravel includes builtâ€‘in protection against common vulnerabilities like SQL injection, XSS, and CSRF. It hashes passwords automatically and provides a simple API for authentication and authorization.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-globe"></i> Realâ€‘World Usage</h4>
+                                <p>Thousands of companiesâ€”from startups to large enterprisesâ€”use Laravel to build everything from simple blogs to complex SaaS platforms. Laravel's ecosystem includes tools like Laravel Forge (server management), Vapor (serverless deployment), and Nova (administration panel), making it a complete solution for professional web development.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Create your first Laravel project:</strong></p>
+                            <ul>
+                                <li>Install Laravel using Composer</li>
+                                <li>Start the development server and visit the welcome page</li>
+                                <li>Explore the default directory structure</li>
+                                <li>Modify the welcome view (found in <code>resources/views/welcome.blade.php</code>)</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish, open SkillMynte AI and upload your work so the AI can review it.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 2: Routing -->
+            <div class="course-module" id="module2" data-aos="fade-up" data-difficulty="beginner">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>ROUTING</h1>
+                    <h3>Define URLs and map them to controllers</h3>
+                    <span class="difficulty">Beginner</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/919/919830.png" class="module-icon" alt="PHP Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 2: <span>Basic Routing & Route Parameters</span></h1>
+                    <p>Routes are the entry points to your Laravel application. They map HTTP requests (like GET or POST) to specific controllers or closures. Laravel's routing is clean and expressive, supporting route parameters, named routes, and groups.</p>
+                    
+                    <p>All routes are defined in files inside the <code>routes</code> directory. The most common is <code>web.php</code> for browserâ€‘facing routes. You can also define API routes in <code>api.php</code>.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">PHP</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-2" spellcheck="false">&lt;?php
+// routes/web.php
+
+use Illuminate\Support\Facades\Route;
+
+// Basic GET route
+Route::get('/', function () {
+    return view('welcome');
+});
+
+// Route with required parameter
+Route::get('/user/{id}', function ($id) {
+    return "User ID: " . $id;
+});
+
+// Route with optional parameter
+Route::get('/posts/{category?}', function ($category = null) {
+    return $category ? "Posts in category: {$category}" : "All posts";
+});
+
+// Named route
+Route::get('/profile', function () {
+    return "User profile";
+})->name('profile');
+
+// Route that calls a controller
+Route::get('/dashboard', [DashboardController::class, 'index']);
+
+// Route group with prefix
+Route::prefix('admin')->group(function () {
+    Route::get('/users', function () {
+        return "Admin user list";
+    });
+    Route::get('/settings', function () {
+        return "Admin settings";
+    });
+});</textarea>
+                        <button class="run-btn" onclick="runCode('editor-2', 'output-2')">
+                            <i class="fas fa-play"></i> Run Code (simulated)
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Output (simulated)
+                        </div>
+                        <div class="preview-container" id="output-2">(Route definitions â€“ they work when you visit the corresponding URLs)</div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>Routes are defined using <code>Route::</code> methods (<code>get</code>, <code>post</code>, <code>put</code>, <code>delete</code>, etc.)</li>
+                                <li>Route parameters are enclosed in curly braces <code>{ }</code></li>
+                                <li>Optional parameters have a trailing <code>?</code> and must have a default value</li>
+                                <li>Named routes allow easy URL generation via <code>route('name')</code></li>
+                                <li>Route groups can share attributes like middleware, prefixes, and namespaces</li>
+                                <li>You can bind models directly to routes using routeâ€‘model binding</li>
+                            </ul>
+                        </div>
+
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-sitemap"></i> How Routing Works</h3>
+                            <p>When a request hits your Laravel application, the framework parses the URL and matches it against your defined routes. The first matching route determines which closure or controller method will handle the request. This system allows you to build clean, RESTful URLs that map directly to application logic.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-code-branch"></i> HTTP Verbs</h4>
+                                    <p>Laravel supports all standard HTTP verbs: GET, POST, PUT, PATCH, DELETE, and OPTIONS. This makes it easy to build RESTful APIs.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-link"></i> Named Routes</h4>
+                                    <p>Named routes let you generate URLs without hardâ€‘coding paths. For example, <code>route('profile')</code> returns the URL for the profile route, even if you later change the path.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-shield-alt"></i> Middleware</h4>
+                                    <p>Routes can be assigned middleware that runs before or after the request. This is commonly used for authentication, logging, or CORS handling.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-shopping-cart"></i> Eâ€‘commerce Example</h4>
+                                <p>An online store might have routes like: <code>/products</code> (list), <code>/products/{id}</code> (details), <code>/cart/add/{id}</code> (POST), and <code>/checkout</code> (GET/POST). Each route would be mapped to a controller method, keeping the application organized and scalable.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Create the following routes in a fresh Laravel project:</strong></p>
+                            <ul>
+                                <li>A GET route for the homepage that returns a simple welcome message</li>
+                                <li>A route with a required <code>{name}</code> parameter that says "Hello, {name}!"</li>
+                                <li>A named route for "about" that returns information about your site</li>
+                                <li>A group of routes under the prefix <code>/blog</code> that handle listing, showing, and creating posts</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish, open SkillMynte AI and upload your <code>web.php</code> file for review.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 3: Controllers -->
+            <div class="course-module" id="module3" data-aos="fade-up" data-difficulty="beginner">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>CONTROLLERS</h1>
+                    <h3>Organize request handling logic</h3>
+                    <span class="difficulty">Beginner</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/919/919830.png" class="module-icon" alt="PHP Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 3: <span>Controllers & Resource Controllers</span></h1>
+                    <p>Controllers group related request handling logic into a single class. Instead of defining all your route logic in closures, you can move it to controller methods. This keeps your routes file clean and promotes code reusability.</p>
+                    
+                    <p>Laravel also provides resource controllers that automatically handle typical CRUD operations (index, create, store, show, edit, update, destroy) with a single line in your routes file.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">PHP</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-3" spellcheck="false">&lt;?php
+// app/Http/Controllers/UserController.php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+class UserController extends Controller
+{
+    // Show list of users
+    public function index()
+    {
+        return 'List of users';
+    }
+
+    // Show a single user
+    public function show($id)
+    {
+        return "Showing user with ID: {$id}";
+    }
+
+    // Show form to create a new user
+    public function create()
+    {
+        return 'Form to create a user';
+    }
+
+    // Store a new user
+    public function store(Request $request)
+    {
+        // Validate and save user
+        return 'User stored';
+    }
+
+    // Show form to edit user
+    public function edit($id)
+    {
+        return "Form to edit user {$id}";
+    }
+
+    // Update user
+    public function update(Request $request, $id)
+    {
+        return "User {$id} updated";
+    }
+
+    // Delete user
+    public function destroy($id)
+    {
+        return "User {$id} deleted";
+    }
+}
+
+// routes/web.php
+// Manual route to controller
+Route::get('/users', [UserController::class, 'index']);
+Route::get('/users/{id}', [UserController::class, 'show']);
+
+// Or use a resource controller (handles all 7 methods)
+Route::resource('posts', PostController::class);</textarea>
+                        <button class="run-btn" onclick="runCode('editor-3', 'output-3')">
+                            <i class="fas fa-play"></i> Run Code (simulated)
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Output
+                        </div>
+                        <div class="preview-container" id="output-3">(Controller code â€“ methods are called by routes)</div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>Controllers are stored in <code>app/Http/Controllers</code></li>
+                                <li>Use <code>php artisan make:controller NameController</code> to generate a controller</li>
+                                <li>Resource controllers provide methods for CRUD operations</li>
+                                <li>Single action controllers can be created with <code>--invokable</code> flag</li>
+                                <li>Controllers can return views, redirects, JSON responses, etc.</li>
+                                <li>Middleware can be assigned to controllers in the constructor</li>
+                            </ul>
+                        </div>
+
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-layer-group"></i> Why Controllers?</h3>
+                            <p>Controllers centralize your application's business logic. Instead of scattering logic across many closures, each controller handles all requests related to a specific resource. This makes your code easier to test, maintain, and extend. Laravel's dependency injection also works seamlessly in controller methods.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-route"></i> Resourceful Routing</h4>
+                                    <p>Using <code>Route::resource()</code> automatically creates the seven RESTful routes and maps them to the corresponding controller methods. It's a huge timeâ€‘saver.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-tachometer-alt"></i> Single Action Controllers</h4>
+                                    <p>If a controller only needs one action (like a dashboard), you can make it invokable by defining an <code>__invoke()</code> method and using <code>Route::get('/dashboard', DashboardController::class)</code>.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-plug"></i> Dependency Injection</h4>
+                                    <p>Controller methods can typeâ€‘hint any dependencies (like Request, Model, or custom services), and Laravel's service container will automatically resolve them.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-blog"></i> Blog Example</h4>
+                                <p>For a blog, you'd likely have a <code>PostController</code> with methods: <code>index()</code> (list posts), <code>show()</code> (display one post), <code>create()/store()</code> (new post), <code>edit()/update()</code> (modify post), and <code>destroy()</code> (delete). Using a resource controller, a single line <code>Route::resource('posts', PostController::class)</code> sets up all these routes.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Create a ProductController with resource methods:</strong></p>
+                            <ul>
+                                <li>Generate a controller using <code>php artisan make:controller ProductController --resource</code></li>
+                                <li>Implement the <code>index</code> method to return a list of products (hardâ€‘coded array for now)</li>
+                                <li>Implement the <code>show</code> method to return details of a single product</li>
+                                <li>Register a resource route for <code>products</code> in <code>web.php</code></li>
+                                <li>Test the generated routes by visiting URLs like <code>/products</code> and <code>/products/1</code></li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish, upload your <code>ProductController.php</code> and <code>web.php</code> to SkillMynte AI for feedback.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 4: Blade Templating -->
+            <div class="course-module" id="module4" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>BLADE TEMPLATING</h1>
+                    <h3>Create dynamic views with Blade</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/919/919830.png" class="module-icon" alt="PHP Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 4: <span>Blade Syntax & Layouts</span></h1>
+                    <p>Blade is Laravel's powerful templating engine. It allows you to write plain PHP code in your views while providing convenient shortcuts for common tasks like displaying data, control structures, and template inheritance. Blade views are compiled into plain PHP and cached until modified, so they add zero overhead to your application.</p>
+                    
+                    <p>Blade uses <code>{{ }}</code> to escape output and <code>{!! !!}</code> for unescaped output. It also provides directives like <code>@if</code>, <code>@foreach</code>, <code>@include</code>, and <code>@extends</code> for layout inheritance.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Blade</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-4" spellcheck="false">&lt;!-- resources/views/layouts/app.blade.php (master layout) --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;@yield('title', 'Default Title')&lt;/title&gt;
+    &lt;link rel="stylesheet" href="/css/app.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        @include('partials.nav')
+    &lt;/header&gt;
+
+    &lt;main&gt;
+        @yield('content')
+    &lt;/main&gt;
+
+    &lt;footer&gt;
+        &lt;p&gt;&copy; {{ date('Y') }} My Laravel App&lt;/p&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+&lt;!-- resources/views/posts/index.blade.php (child view) --&gt;
+@extends('layouts.app')
+
+@section('title', 'All Posts')
+
+@section('content')
+    &lt;h1&gt;Blog Posts&lt;/h1&gt;
+
+    @if(count($posts) > 0)
+        &lt;ul&gt;
+            @foreach($posts as $post)
+                &lt;li&gt;
+                    &lt;a href="/posts/{{ $post['id'] }}"&gt;
+                        {{ $post['title'] }}
+                    &lt;/a&gt;
+                &lt;/li&gt;
+            @endforeach
+        &lt;/ul&gt;
+    @else
+        &lt;p&gt;No posts yet.&lt;/p&gt;
+    @endif
+@endsection</textarea>
+                        <button class="run-btn" onclick="runCode('editor-4', 'output-4')">
+                            <i class="fas fa-play"></i> Run Code (simulated)
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Output (simulated)
+                        </div>
+                        <div class="preview-container" id="output-4">(Blade templates â€“ they generate HTML when rendered)</div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>Blade files use the <code>.blade.php</code> extension</li>
+                                <li><code>{{ $variable }}</code> automatically escapes output (prevents XSS)</li>
+                                <li><code>@if</code>, <code>@elseif</code>, <code>@else</code>, <code>@endif</code> for conditionals</li>
+                                <li><code>@foreach</code>, <code>@forelse</code>, <code>@for</code>, <code>@while</code> for loops</li>
+                                <li><code>@include('view.name')</code> includes a subâ€‘view</li>
+                                <li><code>@extends('layout')</code> and <code>@section/@yield</code> enable template inheritance</li>
+                                <li>Blade also has components, slots, and stacks for advanced features</li>
+                            </ul>
+                        </div>
+
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-paint-brush"></i> Why Blade?</h3>
+                            <p>Blade combines the simplicity of plain PHP with convenient shortcuts. It doesn't restrict you from using raw PHP when needed, but its directives make common tasks (like loops and conditionals) much cleaner. Template inheritance eliminates repetitive HTML, and components let you build reusable UI pieces.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-shield-alt"></i> Automatic Escaping</h4>
+                                    <p>By default, <code>{{ }}</code> escapes output, protecting your application from XSS attacks. When you need to output raw HTML (e.g., from a WYSIWYG editor), use <code>{!! !!}</code> with caution.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-cubes"></i> Components & Slots</h4>
+                                    <p>Laravel's Blade components allow you to create reusable HTML elements with their own logic. They can be classâ€‘based or anonymous, and support slots for flexible content insertion.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-code-branch"></i> Stacks</h4>
+                                    <p>Stacks let you push content from child views to specific places in a layout (e.g., adding scripts to the bottom of the page). This is great for organizing assets.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-newspaper"></i> CMS Example</h4>
+                                <p>A content management system built with Laravel would use Blade extensively. The admin panel might have a layout with a sidebar and top bar; each content section (pages, posts, media) extends that layout and injects its own content. Components would be used for forms, buttons, and data tables, keeping the code DRY and maintainable.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Create a Blade layout and a child view:</strong></p>
+                            <ul>
+                                <li>Create a master layout <code>layouts/app.blade.php</code> with a header, main section, and footer</li>
+                                <li>Create a child view <code>pages/home.blade.php</code> that extends the layout</li>
+                                <li>In the child view, display a list of items passed from a controller (you can hardâ€‘code an array in the controller)</li>
+                                <li>Use <code>@if</code> to show a message if the list is empty</li>
+                                <li>Use <code>@foreach</code> to iterate over the items</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish, upload your Blade files and controller to SkillMynte AI for review.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 5: Eloquent ORM -->
+            <div class="course-module" id="module5" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>ELOQUENT ORM</h1>
+                    <h3>Database interactions made simple</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/919/919830.png" class="module-icon" alt="PHP Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 5: <span>Models, Migrations & Querying</span></h1>
+                    <p>Eloquent is Laravel's Objectâ€‘Relational Mapper (ORM) that provides an ActiveRecord implementation to work with your database. Each database table has a corresponding Model that you use to interact with that table. Eloquent makes common database operations intuitive and expressive.</p>
+                    
+                    <p>Migrations are version control for your database. They allow you to define and share your application's database schema. You can roll back changes and keep your team's databases in sync.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">PHP</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-5" spellcheck="false">&lt;?php
+// Generate a model and migration
+// php artisan make:model Post -m
+
+// Migration file (database/migrations/xxxx_create_posts_table.php)
+public function up()
+{
+    Schema::create('posts', function (Blueprint $table) {
+        $table->id();
+        $table->string('title');
+        $table->text('body');
+        $table->foreignId('user_id')->constrained();
+        $table->timestamps();
+    });
+}
+
+// Model (app/Models/Post.php)
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Post extends Model
+{
+    protected $fillable = ['title', 'body', 'user_id'];
+
+    // Relationship to User
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+}
+
+// Using Eloquent in a controller
+use App\Models\Post;
+use App\Models\User;
+
+// Get all posts
+$posts = Post::all();
+
+// Find a post by id
+$post = Post::find(1);
+
+// Create a new post
+$post = Post::create([
+    'title' => 'My First Post',
+    'body' => 'Content here...',
+    'user_id' => 1
+]);
+
+// Update a post
+$post = Post::find(1);
+$post->title = 'Updated Title';
+$post->save();
+
+// Delete a post
+$post->delete();
+
+// Query with conditions
+$recentPosts = Post::where('created_at', '>', now()->subDays(7))
+                    ->orderBy('created_at', 'desc')
+                    ->get();
+
+// Eager load relationships
+$postsWithUsers = Post::with('user')->get();</textarea>
+                        <button class="run-btn" onclick="runCode('editor-5', 'output-5')">
+                            <i class="fas fa-play"></i> Run Code (simulated)
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Output
+                        </div>
+                        <div class="preview-container" id="output-5">(Eloquent examples â€“ they execute against your configured database)</div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>Each model corresponds to a database table (pluralized snake_case of model name)</li>
+                                <li><code>$fillable</code> or <code>$guarded</code> protect against mass assignment vulnerabilities</li>
+                                <li>Migrations define the table schema using Laravel's schema builder</li>
+                                <li>Eloquent provides methods like <code>all()</code>, <code>find()</code>, <code>where()</code>, <code>create()</code>, <code>update()</code>, <code>delete()</code></li>
+                                <li>Relationships (<code>hasOne</code>, <code>hasMany</code>, <code>belongsTo</code>, etc.) are defined as methods</li>
+                                <li>Use <code>with()</code> to eager load relationships and avoid N+1 queries</li>
+                            </ul>
+                        </div>
+
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-database"></i> The Power of Eloquent</h3>
+                            <p>Eloquent turns complex SQL queries into chainable, readable PHP. It also provides events, accessors/mutators, and scopes to encapsulate common query logic. Because each model is a fullâ€‘fledged PHP class, you can add your own methods to extend functionality.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-clock"></i> Timestamps</h4>
+                                    <p>By default, Eloquent expects <code>created_at</code> and <code>updated_at</code> columns and manages them automatically.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-filter"></i> Query Scopes</h4>
+                                    <p>Local scopes allow you to define common query constraints in the model, e.g., <code>scopePopular($query)</code> to filter popular posts.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-cogs"></i> Accessors & Mutators</h4>
+                                    <p>You can format attribute values when retrieving or setting them. For example, automatically hash a password when setting it.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-chart-line"></i> Analytics Dashboard</h4>
+                                <p>An analytics dashboard might query millions of records. Eloquent's <code>whereBetween</code>, <code>groupBy</code>, and aggregate methods (<code>count</code>, <code>sum</code>, <code>avg</code>) make it easy to build reports. With proper indexing and query optimization, Eloquent can handle large datasets efficiently.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Create a Product model and migration:</strong></p>
+                            <ul>
+                                <li>Use <code>php artisan make:model Product -m</code> to generate model and migration</li>
+                                <li>In the migration, add columns: <code>name</code> (string), <code>description</code> (text), <code>price</code> (decimal), <code>stock</code> (integer)</li>
+                                <li>Run <code>php artisan migrate</code> to create the table</li>
+                                <li>In <code>tinker</code> or a controller, create a few products using <code>Product::create()</code></li>
+                                <li>Write a query to fetch all products with price greater than 100 and order by name</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>When you finish, upload your migration and model to SkillMynte AI for review.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 6: Forms & Validation -->
+            <div class="course-module" id="module6" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>FORMS & VALIDATION</h1>
+                    <h3>Handle user input securely</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/919/919830.png" class="module-icon" alt="PHP Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 6: <span>Form Handling & Validation</span></h1>
+                    <p>Laravel makes it easy to handle form submissions and validate incoming data. With builtâ€‘in CSRF protection, validation rules, and error handling, you can build secure forms quickly. Blade's <code>@csrf</code> directive adds a hidden CSRF token, and the <code>old()</code> helper repopulates forms after validation errors.</p>
+                    
+                    <p>Validation can be performed in the controller using the <code>validate()</code> method, or by using Form Requests for more complex scenarios.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">Blade + PHP</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-6" spellcheck="false">&lt;!-- resources/views/posts/create.blade.php --&gt;
+@extends('layouts.app')
+
+@section('content')
+    &lt;h1&gt;Create New Post&lt;/h1&gt;
+
+    @if ($errors->any())
+        &lt;div class="alert alert-danger"&gt;
+            &lt;ul&gt;
+                @foreach ($errors->all() as $error)
+                    &lt;li&gt;{{ $error }}&lt;/li&gt;
+                @endforeach
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    @endif
+
+    &lt;form method="POST" action="/posts"&gt;
+        @csrf
+        &lt;div&gt;
+            &lt;label for="title"&gt;Title:&lt;/label&gt;
+            &lt;input type="text" name="title" id="title" value="{{ old('title') }}"&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+            &lt;label for="body"&gt;Body:&lt;/label&gt;
+            &lt;textarea name="body" id="body"&gt;{{ old('body') }}&lt;/textarea&gt;
+        &lt;/div&gt;
+        &lt;button type="submit"&gt;Submit&lt;/button&gt;
+    &lt;/form&gt;
+@endsection
+
+&lt;?php
+// In PostController@store method
+public function store(Request $request)
+{
+    $validated = $request->validate([
+        'title' => 'required|min:5|max:255',
+        'body'  => 'required|min:10',
+    ]);
+
+    // If validation passes, create the post
+    Post::create($validated);
+
+    return redirect('/posts')->with('success', 'Post created!');
+}
+?&gt;</textarea>
+                        <button class="run-btn" onclick="runCode('editor-6', 'output-6')">
+                            <i class="fas fa-play"></i> Run Code (simulated)
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Output
+                        </div>
+                        <div class="preview-container" id="output-6">(Form with validation â€“ errors appear if validation fails)</div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>Always include <code>@csrf</code> in your forms to protect against CSRF attacks</li>
+                                <li>The <code>validate()</code> method checks incoming request data against rules</li>
+                                <li>If validation fails, Laravel automatically redirects back with errors and old input</li>
+                                <li>Access validation errors via <code>$errors</code> variable in views</li>
+                                <li><code>old('field')</code> repopulates the field with the previously submitted value</li>
+                                <li>Common rules: <code>required</code>, <code>email</code>, <code>unique:table,column</code>, <code>confirmed</code> (for password confirmation)</li>
+                            </ul>
+                        </div>
+
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-check-circle"></i> Validation Best Practices</h3>
+                            <p>Laravel's validation system is both powerful and flexible. You can define rules as arrays or using the <code>Rule</code> class for advanced conditions. For complex forms, Form Requests encapsulate validation logic and authorization in dedicated classes, keeping controllers lean.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-file-alt"></i> Form Requests</h4>
+                                    <p>Generate a form request with <code>php artisan make:request StorePostRequest</code>. It contains an <code>authorize()</code> method and <code>rules()</code> method. Then typeâ€‘hint it in your controller: <code>public function store(StorePostRequest $request)</code>.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-eye"></i> Custom Error Messages</h4>
+                                    <p>You can customize validation error messages per field and rule by overriding the <code>messages()</code> method in a form request, or passing a third parameter to <code>validate()</code>.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-redo-alt"></i> After Validation Hooks</h4>
+                                    <p>Sometimes you need to perform additional checks after validation (e.g., verify a user's subscription). Form requests have an <code>after()</code> method for this purpose.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-user-plus"></i> Registration Form</h4>
+                                <p>A typical registration form validates that the name, email, and password are present, the email is unique, and the password is confirmed and meets strength requirements. Laravel's validation makes this trivial, and the builtâ€‘in error handling provides a smooth user experience.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Create a product creation form with validation:</strong></p>
+                            <ul>
+                                <li>Build a form to create a new product (name, description, price, stock)</li>
+                                <li>Add validation rules: name required and min 3 chars, price required and numeric, stock required and integer</li>
+                                <li>Display validation errors below the form</li>
+                                <li>Repopulate the form with old input after a failed submission</li>
+                                <li>On success, redirect to the product list with a flash message</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>Upload your controller, view, and routes to SkillMynte AI for feedback.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 7: Authentication -->
+            <div class="course-module" id="module7" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>AUTHENTICATION</h1>
+                    <h3>User login, registration, and access control</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/919/919830.png" class="module-icon" alt="PHP Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 7: <span>Authentication & Authorization</span></h1>
+                    <p>Laravel provides a complete authentication system out of the box. With a few commands, you can scaffold login, registration, password reset, and email verification. The framework also includes middleware to protect routes, and a simple way to authorize user actions (gates and policies).</p>
+                    
+                    <p>In this module, you'll learn how to set up authentication, protect routes, and display different content based on user roles.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">PHP</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-7" spellcheck="false"># Install Laravel Breeze (authentication scaffolding)
+composer require laravel/breeze --dev
+php artisan breeze:install blade
+npm install && npm run dev
+php artisan migrate
+
+# After installation, you have routes for login, register, etc.
+
+# Protect a route with the auth middleware
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth']);
+
+# Get the authenticated user in a controller
+use Illuminate\Support\Facades\Auth;
+
+public function profile()
+{
+    $user = Auth::user();
+    // or $user = $request->user();
+    return view('profile', compact('user'));
+}
+
+# Using Gates for authorization
+Gate::define('update-post', function (User $user, Post $post) {
+    return $user->id === $post->user_id;
+});
+
+if (Gate::allows('update-post', $post)) {
+    // User can update
+}
+
+# In Blade
+@can('update-post', $post)
+    &lt;a href="/posts/{{ $post->id }}/edit"&gt;Edit&lt;/a&gt;
+@endcan</textarea>
+                        <button class="run-btn" onclick="runCode('editor-7', 'output-7')">
+                            <i class="fas fa-play"></i> Run Code (simulated)
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Output
+                        </div>
+                        <div class="preview-container" id="output-7">(Authentication scaffolding â€“ run commands to see it in action)</div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>Laravel Breeze, Jetstream, or Fortify provide authentication scaffolding</li>
+                                <li>Use the <code>auth</code> middleware to protect routes</li>
+                                <li>Access the loggedâ€‘in user via <code>Auth::user()</code> or <code>$request->user()</code></li>
+                                <li>Gates and Policies define authorization logic (who can do what)</li>
+                                <li>Blade directives like <code>@auth</code> and <code>@guest</code> conditionally show content</li>
+                                <li>Password hashing is automatic â€“ use <code>Hash::make()</code> or <code>bcrypt()</code> when creating users</li>
+                            </ul>
+                        </div>
+
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-lock"></i> Security Layers</h3>
+                            <p>Laravel's authentication system is built on secure practices: passwords are hashed with Bcrypt, session management is handled securely, and email verification can be added easily. Authorization (gates/policies) gives you fineâ€‘grained control over user permissions.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-user-tag"></i> Roles & Permissions</h4>
+                                    <p>For complex applications, you can implement roleâ€‘based access control using packages like Spatie's Laravelâ€‘Permission, or build your own with gates and a roles table.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-envelope"></i> Email Verification</h4>
+                                    <p>Laravel includes builtâ€‘in email verification. Just add the <code>VerifiedMiddleware</code> to your routes, and the framework handles sending and verifying emails.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-mobile-alt"></i> API Authentication</h4>
+                                    <p>For APIs, Laravel Sanctum provides tokenâ€‘based authentication and SPA cookie authentication. It's perfect for SPAs and mobile apps.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-users-cog"></i> Multiâ€‘tenant SaaS</h4>
+                                <p>In a SaaS application, authentication is the first step. Users register, verify their email, and then belong to a team/account. Policies ensure that users can only access resources belonging to their team. Laravel's gate system makes this straightforward and testable.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Add authentication to your blog:</strong></p>
+                            <ul>
+                                <li>Install Laravel Breeze (or Jetstream) following the official documentation</li>
+                                <li>Create routes for posts that are protected: only authenticated users can create, edit, or delete posts</li>
+                                <li>Add a policy that ensures a user can only edit/delete their own posts</li>
+                                <li>Update the views to show "Edit"/"Delete" buttons only when authorized</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>Upload your code and explain how you implemented the policy to SkillMynte AI.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 8: Relationships -->
+            <div class="course-module" id="module8" data-aos="fade-up" data-difficulty="intermediate">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>RELATIONSHIPS</h1>
+                    <h3>Eloquent model relationships</h3>
+                    <span class="difficulty">Intermediate</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/919/919830.png" class="module-icon" alt="PHP Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 8: <span>Oneâ€‘toâ€‘One, Oneâ€‘toâ€‘Many, Manyâ€‘toâ€‘Many</span></h1>
+                    <p>Eloquent makes working with database relationships incredibly simple. You define relationships as methods on your model classes, and then you can access related data as dynamic properties. Eloquent supports all common relationship types: oneâ€‘toâ€‘one, oneâ€‘toâ€‘many, manyâ€‘toâ€‘many, hasâ€‘manyâ€‘through, polymorphic relations, and more.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">PHP</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-8" spellcheck="false">&lt;?php
+// app/Models/User.php
+public function posts()
+{
+    return $this->hasMany(Post::class);
+}
+
+public function profile()
+{
+    return $this->hasOne(Profile::class);
+}
+
+// app/Models/Post.php
+public function user()
+{
+    return $this->belongsTo(User::class);
+}
+
+public function tags()
+{
+    return $this->belongsToMany(Tag::class);
+}
+
+// app/Models/Tag.php
+public function posts()
+{
+    return $this->belongsToMany(Post::class);
+}
+
+// Using relationships
+$user = User::find(1);
+$posts = $user->posts; // Collection of posts
+foreach ($user->posts as $post) {
+    echo $post->title;
+}
+
+// Lazy loading vs eager loading
+$users = User::with('posts')->get(); // eager load
+
+// Create related models
+$post = new Post(['title' => 'New Post']);
+$user->posts()->save($post);
+
+// Or using create
+$user->posts()->create([
+    'title' => 'Another Post',
+    'body' => '...'
+]);
+
+// Many-to-many attaching
+$post = Post::find(1);
+$post->tags()->attach([1, 2, 3]); // adds to pivot table
+$post->tags()->sync([1, 3]); // sync only given IDs</textarea>
+                        <button class="run-btn" onclick="runCode('editor-8', 'output-8')">
+                            <i class="fas fa-play"></i> Run Code (simulated)
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Output
+                        </div>
+                        <div class="preview-container" id="output-8">(Relationship examples â€“ they work when you have related models)</div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>Define relationships as methods returning Eloquent relationship instances</li>
+                                <li>Access related data as dynamic properties (<code>$user->posts</code>)</li>
+                                <li>Use <code>with()</code> to eager load relationships to avoid N+1 queries</li>
+                                <li><code>hasMany</code> / <code>belongsTo</code> for oneâ€‘toâ€‘many</li>
+                                <li><code>belongsToMany</code> for manyâ€‘toâ€‘many (requires pivot table)</li>
+                                <li><code>hasOne</code> / <code>belongsTo</code> for oneâ€‘toâ€‘one</li>
+                                <li>Polymorphic relations allow a model to belong to multiple other models</li>
+                            </ul>
+                        </div>
+
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-link"></i> Relationship Power</h3>
+                            <p>Eloquent relationships not only make querying intuitive but also provide methods to query existence (<code>has</code>), count (<code>withCount</code>), and even constrain eager loads. They encapsulate the SQL joins and subqueries, keeping your code expressive.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-tachometer-alt"></i> Eager Loading</h4>
+                                    <p>Always eager load when you know you'll need related data in a loop. It reduces the number of queries from N+1 to just 2.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-filter"></i> Querying Relations</h4>
+                                    <p>You can add constraints to relationship queries, e.g., <code>$user->posts()->where('published', true)->get()</code>.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-pivot"></i> Pivot Tables</h4>
+                                    <p>Manyâ€‘toâ€‘many relationships use a pivot table. You can access pivot columns using <code>->withPivot('column')</code>.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-tag"></i> Blog with Tags</h4>
+                                <p>A blog has posts and tags in a manyâ€‘toâ€‘many relationship. Using Eloquent, you can easily get all posts for a given tag (<code>$tag->posts</code>) or all tags for a post (<code>$post->tags</code>). You can also attach/detach tags when editing a post.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Extend your blog with categories and comments:</strong></p>
+                            <ul>
+                                <li>Add a <code>Category</code> model (oneâ€‘toâ€‘many: a category has many posts, a post belongs to one category)</li>
+                                <li>Add a <code>Comment</code> model (polymorphic: a comment belongs to a post or any other content)</li>
+                                <li>Define the relationships in the models</li>
+                                <li>In a controller, eager load comments when displaying a post</li>
+                                <li>Display the comment count for each post</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>Upload your models and migration files to SkillMynte AI for review.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 9: API Development -->
+            <div class="course-module" id="module9" data-aos="fade-up" data-difficulty="advanced">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>API DEVELOPMENT</h1>
+                    <h3>Build RESTful APIs with Laravel</h3>
+                    <span class="difficulty">Advanced</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/919/919830.png" class="module-icon" alt="PHP Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 9: <span>API Routes, Resources & Sanctum</span></h1>
+                    <p>Laravel is an excellent choice for building APIs. With dedicated API routes, resource classes to transform models, and Sanctum for authentication, you can create robust, secure APIs quickly. API resources allow you to define a consistent JSON structure for your models, and pagination is builtâ€‘in.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">PHP</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-9" spellcheck="false">&lt;?php
+// routes/api.php
+Route::apiResource('posts', PostController::class);
+
+// Create an API resource
+php artisan make:resource PostResource
+
+// app/Http/Resources/PostResource.php
+class PostResource extends JsonResource
+{
+    public function toArray($request)
+    {
+        return [
+            'id' => $this->id,
+            'title' => $this->title,
+            'body' => $this->body,
+            'author' => new UserResource($this->whenLoaded('user')),
+            'created_at' => $this->created_at->toISOString(),
+        ];
+    }
+}
+
+// Using the resource in a controller
+use App\Http\Resources\PostResource;
+use App\Models\Post;
+
+public function index()
+{
+    return PostResource::collection(Post::with('user')->paginate(10));
+}
+
+public function show(Post $post)
+{
+    return new PostResource($post->load('user'));
+}
+
+// Sanctum for API tokens (after installation)
+use Illuminate\Http\Request;
+
+Route::post('/login', function (Request $request) {
+    $request->validate([
+        'email' => 'required|email',
+        'password' => 'required',
+    ]);
+
+    if (Auth::attempt($request->only('email', 'password'))) {
+        $token = $request->user()->createToken('auth-token')->plainTextToken;
+        return response()->json(['token' => $token]);
+    }
+
+    return response()->json(['message' => 'Invalid credentials'], 401);
+});
+
+// Protect routes with Sanctum
+Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+    return $request->user();
+});</textarea>
+                        <button class="run-btn" onclick="runCode('editor-9', 'output-9')">
+                            <i class="fas fa-play"></i> Run Code (simulated)
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Output
+                        </div>
+                        <div class="preview-container" id="output-9">(API code â€“ can be tested with tools like Postman)</div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>API routes are defined in <code>routes/api.php</code> and are prefixed with <code>/api</code></li>
+                                <li>API resources transform your models into JSON and allow conditional loading</li>
+                                <li>Sanctum provides tokenâ€‘based authentication for APIs</li>
+                                <li>Always validate input and return appropriate HTTP status codes</li>
+                                <li>Use pagination for collections (<code>paginate()</code>)</li>
+                                <li>Return <code>204 No Content</code> for successful DELETE requests</li>
+                            </ul>
+                        </div>
+
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-cloud"></i> APIâ€‘First Design</h3>
+                            <p>Building an API with Laravel allows you to serve both a web frontend and mobile apps from the same backend. Using API resources, you control exactly what data is exposed, and Sanctum keeps it secure. Laravel also supports API versioning and rate limiting.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-code-branch"></i> Versioning</h4>
+                                    <p>You can version your API by placing routes in separate files (e.g., <code>api/v1.php</code>) or using route prefixes.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-tachometer-alt"></i> Rate Limiting</h4>
+                                    <p>Laravel's builtâ€‘in rate limiting protects your API from abuse. Define limits in <code>RouteServiceProvider</code> or use middleware.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-file-export"></i> API Documentation</h4>
+                                    <p>Tools like Scribe can generate documentation from your code, making it easier for frontend developers to consume your API.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-mobile-alt"></i> Mobile App Backend</h4>
+                                <p>Imagine a social media app where users log in, view posts, and comment. The Laravel API serves JSON to the mobile client, using Sanctum tokens for authentication. API resources format posts with author and comment counts, and pagination ensures fast response times.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Build a simple API for your blog:</strong></p>
+                            <ul>
+                                <li>Create API routes for posts (index, show, store, update, destroy)</li>
+                                <li>Implement a <code>PostResource</code> that returns id, title, body, author name, and created date</li>
+                                <li>Protect store/update/destroy routes with Sanctum authentication</li>
+                                <li>Test your API using Postman or Insomnia</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>Upload your controller, resource, and routes files to SkillMynte AI for feedback.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 10: Advanced Concepts -->
+            <div class="course-module" id="module10" data-aos="fade-up" data-difficulty="advanced">
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i> Premium Content
+                </div>
+                <div class="course-three">
+                    <h1>ADVANCED LARAVEL</h1>
+                    <h3>Queues, Events, Caching & more</h3>
+                    <span class="difficulty">Advanced</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/919/919830.png" class="module-icon" alt="PHP Icon">
+                </div>
+                <div class="course-one">
+                    <h1>Module 10: <span>Queues, Events, Task Scheduling</span></h1>
+                    <p>Laravel provides powerful tools for building robust, highâ€‘performance applications. Queues allow you to defer timeâ€‘consuming tasks (like sending emails) to run in the background. Events and listeners decouple different parts of your application. The task scheduler simplifies running periodic jobs.</p>
+                    
+                    <h3>Try It Yourself:</h3>
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">PHP</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="editor-10" spellcheck="false">&lt;?php
+// Generate a job
+php artisan make:job SendWelcomeEmail
+
+// app/Jobs/SendWelcomeEmail.php
+class SendWelcomeEmail implements ShouldQueue
+{
+    use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
+
+    protected $user;
+
+    public function __construct(User $user)
+    {
+        $this->user = $user;
+    }
+
+    public function handle()
+    {
+        Mail::to($this->user->email)->send(new WelcomeEmail($this->user));
+    }
+}
+
+// Dispatch the job (e.g., after registration)
+SendWelcomeEmail::dispatch($user);
+
+// Events and Listeners
+php artisan make:event OrderShipped
+php artisan make:listener SendShipmentNotification --event=OrderShipped
+
+// app/Events/OrderShipped.php
+class OrderShipped
+{
+    use Dispatchable, InteractsWithSockets, SerializesModels;
+
+    public $order;
+
+    public function __construct(Order $order)
+    {
+        $this->order = $order;
+    }
+}
+
+// app/Listeners/SendShipmentNotification.php
+public function handle(OrderShipped $event)
+{
+    // Send notification about $event->order
+}
+
+// Register in EventServiceProvider
+protected $listen = [
+    OrderShipped::class => [
+        SendShipmentNotification::class,
+    ],
+];
+
+// Task Scheduling (app/Console/Kernel.php)
+protected function schedule(Schedule $schedule)
+{
+    $schedule->command('emails:send')->dailyAt('08:00');
+    $schedule->job(new ProcessPodcast)->everyFiveMinutes();
+}</textarea>
+                        <button class="run-btn" onclick="runCode('editor-10', 'output-10')">
+                            <i class="fas fa-play"></i> Run Code (simulated)
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Output
+                        </div>
+                        <div class="preview-container" id="output-10">(Background processing â€“ jobs and events)</div>
+                        
+                        <div class="course-five">
+                            <h3>Key Points:</h3>
+                            <ul>
+                                <li>Queues move timeâ€‘consuming tasks out of the request lifecycle</li>
+                                <li>Supported queue drivers: database, redis, sqs, beanstalkd</li>
+                                <li>Events allow you to fire and forget, while listeners react</li>
+                                <li>The task scheduler (cron wrapper) runs periodic commands</li>
+                                <li>Laravel Horizon provides a beautiful dashboard for Redis queues</li>
+                                <li>Cache (Redis, Memcached, file) can speed up repeated queries</li>
+                            </ul>
+                        </div>
+
+                        <div class="module-explanation">
+                            <h3><i class="fas fa-rocket"></i> Scaling Laravel</h3>
+                            <p>Advanced Laravel applications use queues to handle email, image processing, and webhooks asynchronously, keeping the UI responsive. Events decouple the code, making it easier to add new features without modifying existing logic. The task scheduler replaces manual cron jobs.</p>
+                            
+                            <div class="explanation-grid">
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-database"></i> Cache</h4>
+                                    <p>Laravel's cache API (with drivers like Redis, Memcached) stores frequently accessed data, reducing database load. You can cache entire query results or fragments of views.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-broadcast-tower"></i> Broadcasting</h4>
+                                    <p>Broadcast events to the frontend using WebSockets (Pusher, Ably, or Laravel WebSockets) for realâ€‘time features like notifications.</p>
+                                </div>
+                                <div class="explanation-card">
+                                    <h4><i class="fas fa-cloud-upload-alt"></i> File Storage</h4>
+                                    <p>Laravel's Filesystem abstracts local, FTP, and cloud storage (S3). You can easily switch drivers without changing your code.</p>
+                                </div>
+                            </div>
+
+                            <div class="real-world-example">
+                                <h4><i class="fas fa-video"></i> Video Processing Platform</h4>
+                                <p>When a user uploads a video, you dispatch a job to transcode it. The job runs in the background, and when finished, an event is fired to notify the user. The scheduler cleans up old files nightly. All these features work together seamlessly in Laravel.</p>
+                            </div>
+                        </div>
+
+                        <div class="assignment">
+                            <h4><i class="fas fa-tasks"></i> Take Home Assignment</h4>
+                            <p><strong>Implement a queue and an event:</strong></p>
+                            <ul>
+                                <li>Create a job that sends a "welcome email" (simulate by logging) after user registration</li>
+                                <li>Create an event <code>UserRegistered</code> and a listener that dispatches the job</li>
+                                <li>Set up the database queue driver (run <code>php artisan queue:table</code> and migrate)</li>
+                                <li>Dispatch the event in your registration controller</li>
+                                <li>Run <code>php artisan queue:work</code> to see the job processed</li>
+                            </ul>
+                            <div class="assignment-note">
+                                <p>Upload your job, event, listener, and controller code to SkillMynte AI for review.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Practice Playground -->
+            <div class="course-module" id="playground" data-aos="fade-up">
+                <div class="course-three">
+                    <h1>PRACTICE PLAYGROUND</h1>
+                    <h3>Experiment with Laravel code</h3>
+                    <i class="fas fa-laptop-code course-icon" style="color: var(--primary);"></i>
+                </div>
+                <div class="course-one">
+                    <h1>Your Coding Playground: <span>Try Your Own Laravel Code</span></h1>
+                    <p>Use this space to experiment with everything you've learned. Write Laravel/PHP code and see how it might look (simulated). This is your sandbox to practice and explore!</p>
+                    
+                    <div class="code-editor-container">
+                        <div class="editor-header">
+                            <div class="editor-tabs">
+                                <div class="editor-tab active">PHP</div>
+                            </div>
+                            <div class="editor-actions">
+                                <button title="Run Code" class="run-editor">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <button title="Reset Code" class="reset-editor">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                        <textarea class="code-editor" id="playground-editor" spellcheck="false">&lt;?php
+// Your Laravel playground
+Route::get('/hello', function () {
+    return view('greeting', ['name' => 'SkillMynte Learner']);
+});
+
+// In a Blade view
+// &lt;h1&gt;Hello, {{ $name }}!&lt;/h1&gt;
+
+// Try writing your own routes, controllers, or Eloquent queries here.</textarea>
+                        <button class="run-btn" onclick="runCode('playground-editor', 'playground-output')">
+                            <i class="fas fa-play"></i> Run Code (simulated)
+                        </button>
+                        
+                        <div class="output-title">
+                            <i class="fas fa-desktop"></i> Live Preview (simulated)
+                        </div>
+                        <div class="preview-container" id="playground-output">(Your code would be executed on a real server â€“ here you can write and test logic)</div>
+                    </div>
+                    
+                    <div class="course-five">
+                        <h3>Challenge Exercises:</h3>
+                        <ol>
+                            <li>Create a route that returns a JSON response with your favorite Laravel features</li>
+                            <li>Define a Blade component that renders a card and use it in a view</li>
+                            <li>Write an Eloquent query with <code>where</code>, <code>orderBy</code>, and <code>with</code></li>
+                            <li>Simulate a job that dispatches an event (just write the code)</li>
+                            <li>Create a simple form with validation logic (using <code>validate()</code>)</li>
+                        </ol>
+                        
+                        <h3>Tips & Resources:</h3>
+                        <ul>
+                            <li>Use Laravel's official documentation as your primary reference</li>
+                            <li>Remember to run <code>php artisan tinker</code> for interactive testing</li>
+                            <li>Join Laravel communities (Laracasts, Laravel News, Discord) for help</li>
+                            <li>Check out Laravel's ecosystem: Forge, Vapor, Nova, Horizon, Telescope</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Premium Subscription CTA -->
+            <div class="premium-subscription" id="premium-subscription" data-aos="fade-up">
+                <h2>Unlock Premium SkillMynte Content</h2>
+                <p>Upgrade to SkillMynte Pro for exclusive courses, advanced projects, and personalized learning paths</p>
+                
+                <div class="premium-features">
+                    <div class="premium-feature">
+                        <i class="fas fa-gem"></i>
+                        <h3>Premium Courses</h3>
+                        <p>Access our entire library of advanced courses and exclusive content</p>
+                    </div>
+                    <div class="premium-feature">
+                        <i class="fas fa-trophy"></i>
+                        <h3>Certification</h3>
+                        <p>Earn industry-recognized certificates to showcase your skills</p>
+                    </div>
+                    <div class="premium-feature">
+                        <i class="fas fa-user-graduate"></i>
+                        <h3>Mentorship</h3>
+                        <p>Get personalized guidance from industry experts</p>
+                    </div>
+                </div>
+                
+                <div class="pricing-options">
+                    <div class="pricing-option">
+                        <h3>Monthly</h3>
+                        <div class="price">₦3,500<span>/month</span></div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> All Premium Courses</li>
+                            <li><i class="fas fa-check"></i> Practice Projects</li>
+                            <li><i class="fas fa-check"></i> Community Access</li>
+                            <li><i class="fas fa-check"></i> Certificates</li>
+                            <li><i class="fas fa-check"></i> personal AI inbuilt</li>
+                        </ul>
+                        <a href="premium courses.html"><button class="pricing-btn">Get Started</button></a>
+                    </div>
+                    
+                    <div class="pricing-option" style="border-color: var(--white); transform: scale(1.05);">
+                        <h3>Annual <span style="background: var(--white); color: #2962FF; padding: 0.2rem 0.5rem; border-radius: 20px; font-size: 0.8rem; margin-left: 0.5rem;">Best Value</span></h3>
+                        <div class="price">₦37,000<span>/year</span></div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> All Premium Courses</li>
+                            <li><i class="fas fa-check"></i> Practice Projects</li>
+                            <li><i class="fas fa-check"></i> Community Access</li>
+                            <li><i class="fas fa-check"></i> Certificates</li>
+                            <li><i class="fas fa-check"></i> personal AI inbuilt</li>
+                        </ul>
+                        <a href="premium courses.html"><button class="pricing-btn">Get Started</button></a>
+                    </div>
+                    
+                    <div class="pricing-option">
+                        <h3>Lifetime</h3>
+                        <div class="price">₦200,000<span>/once</span></div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> All Premium Courses</li>
+                            <li><i class="fas fa-check"></i> Practice Projects</li>
+                            <li><i class="fas fa-check"></i> Community Access</li>
+                            <li><i class="fas fa-check"></i> Certificates</li>
+                            <li><i class="fas fa-check"></i> personal AI inbuilt</li>
+                        </ul>
+                        <a href="premium courses.html"><button class="pricing-btn">Get Started</button></a>
+                    </div>
+                </div>
+                
+                <button class="premium-cta-btn">
+                    <i class="fas fa-rocket"></i> Upgrade to SkillMynte Pro
+                </button>
+            </div>
+            
+            <!-- Footer -->
+            <footer>
+                <div class="footer-content">
+                    <div class="footer-column">
+                        <h3>About SkillMynte</h3>
+                        <p>SkillMynte is a premium learning platform dedicated to helping developers of all levels master web technologies through interactive courses and hands-on practice.</p>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/profile.php?id=61581069862024"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://x.com/SkillMynte_AI?t=CcoQtjWZGGOXqfTfrsufjQ&s=09"><i class="fab fa-twitter"></i></a>
+                            <a href="https://youtube.com/@skillmynte?si=LmX2MjSKU3N1Xa5S"><i class="fab fa-youtube"></i></a>
+                            <a href="https://www.instagram.com/skillmynte_ai?igsh=MTd1YWpjdXV1OHhrbA=="><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Quick Links</h3>
+                        <ul class="footer-links">
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Home</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Courses</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Practice</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Projects</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Popular Courses</h3>
+                        <ul class="footer-links">
+                            <li><a href="free PHP Course.html"><i class="fas fa-chevron-right"></i> PHP & Laravel Fundamentals</a></li>
+                            <li><a href="free JS Course.html"><i class="fas fa-chevron-right"></i> JavaScript Mastery</a></li>
+                            <li><a href="premium courses.html"><i class="fas fa-chevron-right"></i> React.js Development</a></li>
+                            <li><a href="free node.js.html"><i class="fas fa-chevron-right"></i> Node.js Backend</a></li>
+                            <li><a href="free python course.html"><i class="fas fa-chevron-right"></i> Python for Beginners</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Contact Us</h3>
+                        <p><i class="fas fa-envelope"></i>Skillmynteofficial@gmail.com</p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 SkillMynte. All rights reserved. | Designed with <i class="fas fa-heart" style="color: var(--primary);"></i> for the developer community</p>
+                </div>
+            </footer>
+
+            <script>
+                // Function to run code in preview
+                function runCode(editorId, outputId) {
+                    const editor = document.getElementById(editorId);
+                    const output = document.getElementById(outputId);
+                    
+                    try {
+                        // For demo, we just show the code as text (since PHP can't run client-side)
+                        output.innerHTML = `<pre style="color: #5EFC82;">${editor.value.replace(/</g, '&lt;').replace(/>/g, '&gt;')}</pre>`;
+                    } catch (error) {
+                        output.innerHTML = `<div style="color: var(--accent); padding: 1rem;">Error: ${error.message}</div>`;
+                    }
+                }
+                
+                // Initialize all editors with their default output
+                document.addEventListener('DOMContentLoaded', function() {
+                    // Run all code editors on load
+                    runCode('editor-1', 'output-1');
+                    runCode('editor-2', 'output-2');
+                    runCode('editor-3', 'output-3');
+                    runCode('editor-4', 'output-4');
+                    runCode('editor-5', 'output-5');
+                    runCode('editor-6', 'output-6');
+                    runCode('editor-7', 'output-7');
+                    runCode('editor-8', 'output-8');
+                    runCode('editor-9', 'output-9');
+                    runCode('editor-10', 'output-10');
+                    runCode('playground-editor', 'playground-output');
+                    
+                    // Add event listeners to all run buttons in editor headers
+                    document.querySelectorAll('.run-editor').forEach(btn => {
+                        btn.addEventListener('click', function() {
+                            const editorContainer = this.closest('.code-editor-container');
+                            const editor = editorContainer.querySelector('.code-editor');
+                            const output = editorContainer.querySelector('.preview-container');
+                            runCode(editor.id, output.id);
+                        });
+                    });
+                    
+                    // Add reset functionality
+                    document.querySelectorAll('.reset-editor').forEach(btn => {
+                        btn.addEventListener('click', function() {
+                            const editorContainer = this.closest('.code-editor-container');
+                            const editor = editorContainer.querySelector('.code-editor');
+                            const originalContent = editor.dataset.original || editor.defaultValue;
+                            editor.value = originalContent;
+                            runCode(editor.id, editorContainer.querySelector('.preview-container').id);
+                        });
+                    });
+                    
+                    // Store original content for reset functionality
+                    document.querySelectorAll('.code-editor').forEach(editor => {
+                        editor.dataset.original = editor.value;
+                    });
+
+                    // Handle navbar scroll effect
+                    window.addEventListener('scroll', function() {
+                        const navbar = document.getElementById('navbar');
+                        if (window.scrollY > 50) {
+                            navbar.classList.add('scrolled');
+                        } else {
+                            navbar.classList.remove('scrolled');
+                        }
+                    });
+
+                    // FIXED: Hamburger menu functionality
+                    const menuToggle = document.getElementById('menuToggle');
+                    const navMenu = document.querySelector('.nav-menu');
+                    const sidebar = document.getElementById('sidebar');
+                    const body = document.body;
+
+                    function toggleMobileMenu() {
+                        const isActive = navMenu.classList.contains('active');
+                        
+                        if (isActive) {
+                            // Close menu
+                            navMenu.classList.remove('active');
+                            sidebar.classList.remove('active');
+                            menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                            body.classList.remove('menu-open');
+                            menuToggle.setAttribute('aria-expanded', 'false');
+                        } else {
+                            // Open menu
+                            navMenu.classList.add('active');
+                            sidebar.classList.add('active');
+                            menuToggle.innerHTML = '<i class="fas fa-times"></i>';
+                            body.classList.add('menu-open');
+                            menuToggle.setAttribute('aria-expanded', 'true');
+                        }
+                    }
+
+                    function closeMobileMenu() {
+                        navMenu.classList.remove('active');
+                        sidebar.classList.remove('active');
+                        menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                        body.classList.remove('menu-open');
+                        menuToggle.setAttribute('aria-expanded', 'false');
+                    }
+
+                    // Mobile menu toggle
+                    menuToggle.addEventListener('click', function(e) {
+                        e.stopPropagation();
+                        toggleMobileMenu();
+                    });
+
+                    // Close menu when clicking on nav links
+                    document.querySelectorAll('.nav-link').forEach(link => {
+                        link.addEventListener('click', function() {
+                            if (window.innerWidth <= 1024) {
+                                closeMobileMenu();
+                            }
+                        });
+                    });
+
+                    // Close menu when clicking on dropdown items
+                    document.querySelectorAll('.dropdown-item').forEach(item => {
+                        item.addEventListener('click', function() {
+                            if (window.innerWidth <= 1024) {
+                                closeMobileMenu();
+                            }
+                        });
+                    });
+
+                    // Close menu when clicking outside
+                    document.addEventListener('click', function(e) {
+                        if (window.innerWidth <= 1024 && 
+                            navMenu.classList.contains('active') &&
+                            !e.target.closest('.nav-menu') && 
+                            !e.target.closest('.menu-toggle') &&
+                            !e.target.closest('.sidebar')) {
+                            closeMobileMenu();
+                        }
+                    });
+
+                    // Close menu on escape key
+                    document.addEventListener('keydown', function(e) {
+                        if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+                            closeMobileMenu();
+                        }
+                    });
+
+                    // Close menu on resize if switching to desktop
+                    window.addEventListener('resize', function() {
+                        if (window.innerWidth > 1024 && navMenu.classList.contains('active')) {
+                            closeMobileMenu();
+                        }
+                    });
+
+                    // Mobile dropdown functionality
+                    document.querySelectorAll('.courses-dropdown').forEach(dropdown => {
+                        const button = dropdown.querySelector('.courses-btn');
+                        
+                        button.addEventListener('click', function(e) {
+                            if (window.innerWidth <= 1024) {
+                                e.preventDefault();
+                                e.stopPropagation();
+                                dropdown.classList.toggle('active');
+                            }
+                        });
+                    });
+
+                    // Level filtering functionality
+                    const levelButtons = document.querySelectorAll('.level-btn');
+                    const modules = document.querySelectorAll('.course-module');
+                    
+                    levelButtons.forEach(button => {
+                        button.addEventListener('click', function() {
+                            const level = this.getAttribute('data-level');
+                            
+                            // Remove active class from all buttons
+                            levelButtons.forEach(btn => btn.classList.remove('active'));
+                            // Add active class to clicked button
+                            this.classList.add('active');
+                            
+                            if (level === 'all') {
+                                // Show all modules
+                                modules.forEach(module => {
+                                    module.style.display = 'flex';
+                                });
+                            } else if (level === 'advanced') {
+                                // Show advanced modules (7-10)
+                                modules.forEach(module => {
+                                    const moduleId = module.id;
+                                    if (moduleId.includes('module7') || moduleId.includes('module8') || 
+                                        moduleId.includes('module9') || moduleId.includes('module10')) {
+                                        module.style.display = 'flex';
+                                    } else {
+                                        module.style.display = 'none';
+                                    }
+                                });
+                            } else {
+                                // Show modules with matching difficulty
+                                modules.forEach(module => {
+                                    const difficulty = module.getAttribute('data-difficulty');
+                                    if (difficulty === level) {
+                                        module.style.display = 'flex';
+                                    } else {
+                                        module.style.display = 'none';
+                                    }
+                                });
+                            }
+                            
+                            // Scroll to first visible module
+                            const firstVisible = document.querySelector('.course-module[style="display: flex;"]');
+                            if (firstVisible) {
+                                firstVisible.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                            }
+                        });
+                    });
+
+                    // Search functionality
+                    const searchInput = document.getElementById('search-input');
+                    
+                    searchInput.addEventListener('input', function() {
+                        const searchTerm = this.value.toLowerCase().trim();
+                        
+                        if (searchTerm === '') {
+                            // Show all modules if search is empty
+                            modules.forEach(module => {
+                                module.style.display = 'flex';
+                            });
+                            return;
+                        }
+                        
+                        modules.forEach(module => {
+                            const moduleTitle = module.querySelector('h1').textContent.toLowerCase();
+                            const moduleContent = module.textContent.toLowerCase();
+                            
+                            if (moduleTitle.includes(searchTerm) || moduleContent.includes(searchTerm)) {
+                                module.style.display = 'flex';
+                            } else {
+                                module.style.display = 'none';
+                            }
+                        });
+                    });
+                });
+                
+                // Smooth scrolling for sidebar links
+                document.querySelectorAll('.sidebar-item').forEach(item => {
+                    item.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        
+                        // Remove active class from all items
+                        document.querySelectorAll('.sidebar-item').forEach(i => {
+                            i.classList.remove('active');
+                        });
+                        
+                        // Add active class to clicked item
+                        this.classList.add('active');
+                        
+                        // Close mobile menu if open
+                        if (window.innerWidth <= 1024) {
+                            document.querySelector('.nav-menu').classList.remove('active');
+                            document.querySelector('.sidebar').classList.remove('active');
+                            document.querySelector('.menu-toggle').innerHTML = '<i class="fas fa-bars"></i>';
+                            document.body.classList.remove('menu-open');
+                        }
+                        
+                        // Scroll to section
+                        const targetId = this.getAttribute('href');
+                        const targetElement = document.querySelector(targetId);
+                        if (targetElement) {
+                            window.scrollTo({
+                                top: targetElement.offsetTop - 100,
+                                behavior: 'smooth'
+                            });
+                        }
+                    });
+                });
+            </script>
+        </div>
+    </div>
+</body>
+</html>
