@@ -58,7 +58,7 @@
     <!-- Floating UI buttons (no functionality) -->
     <div class="floating-actions">
         <button class="float-btn float-ai" id="askAi"><i class="fas fa-robot"></i></button>
-        <button class="float-btn float-editor" id="codeEditor"><i class="fas fa-code"></i></button>
+        <a href="https://onecompiler.com/html"><button class="float-btn float-editor" id="codeEditor"><i class="fas fa-code"></i></button></a>
     </div>
 
     <script>
@@ -730,7 +730,6 @@ function toggleDone(index) {
 
             // floating buttons (no functionality)
             document.getElementById('askAi').addEventListener('click', () => alert('Ask Skillmynte AI — demo'));
-            document.getElementById('codeEditor').addEventListener('click', () => alert('Code Editor — demo'));
 
             // re-attach copy after any navigation (since new containers might be added)
             const observer = new MutationObserver(() => setupCopyButtons());
